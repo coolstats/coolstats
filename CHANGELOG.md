@@ -2,9 +2,19 @@
 
 ## 0.2.28 - 2026-07-15
 
+### Highlights
+
+- Added an individual-boss dropdown to the player browser so players can filter
+  and sort by a specific boss parse, not only by class and specialization.
+- Made boss choices realm-aware: Onyxia uses the current TOGC/Koralon profile,
+  while Icecrown and Lordaeron use their ICC-profile boss lists.
+- Added a taller boss-parse distribution view with color-coded histogram bars,
+  a player marker, and a readable white distribution curve.
+
 ### Onyxia logs
 
-- Refreshed Warmane Onyxia TOGC/Koralon UwU Logs data.
+- Refreshed Warmane Onyxia TOGC/Koralon UwU Logs data for the current Onyxia
+  phase.
 - Verified the locked historical Algalon records for 5,972 players before
   writing the refreshed dataset.
 - Preserved Phase 2 Overall history while writing 13,405 Onyxia players for the
@@ -12,11 +22,20 @@
 
 ### Player browser
 
-- Added realm-aware individual boss filtering and boss parse sorting.
-- Added a taller color-coded boss histogram with a player marker and readable
-  white distribution curve.
+- Added individual boss parse sorting alongside the existing class and
+  specialization filters.
+- Expanded the browser window while an individual boss filter is active so the
+  histogram has enough vertical space and does not spill out of the frame.
+- Removed the histogram background panel so only the bars, curve, axis labels,
+  and player marker remain visible.
 - Cached per-boss/spec browser lookups to reduce stutter when changing boss
   filters.
+
+### Validation
+
+- Passed Warmane workspace validation for the canonical `coolstats_publish/`
+  tree and the mirrored `coolstats/` tree.
+- Passed Lua 5.1 validation for the Wrath 3.3.5 client target.
 
 ## 0.2.27 - 2026-07-14
 
