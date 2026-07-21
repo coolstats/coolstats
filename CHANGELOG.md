@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.32 - 2026-07-21
+
+### UI hotfix
+
+- Moved the individual-player Warmane Armory icon farther inside the panel so
+  it no longer clips against the border.
+- Tightened the visible spacing between the "Link UwU Logs" icon and the close
+  button on the individual-player panel.
+
+### Data
+
+- Carries forward the refreshed `0.2.31` Warmane weekly datasets for Onyxia,
+  Icecrown, and Lordaeron.
+
 ## 0.2.31 - 2026-07-21
 
 ### UI refinements

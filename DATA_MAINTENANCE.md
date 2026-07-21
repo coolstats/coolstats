@@ -49,7 +49,7 @@ until it is present in the official player logs.
 
 ## Current Caps And Size Guardrails
 
-As of `0.2.31`:
+As of `0.2.32`:
 
 - **Icecrown:** top 1,500 ranked players per class/specialization, resulting in
   33,819 current ranked players and 34,201 total players.

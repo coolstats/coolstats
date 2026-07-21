@@ -4103,7 +4103,7 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 	local logLinkButton = CreateFrame("Button", nil, panel)
 	SetFrameSize(logLinkButton, 32, 16)
 	if closeButton then
-		logLinkButton:SetPoint("RIGHT", closeButton, "LEFT", -2, 0)
+		logLinkButton:SetPoint("RIGHT", closeButton, "LEFT", 2, 0)
 	else
 		logLinkButton:SetPoint("TOPRIGHT", panel, "TOPRIGHT", -34, -9)
 	end
@@ -4138,8 +4138,8 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 	panel.logLinkButton = logLinkButton
 
 	local armoryButton = CreateFrame("Button", nil, panel)
-	SetFrameSize(armoryButton, 20, 20)
-	armoryButton:SetPoint("TOPLEFT", panel, "TOPLEFT", 9, -10)
+	SetFrameSize(armoryButton, 18, 18)
+	armoryButton:SetPoint("TOPLEFT", panel, "TOPLEFT", 18, -10)
 	armoryButton:SetFrameLevel(panel:GetFrameLevel() + 9)
 	armoryButton:SetNormalTexture("Interface\\Icons\\Trade_BlackSmithing")
 	local armoryNormal = armoryButton:GetNormalTexture()
