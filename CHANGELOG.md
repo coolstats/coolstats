@@ -1,5 +1,47 @@
 # Changelog
 
+## 0.2.31 - 2026-07-21
+
+### UI refinements
+
+- Aligned the individual-player panel's "Link UwU Logs" icon directly beside
+  the close button so the title bar controls sit on the same line.
+- Added a small blacksmithing-icon button on the left side of the
+  individual-player panel that opens the player's Warmane Armory URL dialog.
+
+### Data refresh
+
+- Refreshed weekly Warmane UwU Logs datasets for Onyxia, Icecrown, and
+  Lordaeron.
+- Rebuilt every configured boss leaderboard with no failed ranking requests, no
+  failed bulk-boss requests, and no missing configured encounters.
+- Updated split Lua data chunks for all three load-on-demand realm data addons.
+
+### Realm coverage
+
+- Kept Icecrown capped at the top 1,500 ranked players per specialization,
+  shipping 33,819 current ranked players and 34,201 players total with no
+  boss-only/rankless ICC players added.
+- Kept Lordaeron capped at the top 1,000 ranked players per specialization,
+  shipping 14,990 current ranked players and 15,092 players total with no
+  boss-only/rankless ICC players added.
+- Kept Onyxia on the TOGC/Koralon phase profile, shipping 6,142 current active
+  players and 14,541 players total with Phase 2 Overall and locked Algalon
+  history retained.
+
+### Validation
+
+- Verified all configured Warmane boss profiles before the weekly pull.
+- Preserved the locked historical Algalon records before writing the refreshed
+  Onyxia dataset.
+- Passed Warmane workspace validation for the canonical `coolstats_publish/`
+  tree and the mirrored `coolstats/` tree.
+- Passed Lua 5.1 validation for the Wrath 3.3.5 client target, including the
+  split generated realm data chunks.
+- Passed the Lua harness tests for browser analysis, realm loading, cache/talent
+  handling, and target feedback.
+- Passed the Onyxia phase-transition test suite.
+
 ## 0.2.30 - 2026-07-18
 
 ### Data refresh

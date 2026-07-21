@@ -3984,6 +3984,7 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 	panel:SetBackdropBorderColor(0.55, 0.52, 0.48, 1)
 	panel:EnableMouse(true)
 
+	local closeButton
 	if standalone then
 		panel:SetMovable(true)
 		if panel.SetToplevel then
@@ -4013,6 +4014,7 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 			panel:Hide()
 		end)
 		panel.close = close
+		closeButton = close
 
 		if frameName and UISpecialFrames then
 			local registered = false
@@ -4100,7 +4102,11 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 
 	local logLinkButton = CreateFrame("Button", nil, panel)
 	SetFrameSize(logLinkButton, 32, 16)
-	logLinkButton:SetPoint("TOPRIGHT", panel, "TOPRIGHT", -34, -9)
+	if closeButton then
+		logLinkButton:SetPoint("RIGHT", closeButton, "LEFT", -2, 0)
+	else
+		logLinkButton:SetPoint("TOPRIGHT", panel, "TOPRIGHT", -34, -9)
+	end
 	logLinkButton:SetFrameLevel(panel:GetFrameLevel() + 9)
 	logLinkButton:SetNormalTexture("Interface\\TradeSkillFrame\\UI-TradeSkill-LinkButton")
 	local logLinkNormal = logLinkButton:GetNormalTexture()
@@ -4130,6 +4136,37 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 	end)
 	logLinkButton:Hide()
 	panel.logLinkButton = logLinkButton
+
+	local armoryButton = CreateFrame("Button", nil, panel)
+	SetFrameSize(armoryButton, 20, 20)
+	armoryButton:SetPoint("TOPLEFT", panel, "TOPLEFT", 9, -10)
+	armoryButton:SetFrameLevel(panel:GetFrameLevel() + 9)
+	armoryButton:SetNormalTexture("Interface\\Icons\\Trade_BlackSmithing")
+	local armoryNormal = armoryButton:GetNormalTexture()
+	if armoryNormal then
+		armoryNormal:SetAllPoints(armoryButton)
+	end
+	armoryButton:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+	armoryButton:RegisterForClicks("LeftButtonUp")
+	armoryButton:SetScript("OnClick", function(self)
+		if coolstats.OpenCachedPlayerBrowserWarmaneArmory then
+			coolstats.OpenCachedPlayerBrowserWarmaneArmory(self:GetParent().renderName)
+		end
+	end)
+	armoryButton:SetScript("OnEnter", function(self)
+		local linkName = self:GetParent().renderName
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetText("Warmane Armory", 1.0, 0.82, 0.0)
+		if linkName and linkName ~= "" then
+			GameTooltip:AddLine("Show the armory link for " .. linkName .. ".", 0.86, 0.86, 0.78, true)
+		end
+		GameTooltip:Show()
+	end)
+	armoryButton:SetScript("OnLeave", function()
+		GameTooltip:Hide()
+	end)
+	armoryButton:Hide()
+	panel.armoryButton = armoryButton
 
 	local subtitle = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
 	subtitle:SetPoint("TOP", title, "BOTTOM", 0, -2)
@@ -4349,6 +4386,13 @@ RenderUwUPanel = function(panel, name, player, subtitle)
 			panel.logLinkButton:Show()
 		else
 			panel.logLinkButton:Hide()
+		end
+	end
+	if panel.armoryButton then
+		if player and name and name ~= "" and coolstats.OpenCachedPlayerBrowserWarmaneArmory then
+			panel.armoryButton:Show()
+		else
+			panel.armoryButton:Hide()
 		end
 	end
 	SetFrameSize(panel, UWU_INSPECT_PANEL_WIDTH, UWU_INSPECT_PANEL_HEIGHT)

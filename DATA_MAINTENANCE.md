@@ -49,13 +49,13 @@ until it is present in the official player logs.
 
 ## Current Caps And Size Guardrails
 
-As of `0.2.30`:
+As of `0.2.31`:
 
 - **Icecrown:** top 1,500 ranked players per class/specialization, resulting in
-  33,808 current ranked players.
+  33,819 current ranked players and 34,201 total players.
 - **Lordaeron:** top 1,000 ranked players per class/specialization, resulting
-  in 14,983 current ranked players.
-- **Onyxia:** TOGC phase dataset with 5,607 current active players, 13,965
+  in 14,990 current ranked players and 15,092 total players.
+- **Onyxia:** TOGC phase dataset with 6,142 current active players, 14,541
   total players after retained history and TOGC boss-only coverage, Phase 2
   Overall, and locked Algalon history retained.
 

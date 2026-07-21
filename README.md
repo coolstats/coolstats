@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.30`, the install-ready release ships separate load-on-demand data
+As of `0.2.31`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
@@ -55,6 +55,8 @@ boss parses for players who are present in the current ranked ICC coverage.
 - UwU Logs action added to supported player and chat-name right-click menus.
 - Compact `[coolstats: Player]` chat links let users with a compatible addon
   version open the linked player's logs directly.
+- Individual player log panels include quick buttons for chat-linking logs and
+  opening the player's Warmane Armory URL.
 - Raid-progress fallback checks can show achievement/statistic progress when
   verified logs are missing on realms where the underlying client data is
   reliable.
