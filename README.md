@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.33`, the install-ready release ships separate load-on-demand data
+As of `0.2.34`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
@@ -77,6 +77,9 @@ table:
 - Search players by name with responsive, delayed filtering.
 - Filter by class, favourites, or main specialization.
 - Sort columns in ascending, descending, or default order.
+- Open a lightweight Statistics view for the current browser filters, showing
+  class/spec representation with counts, percentages, a total sum, and an
+  optional boss drilldown selector.
 - View main spec, off spec, parses, best rank, and cache availability.
 - See whether logs, gear, and talents are available before opening a player.
 - Favourite players so they remain at the top of the default list.

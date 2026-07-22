@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+## 0.2.34 - 2026-07-22
+
+### Player browser
+
+- Added a Stats button that opens a cached spec-representation chart for the
+  current browser view, including class/spec-colored bars, counts, percentages,
+  and selected-boss log scope when a boss filter is active.
+- Refined the Statistics panel with the tabard background treatment, a built-in
+  realm-aware boss selector, class-plus-spec labels beside spec icons, and a
+  bottom sum of the displayed bars.
+- Tightened the Statistics chart spacing by right-aligning class/spec labels
+  into their spec icons and moving the summary line below the boss selector.
+- Fixed browser and logs panel tabard backgrounds so the tabard texture stays
+  visible above the black fallback backdrop unless a panel deliberately opts out.
+
+### Data
+
+- Carries forward the refreshed `0.2.33` Warmane datasets, including the
+  expanded Onyxia top-500-per-specialization coverage.
+
 ## 0.2.33 - 2026-07-22
 
 ### Player browser
