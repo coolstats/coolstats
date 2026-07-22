@@ -21,12 +21,13 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.32`, the install-ready release ships separate load-on-demand data
+As of `0.2.33`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
   Koralon, with Phase 2 Overall rank/parse and the locked historical Algalon
-  parse retained as previous-season indicators.
+  parse retained as previous-season indicators. Current rankings are capped at
+  the top 500 players per class/specialization.
 - **Icecrown:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,500 ranked players per
   class/specialization.
@@ -51,6 +52,8 @@ boss parses for players who are present in the current ranked ICC coverage.
 - Individual boss parses directly inside player tooltips by holding `ALT`.
 - Parse colors and specialization icons make results easy to scan.
 - Dedicated logs panels show every available specialization for a player.
+- Selecting an individual boss in the browser shows boss parse, boss rank, and
+  boss DPS directly in sortable columns.
 - Side-by-side compare mode cross-references your logs with another player.
 - UwU Logs action added to supported player and chat-name right-click menus.
 - Compact `[coolstats: Player]` chat links let users with a compatible addon
@@ -142,7 +145,11 @@ requires a UI reload.
 
 On login, coolstats confirms that it loaded successfully and shows the
 freshness date of the bundled UwU Logs data. If the data is more than seven
-days old, the addon displays a red update warning.
+days old, the addon displays a red update warning. `/cs update` opens copyable
+Warperia and GitHub update links, and `/cs versioncheck` can ask nearby
+coolstats users which addon/data version they have. Group checks audit the
+current raid or party roster and call out players that do not have coolstats
+installed.
 
 Minimap controls:
 

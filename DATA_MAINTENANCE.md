@@ -49,15 +49,16 @@ until it is present in the official player logs.
 
 ## Current Caps And Size Guardrails
 
-As of `0.2.32`:
+As of `0.2.33`:
 
 - **Icecrown:** top 1,500 ranked players per class/specialization, resulting in
   33,819 current ranked players and 34,201 total players.
 - **Lordaeron:** top 1,000 ranked players per class/specialization, resulting
   in 14,990 current ranked players and 15,092 total players.
-- **Onyxia:** TOGC phase dataset with 6,142 current active players, 14,541
-  total players after retained history and TOGC boss-only coverage, Phase 2
-  Overall, and locked Algalon history retained.
+- **Onyxia:** top 500 ranked players per class/specialization for the TOGC
+  phase dataset, resulting in 6,427 current active players and 14,761 total
+  players after retained history and TOGC boss-only coverage, Phase 2 Overall,
+  and locked Algalon history retained.
 
 For ICC realms, boss-only/rankless leaderboard players must not be added to the
 shipped dataset. Boss parses should be attached only to players already present
@@ -90,6 +91,7 @@ Pull scores only for quick coverage checks:
 Run full weekly pulls for the current ICC realm caps:
 
 ```powershell
+.\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Onyxia -MaxPerSpec 500
 .\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Icecrown -MaxPerSpec 1500
 .\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Lordaeron -MaxPerSpec 1000
 ```

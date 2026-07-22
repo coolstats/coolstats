@@ -1,5 +1,40 @@
 # Changelog
 
+## Unreleased
+
+## 0.2.33 - 2026-07-22
+
+### Player browser
+
+- Added a Boss DPS column when an individual boss filter is selected, using the
+  already cached boss parse data for each visible row.
+
+### Update center
+
+- Added `/cs update`, a browser toolbar Update button, and a minimap menu entry
+  with copyable Warperia and GitHub update links.
+- Added lightweight peer version/data-age checks over addon messages for login,
+  group roster changes, and manual `/cs versioncheck` checks.
+- Improved manual group checks to audit the current raid/party roster, collect
+  whisper replies, and print both responding players and players without
+  coolstats installed.
+- Removed the guild version check button/path; checks now focus on the current
+  raid or party.
+- Renamed the individual-boss parse sort header from boss abbreviations like
+  `LJ` to `Parse`, with the full boss context kept in the sort tooltip.
+
+### Onyxia logs
+
+- Refreshed only the Warmane Onyxia TOGC/Koralon UwU Logs dataset, leaving
+  Icecrown and Lordaeron data unchanged from `0.2.31`.
+- Expanded Onyxia current rankings from the top 400 to the top 500 players per
+  class/specialization, shipping 6,427 current active players and 14,761
+  players total after retained history and TOGC boss-only coverage.
+- Rebuilt all six current Onyxia boss leaderboards with 34,118 boss rows
+  updated, no failed bulk-boss requests, and no missing configured encounters.
+- Preserved Phase 2 Overall history and verified the locked historical Algalon
+  records before writing the refreshed Onyxia dataset.
+
 ## 0.2.32 - 2026-07-21
 
 ### UI hotfix
