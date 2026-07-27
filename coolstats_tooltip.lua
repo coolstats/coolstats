@@ -110,6 +110,7 @@ coolstats.CACHE_LIMITS = {
 	gearPlayers = 500,
 	talentPlayers = 500,
 	maxAgeSeconds = SECONDS_PER_DAY * 14,
+	refreshSeconds = 900,
 }
 local UWU_CACHED_GEAR_PANEL_WIDTH = 274
 local UWU_CACHED_GEAR_PANEL_HEIGHT = 430
@@ -665,6 +666,30 @@ function coolstats.GetTooltipFeatureOptions()
 	return coolstatsDB.tooltip
 end
 
+function coolstats.GetCachedPlayerBrowserPlayerLimit()
+	if coolstats.GetRealmDataEffectivePlayerLoadLimit then
+		return coolstats.GetRealmDataEffectivePlayerLoadLimit()
+	end
+	return nil
+end
+
+function coolstats.IsGearCachingEnabled()
+	local options = coolstats.GetTooltipFeatureOptions()
+	if options.cacheInspectGear == nil and options.cacheOnHover ~= nil then
+		return options.cacheOnHover ~= false
+	end
+	return options.cacheInspectGear ~= false
+end
+
+function coolstats.IsTalentCachingEnabled()
+	local options = coolstats.GetTooltipFeatureOptions()
+	return options.cacheInspectTalents ~= false
+end
+
+function coolstats.IsAnyInspectCachingEnabled()
+	return coolstats.IsGearCachingEnabled() or coolstats.IsTalentCachingEnabled()
+end
+
 function coolstats.MergeCachedPlayerStoreRoots(target, source)
 	if type(target) ~= "table" or type(source) ~= "table" or target == source then
 		return target
@@ -832,6 +857,14 @@ end
 function coolstats.GetCachedTalentStore()
 	EnsureTooltipDatabase()
 	return coolstats.GetCachedPlayerRealmStore(coolstats.GetCacheDatabase().cachedInspectTalents)
+end
+
+function coolstats.IsCachedPlayerSnapshotFresh(snapshot)
+	local seenAt = tonumber(snapshot and snapshot.seenAt)
+	if not seenAt or seenAt <= 0 then
+		return false
+	end
+	return GetNowSeconds() - seenAt < (tonumber(coolstats.CACHE_LIMITS.refreshSeconds) or 900)
 end
 
 function coolstats.CachedTalentGroupMatchesClass(group, classFile)
@@ -1304,16 +1337,67 @@ local function GetItemIDFromLink(link)
 	return itemID and tonumber(itemID) or nil
 end
 
-local function GetEnchantIDFromLink(link)
-	if not link then
+function coolstats.GetCachedGearItemLinkFields(link)
+	local itemString = link and string.match(link, "item:([^|]+)")
+	if not itemString then
 		return nil
 	end
-	local enchantID = string.match(link, "item:%-?%d+:(%-?%d*)")
-	enchantID = enchantID and tonumber(enchantID) or nil
+	local fields = {}
+	local startIndex = 1
+	for index = 1, 10 do
+		local colonIndex = string.find(itemString, ":", startIndex, true)
+		if colonIndex then
+			fields[index] = string.sub(itemString, startIndex, colonIndex - 1)
+			startIndex = colonIndex + 1
+		else
+			fields[index] = string.sub(itemString, startIndex)
+			break
+		end
+	end
+	return fields
+end
+
+local function GetEnchantIDFromLink(link)
+	local fields = coolstats.GetCachedGearItemLinkFields(link)
+	local enchantID = fields and tonumber(fields[2]) or nil
 	if enchantID and enchantID > 0 then
 		return enchantID
 	end
 	return nil
+end
+
+function coolstats.AddCachedGearGemID(gems, gemID)
+	gemID = tonumber(gemID)
+	if not gemID or gemID <= 0 then
+		return gems
+	end
+	gems = gems or {}
+	for index = 1, #gems do
+		if gems[index] == gemID then
+			return gems
+		end
+	end
+	gems[#gems + 1] = gemID
+	return gems
+end
+
+function coolstats.GetCachedGearGemIDsFromLink(link)
+	local fields = coolstats.GetCachedGearItemLinkFields(link)
+	local gems = nil
+	if fields then
+		for index = 3, 6 do
+			gems = coolstats.AddCachedGearGemID(gems, fields[index])
+		end
+	end
+	if GetItemGem and link then
+		for index = 1, 4 do
+			local ok, _, gemLink = pcall(GetItemGem, link, index)
+			if ok then
+				gems = coolstats.AddCachedGearGemID(gems, GetItemIDFromLink(gemLink))
+			end
+		end
+	end
+	return gems
 end
 
 local function AddItemStatsToSummary(summary, itemStats)
@@ -1325,6 +1409,68 @@ local function AddItemStatsToSummary(summary, itemStats)
 			summary[summaryKey] = (summary[summaryKey] or 0) + (tonumber(itemStats[statKeys[index]]) or 0)
 		end
 	end
+end
+
+function coolstats.AddCachedGemStatsToSummary(summary, gemIDs)
+	-- Stored gem IDs are used for visibility and future-safe cache repair. Do not
+	-- resolve gem item stats here; some 3.3.5 clients/servers throw from item stat
+	-- APIs during tooltip rendering, which can break the whole tooltip path.
+end
+
+function coolstats.RefreshCachedGearSnapshotFromUnit(snapshot, unit, name, realm)
+	if not snapshot or not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then
+		return false
+	end
+	snapshot.slots = snapshot.slots or {}
+	local slotCount = 0
+	local refreshed = false
+	for index = 1, #UWU_CACHED_GEAR_SLOTS do
+		local slot = UWU_CACHED_GEAR_SLOTS[index].slot
+		local okLink, link = pcall(GetInventoryItemLink, unit, slot)
+		if okLink and link then
+			slotCount = slotCount + 1
+			local item = snapshot.slots[slot]
+			if type(item) ~= "table" then
+				item = {}
+				snapshot.slots[slot] = item
+			end
+			item.link = link
+			item.itemID = GetItemIDFromLink(link)
+			item.enchantID = GetEnchantIDFromLink(link)
+			item.gemIDs = coolstats.GetCachedGearGemIDsFromLink(link) or item.gemIDs
+			local okTexture, texture = pcall(GetInventoryItemTexture, unit, slot)
+			if okTexture and texture then
+				item.texture = texture
+			end
+			if GetInventoryItemQuality then
+				local okQuality, quality = pcall(GetInventoryItemQuality, unit, slot)
+				if okQuality and quality then
+					item.quality = quality
+				end
+			end
+			if GetItemInfo then
+				local okInfo, _, _, quality, itemLevel, _, _, _, _, _, itemTexture = pcall(GetItemInfo, link)
+				if okInfo then
+					item.quality = quality or item.quality
+					item.itemLevel = itemLevel or item.itemLevel
+					item.texture = itemTexture or item.texture
+				end
+			end
+			refreshed = true
+		end
+	end
+	if refreshed then
+		local _, classFile = UnitClass(unit)
+		local player = GetUwUPlayerByName and GetUwUPlayerByName(name)
+		snapshot.name = name or snapshot.name
+		snapshot.realm = coolstats.GetCachedPlayerSnapshotRealmName(realm)
+		snapshot.classFile = classFile or snapshot.classFile
+		snapshot.classIndex = classFile and UWU_CLASS_INDEX_BY_FILE[classFile] or snapshot.classIndex or player and player[3]
+		snapshot.level = UnitLevel(unit)
+		snapshot.seenAt = GetNowSeconds()
+		snapshot.slotCount = slotCount
+	end
+	return refreshed
 end
 
 local function AddEnchantStatsToSummary(summary, enchantID)
@@ -1397,7 +1543,10 @@ local function BuildCachedGearStatSummary(snapshot)
 			if GetItemStats then
 				AddItemStatsToSummary(summary, GetItemStats(item.link))
 			end
-			AddEnchantStatsToSummary(summary, GetEnchantIDFromLink(item.link))
+			item.enchantID = item.enchantID or GetEnchantIDFromLink(item.link)
+			item.gemIDs = item.gemIDs or coolstats.GetCachedGearGemIDsFromLink(item.link)
+			coolstats.AddCachedGemStatsToSummary(summary, item.gemIDs)
+			AddEnchantStatsToSummary(summary, item.enchantID)
 		end
 	end
 
@@ -1573,6 +1722,9 @@ function coolstats.GetCachedTalentPrereq(tabIndex, talentIndex, isInspect, talen
 end
 
 function coolstats.CacheInspectTalentsForUnit(unit)
+	if not coolstats.IsTalentCachingEnabled() then
+		return nil, false
+	end
 	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then
 		return nil
 	end
@@ -1587,6 +1739,11 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 	local key = GetCachedGearKeyForName(name)
 	if not key then
 		return nil
+	end
+	local store = coolstats.GetCachedTalentStore()
+	local existing = store.players and store.players[key]
+	if existing and coolstats.CachedTalentSnapshotMatchesClass(existing) and coolstats.IsCachedPlayerSnapshotFresh(existing) then
+		return existing, true
 	end
 
 	local _, classFile = UnitClass(unit)
@@ -1665,7 +1822,6 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 		end
 	end
 
-	local store = coolstats.GetCachedTalentStore()
 	local snapshot = {
 		name = name,
 		realm = coolstats.GetCachedPlayerSnapshotRealmName(realm),
@@ -1688,6 +1844,9 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 end
 
 local function CacheInspectGearForUnit(unit)
+	if not coolstats.IsGearCachingEnabled() then
+		return nil
+	end
 	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then
 		return nil
 	end
@@ -1700,46 +1859,25 @@ local function CacheInspectGearForUnit(unit)
 	if not key then
 		return nil
 	end
-
-	local _, classFile = UnitClass(unit)
-	local player = GetUwUPlayerByName and GetUwUPlayerByName(name)
-	local slots = {}
-	local slotCount = 0
-	for index = 1, #UWU_CACHED_GEAR_SLOTS do
-		local slot = UWU_CACHED_GEAR_SLOTS[index].slot
-		local link = GetInventoryItemLink(unit, slot)
-		if link then
-			slotCount = slotCount + 1
-			slots[slot] = {
-				link = link,
-				itemID = GetItemIDFromLink(link),
-				texture = GetInventoryItemTexture(unit, slot),
-				quality = GetInventoryItemQuality and GetInventoryItemQuality(unit, slot) or nil,
-			}
-			if GetItemInfo then
-				local _, _, quality, itemLevel, _, _, _, _, _, texture = GetItemInfo(link)
-				slots[slot].quality = quality or slots[slot].quality
-				slots[slot].itemLevel = itemLevel
-				slots[slot].texture = texture or slots[slot].texture
-			end
-		end
-	end
-
-	if slotCount == 0 then
-		return nil
-	end
-
 	local store = GetCachedGearStore()
+	local existing = store.players and store.players[key]
+	if existing and coolstats.IsCachedPlayerSnapshotFresh(existing) then
+		if coolstats.RefreshCachedGearSnapshotFromUnit(existing, unit, name, realm) then
+			BuildCachedGearStatSummary(existing)
+			TouchCachedGearKey(store, key)
+		end
+		return existing
+	end
+
 	local snapshot = {
 		name = name,
 		realm = coolstats.GetCachedPlayerSnapshotRealmName(realm),
-		classFile = classFile,
-		classIndex = classFile and UWU_CLASS_INDEX_BY_FILE[classFile] or player and player[3],
-		level = UnitLevel(unit),
-		seenAt = GetNowSeconds(),
-		slotCount = slotCount,
-		slots = slots,
+		slots = {},
 	}
+	if not coolstats.RefreshCachedGearSnapshotFromUnit(snapshot, unit, name, realm) then
+		return nil
+	end
+
 	BuildCachedGearStatSummary(snapshot)
 	store.players[key] = snapshot
 	TouchCachedGearKey(store, key)
@@ -1752,13 +1890,28 @@ function coolstats.TrackInspectRequest(unit)
 		return
 	end
 	local name = UnitName(unit)
-	pendingGearInspectName = name and GetCachedGearKeyForName(name) or nil
-	pendingGearInspectGuid = UnitGUID and UnitGUID(unit) or nil
-	coolstats.pendingTalentInspectName = pendingGearInspectName
-	coolstats.pendingTalentInspectGuid = pendingGearInspectGuid
+	local nameKey = name and GetCachedGearKeyForName(name) or nil
+	local guid = UnitGUID and UnitGUID(unit) or nil
+	if coolstats.IsGearCachingEnabled() then
+		pendingGearInspectName = nameKey
+		pendingGearInspectGuid = guid
+	else
+		pendingGearInspectName = nil
+		pendingGearInspectGuid = nil
+	end
+	if coolstats.IsTalentCachingEnabled() then
+		coolstats.pendingTalentInspectName = nameKey
+		coolstats.pendingTalentInspectGuid = guid
+	else
+		coolstats.pendingTalentInspectName = nil
+		coolstats.pendingTalentInspectGuid = nil
+	end
 end
 
 local function RequestGearInspectForUnit(unit)
+	if not coolstats.IsAnyInspectCachingEnabled() then
+		return false
+	end
 	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then
 		return false
 	end
@@ -1842,9 +1995,18 @@ function coolstats.UpdateVisibleCachedPlayerBrowserTalent(snapshot)
 	end
 end
 
-function coolstats.CaptureReadyInspectTalents(guid, nameKey)
+function coolstats.CaptureReadyInspectTalents(guid, nameKey, keepPendingOnMiss)
+	if not coolstats.IsTalentCachingEnabled() then
+		coolstats.pendingTalentInspectGuid = nil
+		coolstats.pendingTalentInspectName = nil
+		return nil
+	end
 	local unit = coolstats.FindInspectReadyUnit(guid, nameKey)
 	if not unit then
+		if not keepPendingOnMiss then
+			coolstats.pendingTalentInspectGuid = nil
+			coolstats.pendingTalentInspectName = nil
+		end
 		return nil
 	end
 	local snapshot = coolstats.CacheInspectTalentsForUnit(unit)
@@ -1856,12 +2018,17 @@ function coolstats.CaptureReadyInspectTalents(guid, nameKey)
 		coolstats.pendingCachedTalentsOpenName = nil
 		coolstats.OpenCachedTalentsForName(pendingName)
 	end
-	coolstats.pendingTalentInspectGuid = nil
-	coolstats.pendingTalentInspectName = nil
+	if snapshot or not keepPendingOnMiss then
+		coolstats.pendingTalentInspectGuid = nil
+		coolstats.pendingTalentInspectName = nil
+	end
 	return snapshot
 end
 
 local function TryCacheLookupGearFromUnit(unit, lookupKey)
+	if not coolstats.IsGearCachingEnabled() then
+		return nil, false
+	end
 	if not unit or not lookupKey or not UnitExists(unit) or not UnitIsPlayer(unit) then
 		return nil, false
 	end
@@ -1876,6 +2043,9 @@ local function TryCacheLookupGearFromUnit(unit, lookupKey)
 end
 
 local function CacheGearForLookupName(name)
+	if not coolstats.IsGearCachingEnabled() then
+		return nil, false
+	end
 	local lookupKey = GetCachedGearKeyForName(name)
 	if not lookupKey then
 		return nil, false
@@ -1915,6 +2085,9 @@ local function CacheGearForLookupName(name)
 end
 
 function coolstats.TryCacheLookupTalentsFromUnit(unit, lookupKey)
+	if not coolstats.IsTalentCachingEnabled() then
+		return nil, false
+	end
 	if not unit or not lookupKey or not UnitExists(unit) or not UnitIsPlayer(unit) then
 		return nil, false
 	end
@@ -1937,6 +2110,9 @@ function coolstats.CacheTalentsForLookupName(name)
 	local cached = coolstats.GetCachedTalentSnapshot(name)
 	if cached then
 		return cached, false
+	end
+	if not coolstats.IsTalentCachingEnabled() then
+		return nil, false
 	end
 
 	local inspectUnit = GetInspectUwUUnit and GetInspectUwUUnit()
@@ -1982,6 +2158,9 @@ local function CachedGearButton_OnEnter(self)
 		GameTooltip:SetHyperlink(self.link)
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine("Cached gear snapshot", 0.62, 0.62, 0.58, true)
+		if self.gemIDs and #self.gemIDs > 0 then
+			GameTooltip:AddLine("Cached gems: " .. tostring(#self.gemIDs), 0.62, 0.86, 0.72, true)
+		end
 	else
 		GameTooltip:SetText(self.slotLabel or "Empty Slot", 1, 0.82, 0.16)
 		GameTooltip:AddLine("No cached item for this slot.", 0.62, 0.62, 0.58, true)
@@ -1997,7 +2176,7 @@ local function CachedGearInfo_OnEnter(self)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 	GameTooltip:SetText(self.tooltipTitle or "Cached Gear", 1, 0.82, 0.16)
 	GameTooltip:AddLine("These values are gear-only estimates from cached item links.", 0.78, 0.78, 0.72, true)
-	GameTooltip:AddLine("Gems and enchants are not reliably included.", 1.0, 0.45, 0.25, true)
+	GameTooltip:AddLine("Gem presence is shown when cached; enchant bonuses are included when available.", 0.62, 0.86, 0.72, true)
 	GameTooltip:Show()
 end
 
@@ -2832,6 +3011,14 @@ local function GetUwUBossDisplayLabel(bossName)
 	return label
 end
 
+function coolstats.GetUwUBossPlainTextLabel(bossName)
+	local label = GetUwUBossDisplayName(bossName)
+	if UWU_HARD_MODE_BOSSES[bossName] then
+		return label .. " {skull}"
+	end
+	return label
+end
+
 local function GetUwUBossScoreCenti(bossData)
 	if type(bossData) == "number" then
 		return bossData
@@ -3633,6 +3820,16 @@ local function CreateCachedGearSlotButton(panel, info)
 	itemLevel:SetShadowOffset(0, 0)
 	button.itemLevelText = itemLevel
 
+	button.gemIcons = {}
+	for gemIndex = 1, 4 do
+		local gemIcon = button:CreateTexture(nil, "OVERLAY")
+		SetFrameSize(gemIcon, 7, 7)
+		gemIcon:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -3 - ((gemIndex - 1) * 8), 3)
+		gemIcon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+		gemIcon:Hide()
+		button.gemIcons[gemIndex] = gemIcon
+	end
+
 	if GetInventorySlotInfo and info.token then
 		local _, emptyTexture = GetInventorySlotInfo(info.token)
 		button.emptyTexture = emptyTexture
@@ -3733,6 +3930,7 @@ local function CreateCachedGearPanel(ownerPanel)
 
 	local panel = CreateFrame("Frame", nil, ownerPanel:GetParent() or UIParent)
 	ownerPanel.cachedGearPanel = panel
+	panel.ownerPanel = ownerPanel
 	SetFrameSize(panel, UWU_CACHED_GEAR_PANEL_WIDTH, UWU_CACHED_GEAR_PANEL_HEIGHT)
 	panel:SetPoint("TOPRIGHT", ownerPanel, "TOPLEFT", -UWU_CACHED_GEAR_PANEL_GAP, 0)
 	panel:SetFrameStrata(ownerPanel:GetFrameStrata())
@@ -3832,6 +4030,69 @@ local function CreateCachedGearPanel(ownerPanel)
 		local info = UWU_CACHED_GEAR_SLOTS[index]
 		panel.slotButtons[info.slot] = CreateCachedGearSlotButton(panel, info)
 	end
+
+	local talentButton = CreateFrame("Button", nil, panel)
+	SetFrameSize(talentButton, 20, 20)
+	talentButton:SetPoint("CENTER", panel, "TOPLEFT", 245, -405)
+	talentButton:SetFrameLevel(panel:GetFrameLevel() + 9)
+	talentButton:SetNormalTexture("Interface\\Icons\\Ability_Marksmanship")
+	local talentNormal = talentButton:GetNormalTexture()
+	if talentNormal then
+		talentNormal:SetAllPoints(talentButton)
+		talentNormal:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+	end
+	talentButton:SetPushedTexture("Interface\\Icons\\Ability_Marksmanship")
+	local talentPushed = talentButton:GetPushedTexture()
+	if talentPushed then
+		talentPushed:SetAllPoints(talentButton)
+		talentPushed:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+		talentPushed:SetVertexColor(0.68, 0.68, 0.68, 1)
+	end
+	local talentBorder = talentButton:CreateTexture(nil, "OVERLAY")
+	talentBorder:SetTexture("Interface\\Buttons\\UI-Quickslot2")
+	SetFrameSize(talentBorder, 42, 42)
+	talentBorder:SetPoint("CENTER", talentButton, "CENTER", 0, 0)
+	talentBorder:SetVertexColor(0.95, 0.82, 0.36, 0.95)
+	talentButton.border = talentBorder
+	talentButton:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+	talentButton:RegisterForClicks("LeftButtonUp")
+	talentButton:SetScript("OnMouseDown", function(self)
+		if self.border then
+			self.border:ClearAllPoints()
+			self.border:SetPoint("CENTER", self, "CENTER", 1, -1)
+			self.border:SetVertexColor(1.0, 0.62, 0.16, 1)
+		end
+	end)
+	talentButton:SetScript("OnMouseUp", function(self)
+		if self.border then
+			self.border:ClearAllPoints()
+			self.border:SetPoint("CENTER", self, "CENTER", 0, 0)
+			self.border:SetVertexColor(0.95, 0.82, 0.36, 0.95)
+		end
+	end)
+	talentButton:SetScript("OnClick", function(self)
+		local owner = self:GetParent() and self:GetParent().ownerPanel
+		local linkName = owner and owner.renderName
+		if linkName and linkName ~= "" and coolstats.OpenCachedTalentsForName then
+			coolstats.OpenCachedTalentsForName(linkName)
+		end
+	end)
+	talentButton:SetScript("OnEnter", function(self)
+		local owner = self:GetParent() and self:GetParent().ownerPanel
+		local linkName = owner and owner.renderName
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetText("Cached Talents", 1.0, 0.82, 0.0)
+		if linkName and linkName ~= "" then
+			GameTooltip:AddLine("Open cached talents for " .. linkName .. ".", 0.86, 0.86, 0.78, true)
+		end
+		GameTooltip:Show()
+	end)
+	talentButton:SetScript("OnLeave", function()
+		GameTooltip:Hide()
+	end)
+	talentButton:Hide()
+	panel.cachedTalentsButton = talentButton
+
 	panel:Hide()
 	return panel
 end
@@ -3844,6 +4105,10 @@ local function UpdateCachedGearSlotButton(button, item)
 	button.link = item and item.link or nil
 	button.itemID = item and item.itemID or nil
 	button.itemLevel = item and item.itemLevel or nil
+	if item and item.link then
+		item.gemIDs = item.gemIDs or coolstats.GetCachedGearGemIDsFromLink(item.link)
+	end
+	button.gemIDs = item and item.gemIDs or nil
 	if item and item.texture then
 		button.icon:SetTexture(item.texture)
 		button.icon:SetDesaturated(false)
@@ -3877,6 +4142,21 @@ local function UpdateCachedGearSlotButton(button, item)
 		end
 	else
 		button.itemLevelText:SetText("")
+	end
+
+	if button.gemIcons then
+		for gemIndex = 1, #button.gemIcons do
+			local gemIcon = button.gemIcons[gemIndex]
+			local gemID = item and item.gemIDs and item.gemIDs[gemIndex]
+			if gemID then
+				local gemTexture = "Interface\\ItemSocketingFrame\\UI-EmptySocket-Prismatic"
+				gemIcon:SetTexture(gemTexture)
+				gemIcon:SetAlpha(0.95)
+				gemIcon:Show()
+			else
+				gemIcon:Hide()
+			end
+		end
 	end
 end
 
@@ -3957,6 +4237,14 @@ local function UpdateCachedGearPanel(ownerPanel, name, player)
 	for index = 1, #UWU_CACHED_GEAR_SLOTS do
 		local info = UWU_CACHED_GEAR_SLOTS[index]
 		UpdateCachedGearSlotButton(panel.slotButtons[info.slot], slots[info.slot])
+	end
+	if panel.cachedTalentsButton then
+		local talentName = (player and player[1]) or name
+		if talentName and talentName ~= "" and coolstats.OpenCachedTalentsForName then
+			panel.cachedTalentsButton:Show()
+		else
+			panel.cachedTalentsButton:Hide()
+		end
 	end
 	panel:Show()
 end
@@ -4139,6 +4427,40 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 	end)
 	logLinkButton:Hide()
 	panel.logLinkButton = logLinkButton
+
+	local summaryButton = CreateFrame("Button", nil, panel)
+	SetFrameSize(summaryButton, 18, 18)
+	summaryButton:SetPoint("TOPLEFT", panel, "TOPLEFT", 39, -10)
+	summaryButton:SetFrameLevel(panel:GetFrameLevel() + 9)
+	summaryButton:SetNormalTexture("Interface\\Icons\\INV_Scroll_03")
+	local summaryNormal = summaryButton:GetNormalTexture()
+	if summaryNormal then
+		summaryNormal:SetAllPoints(summaryButton)
+		summaryNormal:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+	end
+	summaryButton:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+	summaryButton:RegisterForClicks("LeftButtonUp")
+	summaryButton:SetScript("OnClick", function(self)
+		if coolstats.ShowUwULogPlainTextSummary then
+			local owner = self:GetParent()
+			coolstats.ShowUwULogPlainTextSummary(owner.renderName, owner.renderPlayer, owner)
+		end
+	end)
+	summaryButton:SetScript("OnEnter", function(self)
+		local linkName = self:GetParent().renderName
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetText("Copy Log Summary", 1.0, 0.82, 0.0)
+		if linkName and linkName ~= "" then
+			GameTooltip:AddLine("Generate a compact plain-text summary for " .. linkName .. ".", 0.86, 0.86, 0.78, true)
+			GameTooltip:AddLine("Opens a copy box instead of sending chat messages.", 0.62, 0.86, 0.72, true)
+		end
+		GameTooltip:Show()
+	end)
+	summaryButton:SetScript("OnLeave", function()
+		GameTooltip:Hide()
+	end)
+	summaryButton:Hide()
+	panel.summaryButton = summaryButton
 
 	local armoryButton = CreateFrame("Button", nil, panel)
 	SetFrameSize(armoryButton, 18, 18)
@@ -4394,6 +4716,13 @@ RenderUwUPanel = function(panel, name, player, subtitle)
 			panel.logLinkButton:Hide()
 		end
 	end
+	if panel.summaryButton then
+		if name and name ~= "" and coolstats.ShowUwULogPlainTextSummary then
+			panel.summaryButton:Show()
+		else
+			panel.summaryButton:Hide()
+		end
+	end
 	if panel.armoryButton then
 		if player and name and name ~= "" and coolstats.OpenCachedPlayerBrowserWarmaneArmory then
 			panel.armoryButton:Show()
@@ -4525,7 +4854,7 @@ UpdateInspectUwUPanel = function()
 	RenderUwUPanel(inspectUwUPanel, name or "No inspected player", player, GetUnitGuildNameText(unit) or "UwU Logs")
 end
 
-local function ShowUwULogsPanelForName(name)
+function coolstats.ShowUwULogsPanelForName(name)
 	CreateLookupUwUPanel()
 	if not lookupUwUPanel then
 		return false
@@ -4874,10 +5203,12 @@ function coolstats.RenderLogAnalysisChart(panel, selfPlayer, comparePlayer, self
 
 	local mainRaidBossIndexes = coolstats.GetLogAnalysisMainRaidBossIndexes()
 	local bossCount = #mainRaidBossIndexes
+	local chartWidth = tonumber(chart.width) or 900
+	local chartHeight = tonumber(chart.height) or 160
 	local plotLeft = 46
-	local plotRight = 882
+	local plotRight = math.max(plotLeft + 40, chartWidth - 18)
 	local plotBottom = 36
-	local plotTop = 140
+	local plotTop = math.max(plotBottom + 40, chartHeight - 20)
 	local plotWidth = plotRight - plotLeft
 	local plotHeight = plotTop - plotBottom
 	chart.plotBottom = plotBottom
@@ -5385,10 +5716,6 @@ local function HookInspectUwUPanel()
 end
 
 if type(coolstats) == "table" then
-	function coolstats.ShowUwULogsPanelForName(name)
-		return ShowUwULogsPanelForName(name)
-	end
-
 	function coolstats.GetUwULogsScoreForName(name)
 		local player = GetUwUPlayerByName(name)
 		if not player then
@@ -6109,17 +6436,24 @@ if type(coolstats) == "table" then
 		end
 		local cached, requested = coolstats.CacheTalentsForLookupName(name)
 		local snapshot = cached or coolstats.GetCachedTalentSnapshot(name)
+		local talentCacheEnabled = coolstats.IsTalentCachingEnabled()
 		if not snapshot then
 			snapshot = coolstats.BuildUncachedTalentReferenceSnapshot(name)
 		end
 		if not snapshot then
+			local emptyText = "No cached talents for this player yet.\n\nInspect, interact with, or be in range of that player to cache their talents."
+			if not talentCacheEnabled then
+				emptyText = "Talent caching is disabled.\n\nEnable talent caching in the coolstats Tooltip options to update talent snapshots."
+			elseif requested then
+				emptyText = "Talent inspect requested.\n\nIf this panel stays empty, inspect, interact with, or be in range of that player to cache their talents."
+			end
 			snapshot = {
 				name = name,
 				seenAt = nil,
 				activeGroup = 1,
 				groups = {},
 				missing = true,
-				emptyText = requested and "Talent inspect requested.\n\nIf this panel stays empty, inspect, interact with, or be in range of that player to cache their talents." or "No cached talents for this player yet.\n\nInspect, interact with, or be in range of that player to cache their talents.",
+				emptyText = emptyText,
 			}
 			if requested then
 				coolstats.pendingCachedTalentsOpenName = name
@@ -6131,6 +6465,9 @@ if type(coolstats) == "table" then
 		panel.selectedGroupIndex = snapshot.activeGroup or 1
 		coolstats.RenderCachedTalentsPanel(panel, snapshot)
 		panel:Show()
+		if coolstats.TouchManagedWindow then
+			coolstats.TouchManagedWindow(panel)
+		end
 		if PlaySound then
 			PlaySound(snapshot.missing and "igCharacterInfoOpen" or "igCharacterInfoTab")
 		end
@@ -6661,6 +6998,89 @@ if type(coolstats) == "table" then
 		end)
 	end
 
+	function coolstats.GetCachedPlayerBrowserLimitScore(row)
+		if not row then
+			return -1, 9999999
+		end
+		local score = tonumber(row.bossScoreCenti or row.scoreCenti or row.bestRankScoreCenti or row.phase2ScoreCenti) or -1
+		local rank = tonumber(row.bossPlayerRank or row.bossRaidRank or row.bestRank or row.rank or row.phase2Rank) or 9999999
+		return score, rank
+	end
+
+	function coolstats.ApplyCachedPlayerBrowserPlayerLimit(rows)
+		local limit = coolstats.GetCachedPlayerBrowserPlayerLimit()
+		local totalBeforeLimit = #rows
+		if not limit or totalBeforeLimit <= limit then
+			return totalBeforeLimit, false, limit
+		end
+		table.sort(rows, function(left, right)
+			local leftScore, leftRank = coolstats.GetCachedPlayerBrowserLimitScore(left)
+			local rightScore, rightRank = coolstats.GetCachedPlayerBrowserLimitScore(right)
+			if leftScore ~= rightScore then
+				return leftScore > rightScore
+			end
+			if leftRank ~= rightRank then
+				return leftRank < rightRank
+			end
+			return string.lower(left.name or left.key or "") < string.lower(right.name or right.key or "")
+		end)
+		for index = totalBeforeLimit, limit + 1, -1 do
+			rows[index] = nil
+		end
+		return totalBeforeLimit, true, limit
+	end
+
+	function coolstats.CountCachedPlayerBrowserRows(rows, bossIndex, playerKey)
+		local counts = { logs = 0, current = 0, phase2 = 0, gear = 0, talents = 0, both = 0, boss = 0 }
+		if bossIndex then
+			counts.bossBuckets = {}
+			counts.bossMaxBucket = 0
+			counts.bossBucketCount = 10
+			for bucketIndex = 1, counts.bossBucketCount do
+				counts.bossBuckets[bucketIndex] = 0
+			end
+		end
+		for _, row in ipairs(rows or {}) do
+			if row.hasLogs then
+				counts.logs = counts.logs + 1
+			end
+			if row.currentPhaseRanked then
+				counts.current = counts.current + 1
+			end
+			if row.phase2ScoreCenti then
+				counts.phase2 = counts.phase2 + 1
+			end
+			if row.bossScoreCenti then
+				counts.boss = counts.boss + 1
+				if counts.bossBuckets then
+					local score = math.max(0, math.min(10000, tonumber(row.bossScoreCenti) or 0))
+					local bucketIndex = math.floor(score / 1000) + 1
+					if bucketIndex > counts.bossBucketCount then
+						bucketIndex = counts.bossBucketCount
+					end
+					counts.bossBuckets[bucketIndex] = counts.bossBuckets[bucketIndex] + 1
+					if counts.bossBuckets[bucketIndex] > counts.bossMaxBucket then
+						counts.bossMaxBucket = counts.bossBuckets[bucketIndex]
+					end
+					if playerKey ~= "" and NormalizeName(row.name or row.key or "") == playerKey then
+						counts.playerBossScoreCenti = row.bossScoreCenti
+					end
+				end
+			end
+			if row.hasGear then
+				counts.gear = counts.gear + 1
+			end
+			if row.hasTalents then
+				counts.talents = counts.talents + 1
+			end
+			if row.hasLogs and row.hasGear then
+				counts.both = counts.both + 1
+			end
+		end
+		counts.total = #(rows or {})
+		return counts
+	end
+
 	function coolstats.GetCachedPlayerBrowserRows(filterText, panel)
 		PruneCachedGearCache(false)
 		coolstats.PruneCachedTalentCache(false)
@@ -6673,15 +7093,6 @@ if type(coolstats) == "table" then
 		end
 		local rowsByKey = {}
 		local rows = {}
-		local counts = { logs = 0, current = 0, phase2 = 0, gear = 0, talents = 0, both = 0, boss = 0 }
-		if bossIndex then
-			counts.bossBuckets = {}
-			counts.bossMaxBucket = 0
-			counts.bossBucketCount = 10
-			for bucketIndex = 1, counts.bossBucketCount do
-				counts.bossBuckets[bucketIndex] = 0
-			end
-		end
 
 		local function GetRow(key, name)
 			key = key or NormalizeName(name or "")
@@ -6690,7 +7101,7 @@ if type(coolstats) == "table" then
 			end
 			local row = rowsByKey[key]
 			if not row then
-		row = { key = key, name = name or key }
+				row = { key = key, name = name or key }
 				rowsByKey[key] = row
 			elseif name and name ~= "" then
 				row.name = name
@@ -6782,46 +7193,22 @@ if type(coolstats) == "table" then
 			row.isFavorite = coolstats.IsCachedPlayerBrowserFavorite(row.favoriteKey or row.name)
 			if coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey) then
 				rows[#rows + 1] = row
-				if row.hasLogs then
-					counts.logs = counts.logs + 1
-				end
-				if row.currentPhaseRanked then
-					counts.current = counts.current + 1
-				end
-				if row.phase2ScoreCenti then
-					counts.phase2 = counts.phase2 + 1
-				end
-				if row.bossScoreCenti then
-					counts.boss = counts.boss + 1
-					if counts.bossBuckets then
-						local score = math.max(0, math.min(10000, tonumber(row.bossScoreCenti) or 0))
-						local bucketIndex = math.floor(score / 1000) + 1
-						if bucketIndex > counts.bossBucketCount then
-							bucketIndex = counts.bossBucketCount
-						end
-						counts.bossBuckets[bucketIndex] = counts.bossBuckets[bucketIndex] + 1
-						if counts.bossBuckets[bucketIndex] > counts.bossMaxBucket then
-							counts.bossMaxBucket = counts.bossBuckets[bucketIndex]
-						end
-						if playerKey ~= "" and NormalizeName(row.name or row.key or "") == playerKey then
-							counts.playerBossScoreCenti = row.bossScoreCenti
-						end
-					end
-				end
-				if row.hasGear then
-					counts.gear = counts.gear + 1
-				end
-				if row.hasTalents then
-					counts.talents = counts.talents + 1
-				end
-				if row.hasLogs and row.hasGear then
-					counts.both = counts.both + 1
-				end
 			end
 		end
 
+		local totalBeforeLimit, limited, playerLimit = coolstats.ApplyCachedPlayerBrowserPlayerLimit(rows)
 		coolstats.SortCachedPlayerBrowserRows(rows, panel)
-		counts.total = #rows
+		local counts = coolstats.CountCachedPlayerBrowserRows(rows, bossIndex, playerKey)
+		counts.uncappedTotal = totalBeforeLimit
+		counts.playerLimit = playerLimit
+		counts.limited = limited
+		if coolstats.GetRealmDataTotalPlayerCount and coolstats.GetRealmDataLoadedPlayerCount then
+			counts.realmDataTotalPlayers = coolstats.GetRealmDataTotalPlayerCount()
+			counts.realmDataLoadedPlayers = coolstats.GetRealmDataLoadedPlayerCount()
+			local effectiveLimit = coolstats.GetRealmDataEffectivePlayerLoadLimit and coolstats.GetRealmDataEffectivePlayerLoadLimit() or nil
+			counts.realmDataDesiredPlayers = effectiveLimit or counts.realmDataTotalPlayers
+			counts.realmDataNeedsReload = counts.realmDataLoadedPlayers and counts.realmDataDesiredPlayers and counts.realmDataLoadedPlayers < counts.realmDataDesiredPlayers
+		end
 		return rows, counts
 	end
 
@@ -6897,7 +7284,7 @@ if type(coolstats) == "table" then
 		if PlaySound then
 			PlaySound("igCharacterInfoTab")
 		end
-		ShowUwULogsPanelForName(name)
+		coolstats.ShowUwULogsPanelForName(name)
 		if lookupUwUPanel and coolstats.cachedPlayerBrowser then
 			lookupUwUPanel:SetFrameStrata("DIALOG")
 			lookupUwUPanel:SetFrameLevel((coolstats.cachedPlayerBrowser:GetFrameLevel() or 80) + 10)
@@ -6995,6 +7382,80 @@ if type(coolstats) == "table" then
 		coolstats.RegisterManagedWindow(panel)
 		panel:Hide()
 		return panel
+	end
+
+	function coolstats.BuildUwULogPlainTextBossSegment(player, specIndex, maxBosses)
+		local data = coolstatsUwUData
+		if not data or not data.bosses or not player then
+			return ""
+		end
+		local bossData = GetUwUSpecBossData(player, specIndex) or player[8]
+		local bosses = {}
+		for bossIndex = 1, #data.bosses do
+			local bossName = data.bosses[bossIndex]
+			local entry = bossData and bossData[bossIndex]
+			if coolstats.GetActiveUwUPhaseId() == "toc" and bossName == "Algalon the Observer" then
+				entry = GetUwUBestBossDataAcrossSpecs(player, bossIndex) or entry
+			end
+			local scoreCenti = GetUwUBossScoreCenti(entry)
+			if bossName and scoreCenti then
+				bosses[#bosses + 1] = {
+					bossName = bossName,
+					scoreCenti = scoreCenti,
+					dps = GetUwUBossDps(entry),
+				}
+			end
+		end
+		table.sort(bosses, function(left, right)
+			return (left.scoreCenti or 0) > (right.scoreCenti or 0)
+		end)
+		local parts = {}
+		maxBosses = math.min(tonumber(maxBosses or 0) or 0, #bosses)
+		for index = 1, maxBosses do
+			local boss = bosses[index]
+			local text = coolstats.GetUwUBossPlainTextLabel(boss.bossName) .. " " .. FormatUwUScore(boss.scoreCenti)
+			if boss.dps and tonumber(boss.dps) and tonumber(boss.dps) > 0 then
+				text = text .. " " .. FormatUwUDps(boss.dps)
+			end
+			parts[#parts + 1] = text
+		end
+		return table.concat(parts, ", ")
+	end
+
+	function coolstats.BuildUwULogPlainTextSummary(name, player, panel)
+		name = tostring(name or (player and player[1]) or "Unknown")
+		if name == "" then
+			name = "Unknown"
+		end
+		player = player or GetUwUPlayerByName(name)
+		if not player then
+			return name .. ": no UwU Logs record in the current coolstats data."
+		end
+
+		local specIndex = panel and GetInspectPanelSelectedSpecIndex(panel, player) or player[4]
+		local specName = GetUwUSpecName(player, specIndex) or "Unknown"
+		local className = coolstats.GetCachedPlayerBrowserClassName and coolstats.GetCachedPlayerBrowserClassName(player[3]) or nil
+		local specLabel = className and (specName .. " " .. className) or specName
+		local scoreCenti = GetUwUSpecScoreCenti(player, specIndex) or player[2]
+		local rank = GetUwUSpecRank(player, specIndex) or player[5]
+		local raidText = coolstats.IsUwUPlayerRankedForCurrentPhase(player) and FormatUwUScoreWithRank(scoreCenti, rank) or "Not ranked"
+		local base = name .. " " .. specLabel .. ": Raid " .. raidText
+
+		for bossCount = 4, 1, -1 do
+			local bossText = coolstats.BuildUwULogPlainTextBossSegment(player, specIndex, bossCount)
+			if bossText and bossText ~= "" then
+				local summary = base .. " | Top bosses: " .. bossText
+				if string.len(summary) <= 240 or bossCount == 1 then
+					return summary
+				end
+			end
+		end
+		return base
+	end
+
+	function coolstats.ShowUwULogPlainTextSummary(name, player, panel)
+		local summary = coolstats.BuildUwULogPlainTextSummary(name, player, panel)
+		coolstats.ShowCachedPlayerBrowserUrl("UwU Log Summary", summary)
 	end
 
 	function coolstats.UpdateUpdateCenterDialog(panel)
@@ -7967,6 +8428,7 @@ if type(coolstats) == "table" then
 		talentStore.players = {}
 		talentStore.order = {}
 		coolstats.lastCachedTalentPruneAt = 0
+		coolstats.cachedPlayerBrowserStatus = nil
 		if lookupUwUPanel and lookupUwUPanel:IsShown() then
 			UpdateCachedGearPanel(lookupUwUPanel, lookupUwUPanel.renderName, lookupUwUPanel.renderPlayer)
 		end
@@ -7995,6 +8457,189 @@ if type(coolstats) == "table" then
 			}
 		end
 		StaticPopup_Show("COOLSTATS_CLEAR_CACHED_GEAR")
+	end
+
+	function coolstats.CountCachedPlayerStore(root)
+		if type(root) ~= "table" then
+			return 0
+		end
+		local store = coolstats.GetCachedPlayerRealmStore(root)
+		if not store then
+			return 0
+		end
+		local count = 0
+		local seen = {}
+		for _, key in ipairs(store.order or {}) do
+			if key and store.players and store.players[key] and not seen[key] then
+				seen[key] = true
+				count = count + 1
+			end
+		end
+		for key, snapshot in pairs(store.players or {}) do
+			if snapshot and not seen[key] then
+				count = count + 1
+			end
+		end
+		return count
+	end
+
+	function coolstats.GetCachedPlayerBrowserCacheCounts()
+		local cacheDB = coolstats.GetCacheDatabase and coolstats.GetCacheDatabase()
+		return {
+			gear = coolstats.CountCachedPlayerStore(cacheDB and cacheDB.cachedInspectGear),
+			talents = coolstats.CountCachedPlayerStore(cacheDB and cacheDB.cachedInspectTalents),
+		}
+	end
+
+	function coolstats.FormatCachedPlayerBrowserMemory(kb)
+		kb = tonumber(kb) or 0
+		if kb >= 1024 then
+			return string.format("%.1f MB", kb / 1024)
+		end
+		return string.format("%d KB", math.floor(kb + 0.5))
+	end
+
+	function coolstats.StepCachedPlayerBrowserGarbageCollector()
+		if not collectgarbage then
+			return
+		end
+		local now = GetTime and GetTime() or time()
+		if coolstats.lastCachedPlayerBrowserGCStepAt and now - coolstats.lastCachedPlayerBrowserGCStepAt < 1.5 then
+			return
+		end
+		coolstats.lastCachedPlayerBrowserGCStepAt = now
+		collectgarbage("step", 80)
+	end
+
+	function coolstats.GetCachedPlayerBrowserAddonMemoryByName(addonName)
+		if not addonName or not GetAddOnMemoryUsage then
+			return 0
+		end
+		local ok, memory = pcall(GetAddOnMemoryUsage, addonName)
+		if ok and tonumber(memory) and tonumber(memory) > 0 then
+			return tonumber(memory)
+		end
+		if not GetNumAddOns or not GetAddOnInfo then
+			return 0
+		end
+		for index = 1, GetNumAddOns() do
+			local name = GetAddOnInfo(index)
+			if name == addonName then
+				return tonumber(GetAddOnMemoryUsage(index)) or 0
+			end
+		end
+		return 0
+	end
+
+	function coolstats.GetCachedPlayerBrowserMemoryBreakdown()
+		local fallback = collectgarbage and collectgarbage("count") or 0
+		local breakdown = {
+			core = 0,
+			cache = 0,
+			data = 0,
+			other = 0,
+			total = fallback,
+			addonSpecific = false,
+		}
+		if not UpdateAddOnMemoryUsage or not GetAddOnMemoryUsage or not GetNumAddOns or not GetAddOnInfo then
+			return breakdown
+		end
+		UpdateAddOnMemoryUsage()
+		local seen = {}
+		breakdown.core = coolstats.GetCachedPlayerBrowserAddonMemoryByName("coolstats")
+		breakdown.cache = coolstats.GetCachedPlayerBrowserAddonMemoryByName("coolstats_Cache")
+		seen.coolstats = true
+		seen.coolstats_Cache = true
+		for index = 1, GetNumAddOns() do
+			local name = GetAddOnInfo(index)
+			local lowerName = name and string.lower(tostring(name)) or ""
+			local memory = tonumber(GetAddOnMemoryUsage(index)) or 0
+			if string.find(lowerName, "coolstats_data_", 1, true) == 1 then
+				breakdown.data = breakdown.data + memory
+				seen[name] = true
+			elseif string.find(lowerName, "coolstats", 1, true) == 1 and not seen[name] then
+				breakdown.other = breakdown.other + memory
+				seen[name] = true
+			end
+		end
+		local total = breakdown.core + breakdown.cache + breakdown.data + breakdown.other
+		if total > 0 then
+			breakdown.total = total
+			breakdown.addonSpecific = true
+		end
+		return breakdown
+	end
+
+	function coolstats.GetCachedPlayerBrowserStatus()
+		local now = GetTime and GetTime() or time()
+		local status = coolstats.cachedPlayerBrowserStatus
+		if status and status.updatedAt and now - status.updatedAt < 10 then
+			return status
+		end
+		local counts = coolstats.GetCachedPlayerBrowserCacheCounts()
+		local memory = coolstats.GetCachedPlayerBrowserMemoryBreakdown()
+		status = {
+			updatedAt = now,
+			gear = counts.gear or 0,
+			talents = counts.talents or 0,
+			memoryKB = memory.total or 0,
+			memory = memory,
+			addonSpecific = memory.addonSpecific and true or false,
+		}
+		status.text = "Memory in Use: " .. coolstats.FormatCachedPlayerBrowserMemory(status.memoryKB)
+		coolstats.cachedPlayerBrowserStatus = status
+		return status
+	end
+
+	function coolstats.UpdateCachedPlayerBrowserStatus(panel, force)
+		if force then
+			coolstats.cachedPlayerBrowserStatus = nil
+		end
+		if not panel or not panel.cacheStatusText then
+			return
+		end
+		local status = coolstats.GetCachedPlayerBrowserStatus()
+		panel.cacheStatus = status
+		panel.cacheStatusText:SetText(status.text or "")
+	end
+
+	function coolstats.ShowCachedPlayerBrowserCacheInfoTooltip(owner)
+		local panel = owner and owner.ownerPanel or coolstats.cachedPlayerBrowser
+		local status = panel and panel.cacheStatus or coolstats.GetCachedPlayerBrowserStatus()
+		GameTooltip:SetOwner(owner, "ANCHOR_RIGHT")
+		GameTooltip:SetText("Cache And Memory", 1, 0.82, 0.16)
+		GameTooltip:AddLine("Cached gear: " .. tostring(status and status.gear or 0) .. " players", 0.86, 0.86, 0.78)
+		GameTooltip:AddLine("Cached talents: " .. tostring(status and status.talents or 0) .. " players", 0.86, 0.86, 0.78)
+		if status and status.addonSpecific and status.memory then
+			GameTooltip:AddLine("Memory uses Blizzard's addon memory API.", 0.58, 0.76, 0.86, true)
+			GameTooltip:AddDoubleLine("Core", coolstats.FormatCachedPlayerBrowserMemory(status.memory.core), 0.86, 0.86, 0.78, 1, 1, 1)
+			GameTooltip:AddDoubleLine("Realm data", coolstats.FormatCachedPlayerBrowserMemory(status.memory.data), 0.86, 0.86, 0.78, 1, 1, 1)
+			GameTooltip:AddDoubleLine("Saved cache", coolstats.FormatCachedPlayerBrowserMemory(status.memory.cache), 0.86, 0.86, 0.78, 1, 1, 1)
+			if (status.memory.other or 0) > 0 then
+				GameTooltip:AddDoubleLine("Other coolstats", coolstats.FormatCachedPlayerBrowserMemory(status.memory.other), 0.86, 0.86, 0.78, 1, 1, 1)
+			end
+		else
+			GameTooltip:AddLine("Memory uses the Lua fallback because addon memory APIs are unavailable.", 0.58, 0.76, 0.86, true)
+		end
+		GameTooltip:AddLine("Blizzard's AddOn Memory total includes every addon, so it can be higher.", 0.58, 0.76, 0.86, true)
+		GameTooltip:AddLine("You can lower the UwU data load slider to show fewer players and improve efficiency after /reload.", 0.58, 0.76, 0.86, true)
+		GameTooltip:AddLine("If you notice lag, disable gear or talent caching in Tooltip & Cache settings, then clear cache if needed.", 1, 1, 1, true)
+		GameTooltip:AddLine("Click to open Tooltip & Cache settings.", 0.0, 0.75, 1.0)
+		GameTooltip:Show()
+	end
+
+	function coolstats.OpenCachedPlayerBrowserCacheSettings()
+		if GameTooltip then
+			GameTooltip:Hide()
+		end
+		if coolstats.cachedPlayerBrowser and coolstats.cachedPlayerBrowser:IsShown() then
+			coolstats.cachedPlayerBrowser:Hide()
+		end
+		if coolstats.OpenTooltipOptionsPanel then
+			coolstats.OpenTooltipOptionsPanel()
+		elseif coolstats.OpenOptionsPanel then
+			coolstats.OpenOptionsPanel()
+		end
 	end
 
 	function coolstats.ApplyCachedPlayerBrowserHeaderBackground(header)
@@ -8412,7 +9057,7 @@ if type(coolstats) == "table" then
 		local specName = data and data.specs and data.specs[classIndex] and data.specs[classIndex][specIndex]
 		local className = coolstats.GetCachedPlayerBrowserClassName(classIndex)
 		if specName and className then
-			return className .. " " .. specName
+			return specName .. " " .. className
 		end
 		if specName then
 			return specName
@@ -9259,6 +9904,36 @@ if type(coolstats) == "table" then
 			panel.rows[index] = coolstats.CreateCachedPlayerBrowserRow(panel, index)
 		end
 
+		panel.cacheStatusText = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+		panel.cacheStatusText:SetPoint("BOTTOMRIGHT", panel, "BOTTOMRIGHT", -34, 15)
+		panel.cacheStatusText:SetWidth(330)
+		panel.cacheStatusText:SetJustifyH("RIGHT")
+		panel.cacheStatusText:SetTextColor(0.58, 0.76, 0.86)
+		panel.cacheStatusText:SetText("")
+
+		panel.cacheInfoButton = CreateFrame("Button", nil, panel)
+		SetFrameSize(panel.cacheInfoButton, 18, 18)
+		panel.cacheInfoButton:SetPoint("LEFT", panel.cacheStatusText, "RIGHT", 5, 0)
+		panel.cacheInfoButton.ownerPanel = panel
+		panel.cacheInfoButton:SetNormalTexture("Interface\\FriendsFrame\\StatusIcon-Online")
+		local cacheInfoNormal = panel.cacheInfoButton:GetNormalTexture()
+		if cacheInfoNormal then
+			cacheInfoNormal:SetAllPoints(panel.cacheInfoButton)
+			cacheInfoNormal:SetTexCoord(0, 1, 0, 1)
+		end
+		panel.cacheInfoButton:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+		local cacheInfoHighlight = panel.cacheInfoButton:GetHighlightTexture()
+		if cacheInfoHighlight then
+			cacheInfoHighlight:SetAllPoints(panel.cacheInfoButton)
+		end
+		panel.cacheInfoButton:SetScript("OnEnter", coolstats.ShowCachedPlayerBrowserCacheInfoTooltip)
+		panel.cacheInfoButton:SetScript("OnLeave", function()
+			GameTooltip:Hide()
+		end)
+		panel.cacheInfoButton:SetScript("OnClick", function()
+			coolstats.OpenCachedPlayerBrowserCacheSettings()
+		end)
+
 		panel:Hide()
 		return panel
 	end
@@ -9270,16 +9945,28 @@ if type(coolstats) == "table" then
 		end
 		local rows = panel.browserRows or {}
 		local counts = panel.browserCounts or { total = 0, logs = 0, current = 0, phase2 = 0, gear = 0, talents = 0, both = 0 }
+		local shownText = tostring(counts.total or 0) .. " shown"
+		if counts.limited and counts.uncappedTotal and counts.uncappedTotal > (counts.total or 0) then
+			shownText = string.format("%d/%d shown", counts.total or 0, counts.uncappedTotal or 0)
+		end
+		if counts.realmDataLoadedPlayers and counts.realmDataTotalPlayers and counts.realmDataLoadedPlayers < counts.realmDataTotalPlayers then
+			if counts.realmDataNeedsReload then
+				shownText = shownText .. string.format(" (data %d/%d; reload)", counts.realmDataLoadedPlayers, counts.realmDataTotalPlayers)
+			else
+				shownText = shownText .. string.format(" (data %d/%d)", counts.realmDataLoadedPlayers, counts.realmDataTotalPlayers)
+			end
+		end
 		if panel.showPhase2History then
 			local bossText = panel.browserBossIndex and string.format("   Boss Logs %d", counts.boss or 0) or ""
-			panel.subtitle:SetText(string.format("%d shown   P3 Ranked %d   P2 History %d   Gear %d   Talents %d   Both %d%s", counts.total or 0, counts.current or 0, counts.phase2 or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
+			panel.subtitle:SetText(string.format("%s   P3 Ranked %d   P2 History %d   Gear %d   Talents %d   Both %d%s", shownText, counts.current or 0, counts.phase2 or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
 		else
 			local bossText = panel.browserBossIndex and string.format("   Boss Logs %d", counts.boss or 0) or ""
-			panel.subtitle:SetText(string.format("%d shown   Logs %d   Gear %d   Talents %d   Both %d%s", counts.total or 0, counts.logs or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
+			panel.subtitle:SetText(string.format("%s   Logs %d   Gear %d   Talents %d   Both %d%s", shownText, counts.logs or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
 		end
 		if panel.generatedText then
 			panel.generatedText:SetText(coolstats.FormatCachedPlayerBrowserGeneratedAt())
 		end
+		coolstats.UpdateCachedPlayerBrowserStatus(panel)
 		coolstats.UpdateCachedPlayerBrowserLayout(panel)
 		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
 		coolstats.UpdateCachedPlayerBrowserHeaderSort(panel)
@@ -9494,6 +10181,7 @@ if type(coolstats) == "table" then
 		coolstats.NormalizeCachedPlayerBrowserBossFilter(panel)
 		if rebuild == true or not panel.browserRows then
 			panel.browserRows, panel.browserCounts = coolstats.GetCachedPlayerBrowserRows(panel.searchBox and panel.searchBox:GetText() or "", panel)
+			coolstats.StepCachedPlayerBrowserGarbageCollector()
 			if panel.scrollFrame then
 				panel.scrollFrame.offset = 0
 			end
@@ -9528,7 +10216,7 @@ local function AddTooltipLines()
 		return
 	end
 	local options = coolstats.GetTooltipFeatureOptions()
-	if options.cacheOnHover ~= false then
+	if coolstats.IsGearCachingEnabled() then
 		CacheInspectGearForUnit(unit)
 	end
 
@@ -9626,9 +10314,12 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 
 	if event == "INSPECT_READY" then
 		local inspectGuid = ...
-		local inspectUnit = coolstats.FindInspectReadyUnit(inspectGuid or pendingGearInspectGuid, inspectGuid and nil or pendingGearInspectName)
-		if inspectUnit then
+		local inspectUnit = coolstats.FindInspectReadyUnit(inspectGuid or pendingGearInspectGuid or coolstats.pendingTalentInspectGuid, inspectGuid and nil or pendingGearInspectName or coolstats.pendingTalentInspectName)
+		if inspectUnit and coolstats.IsGearCachingEnabled() then
 			CacheInspectGearForUnit(inspectUnit)
+		end
+		if coolstats.IsTalentCachingEnabled() then
+			coolstats.CaptureReadyInspectTalents(inspectGuid or coolstats.pendingTalentInspectGuid, inspectGuid and nil or coolstats.pendingTalentInspectName, true)
 		end
 		pendingGearInspectName = nil
 		pendingGearInspectGuid = nil
@@ -9645,7 +10336,11 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 	end
 
 	if event == "INSPECT_TALENT_READY" then
-		coolstats.CaptureReadyInspectTalents(coolstats.pendingTalentInspectGuid, coolstats.pendingTalentInspectName)
+		local inspectGuid = ...
+		coolstats.CaptureReadyInspectTalents(inspectGuid or coolstats.pendingTalentInspectGuid, inspectGuid and nil or coolstats.pendingTalentInspectName)
+		if lookupUwUPanel and lookupUwUPanel:IsShown() then
+			UpdateCachedGearPanel(lookupUwUPanel, lookupUwUPanel.renderName, lookupUwUPanel.renderPlayer)
+		end
 	end
 
 	if event == "PLAYER_TARGET_CHANGED" then

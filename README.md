@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.34`, the install-ready release ships separate load-on-demand data
+As of `0.2.35`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
@@ -38,6 +38,9 @@ addons for each supported realm:
 The ICC realm datasets intentionally exclude boss-only/rankless leaderboard
 players. This keeps the addon size and load behavior stable while still showing
 boss parses for players who are present in the current ranked ICC coverage.
+Bundled realm data is split into ranked load chunks by realm size; the Tooltip
+& Cache data-load slider snaps to those chunks and can skip lower-ranked
+tranches after `/reload` for lower memory use.
 
 ## Core Features
 
@@ -105,12 +108,18 @@ nearby.
 - Cached GearScore, equipped item level, and implied combat ratings.
 - Cached talent builds with specialization backgrounds, rank indicators,
   specialization switching, and Blizzard-style talent tooltips when available.
+- Separate Tooltip & Cache options can disable cached gear updates and cached
+  talent updates independently for players who prefer less inspect work.
+- The player browser shows cached gear/talent counts and coolstats memory at a
+  glance, with a Social-icon info button that opens the cache settings when
+  troubleshooting lag.
 - Up to 1,500 recent player snapshots are retained.
 - Snapshots older than 14 days are automatically removed.
 
-Cached gear statistics are estimates derived from item data. Some effects,
-gems, enchants, talents, buffs, and other character-specific modifiers may not
-be represented accurately.
+Cached gear statistics are estimates derived from item data. Cached gem presence
+is shown when available and enchant bonuses are included when available, while
+some effects, talents, buffs, socket bonuses, gem stat bonuses, and other
+character-specific modifiers may not be represented accurately.
 
 ### Optional Character Panel Improvements
 

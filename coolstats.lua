@@ -48,6 +48,9 @@ local defaults = {
 		logsSummary = true,
 		logsBossDetails = true,
 		cacheOnHover = true,
+		cacheInspectGear = true,
+		cacheInspectTalents = true,
+		uwuPlayerLoadLimit = nil,
 	},
 	editMode = false,
 	popoutMode = false,
@@ -392,8 +395,15 @@ local function EnsureEditOptions()
 	if type(db.tooltip) ~= "table" then
 		db.tooltip = CopyDefaults({}, defaults.tooltip)
 	else
+		if db.tooltip.cacheInspectGear == nil and db.tooltip.cacheOnHover ~= nil then
+			db.tooltip.cacheInspectGear = db.tooltip.cacheOnHover
+		end
 		db.tooltip = CopyDefaults(db.tooltip, defaults.tooltip)
 	end
+	if db.tooltip.uwuPlayerLoadLimit ~= nil then
+		db.tooltip.uwuPlayerLoadLimit = floor(max(0, min(100000, tonumber(db.tooltip.uwuPlayerLoadLimit) or 0)) + 0.5)
+	end
+	db.tooltip.browserPlayerLimit = nil
 	if type(db.minimap) ~= "table" then
 		db.minimap = CopyDefaults({}, defaults.minimap)
 	else
@@ -477,6 +487,34 @@ function coolstats.ShowCharacterPanelReloadPrompt()
 		StaticPopupDialogs["COOLSTATS_CHARACTER_PANEL_RELOAD"].text = promptText
 	end
 	StaticPopup_Show("COOLSTATS_CHARACTER_PANEL_RELOAD")
+end
+
+function coolstats.ShowUwUDataReloadPrompt()
+	local promptText = "Changing the UwU data player limit requires a UI reload to reduce addon memory.\n\nReload now?"
+	if not ReloadUI then
+		Print("Reload your UI to apply the UwU data player limit.")
+		return
+	end
+	if not StaticPopupDialogs or not StaticPopup_Show then
+		Print("Reload your UI to apply the UwU data player limit.")
+		return
+	end
+	if not StaticPopupDialogs["COOLSTATS_UWU_DATA_RELOAD"] then
+		StaticPopupDialogs["COOLSTATS_UWU_DATA_RELOAD"] = {
+			text = promptText,
+			button1 = YES or "Yes",
+			button2 = NO or "No",
+			OnAccept = function()
+				ReloadUI()
+			end,
+			timeout = 0,
+			whileDead = 1,
+			hideOnEscape = 1,
+		}
+	else
+		StaticPopupDialogs["COOLSTATS_UWU_DATA_RELOAD"].text = promptText
+	end
+	StaticPopup_Show("COOLSTATS_UWU_DATA_RELOAD")
 end
 
 function coolstats.SetCharacterPanelEnabled(enabled, promptReload)

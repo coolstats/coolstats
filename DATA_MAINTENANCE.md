@@ -49,14 +49,14 @@ until it is present in the official player logs.
 
 ## Current Caps And Size Guardrails
 
-As of `0.2.33`:
+As of `0.2.35`:
 
 - **Icecrown:** top 1,500 ranked players per class/specialization, resulting in
-  33,819 current ranked players and 34,201 total players.
+  33,744 current ranked players and 34,427 total players.
 - **Lordaeron:** top 1,000 ranked players per class/specialization, resulting
-  in 14,990 current ranked players and 15,092 total players.
-- **Onyxia:** top 500 ranked players per class/specialization for the TOGC
-  phase dataset, resulting in 6,427 current active players and 14,761 total
+  in 14,989 current ranked players and 15,140 total players.
+- **Onyxia:** top 600 ranked players per class/specialization for the TOGC
+  phase dataset, resulting in 7,139 current active players and 15,916 total
   players after retained history and TOGC boss-only coverage, Phase 2 Overall,
   and locked Algalon history retained.
 
@@ -65,10 +65,25 @@ shipped dataset. Boss parses should be attached only to players already present
 in the current ranked ICC coverage. This prevents the oversized rankless-player
 dataset issue seen in `0.2.24`.
 
-Large realm datasets are split into multiple Lua chunks. Keep the chunked data
-layout and validate with Lua 5.1 before handing off, because the Wrath client
-uses Lua 5.1 and can fail on syntax or chunk-size/local-limit issues that newer
-tooling misses.
+Duplicate display names must be resolved against the UwU character endpoint
+before generated rows are written. If a realm has old and current characters
+with the same displayed name, the updater must keep only the character-confirmed
+ranking row and run targeted boss-row repair for that player after the bulk
+leaderboard pass. This is a limited parallel repair pass, not the normal bulk
+boss-update path.
+
+Large realm datasets are split into ranked Lua chunk tranches. The refresh
+tool chooses the chunk count dynamically from the total player count, targeting
+roughly 3,000 players per chunk, with a 6 chunk minimum for normal realm
+datasets and a 16 chunk cap. This currently keeps Onyxia and Lordaeron at 6
+chunks while Icecrown uses 12 smaller chunks. Keep the chunked data layout and
+validate with Lua 5.1 before handing off, because the Wrath client uses Lua 5.1
+and can fail on syntax or chunk-size/local-limit issues that newer tooling
+misses.
+
+The in-game UwU data load slider snaps to these generated chunk boundaries.
+Skipped chunks must return before `local chunk = { ... }` so the Lua client does
+not allocate disabled player tables after `/reload`.
 
 ## Data Update Commands
 
@@ -88,10 +103,17 @@ Pull scores only for quick coverage checks:
 .\tools\update_all_uwu_realms.ps1 -Mode Scores -Realms Lordaeron -MaxPerSpec 1000
 ```
 
-Run full weekly pulls for the current ICC realm caps:
+Run full weekly pulls for the current realm-specific caps:
 
 ```powershell
-.\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Onyxia -MaxPerSpec 500
+.\tools\update_all_uwu_realms.ps1 -Mode Weekly
+```
+
+The wrapper defaults to Onyxia 600, Lordaeron 1,000, and Icecrown 1,500 per
+class/spec. To run one realm manually:
+
+```powershell
+.\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Onyxia
 .\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Icecrown -MaxPerSpec 1500
 .\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Lordaeron -MaxPerSpec 1000
 ```

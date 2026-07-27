@@ -1,6 +1,102 @@
 # Changelog
 
-## Unreleased
+## 0.2.35 - 2026-07-27
+
+### Player browser
+
+- Reworked the player right-click UWU Logs action into a detached coolstats
+  button attached to Blizzard's menu, preserving the quick action while avoiding
+  protected Focus Target menu taint.
+- Fixed the detached right-click action so it can detect chat-name player menus
+  and remain clickable after Blizzard closes the dropdown.
+- Added a short close grace so the detached UWU Logs action disappears after
+  clicking away instead of sticking on screen; it now only uses that grace when
+  the cursor is moving through the dropdown-to-UWU-button lane.
+- Hooked the actual dropdown-open path so the detached UWU Logs action appears
+  on the initial player menu, not only after opening a submenu.
+- Prevented secondary Blizzard menu hover refreshes from hiding an already shown
+  detached UWU Logs action.
+- Tracked open dropdown submenus so expandable menu interactions no longer make
+  the detached UWU Logs action flicker.
+- Hid the detached UWU Logs action immediately when Blizzard's Cancel menu item
+  is pressed, without hiding it merely on Cancel hover.
+- Hid the detached UWU Logs action immediately when any Blizzard dropdown action
+  row is clicked.
+- Changed Statistics chart labels to show specialization before class, matching
+  the intended representation-chart layout.
+- Restored the original Log Analysis window dimensions after the compact layout
+  caused the comparison chart to overflow.
+- Added a copyable plain-text UwU log summary button to individual player log
+  panels, generating a single compact line instead of auto-sending chat spam.
+- Moved the copyable log-summary button beside the Armory button and changed
+  copied hard-mode markers to `{skull}` chat tokens.
+
+### Data
+
+- Refreshed all Warmane UwU Logs datasets on 2026-07-27 with realm-aware
+  coverage caps: Onyxia top 600 per class/spec, Lordaeron top 1,000 per
+  class/spec, and Icecrown top 1,500 per class/spec.
+- Shipped refreshed dynamic chunk tranches for the in-game data-load slider:
+  Onyxia 15,916 total players in 6 chunks, Lordaeron 15,140 total players in 6
+  chunks, and Icecrown 34,427 total players in 12 chunks.
+- Verified the weekly bulk boss refresh completed with zero failed bulk
+  leaderboard requests across all three realms.
+- Added duplicate-character-name safeguards to the Warmane UwU Logs generator:
+  ambiguous ranking rows are confirmed through the character endpoint and
+  automatically receive targeted boss-row repair after bulk leaderboard refresh.
+- Made the weekly refresh wrapper realm-aware by default so a normal all-realm
+  update preserves the intended per-realm caps instead of applying one cap to
+  every realm.
+- Updated the generator to prefer `coolstats_publish/` as the canonical output
+  tree from this workspace and shortened duplicate-repair console logs to a
+  count plus preview.
+
+### Cached Gear And Talents
+
+- Always show the cached-talents button in the standalone UWU gear panel when a
+  player name is available, even if that player has no UwU log history yet.
+- Refreshed the standalone UWU gear panel after talent inspect data arrives so
+  newly cached talents are reflected without reopening the panel.
+- Stored gem IDs from cached item links and guarded client gem API calls, without
+  resolving gem item stats during tooltip rendering.
+- Added small per-slot gem indicators so cached gear snapshots visibly confirm
+  stored gems when the server exposes them.
+- Restored the older gear-link refresh behavior for real inspected/targeted
+  units, so fresh cache entries still pick up full gemmed item links from the
+  current player without requiring a cache clear.
+- Fixed the restored gear-link refresh path so it no longer calls the cached
+  gear summary builder out of scope, and made per-slot item reads fail-soft.
+- Added separate Tooltip options for cached gear and cached talents so users can
+  disable either inspect cache path independently.
+- Renamed and reorganized the settings page into Tooltip Lines, Inspect Cache,
+  and Logs And Progress sections so cache-related troubleshooting controls are
+  easier to find.
+- Added a lightweight player-browser cache/memory indicator with a Social-icon
+  info button that explains core, realm-data, and cache memory, then opens
+  Tooltip & Cache settings for lag troubleshooting.
+- Replaced the browser-only cap with a realm-aware UwU data load slider that
+  snaps to generated data chunks, trims the lowest-ranked tranche first, and
+  skips disabled chunks before their Lua tables are built after `/reload`.
+- Made the UwU data load slider default/reset state explicitly load every
+  current-realm player, and added the same efficiency hint to the browser memory
+  tooltip.
+- Made generated UwU data chunking dynamic by realm size, keeping smaller
+  realms at 6 chunks while splitting Icecrown into 12 finer load tranches.
+- Reused recently captured gear and talent snapshots for 15 minutes and nudged
+  incremental garbage collection after browser rebuilds to reduce memory churn
+  while clicking, sorting, and filtering.
+- Added a cached-talents button to the cached gear panel beside standalone UwU
+  Logs lookups.
+- Fixed talent capture to retry safely across `INSPECT_READY` and
+  `INSPECT_TALENT_READY`, preventing the talent panel from staying empty when
+  gear inspection succeeds first.
+
+### Options
+
+- Split Loot Toasts into its own options page with separate sections for the
+  global toggle, loot sources, quality threshold, sounds, and glow animations.
+- Simplified the root coolstats options page so it focuses on core character
+  panel settings and points detailed controls to the child settings pages.
 
 ## 0.2.34 - 2026-07-22
 
