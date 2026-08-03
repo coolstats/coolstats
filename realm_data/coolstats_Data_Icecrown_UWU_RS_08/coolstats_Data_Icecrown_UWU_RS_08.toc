@@ -1,0 +1,17 @@
+## Interface: 30300
+## Title: |cff00c0ffcoolstats|r Data - Icecrown Ruby Sanctum 08
+## Notes: Optional Ruby Sanctum UwU Logs layer 8/12 for Icecrown.
+## Author: coolstats
+## Version: 0.2.37
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## RequiredDeps: coolstats, coolstats_Data_Icecrown
+## X-coolstats-Realm: Icecrown
+## X-coolstats-Phase: icc
+## X-coolstats-BaseAddon: coolstats_Data_Icecrown
+## X-coolstats-RaidLayer: rs
+## X-coolstats-RaidName: Ruby Sanctum
+## X-coolstats-ShardIndex: 8
+## X-coolstats-ShardCount: 12
+
+data\logs\icc\coolstats_uwu_data_rs_08.lua

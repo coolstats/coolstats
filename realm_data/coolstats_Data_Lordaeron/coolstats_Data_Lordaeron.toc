@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffcoolstats|r Data - Lordaeron
 ## Notes: Realm-specific UwU Logs data for Lordaeron.
 ## Author: coolstats
-## Version: 0.2.36
+## Version: 0.2.37
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats
@@ -12,9 +12,3 @@
 ## X-coolstats-PlayerChunks: 6
 
 data\logs\icc\coolstats_uwu_data.lua
-data\logs\icc\coolstats_uwu_data_01.lua
-data\logs\icc\coolstats_uwu_data_02.lua
-data\logs\icc\coolstats_uwu_data_03.lua
-data\logs\icc\coolstats_uwu_data_04.lua
-data\logs\icc\coolstats_uwu_data_05.lua
-data\logs\icc\coolstats_uwu_data_06.lua

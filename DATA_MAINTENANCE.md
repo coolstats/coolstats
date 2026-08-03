@@ -72,6 +72,16 @@ ranking row and run targeted boss-row repair for that player after the bulk
 leaderboard pass. This is a limited parallel repair pass, not the normal bulk
 boss-update path.
 
+To keep this check fast enough for Icecrown-sized leaderboards, only duplicate
+names relevant to the retained current dataset should be verified. The updater
+first marks normalized player names that have at least one row inside the
+realm's current per-spec cap, then checks only ambiguous identities that also
+have a retained row. Below-cap sibling rows for the same identity are still kept
+as evidence, so a stale top row can be dropped if the character endpoint proves
+the current character has moved below the cap or changed class. Duplicate
+identities that are entirely below the retained cap are ignored because they
+cannot become active current rows in the generated addon data.
+
 Large realm datasets are split into ranked Lua chunk tranches. The refresh
 tool chooses the chunk count dynamically from the total player count, targeting
 roughly 3,000 players per chunk, with a 6 chunk minimum for normal realm
@@ -81,9 +91,56 @@ validate with Lua 5.1 before handing off, because the Wrath client uses Lua 5.1
 and can fail on syntax or chunk-size/local-limit issues that newer tooling
 misses.
 
+Boss payloads are split into realm-aware raid layer shard addons. These layer
+shards stay aligned with the ranked player chunks so raising the in-game load
+slider can load missing boss rows without a reload. To keep side raids smaller,
+generated layers omit `player[8]` when the overall boss payload is identical to
+the player's best-spec boss payload; the runtime derives that view from
+`player[9][bestSpec]`.
+
 The in-game UwU data load slider snaps to these generated chunk boundaries.
 Skipped chunks must return before `local chunk = { ... }` so the Lua client does
 not allocate disabled player tables after `/reload`.
+
+## Runtime Memory Model
+
+The bundled realm data and the browser runtime index are intentionally separate:
+
+- Realm data is loaded from the current realm's LoadOnDemand player shards and
+  enabled raid-layer shards. Loaded shard data remains resident until `/reload`;
+  lowering the data-load slider or disabling raid layers saves memory after the
+  next reload because skipped shards return before building their large tables.
+- Tooltips do not build the player browser index. A tooltip lookup normalizes
+  the hovered player name and reads one record directly from
+  `coolstatsUwUData.players`.
+- Opening the player browser builds disposable searchable/sortable row state
+  from the already-loaded realm data. This can raise the Lua heap while the
+  browser is open and working, especially while sorting or filtering.
+- Repeated non-boss browser sorts may keep up to three sorted row-reference
+  arrays on the disposable browser index. These arrays must not copy player
+  records and must be released with the browser index on close.
+- Closing the player browser must release the browser rows, active query cache,
+  per-boss transient row fields, tooltip cache, and base browser index when no
+  statistics panel is still using them. The browser index should return to
+  `0` entries in `/coolstats perf` after close.
+- Do not retain per-player boss-info caches for boss filters. Boss-mode rows
+  may store only compact active-view fields such as score, ranks, DPS, and
+  spec index; avoid retaining boss entry tables, boss names, or formatted spec
+  strings on every row.
+- Use small scheduled `collectgarbage("step", ...)` cleanup after heavy browser
+  work or close. Do not add automatic full `collectgarbage("collect")` calls in
+  gameplay, because full collection can cause visible freezes in the Wrath
+  Lua 5.1 client.
+
+When profiling memory, treat browser-open memory as working memory. The more
+important health check is that closing the browser and waiting briefly releases
+the browser index and that repeated open/filter/close cycles stabilize instead
+of climbing indefinitely.
+
+The character panel uses the same conservative rule: show/hide and first paint
+remain full updates, while frequent stat, aura, resource, equipment, and
+item-info events should route through dirty update categories so they refresh
+only stat rows or gear/badge summaries when possible.
 
 ## Data Update Commands
 

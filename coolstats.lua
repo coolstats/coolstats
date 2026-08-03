@@ -31,6 +31,7 @@ local updateElapsed = 0
 local tooltipsHooked = false
 local gearScoreTamed = false
 local QueueUpdate
+coolstats.UPDATE_DELAY_SECONDS = coolstats.UPDATE_DELAY_SECONDS or 0.08
 coolstats.updateCenterLastBroadcastAt = coolstats.updateCenterLastBroadcastAt or 0
 coolstats.updateCenterRequestUntil = coolstats.updateCenterRequestUntil or 0
 
@@ -51,6 +52,7 @@ local defaults = {
 		cacheInspectGear = true,
 		cacheInspectTalents = true,
 		uwuPlayerLoadLimit = nil,
+		uwuRaidLayers = {},
 	},
 	editMode = false,
 	popoutMode = false,
@@ -1128,6 +1130,13 @@ end
 function coolstats.OpenCachedPlayerBrowserFromMinimap()
 	if CloseDropDownMenus then
 		CloseDropDownMenus()
+	end
+	if coolstats.cachedPlayerBrowser and coolstats.cachedPlayerBrowser:IsShown() then
+		coolstats.cachedPlayerBrowser:Hide()
+		if PlaySound then
+			PlaySound("igCharacterInfoClose")
+		end
+		return
 	end
 	if coolstats.OpenCachedPlayerBrowser then
 		coolstats.OpenCachedPlayerBrowser()
@@ -6204,21 +6213,89 @@ local function UpdateAll()
 	UpdateInspectSummary()
 end
 
-function QueueUpdate()
-	if db and not coolstats.IsCharacterPanelEnabled() then
-		updatePending = false
-		updateElapsed = 0
+local function UpdateAllImmediate()
+	updatePending = false
+	updateElapsed = 0
+	coolstats.characterPanelDirty = nil
+	UpdateAll()
+end
+
+function coolstats.MarkCharacterPanelDirty(category)
+	local dirty = coolstats.characterPanelDirty
+	if type(dirty) ~= "table" then
+		dirty = {}
+		coolstats.characterPanelDirty = dirty
+	end
+	if type(category) == "table" then
+		for index = 1, #category do
+			local key = category[index]
+			if key and key ~= "" then
+				dirty[key] = true
+			end
+		end
+	elseif category and category ~= "" then
+		dirty[category] = true
+	else
+		dirty.all = true
+	end
+	return dirty
+end
+
+function coolstats.RunCharacterPanelUpdateCategories(dirty)
+	if not db then
+		return
+	end
+	if not coolstats.IsCharacterPanelEnabled() then
 		HideCharacterPanelRuntime()
 		return
 	end
-	if db and ui.panel then
-		updatePending = false
-		updateElapsed = 0
+	if not dirty or dirty.all then
 		UpdateAll()
 		return
 	end
+
+	HideDefaultCharacterStats()
+	UpdateToggleButton()
+	UpdatePanelVisibility()
+
+	if dirty.layout or dirty.controls then
+		AnchorPanel()
+		coolstats.ApplyBackgroundOptions()
+		UpdateEditButton()
+		UpdatePopoutModeButton()
+		coolstats.UpdateFavoriteModeButton()
+		coolstats.UpdateResetPanelButton()
+		coolstats.UpdateSettingsPanelButton()
+		coolstats.UpdateEditModeBanner()
+		coolstats.UpdatePopoutOptionsMenuVisibility()
+		UpdateAppearanceToggles()
+	end
+
+	if dirty.stats or dirty.layout then
+		UpdatePanel()
+		UpdateStatPopouts()
+	end
+
+	if dirty.gear or dirty.layout then
+		UpdateBadges()
+		UpdateModelScores()
+		UpdateInspectSummary()
+	end
+end
+
+function QueueUpdate(category)
+	if db and not coolstats.IsCharacterPanelEnabled() then
+		updatePending = false
+		updateElapsed = 0
+		coolstats.characterPanelDirty = nil
+		HideCharacterPanelRuntime()
+		return
+	end
+	if not updatePending then
+		updateElapsed = 0
+	end
+	coolstats.MarkCharacterPanelDirty(category)
 	updatePending = true
-	updateElapsed = 0
 end
 
 local function HideFontString(fontString)
@@ -6322,22 +6399,22 @@ end
 local function RefreshCharacterHooks()
 	if CharacterFrame and not CharacterFrame.__coolstatsHooked then
 		CharacterFrame.__coolstatsHooked = true
-		CharacterFrame:HookScript("OnShow", QueueUpdate)
-		CharacterFrame:HookScript("OnHide", QueueUpdate)
+		CharacterFrame:HookScript("OnShow", UpdateAllImmediate)
+		CharacterFrame:HookScript("OnHide", UpdateAllImmediate)
 	end
 	if PaperDollFrame and not PaperDollFrame.__coolstatsHooked then
 		PaperDollFrame.__coolstatsHooked = true
-		PaperDollFrame:HookScript("OnShow", QueueUpdate)
-		PaperDollFrame:HookScript("OnHide", QueueUpdate)
+		PaperDollFrame:HookScript("OnShow", UpdateAllImmediate)
+		PaperDollFrame:HookScript("OnHide", UpdateAllImmediate)
 	end
 	if InspectFrame and not InspectFrame.__coolstatsHooked then
 		InspectFrame.__coolstatsHooked = true
 		InspectFrame:HookScript("OnShow", function()
 			CreateBadges()
 			CreateInspectSummary()
-			QueueUpdate()
+			UpdateAllImmediate()
 		end)
-		InspectFrame:HookScript("OnHide", QueueUpdate)
+		InspectFrame:HookScript("OnHide", UpdateAllImmediate)
 	end
 end
 
@@ -6363,7 +6440,91 @@ local function ShowHelp()
 	Print("/coolstats browser - open the player browser")
 	Print("/coolstats update - open update links and data status")
 	Print("/coolstats versioncheck - ask your raid or party for coolstats versions")
+	Print("/coolstats perf - print a lightweight performance snapshot")
 	Print("/coolstats uwu [player name] - open UwU Logs for a player")
+end
+
+function coolstats.CountTableEntries(root)
+	if type(root) ~= "table" then
+		return 0
+	end
+	local count = 0
+	for _ in pairs(root) do
+		count = count + 1
+	end
+	return count
+end
+
+function coolstats.FormatPerformanceMemory(kb)
+	kb = tonumber(kb) or 0
+	if kb >= 1024 then
+		return string.format("%.1f MB", kb / 1024)
+	end
+	return string.format("%d KB", math.floor(kb + 0.5))
+end
+
+function coolstats.PrintPerformanceSnapshot(label)
+	if UpdateAddOnMemoryUsage then
+		pcall(UpdateAddOnMemoryUsage)
+	end
+	local prefix = "|cff00bfffcoolstats perf:|r "
+	Print(prefix .. tostring(label and label ~= "" and label or "snapshot"))
+	if collectgarbage then
+		Print(prefix .. "Lua heap " .. coolstats.FormatPerformanceMemory(collectgarbage("count")))
+	end
+	if coolstats.GetCachedPlayerBrowserStatus then
+		local status = coolstats.GetCachedPlayerBrowserStatus()
+		if status and status.memory then
+			Print(prefix .. "Memory in use " .. coolstats.FormatPerformanceMemory(status.memoryKB) .. " (core " .. coolstats.FormatPerformanceMemory(status.memory.core) .. ", data " .. coolstats.FormatPerformanceMemory(status.memory.data) .. ", cache " .. coolstats.FormatPerformanceMemory(status.memory.cache) .. ")")
+			Print(prefix .. "Cached gear " .. tostring(status.gear or 0) .. ", talents " .. tostring(status.talents or 0))
+			if status.memory.raidLayers and #status.memory.raidLayers > 0 then
+				for index = 1, #status.memory.raidLayers do
+					local layer = status.memory.raidLayers[index]
+					Print(prefix .. "Raid layer " .. tostring(layer.name or layer.key or index) .. " " .. coolstats.FormatPerformanceMemory(layer.memory or 0) .. " (" .. tostring(layer.loadedShards or 0) .. "/" .. tostring(layer.shardCount or 0) .. (layer.enabled == false and ", off)" or ")"))
+				end
+			end
+		end
+	end
+	local data = coolstatsUwUData
+	if data then
+		local loaded = tonumber(data.loadedPlayers) or coolstats.CountTableEntries(data.players)
+		local total = tonumber(data.totalPlayers) or loaded
+		local chunks = tonumber(data.playerChunkCount) or 0
+		Print(prefix .. "UwU players " .. tostring(loaded) .. " / " .. tostring(total) .. " loaded across " .. tostring(chunks) .. " chunks")
+	end
+	if coolstats.GetRealmDataStatus then
+		local realmStatus = coolstats.GetRealmDataStatus()
+		if realmStatus then
+			Print(prefix .. "Realm loader " .. tostring(realmStatus.reason or "unknown") .. " shards " .. tostring(realmStatus.loadedShardCount or 0) .. "/" .. tostring(realmStatus.loadedShardTarget or 0) .. " limit " .. tostring(realmStatus.playerLoadLimit or "all"))
+		end
+	end
+	if coolstats.GetUwUTooltipCacheCount then
+		Print(prefix .. "Tooltip cache " .. tostring(coolstats.GetUwUTooltipCacheCount()) .. " entries")
+	end
+	if coolstats.GetCachedPlayerBrowserIndexStats then
+		local stats = coolstats.GetCachedPlayerBrowserIndexStats()
+		if stats and stats.entries then
+			Print(prefix .. "Browser index " .. tostring(stats.entries) .. " entries")
+		end
+	end
+	if coolstats.GetCachedPlayerBrowserRuntimeStats then
+		local stats = coolstats.GetCachedPlayerBrowserRuntimeStats()
+		if stats then
+			local shownText = stats.browserShown and "shown" or "closed"
+			local bossText = stats.bossIndex and (" boss " .. tostring(stats.bossIndex)) or ""
+			local sortText = stats.sortKey and (" sort " .. tostring(stats.sortKey) .. ":" .. tostring(stats.sortState or "default")) or " sort default"
+			Print(prefix .. "Browser runtime " .. shownText .. " rows " .. tostring(stats.browserRows or 0) .. " query " .. (stats.queryCached and "cached" or "none") .. " qrows " .. tostring(stats.queryRows or 0) .. sortText .. bossText)
+			if (stats.sortedOrders or 0) > 0 then
+				Print(prefix .. "Browser sorted orders " .. tostring(stats.sortedOrders or 0) .. " arrays / " .. tostring(stats.sortedOrderRows or 0) .. " row refs")
+			end
+		end
+	end
+	if coolstats.GetCachedPlayerBrowserCacheWeightStats then
+		local weights = coolstats.GetCachedPlayerBrowserCacheWeightStats()
+		if weights then
+			Print(prefix .. "Approx cache weight gear " .. coolstats.FormatPerformanceMemory(weights.gearKB or 0) .. ", talents " .. coolstats.FormatPerformanceMemory(weights.talentKB or 0) .. ", total " .. coolstats.FormatPerformanceMemory(weights.totalKB or 0))
+		end
+	end
 end
 
 local function SlashHandler(message)
@@ -6386,6 +6547,8 @@ local function SlashHandler(message)
 		coolstats.OpenUpdateCenter()
 	elseif commandLower == "versioncheck" then
 		coolstats.RequestUpdateCenterVersions(rest)
+	elseif commandLower == "perf" or commandLower == "performance" then
+		coolstats.PrintPerformanceSnapshot(rest)
 	elseif commandLower == "uwu" then
 		local name = rest
 		if not name or name == "" then
@@ -6513,6 +6676,13 @@ eventFrame:SetScript("OnEvent", function(self, event, arg1)
 		return
 	end
 
+	if event == "GET_ITEM_INFO_RECEIVED" then
+		if PaperDollIsVisible() or (InspectFrame and InspectFrame:IsShown()) then
+			coolstats.RunCharacterPanelUpdateCategories({ gear = true, stats = true })
+		end
+		return
+	end
+
 	if event == "UNIT_INVENTORY_CHANGED" or event == "UNIT_STATS" or event == "UNIT_AURA" or event == "UNIT_MAXHEALTH" or event == "UNIT_MAXPOWER" or event == "UNIT_MAXMANA" or event == "UNIT_MAXRAGE" or event == "UNIT_MAXENERGY" or event == "UNIT_MAXRUNIC_POWER" then
 		if arg1 ~= "player" then
 			return
@@ -6522,7 +6692,13 @@ eventFrame:SetScript("OnEvent", function(self, event, arg1)
 	if not ui.panel and CharacterFrame then
 		InitializeUI()
 	end
-	QueueUpdate()
+	if event == "PLAYER_EQUIPMENT_CHANGED" or event == "UNIT_INVENTORY_CHANGED" or event == "INSPECT_READY" then
+		QueueUpdate({ "gear", "stats" })
+	elseif event == "UNIT_STATS" or event == "UNIT_AURA" or event == "UNIT_MAXHEALTH" or event == "UNIT_MAXPOWER" or event == "UNIT_MAXMANA" or event == "UNIT_MAXRAGE" or event == "UNIT_MAXENERGY" or event == "UNIT_MAXRUNIC_POWER" or event == "COMBAT_RATING_UPDATE" then
+		QueueUpdate("stats")
+	else
+		QueueUpdate()
+	end
 end)
 
 eventFrame:SetScript("OnUpdate", function(_, elapsed)
@@ -6535,11 +6711,13 @@ eventFrame:SetScript("OnUpdate", function(_, elapsed)
 		return
 	end
 	updateElapsed = updateElapsed + elapsed
-	if updateElapsed < 0.08 then
+	if updateElapsed < coolstats.UPDATE_DELAY_SECONDS then
 		return
 	end
 
 	updatePending = false
 	updateElapsed = 0
-	UpdateAll()
+	local dirty = coolstats.characterPanelDirty
+	coolstats.characterPanelDirty = nil
+	coolstats.RunCharacterPanelUpdateCategories(dirty)
 end)

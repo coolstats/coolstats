@@ -1,6 +1,22 @@
 # Changelog
 
-## 0.2.36 - 2026-08-03
+## 0.2.37 - 2026-08-03
+
+### Performance
+
+- Coalesced character-panel refresh events so repeated stat/aura/inventory
+  bursts queue one short-delayed update instead of forcing synchronous full UI
+  refreshes.
+- Added a bounded 64-entry LRU for rendered UwU tooltip lines to prevent
+  session memory growth from hovering many unique players.
+- Cached the merged player-browser base index between searches, filters, and
+  sorts, with invalidation on gear/talent cache changes and realm-data reloads.
+- Added `/cs perf` for lightweight in-game diagnostics covering Lua heap,
+  coolstats memory, loaded UwU players/chunks, tooltip cache size, and browser
+  index size.
+- Updated the UwU data generator so future log refreshes can emit direct
+  player assignments per chunk, avoiding the temporary outer chunk table during
+  load.
 
 ### Data
 
@@ -16,6 +32,13 @@
 - Ran duplicate-character-name verification and targeted boss-row repair during
   the refresh so resolved ambiguous names keep current boss parses without
   doing full per-player boss fetching.
+
+### UI
+
+- Removed the always-visible peer status lines from the Update Center while
+  keeping manual group checks available.
+- Added extra spacing around the Tooltip & Cache player-load slider labels so
+  the selected player count no longer overlaps the slider.
 
 ## 0.2.35 - 2026-07-27
 

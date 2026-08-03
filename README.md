@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.36`, the install-ready release ships separate load-on-demand data
+As of `0.2.37`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
@@ -44,6 +44,8 @@ boss parses for players who are present in the current ranked ICC coverage.
 Bundled realm data is split into ranked load chunks by realm size; the Tooltip
 & Cache data-load slider snaps to those chunks and can skip lower-ranked
 tranches after `/reload` for lower memory use.
+Boss payloads are also split into realm-aware raid layer shards, so users can
+disable raid layers they do not need and reclaim that data after `/reload`.
 
 ## Core Features
 
@@ -94,6 +96,10 @@ table:
 - Open the normal logs and cached-armory panels by clicking a player.
 - Escape closes open coolstats windows from front to back.
 - Clear the locally stored inspection cache from inside the browser.
+- Browser rows and sort/filter indexes are disposable runtime state. Opening
+  the browser may raise Lua working memory while it builds searchable/sortable
+  rows; repeated non-boss sorts reuse a small capped sorted-order cache, and
+  closing the browser releases the browser index and schedules light cleanup.
 
 ### Cached Gear And Talents
 
@@ -116,6 +122,10 @@ nearby.
 - The player browser shows cached gear/talent counts and coolstats memory at a
   glance, with a Social-icon info button that opens the cache settings when
   troubleshooting lag.
+- The memory tooltip separates core, realm data, saved cache, and loaded raid
+  layer memory to help users choose what to disable or reduce.
+- Character panel stat, gear, and item-level refreshes are routed through
+  lightweight dirty updates so frequent game events do less background work.
 - Up to 1,500 recent player snapshots are retained.
 - Snapshots older than 14 days are automatically removed.
 

@@ -425,11 +425,76 @@ local tooltipRefreshFrame = CreateFrame("Frame")
 local tooltipRefreshQueued = false
 local lastTooltipAltState = false
 local uwuTooltipCache = {}
+coolstats.uwuTooltipCacheOrder = coolstats.uwuTooltipCacheOrder or {}
+coolstats.UWU_TOOLTIP_CACHE_LIMIT = coolstats.UWU_TOOLTIP_CACHE_LIMIT or 64
+coolstats.cachedPlayerBrowserIndexVersion = coolstats.cachedPlayerBrowserIndexVersion or 0
 local uwuBossIndexSource = nil
 local uwuBossIndexByName = nil
 local lastCachedGearPruneAt = 0
 local pendingGearInspectName = nil
 local pendingGearInspectGuid = nil
+
+function coolstats.RemoveUwUTooltipCacheOrderKey(cacheKey)
+	for index = #coolstats.uwuTooltipCacheOrder, 1, -1 do
+		if coolstats.uwuTooltipCacheOrder[index] == cacheKey then
+			table.remove(coolstats.uwuTooltipCacheOrder, index)
+		end
+	end
+end
+
+function coolstats.TouchUwUTooltipCache(cacheKey)
+	if not cacheKey or cacheKey == "" then
+		return
+	end
+	coolstats.RemoveUwUTooltipCacheOrderKey(cacheKey)
+	coolstats.uwuTooltipCacheOrder[#coolstats.uwuTooltipCacheOrder + 1] = cacheKey
+	while #coolstats.uwuTooltipCacheOrder > coolstats.UWU_TOOLTIP_CACHE_LIMIT do
+		local oldKey = table.remove(coolstats.uwuTooltipCacheOrder, 1)
+		if oldKey then
+			uwuTooltipCache[oldKey] = nil
+		end
+	end
+end
+
+function coolstats.StoreUwUTooltipCache(cacheKey, cache)
+	if not cacheKey or cacheKey == "" then
+		return cache
+	end
+	uwuTooltipCache[cacheKey] = cache
+	coolstats.TouchUwUTooltipCache(cacheKey)
+	return cache
+end
+
+function coolstats.ClearUwUTooltipCache()
+	for key in pairs(uwuTooltipCache) do
+		uwuTooltipCache[key] = nil
+	end
+	for index = #coolstats.uwuTooltipCacheOrder, 1, -1 do
+		coolstats.uwuTooltipCacheOrder[index] = nil
+	end
+end
+
+function coolstats.GetUwUTooltipCacheCount()
+	return #coolstats.uwuTooltipCacheOrder
+end
+
+function coolstats.InvalidateCachedPlayerBrowserIndex()
+	coolstats.cachedPlayerBrowserIndex = nil
+	coolstats.cachedPlayerBrowserIndexVersion = (coolstats.cachedPlayerBrowserIndexVersion or 0) + 1
+	coolstats.cachedPlayerBrowserQueryVersion = (coolstats.cachedPlayerBrowserQueryVersion or 0) + 1
+	coolstats.cachedPlayerBrowserStatus = nil
+	local panel = coolstats.cachedPlayerBrowser
+	if panel then
+		panel.browserBossCacheSource = nil
+		panel.browserBossCache = nil
+		panel.browserBossCacheOrder = nil
+		panel.browserQueryCache = nil
+		if not panel:IsShown() then
+			panel.browserRows = nil
+			panel.browserCounts = nil
+		end
+	end
+end
 
 local function GetNowSeconds()
 	if time then
@@ -1177,6 +1242,26 @@ function coolstats.CompactCachedTalentSnapshot(snapshot)
 	return snapshot
 end
 
+function coolstats.CompactCachedGearSnapshot(snapshot)
+	if type(snapshot) ~= "table" or type(snapshot.slots) ~= "table" then
+		return snapshot
+	end
+	snapshot.stats = nil
+	for _, item in pairs(snapshot.slots) do
+		if type(item) == "table" then
+			item.score = nil
+			item.red = nil
+			item.green = nil
+			item.blue = nil
+			if type(item.gemIDs) == "table" and #item.gemIDs == 0 then
+				item.gemIDs = nil
+			end
+		end
+	end
+	snapshot.gearCompactVersion = 1
+	return snapshot
+end
+
 local function PruneCachedGearCache(force)
 	local now = GetNowSeconds()
 	if not force and now - lastCachedGearPruneAt < RAID_PROGRESS_PRUNE_INTERVAL_SECONDS then
@@ -1187,6 +1272,14 @@ local function PruneCachedGearCache(force)
 	local store = GetCachedGearStore()
 	local players = store.players
 	local order = store.order
+	local changed = false
+	for key, snapshot in pairs(players) do
+		coolstats.CompactCachedGearSnapshot(snapshot)
+		if not snapshot or now - (tonumber(snapshot.seenAt) or 0) > coolstats.CACHE_LIMITS.maxAgeSeconds then
+			players[key] = nil
+			changed = true
+		end
+	end
 	for index = #order, 1, -1 do
 		local key = order[index]
 		local snapshot = key and players[key]
@@ -1195,13 +1288,18 @@ local function PruneCachedGearCache(force)
 				players[key] = nil
 			end
 			table.remove(order, index)
+			changed = true
 		end
 	end
 	while #order > coolstats.CACHE_LIMITS.gearPlayers do
 		local staleKey = table.remove(order)
 		if staleKey then
 			players[staleKey] = nil
+			changed = true
 		end
+	end
+	if changed then
+		coolstats.InvalidateCachedPlayerBrowserIndex()
 	end
 end
 
@@ -1242,11 +1340,13 @@ function coolstats.PruneCachedTalentCache(force)
 	local store = coolstats.GetCachedTalentStore()
 	local players = store.players
 	local order = store.order
+	local changed = false
 	for key, snapshot in pairs(players) do
 		coolstats.CompactCachedTalentSnapshot(snapshot)
 		coolstats.NormalizeCachedTalentSnapshot(snapshot)
 		if not snapshot or not coolstats.CachedTalentSnapshotMatchesClass(snapshot) or now - (tonumber(snapshot.seenAt) or 0) > coolstats.CACHE_LIMITS.maxAgeSeconds then
 			players[key] = nil
+			changed = true
 		end
 	end
 	for index = #order, 1, -1 do
@@ -1257,13 +1357,18 @@ function coolstats.PruneCachedTalentCache(force)
 				players[key] = nil
 			end
 			table.remove(order, index)
+			changed = true
 		end
 	end
 	while #order > coolstats.CACHE_LIMITS.talentPlayers do
 		local staleKey = table.remove(order)
 		if staleKey then
 			players[staleKey] = nil
+			changed = true
 		end
+	end
+	if changed then
+		coolstats.InvalidateCachedPlayerBrowserIndex()
 	end
 end
 
@@ -1305,6 +1410,7 @@ function coolstats.GetCachedTalentSnapshot(name)
 				table.remove(store.order, index)
 			end
 		end
+		coolstats.InvalidateCachedPlayerBrowserIndex()
 		return nil
 	end
 	return snapshot
@@ -1840,6 +1946,7 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 	store.players[key] = snapshot
 	coolstats.TouchCachedTalentKey(store, key)
 	coolstats.PruneCachedTalentCache(false)
+	coolstats.InvalidateCachedPlayerBrowserIndex()
 	return snapshot, #groups >= groupCount
 end
 
@@ -1864,7 +1971,9 @@ local function CacheInspectGearForUnit(unit)
 	if existing and coolstats.IsCachedPlayerSnapshotFresh(existing) then
 		if coolstats.RefreshCachedGearSnapshotFromUnit(existing, unit, name, realm) then
 			BuildCachedGearStatSummary(existing)
+			coolstats.CompactCachedGearSnapshot(existing)
 			TouchCachedGearKey(store, key)
+			coolstats.InvalidateCachedPlayerBrowserIndex()
 		end
 		return existing
 	end
@@ -1879,9 +1988,11 @@ local function CacheInspectGearForUnit(unit)
 	end
 
 	BuildCachedGearStatSummary(snapshot)
+	coolstats.CompactCachedGearSnapshot(snapshot)
 	store.players[key] = snapshot
 	TouchCachedGearKey(store, key)
 	PruneCachedGearCache(false)
+	coolstats.InvalidateCachedPlayerBrowserIndex()
 	return snapshot
 end
 
@@ -2854,6 +2965,13 @@ local function GetUwUBossRaidName(bossName)
 	return UWU_BOSS_RAID_OVERRIDES[bossName] or (data and data.defaultRaidName) or "Ulduar"
 end
 
+function coolstats.IsCurrentUwUBossIndexEnabled(bossIndex)
+	if coolstats.IsUwUBossIndexEnabled then
+		return coolstats.IsUwUBossIndexEnabled(coolstatsUwUData, bossIndex)
+	end
+	return true
+end
+
 -- Keep these helpers on the addon table: this chunk is at the Lua 5.1
 -- compiler's 200-local limit on the 3.3.5 client.
 function coolstats.IsUwUPlayerRankedForCurrentPhase(player)
@@ -3049,12 +3167,32 @@ local function GetUwUBossIndexByName()
 	return indexes
 end
 
+function coolstats.GetUwUDefaultSpecBossData(player)
+	local perSpecBossData = player and player[9]
+	local specIndex = player and player[4]
+	if type(perSpecBossData) == "table" and specIndex and type(perSpecBossData[specIndex]) == "table" then
+		return perSpecBossData[specIndex]
+	end
+	return nil
+end
+
+function coolstats.GetUwUOverallBossData(player)
+	local bossData = player and player[8]
+	if type(bossData) == "table" then
+		return bossData
+	end
+	return coolstats.GetUwUDefaultSpecBossData(player)
+end
+
 local function HasUwUBossLog(player, bossIndex)
 	if type(player) ~= "table" or not bossIndex then
 		return false
 	end
+	if not coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
+		return false
+	end
 
-	local bestSpecBossData = player[8]
+	local bestSpecBossData = coolstats.GetUwUOverallBossData(player)
 	if type(bestSpecBossData) == "table" and GetUwUBossScoreCenti(bestSpecBossData[bossIndex]) then
 		return true
 	end
@@ -3202,7 +3340,7 @@ local function GetUwUSpecBossData(player, specIndex)
 	if type(perSpecBossData) == "table" and type(perSpecBossData[specIndex]) == "table" then
 		bossData = perSpecBossData[specIndex]
 	elseif specIndex == player[4] then
-		bossData = player[8]
+		bossData = coolstats.GetUwUOverallBossData(player)
 	end
 	return bossData
 end
@@ -3339,7 +3477,7 @@ end
 
 local function AddUwUBossLines(player)
 	local data = coolstatsUwUData
-	local bossData = player[8]
+	local bossData = coolstats.GetUwUOverallBossData(player)
 	if not data or not data.bosses then
 		return
 	end
@@ -3348,7 +3486,7 @@ local function AddUwUBossLines(player)
 	local currentRaidName = nil
 	for bossIndex = 1, #data.bosses do
 		local bossName = data.bosses[bossIndex]
-		if bossName then
+		if bossName and coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
 			local raidName = GetUwUBossRaidName(bossName)
 			if raidName ~= currentRaidName then
 				GameTooltip:AddLine("  " .. raidName, 0.86, 0.72, 0.25)
@@ -3439,13 +3577,13 @@ local function BuildUwUTooltipCache(player)
 		end
 	end
 
-	local bossData = player[8]
+	local bossData = coolstats.GetUwUOverallBossData(player)
 	if data and data.bosses then
 		cache.details[#cache.details + 1] = { "line", "UwU Boss Parses", ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B }
 		local currentRaidName = nil
 		for bossIndex = 1, #data.bosses do
 			local bossName = data.bosses[bossIndex]
-			if bossName then
+			if bossName and coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
 				local raidName = GetUwUBossRaidName(bossName)
 				if raidName ~= currentRaidName then
 					cache.details[#cache.details + 1] = { "line", "  " .. raidName, 0.86, 0.72, 0.25 }
@@ -3479,11 +3617,11 @@ local function GetUwUTooltipCache(player)
 	local cacheKey = NormalizeName(player and player[1] or "")
 	local cache = uwuTooltipCache[cacheKey]
 	if cache and cache.player == player then
+		coolstats.TouchUwUTooltipCache(cacheKey)
 		return cache
 	end
 	cache = BuildUwUTooltipCache(player)
-	uwuTooltipCache[cacheKey] = cache
-	return cache
+	return coolstats.StoreUwUTooltipCache(cacheKey, cache)
 end
 
 local function AddUwULogsLines(unit)
@@ -4811,7 +4949,7 @@ RenderUwUPanel = function(panel, name, player, subtitle)
 	if coolstatsUwUData and coolstatsUwUData.bosses then
 		for bossIndex = 1, #coolstatsUwUData.bosses do
 			local bossName = coolstatsUwUData.bosses[bossIndex]
-			if bossName then
+			if bossName and coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
 				local raidName = GetUwUBossRaidName(bossName)
 				if raidName ~= currentRaidName then
 					currentRaidCollapsed = AddInspectPanelSection(state, raidName, raidName)
@@ -5134,7 +5272,7 @@ function coolstats.GetLogAnalysisMainRaidBossIndexes()
 	local data = coolstatsUwUData
 	local mainRaidName = data and data.defaultRaidName
 	for bossIndex, bossName in ipairs((data and data.bosses) or {}) do
-		if GetUwUBossRaidName(bossName) == mainRaidName then
+		if coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) and GetUwUBossRaidName(bossName) == mainRaidName then
 			indexes[#indexes + 1] = bossIndex
 		end
 	end
@@ -5585,6 +5723,7 @@ function coolstats.RenderLogAnalysisPanel(panel)
 	local rowIndex = 0
 	local currentRaidName = nil
 	for bossIndex, bossName in ipairs((coolstatsUwUData and coolstatsUwUData.bosses) or {}) do
+		if coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
 		local selfEntry = selfBosses[bossIndex]
 		local compareEntry = compareBosses[bossIndex]
 		local selfParse = GetUwUBossScoreCenti(selfEntry)
@@ -5663,6 +5802,7 @@ function coolstats.RenderLogAnalysisPanel(panel)
 			local dpsPercent = selfDps > 0 and compareDps > 0 and ((selfDps - compareDps) / compareDps) * 100 or 0
 			parseDifferenceTotal = parseDifferenceTotal + parseDiff
 			dpsDifferenceTotal = dpsDifferenceTotal + dpsPercent
+		end
 		end
 	end
 
@@ -6561,6 +6701,10 @@ if type(coolstats) == "table" then
 		else
 			favorites[key] = nil
 		end
+		coolstats.cachedPlayerBrowserFavoriteVersion = (coolstats.cachedPlayerBrowserFavoriteVersion or 0) + 1
+		if coolstats.cachedPlayerBrowser then
+			coolstats.cachedPlayerBrowser.browserQueryCache = nil
+		end
 	end
 
 	function coolstats.ToggleCachedPlayerBrowserFavorite(nameOrKey)
@@ -6753,7 +6897,10 @@ if type(coolstats) == "table" then
 	function coolstats.GetCachedPlayerBrowserBossName(bossIndex)
 		bossIndex = tonumber(bossIndex)
 		local data = coolstats.GetCachedPlayerBrowserData()
-		return data and data.bosses and bossIndex and data.bosses[bossIndex] or nil
+		if not data or not data.bosses or not bossIndex or not coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
+			return nil
+		end
+		return data.bosses[bossIndex]
 	end
 
 	function coolstats.GetCachedPlayerBrowserBossLabel(bossIndex)
@@ -6773,7 +6920,7 @@ if type(coolstats) == "table" then
 		end
 		for bossIndex = 1, #data.bosses do
 			local bossName = data.bosses[bossIndex]
-			if bossName then
+			if bossName and coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
 				choices[#choices + 1] = {
 					bossIndex = bossIndex,
 					bossName = bossName,
@@ -6812,42 +6959,8 @@ if type(coolstats) == "table" then
 		if not player or not bossIndex then
 			return nil
 		end
-		if not panel then
-			local entry, specIndex = coolstats.GetCachedPlayerBrowserBossEntry(player, bossIndex, specFilterKey)
-			return {
-				entry = entry,
-				specIndex = specIndex,
-				scoreCenti = GetUwUBossScoreCenti(entry),
-				playerRank = GetUwUBossPlayerRank(entry),
-				raidRank = GetUwUBossRaidRank(entry),
-				dps = GetUwUBossDps(entry),
-				specName = specIndex and GetUwUSpecName(player, specIndex),
-			}
-		end
-		if panel.browserBossCacheSource ~= data then
-			panel.browserBossCacheSource = data
-			panel.browserBossCache = {}
-			panel.browserBossCacheOrder = {}
-		end
-		panel.browserBossCache = panel.browserBossCache or {}
-		panel.browserBossCacheOrder = panel.browserBossCacheOrder or {}
-		local cacheKey = tostring(bossIndex) .. ":" .. tostring(specFilterKey or "*")
-		local cache = panel.browserBossCache[cacheKey]
-		if not cache then
-			cache = {}
-			panel.browserBossCache[cacheKey] = cache
-			panel.browserBossCacheOrder[#panel.browserBossCacheOrder + 1] = cacheKey
-			while #panel.browserBossCacheOrder > 4 do
-				local oldKey = table.remove(panel.browserBossCacheOrder, 1)
-				panel.browserBossCache[oldKey] = nil
-			end
-		end
-		local info = cache[playerKey]
-		if info then
-			return info
-		end
 		local entry, specIndex = coolstats.GetCachedPlayerBrowserBossEntry(player, bossIndex, specFilterKey)
-		info = {
+		return {
 			entry = entry,
 			specIndex = specIndex,
 			scoreCenti = GetUwUBossScoreCenti(entry),
@@ -6856,8 +6969,6 @@ if type(coolstats) == "table" then
 			dps = GetUwUBossDps(entry),
 			specName = specIndex and GetUwUSpecName(player, specIndex),
 		}
-		cache[playerKey] = info
-		return info
 	end
 
 	function coolstats.FormatCachedPlayerBrowserBossRank(row)
@@ -6871,6 +6982,156 @@ if type(coolstats) == "table" then
 			return "R" .. tostring(row.bossRaidRank)
 		end
 		return "-"
+	end
+
+	local function ClearCachedPlayerBrowserBossFields(row)
+		if not row then
+			return
+		end
+		row.bossIndex = nil
+		row.bossName = nil
+		row.bossEntry = nil
+		row.bossSpecIndex = nil
+		row.bossScoreCenti = nil
+		row.bossPlayerRank = nil
+		row.bossRaidRank = nil
+		row.bossDps = nil
+		row.bossSpecName = nil
+	end
+
+	function coolstats.FormatCachedPlayerBrowserBossRowValue(row)
+		if not row or not row.bossScoreCenti then
+			return "-"
+		end
+		local value = FormatUwUScore(row.bossScoreCenti)
+		if row.bossPlayerRank then
+			value = value .. " P" .. tostring(row.bossPlayerRank)
+		end
+		if row.bossRaidRank then
+			value = value .. " R" .. tostring(row.bossRaidRank)
+		end
+		if row.bossDps and tonumber(row.bossDps) and tonumber(row.bossDps) > 0 then
+			value = value .. " " .. FormatUwUDps(row.bossDps)
+		end
+		return value
+	end
+
+	local function UpdateCachedPlayerBrowserSearchKeys(row)
+		if not row then
+			return
+		end
+		row.nameKey = NormalizeName(row.name or row.key or "")
+	end
+
+	function coolstats.GetCachedPlayerBrowserIndexStats()
+		if not coolstats.cachedPlayerBrowserIndex then
+			return { entries = 0, version = coolstats.cachedPlayerBrowserIndexVersion }
+		end
+		return {
+			entries = #(coolstats.cachedPlayerBrowserIndex.rows or {}),
+			version = coolstats.cachedPlayerBrowserIndexVersion,
+		}
+	end
+
+	function coolstats.BuildCachedPlayerBrowserBaseIndex()
+		local data = coolstats.GetCachedPlayerBrowserData()
+		local store = GetCachedGearStore()
+		local talentStore = coolstats.GetCachedTalentStore()
+		if coolstats.cachedPlayerBrowserIndex
+			and coolstats.cachedPlayerBrowserIndex.data == data
+			and coolstats.cachedPlayerBrowserIndex.gearPlayers == (store and store.players)
+			and coolstats.cachedPlayerBrowserIndex.talentPlayers == (talentStore and talentStore.players) then
+			return coolstats.cachedPlayerBrowserIndex
+		end
+
+		local rowsByKey = {}
+		local rows = {}
+
+		local function GetRow(key, name)
+			key = key or NormalizeName(name or "")
+			if key == "" then
+				return nil
+			end
+			local row = rowsByKey[key]
+			if not row then
+				row = { key = key, name = name or key }
+				rowsByKey[key] = row
+				rows[#rows + 1] = row
+			elseif name and name ~= "" then
+				row.name = name
+			end
+			return row
+		end
+
+		if data and data.players then
+			for key, player in pairs(data.players) do
+				local row = player and GetRow(key, player[1])
+				if row then
+					row.player = player
+					row.hasLogs = true
+					row.name = player[1] or row.name
+					row.classIndex = player[3]
+					row.specIndex = player[4]
+					row.currentPhaseRanked = coolstats.IsUwUPlayerRankedForCurrentPhase(player)
+					if row.currentPhaseRanked then
+						row.scoreCenti = player[2]
+						row.rank = player[5]
+						local specChoices = BuildUwUSpecChoices(player)
+						local mainSpec = specChoices[1]
+						local offSpec = specChoices[2]
+						if mainSpec then
+							row.mainSpecIndex = mainSpec.specIndex
+							row.mainSpecScoreCenti = mainSpec.scoreCenti
+						end
+						if offSpec then
+							row.offSpecIndex = offSpec.specIndex
+							row.offSpecScoreCenti = offSpec.scoreCenti
+						end
+						row.bestRank, row.bestRankSpecIndex, row.bestRankScoreCenti = coolstats.GetCachedPlayerBrowserBestRank(player)
+					end
+					row.phase2ScoreCenti, row.phase2Rank = coolstats.GetUwUHistoricalOverall(player)
+					UpdateCachedPlayerBrowserSearchKeys(row)
+				end
+			end
+		end
+
+		if store and store.players then
+			for key, snapshot in pairs(store.players) do
+				local row = snapshot and GetRow(key, snapshot.name)
+				if row then
+					row.hasGear = true
+					row.name = snapshot.name or row.name
+					row.seenAt = snapshot.seenAt
+					row.slotCount = snapshot.slotCount
+					row.classFile = snapshot.classFile or row.classFile
+					row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
+					UpdateCachedPlayerBrowserSearchKeys(row)
+				end
+			end
+		end
+
+		if talentStore and talentStore.players then
+			for key, snapshot in pairs(talentStore.players) do
+				local row = snapshot and coolstats.CachedTalentSnapshotMatchesClass(snapshot) and GetRow(key, snapshot.name)
+				if row then
+					row.hasTalents = true
+					row.name = snapshot.name or row.name
+					row.talentsSeenAt = snapshot.seenAt
+					row.classFile = snapshot.classFile or row.classFile
+					row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
+					UpdateCachedPlayerBrowserSearchKeys(row)
+				end
+			end
+		end
+
+		coolstats.cachedPlayerBrowserIndex = {
+			data = data,
+			gearPlayers = store and store.players,
+			talentPlayers = talentStore and talentStore.players,
+			rows = rows,
+			version = coolstats.cachedPlayerBrowserIndexVersion,
+		}
+		return coolstats.cachedPlayerBrowserIndex
 	end
 
 	function coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey)
@@ -6898,9 +7159,12 @@ if type(coolstats) == "table" then
 			end
 		end
 		if filterKey and filterKey ~= "" then
-			local nameKey = NormalizeName(row.name or row.key or "")
+			local nameKey = row.nameKey or NormalizeName(row.name or row.key or "")
 			local classNameKey = NormalizeName(coolstats.GetCachedPlayerBrowserClassName(row.classIndex))
-			local specNameKey = NormalizeName((row.mainSpecName or "") .. " " .. (row.offSpecName or "") .. " " .. (row.bestSpecName or "") .. " " .. (row.specName or ""))
+			local specNameKey = ""
+			if row.player then
+				specNameKey = NormalizeName((GetUwUSpecName(row.player, row.mainSpecIndex) or "") .. " " .. (GetUwUSpecName(row.player, row.offSpecIndex) or "") .. " " .. (GetUwUSpecName(row.player, row.bestRankSpecIndex) or "") .. " " .. (GetUwUSpecName(row.player, row.specIndex) or ""))
+			end
 			if string.find(nameKey, filterKey, 1, true) == nil and string.find(classNameKey, filterKey, 1, true) == nil and string.find(specNameKey, filterKey, 1, true) == nil then
 				return false
 			end
@@ -6934,7 +7198,7 @@ if type(coolstats) == "table" then
 		elseif sortKey == "cache" then
 			return tonumber(row.seenAt) or 0
 		end
-		return string.lower(row.name or row.key or "")
+		return row.nameKey or NormalizeName(row.name or row.key or "")
 	end
 
 	function coolstats.SortCachedPlayerBrowserRows(rows, panel)
@@ -6946,7 +7210,7 @@ if type(coolstats) == "table" then
 				if panel and panel.browserPrioritizeFavorites and left.isFavorite ~= right.isFavorite then
 					return left.isFavorite == true
 				end
-				return string.lower(left.name or left.key or "") < string.lower(right.name or right.key or "")
+				return (left.nameKey or NormalizeName(left.name or left.key or "")) < (right.nameKey or NormalizeName(right.name or right.key or ""))
 			end)
 			return
 		end
@@ -6987,8 +7251,8 @@ if type(coolstats) == "table" then
 			local leftValue = coolstats.GetCachedPlayerBrowserSortValue(left, sortKey)
 			local rightValue = coolstats.GetCachedPlayerBrowserSortValue(right, sortKey)
 			if leftValue == rightValue then
-				local leftName = string.lower(left.name or left.key or "")
-				local rightName = string.lower(right.name or right.key or "")
+				local leftName = left.nameKey or NormalizeName(left.name or left.key or "")
+				local rightName = right.nameKey or NormalizeName(right.name or right.key or "")
 				return leftName < rightName
 			end
 			if ascending then
@@ -6996,6 +7260,62 @@ if type(coolstats) == "table" then
 			end
 			return leftValue > rightValue
 		end)
+	end
+
+	function coolstats.GetCachedPlayerBrowserSortedOrderKey(panel, bossIndex)
+		if bossIndex then
+			return nil
+		end
+		local sortKey = panel and panel.browserSortKey
+		local sortState = panel and panel.browserSortState
+		if not sortKey or not sortState then
+			if panel and panel.browserPrioritizeFavorites then
+				return nil
+			end
+			return "name"
+		end
+		if sortKey == "boss" or sortKey == "bossRank" or sortKey == "bossDps" then
+			return nil
+		end
+		return tostring(sortKey) .. ":" .. tostring(sortState)
+	end
+
+	function coolstats.GetCachedPlayerBrowserSortedBaseRows(index, panel, bossIndex)
+		local baseRows = index and index.rows or {}
+		local orderKey = coolstats.GetCachedPlayerBrowserSortedOrderKey(panel, bossIndex)
+		if not index or not orderKey then
+			return baseRows, false
+		end
+		index.sortedOrders = index.sortedOrders or {}
+		local cachedRows = index.sortedOrders[orderKey]
+		if cachedRows then
+			return cachedRows, true
+		end
+		cachedRows = {}
+		for rowIndex = 1, #baseRows do
+			cachedRows[rowIndex] = baseRows[rowIndex]
+		end
+		local sortPanel = {
+			browserSortKey = panel and panel.browserSortKey or nil,
+			browserSortState = panel and panel.browserSortState or nil,
+			browserPrioritizeFavorites = false,
+		}
+		coolstats.SortCachedPlayerBrowserRows(cachedRows, sortPanel)
+		index.sortedOrders[orderKey] = cachedRows
+		index.sortedOrderKeys = index.sortedOrderKeys or {}
+		for keyIndex = #index.sortedOrderKeys, 1, -1 do
+			if index.sortedOrderKeys[keyIndex] == orderKey then
+				table.remove(index.sortedOrderKeys, keyIndex)
+			end
+		end
+		index.sortedOrderKeys[#index.sortedOrderKeys + 1] = orderKey
+		while #index.sortedOrderKeys > 3 do
+			local oldKey = table.remove(index.sortedOrderKeys, 1)
+			if oldKey then
+				index.sortedOrders[oldKey] = nil
+			end
+		end
+		return cachedRows, true
 	end
 
 	function coolstats.GetCachedPlayerBrowserLimitScore(row)
@@ -7022,7 +7342,7 @@ if type(coolstats) == "table" then
 			if leftRank ~= rightRank then
 				return leftRank < rightRank
 			end
-			return string.lower(left.name or left.key or "") < string.lower(right.name or right.key or "")
+			return (left.nameKey or NormalizeName(left.name or left.key or "")) < (right.nameKey or NormalizeName(right.name or right.key or ""))
 		end)
 		for index = totalBeforeLimit, limit + 1, -1 do
 			rows[index] = nil
@@ -7062,7 +7382,7 @@ if type(coolstats) == "table" then
 					if counts.bossBuckets[bucketIndex] > counts.bossMaxBucket then
 						counts.bossMaxBucket = counts.bossBuckets[bucketIndex]
 					end
-					if playerKey ~= "" and NormalizeName(row.name or row.key or "") == playerKey then
+					if playerKey ~= "" and (row.nameKey or NormalizeName(row.name or row.key or "")) == playerKey then
 						counts.playerBossScoreCenti = row.bossScoreCenti
 					end
 				end
@@ -7088,119 +7408,60 @@ if type(coolstats) == "table" then
 		local classFilter = panel and panel.browserClassFilter
 		local specFilterKey = panel and panel.browserSpecFilterKey
 		local bossIndex = panel and panel.browserBossIndex
+		local playerLimit = coolstats.GetCachedPlayerBrowserPlayerLimit()
 		if panel then
 			panel.browserPrioritizeFavorites = filterKey == "" and classFilter == nil and specFilterKey == nil and bossIndex == nil
-		end
-		local rowsByKey = {}
-		local rows = {}
-
-		local function GetRow(key, name)
-			key = key or NormalizeName(name or "")
-			if key == "" then
-				return nil
-			end
-			local row = rowsByKey[key]
-			if not row then
-				row = { key = key, name = name or key }
-				rowsByKey[key] = row
-			elseif name and name ~= "" then
-				row.name = name
-			end
-			return row
 		end
 
 		local data = coolstats.GetCachedPlayerBrowserData()
 		local playerKey = NormalizeName(UnitName and UnitName("player") or "")
-		if data and data.players then
-			for key, player in pairs(data.players) do
-				local row = player and GetRow(key, player[1])
-				if row then
-					row.player = player
-					row.hasLogs = true
-					row.name = player[1] or row.name
-					row.classIndex = player[3]
-					row.specIndex = player[4]
-					row.specName = GetUwUSpecName(player)
-					row.specScores = player[6]
-					row.currentPhaseRanked = coolstats.IsUwUPlayerRankedForCurrentPhase(player)
-					if row.currentPhaseRanked then
-						row.scoreCenti = player[2]
-						row.rank = player[5]
-						local specChoices = BuildUwUSpecChoices(player)
-						local mainSpec = specChoices[1]
-						local offSpec = specChoices[2]
-						if mainSpec then
-							row.mainSpecIndex = mainSpec.specIndex
-							row.mainSpecName = mainSpec.name
-							row.mainSpecScoreCenti = mainSpec.scoreCenti
-						end
-						if offSpec then
-							row.offSpecIndex = offSpec.specIndex
-							row.offSpecName = offSpec.name
-							row.offSpecScoreCenti = offSpec.scoreCenti
-						end
-						row.bestRank, row.bestRankSpecIndex, row.bestRankScoreCenti = coolstats.GetCachedPlayerBrowserBestRank(player)
-						row.bestSpecName = GetUwUSpecName(player, row.bestRankSpecIndex)
-					end
-					row.phase2ScoreCenti, row.phase2Rank = coolstats.GetUwUHistoricalOverall(player)
-					if bossIndex then
-						local bossInfo = coolstats.GetCachedPlayerBrowserBossInfo(panel, data, key, player, bossIndex, specFilterKey)
-						row.bossIndex = bossIndex
-						row.bossName = data.bosses and data.bosses[bossIndex]
-						row.bossEntry = bossInfo and bossInfo.entry
-						row.bossSpecIndex = bossInfo and bossInfo.specIndex
-						row.bossScoreCenti = bossInfo and bossInfo.scoreCenti
-						row.bossPlayerRank = bossInfo and bossInfo.playerRank
-						row.bossRaidRank = bossInfo and bossInfo.raidRank
-						row.bossDps = bossInfo and bossInfo.dps
-						row.bossSpecName = bossInfo and bossInfo.specName
-					end
-				end
-			end
+		local index = coolstats.BuildCachedPlayerBrowserBaseIndex()
+		local queryKey = filterKey
+			.. "\030" .. tostring(classFilter or "")
+			.. "\030" .. tostring(specFilterKey or "")
+			.. "\030" .. tostring(bossIndex or "")
+			.. "\030" .. tostring(panel and panel.browserSortKey or "")
+			.. "\030" .. tostring(panel and panel.browserSortState or "")
+			.. "\030" .. tostring(panel and panel.showPhase2History or "")
+			.. "\030" .. tostring(playerLimit or "")
+		if panel and panel.browserQueryCache
+			and panel.browserQueryCache.index == index
+			and panel.browserQueryCache.queryKey == queryKey
+			and panel.browserQueryCache.indexVersion == (coolstats.cachedPlayerBrowserIndexVersion or 0)
+			and panel.browserQueryCache.favoriteVersion == (coolstats.cachedPlayerBrowserFavoriteVersion or 0)
+			and panel.browserQueryCache.queryVersion == (coolstats.cachedPlayerBrowserQueryVersion or 0) then
+			return panel.browserQueryCache.rows, panel.browserQueryCache.counts
 		end
 
-		local store = GetCachedGearStore()
-		if store and store.players then
-			for key, snapshot in pairs(store.players) do
-				local row = snapshot and GetRow(key, snapshot.name)
-				if row then
-					row.hasGear = true
-					row.name = snapshot.name or row.name
-					row.seenAt = snapshot.seenAt
-					row.slotCount = snapshot.slotCount
-					row.classFile = snapshot.classFile or row.classFile
-					row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
-				end
-			end
-		end
-
-		local talentStore = coolstats.GetCachedTalentStore()
-		if talentStore and talentStore.players then
-			for key, snapshot in pairs(talentStore.players) do
-				local row = snapshot and coolstats.CachedTalentSnapshotMatchesClass(snapshot) and GetRow(key, snapshot.name)
-				if row then
-					row.hasTalents = true
-					row.name = snapshot.name or row.name
-					row.talentsSeenAt = snapshot.seenAt
-					row.classFile = snapshot.classFile or row.classFile
-					row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
-				end
-			end
-		end
-
-		for _, row in pairs(rowsByKey) do
-			row.favoriteKey = coolstats.GetCachedPlayerBrowserFavoriteKey(row.key or row.name)
-			row.isFavorite = coolstats.IsCachedPlayerBrowserFavorite(row.favoriteKey or row.name)
+		local rows = {}
+		local baseRows, baseRowsPreSorted = coolstats.GetCachedPlayerBrowserSortedBaseRows(index, panel, bossIndex)
+		local favorites = coolstats.GetCachedPlayerBrowserFavorites()
+		for rowIndex = 1, #baseRows do
+			local row = baseRows[rowIndex]
+			row.isFavorite = favorites and favorites[row.key or NormalizeName(row.name or "")] == true
 			if coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey) then
+				if bossIndex and row.player then
+					local bossEntry, bossSpecIndex = coolstats.GetCachedPlayerBrowserBossEntry(row.player, bossIndex, specFilterKey)
+					row.bossIndex = bossIndex
+					row.bossSpecIndex = bossSpecIndex
+					row.bossScoreCenti = GetUwUBossScoreCenti(bossEntry)
+					row.bossPlayerRank = GetUwUBossPlayerRank(bossEntry)
+					row.bossRaidRank = GetUwUBossRaidRank(bossEntry)
+					row.bossDps = GetUwUBossDps(bossEntry)
+				else
+					ClearCachedPlayerBrowserBossFields(row)
+				end
 				rows[#rows + 1] = row
 			end
 		end
 
-		local totalBeforeLimit, limited, playerLimit = coolstats.ApplyCachedPlayerBrowserPlayerLimit(rows)
-		coolstats.SortCachedPlayerBrowserRows(rows, panel)
+		local totalBeforeLimit, limited, appliedPlayerLimit = coolstats.ApplyCachedPlayerBrowserPlayerLimit(rows)
+		if not baseRowsPreSorted or limited then
+			coolstats.SortCachedPlayerBrowserRows(rows, panel)
+		end
 		local counts = coolstats.CountCachedPlayerBrowserRows(rows, bossIndex, playerKey)
 		counts.uncappedTotal = totalBeforeLimit
-		counts.playerLimit = playerLimit
+		counts.playerLimit = appliedPlayerLimit
 		counts.limited = limited
 		if coolstats.GetRealmDataTotalPlayerCount and coolstats.GetRealmDataLoadedPlayerCount then
 			counts.realmDataTotalPlayers = coolstats.GetRealmDataTotalPlayerCount()
@@ -7208,6 +7469,17 @@ if type(coolstats) == "table" then
 			local effectiveLimit = coolstats.GetRealmDataEffectivePlayerLoadLimit and coolstats.GetRealmDataEffectivePlayerLoadLimit() or nil
 			counts.realmDataDesiredPlayers = effectiveLimit or counts.realmDataTotalPlayers
 			counts.realmDataNeedsReload = counts.realmDataLoadedPlayers and counts.realmDataDesiredPlayers and counts.realmDataLoadedPlayers < counts.realmDataDesiredPlayers
+		end
+		if panel then
+			panel.browserQueryCache = {
+				index = index,
+				indexVersion = coolstats.cachedPlayerBrowserIndexVersion or 0,
+				queryVersion = coolstats.cachedPlayerBrowserQueryVersion or 0,
+				favoriteVersion = coolstats.cachedPlayerBrowserFavoriteVersion or 0,
+				queryKey = queryKey,
+				rows = rows,
+				counts = counts,
+			}
 		end
 		return rows, counts
 	end
@@ -7389,10 +7661,13 @@ if type(coolstats) == "table" then
 		if not data or not data.bosses or not player then
 			return ""
 		end
-		local bossData = GetUwUSpecBossData(player, specIndex) or player[8]
+		local bossData = GetUwUSpecBossData(player, specIndex) or coolstats.GetUwUOverallBossData(player)
 		local bosses = {}
 		for bossIndex = 1, #data.bosses do
 			local bossName = data.bosses[bossIndex]
+			if not coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
+				bossName = nil
+			end
 			local entry = bossData and bossData[bossIndex]
 			if coolstats.GetActiveUwUPhaseId() == "toc" and bossName == "Algalon the Observer" then
 				entry = GetUwUBestBossDataAcrossSpecs(player, bossIndex) or entry
@@ -7470,22 +7745,6 @@ if type(coolstats) == "table" then
 		else
 			panel.freshnessText:SetTextColor(0.58, 0.76, 0.86)
 		end
-		if info.knownLatestVersion and coolstats.IsVersionNewer and coolstats.IsVersionNewer(info.addonVersion, info.knownLatestVersion) then
-			panel.peerVersionText:SetText("Peer latest version: " .. tostring(info.knownLatestVersion) .. " from " .. tostring(info.knownLatestVersionBy or "unknown"))
-			panel.peerVersionText:SetTextColor(1, 0.25, 0.25)
-		elseif info.knownLatestVersion then
-			panel.peerVersionText:SetText("Peer latest version: " .. tostring(info.knownLatestVersion) .. " from " .. tostring(info.knownLatestVersionBy or "unknown"))
-			panel.peerVersionText:SetTextColor(0.62, 0.82, 0.62)
-		else
-			panel.peerVersionText:SetText("Peer latest version: none seen yet")
-			panel.peerVersionText:SetTextColor(0.78, 0.78, 0.72)
-		end
-		if info.knownLatestGeneratedAt and info.knownLatestGeneratedAt ~= "" then
-			panel.peerDataText:SetText("Peer newest data: " .. tostring(info.knownLatestGeneratedAt) .. " from " .. tostring(info.knownLatestGeneratedAtBy or "unknown"))
-		else
-			panel.peerDataText:SetText("Peer newest data: none seen yet")
-		end
-		panel.peerDataText:SetTextColor(0.78, 0.78, 0.72)
 		panel.warperiaBox:SetText(coolstats.UPDATE_CENTER_WARPERIA_URL or "")
 		panel.githubBox:SetText(coolstats.UPDATE_CENTER_GITHUB_URL or "")
 	end
@@ -7542,25 +7801,13 @@ if type(coolstats) == "table" then
 		freshnessText:SetJustifyH("CENTER")
 		panel.freshnessText = freshnessText
 
-		local peerVersionText = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		peerVersionText:SetPoint("TOP", freshnessText, "BOTTOM", 0, -4)
-		peerVersionText:SetWidth(620)
-		peerVersionText:SetJustifyH("CENTER")
-		panel.peerVersionText = peerVersionText
-
-		local peerDataText = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		peerDataText:SetPoint("TOP", peerVersionText, "BOTTOM", 0, -4)
-		peerDataText:SetWidth(620)
-		peerDataText:SetJustifyH("CENTER")
-		panel.peerDataText = peerDataText
-
 		local function SelectUpdateCenterUrlBox(self)
 			self:SetFocus()
 			self:HighlightText()
 		end
 
 		local warperiaLabel = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-		warperiaLabel:SetPoint("TOPLEFT", panel, "TOPLEFT", 34, -104)
+		warperiaLabel:SetPoint("TOPLEFT", panel, "TOPLEFT", 34, -92)
 		warperiaLabel:SetWidth(76)
 		warperiaLabel:SetJustifyH("LEFT")
 		warperiaLabel:SetText("Warperia")
@@ -7583,7 +7830,7 @@ if type(coolstats) == "table" then
 		panel.warperiaBox = warperiaBox
 
 		local githubLabel = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-		githubLabel:SetPoint("TOPLEFT", panel, "TOPLEFT", 34, -134)
+		githubLabel:SetPoint("TOPLEFT", panel, "TOPLEFT", 34, -122)
 		githubLabel:SetWidth(76)
 		githubLabel:SetJustifyH("LEFT")
 		githubLabel:SetText("GitHub")
@@ -8428,7 +8675,7 @@ if type(coolstats) == "table" then
 		talentStore.players = {}
 		talentStore.order = {}
 		coolstats.lastCachedTalentPruneAt = 0
-		coolstats.cachedPlayerBrowserStatus = nil
+		coolstats.InvalidateCachedPlayerBrowserIndex()
 		if lookupUwUPanel and lookupUwUPanel:IsShown() then
 			UpdateCachedGearPanel(lookupUwUPanel, lookupUwUPanel.renderName, lookupUwUPanel.renderPlayer)
 		end
@@ -8491,6 +8738,85 @@ if type(coolstats) == "table" then
 		}
 	end
 
+	function coolstats.EstimateCachedPlayerBrowserValueWeight(value, seen)
+		local valueType = type(value)
+		if valueType == "string" then
+			return 40 + string.len(value)
+		elseif valueType == "number" or valueType == "boolean" then
+			return 16
+		elseif valueType ~= "table" then
+			return 0
+		end
+		seen = seen or {}
+		if seen[value] then
+			return 0
+		end
+		seen[value] = true
+		local weight = 48
+		for key, child in pairs(value) do
+			weight = weight + 16 + coolstats.EstimateCachedPlayerBrowserValueWeight(key, seen) + coolstats.EstimateCachedPlayerBrowserValueWeight(child, seen)
+		end
+		return weight
+	end
+
+	function coolstats.GetCachedPlayerBrowserCacheWeightStats()
+		local gearStore = GetCachedGearStore()
+		local talentStore = coolstats.GetCachedTalentStore()
+		local stats = {
+			gearBytes = 0,
+			talentBytes = 0,
+			gearPlayers = 0,
+			talentPlayers = 0,
+		}
+		for _, snapshot in pairs((gearStore and gearStore.players) or {}) do
+			if type(snapshot) == "table" then
+				stats.gearPlayers = stats.gearPlayers + 1
+				stats.gearBytes = stats.gearBytes + coolstats.EstimateCachedPlayerBrowserValueWeight(snapshot)
+			end
+		end
+		for _, snapshot in pairs((talentStore and talentStore.players) or {}) do
+			if type(snapshot) == "table" then
+				stats.talentPlayers = stats.talentPlayers + 1
+				stats.talentBytes = stats.talentBytes + coolstats.EstimateCachedPlayerBrowserValueWeight(snapshot)
+			end
+		end
+		stats.gearKB = stats.gearBytes / 1024
+		stats.talentKB = stats.talentBytes / 1024
+		stats.totalKB = stats.gearKB + stats.talentKB
+		return stats
+	end
+
+	function coolstats.GetCachedPlayerBrowserRuntimeStats()
+		local panel = coolstats.cachedPlayerBrowser
+		local index = coolstats.cachedPlayerBrowserIndex
+		local query = panel and panel.browserQueryCache
+		local stats = coolstats.GetCachedPlayerBrowserIndexStats()
+		stats.browserShown = panel and panel:IsShown() or false
+		stats.browserRows = panel and panel.browserRows and #panel.browserRows or 0
+		stats.queryCached = query ~= nil
+		stats.queryRows = query and query.rows and #query.rows or 0
+		stats.queryTotal = query and query.counts and query.counts.total or nil
+		stats.sortKey = panel and panel.browserSortKey or nil
+		stats.sortState = panel and panel.browserSortState or nil
+		stats.bossIndex = panel and panel.browserBossIndex or nil
+		stats.classFilter = panel and panel.browserClassFilter or nil
+		stats.specFilter = panel and panel.browserSpecFilterKey or nil
+		stats.sortedOrders = 0
+		stats.sortedOrderRows = 0
+		if index and index.sortedOrders then
+			for _, rows in pairs(index.sortedOrders) do
+				stats.sortedOrders = stats.sortedOrders + 1
+				if type(rows) == "table" then
+					stats.sortedOrderRows = stats.sortedOrderRows + #rows
+				end
+			end
+		end
+		if coolstats.GetRealmDataStatus then
+			stats.realmStatus = coolstats.GetRealmDataStatus()
+		end
+		return stats
+	end
+
 	function coolstats.FormatCachedPlayerBrowserMemory(kb)
 		kb = tonumber(kb) or 0
 		if kb >= 1024 then
@@ -8511,6 +8837,87 @@ if type(coolstats) == "table" then
 		collectgarbage("step", 80)
 	end
 
+	function coolstats.CachedPlayerBrowserGarbageCollector_OnUpdate(self, elapsed)
+		self.elapsed = (self.elapsed or 0) + (elapsed or 0)
+		if self.elapsed < 0.2 then
+			return
+		end
+		self.elapsed = 0
+		if InCombatLockdown and InCombatLockdown() then
+			return
+		end
+		if collectgarbage then
+			collectgarbage("step", 80)
+		end
+		self.remainingSteps = (self.remainingSteps or 1) - 1
+		if self.remainingSteps <= 0 then
+			self:SetScript("OnUpdate", nil)
+		end
+	end
+
+	function coolstats.ScheduleCachedPlayerBrowserGarbageCollector(steps)
+		if not collectgarbage then
+			return
+		end
+		if not CreateFrame then
+			coolstats.StepCachedPlayerBrowserGarbageCollector()
+			return
+		end
+		local frame = coolstats.cachedPlayerBrowserGCFrame
+		if not frame then
+			frame = CreateFrame("Frame", "coolstatsCachedPlayerBrowserGCFrame", UIParent)
+			coolstats.cachedPlayerBrowserGCFrame = frame
+		end
+		frame.elapsed = 0
+		frame.remainingSteps = math.max(frame.remainingSteps or 0, tonumber(steps) or 2)
+		frame:SetScript("OnUpdate", coolstats.CachedPlayerBrowserGarbageCollector_OnUpdate)
+	end
+
+	function coolstats.IsCachedPlayerBrowserHeldByStatsPanel(panel)
+		local statsPanel = coolstats.cachedPlayerStatsPanel
+		return statsPanel and statsPanel:IsShown() and statsPanel.sourceBrowser == panel
+	end
+
+	function coolstats.ClearCachedPlayerBrowserBossFilterOnClose(panel)
+		if not panel or coolstats.IsCachedPlayerBrowserHeldByStatsPanel(panel) then
+			return
+		end
+		panel.browserBossIndex = nil
+		panel.browserBossName = nil
+		if panel.browserSortKey == "boss" or panel.browserSortKey == "bossRank" or panel.browserSortKey == "bossDps" then
+			panel.browserSortKey = nil
+			panel.browserSortState = nil
+		end
+		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
+		coolstats.UpdateCachedPlayerBrowserLayout(panel)
+		if panel.bossDistributionFrame then
+			panel.bossDistributionFrame:Hide()
+		end
+	end
+
+	function coolstats.ClearCachedPlayerBrowserResultCache(panel, force)
+		if not panel then
+			return
+		end
+		panel.browserQueryCache = nil
+		panel.browserBossCacheSource = nil
+		panel.browserBossCache = nil
+		panel.browserBossCacheOrder = nil
+		if not force then
+			if coolstats.IsCachedPlayerBrowserHeldByStatsPanel(panel) then
+				return
+			end
+		end
+		panel.browserRows = nil
+		panel.browserCounts = nil
+		if coolstats.cachedPlayerBrowserIndex then
+			coolstats.cachedPlayerBrowserIndex = nil
+			coolstats.cachedPlayerBrowserIndexVersion = (coolstats.cachedPlayerBrowserIndexVersion or 0) + 1
+			coolstats.cachedPlayerBrowserQueryVersion = (coolstats.cachedPlayerBrowserQueryVersion or 0) + 1
+			coolstats.cachedPlayerBrowserStatus = nil
+		end
+	end
+
 	function coolstats.GetCachedPlayerBrowserAddonMemoryByName(addonName)
 		if not addonName or not GetAddOnMemoryUsage then
 			return 0
@@ -8529,6 +8936,76 @@ if type(coolstats) == "table" then
 			end
 		end
 		return 0
+	end
+
+	function coolstats.GetCachedPlayerBrowserRaidLayerAddonName(layer, index)
+		if type(layer) ~= "table" then
+			return nil
+		end
+		local addons = layer.shardAddons
+		if type(addons) == "table" and addons[index] then
+			return addons[index]
+		end
+		local prefix = layer.shardAddonPrefix
+		if type(prefix) == "string" and prefix ~= "" then
+			return prefix .. string.format("%02d", index)
+		end
+		return nil
+	end
+
+	function coolstats.GetCachedPlayerBrowserRaidLayerMemoryBreakdown(data)
+		data = data or coolstatsUwUData
+		local rows = {}
+		if type(data) ~= "table" or type(data.raidLayers) ~= "table" then
+			return rows
+		end
+
+		local choicesByKey = {}
+		if coolstats.GetUwUDataRaidLayerChoices then
+			local choices = coolstats.GetUwUDataRaidLayerChoices(data)
+			for index = 1, #choices do
+				local choice = choices[index]
+				if choice and choice.key then
+					choicesByKey[choice.key] = choice
+				end
+			end
+		end
+
+		local playerChunkCount = math.floor((tonumber(data.playerChunkCount) or 0) + 0.5)
+		for layerIndex = 1, #data.raidLayers do
+			local layer = data.raidLayers[layerIndex]
+			if type(layer) == "table" and layer.key and layer.name then
+				local shardCount = playerChunkCount
+				if type(layer.shardAddons) == "table" and #layer.shardAddons > shardCount then
+					shardCount = #layer.shardAddons
+				end
+
+				local memory = 0
+				local loadedShards = 0
+				local availableShards = 0
+				for shardIndex = 1, shardCount do
+					local addonName = coolstats.GetCachedPlayerBrowserRaidLayerAddonName(layer, shardIndex)
+					if addonName then
+						availableShards = availableShards + 1
+						memory = memory + coolstats.GetCachedPlayerBrowserAddonMemoryByName(addonName)
+						if IsAddOnLoaded and IsAddOnLoaded(addonName) then
+							loadedShards = loadedShards + 1
+						end
+					end
+				end
+
+				local choice = choicesByKey[tostring(layer.key)]
+				rows[#rows + 1] = {
+					key = tostring(layer.key),
+					name = tostring(layer.name),
+					memory = memory,
+					loadedShards = loadedShards,
+					shardCount = availableShards,
+					enabled = not choice or choice.enabled ~= false,
+				}
+			end
+		end
+		return rows
 	end
 
 	function coolstats.GetCachedPlayerBrowserMemoryBreakdown()
@@ -8562,6 +9039,7 @@ if type(coolstats) == "table" then
 				seen[name] = true
 			end
 		end
+		breakdown.raidLayers = coolstats.GetCachedPlayerBrowserRaidLayerMemoryBreakdown(coolstatsUwUData)
 		local total = breakdown.core + breakdown.cache + breakdown.data + breakdown.other
 		if total > 0 then
 			breakdown.total = total
@@ -8617,6 +9095,24 @@ if type(coolstats) == "table" then
 			GameTooltip:AddDoubleLine("Saved cache", coolstats.FormatCachedPlayerBrowserMemory(status.memory.cache), 0.86, 0.86, 0.78, 1, 1, 1)
 			if (status.memory.other or 0) > 0 then
 				GameTooltip:AddDoubleLine("Other coolstats", coolstats.FormatCachedPlayerBrowserMemory(status.memory.other), 0.86, 0.86, 0.78, 1, 1, 1)
+			end
+			if status.memory.raidLayers and #status.memory.raidLayers > 0 then
+				GameTooltip:AddLine("Raid data layers", 1, 0.82, 0.16)
+				for index = 1, #status.memory.raidLayers do
+					local layer = status.memory.raidLayers[index]
+					local loadedText = tostring(layer.loadedShards or 0) .. "/" .. tostring(layer.shardCount or 0)
+					local memoryText = coolstats.FormatCachedPlayerBrowserMemory(layer.memory or 0) .. "  " .. loadedText
+					local valueRed, valueGreen, valueBlue = 1, 1, 1
+					if layer.enabled == false then
+						memoryText = memoryText .. " off"
+						valueRed, valueGreen, valueBlue = 0.55, 0.55, 0.55
+					elseif (tonumber(layer.loadedShards) or 0) <= 0 then
+						memoryText = memoryText .. " not loaded"
+						valueRed, valueGreen, valueBlue = 0.62, 0.62, 0.58
+					end
+					GameTooltip:AddDoubleLine("  " .. tostring(layer.name or layer.key or "Raid"), memoryText, 0.86, 0.86, 0.78, valueRed, valueGreen, valueBlue)
+				end
+				GameTooltip:AddLine("Raid layer memory is part of the Realm data total.", 0.58, 0.76, 0.86, true)
 			end
 		else
 			GameTooltip:AddLine("Memory uses the Lua fallback because addon memory APIs are unavailable.", 0.58, 0.76, 0.86, true)
@@ -9107,15 +9603,27 @@ if type(coolstats) == "table" then
 		return coolstats.GetCachedPlayerBrowserBossInfo(statsPanel or sourcePanel, data, row.key, row.player, bossIndex, sourcePanel and sourcePanel.browserSpecFilterKey)
 	end
 
+	function coolstats.GetCachedPlayerStatsBossValues(row, sourcePanel, statsPanel)
+		local bossIndex = statsPanel and statsPanel.statsBossIndex
+		if not row or not bossIndex or not row.player then
+			return nil, nil
+		end
+		if sourcePanel and sourcePanel.browserBossIndex == bossIndex and row.bossIndex == bossIndex then
+			return row.bossSpecIndex, row.bossScoreCenti
+		end
+		local entry, specIndex = coolstats.GetCachedPlayerBrowserBossEntry(row.player, bossIndex, sourcePanel and sourcePanel.browserSpecFilterKey)
+		return specIndex, GetUwUBossScoreCenti(entry)
+	end
+
 	function coolstats.ShouldCountCachedPlayerStatsRowForBoss(row, sourcePanel, statsPanel)
-		local info = coolstats.GetCachedPlayerStatsBossInfo(row, sourcePanel, statsPanel)
-		return info and info.scoreCenti ~= nil and info.specIndex ~= nil
+		local specIndex, scoreCenti = coolstats.GetCachedPlayerStatsBossValues(row, sourcePanel, statsPanel)
+		return scoreCenti ~= nil and specIndex ~= nil
 	end
 
 	function coolstats.GetCachedPlayerStatsRowSpecIndex(row, sourcePanel, statsPanel)
 		if statsPanel and statsPanel.statsBossIndex then
-			local info = coolstats.GetCachedPlayerStatsBossInfo(row, sourcePanel, statsPanel)
-			return info and info.specIndex
+			local specIndex = coolstats.GetCachedPlayerStatsBossValues(row, sourcePanel, statsPanel)
+			return specIndex
 		end
 		return coolstats.GetCachedPlayerStatsSourceSpecIndex(row, nil)
 	end
@@ -9138,9 +9646,18 @@ if type(coolstats) == "table" then
 		}
 		local specsByKey = {}
 		for _, row in ipairs((sourcePanel and sourcePanel.browserRows) or {}) do
-			if coolstats.ShouldCountCachedPlayerStatsRowForPanel(row, sourcePanel, statsPanel) then
+			local include = false
+			local rowSpecIndex = nil
+			if statsPanel and statsPanel.statsBossIndex then
+				local specIndex, scoreCenti = coolstats.GetCachedPlayerStatsBossValues(row, sourcePanel, statsPanel)
+				include = scoreCenti ~= nil and specIndex ~= nil
+				rowSpecIndex = specIndex
+			else
+				include = coolstats.ShouldCountCachedPlayerStatsRowForPanel(row, sourcePanel, statsPanel)
+			end
+			if include then
 				local classIndex = tonumber(row.classIndex)
-				local specIndex = tonumber(coolstats.GetCachedPlayerStatsRowSpecIndex(row, sourcePanel, statsPanel))
+				local specIndex = tonumber(rowSpecIndex or coolstats.GetCachedPlayerStatsRowSpecIndex(row, sourcePanel, statsPanel))
 				if classIndex and specIndex then
 					local key = coolstats.GetCachedPlayerBrowserSpecKey(classIndex, specIndex)
 					local spec = specsByKey[key]
@@ -9365,6 +9882,14 @@ if type(coolstats) == "table" then
 		panel:SetBackdropBorderColor(0.55, 0.52, 0.48, 1)
 		coolstats.ApplyTabardPanelBackground(panel, 0.98, 0.22)
 		coolstats.RegisterManagedWindow(panel)
+		panel:HookScript("OnHide", function(self)
+			local sourcePanel = self.sourceBrowser
+			self.sourceBrowser = nil
+			if sourcePanel and sourcePanel == coolstats.cachedPlayerBrowser and (not sourcePanel:IsShown()) then
+				coolstats.ClearCachedPlayerBrowserResultCache(sourcePanel, true)
+				coolstats.ScheduleCachedPlayerBrowserGarbageCollector(6)
+			end
+		end)
 
 		local close = CreateFrame("Button", nil, panel, "UIPanelCloseButton")
 		close:SetPoint("TOPRIGHT", panel, "TOPRIGHT", -4, -4)
@@ -9719,6 +10244,14 @@ if type(coolstats) == "table" then
 			end
 		end
 		coolstats.RegisterManagedWindow(panel)
+		panel:HookScript("OnHide", function(self)
+			self.searchDelay = nil
+			self:SetScript("OnUpdate", nil)
+			coolstats.ClearUwUTooltipCache()
+			coolstats.ClearCachedPlayerBrowserBossFilterOnClose(self)
+			coolstats.ClearCachedPlayerBrowserResultCache(self, false)
+			coolstats.ScheduleCachedPlayerBrowserGarbageCollector(8)
+		end)
 		local title = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 		title:SetPoint("TOP", panel, "TOP", 0, -14)
 		title:SetText("coolstats")
@@ -9986,8 +10519,11 @@ if type(coolstats) == "table" then
 			local rowFrame = panel.rows[index]
 			local row = rows[offset + index]
 			if row then
+				local mainSpecName = row.player and GetUwUSpecName(row.player, row.mainSpecIndex) or nil
+				local offSpecName = row.player and GetUwUSpecName(row.player, row.offSpecIndex) or nil
+				local bestSpecName = row.player and GetUwUSpecName(row.player, row.bestRankSpecIndex) or nil
 				rowFrame.playerName = row.name
-				rowFrame.favoriteKey = row.favoriteKey
+				rowFrame.favoriteKey = row.key
 				rowFrame.isFavorite = row.isFavorite
 				rowFrame.hasLogs = row.hasLogs
 				rowFrame.hasGear = row.hasGear
@@ -9995,15 +10531,15 @@ if type(coolstats) == "table" then
 				rowFrame.cacheText = coolstats.GetCachedPlayerBrowserCacheText(row)
 				rowFrame.className = coolstats.GetCachedPlayerBrowserClassName(row.classIndex)
 				rowFrame.bestRankText = row.bestRank and ("#" .. tostring(row.bestRank)) or "-"
-				rowFrame.bestRankSpecName = row.bestSpecName
+				rowFrame.bestRankSpecName = bestSpecName
 				rowFrame.currentRankLabel = panel.showPhase2History and "Phase 3 Best Rank" or "Best Rank"
 				rowFrame.phase2Text = panel.showPhase2History and row.phase2ScoreCenti and FormatUwUScoreWithRank(row.phase2ScoreCenti, row.phase2Rank) or "-"
-				rowFrame.mainSpecText = row.mainSpecName and (row.mainSpecName .. " " .. FormatUwUScore(row.mainSpecScoreCenti)) or "-"
-				rowFrame.offSpecText = row.offSpecName and (row.offSpecName .. " " .. FormatUwUScore(row.offSpecScoreCenti)) or "-"
+				rowFrame.mainSpecText = mainSpecName and (mainSpecName .. " " .. FormatUwUScore(row.mainSpecScoreCenti)) or "-"
+				rowFrame.offSpecText = offSpecName and (offSpecName .. " " .. FormatUwUScore(row.offSpecScoreCenti)) or "-"
 				if panel.browserBossIndex then
 					rowFrame.selectedBossLabel = coolstats.GetCachedPlayerBrowserBossLabel(panel.browserBossIndex)
-					rowFrame.selectedBossValue = FormatUwUBossPanelValue(row.bossEntry)
-					rowFrame.selectedBossSpecName = row.bossSpecName
+					rowFrame.selectedBossValue = coolstats.FormatCachedPlayerBrowserBossRowValue(row)
+					rowFrame.selectedBossSpecName = row.player and GetUwUSpecName(row.player, row.bossSpecIndex) or nil
 					rowFrame.selectedBossRankText = coolstats.FormatCachedPlayerBrowserBossRank(row)
 					rowFrame.selectedBossDpsText = row.bossDps and FormatUwUDps(row.bossDps) or "-"
 					rowFrame.bossDpsText = rowFrame.selectedBossDpsText
@@ -10042,7 +10578,7 @@ if type(coolstats) == "table" then
 				end
 				if rowFrame.favoriteButton then
 					rowFrame.favoriteButton.playerName = row.name
-					rowFrame.favoriteButton.favoriteKey = row.favoriteKey
+					rowFrame.favoriteButton.favoriteKey = row.key
 					rowFrame.favoriteButton.isFavorite = row.isFavorite
 					coolstats.UpdateCachedPlayerBrowserFavoriteIcon(rowFrame.favoriteButton, row.isFavorite)
 					rowFrame.favoriteButton:Show()
@@ -10053,9 +10589,9 @@ if type(coolstats) == "table" then
 				rowFrame.gearText:SetTextColor(row.hasGear and 0.25 or 1, row.hasGear and 1 or 0.25, 0.25)
 				rowFrame.talentsText:SetText(row.hasTalents and "+" or "-")
 				rowFrame.talentsText:SetTextColor(row.hasTalents and 0.25 or 1, row.hasTalents and 1 or 0.25, 0.25)
-				if row.mainSpecName then
+				if mainSpecName then
 					local red, green, blue = GetUwUScoreColor(row.mainSpecScoreCenti)
-					rowFrame.mainSpecTextFrame:SetText(row.mainSpecName)
+					rowFrame.mainSpecTextFrame:SetText(mainSpecName)
 					rowFrame.mainSpecTextFrame:SetTextColor(red, green, blue)
 					rowFrame.mainSpecR, rowFrame.mainSpecG, rowFrame.mainSpecB = red, green, blue
 				else
@@ -10063,9 +10599,9 @@ if type(coolstats) == "table" then
 					rowFrame.mainSpecTextFrame:SetTextColor(0.62, 0.62, 0.58)
 					rowFrame.mainSpecR, rowFrame.mainSpecG, rowFrame.mainSpecB = 0.62, 0.62, 0.58
 				end
-				if row.offSpecName then
+				if offSpecName then
 					local red, green, blue = GetUwUScoreColor(row.offSpecScoreCenti)
-					rowFrame.offSpecTextFrame:SetText(row.offSpecName)
+					rowFrame.offSpecTextFrame:SetText(offSpecName)
 					rowFrame.offSpecTextFrame:SetTextColor(red, green, blue)
 					rowFrame.offSpecR, rowFrame.offSpecG, rowFrame.offSpecB = red, green, blue
 				else
@@ -10181,7 +10717,7 @@ if type(coolstats) == "table" then
 		coolstats.NormalizeCachedPlayerBrowserBossFilter(panel)
 		if rebuild == true or not panel.browserRows then
 			panel.browserRows, panel.browserCounts = coolstats.GetCachedPlayerBrowserRows(panel.searchBox and panel.searchBox:GetText() or "", panel)
-			coolstats.StepCachedPlayerBrowserGarbageCollector()
+			coolstats.ScheduleCachedPlayerBrowserGarbageCollector(2)
 			if panel.scrollFrame then
 				panel.scrollFrame.offset = 0
 			end
@@ -10302,9 +10838,8 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 		for key in pairs(raidProgressCache) do
 			raidProgressCache[key] = nil
 		end
-		for key in pairs(uwuTooltipCache) do
-			uwuTooltipCache[key] = nil
-		end
+		coolstats.ClearUwUTooltipCache()
+		coolstats.InvalidateCachedPlayerBrowserIndex()
 		pendingRaidProgress = nil
 		coolstats.raidProgressRequestState.queued = nil
 		coolstats.ClearTooltipAchievementComparison()
