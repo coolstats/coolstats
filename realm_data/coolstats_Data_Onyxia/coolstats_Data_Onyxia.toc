@@ -2,13 +2,13 @@
 ## Title: |cff00c0ffcoolstats|r Data - Onyxia
 ## Notes: Realm-specific UwU Logs data for Onyxia.
 ## Author: coolstats
-## Version: 0.2.35
+## Version: 0.2.36
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats
 ## X-coolstats-Realm: Onyxia
 ## X-coolstats-Phase: toc
-## X-coolstats-PlayerCount: 15916
+## X-coolstats-PlayerCount: 17108
 ## X-coolstats-PlayerChunks: 6
 
 data\logs\toc\coolstats_uwu_data.lua

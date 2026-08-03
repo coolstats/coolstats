@@ -2,13 +2,13 @@
 ## Title: |cff00c0ffcoolstats|r Data - Lordaeron
 ## Notes: Realm-specific UwU Logs data for Lordaeron.
 ## Author: coolstats
-## Version: 0.2.35
+## Version: 0.2.36
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats
 ## X-coolstats-Realm: Lordaeron
 ## X-coolstats-Phase: icc
-## X-coolstats-PlayerCount: 15140
+## X-coolstats-PlayerCount: 15199
 ## X-coolstats-PlayerChunks: 6
 
 data\logs\icc\coolstats_uwu_data.lua

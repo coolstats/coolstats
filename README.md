@@ -21,19 +21,22 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.35`, the install-ready release ships separate load-on-demand data
+As of `0.2.36`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
   Koralon, with Phase 2 Overall rank/parse and the locked historical Algalon
   parse retained as previous-season indicators. Current rankings are capped at
-  the top 500 players per class/specialization.
+  the top 600 players per class/specialization, with 17,108 total bundled
+  player rows in 6 ranked load chunks.
 - **Icecrown:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,500 ranked players per
-  class/specialization.
+  class/specialization, with 34,703 total bundled player rows in 12 ranked load
+  chunks.
 - **Lordaeron:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,000 ranked players per
-  class/specialization.
+  class/specialization, with 15,199 total bundled player rows in 6 ranked load
+  chunks.
 
 The ICC realm datasets intentionally exclude boss-only/rankless leaderboard
 players. This keeps the addon size and load behavior stable while still showing
@@ -120,6 +123,21 @@ Cached gear statistics are estimates derived from item data. Cached gem presence
 is shown when available and enchant bonuses are included when available, while
 some effects, talents, buffs, socket bonuses, gem stat bonuses, and other
 character-specific modifiers may not be represented accurately.
+
+### Performance Analysis
+
+coolstats Player Statistics and Distributions
+
+| Player Statistics | Per-Boss Performance Distribution |
+| --- | --- |
+| <img src="https://i.imgur.com/gM7pajr.png" alt="Specialization Representation" width="320"> | <img src="https://i.imgur.com/aaIM5CQ.png" alt="Per Boss Performance Histogram" width="440"> |
+
+- Statistics panel from the player browser, with class/spec representation
+  bars, counts, percentages, a bottom sum, and a realm-aware boss drilldown
+  selector.
+- Individual boss performance analysis via the parse histogram, so you can
+  compare a player against everyone else or against their own class and
+  specialization.
 
 ### Optional Character Panel Improvements
 

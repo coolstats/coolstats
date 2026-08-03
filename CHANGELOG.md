@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.2.36 - 2026-08-03
+
+### Data
+
+- Refreshed all Warmane UwU Logs datasets on 2026-08-03 using the realm-aware
+  weekly caps: Onyxia top 600 per class/spec, Lordaeron top 1,000 per
+  class/spec, and Icecrown top 1,500 per class/spec.
+- Shipped refreshed dynamic ranked chunk tranches for the in-game data-load
+  slider: Onyxia 17,108 total players in 6 chunks, Lordaeron 15,199 total
+  players in 6 chunks, and Icecrown 34,703 total players in 12 chunks.
+- Verified the weekly bulk boss refresh completed with zero failed bulk
+  leaderboard requests and no failed ranking leaderboards across all three
+  realms.
+- Ran duplicate-character-name verification and targeted boss-row repair during
+  the refresh so resolved ambiguous names keep current boss parses without
+  doing full per-player boss fetching.
+
 ## 0.2.35 - 2026-07-27
 
 ### Player browser
