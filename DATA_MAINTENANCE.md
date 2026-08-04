@@ -253,6 +253,26 @@ Use the manual release flow for this repository:
 8. Upload `coolstats_<version>.zip` as the release asset.
 9. Upload the same install-ready ZIP to Warperia.
 
+### Warperia Launcher Uploads
+
+Warperia must receive the install-ready `coolstats_<version>.zip`, not a GitHub
+source/repository archive. A source archive installs incorrectly as one
+`Interface/AddOns/coolstats/` folder containing repository-only paths such as
+`cache_addon/`, `realm_data/`, `.gitignore`, and docs.
+
+The package script writes two sidecar files beside the ZIP:
+`coolstats_<version>.warperia` is a Warperia-format marker template, and
+`coolstats_<version>_warperia_upload_notes.txt` is the human-readable checklist.
+Use the `.warperia` template when updating Warperia metadata. Its `Folders:`
+line must match every top-level folder inside the ZIP, including `coolstats`,
+`coolstats_Cache`, each `coolstats_Data_<Realm>` addon, and every generated
+`coolstats_Data_*_UWU_*` player or raid-layer shard.
+
+If Warperia users report that only one `coolstats` folder was installed, inspect
+the installed folder. Seeing `cache_addon/` or `realm_data/` inside it means the
+launcher installed the source tree; replace the Warperia upload with the
+install-ready ZIP and the generated folder list.
+
 Prefer local `git` plus the GitHub UI or GitHub API for
 `coolstats/coolstats`. Before pushing, tagging, or creating a release, verify
 the release checkout remote points at `https://github.com/coolstats/coolstats.git`.
