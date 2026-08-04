@@ -251,14 +251,17 @@ Use the manual release flow for this repository:
 6. Create and push tag `v<version>`.
 7. Create or update the GitHub Release titled `coolstats <version>`.
 8. Upload `coolstats_<version>.zip` as the release asset.
-9. Regenerate and push the `warperia` branch from that exact ZIP.
+9. Regenerate and push the `warperia` branch from that exact ZIP. The GitHub
+   repository default branch should stay set to `warperia`; source work and
+   release commits stay on `main`.
 
 ### Warperia Launcher Branch
 
-Warperia's GitHub launcher flow consumes a repository source tree. Do not point
-it at `main`, because `main` is the source/release workspace and has root-level
-files such as `coolstats.toc`, `cache_addon/`, `realm_data/`, and maintenance
-docs. Point Warperia at the generated `warperia` branch instead.
+Warperia's GitHub launcher flow consumes the repository source tree from the
+default branch. For `coolstats/coolstats`, the GitHub default branch should be
+`warperia`. Do not make `main` the default branch for launcher installs, because
+`main` is the source/release workspace and has root-level files such as
+`coolstats.toc`, `cache_addon/`, `realm_data/`, and maintenance docs.
 
 The `warperia` branch is a build artifact, not a second maintained codebase. It
 is rebuilt from the same install-ready `coolstats_<version>.zip` that is uploaded
@@ -276,8 +279,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\publish_warperia_bra
 
 If Warperia users report that only one `coolstats` folder was installed, inspect
 the installed folder. Seeing `cache_addon/` or `realm_data/` inside it means the
-launcher is still using the source branch; update the Warperia GitHub reference
-to `warperia`.
+launcher is still using the source branch; check that GitHub's default branch is
+`warperia` and that the Warperia site has refreshed its GitHub metadata.
 
 Prefer local `git` plus the GitHub UI or GitHub API for
 `coolstats/coolstats`. Before pushing, tagging, or creating a release, verify
