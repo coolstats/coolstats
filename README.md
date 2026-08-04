@@ -1,4 +1,4 @@
-﻿# coolstats
+# coolstats
 
 This is the generated Warperia install branch for coolstats 0.2.38.
 
