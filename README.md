@@ -182,12 +182,11 @@ requires a UI reload.
 6. Restart the game or run `/reload`.
 7. Left-click the coolstats minimap button to open the player browser.
 
-Warperia launcher installs should produce the same sibling folder layout. If
-the launcher creates only one `Interface/AddOns/coolstats/` folder containing
-`cache_addon/`, `realm_data/`, `.gitignore`, or repository docs, it installed a
-source archive instead of the install-ready release ZIP. Remove that broken
-`coolstats` folder and install the release ZIP that contains the separate
-top-level addon folders.
+Warperia launcher installs are served from the generated `warperia` branch,
+whose repository root is shaped like the install ZIP. If the launcher creates
+only one `Interface/AddOns/coolstats/` folder containing `cache_addon/`,
+`realm_data/`, `.gitignore`, or repository docs, Warperia is pointed at the
+source branch instead of the generated install branch.
 
 On login, coolstats confirms that it loaded successfully and shows the
 freshness date of the bundled UwU Logs data. If the data is more than seven

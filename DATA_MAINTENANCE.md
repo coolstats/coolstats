@@ -251,27 +251,33 @@ Use the manual release flow for this repository:
 6. Create and push tag `v<version>`.
 7. Create or update the GitHub Release titled `coolstats <version>`.
 8. Upload `coolstats_<version>.zip` as the release asset.
-9. Upload the same install-ready ZIP to Warperia.
+9. Regenerate and push the `warperia` branch from that exact ZIP.
 
-### Warperia Launcher Uploads
+### Warperia Launcher Branch
 
-Warperia must receive the install-ready `coolstats_<version>.zip`, not a GitHub
-source/repository archive. A source archive installs incorrectly as one
-`Interface/AddOns/coolstats/` folder containing repository-only paths such as
-`cache_addon/`, `realm_data/`, `.gitignore`, and docs.
+Warperia's GitHub launcher flow consumes a repository source tree. Do not point
+it at `main`, because `main` is the source/release workspace and has root-level
+files such as `coolstats.toc`, `cache_addon/`, `realm_data/`, and maintenance
+docs. Point Warperia at the generated `warperia` branch instead.
 
-The package script writes two sidecar files beside the ZIP:
-`coolstats_<version>.warperia` is a Warperia-format marker template, and
-`coolstats_<version>_warperia_upload_notes.txt` is the human-readable checklist.
-Use the `.warperia` template when updating Warperia metadata. Its `Folders:`
-line must match every top-level folder inside the ZIP, including `coolstats`,
-`coolstats_Cache`, each `coolstats_Data_<Realm>` addon, and every generated
-`coolstats_Data_*_UWU_*` player or raid-layer shard.
+The `warperia` branch is a build artifact, not a second maintained codebase. It
+is rebuilt from the same install-ready `coolstats_<version>.zip` that is uploaded
+to GitHub Releases. Its repository root must contain sibling addon folders such
+as `coolstats/`, `coolstats_Cache/`, each `coolstats_Data_<Realm>/`, and every
+generated `coolstats_Data_*_UWU_*` player or raid-layer shard. It must not
+contain root-level source-workspace paths like `cache_addon/` or `realm_data/`.
+
+After packaging and validating a release, run the Warperia branch publisher from
+the workspace root:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\publish_warperia_branch.ps1 -Version <version> -Push
+```
 
 If Warperia users report that only one `coolstats` folder was installed, inspect
 the installed folder. Seeing `cache_addon/` or `realm_data/` inside it means the
-launcher installed the source tree; replace the Warperia upload with the
-install-ready ZIP and the generated folder list.
+launcher is still using the source branch; update the Warperia GitHub reference
+to `warperia`.
 
 Prefer local `git` plus the GitHub UI or GitHub API for
 `coolstats/coolstats`. Before pushing, tagging, or creating a release, verify
