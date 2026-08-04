@@ -267,10 +267,10 @@ The `warperia` branch is a build artifact, not a second maintained codebase. It
 is rebuilt from the same install-ready `coolstats_<version>.zip` that is uploaded
 to GitHub Releases. Its repository root must contain sibling addon folders such
 as `coolstats/`, `coolstats_Cache/`, each `coolstats_Data_<Realm>/`, and every
-generated `coolstats_Data_*_UWU_*` player or raid-layer shard. It may also have
-a root `README.md` so GitHub's default branch page is understandable. It must
-not contain root-level source-workspace paths like `cache_addon/` or
-`realm_data/`.
+generated `coolstats_Data_*_UWU_*` player or raid-layer shard. It also has a
+root `README.md` copied from the source branch README, with local asset paths
+rewritten for the install-shaped branch. It must not contain root-level
+source-workspace paths like `cache_addon/` or `realm_data/`.
 
 After packaging and validating a release, run the Warperia branch publisher from
 the workspace root:
