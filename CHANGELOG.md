@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.2.38 - 2026-08-04
+
+### Documentation
+
+- Expanded the README install guide for the new multi-addon data shard layout.
+- Added a technical README section explaining ranked chunks, raid layer shards,
+  runtime browser cleanup, and `/cs perf` diagnostics.
+
+### UI
+
+- Added an in-game changelog window, available from the minimap menu, `/cs
+  changelog`, and a new browser toolbar Changes button.
+- Added a first-run feature guide with character-aware completion, delayed
+  login startup, tell-message sounds, and a pulsing welcome glow.
+- Expanded feature guide callouts across the player browser, boss filters,
+  Statistics, Update Center, changelog, UwU Logs, cached gear, cached talents,
+  Log Analysis, sharing tools, and memory controls.
+- Fixed first-run guide step ordering for Statistics, Update Center, changelog,
+  cached talents, Log Analysis, and UwU panel close actions.
+- Fixed the Warmane Armory and plain-text log summary copy dialogs so they open
+  above the UwU Logs panel and cached gear panel.
+
 ## 0.2.37 - 2026-08-03
 
 ### Performance

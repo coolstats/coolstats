@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.37`, the install-ready release ships separate load-on-demand data
+As of `0.2.38`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
@@ -167,11 +167,20 @@ requires a UI reload.
 
 1. Download the latest install-ready ZIP, named `coolstats_<version>.zip`, from
    the GitHub Release titled `coolstats <version>`.
-2. Extract every included top-level addon folder into `Interface/AddOns/`.
-3. Ensure `Interface/AddOns/coolstats/coolstats.toc` and the included
-   `Interface/AddOns/coolstats_Data_<Realm>/` folders exist.
-4. Restart the game or run `/reload`.
-5. Left-click the coolstats minimap button to open the player browser.
+2. Close the game, or at least exit to the character screen before replacing
+   addon files.
+3. Extract every included top-level addon folder directly into
+   `Interface/AddOns/`. The ZIP contains multiple folders, not one folder to
+   nest inside another folder.
+4. Ensure these folders exist after extraction:
+   `Interface/AddOns/coolstats/`, `Interface/AddOns/coolstats_Cache/`,
+   `Interface/AddOns/coolstats_Data_<Realm>/`, and the included
+   `Interface/AddOns/coolstats_Data_<Realm>_UWU_.../` shard folders.
+5. If you are updating from a much older release and see duplicate or stale
+   coolstats data addons on the character-select AddOns screen, remove the old
+   `coolstats*` folders and extract the ZIP again.
+6. Restart the game or run `/reload`.
+7. Left-click the coolstats minimap button to open the player browser.
 
 On login, coolstats confirms that it loaded successfully and shows the
 freshness date of the bundled UwU Logs data. If the data is more than seven
@@ -233,6 +242,38 @@ talents, loot alerts, or the character-panel improvements.
 - Cached gear, talents, favourites, and settings are stored locally in
   `coolstatsDB`.
 - Cached inspection data can be cleared from the player browser.
+
+## For Nerds: Data Loading And Cleanup
+
+Warmane realm logs are bundled as load-on-demand Lua addons so the Wrath client
+does not have to parse every realm and every boss table at login.
+
+- `coolstats/` contains the UI and runtime logic.
+- `coolstats_Cache/` stores the separate saved-variable cache addon.
+- `coolstats_Data_<Realm>/` is the small realm manifest and compatibility
+  loader.
+- `coolstats_Data_<Realm>_UWU_XX/` shards contain ranked player tranches. The
+  player-load slider snaps to those tranches, keeping the highest-ranked
+  players first and skipping lower tranches after `/reload`.
+- `coolstats_Data_<Realm>_UWU_<RAID>_XX/` shards contain individual boss rows.
+  Raid layers are enabled by default, but users can disable raids they do not
+  care about in Tooltip & Cache settings and reclaim that memory after
+  `/reload`.
+
+The generator targets roughly 3,000 ranked players per chunk, keeps normal
+realm datasets at 6 or more chunks, and allows larger realms like Icecrown to
+use more chunks. This also avoids the Wrath Lua 5.1 local-variable and giant
+chunk failure modes that can silently break addons on 3.3.5 clients.
+
+The player browser treats search rows, sort orders, per-boss result rows,
+histogram inputs, and rendered tooltip lines as disposable runtime state.
+Opening, sorting, and boss filtering can raise Lua working memory while the UI
+is doing useful work. Closing the browser clears those references, drops the
+tooltip line cache, clears selected-boss browser filters, and schedules bounded
+incremental garbage-collection steps. coolstats intentionally avoids automatic
+full `collectgarbage("collect")` calls during gameplay because those can cause
+visible hitches. `/cs perf` prints the current Lua heap, loaded realm shards,
+browser row/index counts, and approximate cache weights for troubleshooting.
 
 ## Support
 

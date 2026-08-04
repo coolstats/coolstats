@@ -100,6 +100,10 @@ local defaults = {
 		radius = 80,
 	},
 	updateCenter = {},
+	guide = {
+		browserVersion = 0,
+		characters = {},
+	},
 }
 
 local PANEL_WIDTH = 236
@@ -1140,6 +1144,9 @@ function coolstats.OpenCachedPlayerBrowserFromMinimap()
 	end
 	if coolstats.OpenCachedPlayerBrowser then
 		coolstats.OpenCachedPlayerBrowser()
+		if coolstats.NotifyFeatureGuideAction then
+			coolstats.NotifyFeatureGuideAction("minimapBrowser")
+		end
 	else
 		Print("Player browser is not available yet.")
 	end
@@ -1160,6 +1167,22 @@ function coolstats.InitializeMinimapMenu()
 	end)
 	coolstats.AddMinimapMenuButton("Logs Browser", coolstats.OpenCachedPlayerBrowserFromMinimap)
 	coolstats.AddMinimapMenuButton("Update Center", coolstats.OpenUpdateCenter)
+	coolstats.AddMinimapMenuButton("Changelog", function()
+		if CloseDropDownMenus then
+			CloseDropDownMenus()
+		end
+		if coolstats.OpenChangelog then
+			coolstats.OpenChangelog()
+		end
+	end)
+	coolstats.AddMinimapMenuButton("Feature Guide", function()
+		if CloseDropDownMenus then
+			CloseDropDownMenus()
+		end
+		if coolstats.OpenFeatureGuide then
+			coolstats.OpenFeatureGuide(true)
+		end
+	end)
 	coolstats.AddMinimapMenuButton("Settings", coolstats.OpenSettingsFromMinimap)
 	coolstats.AddMinimapMenuButton(CLOSE or "Close", function()
 		if CloseDropDownMenus then
@@ -1207,6 +1230,10 @@ function coolstats.PositionMinimapButton()
 	local radians = math.rad(angle)
 	ui.minimapButton:ClearAllPoints()
 	ui.minimapButton:SetPoint("CENTER", Minimap, "CENTER", math.cos(radians) * radius, math.sin(radians) * radius)
+end
+
+function coolstats.GetMinimapButton()
+	return ui.minimapButton
 end
 
 function coolstats.GetMinimapCursorAngle()
@@ -6439,6 +6466,8 @@ local function ShowHelp()
 	Print("/coolstats settings - open settings")
 	Print("/coolstats browser - open the player browser")
 	Print("/coolstats update - open update links and data status")
+	Print("/coolstats changelog - show recent coolstats changes")
+	Print("/coolstats guide - replay the browser feature guide")
 	Print("/coolstats versioncheck - ask your raid or party for coolstats versions")
 	Print("/coolstats perf - print a lightweight performance snapshot")
 	Print("/coolstats uwu [player name] - open UwU Logs for a player")
@@ -6545,6 +6574,18 @@ local function SlashHandler(message)
 		end
 	elseif commandLower == "update" or commandLower == "updates" then
 		coolstats.OpenUpdateCenter()
+	elseif commandLower == "changelog" or commandLower == "changes" or commandLower == "news" then
+		if coolstats.OpenChangelog then
+			coolstats.OpenChangelog()
+		else
+			Print("Changelog is not available.")
+		end
+	elseif commandLower == "guide" or commandLower == "tutorial" then
+		if coolstats.OpenFeatureGuide then
+			coolstats.OpenFeatureGuide(true)
+		else
+			Print("Feature guide is not available.")
+		end
 	elseif commandLower == "versioncheck" then
 		coolstats.RequestUpdateCenterVersions(rest)
 	elseif commandLower == "perf" or commandLower == "performance" then
@@ -6664,6 +6705,9 @@ eventFrame:SetScript("OnEvent", function(self, event, arg1)
 			Print("|cff00ff00Loaded successfully.|r " .. freshness)
 		end
 		coolstats.BroadcastUpdateCenterStatus(true)
+		if coolstats.MaybeStartLoginFeatureGuide then
+			coolstats.MaybeStartLoginFeatureGuide()
+		end
 		return
 	end
 
