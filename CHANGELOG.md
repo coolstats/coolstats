@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.2.39 - 2026-08-05
+
+### UI
+
+- Changed the first-run feature guide completion flag to be account-wide. Once
+  the guide is completed on any character, it will stay completed for every
+  character on that WoW account.
+- Added migration from the previous per-character guide completion table into
+  the new account-level completion version.
+
+### Distribution
+
+- Rebuilt the Warperia install branch from the release ZIP so launcher installs
+  keep the correct multi-addon shard layout.
+
 ## 0.2.38 - 2026-08-04
 
 ### Documentation

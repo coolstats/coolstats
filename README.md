@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.38`, the install-ready release ships separate load-on-demand data
+As of `0.2.39`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
