@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown Trial of the Grand Crusader 04
 ## Notes: Optional Trial of the Grand Crusader UwU Logs layer 4/12 for Icecrown.
 ## Author: coolstats
-## Version: 0.2.39
+## Version: 0.2.40
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Icecrown
