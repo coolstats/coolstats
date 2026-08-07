@@ -8279,6 +8279,16 @@ if type(coolstats) == "table" then
 
 	coolstats.CHANGELOG_ENTRIES = {
 		{
+			version = "0.2.40",
+			date = "2026-08-07",
+			notes = {
+				"Refreshed all Warmane UwU data with realm-aware weekly caps: Onyxia 600, Lordaeron 1000, Icecrown 1500 per class/spec.",
+				"Updated dynamic player chunks: Onyxia 17,836 players, Lordaeron 15,222 players, Icecrown 34,846 players.",
+				"Ran duplicate-name verification and targeted boss-row repair during the weekly refresh.",
+				"Rebuilt the install ZIP and generated Warperia branch from the same release artifact.",
+			},
+		},
+		{
 			version = "0.2.39",
 			date = "2026-08-05",
 			notes = {

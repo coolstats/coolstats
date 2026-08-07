@@ -21,21 +21,21 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.39`, the install-ready release ships separate load-on-demand data
+As of `0.2.40`, the install-ready release ships separate load-on-demand data
 addons for each supported realm:
 
 - **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
   Koralon, with Phase 2 Overall rank/parse and the locked historical Algalon
   parse retained as previous-season indicators. Current rankings are capped at
-  the top 600 players per class/specialization, with 17,108 total bundled
+  the top 600 players per class/specialization, with 17,836 total bundled
   player rows in 6 ranked load chunks.
 - **Icecrown:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,500 ranked players per
-  class/specialization, with 34,703 total bundled player rows in 12 ranked load
+  class/specialization, with 34,846 total bundled player rows in 12 ranked load
   chunks.
 - **Lordaeron:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,000 ranked players per
-  class/specialization, with 15,199 total bundled player rows in 6 ranked load
+  class/specialization, with 15,222 total bundled player rows in 6 ranked load
   chunks.
 
 The ICC realm datasets intentionally exclude boss-only/rankless leaderboard
