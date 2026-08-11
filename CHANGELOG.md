@@ -1,5 +1,40 @@
 # Changelog
 
+## 0.2.41 - 2026-08-11
+
+### Data
+
+- Refreshed all Warmane UwU Logs datasets on 2026-08-11 using the
+  realm-aware weekly caps: Onyxia top 600 per class/spec, Lordaeron top 1,000
+  per class/spec, and Icecrown top 1,500 per class/spec.
+- Shipped refreshed dynamic ranked chunk tranches for the in-game data-load
+  slider: Onyxia 18,371 total players in 7 chunks, Lordaeron 15,273 total
+  players in 6 chunks, and Icecrown 34,998 total players in 12 chunks.
+- Preserved the realm-aware raid layer shard layout for TOGC/VOA/Ulduar on
+  Onyxia and ICC/RS/TOGC on Icecrown and Lordaeron.
+- Ran duplicate-name verification and targeted boss-row repair during the
+  refresh; generated data reports zero failed leaderboards, zero bulk boss
+  failures, zero character fetch failures, and zero missing boss encounters.
+
+### UI
+
+- Added a first-run guide skip button and `/cs guide skip`, which marks the
+  account-level guide completion flag so the guide will not prompt again.
+- Added an Item Levels color mode that switches item-level badge text and slot
+  border glow between the coolstats GearScore gradient and Blizzard item rarity
+  colors.
+- Reorganized settings so Character Panel owns character-frame controls,
+  item-level placement/font/color controls, GearScore cleanup, and side-panel
+  visuals directly on one page.
+- Added upper-left and upper-right item-level badge positions and clarified the
+  Item Level Colors section in settings.
+
+### Distribution
+
+- Rebuilt the install ZIP and generated Warperia branch from the same
+  install-ready artifact so GitHub releases and Warperia launcher installs stay
+  aligned.
+
 ## 0.2.40 - 2026-08-07
 
 ### Data

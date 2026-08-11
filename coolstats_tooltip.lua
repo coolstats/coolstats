@@ -8279,6 +8279,16 @@ if type(coolstats) == "table" then
 
 	coolstats.CHANGELOG_ENTRIES = {
 		{
+			version = "0.2.41",
+			date = "2026-08-11",
+			notes = {
+				"Refreshed all Warmane UwU data with realm-aware weekly caps: Onyxia 600, Lordaeron 1000, Icecrown 1500 per class/spec.",
+				"Updated dynamic player chunks: Onyxia 18,371 players, Lordaeron 15,273 players, Icecrown 34,998 players.",
+				"Added first-run guide skipping, item rarity colors for item-level overlays, and upper-corner item-level badge positions.",
+				"Reorganized Character Panel settings so item-level controls and side-panel visuals live directly on that page.",
+			},
+		},
+		{
 			version = "0.2.40",
 			date = "2026-08-07",
 			notes = {
@@ -9280,6 +9290,20 @@ if type(coolstats) == "table" then
 		coolstats.StyleFeatureGuideButton(backButton, false)
 		frame.backButton = backButton
 
+		local skipButton = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+		SetFrameSize(skipButton, 78, 22)
+		skipButton:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -188, 12)
+		skipButton:SetText("Skip Tour")
+		coolstats.StyleFeatureGuideButton(skipButton, true)
+		skipButton:SetScript("OnClick", function()
+			if coolstats.SkipFeatureGuide then
+				coolstats.SkipFeatureGuide()
+			else
+				coolstats.HideFeatureGuideFrame(true)
+			end
+		end)
+		frame.skipButton = skipButton
+
 		local nextButton = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
 		SetFrameSize(nextButton, 76, 22)
 		nextButton:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -16, 12)
@@ -9308,6 +9332,13 @@ if type(coolstats) == "table" then
 				frame.welcomeGlow:SetScript("OnUpdate", nil)
 				frame.welcomeGlow:Hide()
 			end
+		end
+	end
+
+	function coolstats.SkipFeatureGuide()
+		coolstats.HideFeatureGuideFrame(true)
+		if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+			DEFAULT_CHAT_FRAME:AddMessage("|cff00bfffcoolstats:|r First-run feature guide skipped. Use |cffffffff/cs guide|r to replay it.")
 		end
 	end
 
@@ -9615,8 +9646,16 @@ if type(coolstats) == "table" then
 			end
 			frame.backButton:Show()
 		end
-		if type(frame.skipButton) == "table" and frame.skipButton.Hide then
-			frame.skipButton:Hide()
+		if frame.skipButton then
+			frame.skipButton:SetFrameLevel(frame:GetFrameLevel() + 8)
+			frame.skipButton:SetScript("OnClick", function()
+				if coolstats.SkipFeatureGuide then
+					coolstats.SkipFeatureGuide()
+				else
+					coolstats.HideFeatureGuideFrame(true)
+				end
+			end)
+			frame.skipButton:Show()
 		end
 		if frame.closeButton then
 			frame.closeButton:SetFrameLevel(frame:GetFrameLevel() + 8)

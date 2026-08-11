@@ -7,6 +7,7 @@ local QUALITY_LABELS = {
 	[5] = "Legendary",
 }
 
+local CHARACTER_PANEL_CATEGORY_NAME = "Character Panel"
 local function GetDB()
 	if coolstats.EnsureOptions then
 		coolstats.EnsureOptions()
@@ -142,12 +143,25 @@ local function GetItemLevelBadgeOptions()
 	return { position = "default", fontSize = 15 }
 end
 
+local function GetItemLevelBadgeColorMode()
+	if coolstats.GetItemLevelBadgeColorMode then
+		return coolstats.GetItemLevelBadgeColorMode()
+	end
+	local options = GetItemLevelBadgeOptions()
+	if options.colorMode == "quality" then
+		return "quality"
+	end
+	return "score"
+end
+
 local function GetItemLevelBadgePositions()
 	if coolstats.GetItemLevelBadgePositions then
 		return coolstats.GetItemLevelBadgePositions()
 	end
 	return {
 		{ key = "default", label = "Default" },
+		{ key = "upperLeft", label = "Upper left" },
+		{ key = "upperRight", label = "Upper right" },
 		{ key = "lowerLeft", label = "Lower left" },
 		{ key = "lowerRight", label = "Lower right" },
 		{ key = "off", label = "Off" },
@@ -176,6 +190,9 @@ local function RefreshAddon()
 	end
 	if coolstats.RefreshOptionsPanel then
 		coolstats.RefreshOptionsPanel()
+	end
+	if coolstats.RefreshCharacterPanelOptionsPanel then
+		coolstats.RefreshCharacterPanelOptionsPanel()
 	end
 	if coolstats.RefreshBackgroundOptionsPanel then
 		coolstats.RefreshBackgroundOptionsPanel()
@@ -1131,7 +1148,7 @@ local function UpdateItemLevelFontSizeSliderText(slider)
 	local position = GetItemLevelBadgeOptions().position or "default"
 	local text = _G[slider:GetName() .. "Text"]
 	if text then
-		if position == "lowerLeft" or position == "lowerRight" then
+		if position == "upperLeft" or position == "upperRight" or position == "lowerLeft" or position == "lowerRight" then
 			text:SetText("Item level font size: " .. baseSize .. " (corner: " .. math.max(6, math.floor((baseSize * 0.5) + 0.5)) .. ")")
 		else
 			text:SetText("Item level font size: " .. baseSize)
@@ -1165,7 +1182,7 @@ local function CreateItemLevelFontSizeSlider(parent, name, yOffset)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 		GameTooltip:SetText("Item Level Font Size", 1, 0.82, 0.16)
-		GameTooltip:AddLine("Lower-left and lower-right positions automatically use half of this size.", 0.86, 0.86, 0.78, true)
+		GameTooltip:AddLine("Corner positions automatically use half of this size.", 0.86, 0.86, 0.78, true)
 		GameTooltip:Show()
 	end)
 	slider:SetScript("OnLeave", function()
@@ -1206,6 +1223,73 @@ function coolstats.RefreshOptionsPanel()
 	end
 end
 
+function coolstats.RefreshCharacterPanelOptionsPanel()
+	local panel = coolstats.characterPanelOptionsPanel
+	if not panel then
+		return
+	end
+	for index = 1, #panel.controls do
+		local control = panel.controls[index]
+		if control.controlType == "itemLevelPosition" then
+			local position = GetItemLevelBadgeOptions().position or "default"
+			if UIDropDownMenu_SetSelectedValue then
+				UIDropDownMenu_SetSelectedValue(control, position)
+			end
+			SetDropDownText(control, GetItemLevelBadgePositionLabel(position))
+		elseif control.controlType == "itemLevelFontSize" then
+			local fontSize = tonumber(GetItemLevelBadgeOptions().fontSize) or 15
+			control.updating = true
+			control:SetValue(math.floor(fontSize + 0.5))
+			control.updating = nil
+			UpdateItemLevelFontSizeSliderText(control)
+		elseif control.controlType == "backgroundDropdown" then
+			local options = GetBackgroundGroupOptions(control.groupKey)
+			local textureKey = options.texture or "default"
+			if UIDropDownMenu_SetSelectedValue then
+				UIDropDownMenu_SetSelectedValue(control, textureKey)
+			end
+			SetDropDownText(control, GetBackgroundTextureLabel(textureKey))
+		elseif control.controlType == "backgroundAlpha" then
+			local options = GetBackgroundGroupOptions(control.groupKey)
+			local alpha = tonumber(options.alpha) or 1
+			control.updating = true
+			control:SetValue(math.floor((alpha * 100) + 0.5))
+			control.updating = nil
+			UpdateBackgroundAlphaSliderText(control)
+		elseif control.controlType == "backgroundContrast" then
+			local options = GetBackgroundGroupOptions(control.groupKey)
+			local contrast = tonumber(options.contrast) or 0
+			control.updating = true
+			control:SetValue(math.floor((contrast * 100) + 0.5))
+			control.updating = nil
+			UpdateBackgroundContrastSliderText(control)
+		elseif control.controlType == "backgroundZoom" then
+			local options = GetBackgroundGroupOptions(control.groupKey)
+			local zoom = tonumber(options.zoom) or 1.6
+			control.updating = true
+			control:SetValue(math.floor((zoom * 100) + 0.5))
+			control.updating = nil
+			UpdateBackgroundZoomSliderText(control)
+		elseif control.controlType == "backgroundPan" then
+			local options = GetBackgroundGroupOptions(control.groupKey)
+			local pan = tonumber(options[control.optionKey]) or GetBackgroundDefaultValue(control.groupKey, control.optionKey, 0) or 0
+			control.updating = true
+			control:SetValue(math.floor((pan * 100) + 0.5))
+			control.updating = nil
+			UpdateBackgroundPanSliderText(control)
+		elseif control.controlType == "statTextPalette" then
+			local options = GetBackgroundGroupOptions(control.groupKey)
+			local paletteKey = options.palette or "classic"
+			if UIDropDownMenu_SetSelectedValue then
+				UIDropDownMenu_SetSelectedValue(control, paletteKey)
+			end
+			SetDropDownText(control, GetStatTextPaletteLabel(paletteKey))
+		elseif control.getter then
+			control:SetChecked(control.getter())
+		end
+	end
+end
+
 function coolstats.ResetOptionsPanelDefaults()
 	local db = GetDB()
 	local defaults = GetDefaults()
@@ -1234,6 +1318,7 @@ function coolstats.ResetOptionsPanelDefaults()
 	db.itemLevelBadges = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.itemLevelBadges) or {
 		position = "default",
 		fontSize = 15,
+		colorMode = "score",
 	}
 	db.lootAlerts = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.lootAlerts) or {
 		enabled = true,
@@ -1243,6 +1328,32 @@ function coolstats.ResetOptionsPanelDefaults()
 		professions = false,
 		sound = true,
 		animations = true,
+	}
+	RefreshAddon()
+	if oldCharacterPanelEnabled ~= (db.enableCharacterPanel ~= false) and coolstats.ShowCharacterPanelReloadPrompt then
+		coolstats.ShowCharacterPanelReloadPrompt()
+	end
+end
+
+function coolstats.ResetCharacterPanelOptionsPanelDefaults()
+	local db = GetDB()
+	local defaults = GetDefaults()
+	if not db or not defaults then
+		return
+	end
+	local oldCharacterPanelEnabled = db.enableCharacterPanel ~= false
+	db.enableCharacterPanel = defaults.enableCharacterPanel
+	db.showStatsPanel = defaults.showStatsPanel
+	db.showItemLevels = defaults.showItemLevels
+	db.showSlotBorders = defaults.showSlotBorders
+	db.cleanGearScoreTooltips = defaults.cleanGearScoreTooltips
+	db.itemLevelBadges = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.itemLevelBadges) or {
+		position = "default",
+		fontSize = 15,
+		colorMode = "score",
+	}
+	db.backgrounds = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.backgrounds) or {
+		stats = { texture = "default", alpha = 1, contrast = 0, zoom = 1.6, panX = 1, panY = 0, palette = "classic" },
 	}
 	RefreshAddon()
 	if oldCharacterPanelEnabled ~= (db.enableCharacterPanel ~= false) and coolstats.ShowCharacterPanelReloadPrompt then
@@ -1269,6 +1380,8 @@ function coolstats.RefreshItemLevelOptionsPanel()
 			control:SetValue(math.floor(fontSize + 0.5))
 			control.updating = nil
 			UpdateItemLevelFontSizeSliderText(control)
+		elseif control.controlType == "itemLevelColorMode" then
+			control:SetChecked(GetItemLevelBadgeColorMode() == "quality")
 		end
 	end
 end
@@ -1283,6 +1396,7 @@ function coolstats.ResetItemLevelOptionsPanelDefaults()
 	db.itemLevelBadges = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.itemLevelBadges) or {
 		position = "default",
 		fontSize = 15,
+		colorMode = "score",
 	}
 	RefreshAddon()
 end
@@ -1681,13 +1795,16 @@ function coolstats.CreateTooltipOptionsPanel()
 end
 
 function coolstats.CreateItemLevelOptionsPanel()
+	if coolstats.CreateCharacterPanelOptionsPanel then
+		return coolstats.CreateCharacterPanelOptionsPanel()
+	end
 	if coolstats.itemLevelOptionsPanel then
 		return coolstats.itemLevelOptionsPanel
 	end
 
 	local panel = CreateFrame("Frame", "coolstatsItemLevelOptionsPanel", UIParent)
 	panel.name = "Item Levels"
-	panel.parent = "coolstats"
+	panel.parent = CHARACTER_PANEL_CATEGORY_NAME
 	panel.controls = {}
 	panel.refresh = coolstats.RefreshItemLevelOptionsPanel
 	panel.default = coolstats.ResetItemLevelOptionsPanelDefaults
@@ -1695,17 +1812,22 @@ function coolstats.CreateItemLevelOptionsPanel()
 	panel.cancel = function() end
 	coolstats.itemLevelOptionsPanel = panel
 
-	local content = CreateScrollableOptionsContent(panel, "coolstatsItemLevelOptions", 300)
+	local content = CreateScrollableOptionsContent(panel, "coolstatsItemLevelOptions", 350)
 
 	local title = content:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 	title:SetPoint("TOPLEFT", content, "TOPLEFT", 16, -16)
 	title:SetText("coolstats Item Levels")
 	title:SetTextColor(0.0, 0.75, 1.0)
 
-	CreateDescription(content, "Choose where equipped item levels appear on gear slots and how large the badge text should be.", -42)
+	CreateDescription(content, "Choose where equipped item levels appear on gear slots, how large the badge text should be, and whether colors use GearScore or item rarity.", -42)
 	CreateItemLevelPositionDropdown(content, "coolstatsItemLevelPositionDropdown", -84)
 	CreateItemLevelFontSizeSlider(content, "coolstatsItemLevelFontSizeSlider", -158)
-	CreateDescription(content, "Corner positions automatically render at half the selected font size.", -212)
+	CreateCheck(content, "coolstatsItemLevelRarityColors", "Use item rarity colors", -224, function()
+		return GetItemLevelBadgeColorMode() == "quality"
+	end, function(value)
+		GetItemLevelBadgeOptions().colorMode = value and "quality" or "score"
+	end, "Switch item-level badge text and slot-border glow from the coolstats GearScore gradient to Blizzard's uncommon, rare, epic, and legendary item colors. GearScore values are still calculated normally.")
+	CreateDescription(content, "Corner positions automatically render at half the selected font size.", -264)
 
 	if InterfaceOptions_AddCategory then
 		InterfaceOptions_AddCategory(panel)
@@ -1781,13 +1903,16 @@ function coolstats.ResetBackgroundOptionsPanelDefaults()
 end
 
 function coolstats.CreateBackgroundOptionsPanel()
+	if coolstats.CreateCharacterPanelOptionsPanel then
+		return coolstats.CreateCharacterPanelOptionsPanel()
+	end
 	if coolstats.backgroundOptionsPanel then
 		return coolstats.backgroundOptionsPanel
 	end
 
 	local panel = CreateFrame("Frame", "coolstatsBackgroundOptionsPanel", UIParent)
 	panel.name = "Backgrounds"
-	panel.parent = "coolstats"
+	panel.parent = CHARACTER_PANEL_CATEGORY_NAME
 	panel.controls = {}
 	panel.refresh = coolstats.RefreshBackgroundOptionsPanel
 	panel.default = coolstats.ResetBackgroundOptionsPanelDefaults
@@ -1822,6 +1947,94 @@ function coolstats.CreateBackgroundOptionsPanel()
 	return panel
 end
 
+function coolstats.CreateCharacterPanelOptionsPanel()
+	if coolstats.characterPanelOptionsPanel then
+		return coolstats.characterPanelOptionsPanel
+	end
+
+	local panel = CreateFrame("Frame", "coolstatsCharacterPanelOptionsPanel", UIParent)
+	panel.name = CHARACTER_PANEL_CATEGORY_NAME
+	panel.parent = "coolstats"
+	panel.controls = {}
+	panel.refresh = coolstats.RefreshCharacterPanelOptionsPanel
+	panel.default = coolstats.ResetCharacterPanelOptionsPanelDefaults
+	panel.okay = function() end
+	panel.cancel = function() end
+	coolstats.characterPanelOptionsPanel = panel
+
+	local content = CreateScrollableOptionsContent(panel, "coolstatsCharacterPanelOptions", 1120)
+
+	local title = content:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+	title:SetPoint("TOPLEFT", content, "TOPLEFT", 16, -16)
+	title:SetText("coolstats Character Panel")
+	title:SetTextColor(0.0, 0.75, 1.0)
+
+	CreateDescription(content, "Control the replacement character panel, its gear overlays, and compatibility behavior.", -42)
+
+	CreateHeading(content, "Main Controls", -78)
+	CreateCheck(content, "coolstatsCharacterPanelEnable", "Enable character panel features", -104, function()
+		return IsCharacterPanelEnabled()
+	end, function(value)
+		SetCharacterPanelEnabled(value)
+	end, "Requires a UI reload. Disable this to keep UwU Logs features without loading the coolstats character-panel replacement, item badges, slot coloring, or GearScore tooltip cleanup.")
+	CreateCheck(content, "coolstatsCharacterPanelStats", "Show side stats panel", -132, function()
+		return GetDB() and GetDB().showStatsPanel
+	end, function(value)
+		GetDB().showStatsPanel = value
+	end, "Show the extended stats panel next to the character frame.")
+
+	CreateHeading(content, "Gear Overlays", -176)
+	CreateCheck(content, "coolstatsCharacterPanelItemLevels", "Show item level badges", -202, function()
+		return GetDB() and GetDB().showItemLevels
+	end, function(value)
+		local db = GetDB()
+		db.showItemLevels = value
+		if value and GetItemLevelBadgeOptions().position == "off" then
+			GetItemLevelBadgeOptions().position = "default"
+		end
+	end, "Show item level labels on equipped gear slots.")
+	CreateCheck(content, "coolstatsCharacterPanelSlotBorders", "Show colored slot borders", -230, function()
+		return GetDB() and GetDB().showSlotBorders
+	end, function(value)
+		GetDB().showSlotBorders = value
+	end, "Color equipment slot borders using the selected Item Levels color mode.")
+
+	CreateHeading(content, "Item Level Details", -274)
+	CreateItemLevelPositionDropdown(content, "coolstatsCharacterPanelItemLevelPositionDropdown", -300)
+	CreateItemLevelFontSizeSlider(content, "coolstatsCharacterPanelItemLevelFontSizeSlider", -374)
+	CreateHeading(content, "Item Level Colors", -424)
+	CreateCheck(content, "coolstatsCharacterPanelRarityColors", "Use item rarity colors", -456, function()
+		return GetItemLevelBadgeColorMode() == "quality"
+	end, function(value)
+		GetItemLevelBadgeOptions().colorMode = value and "quality" or "score"
+	end, "Switch item-level badge text and slot-border glow from the coolstats GearScore gradient to Blizzard's uncommon, rare, epic, and legendary item colors. GearScore values are still calculated normally.")
+	CreateDescription(content, "Corner positions automatically render at half the selected font size.", -490)
+
+	CreateHeading(content, "Compatibility", -540)
+	CreateCheck(content, "coolstatsCharacterPanelTooltipCleanup", "Clean GearScore tooltip spam", -566, function()
+		return GetDB() and GetDB().cleanGearScoreTooltips
+	end, function(value)
+		GetDB().cleanGearScoreTooltips = value
+	end, "Hide noisy GearScore lines from item tooltips.")
+
+	CreateHeading(content, "Side Panel Visuals", -616)
+	CreateDescription(content, "Controls the background texture, opacity, contrast overlay, talent-art zoom, image position, and stat text colors of the coolstats side panel.", -642)
+	CreateBackgroundDropdown(content, "coolstatsCharacterPanelStatsBackgroundDropdown", "Stats panel texture", -678, "stats")
+	CreateBackgroundAlphaSlider(content, "coolstatsCharacterPanelStatsBackgroundAlphaSlider", "Stats panel opacity", -750, "stats")
+	CreateBackgroundContrastSlider(content, "coolstatsCharacterPanelStatsBackgroundContrastSlider", "Stats panel contrast", -814, "stats")
+	CreateBackgroundZoomSlider(content, "coolstatsCharacterPanelStatsBackgroundZoomSlider", "Stats panel zoom", -878, "stats")
+	CreateBackgroundPanSlider(content, "coolstatsCharacterPanelStatsBackgroundPanXSlider", "Image horizontal position", -942, "stats", "panX", "Left", "Right")
+	CreateBackgroundPanSlider(content, "coolstatsCharacterPanelStatsBackgroundPanYSlider", "Image vertical position", -1006, "stats", "panY", "Up", "Down")
+	CreateStatTextPaletteDropdown(content, "coolstatsCharacterPanelStatsTextPaletteDropdown", "Stats text palette", -1070, "stats")
+
+	if InterfaceOptions_AddCategory then
+		InterfaceOptions_AddCategory(panel)
+	end
+	panel:SetScript("OnShow", coolstats.RefreshCharacterPanelOptionsPanel)
+	coolstats.RefreshCharacterPanelOptionsPanel()
+	return panel
+end
+
 function coolstats.CreateOptionsPanel()
 	if coolstats.optionsPanel then
 		return coolstats.optionsPanel
@@ -1836,56 +2049,24 @@ function coolstats.CreateOptionsPanel()
 	panel.cancel = function() end
 	coolstats.optionsPanel = panel
 
-	local content = CreateScrollableOptionsContent(panel, "coolstatsMainOptions", 360)
+	local content = CreateScrollableOptionsContent(panel, "coolstatsMainOptions", 260)
 
 	local title = content:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 	title:SetPoint("TOPLEFT", content, "TOPLEFT", 16, -16)
 	title:SetText("coolstats")
 	title:SetTextColor(0.0, 0.75, 1.0)
 
-	CreateDescription(content, "Core character-panel controls. Detailed feature settings live in the child pages on the left.", -42)
+	CreateDescription(content, "Choose a settings section on the left. Character Panel contains the replacement character sheet, gear overlays, item-level controls, and side-panel visuals.", -42)
 
-	CreateHeading(content, "Character Panel", -78)
-	CreateCheck(content, "coolstatsOptionCharacterPanel", "Enable character panel features", -104, function()
-		return IsCharacterPanelEnabled()
-	end, function(value)
-		SetCharacterPanelEnabled(value)
-	end, "Requires a UI reload. Disable this to keep UwU Logs features without loading the coolstats character-panel replacement, item badges, slot coloring, or GearScore tooltip cleanup.")
-	CreateCheck(content, "coolstatsOptionShowPanel", "Show side stats panel", -132, function()
-		return GetDB() and GetDB().showStatsPanel
-	end, function(value)
-		GetDB().showStatsPanel = value
-	end, "Show the extended stats panel next to the character frame.")
-	CreateCheck(content, "coolstatsOptionItemLevels", "Show item level badges", -160, function()
-		return GetDB() and GetDB().showItemLevels
-	end, function(value)
-		local db = GetDB()
-		db.showItemLevels = value
-		if value and GetItemLevelBadgeOptions().position == "off" then
-			GetItemLevelBadgeOptions().position = "default"
-		end
-	end, "Show item level labels on equipped gear slots.")
-	CreateCheck(content, "coolstatsOptionSlotBorders", "Color slot borders by GearScore", -188, function()
-		return GetDB() and GetDB().showSlotBorders
-	end, function(value)
-		GetDB().showSlotBorders = value
-	end, "Color equipment slot borders using the item's score color.")
-	CreateCheck(content, "coolstatsOptionTooltipCleanup", "Clean GearScore tooltip spam", -216, function()
-		return GetDB() and GetDB().cleanGearScoreTooltips
-	end, function(value)
-		GetDB().cleanGearScoreTooltips = value
-	end, "Hide noisy GearScore lines from item tooltips.")
-
-	CreateHeading(content, "Detailed Settings", -264)
-	CreateDescription(content, "Tooltip & Cache controls player tooltips, UwU summary lines, and inspect cache behavior.\nLoot Toasts controls loot popups, quality threshold, sources, sound, and glow.\nItem Levels and Backgrounds control gear-slot badges and visual styling.", -290)
+	CreateHeading(content, "Sections", -92)
+	CreateDescription(content, "Character Panel houses the main character-frame toggles first, then item-level placement, size, colors, side-panel visuals, and compatibility settings below them.\nTooltip & Cache controls player tooltips, UwU summary lines, inspect cache, player data, and raid layers.\nLoot Toasts controls loot popups, quality threshold, sources, sound, and glow.", -118)
 
 	if InterfaceOptions_AddCategory then
 		InterfaceOptions_AddCategory(panel)
 	end
+	coolstats.CreateCharacterPanelOptionsPanel()
 	coolstats.CreateTooltipOptionsPanel()
 	coolstats.CreateLootToastOptionsPanel()
-	coolstats.CreateItemLevelOptionsPanel()
-	coolstats.CreateBackgroundOptionsPanel()
 	panel:SetScript("OnShow", coolstats.RefreshOptionsPanel)
 	coolstats.RefreshOptionsPanel()
 	return panel
@@ -1922,7 +2103,7 @@ end
 
 function coolstats.OpenBackgroundOptionsPanel()
 	coolstats.CreateOptionsPanel()
-	local panel = coolstats.CreateBackgroundOptionsPanel()
+	local panel = coolstats.CreateCharacterPanelOptionsPanel()
 	if InterfaceOptionsFrame_OpenToCategory then
 		InterfaceOptionsFrame_OpenToCategory(panel)
 	elseif InterfaceOptionsFrame_Show then
@@ -1932,7 +2113,7 @@ end
 
 function coolstats.OpenItemLevelOptionsPanel()
 	coolstats.CreateOptionsPanel()
-	local panel = coolstats.CreateItemLevelOptionsPanel()
+	local panel = coolstats.CreateCharacterPanelOptionsPanel()
 	if InterfaceOptionsFrame_OpenToCategory then
 		InterfaceOptionsFrame_OpenToCategory(panel)
 	elseif InterfaceOptionsFrame_Show then

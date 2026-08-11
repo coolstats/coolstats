@@ -1,8 +1,8 @@
 ## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Onyxia UWU 05
-## Notes: Realm-specific UwU Logs shard 5/6 for Onyxia.
+## Notes: Realm-specific UwU Logs shard 5/7 for Onyxia.
 ## Author: coolstats
-## Version: 0.2.40
+## Version: 0.2.41
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Onyxia
@@ -10,6 +10,6 @@
 ## X-coolstats-Phase: toc
 ## X-coolstats-BaseAddon: coolstats_Data_Onyxia
 ## X-coolstats-ShardIndex: 5
-## X-coolstats-ShardCount: 6
+## X-coolstats-ShardCount: 7
 
 data\logs\toc\coolstats_uwu_data_05.lua

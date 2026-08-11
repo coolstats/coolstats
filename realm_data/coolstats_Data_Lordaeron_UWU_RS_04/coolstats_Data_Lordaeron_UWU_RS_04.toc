@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffcoolstats|r Data - Lordaeron Ruby Sanctum 04
 ## Notes: Optional Ruby Sanctum UwU Logs layer 4/6 for Lordaeron.
 ## Author: coolstats
-## Version: 0.2.40
+## Version: 0.2.41
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Lordaeron

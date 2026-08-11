@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown Ruby Sanctum 05
 ## Notes: Optional Ruby Sanctum UwU Logs layer 5/12 for Icecrown.
 ## Author: coolstats
-## Version: 0.2.40
+## Version: 0.2.41
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Icecrown
