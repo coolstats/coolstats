@@ -1,8 +1,8 @@
 ## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Onyxia Trial of the Grand Crusader 04
-## Notes: Optional Trial of the Grand Crusader UwU Logs layer 4/6 for Onyxia.
+## Notes: Optional Trial of the Grand Crusader UwU Logs layer 4/7 for Onyxia.
 ## Author: coolstats
-## Version: 0.2.40
+## Version: 0.2.41
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Onyxia
@@ -12,6 +12,6 @@
 ## X-coolstats-RaidLayer: togc
 ## X-coolstats-RaidName: Trial of the Grand Crusader
 ## X-coolstats-ShardIndex: 4
-## X-coolstats-ShardCount: 6
+## X-coolstats-ShardCount: 7
 
 data\logs\toc\coolstats_uwu_data_togc_04.lua

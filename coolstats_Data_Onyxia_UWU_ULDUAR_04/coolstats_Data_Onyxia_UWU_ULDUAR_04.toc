@@ -1,8 +1,8 @@
 ## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Onyxia Ulduar 04
-## Notes: Optional Ulduar UwU Logs layer 4/6 for Onyxia.
+## Notes: Optional Ulduar UwU Logs layer 4/7 for Onyxia.
 ## Author: coolstats
-## Version: 0.2.40
+## Version: 0.2.41
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Onyxia
@@ -12,6 +12,6 @@
 ## X-coolstats-RaidLayer: ulduar
 ## X-coolstats-RaidName: Ulduar
 ## X-coolstats-ShardIndex: 4
-## X-coolstats-ShardCount: 6
+## X-coolstats-ShardCount: 7
 
 data\logs\toc\coolstats_uwu_data_ulduar_04.lua

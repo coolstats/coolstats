@@ -65,6 +65,7 @@ local defaults = {
 	itemLevelBadges = {
 		position = "default",
 		fontSize = 15,
+		colorMode = "score",
 	},
 	lootAlerts = {
 		enabled = true,
@@ -130,6 +131,8 @@ local SOLID_BACKGROUND_TEXTURE = "Interface\\Buttons\\WHITE8X8"
 coolstats.ITEM_LEVEL_BADGE_DEFAULT_FONT_SIZE = 15
 coolstats.ITEM_LEVEL_BADGE_POSITIONS = {
 	{ key = "default", label = "Default" },
+	{ key = "upperLeft", label = "Upper left" },
+	{ key = "upperRight", label = "Upper right" },
 	{ key = "lowerLeft", label = "Lower left" },
 	{ key = "lowerRight", label = "Lower right" },
 	{ key = "off", label = "Off" },
@@ -392,6 +395,9 @@ local function EnsureEditOptions()
 		db.itemLevelBadges.position = defaults.itemLevelBadges.position
 	end
 	db.itemLevelBadges.fontSize = max(0, min(30, tonumber(db.itemLevelBadges.fontSize) or defaults.itemLevelBadges.fontSize))
+	if db.itemLevelBadges.colorMode ~= "quality" then
+		db.itemLevelBadges.colorMode = defaults.itemLevelBadges.colorMode
+	end
 	if type(db.lootAlerts) ~= "table" then
 		db.lootAlerts = CopyDefaults({}, defaults.lootAlerts)
 	else
@@ -568,6 +574,14 @@ end
 function coolstats.GetItemLevelBadgeOptions()
 	EnsureEditOptions()
 	return db and db.itemLevelBadges or defaults.itemLevelBadges
+end
+
+function coolstats.GetItemLevelBadgeColorMode()
+	local options = coolstats.GetItemLevelBadgeOptions()
+	if options and options.colorMode == "quality" then
+		return "quality"
+	end
+	return "score"
 end
 
 function coolstats.GetItemLevelBadgePositions()
@@ -1414,6 +1428,34 @@ local function GetScoreColor(score)
 	return 0.94, 0.47, 0.00, "Legendary"
 end
 
+function coolstats.GetItemQualityRGB(quality)
+	quality = tonumber(quality)
+	if not quality then
+		return nil
+	end
+	if GetItemQualityColor then
+		local red, green, blue = GetItemQualityColor(quality)
+		if red and green and blue then
+			return red, green, blue
+		end
+	end
+	local color = ITEM_QUALITY_COLORS and ITEM_QUALITY_COLORS[quality]
+	if color and color.r and color.g and color.b then
+		return color.r, color.g, color.b
+	end
+	return nil
+end
+
+function coolstats.GetItemDisplayColor(scoreRed, scoreGreen, scoreBlue, quality)
+	if coolstats.GetItemLevelBadgeColorMode() == "quality" then
+		local qualityRed, qualityGreen, qualityBlue = coolstats.GetItemQualityRGB(quality)
+		if qualityRed and qualityGreen and qualityBlue then
+			return qualityRed, qualityGreen, qualityBlue
+		end
+	end
+	return scoreRed or 0.55, scoreGreen or 0.55, scoreBlue or 0.55
+end
+
 local function FormatNumber(value)
 	value = floor(tonumber(value or 0) or 0)
 	local sign = ""
@@ -1703,10 +1745,11 @@ local function GetItemScore(itemLink)
 	if not itemName or not itemRarity or not itemLevel or not itemEquipLoc then
 		return nil
 	end
+	local itemQuality = itemRarity
 
 	local weight = slotWeights[itemEquipLoc]
 	if not weight then
-		return nil, itemLevel, nil, 1, 1, 1, itemEquipLoc
+		return nil, itemLevel, nil, 1, 1, 1, itemEquipLoc, itemQuality
 	end
 
 	local qualityScale = 1
@@ -1728,7 +1771,7 @@ local function GetItemScore(itemLink)
 	local formulaTable = itemLevel > 120 and highItemFormula or lowItemFormula
 	local formulaData = formulaTable[itemRarity]
 	if not formulaData or itemRarity < 2 or itemRarity > 4 then
-		return nil, displayItemLevel, weight.itemSlot, 1, 1, 1, itemEquipLoc
+		return nil, displayItemLevel, weight.itemSlot, 1, 1, 1, itemEquipLoc, itemQuality
 	end
 
 	local scale = 1.8618
@@ -1743,7 +1786,7 @@ local function GetItemScore(itemLink)
 	end
 
 	gearScore = floor(gearScore * GetEnchantMultiplier(itemLink, itemEquipLoc))
-	return gearScore, displayItemLevel, weight.itemSlot, red, green, blue, itemEquipLoc
+	return gearScore, displayItemLevel, weight.itemSlot, red, green, blue, itemEquipLoc, itemQuality
 end
 
 coolstats.GetItemScore = GetItemScore
@@ -1755,8 +1798,9 @@ local function GetSlotItem(unit, slot)
 		return nil
 	end
 
-	local score, itemLevel, itemSlot, red, green, blue, equipLoc = GetItemScore(link)
+	local score, itemLevel, itemSlot, red, green, blue, equipLoc, quality = GetItemScore(link)
 	if itemLevel then
+		red, green, blue = coolstats.GetItemDisplayColor(red, green, blue, quality)
 		return {
 			link = link,
 			score = score,
@@ -1766,6 +1810,7 @@ local function GetSlotItem(unit, slot)
 			green = green or 0.55,
 			blue = blue or 0.55,
 			equipLoc = equipLoc,
+			quality = quality,
 		}
 	end
 	return nil
@@ -5838,7 +5883,7 @@ end
 function coolstats.GetItemLevelBadgeFontSize(position)
 	local options = coolstats.GetItemLevelBadgeOptions()
 	local fontSize = max(0, min(30, tonumber(options.fontSize) or coolstats.ITEM_LEVEL_BADGE_DEFAULT_FONT_SIZE))
-	if position == "lowerLeft" or position == "lowerRight" then
+	if position == "upperLeft" or position == "upperRight" or position == "lowerLeft" or position == "lowerRight" then
 		fontSize = floor((fontSize * 0.5) + 0.5)
 	end
 	return fontSize
@@ -5857,7 +5902,19 @@ function coolstats.ApplyItemLevelBadgeAppearance(badge)
 	badge.text:SetFont("Fonts\\FRIZQT__.TTF", max(1, fontSize), "OUTLINE")
 	badge.text:SetHeight(14)
 
-	if position == "lowerLeft" and button then
+	if position == "upperLeft" and button then
+		SetSize(badge, 28, 14)
+		badge:SetPoint("TOPLEFT", button, "TOPLEFT", 2, -2)
+		badge.text:SetPoint("LEFT", badge, "LEFT", 0, 0)
+		badge.text:SetWidth(28)
+		badge.text:SetJustifyH("LEFT")
+	elseif position == "upperRight" and button then
+		SetSize(badge, 28, 14)
+		badge:SetPoint("TOPRIGHT", button, "TOPRIGHT", -2, -2)
+		badge.text:SetPoint("RIGHT", badge, "RIGHT", 0, 0)
+		badge.text:SetWidth(28)
+		badge.text:SetJustifyH("RIGHT")
+	elseif position == "lowerLeft" and button then
 		SetSize(badge, 28, 14)
 		badge:SetPoint("BOTTOMLEFT", button, "BOTTOMLEFT", 2, 2)
 		badge.text:SetPoint("LEFT", badge, "LEFT", 0, 0)
@@ -6467,6 +6524,7 @@ local function ShowHelp()
 	Print("/coolstats update - open update links and data status")
 	Print("/coolstats changelog - show recent coolstats changes")
 	Print("/coolstats guide - replay the browser feature guide")
+	Print("/coolstats guide skip - skip the first-run feature guide")
 	Print("/coolstats versioncheck - ask your raid or party for coolstats versions")
 	Print("/coolstats perf - print a lightweight performance snapshot")
 	Print("/coolstats uwu [player name] - open UwU Logs for a player")
@@ -6580,7 +6638,17 @@ local function SlashHandler(message)
 			Print("Changelog is not available.")
 		end
 	elseif commandLower == "guide" or commandLower == "tutorial" then
-		if coolstats.OpenFeatureGuide then
+		local restLower = lower(rest or "")
+		if restLower == "skip" or restLower == "complete" or restLower == "off" then
+			if coolstats.SkipFeatureGuide then
+				coolstats.SkipFeatureGuide()
+			else
+				coolstatsDB = coolstatsDB or {}
+				coolstatsDB.guide = coolstatsDB.guide or {}
+				coolstatsDB.guide.browserVersion = coolstats.FEATURE_GUIDE_VERSION or 999
+				Print("Feature guide skipped.")
+			end
+		elseif coolstats.OpenFeatureGuide then
 			coolstats.OpenFeatureGuide(true)
 		else
 			Print("Feature guide is not available.")

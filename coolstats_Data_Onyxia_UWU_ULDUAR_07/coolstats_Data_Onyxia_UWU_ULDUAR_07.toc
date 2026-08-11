@@ -1,0 +1,17 @@
+## Interface: 30300
+## Title: |cff00c0ffcoolstats|r Data - Onyxia Ulduar 07
+## Notes: Optional Ulduar UwU Logs layer 7/7 for Onyxia.
+## Author: coolstats
+## Version: 0.2.41
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## RequiredDeps: coolstats, coolstats_Data_Onyxia
+## X-coolstats-Realm: Onyxia
+## X-coolstats-Phase: toc
+## X-coolstats-BaseAddon: coolstats_Data_Onyxia
+## X-coolstats-RaidLayer: ulduar
+## X-coolstats-RaidName: Ulduar
+## X-coolstats-ShardIndex: 7
+## X-coolstats-ShardCount: 7
+
+data\logs\toc\coolstats_uwu_data_ulduar_07.lua
