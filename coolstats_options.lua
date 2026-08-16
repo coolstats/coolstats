@@ -181,33 +181,47 @@ local function GetItemLevelBadgePositionLabel(key)
 	return "Default"
 end
 
-local function RefreshAddon()
-	if coolstats.ApplyBackgroundOptions then
+local function RefreshAddon(scope)
+	scope = scope or "all"
+	local refreshAll = scope == "all"
+	local refreshCharacter = refreshAll or scope == "character" or scope == "itemLevels" or scope == "background"
+	local refreshBackground = refreshAll or scope == "background" or scope == "character"
+	local refreshBrowser = refreshAll or scope == "tooltip" or scope == "browser"
+
+	if refreshBackground and coolstats.ApplyBackgroundOptions then
 		coolstats.ApplyBackgroundOptions()
 	end
-	if coolstats.RefreshAll then
+	if refreshCharacter and scope == "itemLevels" and coolstats.RunCharacterPanelUpdateCategories then
+		coolstats.RunCharacterPanelUpdateCategories({ gear = true, layout = true })
+	elseif refreshCharacter and scope == "background" and coolstats.RunCharacterPanelUpdateCategories then
+		coolstats.RunCharacterPanelUpdateCategories({ stats = true, layout = true })
+	elseif refreshCharacter and coolstats.RefreshAll then
 		coolstats.RefreshAll()
 	end
-	if coolstats.RefreshOptionsPanel then
+	if refreshAll and coolstats.RefreshOptionsPanel then
 		coolstats.RefreshOptionsPanel()
 	end
-	if coolstats.RefreshCharacterPanelOptionsPanel then
+	if refreshCharacter and coolstats.RefreshCharacterPanelOptionsPanel then
 		coolstats.RefreshCharacterPanelOptionsPanel()
 	end
-	if coolstats.RefreshBackgroundOptionsPanel then
+	if refreshBackground and coolstats.RefreshBackgroundOptionsPanel then
 		coolstats.RefreshBackgroundOptionsPanel()
 	end
-	if coolstats.RefreshItemLevelOptionsPanel then
+	if (refreshAll or scope == "itemLevels") and coolstats.RefreshItemLevelOptionsPanel then
 		coolstats.RefreshItemLevelOptionsPanel()
 	end
-	if coolstats.RefreshLootToastOptionsPanel then
+	if (refreshAll or scope == "loot") and coolstats.RefreshLootToastOptionsPanel then
 		coolstats.RefreshLootToastOptionsPanel()
 	end
-	if coolstats.RefreshTooltipOptionsPanel then
+	if (refreshAll or scope == "tooltip" or scope == "browser") and coolstats.RefreshTooltipOptionsPanel then
 		coolstats.RefreshTooltipOptionsPanel()
 	end
-	if coolstats.cachedPlayerBrowser and coolstats.RefreshCachedPlayerBrowser then
+	if refreshBrowser and coolstats.cachedPlayerBrowser and coolstats.cachedPlayerBrowser.IsShown
+		and coolstats.cachedPlayerBrowser:IsShown()
+		and coolstats.RefreshCachedPlayerBrowser then
 		coolstats.RefreshCachedPlayerBrowser(true)
+	elseif refreshBrowser and coolstats.InvalidateCachedPlayerBrowserIndex then
+		coolstats.InvalidateCachedPlayerBrowserIndex("options")
 	end
 end
 
@@ -319,12 +333,13 @@ local function FormatCompactPlayerCount(value)
 	return tostring(whole) .. "." .. tostring(fraction) .. "k"
 end
 
-local function CreateCheck(parent, name, label, yOffset, getter, setter, tooltip)
+local function CreateCheck(parent, name, label, yOffset, getter, setter, tooltip, refreshScope)
 	local check = CreateFrame("CheckButton", name, parent, "UICheckButtonTemplate")
 	check:SetPoint("TOPLEFT", parent, "TOPLEFT", 20, yOffset)
 	check.getter = getter
 	check.setter = setter
 	check.tooltip = tooltip
+	check.refreshScope = refreshScope
 	check.labelText = label
 	SetCheckText(check, label)
 	check:SetScript("OnClick", function(self)
@@ -332,7 +347,7 @@ local function CreateCheck(parent, name, label, yOffset, getter, setter, tooltip
 		if self.setter then
 			self.setter(checked)
 		end
-		RefreshAddon()
+		RefreshAddon(self.refreshScope)
 	end)
 	check:SetScript("OnEnter", function(self)
 		if not self.tooltip then
@@ -571,7 +586,7 @@ local function UpdateUwUPlayerLoadLimitSliderText(slider)
 	end
 end
 
-local function CreateSliderResetButton(parent, slider, yOffset, defaultValue, onReset)
+local function CreateSliderResetButton(parent, slider, yOffset, defaultValue, onReset, refreshScope)
 	if not slider then
 		return nil
 	end
@@ -589,7 +604,7 @@ local function CreateSliderResetButton(parent, slider, yOffset, defaultValue, on
 			onReset(slider, value)
 		end
 		slider:SetValue(value)
-		RefreshAddon()
+		RefreshAddon(refreshScope)
 	end)
 	button:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -627,7 +642,7 @@ local function CreateQualitySlider(parent, yOffset)
 		UpdateQualitySliderText(self)
 	end)
 	slider:SetScript("OnMouseUp", function()
-		RefreshAddon()
+		RefreshAddon("loot")
 	end)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -646,7 +661,7 @@ local function CreateQualitySlider(parent, yOffset)
 	end, function(self, value)
 		GetLootOptions().minQuality = value
 		UpdateQualitySliderText(self)
-	end)
+	end, "loot")
 	return slider
 end
 
@@ -691,7 +706,7 @@ local function CreateUwUPlayerLoadLimitSlider(parent, yOffset)
 		UpdateUwUPlayerLoadLimitSliderText(self)
 	end)
 	slider:SetScript("OnMouseUp", function(self)
-		RefreshAddon()
+		RefreshAddon("browser")
 		if self.pendingReloadPrompt and coolstats.ShowUwUDataReloadPrompt then
 			self.pendingReloadPrompt = nil
 			coolstats.ShowUwUDataReloadPrompt()
@@ -717,7 +732,7 @@ local function CreateUwUPlayerLoadLimitSlider(parent, yOffset)
 		if coolstats.ShowUwUDataReloadPrompt then
 			coolstats.ShowUwUDataReloadPrompt()
 		end
-	end)
+	end, "browser")
 	return slider
 end
 
@@ -765,7 +780,7 @@ local function CreateUwURaidLayerCheck(parent, index, yOffset)
 				coolstats.ShowUwUDataReloadPrompt()
 			end
 		end
-	end, "When unchecked, this current-realm raid's boss parse payload is not loaded after /reload.")
+	end, "When unchecked, this current-realm raid's boss parse payload is not loaded after /reload.", "browser")
 	check.controlType = "uwuRaidLayer"
 	check.layerIndex = index
 	UpdateUwURaidLayerCheck(check)
@@ -824,7 +839,7 @@ local function CreateBackgroundDropdown(parent, name, labelText, yOffset, groupK
 						UIDropDownMenu_SetSelectedValue(dropdown, textureKey)
 					end
 					SetDropDownText(dropdown, GetBackgroundTextureLabel(textureKey))
-					RefreshAddon()
+					RefreshAddon("background")
 				end
 				UIDropDownMenu_AddButton(info)
 			end
@@ -868,7 +883,7 @@ local function CreateBackgroundAlphaSlider(parent, name, labelText, yOffset, gro
 		end
 		GetBackgroundGroupOptions(self.groupKey).alpha = rounded / 100
 		UpdateBackgroundAlphaSliderText(self)
-		RefreshAddon()
+		RefreshAddon("background")
 	end)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -885,7 +900,7 @@ local function CreateBackgroundAlphaSlider(parent, name, labelText, yOffset, gro
 	end, function(self, value)
 		GetBackgroundGroupOptions(groupKey).alpha = value / 100
 		UpdateBackgroundAlphaSliderText(self)
-	end)
+	end, "background")
 	return slider
 end
 
@@ -923,7 +938,7 @@ local function CreateBackgroundContrastSlider(parent, name, labelText, yOffset, 
 		end
 		GetBackgroundGroupOptions(self.groupKey).contrast = rounded / 100
 		UpdateBackgroundContrastSliderText(self)
-		RefreshAddon()
+		RefreshAddon("background")
 	end)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -940,7 +955,7 @@ local function CreateBackgroundContrastSlider(parent, name, labelText, yOffset, 
 	end, function(self, value)
 		GetBackgroundGroupOptions(groupKey).contrast = value / 100
 		UpdateBackgroundContrastSliderText(self)
-	end)
+	end, "background")
 	return slider
 end
 
@@ -978,7 +993,7 @@ local function CreateBackgroundZoomSlider(parent, name, labelText, yOffset, grou
 		end
 		GetBackgroundGroupOptions(self.groupKey).zoom = rounded / 100
 		UpdateBackgroundZoomSliderText(self)
-		RefreshAddon()
+		RefreshAddon("background")
 	end)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -995,7 +1010,7 @@ local function CreateBackgroundZoomSlider(parent, name, labelText, yOffset, grou
 	end, function(self, value)
 		GetBackgroundGroupOptions(groupKey).zoom = value / 100
 		UpdateBackgroundZoomSliderText(self)
-	end)
+	end, "background")
 	return slider
 end
 
@@ -1034,7 +1049,7 @@ local function CreateBackgroundPanSlider(parent, name, labelText, yOffset, group
 		end
 		GetBackgroundGroupOptions(self.groupKey)[self.optionKey] = rounded / 100
 		UpdateBackgroundPanSliderText(self)
-		RefreshAddon()
+		RefreshAddon("background")
 	end)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -1051,7 +1066,7 @@ local function CreateBackgroundPanSlider(parent, name, labelText, yOffset, group
 	end, function(self, value)
 		GetBackgroundGroupOptions(groupKey)[optionKey] = value / 100
 		UpdateBackgroundPanSliderText(self)
-	end)
+	end, "background")
 	return slider
 end
 
@@ -1087,7 +1102,7 @@ local function CreateStatTextPaletteDropdown(parent, name, labelText, yOffset, g
 						UIDropDownMenu_SetSelectedValue(dropdown, paletteKey)
 					end
 					SetDropDownText(dropdown, GetStatTextPaletteLabel(paletteKey))
-					RefreshAddon()
+					RefreshAddon("background")
 				end
 				UIDropDownMenu_AddButton(info)
 			end
@@ -1130,7 +1145,7 @@ local function CreateItemLevelPositionDropdown(parent, name, yOffset)
 						UIDropDownMenu_SetSelectedValue(dropdown, positionKey)
 					end
 					SetDropDownText(dropdown, GetItemLevelBadgePositionLabel(positionKey))
-					RefreshAddon()
+					RefreshAddon("itemLevels")
 				end
 				UIDropDownMenu_AddButton(info)
 			end
@@ -1177,7 +1192,7 @@ local function CreateItemLevelFontSizeSlider(parent, name, yOffset)
 		end
 		GetItemLevelBadgeOptions().fontSize = rounded
 		UpdateItemLevelFontSizeSliderText(self)
-		RefreshAddon()
+		RefreshAddon("itemLevels")
 	end)
 	slider:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -1195,7 +1210,7 @@ local function CreateItemLevelFontSizeSlider(parent, name, yOffset)
 	end, function(self, value)
 		GetItemLevelBadgeOptions().fontSize = value
 		UpdateItemLevelFontSizeSliderText(self)
-	end)
+	end, "itemLevels")
 	return slider
 end
 
@@ -1355,7 +1370,7 @@ function coolstats.ResetCharacterPanelOptionsPanelDefaults()
 	db.backgrounds = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.backgrounds) or {
 		stats = { texture = "default", alpha = 1, contrast = 0, zoom = 1.6, panX = 1, panY = 0, palette = "classic" },
 	}
-	RefreshAddon()
+	RefreshAddon("character")
 	if oldCharacterPanelEnabled ~= (db.enableCharacterPanel ~= false) and coolstats.ShowCharacterPanelReloadPrompt then
 		coolstats.ShowCharacterPanelReloadPrompt()
 	end
@@ -1398,7 +1413,7 @@ function coolstats.ResetItemLevelOptionsPanelDefaults()
 		fontSize = 15,
 		colorMode = "score",
 	}
-	RefreshAddon()
+	RefreshAddon("itemLevels")
 end
 
 function coolstats.RefreshTooltipOptionsPanel()
@@ -1444,7 +1459,7 @@ function coolstats.ResetTooltipOptionsPanelDefaults()
 		uwuRaidLayers = {},
 	}
 	db.tooltip.uwuPlayerLoadLimit = nil
-	RefreshAddon()
+	RefreshAddon("browser")
 end
 
 local function UpdateOptionsColumnLayout(column, parent, xOffset, yOffset, width, height)
@@ -1610,7 +1625,7 @@ function coolstats.ResetLootToastOptionsPanelDefaults()
 		sound = true,
 		animations = true,
 	}
-	RefreshAddon()
+	RefreshAddon("loot")
 end
 
 function coolstats.CreateLootToastOptionsPanel()
@@ -1641,7 +1656,7 @@ function coolstats.CreateLootToastOptionsPanel()
 		return GetLootOptions().enabled
 	end, function(value)
 		GetLootOptions().enabled = value
-	end, "Show loot popups for items that pass the quality threshold.")
+	end, "Show loot popups for items that pass the quality threshold.", "loot")
 	CreateQualitySlider(content, -152)
 
 	CreateHeading(content, "Sources", -206)
@@ -1649,29 +1664,29 @@ function coolstats.CreateLootToastOptionsPanel()
 		return GetLootOptions().selfLoot
 	end, function(value)
 		GetLootOptions().selfLoot = value
-	end, "Show a toast when you personally loot an item.")
+	end, "Show a toast when you personally loot an item.", "loot")
 	CreateCheck(content, "coolstatsOptionLootRolls", "Show group-roll wins", -260, function()
 		return GetLootOptions().groupRolls
 	end, function(value)
 		GetLootOptions().groupRolls = value
-	end, "Show a single toast when you win a group loot roll; the later looted-item message is suppressed.")
+	end, "Show a single toast when you win a group loot roll; the later looted-item message is suppressed.", "loot")
 	CreateCheck(content, "coolstatsOptionLootProfessions", "Show profession crafts", -288, function()
 		return GetLootOptions().professions
 	end, function(value)
 		GetLootOptions().professions = value
-	end, "Show loot toasts for items you create with professions.")
+	end, "Show loot toasts for items you create with professions.", "loot")
 
 	CreateHeading(content, "Presentation", -332)
 	CreateCheck(content, "coolstatsOptionLootSound", "Play loot toast sounds", -358, function()
 		return GetLootOptions().sound
 	end, function(value)
 		GetLootOptions().sound = value
-	end, "Play a short sound when a loot toast appears.")
+	end, "Play a short sound when a loot toast appears.", "loot")
 	CreateCheck(content, "coolstatsOptionLootAnimations", "Play loot toast glows", -386, function()
 		return GetLootOptions().animations
 	end, function(value)
 		GetLootOptions().animations = value
-	end, "Play the shine/glow flourish on loot toasts.")
+	end, "Play the shine/glow flourish on loot toasts.", "loot")
 
 	if InterfaceOptions_AddCategory then
 		InterfaceOptions_AddCategory(panel)
@@ -1720,17 +1735,17 @@ function coolstats.CreateTooltipOptionsPanel()
 		return GetTooltipOptions().guildRank ~= false
 	end, function(value)
 		GetTooltipOptions().guildRank = value
-	end, "Replace the default guild line with the player's guild rank and guild name.")
+	end, "Replace the default guild line with the player's guild rank and guild name.", "tooltip")
 	CreateCheck(leftColumn, "coolstatsTooltipClassLine", "Show class line", -54, function()
 		return GetTooltipOptions().classLine ~= false
 	end, function(value)
 		GetTooltipOptions().classLine = value
-	end, "Add a class-colored class name to player tooltips.")
+	end, "Add a class-colored class name to player tooltips.", "tooltip")
 	CreateCheck(leftColumn, "coolstatsTooltipTarget", "Show current target", -82, function()
 		return GetTooltipOptions().target ~= false
 	end, function(value)
 		GetTooltipOptions().target = value
-	end, "Show who the hovered player is currently targeting.")
+	end, "Show who the hovered player is currently targeting.", "tooltip")
 
 	CreateHeading(leftColumn, "Inspect Cache", -122)
 	CreateCheck(leftColumn, "coolstatsTooltipCacheGear", "Cache inspectable gear", -148, function()
@@ -1743,29 +1758,29 @@ function coolstats.CreateTooltipOptionsPanel()
 		local options = GetTooltipOptions()
 		options.cacheInspectGear = value
 		options.cacheOnHover = value
-	end, "Allow inspect, target, hover, and lookup flows to update cached gear snapshots.")
+	end, "Allow inspect, target, hover, and lookup flows to update cached gear snapshots.", "tooltip")
 	CreateCheck(leftColumn, "coolstatsTooltipCacheTalents", "Cache inspectable talents", -176, function()
 		return GetTooltipOptions().cacheInspectTalents ~= false
 	end, function(value)
 		GetTooltipOptions().cacheInspectTalents = value
-	end, "Allow inspect and talent-panel flows to update cached talent snapshots.")
+	end, "Allow inspect and talent-panel flows to update cached talent snapshots.", "tooltip")
 
 	CreateHeading(leftColumn, "Logs And Progress", -220)
 	CreateCheck(leftColumn, "coolstatsTooltipLogsSummary", "Show logs summary", -246, function()
 		return GetTooltipOptions().logsSummary ~= false
 	end, function(value)
 		GetTooltipOptions().logsSummary = value
-	end, "Show the player's best available logs score.")
+	end, "Show the player's best available logs score.", "tooltip")
 	CreateCheck(leftColumn, "coolstatsTooltipLogsBosses", "Show boss parses with Alt", -274, function()
 		return GetTooltipOptions().logsBossDetails ~= false
 	end, function(value)
 		GetTooltipOptions().logsBossDetails = value
-	end, "Show individual boss parses while Alt is held.")
+	end, "Show individual boss parses while Alt is held.", "tooltip")
 	CreateCheck(leftColumn, "coolstatsTooltipRaidFallback", "Show raid progress summary", -302, function()
 		return GetTooltipOptions().raidProgressFallback ~= false
 	end, function(value)
 		GetTooltipOptions().raidProgressFallback = value
-	end, "Use available logs for raid progress, or request achievement progress as a fallback when logs are missing.")
+	end, "Use available logs for raid progress, or request achievement progress as a fallback when logs are missing.", "tooltip")
 
 	CreateHeading(rightColumn, "Player Browser", 0)
 	panel.uwuPlayerLoadLimitSlider = CreateUwUPlayerLoadLimitSlider(rightColumn, -36)
@@ -1826,7 +1841,7 @@ function coolstats.CreateItemLevelOptionsPanel()
 		return GetItemLevelBadgeColorMode() == "quality"
 	end, function(value)
 		GetItemLevelBadgeOptions().colorMode = value and "quality" or "score"
-	end, "Switch item-level badge text and slot-border glow from the coolstats GearScore gradient to Blizzard's uncommon, rare, epic, and legendary item colors. GearScore values are still calculated normally.")
+	end, "Switch item-level badge text and slot-border glow from the coolstats GearScore gradient to Blizzard's uncommon, rare, epic, and legendary item colors. GearScore values are still calculated normally.", "itemLevels")
 	CreateDescription(content, "Corner positions automatically render at half the selected font size.", -264)
 
 	if InterfaceOptions_AddCategory then
@@ -1899,7 +1914,7 @@ function coolstats.ResetBackgroundOptionsPanelDefaults()
 	db.backgrounds = coolstats.CopyDefaults and coolstats.CopyDefaults({}, defaults.backgrounds) or {
 		stats = { texture = "default", alpha = 1, contrast = 0, zoom = 1.6, panX = 1, panY = 0, palette = "classic" },
 	}
-	RefreshAddon()
+	RefreshAddon("background")
 end
 
 function coolstats.CreateBackgroundOptionsPanel()
@@ -1976,12 +1991,12 @@ function coolstats.CreateCharacterPanelOptionsPanel()
 		return IsCharacterPanelEnabled()
 	end, function(value)
 		SetCharacterPanelEnabled(value)
-	end, "Requires a UI reload. Disable this to keep UwU Logs features without loading the coolstats character-panel replacement, item badges, slot coloring, or GearScore tooltip cleanup.")
+	end, "Requires a UI reload. Disable this to keep UwU Logs features without loading the coolstats character-panel replacement, item badges, slot coloring, or GearScore tooltip cleanup.", "character")
 	CreateCheck(content, "coolstatsCharacterPanelStats", "Show side stats panel", -132, function()
 		return GetDB() and GetDB().showStatsPanel
 	end, function(value)
 		GetDB().showStatsPanel = value
-	end, "Show the extended stats panel next to the character frame.")
+	end, "Show the extended stats panel next to the character frame.", "character")
 
 	CreateHeading(content, "Gear Overlays", -176)
 	CreateCheck(content, "coolstatsCharacterPanelItemLevels", "Show item level badges", -202, function()
@@ -1992,12 +2007,12 @@ function coolstats.CreateCharacterPanelOptionsPanel()
 		if value and GetItemLevelBadgeOptions().position == "off" then
 			GetItemLevelBadgeOptions().position = "default"
 		end
-	end, "Show item level labels on equipped gear slots.")
+	end, "Show item level labels on equipped gear slots.", "itemLevels")
 	CreateCheck(content, "coolstatsCharacterPanelSlotBorders", "Show colored slot borders", -230, function()
 		return GetDB() and GetDB().showSlotBorders
 	end, function(value)
 		GetDB().showSlotBorders = value
-	end, "Color equipment slot borders using the selected Item Levels color mode.")
+	end, "Color equipment slot borders using the selected Item Levels color mode.", "itemLevels")
 
 	CreateHeading(content, "Item Level Details", -274)
 	CreateItemLevelPositionDropdown(content, "coolstatsCharacterPanelItemLevelPositionDropdown", -300)
@@ -2007,7 +2022,7 @@ function coolstats.CreateCharacterPanelOptionsPanel()
 		return GetItemLevelBadgeColorMode() == "quality"
 	end, function(value)
 		GetItemLevelBadgeOptions().colorMode = value and "quality" or "score"
-	end, "Switch item-level badge text and slot-border glow from the coolstats GearScore gradient to Blizzard's uncommon, rare, epic, and legendary item colors. GearScore values are still calculated normally.")
+	end, "Switch item-level badge text and slot-border glow from the coolstats GearScore gradient to Blizzard's uncommon, rare, epic, and legendary item colors. GearScore values are still calculated normally.", "itemLevels")
 	CreateDescription(content, "Corner positions automatically render at half the selected font size.", -490)
 
 	CreateHeading(content, "Compatibility", -540)
@@ -2015,7 +2030,7 @@ function coolstats.CreateCharacterPanelOptionsPanel()
 		return GetDB() and GetDB().cleanGearScoreTooltips
 	end, function(value)
 		GetDB().cleanGearScoreTooltips = value
-	end, "Hide noisy GearScore lines from item tooltips.")
+	end, "Hide noisy GearScore lines from item tooltips.", "character")
 
 	CreateHeading(content, "Side Panel Visuals", -616)
 	CreateDescription(content, "Controls the background texture, opacity, contrast overlay, talent-art zoom, image position, and stat text colors of the coolstats side panel.", -642)

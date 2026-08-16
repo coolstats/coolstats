@@ -342,6 +342,143 @@ local function Print(message)
 	end
 end
 
+function coolstats.ProfileNow()
+	if debugprofilestop then
+		return debugprofilestop()
+	end
+	if GetTime then
+		return GetTime() * 1000
+	end
+	return 0
+end
+
+function coolstats.ProfileBegin(key)
+	if not coolstats.profileEnabled or not key then
+		return nil
+	end
+	return coolstats.ProfileNow()
+end
+
+function coolstats.ProfileEnd(key, startedAt)
+	if not key or not startedAt then
+		return
+	end
+	local elapsed = coolstats.ProfileNow() - startedAt
+	local stats = coolstats.profileStats
+	if type(stats) ~= "table" then
+		stats = {}
+		coolstats.profileStats = stats
+	end
+	local row = stats[key]
+	if type(row) ~= "table" then
+		row = { calls = 0, total = 0, max = 0 }
+		stats[key] = row
+	end
+	row.calls = (row.calls or 0) + 1
+	row.total = (row.total or 0) + elapsed
+	if elapsed > (row.max or 0) then
+		row.max = elapsed
+	end
+end
+
+function coolstats.ProfileCount(key, amount)
+	if not coolstats.profileEnabled or not key then
+		return
+	end
+	local stats = coolstats.profileStats
+	if type(stats) ~= "table" then
+		stats = {}
+		coolstats.profileStats = stats
+	end
+	local row = stats[key]
+	if type(row) ~= "table" then
+		row = { calls = 0, total = 0, max = 0 }
+		stats[key] = row
+	end
+	row.calls = (row.calls or 0) + (amount or 1)
+end
+
+function coolstats.ResetProfileStats()
+	coolstats.profileStats = {}
+end
+
+function coolstats.PrintProfileSnapshot(label)
+	local prefix = "|cff00bfffcoolstats profile:|r "
+	Print(prefix .. tostring(label and label ~= "" and label or (coolstats.profileEnabled and "snapshot" or "off")))
+	if not coolstats.profileEnabled then
+		Print(prefix .. "Use /cs profile on to start collecting counters.")
+	end
+	local rows = {}
+	for key, row in pairs(coolstats.profileStats or {}) do
+		rows[#rows + 1] = {
+			key = key,
+			calls = tonumber(row.calls) or 0,
+			total = tonumber(row.total) or 0,
+			max = tonumber(row.max) or 0,
+		}
+	end
+	table.sort(rows, function(left, right)
+		if left.total == right.total then
+			return left.calls > right.calls
+		end
+		return left.total > right.total
+	end)
+	if #rows == 0 then
+		Print(prefix .. "No samples yet.")
+		return
+	end
+	local printed = {}
+	for index = 1, math.min(#rows, 12) do
+		local row = rows[index]
+		local average = row.calls > 0 and row.total / row.calls or 0
+		printed[row.key] = true
+		Print(prefix .. row.key .. " calls " .. tostring(row.calls) .. ", total " .. format("%.1fms", row.total) .. ", avg " .. format("%.2fms", average) .. ", max " .. format("%.1fms", row.max))
+	end
+	local counterKeys = {
+		"browser.queryCacheHit",
+		"browser.queryCacheHitAfterIndex",
+		"browser.refreshCacheReuse",
+		"browser.buildIndexReused",
+		"browser.buildIndexMissNoIndex",
+		"browser.buildIndexMissData",
+		"browser.buildIndexMissGearStore",
+		"browser.buildIndexMissTalentStore",
+		"browser.indexReleased",
+		"browser.indexReleasedClose",
+		"browser.indexReleasedForce",
+		"browser.indexReleaseHeldByStats",
+		"browser.minimapToggleDebounced",
+		"browser.sortedOrderCacheHit",
+		"browser.sortedOrderCacheMiss",
+		"browser.rowDisplayCacheHit",
+		"browser.paintRowsSkipped",
+		"browser.indexPatchedGear",
+		"browser.indexPatchedTalents",
+		"browser.indexInvalidated",
+		"browser.indexInvalidated.pruneGear",
+		"browser.indexInvalidated.pruneTalents",
+		"browser.indexInvalidated.gearSaveRemovedOther",
+		"browser.indexInvalidated.gearPatchMiss",
+		"browser.indexInvalidated.talentSaveRemovedOther",
+		"browser.indexInvalidated.talentPatchMiss",
+		"browser.indexInvalidated.options",
+		"browser.indexInvalidated.clearGearTalents",
+		"browser.indexInvalidated.startupCache",
+		"browser.indexInvalidated.staleTalentLookup",
+		"browser.patchGearNoIndex",
+		"browser.patchTalentNoIndex",
+	}
+	for counterIndex = 1, #counterKeys do
+		local key = counterKeys[counterIndex]
+		local stat = (coolstats.profileStats or {})[key]
+		if stat and (tonumber(stat.calls) or 0) > 0 then
+			if not printed[key] then
+				Print(prefix .. key .. " count " .. tostring(tonumber(stat.calls) or 0))
+			end
+		end
+	end
+end
+
 local function CopyDefaults(target, source)
 	if type(target) ~= "table" then
 		target = {}
@@ -1145,6 +1282,14 @@ function coolstats.OpenSettingsFromMinimap()
 end
 
 function coolstats.OpenCachedPlayerBrowserFromMinimap()
+	local now = GetTime and GetTime() or time()
+	if coolstats.lastMinimapBrowserToggleAt and now and now - coolstats.lastMinimapBrowserToggleAt < 0.35 then
+		if coolstats.ProfileCount then
+			coolstats.ProfileCount("browser.minimapToggleDebounced")
+		end
+		return
+	end
+	coolstats.lastMinimapBrowserToggleAt = now
 	if CloseDropDownMenus then
 		CloseDropDownMenus()
 	end
@@ -6129,6 +6274,26 @@ local function PaperDollIsVisible()
 	return CharacterFrame and CharacterFrame:IsShown() and (not PaperDollFrame or PaperDollFrame:IsShown())
 end
 
+function coolstats.CharacterStatsPanelIsVisible()
+	return ui.panel and ui.panel:IsShown()
+end
+
+function coolstats.HasActiveStatPopouts()
+	if db and type(db.statPopouts) == "table" then
+		for _, settings in pairs(db.statPopouts) do
+			if type(settings) == "table" and settings.shown then
+				return true
+			end
+		end
+	end
+	for _, frame in pairs(ui.statPopouts) do
+		if frame and frame:IsShown() then
+			return true
+		end
+	end
+	return false
+end
+
 local function UpdateToggleButton()
 	if not ui.toggleButton then
 		return
@@ -6224,6 +6389,7 @@ local function UpdatePanel()
 		return
 	end
 
+	local profileStart = coolstats.ProfileBegin("character.updatePanel")
 	coolstats.LayoutSections()
 	local palette = coolstats.ApplyStatsTextPalette()
 
@@ -6239,12 +6405,14 @@ local function UpdatePanel()
 			SetFontStringColor(row.value, palette.value)
 		end
 	end
+	coolstats.ProfileEnd("character.updatePanel", profileStart)
 end
 
 function UpdateStatPopouts()
 	if not db then
 		return
 	end
+	local profileStart = coolstats.ProfileBegin("character.updatePopouts")
 	EnsureEditOptions()
 
 	for key, settings in pairs(db.statPopouts) do
@@ -6266,6 +6434,7 @@ function UpdateStatPopouts()
 	for index = 1, #ui.rows do
 		coolstats.UpdateStatPopoutButton(ui.rows[index])
 	end
+	coolstats.ProfileEnd("character.updatePopouts", profileStart)
 end
 
 local function UpdateAll()
@@ -6299,6 +6468,9 @@ end
 local function UpdateAllImmediate()
 	updatePending = false
 	updateElapsed = 0
+	if coolstats.characterPanelEventFrame then
+		coolstats.characterPanelEventFrame:SetScript("OnUpdate", nil)
+	end
 	coolstats.characterPanelDirty = nil
 	UpdateAll()
 end
@@ -6332,8 +6504,10 @@ function coolstats.RunCharacterPanelUpdateCategories(dirty)
 		HideCharacterPanelRuntime()
 		return
 	end
+	local profileStart = coolstats.ProfileBegin("character.runDirty")
 	if not dirty or dirty.all then
 		UpdateAll()
+		coolstats.ProfileEnd("character.runDirty", profileStart)
 		return
 	end
 
@@ -6355,8 +6529,12 @@ function coolstats.RunCharacterPanelUpdateCategories(dirty)
 	end
 
 	if dirty.stats or dirty.layout then
-		UpdatePanel()
-		UpdateStatPopouts()
+		if coolstats.CharacterStatsPanelIsVisible() then
+			UpdatePanel()
+		end
+		if coolstats.HasActiveStatPopouts() then
+			UpdateStatPopouts()
+		end
 	end
 
 	if dirty.gear or dirty.layout then
@@ -6364,6 +6542,31 @@ function coolstats.RunCharacterPanelUpdateCategories(dirty)
 		UpdateModelScores()
 		UpdateInspectSummary()
 	end
+	coolstats.ProfileEnd("character.runDirty", profileStart)
+end
+
+function coolstats.CharacterPanelUpdate_OnUpdate(self, elapsed)
+	if not updatePending then
+		self:SetScript("OnUpdate", nil)
+		return
+	end
+	if db and not coolstats.IsCharacterPanelEnabled() then
+		updatePending = false
+		updateElapsed = 0
+		self:SetScript("OnUpdate", nil)
+		return
+	end
+	updateElapsed = updateElapsed + elapsed
+	if updateElapsed < coolstats.UPDATE_DELAY_SECONDS then
+		return
+	end
+
+	updatePending = false
+	updateElapsed = 0
+	self:SetScript("OnUpdate", nil)
+	local dirty = coolstats.characterPanelDirty
+	coolstats.characterPanelDirty = nil
+	coolstats.RunCharacterPanelUpdateCategories(dirty)
 end
 
 function QueueUpdate(category)
@@ -6371,14 +6574,21 @@ function QueueUpdate(category)
 		updatePending = false
 		updateElapsed = 0
 		coolstats.characterPanelDirty = nil
+		if coolstats.characterPanelEventFrame then
+			coolstats.characterPanelEventFrame:SetScript("OnUpdate", nil)
+		end
 		HideCharacterPanelRuntime()
 		return
 	end
+	coolstats.ProfileCount("character.queueUpdate")
 	if not updatePending then
 		updateElapsed = 0
 	end
 	coolstats.MarkCharacterPanelDirty(category)
 	updatePending = true
+	if coolstats.characterPanelEventFrame then
+		coolstats.characterPanelEventFrame:SetScript("OnUpdate", coolstats.CharacterPanelUpdate_OnUpdate)
+	end
 end
 
 local function HideFontString(fontString)
@@ -6527,6 +6737,7 @@ local function ShowHelp()
 	Print("/coolstats guide skip - skip the first-run feature guide")
 	Print("/coolstats versioncheck - ask your raid or party for coolstats versions")
 	Print("/coolstats perf - print a lightweight performance snapshot")
+	Print("/coolstats profile [on|off|reset] - time hot paths while testing")
 	Print("/coolstats uwu [player name] - open UwU Logs for a player")
 end
 
@@ -6657,6 +6868,21 @@ local function SlashHandler(message)
 		coolstats.RequestUpdateCenterVersions(rest)
 	elseif commandLower == "perf" or commandLower == "performance" then
 		coolstats.PrintPerformanceSnapshot(rest)
+	elseif commandLower == "profile" then
+		local restLower = lower(rest or "")
+		if restLower == "on" or restLower == "start" then
+			coolstats.profileEnabled = true
+			coolstats.ResetProfileStats()
+			Print("Profile counters enabled.")
+		elseif restLower == "off" or restLower == "stop" then
+			coolstats.profileEnabled = false
+			coolstats.PrintProfileSnapshot("stopped")
+		elseif restLower == "reset" or restLower == "clear" then
+			coolstats.ResetProfileStats()
+			Print("Profile counters reset.")
+		else
+			coolstats.PrintProfileSnapshot(rest)
+		end
 	elseif commandLower == "uwu" then
 		local name = rest
 		if not name or name == "" then
@@ -6677,9 +6903,9 @@ local function SlashHandler(message)
 	end
 end
 
-local eventFrame = CreateFrame("Frame")
-eventFrame:RegisterEvent("ADDON_LOADED")
-eventFrame:SetScript("OnEvent", function(self, event, arg1)
+coolstats.characterPanelEventFrame = CreateFrame("Frame")
+coolstats.characterPanelEventFrame:RegisterEvent("ADDON_LOADED")
+coolstats.characterPanelEventFrame:SetScript("OnEvent", function(self, event, arg1)
 	if event == "ADDON_LOADED" then
 		if arg1 == "Gear Score" then
 			gearScoreTamed = false
@@ -6812,23 +7038,3 @@ eventFrame:SetScript("OnEvent", function(self, event, arg1)
 	end
 end)
 
-eventFrame:SetScript("OnUpdate", function(_, elapsed)
-	if not updatePending then
-		return
-	end
-	if db and not coolstats.IsCharacterPanelEnabled() then
-		updatePending = false
-		updateElapsed = 0
-		return
-	end
-	updateElapsed = updateElapsed + elapsed
-	if updateElapsed < coolstats.UPDATE_DELAY_SECONDS then
-		return
-	end
-
-	updatePending = false
-	updateElapsed = 0
-	local dirty = coolstats.characterPanelDirty
-	coolstats.characterPanelDirty = nil
-	coolstats.RunCharacterPanelUpdateCategories(dirty)
-end)
