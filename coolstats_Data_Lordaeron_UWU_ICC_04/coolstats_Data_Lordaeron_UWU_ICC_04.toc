@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffcoolstats|r Data - Lordaeron Icecrown Citadel 04
 ## Notes: Optional Icecrown Citadel UwU Logs layer 4/6 for Lordaeron.
 ## Author: coolstats
-## Version: 0.2.41
+## Version: 0.2.42
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Lordaeron
