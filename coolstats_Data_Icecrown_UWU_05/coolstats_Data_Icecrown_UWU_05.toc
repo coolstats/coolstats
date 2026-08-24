@@ -1,8 +1,8 @@
-## Interface: 30300
+﻿## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown UWU 05
 ## Notes: Realm-specific UwU Logs shard 5/12 for Icecrown.
 ## Author: coolstats
-## Version: 0.2.42
+## Version: 0.2.43
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Icecrown
