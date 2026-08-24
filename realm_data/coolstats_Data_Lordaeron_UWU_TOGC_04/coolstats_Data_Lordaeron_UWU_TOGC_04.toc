@@ -1,8 +1,8 @@
-## Interface: 30300
+﻿## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Lordaeron Trial of the Grand Crusader 04
 ## Notes: Optional Trial of the Grand Crusader UwU Logs layer 4/6 for Lordaeron.
 ## Author: coolstats
-## Version: 0.2.42
+## Version: 0.2.43
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Lordaeron

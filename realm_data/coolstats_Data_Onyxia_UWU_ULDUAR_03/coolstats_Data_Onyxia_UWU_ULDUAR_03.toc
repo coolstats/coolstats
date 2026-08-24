@@ -1,8 +1,8 @@
-## Interface: 30300
+﻿## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Onyxia Ulduar 03
 ## Notes: Optional Ulduar UwU Logs layer 3/7 for Onyxia.
 ## Author: coolstats
-## Version: 0.2.42
+## Version: 0.2.43
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Onyxia

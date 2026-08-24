@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.2.43 - 2026-08-24
+
+### Data
+
+- Refreshed all Warmane UwU Logs datasets on 2026-08-24 using the
+  realm-aware weekly caps: Onyxia top 600 per class/spec, Lordaeron top 1,000
+  per class/spec, and Icecrown top 1,500 per class/spec.
+- Shipped refreshed dynamic ranked chunk tranches for the in-game data-load
+  slider: Onyxia 20,091 total players in 7 chunks, Lordaeron 15,426 total
+  players in 6 chunks, and Icecrown 35,502 total players in 12 chunks.
+- Preserved the realm-aware raid layer shard layout for TOGC/VOA/Ulduar on
+  Onyxia and ICC/RS/TOGC on Icecrown and Lordaeron.
+- Ran duplicate-name verification and targeted boss-row repair during the
+  refresh. Unresolved reused-name ambiguities were skipped, while resolved
+  targets were repaired before writing generated data.
+- Generated data reports zero bulk boss request failures and zero character
+  boss fetch failures across all three Warmane realms.
+
+### Distribution
+
+- Rebuilt the install ZIP and generated Warperia branch from the same
+  install-ready artifact so GitHub releases and Warperia launcher installs stay
+  aligned.
+
 ## 0.2.42 - 2026-08-16
 
 ### Data
