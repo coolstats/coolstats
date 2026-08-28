@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.2.44 - 2026-08-28
+
+### Data
+
+- Refreshed all Warmane UwU Logs datasets on 2026-08-28 using the
+  realm-aware weekly caps: Onyxia top 600 per class/spec, Lordaeron top 1,000
+  per class/spec, and Icecrown top 1,500 per class/spec.
+- Shipped refreshed dynamic ranked chunk tranches for the in-game data-load
+  slider: Onyxia 20,581 total players in 7 chunks, Lordaeron 15,462 total
+  players in 6 chunks, and Icecrown 35,651 total players in 12 chunks.
+- Preserved the realm-aware raid layer shard layout for TOGC/VOA/Ulduar on
+  Onyxia and ICC/RS/TOGC on Icecrown and Lordaeron.
+- Ran duplicate-name verification and targeted boss-row repair during the
+  refresh. Unresolved reused-name ambiguities, including rate-limited checks,
+  were skipped; resolved targets were repaired before writing generated data.
+- Generated data reports zero bulk boss request failures and zero targeted
+  character boss fetch failures across all three Warmane realms.
+
+### Interface
+
+- Added paperdoll socket gem display for the player and inspect frames,
+  including filled gems, empty sockets, socket-color borders and prongs,
+  matched-socket sparkle, hover highlights, and oversize layout guardrails.
+- Added player and inspect gem toggle buttons using the Solid Dragon's Eye icon;
+  toggling gems off restores native rotate/resistance controls where relevant.
+- Added click and drag support for player paperdoll gem sockets so socketing can
+  be opened directly from the gem icons.
+- Added settings for paperdoll gem size, icon scale, spacing, backdrop scale,
+  prong scale, model score placement, and model rotation.
+- Renamed the paperdoll gem art assets to `coolstats_paperdoll_*` paths for
+  clearer ownership in the release bundle.
+- Updated UI sounds for gem toggles, Warmane Armory actions, and player browser
+  open/close behavior.
+
+### Distribution
+
+- Rebuilt the install ZIP and generated Warperia branch from the same
+  install-ready artifact so GitHub releases and Warperia launcher installs stay
+  aligned.
+
 ## 0.2.43 - 2026-08-24
 
 ### Data

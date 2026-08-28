@@ -1,8 +1,8 @@
-﻿## Interface: 30300
+## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Lordaeron UWU 02
 ## Notes: Realm-specific UwU Logs shard 2/6 for Lordaeron.
 ## Author: coolstats
-## Version: 0.2.43
+## Version: 0.2.44
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Lordaeron
