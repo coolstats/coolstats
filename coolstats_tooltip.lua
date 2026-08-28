@@ -8556,10 +8556,38 @@ if type(coolstats) == "table" then
 		if not url then
 			return
 		end
+		if PlaySound then
+			PlaySound("igMainMenuOpen")
+		end
 		if CloseDropDownMenus then
 			CloseDropDownMenus()
 		end
 		coolstats.ShowCachedPlayerBrowserUrl("Warmane Armory", url)
+	end
+
+	function coolstats.PlayCachedPlayerBrowserGuildBankSound(opening)
+		if PlaySound then
+			local soundName = opening and "GuildVaultOpen" or "GuildVaultClose"
+			local ok = pcall(PlaySound, soundName)
+			if ok then
+				return
+			end
+		end
+		if PlaySoundFile then
+			local path = opening and "Sound\\Interface\\GuildVaultOpen.ogg" or "Sound\\Interface\\GuildVaultClose.ogg"
+			local ok, played = pcall(PlaySoundFile, path)
+			if ok and played then
+				return
+			end
+			path = opening and "Sound\\Interface\\GuildVaultOpen.wav" or "Sound\\Interface\\GuildVaultClose.wav"
+			ok, played = pcall(PlaySoundFile, path)
+			if ok and played then
+				return
+			end
+		end
+		if PlaySound then
+			PlaySound(opening and "igMainMenuOpen" or "igMainMenuClose")
+		end
 	end
 
 	function coolstats.WhisperCachedPlayerBrowserPlayer(name)
@@ -8691,7 +8719,7 @@ if type(coolstats) == "table" then
 
 	coolstats.CHANGELOG_ENTRIES = {
 		{
-			version = "0.2.43",
+			version = "0.2.44",
 			date = "2026-08-24",
 			notes = {
 				"Refreshed all Warmane UwU data with realm-aware weekly caps: Onyxia 600, Lordaeron 1000, Icecrown 1500 per class/spec.",
@@ -12418,6 +12446,9 @@ if type(coolstats) == "table" then
 		end
 		coolstats.RegisterManagedWindow(panel)
 		panel:HookScript("OnHide", function(self)
+			if coolstats.PlayCachedPlayerBrowserGuildBankSound then
+				coolstats.PlayCachedPlayerBrowserGuildBankSound(false)
+			end
 			if coolstats.activeFeatureGuide and coolstats.activeFeatureGuide.panel == self and coolstats.HideFeatureGuideFrame then
 				coolstats.HideFeatureGuideFrame(false)
 			end
@@ -13012,8 +13043,8 @@ if type(coolstats) == "table" then
 		if coolstats.MaybeStartCachedPlayerBrowserGuide then
 			coolstats.MaybeStartCachedPlayerBrowserGuide(panel)
 		end
-		if PlaySound then
-			PlaySound("igCharacterInfoOpen")
+		if coolstats.PlayCachedPlayerBrowserGuildBankSound then
+			coolstats.PlayCachedPlayerBrowserGuildBankSound(true)
 		end
 	end
 end
