@@ -216,7 +216,12 @@ local function GetNameFromObject(object)
 		return object.value
 	end
 
-	if object.unit and UnitName then
+	if type(object.unit) == "table" then
+		local unitName = GetNameFromObject(object.unit)
+		if unitName and unitName ~= "" then
+			return unitName
+		end
+	elseif type(object.unit) == "string" and UnitName then
 		local unitName = UnitName(object.unit)
 		if unitName and unitName ~= "" then
 			return unitName
@@ -263,7 +268,12 @@ local function GetMenuPlayerName(dropdownMenu, unit, name, ...)
 	if name and name ~= "" then
 		return name
 	end
-	if unit and UnitName then
+	if type(unit) == "table" then
+		local unitName = GetNameFromObject(unit)
+		if unitName and unitName ~= "" then
+			return unitName
+		end
+	elseif type(unit) == "string" and UnitName then
 		local unitName = UnitName(unit)
 		if unitName and unitName ~= "" then
 			return unitName

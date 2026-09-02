@@ -123,6 +123,7 @@ local defaults = {
 	guide = {
 		browserVersion = 0,
 	},
+	phaseMessages = {},
 }
 
 local PANEL_WIDTH = 236
@@ -3454,7 +3455,7 @@ local statSections = {
 			{ label = "Damage", get = function() return GetNativeStatValue("RangedDamage", PaperDollFrame_SetRangedDamage) end, nativeKey = "RangedDamage", nativeSetter = PaperDollFrame_SetRangedDamage, nativeHandler = "CharacterRangedDamageFrame_OnEnter" },
 			{ label = "Attack Speed", get = function() return GetNativeStatValue("RangedSpeed", PaperDollFrame_SetRangedAttackSpeed) end, nativeKey = "RangedSpeed", nativeSetter = PaperDollFrame_SetRangedAttackSpeed },
 			{ label = "Power", get = function() return GetNativeStatValue("RangedAttackPower", PaperDollFrame_SetRangedAttackPower) end, nativeKey = "RangedAttackPower", nativeSetter = PaperDollFrame_SetRangedAttackPower },
-			{ label = "Hit Rating", get = function() return GetNativeStatValue("RangedHit", PaperDollFrame_SetRating, CR_HIT_RANGED) end, nativeKey = "RangedHit", nativeSetter = PaperDollFrame_SetRating, nativeArg = CR_HIT_RANGED },
+			{ label = "Hit Rating", get = function() return FormatRatingWithBonus(CR_HIT_RANGED) end, tooltip = function() return GetRatingTooltip("Ranged hit chance", CR_HIT_RANGED, "TOHIT") end, nativeKey = "RangedHit", nativeSetter = PaperDollFrame_SetRating, nativeArg = CR_HIT_RANGED },
 			{ label = "Crit Chance", get = function() return GetNativeStatValue("RangedCrit", PaperDollFrame_SetRangedCritChance) end, nativeKey = "RangedCrit", nativeSetter = PaperDollFrame_SetRangedCritChance },
 			{ label = "Armor Pen.", key = "armor_penetration", get = function() return FormatRatingWithBonus(CR_ARMOR_PENETRATION) end, tooltip = function() return "Ignores up to " .. format("%.2f%%", GetRatingBonusValue(CR_ARMOR_PENETRATION)) .. " of enemy armor.\nRating: " .. FormatRating(CR_ARMOR_PENETRATION) .. "\nSubject to WotLK armor caps." end, nativeKey = "RangedArmorPen", nativeSetter = PaperDollFrame_SetRating, nativeArg = CR_ARMOR_PENETRATION },
 		},
@@ -8038,6 +8039,28 @@ local function HookTooltips()
 	HookTooltip(ShoppingTooltip2)
 end
 
+function coolstats.MaybeShowOnyxiaPhase4Welcome()
+	if lower(gsub(tostring((GetRealmName and GetRealmName()) or ""), "[^%a%d]", "")) ~= "onyxia" then
+		return
+	end
+	if ((coolstatsUwUData and coolstatsUwUData.phaseId) or (coolstats.GetExpectedRealmPhaseId and coolstats.GetExpectedRealmPhaseId())) ~= "icc" then
+		return
+	end
+	coolstatsDB = coolstatsDB or {}
+	if type(coolstatsDB.phaseMessages) ~= "table" then
+		coolstatsDB.phaseMessages = {}
+	end
+	if coolstatsDB.phaseMessages.onyxiaPhase4WelcomeShown then
+		return
+	end
+	coolstatsDB.phaseMessages.onyxiaPhase4WelcomeShown = true
+	if coolstats.ShowOnyxiaPhase4WelcomePopup then
+		coolstats.ShowOnyxiaPhase4WelcomePopup()
+	elseif DEFAULT_CHAT_FRAME then
+		DEFAULT_CHAT_FRAME:AddMessage("|cff00bfffWelcome to Phase 4!|r Ready for Icecrown Citadel?")
+	end
+end
+
 local function HookCharacterSlots()
 	-- Slot tooltips are intentionally left to the client and GearScore.
 	-- coolstats only draws centered item-level badges to avoid duplicate tooltip lines.
@@ -8110,6 +8133,7 @@ local function ShowHelp()
 	Print("/coolstats changelog - show recent coolstats changes")
 	Print("/coolstats guide - replay the browser feature guide")
 	Print("/coolstats guide skip - skip the first-run feature guide")
+	Print("/coolstats phase4welcome reset - show the Onyxia Phase 4 welcome again")
 	Print("/coolstats versioncheck - ask your raid or party for coolstats versions")
 	Print("/coolstats perf - print a lightweight performance snapshot")
 	Print("/coolstats profile [on|off|reset] - time hot paths while testing")
@@ -8238,6 +8262,20 @@ local function SlashHandler(message)
 			coolstats.OpenFeatureGuide(true)
 		else
 			Print("Feature guide is not available.")
+		end
+	elseif commandLower == "phase4welcome" then
+		local restLower = lower(rest or "")
+		if restLower == "reset" or restLower == "show" or restLower == "test" then
+			coolstatsDB = coolstatsDB or {}
+			coolstatsDB.phaseMessages = coolstatsDB.phaseMessages or {}
+			coolstatsDB.phaseMessages.onyxiaPhase4WelcomeShown = nil
+			if coolstats.MaybeShowOnyxiaPhase4Welcome then
+				coolstats.MaybeShowOnyxiaPhase4Welcome()
+			else
+				Print("Phase 4 welcome popup is not available.")
+			end
+		else
+			Print("Use /coolstats phase4welcome reset to show the Onyxia Phase 4 welcome again.")
 		end
 	elseif commandLower == "versioncheck" then
 		coolstats.RequestUpdateCenterVersions(rest)
@@ -8372,6 +8410,7 @@ coolstats.characterPanelEventFrame:SetScript("OnEvent", function(self, event, ar
 		else
 			Print("|cff00ff00Loaded successfully.|r " .. freshness)
 		end
+		coolstats.MaybeShowOnyxiaPhase4Welcome()
 		coolstats.BroadcastUpdateCenterStatus(true)
 		if coolstats.MaybeStartLoginFeatureGuide then
 			coolstats.MaybeStartLoginFeatureGuide()
