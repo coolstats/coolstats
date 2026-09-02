@@ -303,6 +303,17 @@ local UWU_HARD_MODE_BOSSES = {
 	["Faction Champions"] = true,
 	["Twin Val'kyr"] = true,
 	["Anub'arak"] = true,
+	["Lord Marrowgar"] = true,
+	["Lady Deathwhisper"] = true,
+	["Deathbringer Saurfang"] = true,
+	["Festergut"] = true,
+	["Rotface"] = true,
+	["Professor Putricide"] = true,
+	["Blood Prince Council"] = true,
+	["Blood-Queen Lana'thel"] = true,
+	["Blood Queen Lana'thel"] = true,
+	["Sindragosa"] = true,
+	["The Lich King"] = true,
 }
 
 local UWU_LOG_PROGRESS_PHASES = {
@@ -2682,6 +2693,11 @@ local function GetCurrentRaid()
 	return RAID_PROGRESS_DATA[phaseId]
 end
 
+function coolstats.IsRaidProgressFallbackEnabledForActivePhase()
+	local phaseId = coolstats.GetActiveUwUPhaseId() or CURRENT_RAID_ID
+	return phaseId ~= "icc"
+end
+
 local function IsAchievementComplete(achievementID, source)
 	if source == "player" then
 		if not GetAchievementInfo then
@@ -3104,16 +3120,21 @@ local function AddRaidProgressLines(unit)
 	if not key then
 		return false
 	end
+	local level = UnitLevel(unit)
+	if level and level > 0 and level < 80 then
+		return false
+	end
 
 	local raid = GetCurrentRaid()
 	local uwuProgress = BuildUwURaidProgress and BuildUwURaidProgress(unit)
-	if uwuProgress and (uwuProgress.hasCurrentLogs or not raid) then
+	local fallbackEnabled = coolstats.IsRaidProgressFallbackEnabledForActivePhase()
+	if uwuProgress and (uwuProgress.hasCurrentLogs or not raid or not fallbackEnabled) then
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine("Raid Progress", ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B)
 		GameTooltip:AddDoubleLine(uwuProgress.hardLabel, coolstats.FormatRaidProgressText(uwuProgress), 1.0, 1.0, 1.0, 0.0, 1.0, 0.25)
 		return true
 	end
-	if not raid then
+	if not raid or not fallbackEnabled then
 		return false
 	end
 
@@ -3805,6 +3826,14 @@ local function BuildUwUTooltipCache(player)
 			0.70, 0.70, 0.70,
 			historicalRed, historicalGreen, historicalBlue,
 		}
+	elseif coolstatsUwUData and coolstatsUwUData.historicalOverallPhaseId and coolstatsUwUData.historicalOverallLabel then
+		cache.historical = {
+			"double",
+			coolstats.GetUwUHistoricalOverallLabel(),
+			"Not Ranked",
+			0.70, 0.70, 0.70,
+			0.45, 0.45, 0.45,
+		}
 	end
 
 	local data = coolstatsUwUData
@@ -3884,8 +3913,29 @@ local function AddUwULogsLines(unit)
 	local player = name and GetUwUPlayerByName(name)
 	if not player then
 		local level = UnitLevel(unit)
-		if options.logsSummary ~= false and level and level >= 80 then
-			GameTooltip:AddDoubleLine("UwU Logs Raid Score", "Not ranked", ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B, 0.45, 0.45, 0.45)
+		if level and level >= 80 then
+			local hasHistoryColumn = data and data.historicalOverallPhaseId and data.historicalOverallLabel
+			if options.logsSummary ~= false then
+				GameTooltip:AddDoubleLine("UwU Logs Raid Score", "Not ranked", ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B, 0.45, 0.45, 0.45)
+				if hasHistoryColumn then
+					GameTooltip:AddDoubleLine(coolstats.GetUwUHistoricalOverallLabel(), "Not Ranked", 0.70, 0.70, 0.70, 0.45, 0.45, 0.45)
+				end
+			end
+			if options.logsBossDetails ~= false and IsAltKeyDown and IsAltKeyDown() and data.bosses then
+				GameTooltip:AddLine("UwU Boss Parses", ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B)
+				local currentRaidName = nil
+				for bossIndex = 1, #data.bosses do
+					local bossName = data.bosses[bossIndex]
+					if bossName and coolstats.IsCurrentUwUBossIndexEnabled(bossIndex) then
+						local raidName = GetUwUBossRaidName(bossName)
+						if raidName ~= currentRaidName then
+							GameTooltip:AddLine("  " .. raidName, 0.86, 0.72, 0.25)
+							currentRaidName = raidName
+						end
+						GameTooltip:AddDoubleLine("    " .. GetUwUBossDisplayLabel(bossName), "-", 0.70, 0.70, 0.70, 0.45, 0.45, 0.45)
+					end
+				end
+			end
 		end
 		return false
 	end
@@ -6960,50 +7010,50 @@ if type(coolstats) == "table" then
 		row.classIndex = player[3]
 		row.specIndex = player[4]
 		row.currentPhaseRanked = coolstats.IsUwUPlayerRankedForCurrentPhase(player)
+		local data = coolstatsUwUData
+		local classSpecs = data and data.specs and data.specs[player[3]]
+		local specScores = player[6]
+		local specRanks = player[7]
+		local mainSpecIndex, mainSpecScoreCenti, offSpecIndex, offSpecScoreCenti
+		if classSpecs and type(specScores) == "table" then
+			for specIndex = 1, 3 do
+				local scoreCenti = specScores[specIndex]
+				if scoreCenti and classSpecs[specIndex] then
+					if not mainSpecScoreCenti or scoreCenti > mainSpecScoreCenti or (scoreCenti == mainSpecScoreCenti and specIndex < mainSpecIndex) then
+						offSpecIndex = mainSpecIndex
+						offSpecScoreCenti = mainSpecScoreCenti
+						mainSpecIndex = specIndex
+						mainSpecScoreCenti = scoreCenti
+					elseif not offSpecScoreCenti or scoreCenti > offSpecScoreCenti or (scoreCenti == offSpecScoreCenti and specIndex < offSpecIndex) then
+						offSpecIndex = specIndex
+						offSpecScoreCenti = scoreCenti
+					end
+				end
+			end
+		end
+		row.mainSpecIndex = mainSpecIndex or player[4]
+		row.mainSpecScoreCenti = mainSpecScoreCenti or player[2]
+		row.offSpecIndex = offSpecIndex
+		row.offSpecScoreCenti = offSpecScoreCenti
+		local bestRank = tonumber(player[5])
+		local bestSpecIndex = player[4]
+		local bestScoreCenti = player[2]
+		if type(specRanks) == "table" then
+			for specIndex, rank in pairs(specRanks) do
+				rank = tonumber(rank)
+				if rank and rank > 0 and (not bestRank or rank < bestRank) then
+					bestRank = rank
+					bestSpecIndex = specIndex
+					bestScoreCenti = type(specScores) == "table" and specScores[specIndex] or player[2]
+				end
+			end
+		end
+		row.bestRank = bestRank
+		row.bestRankSpecIndex = bestSpecIndex
+		row.bestRankScoreCenti = bestScoreCenti
 		if row.currentPhaseRanked then
 			row.scoreCenti = player[2]
 			row.rank = player[5]
-			local data = coolstatsUwUData
-			local classSpecs = data and data.specs and data.specs[player[3]]
-			local specScores = player[6]
-			local specRanks = player[7]
-			local mainSpecIndex, mainSpecScoreCenti, offSpecIndex, offSpecScoreCenti
-			if classSpecs and type(specScores) == "table" then
-				for specIndex = 1, 3 do
-					local scoreCenti = specScores[specIndex]
-					if scoreCenti and classSpecs[specIndex] then
-						if not mainSpecScoreCenti or scoreCenti > mainSpecScoreCenti or (scoreCenti == mainSpecScoreCenti and specIndex < mainSpecIndex) then
-							offSpecIndex = mainSpecIndex
-							offSpecScoreCenti = mainSpecScoreCenti
-							mainSpecIndex = specIndex
-							mainSpecScoreCenti = scoreCenti
-						elseif not offSpecScoreCenti or scoreCenti > offSpecScoreCenti or (scoreCenti == offSpecScoreCenti and specIndex < offSpecIndex) then
-							offSpecIndex = specIndex
-							offSpecScoreCenti = scoreCenti
-						end
-					end
-				end
-			end
-			row.mainSpecIndex = mainSpecIndex
-			row.mainSpecScoreCenti = mainSpecScoreCenti
-			row.offSpecIndex = offSpecIndex
-			row.offSpecScoreCenti = offSpecScoreCenti
-			local bestRank = tonumber(player[5])
-			local bestSpecIndex = player[4]
-			local bestScoreCenti = player[2]
-			if type(specRanks) == "table" then
-				for specIndex, rank in pairs(specRanks) do
-					rank = tonumber(rank)
-					if rank and rank > 0 and (not bestRank or rank < bestRank) then
-						bestRank = rank
-						bestSpecIndex = specIndex
-						bestScoreCenti = type(specScores) == "table" and specScores[specIndex] or player[2]
-					end
-				end
-			end
-			row.bestRank = bestRank
-			row.bestRankSpecIndex = bestSpecIndex
-			row.bestRankScoreCenti = bestScoreCenti
 		end
 		row.phase2ScoreCenti, row.phase2Rank = coolstats.GetUwUHistoricalOverall(player)
 		if coolstats.UpdateCachedPlayerBrowserSearchKeys then
@@ -7037,6 +7087,51 @@ if type(coolstats) == "table" then
 		end
 		local phaseId = coolstats.GetActiveUwUPhaseId and coolstats.GetActiveUwUPhaseId()
 		return realmKey == "onyxia" and phaseId == "toc"
+	end
+
+	function coolstats.GetCachedPlayerBrowserPhaseLabels()
+		local data = coolstatsUwUData
+		local realmKey = data and coolstats.NormalizeCachedPlayerRealmKey(data.realm)
+		if not realmKey or realmKey == "" then
+			realmKey = coolstats.GetCurrentRealmKey and coolstats.GetCurrentRealmKey()
+		end
+		local phaseId = coolstats.GetActiveUwUPhaseId and coolstats.GetActiveUwUPhaseId()
+		if realmKey == "onyxia" and phaseId == "icc" then
+			return {
+				currentParse = "P4 Parse",
+				currentRank = "P4 Rank",
+				currentBestRank = "Phase 4 Best Rank",
+				currentCount = "P4 Ranked",
+				historyOverall = "P3 Overall",
+				historyCount = "P3 History",
+			}
+		end
+		if realmKey == "onyxia" and phaseId == "toc" then
+			return {
+				currentParse = "P3 Parse",
+				currentRank = "P3 Rank",
+				currentBestRank = "Phase 3 Best Rank",
+				currentCount = "P3 Ranked",
+				historyOverall = "P2 Overall",
+				historyCount = "P2 History",
+			}
+		end
+		return {
+			currentParse = "Parses",
+			currentRank = "Best Rank",
+			currentBestRank = "Best Rank",
+			currentCount = "Logs",
+			historyOverall = coolstats.GetUwUHistoricalOverallLabel(),
+			historyCount = "History",
+		}
+	end
+
+	function coolstats.ShouldCachedPlayerBrowserShowHistory()
+		local data = coolstatsUwUData
+		if data and data.historicalOverallPhaseId and data.historicalOverallLabel then
+			return true
+		end
+		return coolstats.IsOnyxiaPhase3Browser()
 	end
 
 	function coolstats.GetCachedPlayerBrowserClassName(classIndex)
@@ -7690,7 +7785,10 @@ if type(coolstats) == "table" then
 		elseif sortKey == "parses" then
 			return tonumber(row.scoreCenti) or -1
 		elseif sortKey == "rank" then
-			return tonumber(row.bestRank) or 9999999
+			if row.currentPhaseRanked then
+				return tonumber(row.bestRank) or 9999999
+			end
+			return 9999999
 		elseif sortKey == "boss" then
 			return tonumber(row.bossScoreCenti) or -1
 		elseif sortKey == "bossRank" then
@@ -7990,6 +8088,7 @@ if type(coolstats) == "table" then
 		for rowIndex = 1, #baseRows do
 			local row = baseRows[rowIndex]
 			row.isFavorite = favorites and favorites[row.key] == true
+			row.isCurrentPlayer = playerKey ~= "" and (row.nameKey or NormalizeName(row.name or row.key or "")) == playerKey
 			if coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey) then
 				if bossIndex and row.player then
 					local bossEntry, bossSpecIndex = coolstats.GetCachedPlayerBrowserBossEntry(row.player, bossIndex, specFilterKey)
@@ -8095,9 +8194,9 @@ if type(coolstats) == "table" then
 			bestSpecName = bestSpecName,
 			cacheText = coolstats.GetCachedPlayerBrowserCacheText(row),
 			className = coolstats.GetCachedPlayerBrowserClassName(row.classIndex),
-			bestRankText = row.bestRank and ("#" .. tostring(row.bestRank)) or "-",
-			currentRankLabel = panel and panel.showPhase2History and "Phase 3 Best Rank" or "Best Rank",
-			phase2Text = panel and panel.showPhase2History and row.phase2ScoreCenti and FormatUwUScoreWithRank(row.phase2ScoreCenti, row.phase2Rank) or "-",
+			bestRankText = row.currentPhaseRanked and row.bestRank and ("#" .. tostring(row.bestRank)) or "-",
+			currentRankLabel = (coolstats.GetCachedPlayerBrowserPhaseLabels().currentBestRank or "Best Rank"),
+			phase2Text = panel and panel.showPhase2History and (row.phase2ScoreCenti and FormatUwUScoreWithRank(row.phase2ScoreCenti, row.phase2Rank) or "Not Ranked") or "-",
 			mainSpecText = mainSpecName and (mainSpecName .. " " .. FormatUwUScore(row.mainSpecScoreCenti)) or "-",
 			offSpecText = offSpecName and (offSpecName .. " " .. FormatUwUScore(row.offSpecScoreCenti)) or "-",
 		}
@@ -8152,7 +8251,7 @@ if type(coolstats) == "table" then
 			end
 		end
 		if self.phase2Text and self.phase2Text ~= "-" then
-			GameTooltip:AddDoubleLine("Phase 2 Overall", self.phase2Text, 0.86, 0.86, 0.78, self.phase2R or 1, self.phase2G or 1, self.phase2B or 1)
+			GameTooltip:AddDoubleLine(self.phase2Label or coolstats.GetCachedPlayerBrowserPhaseLabels().historyOverall or "Previous Overall", self.phase2Text, 0.86, 0.86, 0.78, self.phase2R or 1, self.phase2G or 1, self.phase2B or 1)
 		end
 		if self.cacheText and self.cacheText ~= "-" then
 			GameTooltip:AddDoubleLine("Gear Cached", self.cacheText, 0.86, 0.86, 0.78, 1, 1, 1)
@@ -8719,13 +8818,14 @@ if type(coolstats) == "table" then
 
 	coolstats.CHANGELOG_ENTRIES = {
 		{
-			version = "0.2.44",
-			date = "2026-08-24",
+			version = "0.2.45",
+			date = "2026-09-03",
 			notes = {
-				"Refreshed all Warmane UwU data with realm-aware weekly caps: Onyxia 600, Lordaeron 1000, Icecrown 1500 per class/spec.",
-				"Updated dynamic player chunks: Onyxia 20,091 players, Lordaeron 15,426 players, Icecrown 35,502 players.",
-				"Ran duplicate-name verification and targeted boss-row repair; unresolved reused-name ambiguities were skipped before data was written.",
-				"Rebuilt the install ZIP and generated Warperia branch from the same release artifact.",
+				"Prepared Onyxia for ICC with 9,864 locked Phase 3 Overall history rows, an empty Phase 4 ICC/Toravon boss database, and old TOGC/Ulduar boss parses removed from the active dataset.",
+				"Added player and inspect paperdoll gem sockets with empty sockets, socket-color borders, prongs, sparkle, hover highlights, socketing clicks, and size/layout settings.",
+				"Added Onyxia Phase 4/Phase 3 browser labels, historical-only spec filtering, neon-blue current-player highlighting, and heroic ICC skull markers.",
+				"Disabled ICC achievement/statistic raid-progress fallback inspection and added a one-time Onyxia Phase 4 welcome popup.",
+				"Added ranged hit percent display and improved third-party player dropdown compatibility.",
 			},
 		},
 		{
@@ -9768,6 +9868,138 @@ if type(coolstats) == "table" then
 		return frame
 	end
 
+	function coolstats.CreateOnyxiaPhase4WelcomeFrame()
+		if coolstats.onyxiaPhase4WelcomeFrame then
+			return coolstats.onyxiaPhase4WelcomeFrame
+		end
+		local frame = CreateFrame("Frame", nil, UIParent)
+		coolstats.onyxiaPhase4WelcomeFrame = frame
+		SetFrameSize(frame, 400, 168)
+		frame:SetFrameStrata("TOOLTIP")
+		frame:SetFrameLevel(945)
+		frame:EnableMouse(true)
+		if frame.SetToplevel then
+			frame:SetToplevel(true)
+		end
+		if frame.SetClampedToScreen then
+			frame:SetClampedToScreen(true)
+		end
+		frame:SetBackdrop({
+			bgFile = "Interface\\Buttons\\WHITE8X8",
+			edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+			tile = false,
+			tileSize = 32,
+			edgeSize = 16,
+			insets = { left = 5, right = 5, top = 5, bottom = 5 },
+		})
+		frame:SetBackdropColor(0.02, 0.018, 0.014, 0.98)
+		frame:SetBackdropBorderColor(1.0, 0.78, 0.12, 1)
+		if coolstats.ApplyTabardPanelBackground then
+			coolstats.ApplyTabardPanelBackground(frame, 0.92, 0.42)
+			if frame.coolstatsTabardBackground then
+				frame.coolstatsTabardBackground:ClearAllPoints()
+				frame.coolstatsTabardBackground:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
+				frame.coolstatsTabardBackground:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
+				frame.coolstatsTabardBackground:SetTexCoord(0.12, 0.88, 0.02, 0.98)
+			end
+			if frame.coolstatsTabardShade then
+				frame.coolstatsTabardShade:ClearAllPoints()
+				frame.coolstatsTabardShade:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
+				frame.coolstatsTabardShade:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
+			end
+		end
+
+		local close = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+		SetFrameSize(close, 22, 20)
+		close:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -8, -8)
+		close:SetText("x")
+		close:SetFrameStrata("TOOLTIP")
+		close:SetFrameLevel(frame:GetFrameLevel() + 30)
+		if close.GetFontString and close:GetFontString() then
+			close:GetFontString():SetTextColor(1.0, 1.0, 1.0)
+		end
+		close:SetScript("OnClick", function()
+			frame:Hide()
+		end)
+		frame.closeButton = close
+
+		local title = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+		title:SetPoint("TOP", frame, "TOP", 0, -18)
+		title:SetWidth(360)
+		title:SetJustifyH("CENTER")
+		title:SetTextColor(0.0, 0.75, 1.0)
+		title:SetShadowOffset(1, -1)
+		title:SetShadowColor(0, 0, 0, 1)
+		title:SetText("coolstats")
+		frame.title = title
+
+		local body = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+		body:SetPoint("TOP", title, "BOTTOM", 0, -14)
+		body:SetWidth(360)
+		body:SetHeight(42)
+		body:SetJustifyH("CENTER")
+		if body.SetJustifyV then
+			body:SetJustifyV("MIDDLE")
+		end
+		if body.SetWordWrap then
+			body:SetWordWrap(true)
+		end
+		body:SetTextColor(0.86, 0.86, 0.78)
+		body:SetShadowOffset(1, -1)
+		body:SetShadowColor(0, 0, 0, 1)
+		body:SetText("Welcome to Phase 4!\nReady for Icecrown Citadel?")
+		frame.body = body
+
+		local button = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+		SetFrameSize(button, 104, 24)
+		button:SetPoint("BOTTOM", frame, "BOTTOM", 0, 18)
+		button:SetText("Lets go!")
+		button:SetFrameStrata("TOOLTIP")
+		button:SetFrameLevel(frame:GetFrameLevel() + 30)
+		if coolstats.StyleFeatureGuideButton then
+			coolstats.StyleFeatureGuideButton(button, true)
+		end
+		button:SetFrameLevel(frame:GetFrameLevel() + 30)
+		if button.GetFontString and button:GetFontString() then
+			button:GetFontString():SetTextColor(1.0, 0.82, 0.0)
+		end
+		button:SetScript("OnClick", function()
+			frame:Hide()
+		end)
+		frame.okButton = button
+
+		if coolstats.RegisterManagedWindow then
+			coolstats.RegisterManagedWindow(frame)
+		end
+		frame:Hide()
+		return frame
+	end
+
+	function coolstats.ShowOnyxiaPhase4WelcomePopup()
+		local frame = coolstats.CreateOnyxiaPhase4WelcomeFrame()
+		frame:ClearAllPoints()
+		frame:SetPoint("CENTER", UIParent, "CENTER", 0, 40)
+		frame:Show()
+		if coolstats.TouchManagedWindow then
+			coolstats.TouchManagedWindow(frame)
+		end
+		if frame.Raise then
+			frame:Raise()
+		end
+		if frame.closeButton and frame.closeButton.Raise then
+			frame.closeButton:Raise()
+		end
+		if frame.okButton then
+			frame.okButton:SetFrameLevel(frame:GetFrameLevel() + 30)
+			if frame.okButton.Raise then
+				frame.okButton:Raise()
+			end
+		end
+		if PlaySound then
+			PlaySound((SOUNDKIT and SOUNDKIT.TELL_MESSAGE) or "TellMessage")
+		end
+	end
+
 	function coolstats.HideFeatureGuideFrame(markComplete)
 		local frame = coolstats.featureGuideFrame
 		local active = coolstats.activeFeatureGuide
@@ -10408,12 +10640,17 @@ if type(coolstats) == "table" then
 				panel.header.cacheText.tooltipLabel = "cached gear"
 			end
 		else
-			panel.header.scoreText.baseLabel = panel.showPhase2History and "P3 Parse" or "Parses"
+			local phaseLabels = coolstats.GetCachedPlayerBrowserPhaseLabels()
+			panel.header.scoreText.baseLabel = panel.showPhase2History and phaseLabels.currentParse or "Parses"
 			panel.header.scoreText.tooltipLabel = nil
 			panel.header.scoreText.sortKey = "parses"
-			panel.header.rankText.baseLabel = panel.showPhase2History and "P3 Rank" or "Best Rank"
+			panel.header.rankText.baseLabel = panel.showPhase2History and phaseLabels.currentRank or "Best Rank"
 			panel.header.rankText.tooltipLabel = nil
 			panel.header.rankText.sortKey = "rank"
+			if panel.header.phase2Text then
+				panel.header.phase2Text.baseLabel = phaseLabels.historyOverall or "Previous Overall"
+				panel.header.phase2Text.tooltipLabel = nil
+			end
 			if panel.header.dpsText then
 				panel.header.dpsText.baseLabel = "Boss DPS"
 				panel.header.dpsText.tooltipLabel = nil
@@ -12394,7 +12631,7 @@ if type(coolstats) == "table" then
 
 		local panel = CreateFrame("Frame", "coolstatsCachedPlayerBrowser", UIParent)
 		coolstats.cachedPlayerBrowser = panel
-		panel.showPhase2History = coolstats.IsOnyxiaPhase3Browser()
+		panel.showPhase2History = coolstats.ShouldCachedPlayerBrowserShowHistory()
 		SetFrameSize(panel, 940, 552)
 		panel:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 		panel:SetFrameStrata("DIALOG")
@@ -12645,11 +12882,12 @@ if type(coolstats) == "table" then
 		SetFrameSize(header.cacheGuideTarget, 84, 18)
 		header.cacheGuideTarget:SetPoint("LEFT", header, "LEFT", 402, 0)
 		header.cacheGuideTarget:EnableMouse(false)
-		header.scoreText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and "P3 Parse" or "Parses", 494, 60, "RIGHT", "parses")
-		header.rankText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and "P3 Rank" or "Best Rank", 562, 66, "RIGHT", "rank")
+		local phaseLabels = coolstats.GetCachedPlayerBrowserPhaseLabels()
+		header.scoreText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and phaseLabels.currentParse or "Parses", 494, 60, "RIGHT", "parses")
+		header.rankText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and phaseLabels.currentRank or "Best Rank", 562, 66, "RIGHT", "rank")
 		header.dpsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Boss DPS", 616, 68, "RIGHT", "bossDps")
 		header.dpsText:Hide()
-		header.phase2Text = coolstats.CreateCachedPlayerBrowserColumn(header, "P2 Overall", 638, 106, "RIGHT", "phase2")
+		header.phase2Text = coolstats.CreateCachedPlayerBrowserColumn(header, phaseLabels.historyOverall or "Previous Overall", 638, 106, "RIGHT", "phase2")
 		if not panel.showPhase2History then
 			header.phase2Text:Hide()
 		end
@@ -12750,7 +12988,8 @@ if type(coolstats) == "table" then
 		end
 		if panel.showPhase2History then
 			local bossText = panel.browserBossIndex and string.format("   Boss Logs %d", counts.boss or 0) or ""
-			panel.subtitle:SetText(string.format("%s   P3 Ranked %d   P2 History %d   Gear %d   Talents %d   Both %d%s", shownText, counts.current or 0, counts.phase2 or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
+			local phaseLabels = coolstats.GetCachedPlayerBrowserPhaseLabels()
+			panel.subtitle:SetText(string.format("%s   %s %d   %s %d   Gear %d   Talents %d   Both %d%s", shownText, phaseLabels.currentCount or "Logs", counts.current or 0, phaseLabels.historyCount or "History", counts.phase2 or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
 		else
 			local bossText = panel.browserBossIndex and string.format("   Boss Logs %d", counts.boss or 0) or ""
 			panel.subtitle:SetText(string.format("%s   Logs %d   Gear %d   Talents %d   Both %d%s", shownText, counts.logs or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
@@ -12778,7 +13017,7 @@ if type(coolstats) == "table" then
 		for index = 1, 18 do
 			local row = rows[offset + index]
 			if row then
-				paintKey = paintKey .. "\030" .. tostring(row.key or row.name or "") .. ":" .. tostring(row.isFavorite or "") .. ":" .. tostring(row.hasGear or "") .. ":" .. tostring(row.hasTalents or "") .. ":" .. tostring(row.scoreCenti or "") .. ":" .. tostring(row.bestRank or "") .. ":" .. tostring(row.bossScoreCenti or "") .. ":" .. tostring(row.bossDps or "")
+				paintKey = paintKey .. "\030" .. tostring(row.key or row.name or "") .. ":" .. tostring(row.isFavorite or "") .. ":" .. tostring(row.isCurrentPlayer or "") .. ":" .. tostring(row.hasGear or "") .. ":" .. tostring(row.hasTalents or "") .. ":" .. tostring(row.scoreCenti or "") .. ":" .. tostring(row.bestRank or "") .. ":" .. tostring(row.bossScoreCenti or "") .. ":" .. tostring(row.bossDps or "")
 			else
 				paintKey = paintKey .. "\030-"
 			end
@@ -12809,10 +13048,11 @@ if type(coolstats) == "table" then
 				rowFrame.hasTalents = row.hasTalents
 				rowFrame.cacheText = display and display.cacheText or coolstats.GetCachedPlayerBrowserCacheText(row)
 				rowFrame.className = display and display.className or coolstats.GetCachedPlayerBrowserClassName(row.classIndex)
-				rowFrame.bestRankText = display and display.bestRankText or row.bestRank and ("#" .. tostring(row.bestRank)) or "-"
+				rowFrame.bestRankText = display and display.bestRankText or (row.currentPhaseRanked and row.bestRank and ("#" .. tostring(row.bestRank)) or "-")
 				rowFrame.bestRankSpecName = display and display.bestSpecName or nil
-				rowFrame.currentRankLabel = display and display.currentRankLabel or (panel.showPhase2History and "Phase 3 Best Rank" or "Best Rank")
+				rowFrame.currentRankLabel = display and display.currentRankLabel or (coolstats.GetCachedPlayerBrowserPhaseLabels().currentBestRank or "Best Rank")
 				rowFrame.phase2Text = display and display.phase2Text or "-"
+				rowFrame.phase2Label = coolstats.GetCachedPlayerBrowserPhaseLabels().historyOverall or "Previous Overall"
 				rowFrame.mainSpecText = display and display.mainSpecText or "-"
 				rowFrame.offSpecText = display and display.offSpecText or "-"
 				if panel.browserBossIndex then
@@ -12850,7 +13090,9 @@ if type(coolstats) == "table" then
 						rowFrame.classIcon:SetVertexColor(0.35, 0.35, 0.35, 0.75)
 					end
 				end
-				if classColor then
+				if row.isCurrentPlayer then
+					rowFrame.nameText:SetTextColor(0.0, 0.75, 1.0)
+				elseif classColor then
 					rowFrame.nameText:SetTextColor(classColor.r, classColor.g, classColor.b)
 				else
 					rowFrame.nameText:SetTextColor(0.86, 0.86, 0.78)
@@ -12930,8 +13172,11 @@ if type(coolstats) == "table" then
 						rowFrame.bossDpsTextFrame:Hide()
 					end
 				end
-				if panel.showPhase2History and row.phase2ScoreCenti then
-					local phase2Red, phase2Green, phase2Blue = GetUwUScoreColor(row.phase2ScoreCenti)
+				if panel.showPhase2History then
+					local phase2Red, phase2Green, phase2Blue = 0.62, 0.62, 0.58
+					if row.phase2ScoreCenti then
+						phase2Red, phase2Green, phase2Blue = GetUwUScoreColor(row.phase2ScoreCenti)
+					end
 					rowFrame.phase2TextFrame:Show()
 					rowFrame.phase2TextFrame:SetText(rowFrame.phase2Text)
 					rowFrame.phase2TextFrame:SetTextColor(phase2Red, phase2Green, phase2Blue)

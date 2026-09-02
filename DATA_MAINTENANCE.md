@@ -32,9 +32,11 @@ Warmane `coolstats_publish` tree.
 
 ## Realm Profiles
 
-- **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
-  Koralon. Phase 2 Overall score/rank and the locked historical Algalon parse
-  remain as previous-season indicators.
+- **Onyxia:** ICC-profile data covering Icecrown Citadel and Toravon, with the
+  final TOGC snapshot retained as Phase 3 Overall score/rank. Until UwU exposes
+  usable Onyxia ICC and Toravon leaderboards, boss parses are intentionally
+  empty. TOGC, Ulduar, Anub'arak, Algalon, Koralon, and Ruby Sanctum boss parses
+  are not retained in the active Onyxia ICC dataset.
 - **Icecrown:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak. Vault of Archavon bosses are intentionally excluded.
 - **Lordaeron:** ICC-profile data covering Icecrown Citadel, Halion, and
@@ -43,22 +45,24 @@ Warmane `coolstats_publish` tree.
 Onyxia, Icecrown, and Lordaeron data is generated as separate load-on-demand
 addons. Only the dataset matching the player's current realm is loaded in-game.
 
-Onyxia's deprecated Ulduar boss rows are not shipped in the current dataset;
-only Algalon remains as a historical boss indicator. Onyxia's Lair is excluded
-until it is present in the official player logs.
+Onyxia's deprecated Ulduar and TOGC boss rows are not shipped in the ICC
+dataset. Onyxia's Lair and Ruby Sanctum are excluded until they are present in
+the official player logs for the active phase.
 
 ## Current Caps And Size Guardrails
 
-As of `0.2.35`:
+As of `0.2.45` and the Onyxia ICC transition prep:
 
 - **Icecrown:** top 1,500 ranked players per class/specialization, resulting in
-  33,744 current ranked players and 34,427 total players.
+  33,896 current ranked players and 35,803 total players in 12 player chunks.
 - **Lordaeron:** top 1,000 ranked players per class/specialization, resulting
-  in 14,989 current ranked players and 15,140 total players.
-- **Onyxia:** top 600 ranked players per class/specialization for the TOGC
-  phase dataset, resulting in 7,139 current active players and 15,916 total
-  players after retained history and TOGC boss-only coverage, Phase 2 Overall,
-  and locked Algalon history retained.
+  in 15,090 current ranked players and 15,517 total players in 6 player chunks.
+- **Onyxia:** top 600 ranked players per class/specialization. During ICC
+  transition, run one final TOGC refresh first and keep
+  `coolstats_publish/data/uwu_logs_onyxia_toc.json` as the Phase 3 Overall
+  source. The active ICC handoff intentionally contains 9,864 Phase 3 Overall
+  historical rows, 0 active Phase 4 ranked rows, and 6 player chunks until UwU
+  exposes usable Onyxia ICC and Toravon leaderboards.
 
 For ICC realms, boss-only/rankless leaderboard players must not be added to the
 shipped dataset. Boss parses should be attached only to players already present
@@ -175,10 +179,31 @@ class/spec. To run one realm manually:
 .\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Lordaeron -MaxPerSpec 1000
 ```
 
-For Onyxia phase data, keep the TOGC profile active and preserve Phase 2 Overall
-plus Algalon history. Do not remove or recompute the locked Algalon historical
-records until Onyxia moves to the next phase where that history is no longer
-needed.
+For Onyxia ICC transition data, run one final TOGC refresh and keep the final
+TOGC JSON snapshot as `coolstats_publish/data/uwu_logs_onyxia_toc.json` so it
+can seed Phase 3 Overall:
+
+```powershell
+.\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Onyxia -PhaseOverrides @{ Onyxia = "toc" } -ActivatePhase
+```
+
+Then build the intentional empty ICC handoff dataset:
+
+```powershell
+python .\tools\build_empty_onyxia_icc_dataset.py
+```
+
+Once UwU exposes usable Onyxia ICC and Toravon leaderboards, generate the
+active dataset with:
+
+```powershell
+.\tools\update_all_uwu_realms.ps1 -Mode Weekly -Realms Onyxia -PhaseOverrides @{ Onyxia = "icc" } -ActivatePhase
+```
+
+The ICC generator profile intentionally has no retained boss list, so old
+TOGC/Ulduar boss parses are filtered out instead of being carried into the new
+phase. The offline empty handoff builder is the only intentional exception to
+the "do not ship an empty configured boss leaderboard" guard.
 
 Generated load-on-demand addon sources are written to:
 
@@ -193,7 +218,9 @@ The updater should refuse to overwrite output when:
 - A weekly class/spec rankings request fails.
 - The fresh active-player count is below the minimum.
 - An entire configured boss leaderboard produces no rows.
-- Historical Onyxia Algalon records change or disappear unexpectedly.
+- Onyxia ICC/Toravon leaderboards are still empty during a normal online ICC
+  pull; use the explicit empty handoff builder instead of overwriting active
+  data with a partially fetched online phase switch.
 
 ## Pre-Release Safety Checklist
 
@@ -318,10 +345,15 @@ that Git reports, and do not use a wildcard safe-directory setting.
 
 - Keep player/spec data separated. Do not average or merge a player's parses
   across different specs.
-- Keep Onyxia Phase 2 Overall data separate from current Phase 3 TOGC data.
-- Keep Onyxia historical Algalon immutable until the next planned phase change.
-- Do not use TOGC achievement/statistics fallback on Onyxia unless Warmane's
-  10H/25H cross-crediting issue is proven fixed.
+- Keep locked Onyxia Phase 3 Overall data separate from current Phase 4 ICC
+  data.
+- Do not carry Phase 2 Overall, retained Algalon, Ulduar, TOGC boss rows, or
+  Ruby Sanctum rows into the active Onyxia ICC dataset.
+- Keep `coolstats_publish/data/uwu_logs_onyxia_toc.json` as the Phase 3
+  historical source unless intentionally refreshing the final TOGC snapshot
+  before ICC launch.
+- Do not use TOGC achievement/statistics fallback on Onyxia legacy views unless
+  Warmane's 10H/25H cross-crediting issue is proven fixed.
 - Do not ship boss-only/rankless ICC players merely because they appear on a
   boss leaderboard.
 - Do not co-mingle Warmane and Rising Gods generated data, scripts, or release

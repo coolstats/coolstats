@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.44 - 2026-08-28
+## 0.2.45 - 2026-09-03
 
 ### Data
 
@@ -8,10 +8,17 @@
   realm-aware weekly caps: Onyxia top 600 per class/spec, Lordaeron top 1,000
   per class/spec, and Icecrown top 1,500 per class/spec.
 - Shipped refreshed dynamic ranked chunk tranches for the in-game data-load
-  slider: Onyxia 20,581 total players in 7 chunks, Lordaeron 15,462 total
-  players in 6 chunks, and Icecrown 35,651 total players in 12 chunks.
-- Preserved the realm-aware raid layer shard layout for TOGC/VOA/Ulduar on
-  Onyxia and ICC/RS/TOGC on Icecrown and Lordaeron.
+  slider: Onyxia 9,864 total Phase 3 Overall history players in 6 chunks,
+  Lordaeron 15,517 total players in 6 chunks, and Icecrown 35,803 total
+  players in 12 chunks.
+- Transitioned Onyxia to the ICC profile with an intentional empty Phase 4 boss
+  database for Icecrown Citadel and Toravon until UwU exposes usable Onyxia
+  ICC/Toravon leaderboards.
+- Removed Onyxia TOGC, Ulduar, Anub'arak, Algalon, Koralon, and Ruby Sanctum
+  boss parses from the active ICC dataset while keeping the locked Phase 3
+  Overall snapshot as historical data.
+- Preserved the realm-aware raid layer shard layout for ICC/VOA on Onyxia and
+  ICC/RS/TOGC on Icecrown and Lordaeron.
 - Ran duplicate-name verification and targeted boss-row repair during the
   refresh. Unresolved reused-name ambiguities, including rate-limited checks,
   were skipped; resolved targets were repaired before writing generated data.
@@ -31,6 +38,17 @@
   prong scale, model score placement, and model rotation.
 - Renamed the paperdoll gem art assets to `coolstats_paperdoll_*` paths for
   clearer ownership in the release bundle.
+- Added Onyxia phase-aware player browser labels for Phase 4 current data and
+  Phase 3 Overall history, including historical-only spec filtering without
+  showing impossible Phase 4 ranks.
+- Highlighted the current player's own browser row in neon blue.
+- Added skull markers for heroic ICC boss names.
+- Added ranged hit rating percent display to the custom character stats panel.
+- Improved compatibility with third-party player dropdown addons such as
+  Stalker by handling non-Blizzard dropdown unit payloads more defensively.
+- Disabled ICC achievement/statistic raid-progress fallback inspection while
+  keeping the setting available for a later re-enable.
+- Added a one-time account-wide Onyxia Phase 4 welcome popup.
 - Updated UI sounds for gem toggles, Warmane Armory actions, and player browser
   open/close behavior.
 

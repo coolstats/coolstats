@@ -1,17 +1,17 @@
 ## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Onyxia Vault of Archavon 05
-## Notes: Optional Vault of Archavon UwU Logs layer 5/7 for Onyxia.
+## Notes: Optional Vault of Archavon UwU Logs layer 5/6 for Onyxia.
 ## Author: coolstats
-## Version: 0.2.44
+## Version: 0.2.45
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Onyxia
 ## X-coolstats-Realm: Onyxia
-## X-coolstats-Phase: toc
+## X-coolstats-Phase: icc
 ## X-coolstats-BaseAddon: coolstats_Data_Onyxia
 ## X-coolstats-RaidLayer: voa
 ## X-coolstats-RaidName: Vault of Archavon
 ## X-coolstats-ShardIndex: 5
-## X-coolstats-ShardCount: 7
+## X-coolstats-ShardCount: 6
 
-data\logs\toc\coolstats_uwu_data_voa_05.lua
+data\logs\icc\coolstats_uwu_data_voa_05.lua

@@ -21,21 +21,23 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of `0.2.40`, the install-ready release ships separate load-on-demand data
-addons for each supported realm:
+As of the Onyxia ICC transition prep, the install-ready release ships separate
+load-on-demand data addons for each supported realm:
 
-- **Onyxia:** current Phase 3 Trial of the Grand Crusader 25 heroic bosses and
-  Koralon, with Phase 2 Overall rank/parse and the locked historical Algalon
-  parse retained as previous-season indicators. Current rankings are capped at
-  the top 600 players per class/specialization, with 17,836 total bundled
-  player rows in 6 ranked load chunks.
+- **Onyxia:** ICC-profile data covering Icecrown Citadel and Toravon, with the
+  final TOGC snapshot retained as Phase 3 Overall score/rank. Until UwU exposes
+  usable Onyxia ICC and Toravon leaderboards, boss parses are intentionally
+  empty. The bundled Onyxia handoff contains 9,864 Phase 3 Overall player rows
+  in 6 load chunks and 0 active Phase 4 boss/current rows. TOGC, Ulduar,
+  Anub'arak, Algalon, Koralon, and Ruby Sanctum boss parses are not retained in
+  the active Onyxia ICC dataset.
 - **Icecrown:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,500 ranked players per
-  class/specialization, with 34,846 total bundled player rows in 12 ranked load
+  class/specialization, with 35,803 total bundled player rows in 12 ranked load
   chunks.
 - **Lordaeron:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,000 ranked players per
-  class/specialization, with 15,222 total bundled player rows in 6 ranked load
+  class/specialization, with 15,517 total bundled player rows in 6 ranked load
   chunks.
 
 The ICC realm datasets intentionally exclude boss-only/rankless leaderboard
@@ -67,8 +69,9 @@ tranches after `/reload` for lower memory use.
 - Individual player log panels include quick buttons for chat-linking logs and
   opening the player's Warmane Armory URL.
 - Raid-progress fallback checks can show achievement/statistic progress when
-  verified logs are missing on realms where the underlying client data is
-  reliable.
+  verified logs are missing on non-ICC phases where the underlying client data
+  is reliable. ICC achievement/statistic fallback is currently disabled to
+  avoid extra inspection work during Phase 4 testing.
 
 The logs database is bundled with each addon release. coolstats does not make
 web requests while the game is running.
@@ -87,6 +90,10 @@ table:
   class/spec representation with counts, percentages, a total sum, and an
   optional boss drilldown selector.
 - View main spec, off spec, parses, best rank, and cache availability.
+- On Onyxia, phase-aware columns separate Phase 4 ICC/Toravon data from the
+  locked Phase 3 Overall history, so historical rows remain searchable without
+  showing impossible Phase 4 ranks before ICC logs exist.
+- Your own character is highlighted in neon blue in ranking lists.
 - See whether logs, gear, and talents are available before opening a player.
 - Favourite players so they remain at the top of the default list.
 - Right-click players to compare logs, whisper, invite, view cached talents,
@@ -106,8 +113,8 @@ looking them up can store a local snapshot of their equipment and talents.
 Those snapshots can then be viewed later, even when the player is no longer
 nearby.
 
-- Paperdoll-style cached gear view with item icons, rarity borders, and item
-  levels.
+- Paperdoll-style cached gear view with item icons, rarity borders, item
+  levels, and socket indicators when item links expose gem data.
 - Cached GearScore, equipped item level, and implied combat ratings.
 - Cached talent builds with specialization backgrounds, rank indicators,
   specialization switching, and Blizzard-style talent tooltips when available.
@@ -119,10 +126,11 @@ nearby.
 - Up to 1,500 recent player snapshots are retained.
 - Snapshots older than 14 days are automatically removed.
 
-Cached gear statistics are estimates derived from item data. Cached gem presence
-is shown when available and enchant bonuses are included when available, while
-some effects, talents, buffs, socket bonuses, gem stat bonuses, and other
-character-specific modifiers may not be represented accurately.
+Cached gear statistics are estimates derived from item data. Cached gem and
+empty-socket presence is shown when available, and enchant bonuses are included
+when available, while some effects, talents, buffs, socket bonuses, gem stat
+bonuses, and other character-specific modifiers may not be represented
+accurately.
 
 ### Performance Analysis
 
@@ -156,6 +164,17 @@ coolstats also includes an optional overhaul of the default character panel:
 - Detachable stat popouts.
 - Configurable backgrounds, opacity, zoom, contrast, and text palettes.
 - Item-level badges and rarity-colored equipment-slot borders.
+- Player and inspect paperdoll frames can show socketed gems and empty sockets
+  with socket-color borders, prongs, matched-socket sparkle, hover highlights,
+  and oversize layout guardrails.
+- Gem toggle buttons use the Solid Dragon's Eye icon; disabling gem display
+  restores native rotate and resistance controls where the Blizzard frame uses
+  them.
+- Player paperdoll gem icons can open the socketing UI directly, including the
+  drag/drop socketing path where the client supports it.
+- Gem icon, backdrop, spacing, and prong sizes can be adjusted from the
+  character-panel settings.
+- Ranged hit rating shows the same rating-plus-percent style as melee hit.
 - Cleaner item tooltips when GearScore is installed.
 - Configurable loot-alert toasts for looted items, roll wins, and crafts.
 
@@ -222,6 +241,7 @@ Minimap controls:
 | `/coolstats settings` | Open settings |
 | `/coolstats browser` | Open the player browser |
 | `/coolstats uwu [player name]` | Open UwU Logs for a player |
+| `/coolstats phase4welcome reset` | Reset and show the Onyxia Phase 4 welcome popup again on Onyxia |
 
 If no name is supplied to `/coolstats uwu`, the current target is used. If
 there is no target, coolstats uses your character.
