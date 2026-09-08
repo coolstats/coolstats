@@ -1859,7 +1859,7 @@ function coolstats.LayoutTooltipOptionsPanel()
 		if panel.raidLayerDescription then
 			panel.raidLayerDescription:SetText("Hide raids now; save memory after /reload.")
 		end
-		content:SetHeight(470)
+		content:SetHeight(500)
 	else
 		local columnWidth = visibleWidth
 		UpdateOptionsColumnLayout(leftColumn, content, 0, -72, columnWidth, 330)
@@ -1879,7 +1879,7 @@ function coolstats.LayoutTooltipOptionsPanel()
 		if panel.raidLayerDescription then
 			panel.raidLayerDescription:SetText("Unchecked raids hide now; memory savings apply after /reload.")
 		end
-		content:SetHeight(760)
+		content:SetHeight(790)
 	end
 	if rightColumn.descriptions then
 		for index = 1, #rightColumn.descriptions do
@@ -2091,13 +2091,19 @@ function coolstats.CreateTooltipOptionsPanel()
 	panel.uwuPlayerLoadLimitSlider = CreateUwUPlayerLoadLimitSlider(rightColumn, -36)
 	panel.uwuPlayerLoadDescription = CreateDescription(rightColumn, "Lower values use fewer players after /reload. Raising above loaded data also needs /reload.", -70)
 
-	CreateHeading(rightColumn, "Raid Data Layers", -124)
-	panel.raidLayerDescription = CreateDescription(rightColumn, "Unchecked raids hide now; memory savings apply after /reload.", -150)
-	CreateUwURaidLayerCheck(rightColumn, 1, -194)
-	CreateUwURaidLayerCheck(rightColumn, 2, -222)
-	CreateUwURaidLayerCheck(rightColumn, 3, -250)
-	CreateUwURaidLayerCheck(rightColumn, 4, -278)
-	CreateUwURaidLayerCheck(rightColumn, 5, -306)
+	CreateCheck(rightColumn, "coolstatsBrowserFavoritesOnly", "Show only Favourites", -112, function()
+		return GetTooltipOptions().browserFavoritesOnly == true
+	end, function(value)
+		GetTooltipOptions().browserFavoritesOnly = value
+	end, "Only show favourited characters in the player browser. Combines with other browser filters and stays enabled across sessions. The lower-left star toggles the same setting. Data loading and tooltip lookups are unchanged.", "browser")
+
+	CreateHeading(rightColumn, "Raid Data Layers", -152)
+	panel.raidLayerDescription = CreateDescription(rightColumn, "Unchecked raids hide now; memory savings apply after /reload.", -178)
+	CreateUwURaidLayerCheck(rightColumn, 1, -222)
+	CreateUwURaidLayerCheck(rightColumn, 2, -250)
+	CreateUwURaidLayerCheck(rightColumn, 3, -278)
+	CreateUwURaidLayerCheck(rightColumn, 4, -306)
+	CreateUwURaidLayerCheck(rightColumn, 5, -334)
 
 	if InterfaceOptions_AddCategory then
 		InterfaceOptions_AddCategory(panel)

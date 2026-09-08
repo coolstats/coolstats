@@ -1,8 +1,8 @@
 ## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown UWU 05
-## Notes: Realm-specific UwU Logs shard 5/12 for Icecrown.
+## Notes: Realm-specific UwU Logs shard 5/13 for Icecrown.
 ## Author: coolstats
-## Version: 0.2.45
+## Version: 0.2.46
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Icecrown
@@ -10,6 +10,6 @@
 ## X-coolstats-Phase: icc
 ## X-coolstats-BaseAddon: coolstats_Data_Icecrown
 ## X-coolstats-ShardIndex: 5
-## X-coolstats-ShardCount: 12
+## X-coolstats-ShardCount: 13
 
 data\logs\icc\coolstats_uwu_data_05.lua

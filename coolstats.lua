@@ -56,6 +56,7 @@ local defaults = {
 		cacheOnHover = true,
 		cacheInspectGear = true,
 		cacheInspectTalents = true,
+		browserFavoritesOnly = false,
 		uwuPlayerLoadLimit = nil,
 		uwuRaidLayers = {},
 	},

@@ -21,9 +21,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9802, 16, 30, 3347 }
+			player[9][1][12] = { 9790, 17, 32, 3347 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3698, 247, 1050, 9242 }
+			player[9][3][12] = { 3698, 248, 1058, 9242 }
 	end
 end
 do
@@ -31,7 +31,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9836, 13, 25, 3660 }
+			player[9][1][12] = { 9838, 13, 25, 3660 }
 	end
 end
 do
@@ -39,9 +39,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9843, 12, 24, 3811 }
+			player[9][1][12] = { 9844, 12, 24, 3811 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5446, 62, 205, 8574 }
+			player[9][2][12] = { 5446, 63, 209, 8574 }
 	end
 end
 do
@@ -49,7 +49,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9570, 33, 64, 3046 }
+			player[9][1][12] = { 9560, 34, 66, 3046 }
 	end
 end
 do
@@ -57,7 +57,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9864, 9, 21, 4120 }
+			player[9][1][12] = { 9865, 9, 21, 4120 }
 	end
 end
 do
@@ -65,7 +65,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9604, 31, 59, 3065 }
+			player[9][1][12] = { 9594, 32, 61, 3065 }
 	end
 end
 do
@@ -73,9 +73,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9816, 15, 28, 3402 }
+			player[9][1][12] = { 9804, 16, 30, 3402 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9656, 27, 57, 13547 }
+			player[9][3][12] = { 9652, 28, 58, 13547 }
 	end
 end
 do
@@ -83,7 +83,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9823, 14, 27, 3454 }
+			player[9][1][12] = { 9810, 15, 29, 3454 }
+	end
+end
+do
+	local player = players["yhorm"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9831, 14, 26, 3646 }
 	end
 end
 do
@@ -91,7 +99,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9870, 8, 20, 5286 }
+			player[9][1][12] = { 9871, 8, 20, 5286 }
 	end
 end
 do
@@ -99,9 +107,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9720, 24, 42, 3165 }
+			player[9][1][12] = { 9709, 25, 44, 3165 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5263, 67, 213, 8287 }
+			player[9][2][12] = { 5263, 68, 217, 8287 }
 	end
 end
 do
@@ -109,7 +117,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8977, 61, 151, 2746 }
+			player[9][1][12] = { 8971, 62, 153, 2746 }
 	end
 end
 do
@@ -117,7 +125,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9563, 34, 65, 3039 }
+			player[9][1][12] = { 9553, 35, 67, 3039 }
 	end
 end
 do
@@ -125,9 +133,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9434, 39, 84, 2911 }
+			player[9][1][12] = { 9425, 40, 86, 2911 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8554, 13, 46, 11605 }
+			player[9][2][12] = { 8452, 14, 50, 11605 }
 	end
 end
 do
@@ -135,9 +143,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7749, 106, 331, 2492 }
+			player[9][1][12] = { 7739, 108, 335, 2492 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3592, 262, 1168, 8977 }
+			player[9][3][12] = { 3592, 263, 1176, 8977 }
 	end
 end
 do
@@ -145,7 +153,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6651, 135, 492, 2359 }
+			player[9][1][12] = { 6642, 138, 497, 2359 }
 	end
 end
 do
@@ -153,7 +161,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6351, 139, 536, 2338 }
+			player[9][1][12] = { 6344, 142, 541, 2338 }
 	end
 end
 do
@@ -161,7 +169,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9618, 30, 57, 3070 }
+			player[9][1][12] = { 9607, 31, 59, 3070 }
 	end
 end
 do
@@ -169,7 +177,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9748, 20, 38, 3248 }
+			player[9][1][12] = { 9736, 21, 40, 3248 }
 	end
 end
 do
@@ -177,9 +185,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6310, 141, 542, 2334 }
+			player[9][1][12] = { 6303, 144, 547, 2334 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6705, 32, 88, 10548 }
+			player[9][2][12] = { 6700, 33, 92, 10548 }
 	end
 end
 do
@@ -187,7 +195,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4523, 182, 804, 2175 }
+			player[9][1][12] = { 4509, 184, 812, 2175 }
 	end
 end
 do
@@ -195,9 +203,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8874, 65, 166, 2712 }
+			player[9][1][12] = { 8869, 66, 168, 2712 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6573, 37, 102, 10349 }
+			player[9][2][12] = { 6573, 38, 106, 10349 }
 	end
 end
 do
@@ -205,7 +213,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9638, 29, 54, 3096 }
+			player[9][1][12] = { 9628, 30, 56, 3096 }
 	end
 end
 do
@@ -213,7 +221,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8718, 70, 189, 2667 }
+			player[9][1][12] = { 8707, 71, 192, 2667 }
 	end
 end
 do
@@ -221,9 +229,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9850, 11, 23, 3814 }
+			player[9][1][12] = { 9851, 11, 23, 3814 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 1423, 83, 260, 2240 }
+			player[9][2][12] = { 1423, 84, 264, 2240 }
 	end
 end
 do
@@ -231,7 +239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9768, 18, 35, 3283 }
+			player[9][1][12] = { 9756, 19, 37, 3283 }
 	end
 end
 do
@@ -239,7 +247,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8956, 62, 154, 2740 }
+			player[9][1][12] = { 8951, 63, 156, 2740 }
 	end
 end
 do
@@ -247,9 +255,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9857, 10, 22, 4047 }
+			player[9][1][12] = { 9858, 10, 22, 4047 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9779, 17, 37, 14077 }
+			player[9][3][12] = { 9780, 17, 37, 14077 }
 	end
 end
 do
@@ -257,9 +265,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5607, 163, 645, 2270 }
+			player[9][1][12] = { 5606, 166, 650, 2270 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8372, 85, 266, 11532 }
+			player[9][3][12] = { 8372, 86, 268, 11532 }
 	end
 end
 do
@@ -267,7 +275,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3430, 285, 1296, 8571 }
+			player[9][3][12] = { 3430, 286, 1304, 8571 }
 	end
 end
 do
@@ -275,9 +283,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8281, 86, 253, 2574 }
+			player[9][1][12] = { 8274, 87, 256, 2574 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7697, 115, 376, 10999 }
+			player[9][3][12] = { 7689, 116, 380, 10999 }
 	end
 end
 do
@@ -285,7 +293,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8438, 80, 230, 2603 }
+			player[9][1][12] = { 8429, 81, 233, 2603 }
 	end
 end
 do
@@ -293,11 +301,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8574, 77, 210, 2630 }
+			player[9][1][12] = { 8565, 78, 213, 2630 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6006, 50, 160, 9455 }
+			player[9][2][12] = { 6006, 51, 164, 9455 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3647, 253, 1104, 9114 }
+			player[9][3][12] = { 3647, 254, 1112, 9114 }
 	end
 end
 do
@@ -305,9 +313,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9352, 43, 96, 2868 }
+			player[9][1][12] = { 9343, 44, 98, 2868 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5571, 189, 722, 10003 }
+			player[9][3][12] = { 5561, 190, 729, 10003 }
 	end
 end
 do
@@ -315,7 +323,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7462, 116, 373, 2447 }
+			player[9][1][12] = { 7454, 118, 377, 2447 }
 	end
 end
 do
@@ -323,7 +331,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7892, 101, 310, 2516 }
+			player[9][1][12] = { 7881, 103, 314, 2516 }
 	end
 end
 do
@@ -331,7 +339,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5634, 161, 641, 2273 }
+			player[9][1][12] = { 5633, 164, 646, 2273 }
 	end
 end
 do
@@ -339,9 +347,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9468, 38, 79, 2949 }
+			player[9][1][12] = { 9458, 39, 81, 2949 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7690, 116, 377, 10999 }
+			player[9][3][12] = { 7683, 117, 381, 10999 }
 	end
 end
 do
@@ -349,9 +357,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8779, 68, 180, 2678 }
+			player[9][1][12] = { 8768, 69, 183, 2678 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9103, 55, 147, 12446 }
+			player[9][3][12] = { 9104, 55, 148, 12446 }
 	end
 end
 do
@@ -359,9 +367,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4550, 180, 800, 2176 }
+			player[9][1][12] = { 4536, 182, 808, 2176 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3445, 283, 1285, 8608 }
+			player[9][3][12] = { 3445, 284, 1293, 8608 }
 	end
 end
 do
@@ -369,7 +377,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9495, 37, 75, 2962 }
+			player[9][1][12] = { 9485, 38, 77, 2962 }
 	end
 end
 do
@@ -387,7 +395,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7974, 100, 298, 2526 }
+			player[9][1][12] = { 7962, 102, 302, 2526 }
 	end
 end
 do
@@ -395,7 +403,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6862, 129, 461, 2382 }
+			player[9][1][12] = { 6858, 131, 465, 2382 }
 	end
 end
 do
@@ -403,7 +411,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2572, 212, 1090, 2032 }
+			player[9][1][12] = { 2559, 215, 1100, 2032 }
 	end
 end
 do
@@ -411,7 +419,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9518, 5, 30, 12787 }
+			player[9][2][12] = { 9524, 5, 30, 12787 }
 	end
 end
 do
@@ -419,7 +427,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9175, 50, 122, 2802 }
+			player[9][1][12] = { 9167, 51, 124, 2802 }
 	end
 end
 do
@@ -427,7 +435,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7633, 111, 348, 2476 }
+			player[9][1][12] = { 7624, 113, 352, 2476 }
 	end
 end
 do
@@ -435,7 +443,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9714, 25, 43, 3144 }
+			player[9][1][12] = { 9702, 26, 45, 3144 }
 	end
 end
 do
@@ -443,7 +451,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8254, 88, 257, 2570 }
+			player[9][1][12] = { 8246, 89, 260, 2570 }
 	end
 end
 do
@@ -451,7 +459,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9072, 56, 137, 2769 }
+			player[9][1][12] = { 9066, 57, 139, 2769 }
 	end
 end
 do
@@ -459,9 +467,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9536, 36, 69, 3018 }
+			player[9][1][12] = { 9526, 37, 71, 3018 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 1539, 82, 254, 2422 }
+			player[9][2][12] = { 1539, 83, 258, 2422 }
 	end
 end
 do
@@ -469,7 +477,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9318, 45, 101, 2859 }
+			player[9][1][12] = { 9309, 46, 103, 2859 }
 	end
 end
 do
@@ -477,9 +485,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9400, 41, 89, 2888 }
+			player[9][1][12] = { 9391, 42, 91, 2888 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 1718, 81, 246, 2704 }
+			player[9][2][12] = { 1718, 82, 250, 2704 }
 	end
 end
 do
@@ -487,7 +495,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6903, 127, 455, 2390 }
+			player[9][1][12] = { 6899, 129, 459, 2390 }
 	end
 end
 do
@@ -495,9 +503,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9025, 59, 144, 2760 }
+			player[9][1][12] = { 9018, 60, 146, 2760 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3639, 255, 1114, 9094 }
+			player[9][3][12] = { 3639, 256, 1122, 9094 }
 	end
 end
 do
@@ -505,17 +513,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9577, 32, 63, 3051 }
+			player[9][1][12] = { 9567, 33, 65, 3051 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5639, 185, 711, 10027 }
-	end
-end
-do
-	local player = players["odden"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6494, 138, 515, 2349 }
+			player[9][3][12] = { 5628, 186, 718, 10027 }
 	end
 end
 do
@@ -523,9 +523,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9038, 58, 142, 2763 }
+			player[9][1][12] = { 9032, 59, 144, 2763 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4128, 234, 957, 9465 }
+			player[9][3][12] = { 4128, 235, 964, 9465 }
+	end
+end
+do
+	local player = players["odden"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6486, 141, 520, 2349 }
 	end
 end
 do
@@ -533,7 +541,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9127, 54, 129, 2786 }
+			player[9][1][12] = { 9120, 55, 131, 2786 }
 	end
 end
 do
@@ -541,7 +549,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4434, 185, 817, 2170 }
+			player[9][1][12] = { 4421, 187, 825, 2170 }
 	end
 end
 do
@@ -549,7 +557,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9277, 46, 107, 2844 }
+			player[9][1][12] = { 9269, 47, 109, 2844 }
 	end
 end
 do
@@ -557,7 +565,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7824, 103, 320, 2506 }
+			player[9][1][12] = { 7813, 105, 324, 2506 }
 	end
 end
 do
@@ -565,7 +573,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8922, 63, 159, 2728 }
+			player[9][1][12] = { 8917, 64, 161, 2728 }
 	end
 end
 do
@@ -573,7 +581,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8206, 90, 264, 2565 }
+			player[9][1][12] = { 8199, 91, 267, 2565 }
 	end
 end
 do
@@ -581,7 +589,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8629, 73, 202, 2643 }
+			player[9][1][12] = { 8619, 74, 205, 2643 }
 	end
 end
 do
@@ -589,7 +597,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7449, 117, 375, 2444 }
+			player[9][1][12] = { 7441, 119, 379, 2444 }
 	end
 end
 do
@@ -597,7 +605,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5075, 167, 723, 2221 }
+			player[9][1][12] = { 5064, 169, 730, 2221 }
 	end
 end
 do
@@ -605,7 +613,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6269, 142, 548, 2332 }
+			player[9][1][12] = { 6263, 145, 553, 2332 }
 	end
 end
 do
@@ -613,35 +621,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7080, 125, 429, 2402 }
-	end
-end
-do
-	local player = players["chewytwizzy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7258, 121, 403, 2420 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7197, 27, 75, 10693 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5848, 181, 677, 10101 }
-	end
-end
-do
-	local player = players["ablaze"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7592, 113, 354, 2462 }
-	end
-end
-do
-	local player = players["selfhealer"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3922, 194, 892, 2131 }
+			player[9][1][12] = { 7075, 127, 433, 2402 }
 	end
 end
 do
@@ -649,7 +629,43 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9700, 26, 45, 3136 }
+			player[9][1][12] = { 9689, 27, 47, 3136 }
+	end
+end
+do
+	local player = players["chewytwizzy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7251, 123, 407, 2420 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7090, 28, 79, 10693 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5835, 182, 684, 10101 }
+	end
+end
+do
+	local player = players["ablaze"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7583, 115, 358, 2462 }
+	end
+end
+do
+	local player = players["selfhealer"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3907, 197, 901, 2131 }
+	end
+end
+do
+	local player = players["amereca"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7122, 140, 473, 10651 }
 	end
 end
 do
@@ -657,7 +673,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7819, 112, 356, 11062 }
+			player[9][3][12] = { 7811, 113, 360, 11062 }
 	end
 end
 do
@@ -665,7 +681,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2947, 205, 1035, 2056 }
+			player[9][1][12] = { 2932, 208, 1045, 2056 }
 	end
 end
 do
@@ -673,7 +689,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9775, 17, 34, 3283 }
+			player[9][1][12] = { 9763, 18, 36, 3283 }
 	end
 end
 do
@@ -681,187 +697,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8670, 72, 196, 2656 }
+			player[9][1][12] = { 8659, 73, 199, 2656 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9840, 13, 27, 14544 }
-	end
-end
-do
-	local player = players["annya"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7196, 122, 412, 2416 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8434, 14, 47, 11532 }
-	end
-end
-do
-	local player = players["zues"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2537, 345, 1589, 6340 }
-	end
-end
-do
-	local player = players["runeslade"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4877, 210, 835, 9733 }
-	end
-end
-do
-	local player = players["dubolomx"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6944, 126, 449, 2393 }
-	end
-end
-do
-	local player = players["landrei"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7742, 107, 332, 2490 }
-	end
-end
-do
-	local player = players["narrowescape"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8506, 78, 220, 2622 }
-	end
-end
-do
-	local player = players["rastimovann"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9686, 27, 47, 3126 }
-	end
-end
-do
-	local player = players["jaax"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7763, 105, 329, 2495 }
-	end
-end
-do
-	local player = players["kalindi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8165, 93, 270, 2560 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2932, 330, 1531, 7326 }
-	end
-end
-do
-	local player = players["zyyra"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3854, 196, 902, 2127 }
-	end
-end
-do
-	local player = players["sweetxpp"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5866, 153, 607, 2295 }
-	end
-end
-do
-	local player = players["mokhtar"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4945, 170, 742, 2209 }
-	end
-end
-do
-	local player = players["caidis"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7572, 114, 357, 2459 }
-	end
-end
-do
-	local player = players["cordonblue"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6739, 130, 479, 2366 }
-	end
-end
-do
-	local player = players["anduron"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2688, 210, 1073, 2038 }
-	end
-end
-do
-	local player = players["kottdk"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3588, 197, 941, 2105 }
-	end
-end
-do
-	local player = players["quilapan"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5921, 150, 599, 2299 }
-	end
-end
-do
-	local player = players["rottentomato"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8145, 95, 273, 2554 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7850, 110, 351, 11083 }
-	end
-end
-do
-	local player = players["cosmina"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9550, 35, 67, 3023 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4969, 70, 225, 7824 }
-	end
-end
-do
-	local player = players["mikanova"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5709, 157, 630, 2280 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5074, 204, 803, 9794 }
-	end
-end
-do
-	local player = players["sweetyhoney"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9359, 42, 95, 2872 }
+			player[9][3][12] = { 9841, 13, 27, 14544 }
 	end
 end
 do
@@ -869,7 +707,185 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9236, 47, 113, 2824 }
+			player[9][1][12] = { 9228, 48, 115, 2824 }
+	end
+end
+do
+	local player = players["annya"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7190, 124, 416, 2416 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8333, 15, 51, 11532 }
+	end
+end
+do
+	local player = players["zues"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 2537, 347, 1601, 6340 }
+	end
+end
+do
+	local player = players["runeslade"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 4872, 211, 842, 9733 }
+	end
+end
+do
+	local player = players["dubolomx"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6940, 128, 453, 2393 }
+	end
+end
+do
+	local player = players["landrei"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7732, 109, 336, 2490 }
+	end
+end
+do
+	local player = players["narrowescape"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8497, 79, 223, 2622 }
+	end
+end
+do
+	local player = players["rastimovann"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9675, 28, 49, 3126 }
+	end
+end
+do
+	local player = players["jaax"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7752, 107, 333, 2495 }
+	end
+end
+do
+	local player = players["kalindi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8158, 94, 273, 2560 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 2932, 332, 1543, 7326 }
+	end
+end
+do
+	local player = players["zyyra"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3839, 199, 911, 2127 }
+	end
+end
+do
+	local player = players["sweetxpp"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5863, 156, 612, 2295 }
+	end
+end
+do
+	local player = players["mokhtar"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4936, 172, 749, 2209 }
+	end
+end
+do
+	local player = players["caidis"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7563, 116, 361, 2459 }
+	end
+end
+do
+	local player = players["cordonblue"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6737, 132, 483, 2366 }
+	end
+end
+do
+	local player = players["anduron"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 2674, 213, 1083, 2038 }
+	end
+end
+do
+	local player = players["kottdk"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3575, 200, 950, 2105 }
+	end
+end
+do
+	local player = players["quilapan"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5917, 153, 604, 2299 }
+	end
+end
+do
+	local player = players["rottentomato"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8138, 96, 276, 2554 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7841, 112, 355, 11083 }
+	end
+end
+do
+	local player = players["cosmina"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9540, 36, 69, 3023 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4969, 71, 229, 7824 }
+	end
+end
+do
+	local player = players["mikanova"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5708, 160, 635, 2280 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5067, 205, 810, 9794 }
+	end
+end
+do
+	local player = players["sweetyhoney"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9350, 43, 97, 2872 }
 	end
 end
 do
@@ -877,9 +893,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9202, 49, 118, 2808 }
+			player[9][1][12] = { 9194, 50, 120, 2808 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5620, 187, 714, 10014 }
+			player[9][3][12] = { 5610, 188, 721, 10014 }
 	end
 end
 do
@@ -887,15 +903,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6678, 134, 488, 2361 }
-	end
-end
-do
-	local player = players["prsla"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4072, 193, 870, 2143 }
+			player[9][1][12] = { 6669, 137, 493, 2361 }
 	end
 end
 do
@@ -903,7 +911,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5300, 164, 690, 2241 }
+			player[9][1][12] = { 5288, 167, 697, 2241 }
+	end
+end
+do
+	local player = players["prsla"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4062, 195, 878, 2143 }
 	end
 end
 do
@@ -911,7 +927,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1678, 226, 1221, 1924 }
+			player[9][1][12] = { 1666, 230, 1232, 1924 }
 	end
 end
 do
@@ -919,23 +935,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2866, 332, 1547, 7162 }
-	end
-end
-do
-	local player = players["norhein"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8622, 74, 203, 2640 }
-	end
-end
-do
-	local player = players["flappymourne"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7367, 119, 387, 2436 }
+			player[9][3][12] = { 2866, 334, 1559, 7162 }
 	end
 end
 do
@@ -951,7 +951,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9759, 3, 27, 13005 }
+			player[9][2][12] = { 9762, 3, 27, 13005 }
 	end
 end
 do
@@ -959,7 +959,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9880, 2, 26, 13176 }
+			player[9][2][12] = { 9881, 2, 26, 13176 }
 	end
 end
 do
@@ -967,7 +967,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7689, 22, 62, 10987 }
+			player[9][2][12] = { 7575, 23, 66, 10987 }
 	end
 end
 do
@@ -975,7 +975,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9157, 8, 35, 12692 }
+			player[9][2][12] = { 9167, 8, 35, 12692 }
 	end
 end
 do
@@ -983,7 +983,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7652, 23, 63, 10975 }
+			player[9][2][12] = { 7537, 24, 67, 10975 }
 	end
 end
 do
@@ -991,7 +991,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7727, 21, 61, 10995 }
+			player[9][2][12] = { 7612, 22, 65, 10995 }
 	end
 end
 do
@@ -999,7 +999,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9639, 4, 29, 12864 }
+			player[9][2][12] = { 9643, 4, 29, 12864 }
 	end
 end
 do
@@ -1007,7 +1007,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6274, 43, 131, 9878 }
+			player[9][2][12] = { 6274, 44, 135, 9878 }
 	end
 end
 do
@@ -1015,7 +1015,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6675, 34, 93, 10509 }
+			player[9][2][12] = { 6675, 35, 97, 10509 }
 	end
 end
 do
@@ -1023,9 +1023,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9398, 6, 33, 12721 }
+			player[9][2][12] = { 9405, 6, 33, 12721 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8047, 100, 319, 11258 }
+			player[9][3][12] = { 8049, 101, 321, 11258 }
 	end
 end
 do
@@ -1033,9 +1033,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9036, 9, 36, 12441 }
+			player[9][2][12] = { 9048, 9, 38, 12441 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6757, 150, 529, 10456 }
+			player[9][3][12] = { 6744, 151, 535, 10456 }
 	end
 end
 do
@@ -1043,9 +1043,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8072, 17, 52, 11136 }
+			player[9][2][12] = { 7976, 18, 56, 11136 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3659, 251, 1086, 9143 }
+			player[9][3][12] = { 3659, 252, 1094, 9143 }
 	end
 end
 do
@@ -1053,11 +1053,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1179, 237, 1415, 1684 }
+			player[9][1][12] = { 1179, 240, 1426, 1684 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6504, 39, 109, 10240 }
+			player[9][2][12] = { 6504, 40, 113, 10240 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3457, 279, 1276, 8638 }
+			player[9][3][12] = { 3457, 280, 1284, 8638 }
 	end
 end
 do
@@ -1065,7 +1065,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7121, 28, 77, 10677 }
+			player[9][2][12] = { 7015, 29, 81, 10677 }
 	end
 end
 do
@@ -1073,7 +1073,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7348, 26, 71, 10821 }
+			player[9][2][12] = { 7239, 27, 75, 10821 }
 	end
 end
 do
@@ -1081,7 +1081,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9853, 11, 25, 14660 }
+			player[9][3][12] = { 9854, 11, 25, 14660 }
 	end
 end
 do
@@ -1089,9 +1089,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9666, 28, 50, 3116 }
+			player[9][1][12] = { 9655, 29, 52, 3116 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9767, 19, 39, 14056 }
+			player[9][3][12] = { 9768, 19, 39, 14056 }
 	end
 end
 do
@@ -1099,7 +1099,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8916, 10, 41, 11855 }
+			player[9][2][12] = { 8929, 10, 43, 11855 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9994, 2, 2, 19470 }
 	end
@@ -1109,7 +1109,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9859, 10, 24, 14702 }
+			player[9][3][12] = { 9860, 10, 24, 14702 }
 	end
 end
 do
@@ -1117,7 +1117,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9810, 16, 32, 14310 }
+			player[9][3][12] = { 9811, 16, 32, 14310 }
 	end
 end
 do
@@ -1125,7 +1125,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8692, 68, 214, 11887 }
+			player[9][3][12] = { 8695, 68, 215, 11887 }
 	end
 end
 do
@@ -1133,9 +1133,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7045, 29, 79, 10640 }
+			player[9][2][12] = { 6940, 30, 83, 10640 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9539, 35, 76, 13232 }
+			player[9][3][12] = { 9537, 36, 77, 13232 }
 	end
 end
 do
@@ -1143,7 +1143,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9846, 12, 26, 14626 }
+			player[9][3][12] = { 9848, 12, 26, 14626 }
 	end
 end
 do
@@ -1151,7 +1151,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9773, 18, 38, 14073 }
+			player[9][3][12] = { 9774, 18, 38, 14073 }
 	end
 end
 do
@@ -1159,7 +1159,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9521, 37, 79, 13137 }
+			player[9][3][12] = { 9518, 38, 80, 13137 }
 	end
 end
 do
@@ -1167,7 +1167,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8643, 71, 222, 11819 }
+			player[9][3][12] = { 8640, 72, 224, 11819 }
 	end
 end
 do
@@ -1175,11 +1175,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7626, 112, 349, 2476 }
+			player[9][1][12] = { 7617, 114, 353, 2476 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6228, 44, 138, 9806 }
+			player[9][2][12] = { 6228, 45, 142, 9806 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7961, 106, 333, 11162 }
+			player[9][3][12] = { 7963, 107, 335, 11162 }
 	end
 end
 do
@@ -1187,9 +1187,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5309, 64, 210, 8359 }
+			player[9][2][12] = { 5309, 65, 214, 8359 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5915, 178, 666, 10118 }
+			player[9][3][12] = { 5902, 179, 673, 10118 }
 	end
 end
 do
@@ -1197,9 +1197,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6034, 48, 155, 9499 }
+			player[9][2][12] = { 6034, 49, 159, 9499 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9300, 49, 115, 12808 }
+			player[9][3][12] = { 9299, 50, 116, 12808 }
 	end
 end
 do
@@ -1207,9 +1207,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8383, 84, 238, 2595 }
+			player[9][1][12] = { 8375, 85, 241, 2595 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8710, 67, 211, 11912 }
+			player[9][3][12] = { 8713, 67, 212, 11912 }
 	end
 end
 do
@@ -1217,7 +1217,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8630, 73, 224, 11812 }
+			player[9][3][12] = { 8628, 74, 226, 11812 }
 	end
 end
 do
@@ -1233,7 +1233,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7334, 129, 435, 10762 }
+			player[9][3][12] = { 7323, 130, 440, 10762 }
 	end
 end
 do
@@ -1241,9 +1241,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4295, 76, 239, 6762 }
+			player[9][2][12] = { 4295, 77, 243, 6762 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5375, 194, 754, 9927 }
+			player[9][3][12] = { 5366, 195, 761, 9927 }
 	end
 end
 do
@@ -1251,7 +1251,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9828, 14, 29, 14514 }
+			player[9][3][12] = { 9829, 14, 29, 14514 }
 	end
 end
 do
@@ -1259,7 +1259,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6437, 157, 581, 10298 }
+			player[9][3][12] = { 6421, 158, 588, 10298 }
 	end
 end
 do
@@ -1267,7 +1267,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9337, 46, 109, 12873 }
+			player[9][3][12] = { 9335, 47, 110, 12873 }
 	end
 end
 do
@@ -1275,7 +1275,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9736, 22, 44, 13939 }
+			player[9][3][12] = { 9738, 22, 44, 13939 }
 	end
 end
 do
@@ -1283,9 +1283,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5221, 68, 215, 8219 }
+			player[9][2][12] = { 5221, 69, 219, 8219 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9398, 44, 99, 12938 }
+			player[9][3][12] = { 9396, 45, 100, 12938 }
 	end
 end
 do
@@ -1293,7 +1293,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6400, 159, 587, 10280 }
+			player[9][3][12] = { 6384, 160, 594, 10280 }
 	end
 end
 do
@@ -1301,7 +1301,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9079, 58, 151, 12394 }
+			player[9][3][12] = { 9079, 58, 152, 12394 }
 	end
 end
 do
@@ -1309,7 +1309,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9588, 33, 68, 13289 }
+			player[9][3][12] = { 9585, 34, 69, 13289 }
 	end
 end
 do
@@ -1317,7 +1317,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9920, 4, 14, 16492 }
+			player[9][3][12] = { 9921, 4, 14, 16492 }
 	end
 end
 do
@@ -1325,9 +1325,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8186, 92, 267, 2563 }
+			player[9][1][12] = { 8179, 93, 270, 2563 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7389, 128, 426, 10805 }
+			player[9][3][12] = { 7378, 129, 431, 10805 }
 	end
 end
 do
@@ -1335,7 +1335,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9754, 20, 41, 14032 }
+			player[9][3][12] = { 9756, 20, 41, 14032 }
 	end
 end
 do
@@ -1343,9 +1343,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8001, 98, 294, 2529 }
+			player[9][1][12] = { 7989, 100, 298, 2529 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8145, 94, 303, 11353 }
+			player[9][3][12] = { 8146, 95, 305, 11353 }
 	end
 end
 do
@@ -1353,7 +1353,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9533, 36, 77, 13221 }
+			player[9][3][12] = { 9530, 37, 78, 13221 }
 	end
 end
 do
@@ -1361,7 +1361,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8421, 84, 258, 11604 }
+			player[9][3][12] = { 8421, 85, 260, 11604 }
 	end
 end
 do
@@ -1369,9 +1369,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2462, 215, 1106, 2022 }
+			player[9][1][12] = { 2451, 218, 1116, 2022 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7525, 124, 404, 10880 }
+			player[9][3][12] = { 7512, 125, 409, 10880 }
 	end
 end
 do
@@ -1379,7 +1379,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9582, 34, 69, 13287 }
+			player[9][3][12] = { 9579, 35, 70, 13287 }
 	end
 end
 do
@@ -1387,7 +1387,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3845, 239, 1003, 9378 }
+			player[9][3][12] = { 3841, 240, 1011, 9378 }
+	end
+end
+do
+	local player = players["threatmaykr"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7951, 108, 337, 11159 }
 	end
 end
 do
@@ -1395,7 +1403,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9877, 7, 21, 15091 }
+			player[9][3][12] = { 9878, 7, 21, 15091 }
 	end
 end
 do
@@ -1403,7 +1411,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9705, 25, 49, 13726 }
+			player[9][3][12] = { 9701, 26, 50, 13726 }
 	end
 end
 do
@@ -1411,7 +1419,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7654, 117, 383, 10975 }
+			player[9][3][12] = { 7646, 118, 387, 10975 }
 	end
 end
 do
@@ -1419,7 +1427,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9607, 30, 65, 13352 }
+			player[9][3][12] = { 9604, 31, 66, 13352 }
 	end
 end
 do
@@ -1427,7 +1435,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8010, 102, 325, 11206 }
+			player[9][3][12] = { 8012, 103, 327, 11206 }
+	end
+end
+do
+	local player = players["antiteza"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8585, 75, 233, 11783 }
 	end
 end
 do
@@ -1435,11 +1451,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9727, 23, 41, 3188 }
+			player[9][1][12] = { 9716, 24, 43, 3188 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8675, 12, 45, 11608 }
+			player[9][2][12] = { 8571, 13, 49, 11608 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4767, 213, 853, 9706 }
+			player[9][3][12] = { 4762, 214, 860, 9706 }
 	end
 end
 do
@@ -1447,7 +1463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9816, 15, 31, 14322 }
+			player[9][3][12] = { 9817, 15, 31, 14322 }
 	end
 end
 do
@@ -1455,7 +1471,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6194, 145, 559, 2324 }
+			player[9][1][12] = { 6188, 148, 564, 2324 }
 	end
 end
 do
@@ -1467,19 +1483,11 @@ do
 	end
 end
 do
-	local player = players["antiteza"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8587, 74, 231, 11783 }
-	end
-end
-do
 	local player = players["cofit"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9097, 56, 148, 12440 }
+			player[9][3][12] = { 9098, 56, 149, 12440 }
 	end
 end
 do
@@ -1487,7 +1495,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8569, 75, 234, 11772 }
+			player[9][3][12] = { 8567, 76, 236, 11772 }
 	end
 end
 do
@@ -1495,9 +1503,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8424, 82, 232, 2602 }
+			player[9][1][12] = { 8416, 83, 235, 2602 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8956, 62, 171, 12233 }
+			player[9][3][12] = { 8957, 62, 172, 12233 }
 	end
 end
 do
@@ -1505,7 +1513,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9453, 40, 90, 13019 }
+			player[9][3][12] = { 9451, 41, 91, 13019 }
 	end
 end
 do
@@ -1513,9 +1521,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7462, 24, 68, 10857 }
+			player[9][2][12] = { 7351, 25, 72, 10857 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8765, 66, 202, 12004 }
+			player[9][3][12] = { 8768, 66, 203, 12004 }
 	end
 end
 do
@@ -1523,7 +1531,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9871, 8, 22, 14922 }
+			player[9][3][12] = { 9872, 8, 22, 14922 }
 	end
 end
 do
@@ -1531,7 +1539,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9889, 6, 19, 15548 }
+			player[9][3][12] = { 9890, 6, 19, 15548 }
 	end
 end
 do
@@ -1539,7 +1547,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8538, 77, 239, 11751 }
+			player[9][3][12] = { 8537, 78, 241, 11751 }
 	end
 end
 do
@@ -1547,7 +1555,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4595, 219, 881, 9636 }
+			player[9][3][12] = { 4591, 220, 888, 9636 }
 	end
 end
 do
@@ -1555,7 +1563,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9373, 45, 103, 12893 }
+			player[9][3][12] = { 9372, 46, 104, 12893 }
 	end
 end
 do
@@ -1563,7 +1571,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9509, 38, 81, 13116 }
+			player[9][3][12] = { 9506, 39, 82, 13116 }
 	end
 end
 do
@@ -1571,9 +1579,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4141, 192, 860, 2148 }
+			player[9][1][12] = { 4130, 194, 868, 2148 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4926, 206, 827, 9745 }
+			player[9][3][12] = { 4921, 207, 834, 9745 }
 	end
 end
 do
@@ -1581,7 +1589,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9441, 41, 92, 12987 }
+			player[9][3][12] = { 9439, 42, 93, 12987 }
 	end
 end
 do
@@ -1591,9 +1599,9 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9905, 4, 15, 9104 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7992, 18, 54, 11100 }
+			player[9][2][12] = { 7873, 19, 58, 11100 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5178, 199, 786, 9825 }
+			player[9][3][12] = { 5171, 200, 793, 9825 }
 	end
 end
 do
@@ -1601,7 +1609,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8102, 97, 310, 11322 }
+			player[9][3][12] = { 8104, 98, 312, 11322 }
 	end
 end
 do
@@ -1609,7 +1617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6419, 158, 584, 10291 }
+			player[9][3][12] = { 6402, 159, 591, 10291 }
 	end
 end
 do
@@ -1617,7 +1625,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9730, 23, 45, 13808 }
+			player[9][3][12] = { 9732, 23, 45, 13808 }
 	end
 end
 do
@@ -1625,9 +1633,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9059, 57, 139, 2767 }
+			player[9][1][12] = { 9052, 58, 141, 2767 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8795, 11, 43, 11801 }
+			player[9][2][12] = { 8810, 11, 45, 11801 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9988, 3, 3, 19295 }
 	end
@@ -1637,11 +1645,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3022, 204, 1024, 2061 }
+			player[9][1][12] = { 3006, 207, 1034, 2061 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8193, 16, 51, 11138 }
+			player[9][2][12] = { 8095, 17, 55, 11138 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4435, 224, 907, 9574 }
+			player[9][3][12] = { 4433, 225, 914, 9574 }
 	end
 end
 do
@@ -1649,9 +1657,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9884, 6, 18, 8006 }
+			player[9][1][12] = { 9885, 6, 18, 8006 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7776, 113, 363, 11041 }
+			player[9][3][12] = { 7768, 114, 367, 11041 }
 	end
 end
 do
@@ -1659,9 +1667,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6970, 30, 81, 10587 }
+			player[9][2][12] = { 6866, 31, 85, 10587 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3637, 256, 1117, 9088 }
+			player[9][3][12] = { 3637, 257, 1125, 9088 }
 	end
 end
 do
@@ -1669,7 +1677,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5627, 186, 713, 10015 }
+			player[9][3][12] = { 5616, 187, 720, 10015 }
 	end
 end
 do
@@ -1677,7 +1685,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8833, 63, 191, 12075 }
+			player[9][3][12] = { 8835, 63, 192, 12075 }
 	end
 end
 do
@@ -1685,7 +1693,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7156, 137, 464, 10671 }
+			player[9][3][12] = { 7146, 138, 469, 10671 }
 	end
 end
 do
@@ -1693,15 +1701,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3556, 268, 1211, 8887 }
-	end
-end
-do
-	local player = players["deyvi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9638, 28, 60, 13484 }
+			player[9][3][12] = { 3556, 269, 1219, 8887 }
 	end
 end
 do
@@ -1709,9 +1709,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5259, 165, 696, 2238 }
+			player[9][1][12] = { 5247, 168, 703, 2238 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7279, 131, 444, 10729 }
+			player[9][3][12] = { 7268, 132, 449, 10729 }
+	end
+end
+do
+	local player = players["deyvi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9634, 29, 61, 13484 }
 	end
 end
 do
@@ -1719,7 +1727,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3698, 246, 1049, 9242 }
+			player[9][3][12] = { 3698, 247, 1057, 9242 }
 	end
 end
 do
@@ -1727,7 +1735,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5190, 198, 784, 9831 }
+			player[9][3][12] = { 5183, 199, 791, 9831 }
 	end
 end
 do
@@ -1735,9 +1743,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2538, 213, 1095, 2027 }
+			player[9][1][12] = { 2525, 216, 1105, 2027 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6560, 155, 561, 10360 }
+			player[9][3][12] = { 6543, 156, 568, 10360 }
 	end
 end
 do
@@ -1745,7 +1753,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8182, 91, 297, 11382 }
+			player[9][3][12] = { 8183, 92, 299, 11382 }
 	end
 end
 do
@@ -1753,11 +1761,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6692, 133, 486, 2363 }
+			player[9][1][12] = { 6689, 135, 490, 2363 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6538, 38, 107, 10293 }
+			player[9][2][12] = { 6538, 39, 111, 10293 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8520, 78, 242, 11730 }
+			player[9][3][12] = { 8518, 79, 244, 11730 }
 	end
 end
 do
@@ -1765,7 +1773,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4527, 222, 892, 9614 }
+			player[9][3][12] = { 4524, 223, 899, 9614 }
 	end
 end
 do
@@ -1773,7 +1781,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7168, 136, 462, 10673 }
+			player[9][3][12] = { 7159, 137, 467, 10673 }
 	end
 end
 do
@@ -1781,7 +1789,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8120, 96, 307, 11334 }
+			player[9][3][12] = { 8122, 97, 309, 11334 }
 	end
 end
 do
@@ -1789,9 +1797,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6064, 47, 153, 9547 }
+			player[9][2][12] = { 6064, 48, 157, 9547 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4330, 229, 924, 9543 }
+			player[9][3][12] = { 4329, 230, 931, 9543 }
 	end
 end
 do
@@ -1799,7 +1807,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6818, 147, 519, 10479 }
+			player[9][3][12] = { 6805, 148, 525, 10479 }
 	end
 end
 do
@@ -1807,7 +1815,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9681, 26, 53, 13615 }
+			player[9][3][12] = { 9677, 27, 54, 13615 }
 	end
 end
 do
@@ -1815,7 +1823,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7721, 114, 372, 11018 }
+			player[9][3][12] = { 7713, 115, 376, 11018 }
 	end
 end
 do
@@ -1823,7 +1831,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8280, 88, 281, 11446 }
+			player[9][3][12] = { 8280, 89, 283, 11446 }
 	end
 end
 do
@@ -1831,7 +1839,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4257, 232, 936, 9524 }
+			player[9][3][12] = { 4256, 233, 943, 9524 }
 	end
 end
 do
@@ -1839,7 +1847,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6603, 154, 554, 10386 }
+			player[9][3][12] = { 6591, 155, 560, 10386 }
 	end
 end
 do
@@ -1847,7 +1855,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7187, 134, 459, 10676 }
+			player[9][3][12] = { 7177, 135, 464, 10676 }
 	end
 end
 do
@@ -1855,9 +1863,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 1756, 80, 245, 2765 }
+			player[9][2][12] = { 1756, 81, 249, 2765 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5043, 205, 808, 9791 }
+			player[9][3][12] = { 5037, 206, 815, 9791 }
 	end
 end
 do
@@ -1865,7 +1873,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3635, 257, 1119, 9084 }
+			player[9][3][12] = { 3635, 258, 1127, 9084 }
 	end
 end
 do
@@ -1873,7 +1881,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8802, 64, 196, 12032 }
+			player[9][3][12] = { 8805, 64, 197, 12032 }
+	end
+end
+do
+	local player = players["kokadin"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4157, 193, 864, 2149 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9591, 33, 68, 13300 }
 	end
 end
 do
@@ -1881,7 +1899,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9085, 57, 150, 12405 }
+			player[9][3][12] = { 9085, 57, 151, 12405 }
 	end
 end
 do
@@ -1889,7 +1907,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6167, 167, 625, 10200 }
+			player[9][3][12] = { 6152, 168, 632, 10200 }
 	end
 end
 do
@@ -1897,7 +1915,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9054, 59, 155, 12343 }
+			player[9][3][12] = { 9055, 59, 156, 12343 }
 	end
 end
 do
@@ -1905,7 +1923,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8464, 82, 251, 11620 }
+			player[9][3][12] = { 8463, 83, 253, 11620 }
 	end
 end
 do
@@ -1913,7 +1931,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3716, 244, 1036, 9286 }
+			player[9][3][12] = { 3716, 245, 1044, 9286 }
 	end
 end
 do
@@ -1921,7 +1939,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4423, 225, 909, 9569 }
+			player[9][3][12] = { 4421, 226, 916, 9569 }
 	end
 end
 do
@@ -1929,7 +1947,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9410, 43, 97, 12973 }
+			player[9][3][12] = { 9409, 44, 98, 12973 }
 	end
 end
 do
@@ -1937,7 +1955,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3246, 306, 1408, 8111 }
+			player[9][3][12] = { 3246, 308, 1419, 8111 }
 	end
 end
 do
@@ -1945,7 +1963,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5510, 193, 732, 9987 }
+			player[9][3][12] = { 5500, 194, 739, 9987 }
 	end
 end
 do
@@ -1953,7 +1971,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5565, 190, 723, 10001 }
+			player[9][3][12] = { 5555, 191, 730, 10001 }
 	end
 end
 do
@@ -1961,7 +1979,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7917, 20, 56, 11043 }
+			player[9][2][12] = { 7799, 21, 60, 11043 }
 	end
 end
 do
@@ -1969,9 +1987,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5516, 59, 198, 8684 }
+			player[9][2][12] = { 5516, 60, 202, 8684 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9306, 48, 114, 12811 }
+			player[9][3][12] = { 9305, 49, 115, 12811 }
 	end
 end
 do
@@ -1979,15 +1997,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9263, 51, 121, 12715 }
-	end
-end
-do
-	local player = players["kurator"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8016, 101, 324, 11209 }
+			player[9][3][12] = { 9262, 52, 122, 12715 }
 	end
 end
 do
@@ -2021,7 +2031,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8813, 119, 308, 12338 }
+			player[9][1][12] = { 8818, 119, 309, 12338 }
 	end
 end
 do
@@ -2029,7 +2039,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9869, 18, 35, 14923 }
+			player[9][1][12] = { 9870, 18, 35, 14923 }
 	end
 end
 do
@@ -2045,7 +2055,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8937, 110, 276, 12457 }
+			player[9][1][12] = { 8941, 110, 277, 12457 }
 	end
 end
 do
@@ -2053,17 +2063,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9088, 98, 237, 12683 }
-	end
-end
-do
-	local player = players["muus"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9888, 14, 30, 15055 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6295, 137, 553, 12388 }
+			player[9][1][12] = { 9091, 98, 238, 12683 }
 	end
 end
 do
@@ -2071,9 +2071,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9791, 27, 55, 14416 }
+			player[9][1][12] = { 9793, 27, 55, 14416 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9556, 4, 7, 1199 }
+	end
+end
+do
+	local player = players["muus"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9889, 14, 30, 15055 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6278, 141, 560, 12388 }
 	end
 end
 do
@@ -2081,7 +2091,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9807, 26, 51, 14461 }
+			player[9][1][12] = { 9808, 26, 51, 14461 }
 	end
 end
 do
@@ -2089,7 +2099,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9637, 40, 95, 13789 }
+			player[9][1][12] = { 9639, 40, 95, 13789 }
 	end
 end
 do
@@ -2097,9 +2107,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9296, 80, 183, 12993 }
+			player[9][1][12] = { 9298, 80, 184, 12993 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9383, 44, 93, 15587 }
+			player[9][2][12] = { 9374, 45, 95, 15587 }
 	end
 end
 do
@@ -2107,7 +2117,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9865, 19, 36, 14920 }
+			player[9][1][12] = { 9866, 19, 36, 14920 }
+	end
+end
+do
+	local player = players["ubal"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8496, 144, 393, 11987 }
 	end
 end
 do
@@ -2121,21 +2139,13 @@ do
 	end
 end
 do
-	local player = players["ubal"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8492, 143, 391, 11987 }
-	end
-end
-do
 	local player = players["druidver"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6939, 247, 793, 10788 }
+			player[9][1][12] = { 6919, 251, 804, 10788 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5185, 190, 929, 11283 }
+			player[9][2][12] = { 5185, 194, 937, 11283 }
 	end
 end
 do
@@ -2143,7 +2153,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9610, 45, 102, 13729 }
+			player[9][1][12] = { 9612, 45, 102, 13729 }
 	end
 end
 do
@@ -2151,7 +2161,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8264, 158, 450, 11787 }
+			player[9][1][12] = { 8266, 159, 453, 11787 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 4000, 37, 85, 30 }
 	end
@@ -2161,7 +2171,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9911, 9, 24, 15165 }
+			player[9][1][12] = { 9912, 9, 24, 15165 }
 	end
 end
 do
@@ -2169,9 +2179,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9768, 29, 61, 14239 }
+			player[9][1][12] = { 9770, 29, 61, 14239 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4360, 235, 1339, 9487 }
+			player[9][2][12] = { 4360, 240, 1351, 9487 }
 	end
 end
 do
@@ -2179,7 +2189,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9892, 13, 29, 15067 }
+			player[9][1][12] = { 9893, 13, 29, 15067 }
 	end
 end
 do
@@ -2187,7 +2197,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8617, 74, 207, 14740 }
+			player[9][2][12] = { 8609, 75, 210, 14740 }
 	end
 end
 do
@@ -2195,7 +2205,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8732, 124, 329, 12238 }
+			player[9][1][12] = { 8734, 125, 331, 12238 }
 	end
 end
 do
@@ -2203,7 +2213,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5275, 354, 1446, 9784 }
+			player[9][1][12] = { 5275, 359, 1458, 9784 }
 	end
 end
 do
@@ -2211,7 +2221,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9552, 55, 117, 13488 }
+			player[9][1][12] = { 9551, 55, 118, 13488 }
 	end
 end
 do
@@ -2219,7 +2229,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9053, 101, 246, 12631 }
+			player[9][1][12] = { 9056, 101, 247, 12631 }
 	end
 end
 do
@@ -2227,7 +2237,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8516, 140, 385, 12013 }
+			player[9][1][12] = { 8519, 141, 387, 12013 }
+	end
+end
+do
+	local player = players["aloverajuice"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7291, 229, 707, 11071 }
 	end
 end
 do
@@ -2235,7 +2253,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9007, 106, 258, 12551 }
+			player[9][1][12] = { 9010, 106, 259, 12551 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9926, 2, 2, 3479 }
 	end
@@ -2245,7 +2263,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9602, 46, 104, 13718 }
+			player[9][1][12] = { 9605, 46, 104, 13718 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 2833, 44, 98, 14 }
 	end
@@ -2255,7 +2273,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5321, 333, 1359, 9869 }
+			player[9][1][12] = { 5321, 338, 1371, 9869 }
 	end
 end
 do
@@ -2263,7 +2281,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9749, 31, 66, 14137 }
+			player[9][1][12] = { 9751, 31, 66, 14137 }
 	end
 end
 do
@@ -2271,7 +2289,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9420, 69, 151, 13236 }
+			player[9][1][12] = { 9421, 69, 152, 13236 }
 	end
 end
 do
@@ -2279,7 +2297,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8214, 164, 463, 11742 }
+			player[9][1][12] = { 8216, 165, 466, 11742 }
 	end
 end
 do
@@ -2287,7 +2305,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5489, 308, 1168, 10155 }
+			player[9][1][12] = { 5480, 312, 1179, 10155 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 8370, 12, 23, 212 }
 	end
@@ -2297,7 +2315,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5315, 339, 1378, 9857 }
+			player[9][1][12] = { 5315, 344, 1390, 9857 }
 	end
 end
 do
@@ -2305,7 +2323,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6993, 241, 779, 10835 }
+			player[9][1][12] = { 6972, 245, 790, 10835 }
 	end
 end
 do
@@ -2313,7 +2331,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7437, 213, 664, 11163 }
+			player[9][1][12] = { 7437, 214, 669, 11163 }
 	end
 end
 do
@@ -2321,7 +2339,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5194, 374, 1558, 9632 }
+			player[9][1][12] = { 5194, 379, 1571, 9632 }
 	end
 end
 do
@@ -2329,7 +2347,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8504, 141, 388, 11992 }
+			player[9][1][12] = { 8507, 142, 390, 11992 }
 	end
 end
 do
@@ -2337,7 +2355,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9780, 28, 58, 14351 }
+			player[9][1][12] = { 9781, 28, 58, 14351 }
 	end
 end
 do
@@ -2345,7 +2363,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9876, 16, 33, 14971 }
+			player[9][1][12] = { 9877, 16, 33, 14971 }
 	end
 end
 do
@@ -2353,7 +2371,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7777, 195, 576, 11409 }
+			player[9][1][12] = { 7778, 196, 580, 11409 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 8000, 14, 28, 183 }
 	end
@@ -2363,7 +2381,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5736, 299, 1104, 10239 }
+			player[9][1][12] = { 5725, 303, 1115, 10239 }
 	end
 end
 do
@@ -2371,7 +2389,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7453, 212, 660, 11169 }
+			player[9][1][12] = { 7452, 213, 665, 11169 }
 	end
 end
 do
@@ -2379,7 +2397,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5999, 284, 1036, 10335 }
+			player[9][1][12] = { 5986, 288, 1047, 10335 }
 	end
 end
 do
@@ -2387,7 +2405,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9579, 48, 110, 13622 }
+			player[9][1][12] = { 9578, 49, 111, 13622 }
 	end
 end
 do
@@ -2395,7 +2413,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5197, 372, 1555, 9638 }
+			player[9][1][12] = { 5197, 377, 1568, 9638 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 1926, 51, 110, 5 }
 	end
@@ -2405,7 +2423,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9177, 89, 214, 12803 }
+			player[9][1][12] = { 9179, 89, 215, 12803 }
 	end
 end
 do
@@ -2413,7 +2431,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9899, 11, 27, 15100 }
+			player[9][1][12] = { 9900, 11, 27, 15100 }
 	end
 end
 do
@@ -2421,7 +2439,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9412, 70, 153, 13207 }
+			player[9][1][12] = { 9413, 70, 154, 13207 }
 	end
 end
 do
@@ -2429,7 +2447,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5678, 301, 1119, 10223 }
+			player[9][1][12] = { 5668, 305, 1130, 10223 }
 	end
 end
 do
@@ -2445,7 +2463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9150, 92, 221, 12725 }
+			player[9][1][12] = { 9152, 92, 222, 12725 }
 	end
 end
 do
@@ -2453,7 +2471,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9818, 24, 48, 14573 }
+			player[9][1][12] = { 9820, 24, 48, 14573 }
 	end
 end
 do
@@ -2461,7 +2479,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7410, 217, 671, 11140 }
+			player[9][1][12] = { 7406, 219, 677, 11140 }
 	end
 end
 do
@@ -2469,7 +2487,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9691, 34, 81, 13948 }
+			player[9][1][12] = { 9693, 34, 81, 13948 }
+	end
+end
+do
+	local player = players["dummour"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5206, 373, 1548, 9655 }
 	end
 end
 do
@@ -2477,7 +2503,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8114, 176, 489, 11653 }
+			player[9][1][12] = { 8116, 177, 492, 11653 }
 	end
 end
 do
@@ -2485,7 +2511,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9490, 62, 133, 13405 }
+			player[9][1][12] = { 9490, 62, 134, 13405 }
 	end
 end
 do
@@ -2493,7 +2519,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9613, 44, 101, 13736 }
+			player[9][1][12] = { 9616, 44, 101, 13736 }
 	end
 end
 do
@@ -2501,7 +2527,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5284, 348, 1430, 9800 }
+			player[9][1][12] = { 5284, 353, 1442, 9800 }
 	end
 end
 do
@@ -2509,7 +2535,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5293, 345, 1410, 9817 }
+			player[9][1][12] = { 5293, 350, 1422, 9817 }
 	end
 end
 do
@@ -2517,7 +2543,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8779, 121, 317, 12287 }
+			player[9][1][12] = { 8784, 121, 318, 12287 }
 	end
 end
 do
@@ -2525,7 +2551,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9872, 17, 34, 14957 }
+			player[9][1][12] = { 9873, 17, 34, 14957 }
 	end
 end
 do
@@ -2533,7 +2559,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5363, 322, 1301, 9947 }
+			player[9][1][12] = { 5363, 327, 1313, 9947 }
 	end
 end
 do
@@ -2541,7 +2567,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7116, 236, 747, 10903 }
+			player[9][1][12] = { 7103, 239, 756, 10903 }
 	end
 end
 do
@@ -2549,7 +2575,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9339, 78, 172, 13072 }
+			player[9][1][12] = { 9340, 78, 173, 13072 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 5111, 32, 67, 81 }
 	end
@@ -2559,15 +2585,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6026, 282, 1029, 10344 }
-	end
-end
-do
-	local player = players["dummour"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5206, 368, 1535, 9655 }
+			player[9][1][12] = { 6013, 286, 1040, 10344 }
 	end
 end
 do
@@ -2575,7 +2593,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7344, 222, 688, 11096 }
+			player[9][1][12] = { 7337, 224, 695, 11096 }
 	end
 end
 do
@@ -2583,9 +2601,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6382, 266, 937, 10493 }
+			player[9][1][12] = { 6366, 270, 948, 10493 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6094, 147, 583, 12255 }
+			player[9][2][12] = { 6072, 152, 591, 12255 }
 	end
 end
 do
@@ -2593,7 +2611,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8721, 125, 332, 12217 }
+			player[9][1][12] = { 8722, 126, 334, 12217 }
 	end
 end
 do
@@ -2601,9 +2619,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8183, 168, 471, 11720 }
+			player[9][1][12] = { 8185, 169, 474, 11720 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8973, 60, 154, 15100 }
+			player[9][2][12] = { 8961, 61, 157, 15100 }
 	end
 end
 do
@@ -2611,7 +2629,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5535, 305, 1156, 10169 }
+			player[9][1][12] = { 5526, 309, 1167, 10169 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 1333, 53, 118, 2 }
 	end
@@ -2621,7 +2639,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6200, 273, 984, 10407 }
+			player[9][1][12] = { 6186, 277, 995, 10407 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 8833, 8, 17, 244 }
 	end
@@ -2631,7 +2649,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9358, 75, 167, 13101 }
+			player[9][1][12] = { 9359, 75, 168, 13101 }
 	end
 end
 do
@@ -2639,7 +2657,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7004, 240, 776, 10838 }
+			player[9][1][12] = { 6984, 244, 787, 10838 }
 	end
 end
 do
@@ -2647,7 +2665,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9625, 42, 98, 13753 }
+			player[9][1][12] = { 9628, 42, 98, 13753 }
 	end
 end
 do
@@ -2655,9 +2673,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5856, 292, 1073, 10287 }
+			player[9][1][12] = { 5844, 296, 1084, 10287 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5485, 160, 687, 11934 }
+			player[9][2][12] = { 5485, 164, 695, 11934 }
 	end
 end
 do
@@ -2665,7 +2683,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7317, 223, 695, 11082 }
+			player[9][1][12] = { 7310, 225, 702, 11082 }
 	end
 end
 do
@@ -2681,7 +2699,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8883, 113, 290, 12409 }
+			player[9][1][12] = { 8887, 113, 291, 12409 }
 	end
 end
 do
@@ -2689,9 +2707,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5350, 325, 1319, 9922 }
+			player[9][1][12] = { 5350, 330, 1331, 9922 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4525, 231, 1301, 9846 }
+			player[9][2][12] = { 4525, 236, 1313, 9846 }
 	end
 end
 do
@@ -2699,7 +2717,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5123, 382, 1684, 9502 }
+			player[9][1][12] = { 5123, 387, 1697, 9502 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 4167, 36, 82, 37 }
 	end
@@ -2709,33 +2727,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5308, 342, 1392, 9844 }
-	end
-end
-do
-	local player = players["dheginsayah"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9660, 39, 89, 13850 }
-	end
-end
-do
-	local player = players["bakkenz"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8836, 116, 302, 12351 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6557, 127, 514, 12517 }
-	end
-end
-do
-	local player = players["leczykrow"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9544, 56, 119, 13483 }
+			player[9][1][12] = { 5308, 347, 1404, 9844 }
 	end
 end
 do
@@ -2743,23 +2735,33 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8380, 147, 420, 11873 }
+			player[9][1][12] = { 8384, 148, 422, 11873 }
 	end
 end
 do
-	local player = players["heinous"]
+	local player = players["dheginsayah"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7812, 194, 567, 11427 }
+			player[9][1][12] = { 9662, 39, 89, 13850 }
 	end
 end
 do
-	local player = players["aquir"]
+	local player = players["bakkenz"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8705, 126, 336, 12205 }
+			player[9][1][12] = { 8841, 116, 303, 12351 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6538, 131, 521, 12517 }
+	end
+end
+do
+	local player = players["leczykrow"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9543, 56, 120, 13483 }
 	end
 end
 do
@@ -2767,15 +2769,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9884, 15, 31, 15044 }
+			player[9][1][12] = { 9885, 15, 31, 15044 }
 	end
 end
 do
-	local player = players["depredadory"]
+	local player = players["heinous"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9092, 97, 236, 12684 }
+			player[9][1][12] = { 7813, 195, 571, 11427 }
+	end
+end
+do
+	local player = players["aquir"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8707, 127, 338, 12205 }
 	end
 end
 do
@@ -2783,7 +2793,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7909, 187, 542, 11476 }
+			player[9][1][12] = { 7909, 188, 546, 11476 }
+	end
+end
+do
+	local player = players["depredadory"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9094, 97, 237, 12684 }
 	end
 end
 do
@@ -2791,7 +2809,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7007, 112, 447, 12867 }
+			player[9][2][12] = { 6997, 115, 452, 12867 }
 	end
 end
 do
@@ -2799,7 +2817,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9567, 51, 113, 13568 }
+			player[9][1][12] = { 9566, 52, 114, 13568 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 1185, 55, 120, 2 }
 	end
@@ -2809,7 +2827,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9528, 58, 123, 13460 }
+			player[9][1][12] = { 9528, 58, 124, 13460 }
 	end
 end
 do
@@ -2817,7 +2835,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7600, 202, 622, 11271 }
+			player[9][1][12] = { 7598, 203, 627, 11271 }
 	end
 end
 do
@@ -2825,7 +2843,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6772, 253, 836, 10685 }
+			player[9][1][12] = { 6754, 257, 847, 10685 }
 	end
 end
 do
@@ -2833,73 +2851,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7557, 204, 633, 11237 }
-	end
-end
-do
-	local player = players["plimplim"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8168, 169, 475, 11710 }
-	end
-end
-do
-	local player = players["pzdc"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9227, 84, 201, 12900 }
-	end
-end
-do
-	local player = players["cayla"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9957, 6, 12, 15837 }
-	end
-end
-do
-	local player = players["rekfu"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4506, 477, 2297, 8357 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1111, 56, 121, 2 }
-	end
-end
-do
-	local player = players["crnogorac"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4909, 419, 1978, 9104 }
-	end
-end
-do
-	local player = players["raketka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8121, 175, 487, 11666 }
-	end
-end
-do
-	local player = players["soins"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9930, 8, 19, 15288 }
-	end
-end
-do
-	local player = players["breeder"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6629, 258, 873, 10618 }
+			player[9][1][12] = { 7556, 205, 638, 11237 }
 	end
 end
 do
@@ -2907,7 +2859,73 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8593, 135, 365, 12079 }
+			player[9][1][12] = { 8596, 136, 367, 12079 }
+	end
+end
+do
+	local player = players["plimplim"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8170, 170, 478, 11710 }
+	end
+end
+do
+	local player = players["pzdc"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9229, 84, 202, 12900 }
+	end
+end
+do
+	local player = players["cayla"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9958, 6, 12, 15837 }
+	end
+end
+do
+	local player = players["rekfu"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4506, 484, 2313, 8357 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 1111, 56, 121, 2 }
+	end
+end
+do
+	local player = players["raketka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8124, 176, 490, 11666 }
+	end
+end
+do
+	local player = players["crnogorac"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4909, 425, 1993, 9104 }
+	end
+end
+do
+	local player = players["soins"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9931, 8, 19, 15288 }
+	end
+end
+do
+	local player = players["breeder"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6612, 262, 884, 10618 }
 	end
 end
 do
@@ -2923,7 +2941,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6057, 280, 1021, 10357 }
+			player[9][1][12] = { 6044, 284, 1032, 10357 }
 	end
 end
 do
@@ -2931,7 +2949,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9366, 74, 165, 13114 }
+			player[9][1][12] = { 9367, 74, 166, 13114 }
 	end
 end
 do
@@ -2939,7 +2957,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9424, 68, 150, 13245 }
+			player[9][1][12] = { 9424, 68, 151, 13245 }
+	end
+end
+do
+	local player = players["dheggie"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4271, 508, 2412, 7921 }
 	end
 end
 do
@@ -2947,7 +2973,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9347, 76, 170, 13073 }
+			player[9][1][12] = { 9348, 76, 171, 13073 }
 	end
 end
 do
@@ -2955,7 +2981,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9811, 25, 50, 14475 }
+			player[9][1][12] = { 9812, 25, 50, 14475 }
+	end
+end
+do
+	local player = players["mahoui"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5253, 362, 1490, 9742 }
 	end
 end
 do
@@ -2963,7 +2997,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9494, 61, 132, 13407 }
+			player[9][1][12] = { 9493, 61, 133, 13407 }
 	end
 end
 do
@@ -2971,89 +3005,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8353, 149, 427, 11848 }
-	end
-end
-do
-	local player = players["thedoctorxd"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9594, 47, 106, 13656 }
-	end
-end
-do
-	local player = players["rastimovaan"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9061, 100, 244, 12639 }
-	end
-end
-do
-	local player = players["itorinfor"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8087, 179, 496, 11631 }
-	end
-end
-do
-	local player = players["rhaell"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8230, 161, 459, 11759 }
-	end
-end
-do
-	local player = players["ikaresh"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5451, 311, 1195, 10110 }
-	end
-end
-do
-	local player = players["nemethios"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5282, 350, 1435, 9797 }
-	end
-end
-do
-	local player = players["ofuknuta"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9246, 82, 196, 12919 }
-	end
-end
-do
-	local player = players["hatrix"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8751, 123, 324, 12255 }
-	end
-end
-do
-	local player = players["feralosk"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9026, 105, 253, 12581 }
-	end
-end
-do
-	local player = players["darkbloodl"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5288, 346, 1421, 9808 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5451, 165, 711, 11861 }
+			player[9][1][12] = { 8358, 150, 429, 11848 }
 	end
 end
 do
@@ -3061,33 +3013,31 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9834, 22, 44, 14661 }
+			player[9][1][12] = { 9835, 22, 44, 14661 }
 	end
 end
 do
-	local player = players["eucalyptus"]
+	local player = players["thedoctorxd"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6649, 255, 868, 10627 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2222, 49, 106, 6 }
+			player[9][1][12] = { 9593, 48, 107, 13656 }
 	end
 end
 do
-	local player = players["floowz"]
+	local player = players["rastimovaan"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7835, 192, 561, 11443 }
+			player[9][1][12] = { 9064, 100, 245, 12639 }
 	end
 end
 do
-	local player = players["zsy"]
+	local player = players["itorinfor"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9343, 77, 171, 13072 }
+			player[9][1][12] = { 8089, 180, 499, 11631 }
 	end
 end
 do
@@ -3095,7 +3045,91 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8450, 145, 402, 11931 }
+			player[9][1][12] = { 8454, 146, 404, 11931 }
+	end
+end
+do
+	local player = players["rhaell"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8231, 162, 462, 11759 }
+	end
+end
+do
+	local player = players["ikaresh"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5451, 315, 1206, 10110 }
+	end
+end
+do
+	local player = players["nemethios"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5282, 355, 1447, 9797 }
+	end
+end
+do
+	local player = players["ofuknuta"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9248, 82, 197, 12919 }
+	end
+end
+do
+	local player = players["hatrix"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8757, 123, 325, 12255 }
+	end
+end
+do
+	local player = players["feralosk"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9029, 105, 254, 12581 }
+	end
+end
+do
+	local player = players["darkbloodl"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5288, 351, 1433, 9808 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5451, 169, 719, 11861 }
+	end
+end
+do
+	local player = players["eucalyptus"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6631, 259, 879, 10627 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 2222, 49, 106, 6 }
+	end
+end
+do
+	local player = players["zsy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9344, 77, 172, 13072 }
+	end
+end
+do
+	local player = players["floowz"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7836, 193, 565, 11443 }
 	end
 end
 do
@@ -3111,15 +3145,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4828, 438, 2062, 8955 }
-	end
-end
-do
-	local player = players["mahoui"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5253, 357, 1478, 9742 }
+			player[9][1][12] = { 4828, 444, 2077, 8955 }
 	end
 end
 do
@@ -3127,7 +3153,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4388, 487, 2354, 8138 }
+			player[9][1][12] = { 4388, 494, 2370, 8138 }
 	end
 end
 do
@@ -3135,7 +3161,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9242, 83, 197, 12915 }
+			player[9][1][12] = { 9244, 83, 198, 12915 }
 	end
 end
 do
@@ -3143,7 +3169,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8485, 144, 393, 11982 }
+			player[9][1][12] = { 8488, 145, 395, 11982 }
 	end
 end
 do
@@ -3151,7 +3177,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5945, 287, 1050, 10319 }
+			player[9][1][12] = { 5932, 291, 1061, 10319 }
 	end
 end
 do
@@ -3159,7 +3185,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8643, 128, 352, 12143 }
+			player[9][1][12] = { 8645, 129, 354, 12143 }
 	end
 end
 do
@@ -3167,17 +3193,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9521, 59, 125, 13443 }
-	end
-end
-do
-	local player = players["anacereal"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6169, 275, 992, 10395 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3788, 250, 1420, 8243 }
+			player[9][1][12] = { 9520, 59, 126, 13443 }
 	end
 end
 do
@@ -3185,9 +3201,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8141, 172, 482, 11692 }
+			player[9][1][12] = { 8143, 173, 485, 11692 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 6074, 27, 54, 111 }
+	end
+end
+do
+	local player = players["anacereal"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6155, 279, 1003, 10395 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 3788, 255, 1432, 8243 }
 	end
 end
 do
@@ -3195,7 +3221,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9459, 65, 141, 13307 }
+			player[9][1][12] = { 9459, 65, 142, 13307 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 6444, 25, 49, 116 }
 	end
@@ -3205,9 +3231,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5883, 290, 1066, 10299 }
+			player[9][1][12] = { 5871, 294, 1077, 10299 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4873, 215, 1145, 10604 }
+			player[9][2][12] = { 4873, 220, 1156, 10604 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 7481, 18, 35, 152 }
 	end
@@ -3217,7 +3243,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5582, 303, 1144, 10185 }
+			player[9][1][12] = { 5572, 307, 1155, 10185 }
+	end
+end
+do
+	local player = players["severka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9382, 73, 162, 13133 }
 	end
 end
 do
@@ -3225,7 +3259,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6386, 265, 936, 10494 }
+			player[9][1][12] = { 6370, 269, 947, 10494 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 3333, 41, 94, 21 }
 	end
@@ -3235,15 +3269,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4844, 434, 2049, 8983 }
-	end
-end
-do
-	local player = players["severka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9382, 73, 161, 13133 }
+			player[9][1][12] = { 4844, 440, 2064, 8983 }
 	end
 end
 do
@@ -3251,7 +3277,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5127, 381, 1675, 9509 }
+			player[9][1][12] = { 5127, 386, 1688, 9509 }
 	end
 end
 do
@@ -3259,7 +3285,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9486, 63, 134, 13361 }
+			player[9][1][12] = { 9486, 63, 135, 13361 }
 	end
 end
 do
@@ -3267,7 +3293,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9675, 35, 85, 13922 }
+			player[9][1][12] = { 9678, 35, 85, 13922 }
 	end
 end
 do
@@ -3275,7 +3301,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9668, 37, 87, 13872 }
+			player[9][1][12] = { 9670, 37, 87, 13872 }
 	end
 end
 do
@@ -3283,7 +3309,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9629, 41, 97, 13761 }
+			player[9][1][12] = { 9632, 41, 97, 13761 }
 	end
 end
 do
@@ -3291,7 +3317,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8319, 152, 436, 11834 }
+			player[9][1][12] = { 8323, 153, 438, 11834 }
 	end
 end
 do
@@ -3299,7 +3325,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5170, 378, 1600, 9589 }
+			player[9][1][12] = { 5170, 383, 1613, 9589 }
 	end
 end
 do
@@ -3307,7 +3333,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9698, 33, 79, 14010 }
+			player[9][1][12] = { 9701, 33, 79, 14010 }
 	end
 end
 do
@@ -3315,7 +3341,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9575, 49, 111, 13609 }
+			player[9][1][12] = { 9574, 50, 112, 13609 }
 	end
 end
 do
@@ -3323,7 +3349,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8222, 163, 461, 11750 }
+			player[9][1][12] = { 8223, 164, 464, 11750 }
 	end
 end
 do
@@ -3331,7 +3357,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7971, 183, 526, 11533 }
+			player[9][1][12] = { 7970, 184, 530, 11533 }
 	end
 end
 do
@@ -3339,7 +3365,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9505, 60, 129, 13418 }
+			player[9][1][12] = { 9505, 60, 130, 13418 }
 	end
 end
 do
@@ -3347,7 +3373,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4260, 501, 2403, 7901 }
+			player[9][1][12] = { 4260, 509, 2421, 7901 }
 	end
 end
 do
@@ -3359,11 +3385,19 @@ do
 	end
 end
 do
+	local player = players["skynea"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6698, 125, 497, 12606 }
+	end
+end
+do
 	local player = players["animalix"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9849, 20, 40, 14816 }
+			player[9][1][12] = { 9850, 20, 40, 14816 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 10000, 1, 1, 21760 }
 	end
@@ -3373,7 +3407,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9799, 16, 31, 16359 }
+			player[9][2][12] = { 9800, 16, 31, 16359 }
 	end
 end
 do
@@ -3381,7 +3415,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7477, 101, 377, 13450 }
+			player[9][2][12] = { 7463, 104, 382, 13450 }
 	end
 end
 do
@@ -3389,7 +3423,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6859, 117, 469, 12723 }
+			player[9][2][12] = { 6851, 120, 474, 12723 }
 	end
 end
 do
@@ -3397,9 +3431,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7862, 190, 554, 11460 }
+			player[9][1][12] = { 7863, 191, 558, 11460 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9060, 57, 141, 15187 }
+			player[9][2][12] = { 9048, 58, 144, 15187 }
 	end
 end
 do
@@ -3407,7 +3441,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9732, 23, 41, 16167 }
+			player[9][2][12] = { 9734, 23, 41, 16167 }
 	end
 end
 do
@@ -3415,7 +3449,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9631, 27, 56, 15937 }
+			player[9][2][12] = { 9634, 27, 56, 15937 }
 	end
 end
 do
@@ -3423,7 +3457,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6738, 120, 487, 12624 }
+			player[9][2][12] = { 6731, 123, 492, 12624 }
 	end
 end
 do
@@ -3431,15 +3465,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8772, 68, 184, 14901 }
-	end
-end
-do
-	local player = players["bezoule"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9852, 13, 23, 16524 }
+			player[9][2][12] = { 8762, 69, 187, 14901 }
 	end
 end
 do
@@ -3447,7 +3473,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9403, 43, 90, 15621 }
+			player[9][2][12] = { 9394, 44, 92, 15621 }
+	end
+end
+do
+	local player = players["bezoule"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9854, 13, 23, 16524 }
+	end
+end
+do
+	local player = players["hotniq"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9607, 31, 60, 15912 }
 	end
 end
 do
@@ -3455,7 +3497,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8262, 82, 260, 14434 }
+			player[9][2][12] = { 8256, 83, 263, 14434 }
 	end
 end
 do
@@ -3463,7 +3505,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8383, 79, 242, 14489 }
+			player[9][2][12] = { 8375, 80, 245, 14489 }
 	end
 end
 do
@@ -3471,7 +3513,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6705, 122, 492, 12602 }
+			player[9][2][12] = { 6684, 126, 499, 12602 }
 	end
 end
 do
@@ -3479,7 +3521,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9859, 12, 22, 16531 }
+			player[9][2][12] = { 9860, 12, 22, 16531 }
 	end
 end
 do
@@ -3487,7 +3529,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9886, 10, 18, 16670 }
+			player[9][2][12] = { 9887, 10, 18, 16670 }
 	end
 end
 do
@@ -3495,7 +3537,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6510, 130, 521, 12497 }
+			player[9][2][12] = { 6491, 134, 528, 12497 }
 	end
 end
 do
@@ -3503,7 +3545,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9691, 24, 47, 16060 }
+			player[9][2][12] = { 9694, 24, 47, 16060 }
 	end
 end
 do
@@ -3519,7 +3561,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8812, 67, 178, 14931 }
+			player[9][2][12] = { 8802, 68, 181, 14931 }
 	end
 end
 do
@@ -3527,7 +3569,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9664, 25, 51, 15988 }
+			player[9][2][12] = { 9667, 25, 51, 15988 }
 	end
 end
 do
@@ -3535,7 +3577,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4648, 461, 2204, 8620 }
+			player[9][1][12] = { 4648, 467, 2219, 8620 }
 	end
 end
 do
@@ -3543,7 +3585,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9497, 38, 76, 15763 }
+			player[9][2][12] = { 9487, 39, 78, 15763 }
 	end
 end
 do
@@ -3551,7 +3593,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9946, 7, 9, 17339 }
+			player[9][2][12] = { 9947, 7, 9, 17339 }
 	end
 end
 do
@@ -3559,7 +3601,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9624, 28, 57, 15928 }
+			player[9][2][12] = { 9627, 28, 57, 15928 }
 	end
 end
 do
@@ -3567,7 +3609,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9329, 46, 101, 15507 }
+			player[9][2][12] = { 9321, 47, 103, 15507 }
 	end
 end
 do
@@ -3575,7 +3617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9738, 22, 40, 16190 }
+			player[9][2][12] = { 9740, 22, 40, 16190 }
 	end
 end
 do
@@ -3583,7 +3625,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6235, 139, 562, 12358 }
+			player[9][2][12] = { 6218, 143, 569, 12358 }
 	end
 end
 do
@@ -3591,7 +3633,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5490, 159, 684, 11947 }
+			player[9][2][12] = { 5490, 163, 692, 11947 }
 	end
 end
 do
@@ -3599,9 +3641,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7851, 191, 557, 11457 }
+			player[9][1][12] = { 7851, 192, 561, 11457 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9765, 21, 36, 16304 }
+			player[9][2][12] = { 9767, 21, 36, 16304 }
 	end
 end
 do
@@ -3609,7 +3651,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9430, 41, 86, 15652 }
+			player[9][2][12] = { 9421, 42, 88, 15652 }
 	end
 end
 do
@@ -3617,7 +3659,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8611, 75, 208, 14704 }
+			player[9][2][12] = { 8602, 76, 211, 14704 }
 	end
 end
 do
@@ -3625,7 +3667,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9772, 20, 35, 16309 }
+			player[9][2][12] = { 9774, 20, 35, 16309 }
 	end
 end
 do
@@ -3633,7 +3675,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9349, 45, 98, 15528 }
+			player[9][2][12] = { 9341, 46, 100, 15528 }
 	end
 end
 do
@@ -3641,7 +3683,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8389, 78, 241, 14490 }
+			player[9][2][12] = { 8382, 79, 244, 14490 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 7185, 21, 39, 143 }
 	end
@@ -3651,7 +3693,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5091, 199, 999, 11078 }
+			player[9][2][12] = { 5091, 204, 1009, 11078 }
 	end
 end
 do
@@ -3659,7 +3701,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9779, 19, 34, 16320 }
+			player[9][2][12] = { 9780, 19, 34, 16320 }
 	end
 end
 do
@@ -3667,7 +3709,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7228, 106, 414, 13069 }
+			player[9][2][12] = { 7217, 109, 419, 13069 }
 	end
 end
 do
@@ -3675,7 +3717,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6128, 145, 578, 12273 }
+			player[9][2][12] = { 6105, 150, 586, 12273 }
 	end
 end
 do
@@ -3683,7 +3725,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5467, 163, 700, 11895 }
+			player[9][2][12] = { 5467, 167, 708, 11895 }
 	end
 end
 do
@@ -3691,7 +3733,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9302, 48, 105, 15467 }
+			player[9][2][12] = { 9294, 49, 107, 15467 }
 	end
 end
 do
@@ -3699,7 +3741,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9879, 11, 19, 16640 }
+			player[9][2][12] = { 9880, 11, 19, 16640 }
 	end
 end
 do
@@ -3707,7 +3749,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8638, 73, 204, 14785 }
+			player[9][2][12] = { 8628, 74, 207, 14785 }
 	end
 end
 do
@@ -3715,7 +3757,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9463, 40, 81, 15717 }
+			player[9][2][12] = { 9454, 41, 83, 15717 }
 	end
 end
 do
@@ -3723,9 +3765,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9559, 53, 115, 13525 }
+			player[9][1][12] = { 9601, 47, 105, 13690 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9805, 15, 30, 16393 }
+			player[9][2][12] = { 9807, 15, 30, 16393 }
 	end
 end
 do
@@ -3733,7 +3775,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8295, 81, 255, 14450 }
+			player[9][2][12] = { 8289, 82, 258, 14450 }
 	end
 end
 do
@@ -3741,7 +3783,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8826, 65, 176, 14948 }
+			player[9][2][12] = { 8815, 66, 179, 14948 }
 	end
 end
 do
@@ -3749,7 +3791,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9584, 32, 63, 15897 }
+			player[9][2][12] = { 9581, 33, 64, 15897 }
 	end
 end
 do
@@ -3757,7 +3799,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9577, 33, 64, 15897 }
+			player[9][2][12] = { 9574, 34, 65, 15897 }
 	end
 end
 do
@@ -3765,7 +3807,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5328, 179, 827, 11593 }
+			player[9][2][12] = { 5328, 183, 835, 11593 }
 	end
 end
 do
@@ -3773,7 +3815,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7161, 108, 424, 13027 }
+			player[9][2][12] = { 7150, 111, 429, 13027 }
 	end
 end
 do
@@ -3781,7 +3823,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9550, 34, 68, 15855 }
+			player[9][2][12] = { 9541, 35, 70, 15855 }
 	end
 end
 do
@@ -3789,9 +3831,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5848, 294, 1075, 10284 }
+			player[9][1][12] = { 5837, 298, 1086, 10284 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8960, 61, 156, 15082 }
+			player[9][2][12] = { 8948, 62, 159, 15082 }
 	end
 end
 do
@@ -3799,7 +3841,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4396, 234, 1334, 9566 }
+			player[9][2][12] = { 4396, 239, 1346, 9566 }
 	end
 end
 do
@@ -3807,9 +3849,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6881, 249, 808, 10755 }
+			player[9][1][12] = { 6861, 253, 819, 10755 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3927, 246, 1406, 8545 }
+			player[9][2][12] = { 3927, 251, 1418, 8545 }
 	end
 end
 do
@@ -3817,7 +3859,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8940, 62, 159, 15056 }
+			player[9][2][12] = { 8928, 63, 162, 15056 }
 	end
 end
 do
@@ -3825,7 +3867,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9591, 31, 62, 15901 }
+			player[9][2][12] = { 9587, 32, 63, 15901 }
 	end
 end
 do
@@ -3833,57 +3875,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4990, 208, 1069, 10857 }
-	end
-end
-do
-	local player = players["elva"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9141, 53, 129, 15229 }
-	end
-end
-do
-	local player = players["harhagg"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6456, 133, 529, 12467 }
-	end
-end
-do
-	local player = players["yogg"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5052, 204, 1023, 10993 }
-	end
-end
-do
-	local player = players["pelagie"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9503, 37, 75, 15767 }
-	end
-end
-do
-	local player = players["lykos"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4757, 447, 2122, 8823 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9309, 47, 104, 15480 }
-	end
-end
-do
-	local player = players["yangxxd"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5379, 176, 776, 11704 }
+			player[9][2][12] = { 4990, 213, 1080, 10857 }
 	end
 end
 do
@@ -3891,7 +3883,57 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9114, 54, 133, 15210 }
+			player[9][2][12] = { 9101, 55, 136, 15210 }
+	end
+end
+do
+	local player = players["elva"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9128, 54, 132, 15229 }
+	end
+end
+do
+	local player = players["harhagg"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6438, 137, 536, 12467 }
+	end
+end
+do
+	local player = players["yogg"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5052, 209, 1034, 10993 }
+	end
+end
+do
+	local player = players["pelagie"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9494, 38, 77, 15767 }
+	end
+end
+do
+	local player = players["lykos"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4757, 453, 2137, 8823 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9301, 48, 106, 15480 }
+	end
+end
+do
+	local player = players["yangxxd"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5379, 180, 784, 11704 }
 	end
 end
 do
@@ -3899,7 +3941,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5470, 162, 698, 11902 }
+			player[9][2][12] = { 5470, 166, 706, 11902 }
 	end
 end
 do
@@ -3907,7 +3949,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4984, 209, 1076, 10846 }
+			player[9][2][12] = { 4984, 214, 1087, 10846 }
 	end
 end
 do
@@ -3915,9 +3957,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9200, 85, 208, 12832 }
+			player[9][1][12] = { 9202, 85, 209, 12832 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9275, 49, 109, 15398 }
+			player[9][2][12] = { 9268, 50, 111, 15398 }
 	end
 end
 do
@@ -3933,23 +3975,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5725, 150, 638, 12054 }
-	end
-end
-do
-	local player = players["bahhdru"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9027, 58, 146, 15145 }
-	end
-end
-do
-	local player = players["pig"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9537, 35, 70, 15837 }
+			player[9][2][12] = { 5706, 155, 646, 12054 }
 	end
 end
 do
@@ -3957,7 +3983,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9792, 17, 32, 16358 }
+			player[9][2][12] = { 9794, 17, 32, 16358 }
+	end
+end
+do
+	local player = players["bahhdru"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9015, 59, 149, 15145 }
+	end
+end
+do
+	local player = players["pig"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9527, 36, 72, 15837 }
 	end
 end
 do
@@ -3965,7 +4007,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7698, 93, 344, 13765 }
+			player[9][2][12] = { 7690, 95, 348, 13765 }
 	end
 end
 do
@@ -3973,7 +4015,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7664, 95, 349, 13693 }
+			player[9][2][12] = { 7656, 97, 353, 13693 }
 	end
 end
 do
@@ -3981,7 +4023,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9638, 26, 55, 15965 }
+			player[9][2][12] = { 9640, 26, 55, 15965 }
 	end
 end
 do
@@ -3989,7 +4031,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5139, 193, 966, 11183 }
+			player[9][2][12] = { 5139, 197, 975, 11183 }
 	end
 end
 do
@@ -3997,7 +4039,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5232, 185, 896, 11384 }
+			player[9][2][12] = { 5232, 189, 904, 11384 }
 	end
 end
 do
@@ -4005,7 +4047,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6067, 148, 587, 12240 }
+			player[9][2][12] = { 6045, 153, 595, 12240 }
 	end
 end
 do
@@ -4013,7 +4055,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5472, 161, 695, 11907 }
+			player[9][2][12] = { 5472, 165, 703, 11907 }
 	end
 end
 do
@@ -4021,7 +4063,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6664, 123, 498, 12586 }
+			player[9][2][12] = { 6644, 127, 505, 12586 }
 	end
 end
 do
@@ -4029,7 +4071,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5495, 158, 677, 11958 }
+			player[9][2][12] = { 5495, 162, 685, 11958 }
 	end
 end
 do
@@ -4037,7 +4079,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9785, 18, 33, 16346 }
+			player[9][2][12] = { 9787, 18, 33, 16346 }
 	end
 end
 do
@@ -4045,7 +4087,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5238, 183, 891, 11399 }
+			player[9][2][12] = { 5238, 187, 899, 11399 }
 	end
 end
 do
@@ -4053,15 +4095,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4238, 240, 1367, 9221 }
-	end
-end
-do
-	local player = players["elulari"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6201, 141, 567, 12329 }
+			player[9][2][12] = { 4238, 245, 1379, 9221 }
 	end
 end
 do
@@ -4069,7 +4103,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7000, 113, 448, 12860 }
+			player[9][2][12] = { 6991, 116, 453, 12860 }
+	end
+end
+do
+	local player = players["elulari"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6185, 145, 574, 12329 }
 	end
 end
 do
@@ -4077,9 +4119,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4792, 443, 2093, 8887 }
+			player[9][1][12] = { 4792, 449, 2108, 8887 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9617, 29, 58, 15922 }
+			player[9][2][12] = { 9621, 29, 58, 15922 }
 	end
 end
 do
@@ -4087,9 +4129,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8090, 178, 495, 11638 }
+			player[9][1][12] = { 8093, 179, 498, 11638 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9101, 55, 135, 15197 }
+			player[9][2][12] = { 9088, 56, 138, 15197 }
 	end
 end
 do
@@ -4097,7 +4139,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9826, 14, 27, 16437 }
+			player[9][2][12] = { 9827, 14, 27, 16437 }
 	end
 end
 do
@@ -4105,9 +4147,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8991, 107, 262, 12525 }
+			player[9][1][12] = { 8995, 107, 263, 12525 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7691, 94, 345, 13757 }
+			player[9][2][12] = { 7683, 96, 349, 13757 }
 	end
 end
 do
@@ -4115,7 +4157,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5204, 188, 916, 11324 }
+			player[9][2][12] = { 5204, 192, 924, 11324 }
 	end
 end
 do
@@ -4123,9 +4165,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4315, 497, 2385, 8004 }
+			player[9][1][12] = { 4315, 504, 2401, 8004 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5617, 153, 654, 12018 }
+			player[9][2][12] = { 5599, 158, 662, 12018 }
 	end
 end
 do
@@ -4133,7 +4175,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9477, 39, 79, 15731 }
+			player[9][2][12] = { 9467, 40, 81, 15731 }
 	end
 end
 do
@@ -4141,7 +4183,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7584, 97, 361, 13592 }
+			player[9][2][12] = { 7570, 100, 366, 13592 }
 	end
 end
 do
@@ -4149,9 +4191,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4280, 500, 2393, 7937 }
+			player[9][1][12] = { 4280, 507, 2409, 7937 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4946, 212, 1100, 10763 }
+			player[9][2][12] = { 4946, 217, 1111, 10763 }
 	end
 end
 do
@@ -4159,7 +4201,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6268, 138, 557, 12369 }
+			player[9][2][12] = { 6252, 142, 564, 12369 }
 	end
 end
 do
@@ -4167,9 +4209,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5004, 405, 1857, 9281 }
+			player[9][1][12] = { 5004, 410, 1870, 9281 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4751, 217, 1208, 10338 }
+			player[9][2][12] = { 4751, 222, 1219, 10338 }
 	end
 end
 do
@@ -4177,7 +4219,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9611, 30, 59, 15921 }
+			player[9][2][12] = { 9614, 30, 59, 15921 }
 	end
 end
 do
@@ -4185,7 +4227,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5232, 184, 895, 11385 }
+			player[9][2][12] = { 5232, 188, 903, 11385 }
 	end
 end
 do
@@ -4193,15 +4235,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4994, 206, 1066, 10866 }
-	end
-end
-do
-	local player = players["poldo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4306, 237, 1352, 9369 }
+			player[9][2][12] = { 4994, 211, 1077, 10866 }
 	end
 end
 do
@@ -4209,7 +4243,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8121, 88, 281, 14254 }
+			player[9][2][12] = { 8116, 89, 284, 14254 }
+	end
+end
+do
+	local player = players["poldo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4306, 242, 1364, 9369 }
 	end
 end
 do
@@ -4225,7 +4267,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9409, 42, 89, 15629 }
+			player[9][2][12] = { 9401, 43, 91, 15629 }
 	end
 end
 do
@@ -4233,7 +4275,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7040, 110, 442, 12900 }
+			player[9][2][12] = { 7031, 113, 447, 12900 }
 	end
 end
 do
@@ -4241,7 +4283,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5438, 166, 722, 11832 }
+			player[9][2][12] = { 5438, 170, 730, 11832 }
 	end
 end
 do
@@ -4249,7 +4291,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6584, 126, 510, 12535 }
+			player[9][2][12] = { 6565, 130, 517, 12535 }
 	end
 end
 do
@@ -4257,7 +4299,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5570, 155, 661, 11998 }
+			player[9][2][12] = { 5553, 160, 669, 11998 }
 	end
 end
 do
@@ -4265,7 +4307,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6980, 115, 451, 12845 }
+			player[9][2][12] = { 6971, 118, 456, 12845 }
 	end
 end
 do
@@ -4273,7 +4315,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7866, 90, 319, 13973 }
+			player[9][2][12] = { 7863, 91, 322, 13973 }
 	end
 end
 do
@@ -4305,7 +4347,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4995, 408, 1871, 9263 }
+			player[9][1][12] = { 4995, 413, 1884, 9263 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 3167, 42, 95, 20 }
 	end
@@ -4331,7 +4373,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9655, 35, 113, 13457 }
+			player[9][2][12] = { 9657, 35, 113, 13457 }
 	end
 end
 do
@@ -4347,7 +4389,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8856, 109, 372, 11650 }
+			player[9][2][12] = { 8858, 109, 374, 11650 }
 	end
 end
 do
@@ -4355,7 +4397,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8609, 136, 452, 11291 }
+			player[9][2][12] = { 8603, 136, 457, 11291 }
 	end
 end
 do
@@ -4363,7 +4405,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9840, 16, 53, 14672 }
+			player[9][2][12] = { 9841, 16, 53, 14672 }
 	end
 end
 do
@@ -4371,7 +4413,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8226, 158, 576, 10810 }
+			player[9][2][12] = { 8221, 158, 582, 10810 }
 	end
 end
 do
@@ -4379,7 +4421,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9556, 45, 145, 13109 }
+			player[9][2][12] = { 9556, 45, 146, 13109 }
 	end
 end
 do
@@ -4387,7 +4429,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9599, 40, 131, 13270 }
+			player[9][2][12] = { 9599, 40, 132, 13270 }
 	end
 end
 do
@@ -4395,7 +4437,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7859, 183, 695, 10427 }
+			player[9][2][12] = { 7853, 184, 702, 10427 }
 	end
 end
 do
@@ -4403,7 +4445,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9935, 7, 22, 16730 }
+			player[9][2][12] = { 9936, 7, 22, 16730 }
 	end
 end
 do
@@ -4411,7 +4453,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9201, 78, 260, 12256 }
+			player[9][2][12] = { 9201, 78, 262, 12256 }
 	end
 end
 do
@@ -4419,7 +4461,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9466, 57, 174, 12827 }
+			player[9][2][12] = { 9467, 57, 175, 12827 }
 	end
 end
 do
@@ -4429,7 +4471,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 9070 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9867, 12, 44, 14889 }
+			player[9][2][12] = { 9868, 12, 44, 14889 }
 	end
 end
 do
@@ -4437,7 +4479,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9883, 11, 39, 15457 }
+			player[9][2][12] = { 9884, 11, 39, 15457 }
 	end
 end
 do
@@ -4445,7 +4487,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9287, 69, 232, 12452 }
+			player[9][2][12] = { 9286, 69, 234, 12452 }
 	end
 end
 do
@@ -4453,7 +4495,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9254, 73, 243, 12364 }
+			player[9][2][12] = { 9253, 73, 245, 12364 }
 	end
 end
 do
@@ -4461,23 +4503,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8566, 142, 466, 11235 }
-	end
-end
-do
-	local player = players["antresse"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9753, 23, 81, 13895 }
-	end
-end
-do
-	local player = players["parcero"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9473, 56, 172, 12859 }
+			player[9][2][12] = { 8560, 142, 471, 11235 }
 	end
 end
 do
@@ -4485,7 +4511,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9676, 33, 106, 13500 }
+			player[9][2][12] = { 9678, 33, 106, 13500 }
+	end
+end
+do
+	local player = players["antresse"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9755, 23, 81, 13895 }
+	end
+end
+do
+	local player = players["parcero"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9473, 56, 173, 12859 }
 	end
 end
 do
@@ -4493,7 +4535,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9525, 48, 155, 13018 }
+			player[9][2][12] = { 9525, 48, 156, 13018 }
 	end
 end
 do
@@ -4501,7 +4543,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9500, 54, 163, 12918 }
+			player[9][2][12] = { 9501, 54, 164, 12918 }
 	end
 end
 do
@@ -4509,7 +4551,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9938, 6, 21, 16756 }
+			player[9][2][12] = { 9939, 6, 21, 16756 }
 	end
 end
 do
@@ -4517,7 +4559,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4698, 338, 1720, 8497 }
+			player[9][2][12] = { 4668, 340, 1742, 8497 }
 	end
 end
 do
@@ -4525,7 +4567,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8606, 137, 453, 11284 }
+			player[9][2][12] = { 8600, 137, 458, 11284 }
 	end
 end
 do
@@ -4533,15 +4575,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9701, 29, 98, 13671 }
-	end
-end
-do
-	local player = players["simanskej"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9291, 68, 231, 12453 }
+			player[9][2][12] = { 9703, 29, 98, 13671 }
 	end
 end
 do
@@ -4549,7 +4583,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9636, 37, 119, 13384 }
+			player[9][2][12] = { 9639, 37, 119, 13384 }
+	end
+end
+do
+	local player = players["simanskej"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9289, 68, 233, 12453 }
 	end
 end
 do
@@ -4565,7 +4607,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9855, 14, 48, 14794 }
+			player[9][2][12] = { 9856, 14, 48, 14794 }
 	end
 end
 do
@@ -4573,7 +4615,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5660, 305, 1408, 8950 }
+			player[9][2][12] = { 5623, 308, 1430, 8950 }
 	end
 end
 do
@@ -4581,7 +4623,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9204, 77, 259, 12259 }
+			player[9][2][12] = { 9204, 77, 261, 12259 }
 	end
 end
 do
@@ -4589,7 +4631,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7091, 232, 944, 9810 }
+			player[9][2][12] = { 7069, 232, 958, 9810 }
 	end
 end
 do
@@ -4597,7 +4639,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5799, 299, 1363, 8999 }
+			player[9][2][12] = { 5761, 302, 1385, 8999 }
 	end
 end
 do
@@ -4605,7 +4647,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9833, 17, 55, 14564 }
+			player[9][2][12] = { 9835, 17, 55, 14564 }
 	end
 end
 do
@@ -4613,7 +4655,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8448, 148, 504, 11084 }
+			player[9][2][12] = { 8444, 148, 509, 11084 }
 	end
 end
 do
@@ -4621,7 +4663,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7625, 198, 771, 10257 }
+			player[9][2][12] = { 7617, 198, 779, 10257 }
 	end
 end
 do
@@ -4629,7 +4671,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8831, 113, 380, 11599 }
+			player[9][2][12] = { 8833, 113, 382, 11599 }
 	end
 end
 do
@@ -4637,7 +4679,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9099, 89, 293, 12071 }
+			player[9][2][12] = { 9100, 89, 295, 12071 }
 	end
 end
 do
@@ -4645,7 +4687,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3920, 385, 2114, 7988 }
+			player[9][2][12] = { 3920, 387, 2137, 7988 }
 	end
 end
 do
@@ -4653,7 +4695,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8732, 124, 412, 11431 }
+			player[9][2][12] = { 8729, 124, 416, 11431 }
 	end
 end
 do
@@ -4661,15 +4703,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9519, 50, 157, 12998 }
-	end
-end
-do
-	local player = players["liluth"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9198, 79, 261, 12252 }
+			player[9][2][12] = { 9519, 50, 158, 12998 }
 	end
 end
 do
@@ -4677,7 +4711,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5500, 312, 1460, 8859 }
+			player[9][2][12] = { 5464, 315, 1482, 8859 }
+	end
+end
+do
+	local player = players["liluth"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9198, 79, 263, 12252 }
 	end
 end
 do
@@ -4685,9 +4727,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9516, 51, 158, 12979 }
+			player[9][2][12] = { 9516, 51, 159, 12979 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6216, 8, 15, 8067 }
+			player[9][3][12] = { 5897, 9, 17, 8067 }
 	end
 end
 do
@@ -4695,7 +4737,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6493, 267, 1138, 9402 }
+			player[9][2][12] = { 6462, 269, 1156, 9402 }
 	end
 end
 do
@@ -4703,7 +4745,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9664, 34, 110, 13481 }
+			player[9][2][12] = { 9666, 34, 110, 13481 }
 	end
 end
 do
@@ -4711,7 +4753,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9695, 30, 100, 13579 }
+			player[9][2][12] = { 9697, 30, 100, 13579 }
 	end
 end
 do
@@ -4719,7 +4761,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8846, 111, 375, 11636 }
+			player[9][2][12] = { 8848, 111, 377, 11636 }
 	end
 end
 do
@@ -4727,9 +4769,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9522, 49, 156, 13000 }
+			player[9][2][12] = { 9522, 49, 157, 13000 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6486, 7, 14, 8169 }
+			player[9][3][12] = { 6154, 8, 16, 8169 }
 	end
 end
 do
@@ -4737,7 +4779,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9084, 90, 298, 12035 }
+			player[9][2][12] = { 9084, 90, 300, 12035 }
 	end
 end
 do
@@ -4745,7 +4787,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8547, 144, 472, 11215 }
+			player[9][2][12] = { 8542, 144, 477, 11215 }
+	end
+end
+do
+	local player = players["barn"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 3896, 390, 2163, 7940 }
 	end
 end
 do
@@ -4753,47 +4803,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8010, 174, 646, 10572 }
-	end
-end
-do
-	local player = players["cyora"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7273, 223, 885, 9973 }
-	end
-end
-do
-	local player = players["dismantler"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7600, 201, 779, 10244 }
-	end
-end
-do
-	local player = players["wellan"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5987, 288, 1302, 9091 }
-	end
-end
-do
-	local player = players["aery"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8705, 127, 421, 11413 }
-	end
-end
-do
-	local player = players["plexsx"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7616, 199, 774, 10255 }
+			player[9][2][12] = { 8003, 175, 653, 10572 }
 	end
 end
 do
@@ -4801,7 +4811,47 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9719, 26, 92, 13710 }
+			player[9][2][12] = { 9721, 26, 92, 13710 }
+	end
+end
+do
+	local player = players["cyora"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7256, 223, 897, 9973 }
+	end
+end
+do
+	local player = players["dismantler"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7593, 201, 787, 10244 }
+	end
+end
+do
+	local player = players["wellan"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5948, 291, 1324, 9091 }
+	end
+end
+do
+	local player = players["aery"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8701, 127, 425, 11413 }
+	end
+end
+do
+	local player = players["plexsx"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7608, 199, 782, 10255 }
 	end
 end
 do
@@ -4809,7 +4859,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6604, 258, 1102, 9477 }
+			player[9][2][12] = { 6576, 260, 1119, 9477 }
 	end
 end
 do
@@ -4817,7 +4867,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9568, 44, 141, 13130 }
+			player[9][2][12] = { 9568, 44, 142, 13130 }
 	end
 end
 do
@@ -4825,7 +4875,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6980, 239, 980, 9709 }
+			player[9][2][12] = { 6956, 240, 995, 9709 }
 	end
 end
 do
@@ -4833,7 +4883,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7816, 185, 709, 10397 }
+			player[9][2][12] = { 7807, 186, 717, 10397 }
 	end
 end
 do
@@ -4845,21 +4895,21 @@ do
 	end
 end
 do
-	local player = players["kynnra"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8695, 128, 424, 11403 }
-	end
-end
-do
 	local player = players["huntver"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7165, 228, 920, 9872 }
+			player[9][2][12] = { 7145, 228, 933, 9872 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8125, 4, 9, 10121 }
+			player[9][3][12] = { 7647, 5, 11, 10121 }
+	end
+end
+do
+	local player = players["kynnra"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8692, 128, 428, 11403 }
 	end
 end
 do
@@ -4867,7 +4917,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8044, 173, 635, 10606 }
+			player[9][2][12] = { 8037, 174, 642, 10606 }
 	end
 end
 do
@@ -4875,7 +4925,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9692, 31, 101, 13569 }
+			player[9][2][12] = { 9694, 31, 101, 13569 }
 	end
 end
 do
@@ -4883,7 +4933,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3813, 396, 2245, 7770 }
+			player[9][2][12] = { 3813, 398, 2268, 7770 }
 	end
 end
 do
@@ -4891,15 +4941,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9713, 27, 94, 13701 }
-	end
-end
-do
-	local player = players["barn"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3896, 388, 2140, 7940 }
+			player[9][2][12] = { 9715, 27, 94, 13701 }
 	end
 end
 do
@@ -4907,7 +4949,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7764, 188, 726, 10352 }
+			player[9][2][12] = { 7755, 188, 734, 10352 }
 	end
 end
 do
@@ -4915,15 +4957,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6968, 241, 984, 9702 }
-	end
-end
-do
-	local player = players["bloodreina"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9722, 25, 91, 13717 }
+			player[9][2][12] = { 6943, 242, 999, 9702 }
 	end
 end
 do
@@ -4931,7 +4965,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9312, 67, 224, 12482 }
+			player[9][2][12] = { 9311, 67, 226, 12482 }
+	end
+end
+do
+	local player = players["bloodreina"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9724, 25, 91, 13717 }
 	end
 end
 do
@@ -4939,7 +4981,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8097, 170, 618, 10655 }
+			player[9][2][12] = { 8089, 171, 625, 10655 }
 	end
 end
 do
@@ -4947,7 +4989,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9627, 38, 122, 13367 }
+			player[9][2][12] = { 9629, 38, 122, 13367 }
 	end
 end
 do
@@ -4955,63 +4997,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7079, 233, 948, 9803 }
-	end
-end
-do
-	local player = players["makily"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7144, 229, 927, 9859 }
-	end
-end
-do
-	local player = players["gimmebowjob"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9013, 95, 321, 11934 }
-	end
-end
-do
-	local player = players["leontina"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3677, 414, 2399, 7493 }
-	end
-end
-do
-	local player = players["nargol"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9775, 20, 74, 14087 }
-	end
-end
-do
-	local player = players["zulljen"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8560, 143, 468, 11225 }
-	end
-end
-do
-	local player = players["adreenalin"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4343, 350, 1835, 8345 }
-	end
-end
-do
-	local player = players["fierian"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8714, 125, 418, 11422 }
+			player[9][2][12] = { 7057, 233, 962, 9803 }
 	end
 end
 do
@@ -5019,7 +5005,63 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8572, 141, 464, 11236 }
+			player[9][2][12] = { 8567, 141, 469, 11236 }
+	end
+end
+do
+	local player = players["makily"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7124, 229, 940, 9859 }
+	end
+end
+do
+	local player = players["gimmebowjob"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9014, 95, 323, 11934 }
+	end
+end
+do
+	local player = players["leontina"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 3677, 416, 2422, 7493 }
+	end
+end
+do
+	local player = players["nargol"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9776, 20, 74, 14087 }
+	end
+end
+do
+	local player = players["zulljen"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8554, 143, 473, 11225 }
+	end
+end
+do
+	local player = players["adreenalin"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4315, 352, 1857, 8345 }
+	end
+end
+do
+	local player = players["fierian"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8711, 125, 422, 11422 }
 	end
 end
 do
@@ -5027,7 +5069,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4093, 359, 1916, 8251 }
+			player[9][2][12] = { 4067, 361, 1938, 8251 }
 	end
 end
 do
@@ -5035,7 +5077,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9861, 13, 46, 14826 }
+			player[9][2][12] = { 9862, 13, 46, 14826 }
 	end
 end
 do
@@ -5043,9 +5085,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8131, 164, 607, 10685 }
+			player[9][2][12] = { 8126, 164, 613, 10685 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7568, 5, 10, 10052 }
+			player[9][3][12] = { 7289, 6, 12, 10052 }
 	end
 end
 do
@@ -5053,7 +5095,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9001, 99, 325, 11907 }
+			player[9][2][12] = { 9002, 99, 327, 11907 }
 	end
 end
 do
@@ -5061,7 +5103,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7668, 193, 757, 10291 }
+			player[9][2][12] = { 7660, 193, 765, 10291 }
 	end
 end
 do
@@ -5069,7 +5111,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6780, 248, 1045, 9581 }
+			player[9][2][12] = { 6753, 250, 1061, 9581 }
 	end
 end
 do
@@ -5077,7 +5119,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7776, 186, 722, 10360 }
+			player[9][2][12] = { 7767, 187, 730, 10360 }
 	end
 end
 do
@@ -5085,7 +5127,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8828, 114, 381, 11594 }
+			player[9][2][12] = { 8830, 114, 383, 11594 }
 	end
 end
 do
@@ -5093,7 +5135,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5907, 294, 1328, 9059 }
+			player[9][2][12] = { 5868, 297, 1350, 9059 }
 	end
 end
 do
@@ -5101,7 +5143,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7829, 184, 705, 10407 }
+			player[9][2][12] = { 7822, 185, 712, 10407 }
 	end
 end
 do
@@ -5109,7 +5151,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8674, 130, 431, 11383 }
+			player[9][2][12] = { 8671, 130, 435, 11383 }
 	end
 end
 do
@@ -5117,7 +5159,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9028, 93, 316, 11956 }
+			player[9][2][12] = { 9029, 93, 318, 11956 }
 	end
 end
 do
@@ -5125,7 +5167,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8304, 153, 551, 10892 }
+			player[9][2][12] = { 8297, 153, 557, 10892 }
 	end
 end
 do
@@ -5133,7 +5175,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3729, 406, 2342, 7598 }
+			player[9][2][12] = { 3729, 408, 2365, 7598 }
 	end
 end
 do
@@ -5141,7 +5183,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9010, 96, 322, 11927 }
+			player[9][2][12] = { 9011, 96, 324, 11927 }
 	end
 end
 do
@@ -5149,7 +5191,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8880, 108, 364, 11708 }
+			player[9][2][12] = { 8882, 108, 366, 11708 }
 	end
 end
 do
@@ -5157,7 +5199,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6838, 246, 1026, 9619 }
+			player[9][2][12] = { 6815, 247, 1041, 9619 }
 	end
 end
 do
@@ -5165,7 +5207,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6181, 282, 1239, 9201 }
+			player[9][2][12] = { 6147, 284, 1259, 9201 }
 	end
 end
 do
@@ -5173,7 +5215,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9762, 21, 78, 14017 }
+			player[9][2][12] = { 9764, 21, 78, 14017 }
 	end
 end
 do
@@ -5181,7 +5223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5450, 318, 1476, 8847 }
+			player[9][2][12] = { 5415, 321, 1498, 8847 }
 	end
 end
 do
@@ -5189,7 +5231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4870, 334, 1664, 8564 }
+			player[9][2][12] = { 4839, 336, 1686, 8564 }
 	end
 end
 do
@@ -5197,9 +5239,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8896, 107, 359, 11747 }
+			player[9][2][12] = { 8897, 107, 361, 11747 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3816, 15, 35, 5263 }
+			player[9][3][12] = { 3816, 16, 37, 5263 }
 	end
 end
 do
@@ -5207,7 +5249,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6672, 254, 1080, 9527 }
+			player[9][2][12] = { 6646, 256, 1096, 9527 }
 	end
 end
 do
@@ -5215,7 +5257,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9143, 85, 279, 12160 }
+			player[9][2][12] = { 9142, 85, 281, 12160 }
 	end
 end
 do
@@ -5223,7 +5265,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5944, 291, 1316, 9078 }
+			player[9][2][12] = { 5905, 294, 1338, 9078 }
 	end
 end
 do
@@ -5231,7 +5273,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9642, 36, 117, 13407 }
+			player[9][2][12] = { 9645, 36, 117, 13407 }
 	end
 end
 do
@@ -5239,7 +5281,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8754, 122, 405, 11452 }
+			player[9][2][12] = { 8750, 122, 409, 11452 }
 	end
 end
 do
@@ -5247,7 +5289,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9368, 63, 206, 12630 }
+			player[9][2][12] = { 9366, 63, 208, 12630 }
 	end
 end
 do
@@ -5255,7 +5297,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8655, 131, 437, 11349 }
+			player[9][2][12] = { 8649, 131, 442, 11349 }
 	end
 end
 do
@@ -5263,7 +5305,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8208, 160, 582, 10786 }
+			player[9][2][12] = { 8202, 160, 588, 10786 }
 	end
 end
 do
@@ -5271,15 +5313,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8689, 129, 426, 11402 }
-	end
-end
-do
-	local player = players["maariposa"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9186, 80, 265, 12235 }
+			player[9][2][12] = { 8686, 129, 430, 11402 }
 	end
 end
 do
@@ -5287,7 +5321,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6971, 240, 983, 9705 }
+			player[9][2][12] = { 6946, 241, 998, 9705 }
+	end
+end
+do
+	local player = players["maariposa"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9185, 80, 267, 12235 }
 	end
 end
 do
@@ -5295,7 +5337,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6351, 273, 1184, 9330 }
+			player[9][2][12] = { 6319, 275, 1203, 9330 }
 	end
 end
 do
@@ -5303,7 +5345,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9004, 98, 324, 11915 }
+			player[9][2][12] = { 9005, 98, 326, 11915 }
 	end
 end
 do
@@ -5311,7 +5353,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6508, 265, 1133, 9407 }
+			player[9][2][12] = { 6478, 267, 1151, 9407 }
+	end
+end
+do
+	local player = players["marvek"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9792, 19, 69, 14206 }
 	end
 end
 do
@@ -5319,15 +5369,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6462, 269, 1148, 9387 }
-	end
-end
-do
-	local player = players["hunting"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5453, 317, 1475, 8848 }
+			player[9][2][12] = { 6432, 271, 1166, 9387 }
 	end
 end
 do
@@ -5339,11 +5381,19 @@ do
 	end
 end
 do
+	local player = players["hunting"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5418, 320, 1497, 8848 }
+	end
+end
+do
 	local player = players["rutoo"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9587, 42, 135, 13235 }
+			player[9][2][12] = { 9587, 42, 136, 13235 }
 	end
 end
 do
@@ -5351,7 +5401,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4081, 361, 1920, 8240 }
+			player[9][2][12] = { 4055, 363, 1942, 8240 }
 	end
 end
 do
@@ -5359,7 +5409,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9405, 61, 194, 12715 }
+			player[9][2][12] = { 9406, 61, 195, 12715 }
 	end
 end
 do
@@ -5367,7 +5417,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9180, 81, 267, 12228 }
+			player[9][2][12] = { 9179, 81, 269, 12228 }
 	end
 end
 do
@@ -5375,7 +5425,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9759, 22, 79, 13984 }
+			player[9][2][12] = { 9761, 22, 79, 13984 }
 	end
 end
 do
@@ -5383,7 +5433,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3973, 378, 2023, 8096 }
+			player[9][2][12] = { 3973, 380, 2045, 8096 }
 	end
 end
 do
@@ -5391,7 +5441,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6120, 284, 1259, 9167 }
+			player[9][2][12] = { 6083, 287, 1280, 9167 }
 	end
 end
 do
@@ -5399,15 +5449,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8942, 102, 344, 11815 }
-	end
-end
-do
-	local player = players["arrowinknee"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8118, 167, 611, 10674 }
+			player[9][2][12] = { 8943, 102, 346, 11815 }
 	end
 end
 do
@@ -5415,7 +5457,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9707, 28, 96, 13686 }
+			player[9][2][12] = { 9709, 28, 96, 13686 }
+	end
+end
+do
+	local player = players["arrowinknee"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8113, 167, 617, 10674 }
 	end
 end
 do
@@ -5431,7 +5481,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6774, 249, 1047, 9578 }
+			player[9][2][12] = { 6747, 251, 1063, 9578 }
 	end
 end
 do
@@ -5439,15 +5489,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5494, 314, 1462, 8858 }
-	end
-end
-do
-	local player = players["marvek"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9790, 19, 69, 14206 }
+			player[9][2][12] = { 5458, 317, 1484, 8858 }
 	end
 end
 do
@@ -5455,31 +5497,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9688, 32, 102, 13551 }
-	end
-end
-do
-	local player = players["carbine"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6567, 260, 1114, 9439 }
-	end
-end
-do
-	local player = players["djwich"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6875, 245, 1014, 9636 }
-	end
-end
-do
-	local player = players["bowgoat"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7659, 195, 760, 10288 }
+			player[9][2][12] = { 9691, 32, 102, 13551 }
 	end
 end
 do
@@ -5487,7 +5505,31 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5857, 296, 1344, 9034 }
+			player[9][2][12] = { 5819, 299, 1366, 9034 }
+	end
+end
+do
+	local player = players["bowgoat"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7651, 195, 768, 10288 }
+	end
+end
+do
+	local player = players["carbine"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6536, 262, 1132, 9439 }
+	end
+end
+do
+	local player = players["djwich"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6851, 246, 1029, 9636 }
 	end
 end
 do
@@ -5495,15 +5537,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9226, 76, 252, 12324 }
-	end
-end
-do
-	local player = players["cicuu"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9022, 94, 318, 11952 }
+			player[9][2][12] = { 9225, 76, 254, 12324 }
 	end
 end
 do
@@ -5511,7 +5545,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3347, 446, 2732, 6821 }
+			player[9][2][12] = { 3347, 448, 2755, 6821 }
+	end
+end
+do
+	local player = players["cicuu"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9023, 94, 320, 11952 }
 	end
 end
 do
@@ -5519,7 +5561,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7042, 236, 960, 9752 }
+			player[9][2][12] = { 7017, 237, 975, 9752 }
 	end
 end
 do
@@ -5527,7 +5569,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4022, 365, 1948, 8195 }
+			player[9][2][12] = { 4022, 367, 1970, 8195 }
 	end
 end
 do
@@ -5535,7 +5577,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3707, 409, 2367, 7553 }
+			player[9][2][12] = { 3707, 411, 2390, 7553 }
 	end
 end
 do
@@ -5543,7 +5585,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9118, 87, 287, 12095 }
+			player[9][2][12] = { 9118, 87, 289, 12095 }
+	end
+end
+do
+	local player = players["caupolican"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8224, 157, 581, 10811 }
+	end
+end
+do
+	local player = players["nazzel"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9744, 2, 2, 13408 }
 	end
 end
 do
@@ -5559,7 +5617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9459, 3, 3, 12934 }
+			player[9][3][12] = { 9380, 4, 5, 12934 }
 	end
 end
 do
@@ -5567,9 +5625,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6468, 268, 1146, 9392 }
+			player[9][2][12] = { 6438, 270, 1164, 9392 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5642, 9, 18, 7780 }
+			player[9][3][12] = { 5642, 10, 20, 7780 }
 	end
 end
 do
@@ -5577,7 +5635,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3998, 371, 1983, 8147 }
+			player[9][2][12] = { 3998, 373, 2005, 8147 }
 	end
 end
 do
@@ -5585,7 +5643,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7297, 6, 11, 8636 }
+			player[9][3][12] = { 6923, 7, 13, 8636 }
 	end
 end
 do
@@ -5593,7 +5651,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4754, 13, 27, 6556 }
+			player[9][3][12] = { 4754, 14, 29, 6556 }
 	end
 end
 do
@@ -5601,7 +5659,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6526, 365, 1335, 13346 }
+			player[9][2][12] = { 6518, 368, 1349, 13346 }
 	end
 end
 do
@@ -5611,7 +5669,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9064, 5, 6, 11362 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7891, 230, 811, 14495 }
+			player[9][2][12] = { 7884, 232, 820, 14495 }
 	end
 end
 do
@@ -5619,7 +5677,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5443, 530, 2289, 12214 }
+			player[9][2][12] = { 5443, 534, 2306, 12214 }
 	end
 end
 do
@@ -5627,7 +5685,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5677, 454, 1824, 12739 }
+			player[9][2][12] = { 5677, 458, 1840, 12739 }
 	end
 end
 do
@@ -5637,7 +5695,15 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 7548, 7, 10, 9462 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5143, 591, 2835, 11541 }
+			player[9][2][12] = { 5143, 597, 2858, 11541 }
+	end
+end
+do
+	local player = players["minizeu"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 10000, 1, 1, 12535 }
 	end
 end
 do
@@ -5661,7 +5727,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9654, 53, 134, 17514 }
+			player[9][2][12] = { 9654, 54, 135, 17514 }
 	end
 end
 do
@@ -5669,7 +5735,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9859, 29, 55, 18522 }
+			player[9][2][12] = { 9861, 29, 55, 18522 }
 	end
 end
 do
@@ -5677,7 +5743,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7521, 276, 953, 14130 }
+			player[9][2][12] = { 7507, 279, 966, 14130 }
 	end
 end
 do
@@ -5693,7 +5759,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9849, 31, 59, 18470 }
+			player[9][2][12] = { 9850, 31, 59, 18470 }
 	end
 end
 do
@@ -5701,7 +5767,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9503, 69, 192, 17105 }
+			player[9][2][12] = { 9504, 70, 193, 17105 }
 	end
 end
 do
@@ -5709,7 +5775,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9380, 80, 239, 16774 }
+			player[9][2][12] = { 9383, 81, 240, 16774 }
 	end
 end
 do
@@ -5717,7 +5783,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9826, 35, 68, 18287 }
+			player[9][2][12] = { 9827, 35, 68, 18287 }
 	end
 end
 do
@@ -5733,23 +5799,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8073, 211, 741, 14699 }
-	end
-end
-do
-	local player = players["coimbrra"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7620, 266, 915, 14235 }
-	end
-end
-do
-	local player = players["polyintoswd"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9378, 81, 240, 16773 }
+			player[9][2][12] = { 8065, 213, 750, 14699 }
 	end
 end
 do
@@ -5757,7 +5807,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9719, 44, 109, 17774 }
+			player[9][2][12] = { 9718, 45, 110, 17774 }
+	end
+end
+do
+	local player = players["coimbrra"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7616, 268, 924, 14235 }
+	end
+end
+do
+	local player = players["polyintoswd"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9380, 82, 241, 16773 }
 	end
 end
 do
@@ -5765,7 +5831,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9888, 22, 44, 18819 }
+			player[9][2][12] = { 9889, 22, 44, 18819 }
 	end
 end
 do
@@ -5777,11 +5843,19 @@ do
 	end
 end
 do
+	local player = players["serinet"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9964, 11, 15, 19779 }
+	end
+end
+do
 	local player = players["aggrobot"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5563, 495, 2053, 12481 }
+			player[9][2][12] = { 5563, 499, 2070, 12481 }
 	end
 end
 do
@@ -5789,7 +5863,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9656, 52, 133, 17515 }
+			player[9][2][12] = { 9656, 53, 134, 17515 }
 	end
 end
 do
@@ -5797,15 +5871,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9893, 21, 42, 19034 }
+			player[9][2][12] = { 9894, 21, 42, 19034 }
 	end
 end
 do
-	local player = players["serinet"]
+	local player = players["tverdochka"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9964, 11, 15, 19779 }
+			player[9][2][12] = { 5312, 568, 2574, 11920 }
 	end
 end
 do
@@ -5821,7 +5895,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9875, 25, 49, 18686 }
+			player[9][2][12] = { 9876, 25, 49, 18686 }
 	end
 end
 do
@@ -5829,7 +5903,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9846, 32, 60, 18464 }
+			player[9][2][12] = { 9848, 32, 60, 18464 }
 	end
 end
 do
@@ -5837,7 +5911,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7859, 235, 823, 14475 }
+			player[9][2][12] = { 7853, 237, 832, 14475 }
 	end
 end
 do
@@ -5845,7 +5919,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7753, 248, 864, 14370 }
+			player[9][2][12] = { 7747, 250, 873, 14370 }
 	end
 end
 do
@@ -5853,7 +5927,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9701, 47, 116, 17689 }
+			player[9][2][12] = { 9700, 48, 117, 17689 }
 	end
 end
 do
@@ -5861,31 +5935,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8661, 152, 515, 15466 }
-	end
-end
-do
-	local player = players["fantastique"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8604, 160, 537, 15383 }
-	end
-end
-do
-	local player = players["grubby"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8117, 207, 724, 14772 }
-	end
-end
-do
-	local player = players["dezu"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7810, 244, 842, 14437 }
+			player[9][2][12] = { 8654, 153, 522, 15466 }
 	end
 end
 do
@@ -5893,7 +5943,31 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9906, 18, 37, 19065 }
+			player[9][2][12] = { 9907, 18, 37, 19065 }
+	end
+end
+do
+	local player = players["fantastique"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8595, 161, 545, 15383 }
+	end
+end
+do
+	local player = players["grubby"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8109, 209, 733, 14772 }
+	end
+end
+do
+	local player = players["dezu"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7804, 246, 851, 14437 }
 	end
 end
 do
@@ -5901,15 +5975,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8250, 190, 673, 14973 }
-	end
-end
-do
-	local player = players["tverdochka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5312, 563, 2554, 11920 }
+			player[9][2][12] = { 8243, 191, 681, 14973 }
 	end
 end
 do
@@ -5917,7 +5983,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9482, 72, 200, 17035 }
+			player[9][2][12] = { 9483, 73, 201, 17035 }
 	end
 end
 do
@@ -5925,7 +5991,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9542, 63, 177, 17190 }
+			player[9][2][12] = { 9543, 64, 178, 17190 }
 	end
 end
 do
@@ -5933,7 +5999,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8992, 117, 388, 15975 }
+			player[9][2][12] = { 8990, 118, 392, 15975 }
+	end
+end
+do
+	local player = players["keessie"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9804, 38, 77, 18133 }
 	end
 end
 do
@@ -5941,7 +6015,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9818, 36, 71, 18236 }
+			player[9][2][12] = { 9819, 36, 71, 18236 }
 	end
 end
 do
@@ -5949,7 +6023,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9711, 45, 112, 17708 }
+			player[9][2][12] = { 9711, 46, 113, 17708 }
 	end
 end
 do
@@ -5957,7 +6031,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9854, 30, 57, 18521 }
+			player[9][2][12] = { 9855, 30, 57, 18521 }
+	end
+end
+do
+	local player = players["ainoo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9675, 52, 127, 17566 }
 	end
 end
 do
@@ -5973,7 +6055,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9706, 46, 114, 17706 }
+			player[9][2][12] = { 9706, 47, 115, 17706 }
 	end
 end
 do
@@ -5981,15 +6063,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9695, 48, 118, 17683 }
-	end
-end
-do
-	local player = players["ainoo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9674, 51, 126, 17566 }
+			player[9][2][12] = { 9695, 49, 119, 17683 }
 	end
 end
 do
@@ -5997,7 +6071,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9630, 56, 143, 17438 }
+			player[9][2][12] = { 9631, 57, 144, 17438 }
 	end
 end
 do
@@ -6005,7 +6079,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7875, 233, 817, 14485 }
+			player[9][2][12] = { 7869, 235, 826, 14485 }
 	end
 end
 do
@@ -6013,15 +6087,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8703, 147, 499, 15512 }
-	end
-end
-do
-	local player = players["keessie"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9211, 93, 304, 16399 }
+			player[9][2][12] = { 8695, 148, 506, 15512 }
 	end
 end
 do
@@ -6029,7 +6095,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7906, 229, 805, 14514 }
+			player[9][2][12] = { 7900, 231, 814, 14514 }
 	end
 end
 do
@@ -6037,7 +6103,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9727, 43, 106, 17794 }
+			player[9][2][12] = { 9726, 44, 107, 17794 }
 	end
 end
 do
@@ -6045,7 +6111,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8693, 149, 503, 15504 }
+			player[9][2][12] = { 8685, 150, 510, 15504 }
 	end
 end
 do
@@ -6053,7 +6119,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5732, 435, 1727, 12862 }
+			player[9][2][12] = { 5732, 439, 1743, 12862 }
 	end
 end
 do
@@ -6061,7 +6127,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9526, 66, 183, 17152 }
+			player[9][2][12] = { 9527, 67, 184, 17152 }
 	end
 end
 do
@@ -6069,7 +6135,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9776, 39, 87, 18018 }
+			player[9][2][12] = { 9775, 40, 88, 18018 }
 	end
 end
 do
@@ -6077,7 +6143,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7914, 228, 802, 14525 }
+			player[9][2][12] = { 7908, 230, 811, 14525 }
 	end
 end
 do
@@ -6085,7 +6151,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8839, 133, 447, 15728 }
+			player[9][2][12] = { 8830, 134, 454, 15728 }
 	end
 end
 do
@@ -6093,7 +6159,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9398, 78, 232, 16820 }
+			player[9][2][12] = { 9401, 79, 233, 16820 }
 	end
 end
 do
@@ -6101,7 +6167,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9839, 33, 63, 18426 }
+			player[9][2][12] = { 9840, 33, 63, 18426 }
 	end
 end
 do
@@ -6109,7 +6175,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9508, 68, 190, 17120 }
+			player[9][2][12] = { 9509, 69, 191, 17120 }
 	end
 end
 do
@@ -6117,7 +6183,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5552, 499, 2072, 12457 }
+			player[9][2][12] = { 5552, 503, 2089, 12457 }
 	end
 end
 do
@@ -6125,7 +6191,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5740, 433, 1712, 12879 }
+			player[9][2][12] = { 5740, 437, 1728, 12879 }
 	end
 end
 do
@@ -6133,7 +6199,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8852, 130, 442, 15738 }
+			player[9][2][12] = { 8843, 131, 449, 15738 }
 	end
 end
 do
@@ -6141,7 +6207,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9031, 112, 373, 16038 }
+			player[9][2][12] = { 9029, 113, 377, 16038 }
 	end
 end
 do
@@ -6149,7 +6215,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9773, 40, 88, 18015 }
+			player[9][2][12] = { 9773, 41, 89, 18015 }
 	end
 end
 do
@@ -6157,7 +6223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8969, 119, 397, 15919 }
+			player[9][2][12] = { 8967, 120, 401, 15919 }
 	end
 end
 do
@@ -6165,7 +6231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9315, 85, 264, 16573 }
+			player[9][2][12] = { 9318, 86, 265, 16573 }
 	end
 end
 do
@@ -6173,7 +6239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8292, 185, 657, 15031 }
+			player[9][2][12] = { 8285, 186, 665, 15031 }
 	end
 end
 do
@@ -6189,7 +6255,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9492, 70, 196, 17088 }
+			player[9][2][12] = { 9494, 71, 197, 17088 }
 	end
 end
 do
@@ -6197,7 +6263,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9896, 20, 41, 19045 }
+			player[9][2][12] = { 9897, 20, 41, 19045 }
+	end
+end
+do
+	local player = players["firehuora"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8980, 119, 396, 15948 }
 	end
 end
 do
@@ -6205,7 +6279,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9594, 59, 157, 17331 }
+			player[9][2][12] = { 9594, 60, 158, 17331 }
 	end
 end
 do
@@ -6213,7 +6287,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6333, 375, 1409, 13244 }
+			player[9][2][12] = { 6327, 378, 1423, 13244 }
 	end
 end
 do
@@ -6221,87 +6295,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9099, 103, 347, 16186 }
-	end
-end
-do
-	local player = players["laroch"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8654, 154, 518, 15458 }
-	end
-end
-do
-	local player = players["zusic"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9036, 111, 371, 16059 }
-	end
-end
-do
-	local player = players["noports"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9156, 98, 325, 16312 }
-	end
-end
-do
-	local player = players["dappka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9000, 115, 385, 15983 }
-	end
-end
-do
-	local player = players["coimbra"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8867, 127, 436, 15758 }
-	end
-end
-do
-	local player = players["bibo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9018, 113, 378, 16011 }
-	end
-end
-do
-	local player = players["briyana"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6799, 345, 1230, 13529 }
-	end
-end
-do
-	local player = players["ryna"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9638, 55, 140, 17470 }
-	end
-end
-do
-	local player = players["pypa"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7862, 234, 822, 14476 }
-	end
-end
-do
-	local player = players["riddikulus"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7010, 327, 1149, 13689 }
+			player[9][2][12] = { 9096, 104, 351, 16186 }
 	end
 end
 do
@@ -6313,19 +6307,91 @@ do
 	end
 end
 do
+	local player = players["laroch"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8646, 155, 525, 15458 }
+	end
+end
+do
+	local player = players["zusic"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9034, 112, 375, 16059 }
+	end
+end
+do
+	local player = players["noports"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9153, 99, 329, 16312 }
+	end
+end
+do
+	local player = players["dappka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8998, 116, 389, 15983 }
+	end
+end
+do
+	local player = players["coimbra"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8858, 128, 443, 15758 }
+	end
+end
+do
+	local player = players["bibo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9016, 114, 382, 16011 }
+	end
+end
+do
+	local player = players["briyana"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6792, 348, 1243, 13529 }
+	end
+end
+do
+	local player = players["ryna"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9638, 56, 141, 17470 }
+	end
+end
+do
+	local player = players["pypa"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7856, 236, 831, 14476 }
+	end
+end
+do
+	local player = players["riddikulus"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7001, 330, 1162, 13689 }
+	end
+end
+do
 	local player = players["matzu"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7229, 297, 1065, 13838 }
-	end
-end
-do
-	local player = players["firehuora"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8982, 118, 392, 15948 }
+			player[9][2][12] = { 7218, 300, 1078, 13838 }
 	end
 end
 do
@@ -6333,7 +6399,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9880, 24, 47, 18737 }
+			player[9][2][12] = { 9881, 24, 47, 18737 }
 	end
 end
 do
@@ -6341,15 +6407,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9065, 106, 360, 16123 }
-	end
-end
-do
-	local player = players["agnii"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9448, 73, 213, 16954 }
+			player[9][2][12] = { 9062, 107, 364, 16123 }
 	end
 end
 do
@@ -6357,7 +6415,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9922, 16, 31, 19275 }
+			player[9][2][12] = { 9923, 16, 31, 19275 }
+	end
+end
+do
+	local player = players["agnii"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9450, 74, 214, 16954 }
 	end
 end
 do
@@ -6365,7 +6431,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8747, 142, 482, 15578 }
+			player[9][2][12] = { 8739, 143, 489, 15578 }
 	end
 end
 do
@@ -6373,7 +6439,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8615, 158, 533, 15398 }
+			player[9][2][12] = { 8605, 159, 541, 15398 }
 	end
 end
 do
@@ -6381,7 +6447,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5634, 469, 1909, 12641 }
+			player[9][2][12] = { 5634, 473, 1925, 12641 }
 	end
 end
 do
@@ -6389,7 +6455,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9404, 77, 230, 16828 }
+			player[9][2][12] = { 9406, 78, 231, 16828 }
 	end
 end
 do
@@ -6397,7 +6463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9693, 49, 119, 17639 }
+			player[9][2][12] = { 9693, 50, 120, 17639 }
 	end
 end
 do
@@ -6405,7 +6471,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9802, 38, 77, 18132 }
+			player[9][2][12] = { 9801, 39, 78, 18132 }
 	end
 end
 do
@@ -6413,7 +6479,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8919, 123, 416, 15833 }
+			player[9][2][12] = { 8910, 124, 423, 15833 }
 	end
 end
 do
@@ -6421,7 +6487,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7112, 312, 1110, 13759 }
+			player[9][2][12] = { 7102, 315, 1123, 13759 }
+	end
+end
+do
+	local player = players["simulacra"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5259, 583, 2680, 11799 }
 	end
 end
 do
@@ -6429,7 +6503,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6677, 352, 1277, 13447 }
+			player[9][2][12] = { 6670, 355, 1290, 13447 }
 	end
 end
 do
@@ -6437,7 +6511,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9487, 71, 198, 17086 }
+			player[9][2][12] = { 9489, 72, 199, 17086 }
 	end
 end
 do
@@ -6445,7 +6519,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9883, 23, 46, 18771 }
+			player[9][2][12] = { 9884, 23, 46, 18771 }
 	end
 end
 do
@@ -6453,7 +6527,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6401, 371, 1383, 13274 }
+			player[9][2][12] = { 6394, 374, 1397, 13274 }
 	end
 end
 do
@@ -6461,7 +6535,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5775, 420, 1640, 12957 }
+			player[9][2][12] = { 5775, 424, 1655, 12957 }
 	end
 end
 do
@@ -6469,7 +6543,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7339, 288, 1023, 13928 }
+			player[9][2][12] = { 7326, 291, 1036, 13928 }
 	end
 end
 do
@@ -6477,7 +6551,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8279, 187, 662, 15017 }
+			player[9][2][12] = { 8272, 188, 670, 15017 }
 	end
 end
 do
@@ -6485,7 +6559,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5679, 453, 1822, 12741 }
+			player[9][2][12] = { 5679, 457, 1838, 12741 }
 	end
 end
 do
@@ -6493,7 +6567,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6984, 331, 1159, 13661 }
+			player[9][2][12] = { 6975, 334, 1172, 13661 }
 	end
 end
 do
@@ -6501,7 +6575,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9732, 42, 104, 17825 }
+			player[9][2][12] = { 9731, 43, 105, 17825 }
 	end
 end
 do
@@ -6517,7 +6591,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7615, 267, 917, 14227 }
+			player[9][2][12] = { 7610, 269, 926, 14227 }
 	end
 end
 do
@@ -6533,7 +6607,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9688, 50, 121, 17617 }
+			player[9][2][12] = { 9687, 51, 122, 17617 }
 	end
 end
 do
@@ -6541,7 +6615,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6005, 402, 1535, 13077 }
+			player[9][2][12] = { 5998, 406, 1550, 13077 }
 	end
 end
 do
@@ -6549,7 +6623,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7068, 320, 1127, 13727 }
+			player[9][2][12] = { 7058, 323, 1140, 13727 }
 	end
 end
 do
@@ -6557,7 +6631,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9539, 64, 178, 17185 }
+			player[9][2][12] = { 9540, 65, 179, 17185 }
 	end
 end
 do
@@ -6565,7 +6639,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7961, 226, 784, 14568 }
+			player[9][2][12] = { 7954, 228, 793, 14568 }
 	end
 end
 do
@@ -6573,7 +6647,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8094, 210, 733, 14736 }
+			player[9][2][12] = { 8086, 212, 742, 14736 }
 	end
 end
 do
@@ -6581,7 +6655,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9828, 34, 67, 18292 }
+			player[9][2][12] = { 9830, 34, 67, 18292 }
 	end
 end
 do
@@ -6589,7 +6663,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6245, 382, 1443, 13198 }
+			player[9][2][12] = { 6236, 386, 1458, 13198 }
 	end
 end
 do
@@ -6597,7 +6671,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6456, 369, 1362, 13306 }
+			player[9][2][12] = { 6448, 372, 1376, 13306 }
 	end
 end
 do
@@ -6605,7 +6679,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6977, 332, 1162, 13657 }
+			player[9][2][12] = { 6967, 335, 1175, 13657 }
 	end
 end
 do
@@ -6613,7 +6687,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9292, 86, 273, 16530 }
+			player[9][2][12] = { 9295, 87, 274, 16530 }
 	end
 end
 do
@@ -6621,7 +6695,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7885, 231, 813, 14487 }
+			player[9][2][12] = { 7879, 233, 822, 14487 }
 	end
 end
 do
@@ -6629,7 +6703,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4829, 638, 3258, 10835 }
+			player[9][2][12] = { 4829, 646, 3284, 10835 }
 	end
 end
 do
@@ -6637,7 +6711,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9609, 58, 151, 17375 }
+			player[9][2][12] = { 9610, 59, 152, 17375 }
 	end
 end
 do
@@ -6645,7 +6719,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7469, 279, 973, 14070 }
+			player[9][2][12] = { 7455, 282, 986, 14070 }
 	end
 end
 do
@@ -6653,7 +6727,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5930, 406, 1564, 13039 }
+			player[9][2][12] = { 5924, 410, 1579, 13039 }
 	end
 end
 do
@@ -6661,7 +6735,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6529, 364, 1334, 13351 }
+			player[9][2][12] = { 6520, 367, 1348, 13351 }
 	end
 end
 do
@@ -6669,7 +6743,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9182, 97, 315, 16361 }
+			player[9][2][12] = { 9181, 98, 318, 16361 }
+	end
+end
+do
+	local player = players["silk"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9251, 90, 291, 16481 }
 	end
 end
 do
@@ -6677,7 +6759,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8307, 182, 651, 15048 }
+			player[9][2][12] = { 8300, 183, 659, 15048 }
 	end
 end
 do
@@ -6685,7 +6767,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7094, 316, 1117, 13745 }
+			player[9][2][12] = { 7083, 319, 1130, 13745 }
 	end
 end
 do
@@ -6693,55 +6775,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7440, 282, 984, 14038 }
-	end
-end
-do
-	local player = players["leopold"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8958, 120, 401, 15888 }
-	end
-end
-do
-	local player = players["seksnthecity"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9862, 28, 54, 18547 }
-	end
-end
-do
-	local player = players["pechenyushka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8784, 138, 468, 15619 }
-	end
-end
-do
-	local player = players["burningbud"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5430, 535, 2320, 12185 }
-	end
-end
-do
-	local player = players["hummertime"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6078, 393, 1507, 13112 }
-	end
-end
-do
-	local player = players["nomaya"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6651, 353, 1287, 13432 }
+			player[9][2][12] = { 7427, 285, 997, 14038 }
 	end
 end
 do
@@ -6749,7 +6783,55 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7224, 298, 1067, 13834 }
+			player[9][2][12] = { 7213, 301, 1080, 13834 }
+	end
+end
+do
+	local player = players["leopold"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8954, 121, 406, 15888 }
+	end
+end
+do
+	local player = players["seksnthecity"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9863, 28, 54, 18547 }
+	end
+end
+do
+	local player = players["pechenyushka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8776, 139, 475, 15619 }
+	end
+end
+do
+	local player = players["burningbud"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5430, 540, 2338, 12185 }
+	end
+end
+do
+	local player = players["hummertime"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6071, 397, 1522, 13112 }
+	end
+end
+do
+	local player = players["nomaya"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6644, 356, 1300, 13432 }
 	end
 end
 do
@@ -6757,7 +6839,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5668, 458, 1841, 12717 }
+			player[9][2][12] = { 5668, 462, 1857, 12717 }
 	end
 end
 do
@@ -6765,7 +6847,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7044, 323, 1136, 13717 }
+			player[9][2][12] = { 7034, 326, 1149, 13717 }
 	end
 end
 do
@@ -6773,7 +6855,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8018, 222, 762, 14634 }
+			player[9][2][12] = { 8011, 224, 771, 14634 }
 	end
 end
 do
@@ -6781,7 +6863,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9044, 108, 368, 16064 }
+			player[9][2][12] = { 9042, 109, 372, 16064 }
 	end
 end
 do
@@ -6789,7 +6871,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8911, 124, 419, 15808 }
+			player[9][2][12] = { 8902, 125, 426, 15808 }
 	end
 end
 do
@@ -6797,7 +6879,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9870, 26, 51, 18598 }
+			player[9][2][12] = { 9871, 26, 51, 18598 }
 	end
 end
 do
@@ -6807,7 +6889,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 2182 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8990, 172, 437, 12245 }
+			player[9][3][12] = { 8989, 173, 441, 12245 }
 	end
 end
 do
@@ -6823,7 +6905,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8686, 110, 259, 267 }
+			player[9][1][12] = { 8685, 111, 261, 267 }
 	end
 end
 do
@@ -6833,7 +6915,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9954, 8, 10, 784 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5089, 600, 2886, 9355 }
+			player[9][3][12] = { 5089, 605, 2914, 9355 }
 	end
 end
 do
@@ -6841,9 +6923,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9358, 55, 127, 321 }
+			player[9][1][12] = { 9358, 56, 128, 321 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9683, 59, 138, 13502 }
+			player[9][3][12] = { 9683, 60, 139, 13502 }
 	end
 end
 do
@@ -6851,139 +6933,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9486, 44, 102, 344 }
+			player[9][1][12] = { 9489, 44, 102, 344 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5433, 499, 2213, 9988 }
-	end
-end
-do
-	local player = players["savytar"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9450, 48, 109, 334 }
-	end
-end
-do
-	local player = players["banerun"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9740, 21, 52, 430 }
-	end
-end
-do
-	local player = players["kuure"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5447, 496, 2184, 10014 }
-	end
-end
-do
-	local player = players["yugo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7696, 326, 996, 11151 }
-	end
-end
-do
-	local player = players["galdraz"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9374, 53, 124, 323 }
-	end
-end
-do
-	local player = players["egerasd"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9582, 33, 83, 376 }
-	end
-end
-do
-	local player = players["kira"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8849, 97, 227, 276 }
-	end
-end
-do
-	local player = players["ymiria"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5265, 279, 931, 176 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7775, 21, 100, 3964 }
-	end
-end
-do
-	local player = players["aritmia"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5179, 568, 2716, 9521 }
-	end
-end
-do
-	local player = players["maatta"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8829, 100, 231, 276 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5324, 528, 2430, 9788 }
-	end
-end
-do
-	local player = players["fluorita"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8753, 104, 246, 272 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7402, 353, 1123, 10993 }
-	end
-end
-do
-	local player = players["peq"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9236, 63, 151, 306 }
-	end
-end
-do
-	local player = players["healformoney"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8870, 95, 223, 277 }
-	end
-end
-do
-	local player = players["luganoqt"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7867, 158, 420, 233 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6086, 435, 1691, 10447 }
-	end
-end
-do
-	local player = players["bluntforce"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3030, 373, 1370, 140 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4360, 741, 3859, 8015 }
+			player[9][3][12] = { 5433, 504, 2236, 9988 }
 	end
 end
 do
@@ -6991,9 +6943,139 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 1438, 87, 382, 136 }
+			player[9][2][12] = { 1419, 88, 388, 136 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7798, 314, 952, 11201 }
+			player[9][3][12] = { 7782, 314, 966, 11201 }
+	end
+end
+do
+	local player = players["savytar"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9449, 49, 110, 334 }
+	end
+end
+do
+	local player = players["banerun"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9742, 21, 52, 430 }
+	end
+end
+do
+	local player = players["kuure"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5447, 500, 2206, 10014 }
+	end
+end
+do
+	local player = players["yugo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7681, 326, 1010, 11151 }
+	end
+end
+do
+	local player = players["galdraz"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9373, 54, 125, 323 }
+	end
+end
+do
+	local player = players["egerasd"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9585, 33, 83, 376 }
+	end
+end
+do
+	local player = players["kira"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8847, 98, 229, 276 }
+	end
+end
+do
+	local player = players["ymiria"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5260, 282, 938, 176 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7716, 22, 104, 3964 }
+	end
+end
+do
+	local player = players["aritmia"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5179, 573, 2744, 9521 }
+	end
+end
+do
+	local player = players["maatta"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8827, 101, 233, 276 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5324, 534, 2455, 9788 }
+	end
+end
+do
+	local player = players["fluorita"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8751, 105, 248, 272 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7387, 354, 1138, 10993 }
+	end
+end
+do
+	local player = players["peq"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9231, 64, 153, 306 }
+	end
+end
+do
+	local player = players["luganoqt"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7865, 160, 423, 233 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6072, 438, 1710, 10447 }
+	end
+end
+do
+	local player = players["healformoney"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8867, 96, 225, 277 }
+	end
+end
+do
+	local player = players["bluntforce"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3025, 375, 1380, 140 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 4360, 746, 3891, 8015 }
 	end
 end
 do
@@ -7001,7 +7083,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4260, 752, 3930, 7831 }
+			player[9][3][12] = { 4260, 758, 3963, 7831 }
 	end
 end
 do
@@ -7009,7 +7091,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9399, 52, 119, 327 }
+			player[9][1][12] = { 9398, 53, 120, 327 }
 	end
 end
 do
@@ -7017,7 +7099,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9129, 73, 172, 295 }
+			player[9][1][12] = { 9125, 74, 174, 295 }
 	end
 end
 do
@@ -7025,9 +7107,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7551, 176, 482, 223 }
+			player[9][1][12] = { 7552, 178, 485, 223 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4769, 672, 3393, 8768 }
+			player[9][3][12] = { 4769, 677, 3423, 8768 }
 	end
 end
 do
@@ -7035,7 +7117,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5850, 446, 1793, 10352 }
+			player[9][3][12] = { 5838, 449, 1812, 10352 }
 	end
 end
 do
@@ -7043,9 +7125,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9817, 17, 37, 477 }
+			player[9][1][12] = { 9818, 17, 37, 477 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4666, 693, 3530, 8578 }
+			player[9][3][12] = { 4666, 698, 3561, 8578 }
 	end
 end
 do
@@ -7053,9 +7135,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9297, 59, 139, 311 }
+			player[9][1][12] = { 9292, 60, 141, 311 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9437, 106, 244, 12970 }
+			player[9][3][12] = { 9435, 106, 247, 12970 }
 	end
 end
 do
@@ -7063,7 +7145,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7862, 159, 421, 232 }
+			player[9][1][12] = { 7860, 161, 424, 232 }
 	end
 end
 do
@@ -7071,9 +7153,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4297, 332, 1121, 158 }
+			player[9][1][12] = { 4284, 334, 1131, 158 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8335, 258, 720, 11566 }
+			player[9][3][12] = { 8329, 260, 728, 11566 }
 	end
 end
 do
@@ -7081,7 +7163,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8717, 107, 253, 270 }
+			player[9][1][12] = { 8715, 108, 255, 270 }
 	end
 end
 do
@@ -7089,7 +7171,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9109, 75, 176, 293 }
+			player[9][1][12] = { 9105, 76, 178, 293 }
 	end
 end
 do
@@ -7097,9 +7179,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8865, 96, 224, 277 }
+			player[9][1][12] = { 8862, 97, 226, 277 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9250, 135, 325, 12653 }
+			player[9][3][12] = { 9248, 135, 328, 12653 }
 	end
 end
 do
@@ -7107,7 +7189,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4628, 314, 1056, 165 }
+			player[9][1][12] = { 4613, 316, 1066, 165 }
 	end
 end
 do
@@ -7115,7 +7197,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9618, 31, 76, 392 }
+			player[9][1][12] = { 9621, 31, 76, 392 }
 	end
 end
 do
@@ -7123,7 +7205,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8839, 99, 229, 276 }
+			player[9][1][12] = { 8837, 100, 231, 276 }
 	end
 end
 do
@@ -7131,7 +7213,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8391, 126, 317, 252 }
+			player[9][1][12] = { 8392, 127, 319, 252 }
 	end
 end
 do
@@ -7139,7 +7221,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9267, 61, 145, 308 }
+			player[9][1][12] = { 9262, 62, 147, 308 }
 	end
 end
 do
@@ -7147,7 +7229,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7413, 184, 509, 219 }
+			player[9][1][12] = { 7415, 186, 512, 219 }
 	end
 end
 do
@@ -7155,7 +7237,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8574, 116, 281, 263 }
+			player[9][1][12] = { 8574, 117, 283, 263 }
 	end
 end
 do
@@ -7163,7 +7245,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4980, 291, 987, 171 }
+			player[9][1][12] = { 4972, 294, 995, 171 }
 	end
 end
 do
@@ -7171,9 +7253,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9282, 60, 142, 310 }
+			player[9][1][12] = { 9277, 61, 144, 310 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5451, 493, 2175, 10022 }
+			player[9][3][12] = { 5451, 497, 2197, 10022 }
 	end
 end
 do
@@ -7181,7 +7263,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7688, 170, 455, 228 }
+			player[9][1][12] = { 7688, 172, 458, 228 }
 	end
 end
 do
@@ -7189,9 +7271,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9404, 51, 118, 327 }
+			player[9][1][12] = { 9403, 52, 119, 327 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7545, 342, 1061, 11072 }
+			player[9][3][12] = { 7532, 342, 1075, 11072 }
 	end
 end
 do
@@ -7199,9 +7281,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7483, 31, 113, 3317 }
+			player[9][2][12] = { 7428, 32, 117, 3317 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5602, 460, 1900, 10261 }
+			player[9][3][12] = { 5590, 464, 1920, 10261 }
 	end
 end
 do
@@ -7209,7 +7291,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7026, 201, 585, 210 }
+			player[9][1][12] = { 7026, 203, 589, 210 }
 	end
 end
 do
@@ -7225,7 +7307,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6003, 249, 786, 188 }
+			player[9][1][12] = { 6004, 251, 791, 188 }
 	end
 end
 do
@@ -7233,7 +7315,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9532, 39, 93, 360 }
+			player[9][1][12] = { 9535, 39, 93, 360 }
 	end
 end
 do
@@ -7241,19 +7323,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9348, 56, 129, 319 }
+			player[9][1][12] = { 9347, 57, 130, 319 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6014, 438, 1722, 10416 }
-	end
-end
-do
-	local player = players["delling"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7281, 189, 535, 216 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9222, 139, 337, 12610 }
+			player[9][3][12] = { 6001, 441, 1741, 10416 }
 	end
 end
 do
@@ -7261,7 +7333,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9857, 15, 29, 526 }
+			player[9][1][12] = { 9858, 15, 29, 526 }
+	end
+end
+do
+	local player = players["delling"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7279, 191, 539, 216 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9219, 140, 341, 12610 }
 	end
 end
 do
@@ -7269,7 +7351,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9674, 24, 65, 405 }
+			player[9][1][12] = { 9676, 24, 65, 405 }
 	end
 end
 do
@@ -7277,7 +7359,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7730, 23, 102, 3772 }
+			player[9][2][12] = { 7672, 24, 106, 3772 }
 	end
 end
 do
@@ -7285,7 +7367,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6650, 221, 659, 202 }
+			player[9][1][12] = { 6646, 223, 664, 202 }
 	end
 end
 do
@@ -7293,7 +7375,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5025, 286, 978, 172 }
+			player[9][1][12] = { 5018, 289, 986, 172 }
 	end
 end
 do
@@ -7301,9 +7383,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9089, 77, 180, 291 }
+			player[9][1][12] = { 9084, 78, 182, 291 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5390, 507, 2295, 9909 }
+			player[9][3][12] = { 5390, 512, 2319, 9909 }
 	end
 end
 do
@@ -7311,9 +7393,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4857, 297, 1011, 169 }
+			player[9][1][12] = { 4851, 300, 1019, 169 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5282, 540, 2520, 9710 }
+			player[9][3][12] = { 5282, 547, 2547, 9710 }
 	end
 end
 do
@@ -7321,7 +7403,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4394, 329, 1102, 160 }
+			player[9][1][12] = { 4380, 331, 1112, 160 }
 	end
 end
 do
@@ -7329,7 +7411,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8712, 108, 254, 269 }
+			player[9][1][12] = { 8710, 109, 256, 269 }
 	end
 end
 do
@@ -7337,9 +7419,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9440, 49, 111, 331 }
+			player[9][1][12] = { 9439, 50, 112, 331 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4726, 679, 3444, 8688 }
+			player[9][3][12] = { 4726, 684, 3474, 8688 }
 	end
 end
 do
@@ -7347,7 +7429,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7057, 198, 579, 211 }
+			player[9][1][12] = { 7056, 200, 583, 211 }
 	end
 end
 do
@@ -7355,7 +7437,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8004, 146, 393, 236 }
+			player[9][1][12] = { 8002, 148, 396, 236 }
 	end
 end
 do
@@ -7363,7 +7445,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8238, 134, 347, 248 }
+			player[9][1][12] = { 8240, 135, 349, 248 }
 	end
 end
 do
@@ -7371,7 +7453,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8912, 183, 471, 12153 }
+			player[9][3][12] = { 8911, 184, 475, 12153 }
 	end
 end
 do
@@ -7379,7 +7461,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9453, 104, 237, 13025 }
+			player[9][3][12] = { 9451, 104, 240, 13025 }
 	end
 end
 do
@@ -7387,7 +7469,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7780, 164, 437, 230 }
+			player[9][1][12] = { 7779, 166, 440, 230 }
 	end
 end
 do
@@ -7395,7 +7477,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9470, 47, 105, 339 }
+			player[9][1][12] = { 9474, 47, 105, 339 }
 	end
 end
 do
@@ -7403,15 +7485,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9786, 19, 43, 467 }
-	end
-end
-do
-	local player = players["paraboom"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8483, 237, 656, 11703 }
+			player[9][1][12] = { 9788, 19, 43, 467 }
 	end
 end
 do
@@ -7419,17 +7493,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4335, 743, 3874, 7970 }
+			player[9][3][12] = { 4335, 749, 3907, 7970 }
 	end
 end
 do
-	local player = players["yumitchi"]
+	local player = players["paraboom"]
 	if player then
 		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8147, 139, 365, 243 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4423, 734, 3788, 8132 }
+			player[9][3][12] = { 8481, 239, 662, 11703 }
 	end
 end
 do
@@ -7437,7 +7509,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8503, 120, 295, 259 }
+			player[9][1][12] = { 8503, 121, 297, 259 }
+	end
+end
+do
+	local player = players["yumitchi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8144, 141, 368, 243 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 4423, 739, 3820, 8132 }
 	end
 end
 do
@@ -7445,7 +7527,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3304, 366, 1316, 143 }
+			player[9][1][12] = { 3298, 368, 1326, 143 }
 	end
 end
 do
@@ -7453,7 +7535,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4569, 711, 3653, 8399 }
+			player[9][3][12] = { 4569, 716, 3684, 8399 }
 	end
 end
 do
@@ -7461,9 +7543,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8666, 112, 263, 266 }
+			player[9][1][12] = { 8665, 113, 265, 266 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4891, 646, 3235, 8991 }
+			player[9][3][12] = { 4891, 652, 3264, 8991 }
 	end
 end
 do
@@ -7471,9 +7553,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3742, 354, 1230, 150 }
+			player[9][1][12] = { 3733, 356, 1240, 150 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8909, 184, 472, 12149 }
+			player[9][3][12] = { 8908, 185, 476, 12149 }
 	end
 end
 do
@@ -7481,7 +7563,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8915, 87, 214, 280 }
+			player[9][1][12] = { 8912, 88, 216, 280 }
 	end
 end
 do
@@ -7489,7 +7571,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4532, 319, 1075, 163 }
+			player[9][1][12] = { 4517, 321, 1085, 163 }
 	end
 end
 do
@@ -7497,9 +7579,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 840, 423, 1800, 93 }
+			player[9][1][12] = { 835, 427, 1813, 93 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5557, 466, 1949, 10217 }
+			player[9][3][12] = { 5557, 470, 1969, 10217 }
 	end
 end
 do
@@ -7507,9 +7589,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9572, 34, 85, 372 }
+			player[9][1][12] = { 9575, 34, 85, 372 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4693, 685, 3490, 8627 }
+			player[9][3][12] = { 4693, 690, 3521, 8627 }
 	end
 end
 do
@@ -7517,7 +7599,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8131, 140, 368, 242 }
+			player[9][1][12] = { 8128, 142, 371, 242 }
 	end
 end
 do
@@ -7525,7 +7607,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9155, 72, 167, 297 }
+			player[9][1][12] = { 9150, 73, 169, 297 }
 	end
 end
 do
@@ -7533,7 +7615,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4470, 322, 1087, 162 }
+			player[9][1][12] = { 4456, 324, 1097, 162 }
 	end
 end
 do
@@ -7541,17 +7623,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1787, 407, 1614, 117 }
-	end
-end
-do
-	local player = players["zeroskill"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7581, 173, 476, 224 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4459, 725, 3753, 8198 }
+			player[9][1][12] = { 1791, 409, 1624, 117 }
 	end
 end
 do
@@ -7561,7 +7633,17 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9985, 4, 4, 1249 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8768, 203, 533, 11950 }
+			player[9][3][12] = { 8768, 204, 537, 11950 }
+	end
+end
+do
+	local player = players["zeroskill"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7582, 175, 479, 224 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 4459, 730, 3785, 8198 }
 	end
 end
 do
@@ -7569,7 +7651,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8742, 105, 248, 271 }
+			player[9][1][12] = { 8741, 106, 250, 271 }
 	end
 end
 do
@@ -7577,9 +7659,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9528, 7, 22, 7747 }
+			player[9][2][12] = { 9534, 7, 22, 7747 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9435, 107, 245, 12969 }
+			player[9][3][12] = { 9432, 107, 248, 12969 }
 	end
 end
 do
@@ -7587,11 +7669,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2688, 383, 1437, 134 }
+			player[9][1][12] = { 2686, 385, 1447, 134 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9258, 10, 34, 7121 }
+			player[9][2][12] = { 9268, 10, 34, 7121 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6139, 430, 1668, 10466 }
+			player[9][3][12] = { 6125, 433, 1687, 10466 }
 	end
 end
 do
@@ -7599,7 +7681,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8173, 276, 790, 11436 }
+			player[9][3][12] = { 8164, 278, 800, 11436 }
 	end
 end
 do
@@ -7607,9 +7689,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7955, 19, 98, 4087 }
+			player[9][2][12] = { 7865, 20, 102, 4087 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5269, 543, 2545, 9687 }
+			player[9][3][12] = { 5269, 550, 2572, 9687 }
 	end
 end
 do
@@ -7617,7 +7699,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5066, 606, 2940, 9313 }
+			player[9][3][12] = { 5066, 611, 2968, 9313 }
 	end
 end
 do
@@ -7625,11 +7707,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8045, 143, 385, 238 }
+			player[9][1][12] = { 8042, 145, 388, 238 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9888, 3, 6, 9770 }
+			player[9][2][12] = { 9889, 3, 6, 9770 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8932, 181, 462, 12167 }
+			player[9][3][12] = { 8931, 182, 466, 12167 }
 	end
 end
 do
@@ -7637,7 +7719,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9365, 117, 275, 12829 }
+			player[9][3][12] = { 9363, 117, 278, 12829 }
 	end
 end
 do
@@ -7645,9 +7727,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7841, 20, 99, 4006 }
+			player[9][2][12] = { 7753, 21, 103, 4006 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5168, 575, 2737, 9500 }
+			player[9][3][12] = { 5168, 580, 2765, 9500 }
 	end
 end
 do
@@ -7655,9 +7737,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 687, 427, 1830, 87 }
+			player[9][1][12] = { 683, 431, 1843, 87 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5119, 591, 2831, 9411 }
+			player[9][3][12] = { 5119, 596, 2859, 9411 }
 	end
 end
 do
@@ -7665,9 +7747,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7213, 38, 125, 3066 }
+			player[9][2][12] = { 7140, 39, 130, 3066 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4086, 763, 4020, 7512 }
+			player[9][3][12] = { 4086, 769, 4053, 7512 }
 	end
 end
 do
@@ -7675,7 +7757,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9361, 118, 277, 12826 }
+			player[9][3][12] = { 9359, 118, 280, 12826 }
 	end
 end
 do
@@ -7683,7 +7765,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7938, 150, 406, 234 }
+			player[9][1][12] = { 7936, 152, 409, 234 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8090, 18, 96, 4906 }
 	end
 end
 do
@@ -7691,7 +7775,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3640, 83, 284, 250 }
+			player[9][2][12] = { 3592, 84, 290, 250 }
 	end
 end
 do
@@ -7699,7 +7783,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7061, 381, 1270, 10825 }
+			player[9][3][12] = { 7042, 384, 1288, 10825 }
 	end
 end
 do
@@ -7707,7 +7791,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5018, 615, 3022, 9225 }
+			player[9][3][12] = { 5018, 620, 3050, 9225 }
 	end
 end
 do
@@ -7715,7 +7799,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8082, 287, 829, 11381 }
+			player[9][3][12] = { 8074, 289, 839, 11381 }
 	end
 end
 do
@@ -7723,7 +7807,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4728, 678, 3441, 8692 }
+			player[9][3][12] = { 4728, 683, 3471, 8692 }
 	end
 end
 do
@@ -7731,7 +7815,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7393, 34, 117, 3182 }
+			player[9][2][12] = { 7317, 35, 122, 3182 }
 	end
 end
 do
@@ -7739,9 +7823,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9664, 25, 67, 404 }
+			player[9][1][12] = { 9666, 25, 67, 404 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4562, 77, 243, 543 }
+			player[9][2][12] = { 4501, 78, 249, 543 }
 	end
 end
 do
@@ -7749,9 +7833,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8941, 84, 209, 281 }
+			player[9][1][12] = { 8938, 85, 211, 281 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5398, 506, 2282, 9924 }
+			player[9][3][12] = { 5398, 511, 2306, 9924 }
 	end
 end
 do
@@ -7759,9 +7843,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7573, 28, 109, 3418 }
+			player[9][2][12] = { 7517, 29, 113, 3418 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4591, 705, 3629, 8440 }
+			player[9][3][12] = { 4591, 710, 3660, 8440 }
 	end
 end
 do
@@ -7769,17 +7853,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8707, 109, 255, 269 }
+			player[9][1][12] = { 8705, 110, 257, 269 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5415, 504, 2253, 9954 }
-	end
-end
-do
-	local player = players["lirraycxz"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7079, 41, 131, 2986 }
+			player[9][3][12] = { 5415, 509, 2277, 9954 }
 	end
 end
 do
@@ -7787,7 +7863,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3756, 779, 4134, 6906 }
+			player[9][3][12] = { 3756, 784, 4167, 6906 }
+	end
+end
+do
+	local player = players["lirraycxz"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7007, 42, 136, 2986 }
 	end
 end
 do
@@ -7795,7 +7879,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7235, 191, 544, 215 }
+			player[9][1][12] = { 7233, 193, 548, 215 }
 	end
 end
 do
@@ -7803,9 +7887,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8366, 127, 322, 251 }
+			player[9][1][12] = { 8366, 128, 324, 251 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4833, 656, 3316, 8885 }
+			player[9][3][12] = { 4833, 661, 3345, 8885 }
 	end
 end
 do
@@ -7813,7 +7897,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9296, 130, 305, 12726 }
+			player[9][3][12] = { 9294, 130, 308, 12726 }
 	end
 end
 do
@@ -7821,11 +7905,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7332, 187, 525, 217 }
+			player[9][1][12] = { 7329, 189, 529, 217 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4674, 76, 238, 1037 }
+			player[9][2][12] = { 4612, 77, 244, 1037 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8122, 282, 812, 11402 }
+			player[9][3][12] = { 8113, 284, 822, 11402 }
 	end
 end
 do
@@ -7833,7 +7917,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5077, 603, 2918, 9334 }
+			player[9][3][12] = { 5077, 608, 2946, 9334 }
 	end
 end
 do
@@ -7841,9 +7925,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6955, 205, 599, 209 }
+			player[9][1][12] = { 6955, 207, 603, 209 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8580, 228, 614, 11785 }
+			player[9][3][12] = { 8580, 229, 619, 11785 }
 	end
 end
 do
@@ -7851,11 +7935,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9425, 50, 114, 328 }
+			player[9][1][12] = { 9423, 51, 115, 328 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9798, 4, 10, 9549 }
+			player[9][2][12] = { 9800, 4, 10, 9549 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9535, 88, 202, 13158 }
+			player[9][3][12] = { 9531, 89, 205, 13158 }
 	end
 end
 do
@@ -7863,9 +7947,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6652, 50, 150, 2745 }
+			player[9][2][12] = { 6585, 51, 155, 2745 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9180, 146, 355, 12545 }
+			player[9][3][12] = { 9177, 147, 359, 12545 }
 	end
 end
 do
@@ -7873,7 +7957,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8539, 231, 632, 11750 }
+			player[9][3][12] = { 8538, 232, 637, 11750 }
 	end
 end
 do
@@ -7881,9 +7965,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7708, 24, 103, 3701 }
+			player[9][2][12] = { 7650, 25, 107, 3701 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5095, 598, 2873, 9367 }
+			player[9][3][12] = { 5095, 603, 2901, 9367 }
 	end
 end
 do
@@ -7891,7 +7975,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4845, 652, 3299, 8908 }
+			player[9][3][12] = { 4845, 657, 3328, 8908 }
 	end
 end
 do
@@ -7899,11 +7983,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7928, 152, 408, 234 }
+			player[9][1][12] = { 7926, 154, 411, 234 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6247, 58, 168, 2602 }
+			player[9][2][12] = { 6186, 59, 173, 2602 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8946, 178, 456, 12182 }
+			player[9][3][12] = { 8945, 179, 460, 12182 }
 	end
 end
 do
@@ -7911,9 +7995,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6365, 235, 715, 196 }
+			player[9][1][12] = { 6363, 237, 720, 196 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7056, 42, 132, 2969 }
+			player[9][2][12] = { 6984, 43, 137, 2969 }
 	end
 end
 do
@@ -7929,9 +8013,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7461, 32, 114, 3303 }
+			player[9][2][12] = { 7406, 33, 118, 3303 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5267, 545, 2550, 9682 }
+			player[9][3][12] = { 5267, 552, 2577, 9682 }
 	end
 end
 do
@@ -7939,7 +8023,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7277, 363, 1177, 10935 }
+			player[9][3][12] = { 7258, 366, 1194, 10935 }
 	end
 end
 do
@@ -7949,7 +8033,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9934, 9, 14, 696 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 697, 88, 415, 84 }
+			player[9][2][12] = { 687, 89, 421, 84 }
 	end
 end
 do
@@ -7957,7 +8041,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8068, 18, 96, 4799 }
+			player[9][2][12] = { 8315, 16, 89, 5360 }
 	end
 end
 do
@@ -7965,9 +8049,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8295, 16, 92, 5031 }
+			player[9][2][12] = { 8202, 17, 94, 5031 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8703, 212, 561, 11887 }
+			player[9][3][12] = { 8704, 213, 565, 11887 }
 	end
 end
 do
@@ -7975,9 +8059,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6421, 233, 704, 198 }
+			player[9][1][12] = { 6419, 235, 709, 198 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6225, 59, 169, 2596 }
+			player[9][2][12] = { 6164, 60, 174, 2596 }
 	end
 end
 do
@@ -7985,9 +8069,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6742, 48, 146, 2756 }
+			player[9][2][12] = { 6674, 49, 151, 2756 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7242, 366, 1192, 10913 }
+			player[9][3][12] = { 7224, 369, 1209, 10913 }
 	end
 end
 do
@@ -7995,9 +8079,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7795, 161, 434, 231 }
+			player[9][1][12] = { 7795, 163, 437, 231 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7685, 25, 104, 3659 }
+			player[9][2][12] = { 7627, 26, 108, 3659 }
 	end
 end
 do
@@ -8005,9 +8089,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7348, 36, 119, 3166 }
+			player[9][2][12] = { 7273, 37, 124, 3166 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8877, 189, 486, 12089 }
+			player[9][3][12] = { 8876, 190, 490, 12089 }
 	end
 end
 do
@@ -8015,7 +8099,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4693, 684, 3489, 8627 }
+			player[9][3][12] = { 4693, 689, 3520, 8627 }
 	end
 end
 do
@@ -8023,11 +8107,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9638, 28, 72, 401 }
+			player[9][1][12] = { 9641, 28, 72, 401 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6112, 60, 174, 2573 }
+			player[9][2][12] = { 6053, 61, 179, 2573 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8221, 271, 769, 11480 }
+			player[9][3][12] = { 8518, 233, 646, 11735 }
+	end
+end
+do
+	local player = players["timehascome"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4457, 80, 251, 392 }
 	end
 end
 do
@@ -8035,7 +8127,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9120, 155, 381, 12457 }
+			player[9][3][12] = { 9117, 156, 385, 12457 }
 	end
 end
 do
@@ -8045,7 +8137,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9868, 14, 27, 542 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7640, 26, 106, 3573 }
+			player[9][2][12] = { 7583, 27, 110, 3573 }
 	end
 end
 do
@@ -8053,15 +8145,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9101, 11, 41, 6838 }
-	end
-end
-do
-	local player = players["timehascome"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4517, 79, 245, 392 }
+			player[9][2][12] = { 9113, 11, 41, 6838 }
 	end
 end
 do
@@ -8069,11 +8153,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4761, 304, 1030, 167 }
+			player[9][1][12] = { 4745, 306, 1040, 167 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9483, 8, 24, 7529 }
+			player[9][2][12] = { 9490, 8, 24, 7529 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4667, 692, 3529, 8579 }
+			player[9][3][12] = { 4667, 697, 3560, 8579 }
 	end
 end
 do
@@ -8081,9 +8165,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6562, 53, 154, 2711 }
+			player[9][2][12] = { 6497, 54, 159, 2711 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4538, 716, 3689, 8343 }
+			player[9][3][12] = { 4538, 721, 3721, 8343 }
 	end
 end
 do
@@ -8091,15 +8175,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7177, 370, 1220, 10883 }
-	end
-end
-do
-	local player = players["maybeswegger"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7371, 35, 118, 3170 }
+			player[9][3][12] = { 7157, 373, 1238, 10883 }
 	end
 end
 do
@@ -8107,7 +8183,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4749, 677, 3423, 8731 }
+			player[9][3][12] = { 4749, 682, 3453, 8731 }
+	end
+end
+do
+	local player = players["maybeswegger"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7295, 36, 123, 3170 }
 	end
 end
 do
@@ -8115,7 +8199,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5682, 263, 849, 181 }
+			player[9][1][12] = { 5685, 265, 854, 181 }
 	end
 end
 do
@@ -8123,7 +8207,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3407, 787, 4191, 6264 }
+			player[9][3][12] = { 3407, 792, 4224, 6264 }
 	end
 end
 do
@@ -8131,11 +8215,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9038, 80, 190, 288 }
+			player[9][1][12] = { 9034, 81, 192, 288 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9753, 5, 12, 9415 }
+			player[9][2][12] = { 9756, 5, 12, 9415 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7297, 359, 1168, 10940 }
+			player[9][3][12] = { 7279, 362, 1185, 10940 }
 	end
 end
 do
@@ -8143,7 +8227,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6443, 418, 1537, 10579 }
+			player[9][3][12] = { 6426, 421, 1556, 10579 }
 	end
 end
 do
@@ -8151,7 +8235,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4904, 641, 3210, 9016 }
+			player[9][3][12] = { 4904, 647, 3239, 9016 }
 	end
 end
 do
@@ -8159,9 +8243,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6966, 45, 136, 2926 }
+			player[9][2][12] = { 6896, 46, 141, 2926 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3839, 777, 4117, 7057 }
+			player[9][3][12] = { 3839, 782, 4150, 7057 }
 	end
 end
 do
@@ -8169,7 +8253,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8182, 17, 95, 4799 }
+			player[9][2][12] = { 7978, 19, 99, 4799 }
+	end
+end
+do
+	local player = players["ashbriinger"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6519, 53, 158, 2730 }
 	end
 end
 do
@@ -8177,7 +8269,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7191, 39, 126, 3063 }
+			player[9][2][12] = { 7118, 40, 131, 3063 }
 	end
 end
 do
@@ -8185,7 +8277,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3900, 347, 1199, 152 }
+			player[9][1][12] = { 3890, 349, 1209, 152 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 10000, 1, 1, 11173 }
 	end
@@ -8195,9 +8287,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9547, 37, 90, 369 }
+			player[9][1][12] = { 9550, 37, 90, 369 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5124, 73, 218, 1708 }
+			player[9][2][12] = { 5078, 74, 223, 1708 }
 	end
 end
 do
@@ -8205,9 +8297,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5236, 71, 213, 1890 }
+			player[9][2][12] = { 5188, 72, 218, 1890 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4314, 747, 3899, 7930 }
+			player[9][3][12] = { 4314, 753, 3932, 7930 }
 	end
 end
 do
@@ -8215,7 +8307,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7077, 196, 575, 211 }
+			player[9][1][12] = { 7076, 198, 579, 211 }
 	end
 end
 do
@@ -8223,7 +8315,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7881, 304, 916, 11240 }
+			player[9][3][12] = { 7865, 304, 930, 11240 }
 	end
 end
 do
@@ -8231,7 +8323,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8738, 207, 546, 11919 }
+			player[9][3][12] = { 8738, 208, 550, 11919 }
 	end
 end
 do
@@ -8239,15 +8331,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9409, 110, 256, 12911 }
-	end
-end
-do
-	local player = players["ashbriinger"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6584, 52, 153, 2730 }
+			player[9][3][12] = { 9407, 110, 259, 12911 }
 	end
 end
 do
@@ -8255,15 +8339,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6944, 46, 137, 2890 }
+			player[9][2][12] = { 6874, 47, 142, 2890 }
 	end
 end
 do
-	local player = players["lithsol"]
+	local player = players["taraldor"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8905, 89, 216, 279 }
+			player[9][1][12] = { 5862, 259, 819, 185 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8514, 15, 68, 6272 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5336, 529, 2427, 9810 }
 	end
 end
 do
@@ -8275,15 +8363,11 @@ do
 	end
 end
 do
-	local player = players["taraldor"]
+	local player = players["lithsol"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5860, 257, 814, 185 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8494, 15, 68, 6272 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5336, 523, 2402, 9810 }
+			player[9][1][12] = { 8902, 90, 218, 279 }
 	end
 end
 do
@@ -8291,7 +8375,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7564, 341, 1053, 11082 }
+			player[9][3][12] = { 7550, 341, 1067, 11082 }
 	end
 end
 do
@@ -8299,7 +8383,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4580, 707, 3639, 8420 }
+			player[9][3][12] = { 4580, 712, 3670, 8420 }
 	end
 end
 do
@@ -8307,9 +8391,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 539, 89, 422, 59 }
+			player[9][2][12] = { 532, 90, 428, 59 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6123, 431, 1675, 10461 }
+			player[9][3][12] = { 6109, 434, 1694, 10461 }
 	end
 end
 do
@@ -8317,7 +8401,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9921, 22, 35, 14484 }
+			player[9][3][12] = { 9922, 22, 35, 14484 }
 	end
 end
 do
@@ -8333,7 +8417,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9639, 67, 157, 13402 }
+			player[9][3][12] = { 9639, 68, 158, 13402 }
 	end
 end
 do
@@ -8357,7 +8441,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9623, 30, 75, 394 }
+			player[9][1][12] = { 9626, 30, 75, 394 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9933, 19, 30, 14566 }
 	end
@@ -8367,7 +8451,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9160, 71, 166, 298 }
+			player[9][1][12] = { 9155, 72, 168, 298 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9968, 11, 15, 15226 }
 	end
@@ -8385,9 +8469,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8727, 106, 251, 270 }
+			player[9][1][12] = { 8725, 107, 253, 270 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9602, 75, 173, 13309 }
+			player[9][3][12] = { 9602, 76, 174, 13309 }
 	end
 end
 do
@@ -8395,7 +8479,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9935, 18, 29, 14569 }
+			player[9][3][12] = { 9936, 18, 29, 14569 }
 	end
 end
 do
@@ -8403,7 +8487,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7098, 377, 1254, 10847 }
+			player[9][3][12] = { 7079, 380, 1272, 10847 }
 	end
 end
 do
@@ -8411,7 +8495,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9324, 126, 293, 12760 }
+			player[9][3][12] = { 9322, 126, 296, 12760 }
 	end
 end
 do
@@ -8419,9 +8503,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9908, 11, 19, 625 }
+			player[9][1][12] = { 9909, 11, 19, 625 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9745, 51, 111, 13715 }
+			player[9][3][12] = { 9745, 52, 112, 13715 }
 	end
 end
 do
@@ -8429,7 +8513,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9826, 38, 76, 14042 }
+			player[9][3][12] = { 9825, 39, 77, 14042 }
 	end
 end
 do
@@ -8445,7 +8529,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9900, 27, 44, 14377 }
+			player[9][3][12] = { 9901, 27, 44, 14377 }
 	end
 end
 do
@@ -8453,7 +8537,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9372, 116, 272, 12838 }
+			player[9][3][12] = { 9370, 116, 275, 12838 }
 	end
 end
 do
@@ -8461,9 +8545,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6797, 214, 630, 205 }
+			player[9][1][12] = { 6798, 216, 634, 205 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7459, 350, 1098, 11020 }
+			player[9][3][12] = { 7444, 351, 1113, 11020 }
 	end
 end
 do
@@ -8471,7 +8555,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9398, 112, 261, 12881 }
+			player[9][3][12] = { 9396, 112, 264, 12881 }
 	end
 end
 do
@@ -8479,9 +8563,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8075, 142, 379, 240 }
+			player[9][1][12] = { 8073, 144, 382, 240 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9074, 163, 401, 12379 }
+			player[9][3][12] = { 9071, 164, 405, 12379 }
 	end
 end
 do
@@ -8497,7 +8581,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8243, 133, 346, 248 }
+			player[9][1][12] = { 8245, 134, 348, 248 }
 	end
 end
 do
@@ -8505,9 +8589,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9170, 69, 164, 299 }
+			player[9][1][12] = { 9165, 70, 166, 299 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8291, 264, 739, 11539 }
+			player[9][3][12] = { 8285, 266, 747, 11539 }
 	end
 end
 do
@@ -8515,9 +8599,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9822, 16, 36, 477 }
+			player[9][1][12] = { 9823, 16, 36, 477 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8652, 220, 583, 11848 }
+			player[9][3][12] = { 8651, 221, 588, 11848 }
 	end
 end
 do
@@ -8525,7 +8609,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9625, 69, 163, 13381 }
+			player[9][3][12] = { 9625, 70, 164, 13381 }
 	end
 end
 do
@@ -8533,7 +8617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9680, 60, 139, 13499 }
+			player[9][3][12] = { 9681, 61, 140, 13499 }
 	end
 end
 do
@@ -8541,7 +8625,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4688, 687, 3500, 8617 }
+			player[9][3][12] = { 4688, 692, 3531, 8617 }
 	end
 end
 do
@@ -8559,7 +8643,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7131, 375, 1240, 10860 }
+			player[9][3][12] = { 7111, 378, 1258, 10860 }
 	end
 end
 do
@@ -8567,11 +8651,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4552, 318, 1071, 163 }
+			player[9][1][12] = { 4537, 320, 1081, 163 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9730, 6, 13, 9381 }
+			player[9][2][12] = { 9734, 6, 13, 9381 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9497, 97, 218, 13084 }
+			player[9][3][12] = { 9494, 98, 221, 13084 }
 	end
 end
 do
@@ -8579,9 +8663,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5789, 260, 828, 183 }
+			player[9][1][12] = { 5792, 262, 833, 183 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9831, 37, 74, 14051 }
+			player[9][3][12] = { 9830, 38, 75, 14051 }
 	end
 end
 do
@@ -8589,15 +8673,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6628, 406, 1457, 10659 }
-	end
-end
-do
-	local player = players["antarcticite"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8585, 226, 612, 11792 }
+			player[9][3][12] = { 6612, 409, 1475, 10659 }
 	end
 end
 do
@@ -8605,7 +8681,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9053, 165, 410, 12333 }
+			player[9][3][12] = { 9051, 166, 414, 12333 }
+	end
+end
+do
+	local player = players["antarcticite"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8584, 227, 617, 11792 }
 	end
 end
 do
@@ -8615,7 +8699,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9995, 2, 2, 1611 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9891, 29, 48, 14363 }
+			player[9][3][12] = { 9892, 29, 48, 14363 }
 	end
 end
 do
@@ -8623,7 +8707,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7608, 336, 1034, 11099 }
+			player[9][3][12] = { 7594, 336, 1048, 11099 }
 	end
 end
 do
@@ -8631,7 +8715,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8863, 190, 492, 12067 }
+			player[9][3][12] = { 8862, 191, 496, 12067 }
 	end
 end
 do
@@ -8639,7 +8723,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8673, 217, 574, 11863 }
+			player[9][3][12] = { 8672, 218, 579, 11863 }
 	end
 end
 do
@@ -8647,9 +8731,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8529, 119, 290, 261 }
+			player[9][1][12] = { 8528, 120, 292, 261 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7084, 379, 1260, 10842 }
+			player[9][3][12] = { 7065, 382, 1278, 10842 }
 	end
 end
 do
@@ -8657,7 +8741,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9819, 40, 79, 14032 }
+			player[9][3][12] = { 9818, 41, 80, 14032 }
 	end
 end
 do
@@ -8665,7 +8749,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8819, 197, 511, 12005 }
+			player[9][3][12] = { 8819, 198, 515, 12005 }
 	end
 end
 do
@@ -8673,7 +8757,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9507, 93, 214, 13103 }
+			player[9][3][12] = { 9504, 94, 217, 13103 }
 	end
 end
 do
@@ -8681,17 +8765,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9007, 82, 196, 285 }
+			player[9][1][12] = { 9004, 83, 198, 285 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8356, 255, 711, 11584 }
-	end
-end
-do
-	local player = players["ellv"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9669, 61, 144, 13468 }
+			player[9][3][12] = { 8354, 257, 717, 11584 }
 	end
 end
 do
@@ -8699,7 +8775,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7788, 315, 956, 11196 }
+			player[9][3][12] = { 7773, 315, 970, 11196 }
+	end
+end
+do
+	local player = players["ellv"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9669, 62, 145, 13468 }
 	end
 end
 do
@@ -8707,7 +8791,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6667, 403, 1440, 10679 }
+			player[9][3][12] = { 6651, 406, 1458, 10679 }
 	end
 end
 do
@@ -8715,7 +8799,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9919, 23, 36, 14483 }
+			player[9][3][12] = { 9920, 23, 36, 14483 }
 	end
 end
 do
@@ -8723,7 +8807,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4124, 339, 1155, 155 }
+			player[9][1][12] = { 4112, 341, 1165, 155 }
 	end
 end
 do
@@ -8731,7 +8815,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7601, 337, 1037, 11097 }
+			player[9][3][12] = { 7587, 337, 1051, 11097 }
 	end
 end
 do
@@ -8739,9 +8823,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7587, 172, 475, 224 }
+			player[9][1][12] = { 7587, 174, 478, 224 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9694, 58, 133, 13534 }
+			player[9][3][12] = { 9694, 59, 134, 13534 }
 	end
 end
 do
@@ -8749,7 +8833,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9166, 147, 361, 12511 }
+			player[9][3][12] = { 9163, 148, 365, 12511 }
 	end
 end
 do
@@ -8757,9 +8841,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6533, 227, 682, 200 }
+			player[9][1][12] = { 6530, 229, 687, 200 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9768, 49, 101, 13835 }
+			player[9][3][12] = { 9768, 50, 102, 13835 }
 	end
 end
 do
@@ -8767,17 +8851,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9620, 71, 165, 13368 }
-	end
-end
-do
-	local player = players["tryki"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 458, 433, 1875, 76 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9655, 62, 150, 13452 }
+			player[9][3][12] = { 9621, 72, 166, 13368 }
 	end
 end
 do
@@ -8785,7 +8859,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9090, 159, 394, 12397 }
+			player[9][3][12] = { 9088, 160, 398, 12397 }
+	end
+end
+do
+	local player = players["tryki"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 455, 437, 1888, 76 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9655, 63, 151, 13452 }
 	end
 end
 do
@@ -8793,9 +8877,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7266, 190, 538, 216 }
+			player[9][1][12] = { 7264, 192, 542, 216 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9704, 56, 129, 13569 }
+			player[9][3][12] = { 9704, 57, 130, 13569 }
+	end
+end
+do
+	local player = players["jamestjoder"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6136, 247, 765, 190 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9104, 158, 391, 12441 }
 	end
 end
 do
@@ -8803,9 +8897,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6675, 219, 654, 202 }
+			player[9][1][12] = { 6672, 221, 659, 202 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8722, 208, 553, 11907 }
+			player[9][3][12] = { 8722, 209, 557, 11907 }
 	end
 end
 do
@@ -8817,13 +8911,11 @@ do
 	end
 end
 do
-	local player = players["jamestjoder"]
+	local player = players["hotdogwater"]
 	if player then
 		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6135, 245, 760, 190 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9106, 157, 387, 12441 }
+			player[9][3][12] = { 9956, 14, 20, 14941 }
 	end
 end
 do
@@ -8831,9 +8923,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9542, 38, 91, 367 }
+			player[9][1][12] = { 9545, 38, 91, 367 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4315, 82, 254, 316 }
+			player[9][2][12] = { 4257, 83, 260, 316 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9903, 26, 43, 14382 }
 	end
@@ -8843,9 +8935,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8629, 14, 62, 6367 }
+			player[9][2][12] = { 8647, 14, 62, 6367 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8138, 279, 805, 11418 }
+			player[9][3][12] = { 8129, 281, 815, 11418 }
 	end
 end
 do
@@ -8853,9 +8945,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7098, 195, 571, 211 }
+			player[9][1][12] = { 7097, 197, 575, 211 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9650, 63, 152, 13442 }
+			player[9][3][12] = { 9651, 64, 153, 13442 }
 	end
 end
 do
@@ -8863,7 +8955,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9226, 138, 335, 12625 }
+			player[9][3][12] = { 9225, 138, 338, 12625 }
 	end
 end
 do
@@ -8871,9 +8963,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 901, 422, 1788, 95 }
+			player[9][1][12] = { 895, 426, 1801, 95 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9213, 141, 341, 12578 }
+			player[9][3][12] = { 9209, 142, 345, 12578 }
 	end
 end
 do
@@ -8881,15 +8973,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9868, 34, 58, 14184 }
-	end
-end
-do
-	local player = players["hotdogwater"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9956, 14, 20, 14941 }
+			player[9][3][12] = { 9867, 35, 59, 14184 }
 	end
 end
 do
@@ -8897,9 +8981,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8900, 90, 217, 279 }
+			player[9][1][12] = { 8897, 91, 219, 279 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9097, 158, 391, 12402 }
+			player[9][3][12] = { 9094, 159, 395, 12402 }
 	end
 end
 do
@@ -8907,9 +8991,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6782, 215, 633, 205 }
+			player[9][1][12] = { 6783, 217, 637, 205 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9944, 16, 25, 14722 }
+			player[9][3][12] = { 9945, 16, 25, 14722 }
 	end
 end
 do
@@ -8917,7 +9001,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9187, 145, 352, 12551 }
+			player[9][3][12] = { 9184, 146, 356, 12551 }
 	end
 end
 do
@@ -8925,7 +9009,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9717, 55, 123, 13628 }
+			player[9][3][12] = { 9717, 56, 124, 13628 }
 	end
 end
 do
@@ -8933,7 +9017,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9988, 5, 6, 15937 }
+			player[9][3][12] = { 9989, 5, 6, 15937 }
 	end
 end
 do
@@ -8941,7 +9025,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8900, 186, 476, 12138 }
+			player[9][3][12] = { 8899, 187, 480, 12138 }
 	end
 end
 do
@@ -8949,7 +9033,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9523, 90, 207, 13145 }
+			player[9][3][12] = { 9520, 91, 210, 13145 }
 	end
 end
 do
@@ -8957,7 +9041,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9898, 28, 45, 14368 }
+			player[9][3][12] = { 9899, 28, 45, 14368 }
 	end
 end
 do
@@ -8965,7 +9049,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9599, 76, 174, 13309 }
+			player[9][3][12] = { 9600, 77, 175, 13309 }
 	end
 end
 do
@@ -8973,7 +9057,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7344, 355, 1148, 10960 }
+			player[9][3][12] = { 7325, 358, 1165, 10960 }
 	end
 end
 do
@@ -8981,7 +9065,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9500, 96, 217, 13090 }
+			player[9][3][12] = { 9497, 97, 220, 13090 }
 	end
 end
 do
@@ -8989,79 +9073,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8388, 251, 697, 11609 }
-	end
-end
-do
-	local player = players["brandoniserz"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9817, 41, 80, 14020 }
-	end
-end
-do
-	local player = players["ellvy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9268, 132, 317, 12695 }
-	end
-end
-do
-	local player = players["josipkottito"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8983, 173, 440, 12239 }
-	end
-end
-do
-	local player = players["draigon"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3737, 355, 1231, 149 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9880, 32, 53, 14295 }
-	end
-end
-do
-	local player = players["blissful"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8233, 135, 348, 247 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9574, 80, 185, 13278 }
-	end
-end
-do
-	local player = players["chatte"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3661, 358, 1246, 148 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9928, 21, 32, 14544 }
-	end
-end
-do
-	local player = players["eberthil"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4539, 78, 244, 439 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9889, 30, 49, 14339 }
-	end
-end
-do
-	local player = players["wikkieaell"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9565, 82, 189, 13251 }
+			player[9][3][12] = { 8387, 253, 703, 11609 }
 	end
 end
 do
@@ -9070,6 +9082,78 @@ do
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9979, 8, 10, 15463 }
+	end
+end
+do
+	local player = players["brandoniserz"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9816, 42, 81, 14020 }
+	end
+end
+do
+	local player = players["ellvy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9267, 132, 320, 12695 }
+	end
+end
+do
+	local player = players["josipkottito"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8982, 174, 444, 12239 }
+	end
+end
+do
+	local player = players["draigon"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3728, 357, 1241, 149 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9878, 33, 54, 14295 }
+	end
+end
+do
+	local player = players["blissful"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8235, 136, 350, 247 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9575, 81, 186, 13278 }
+	end
+end
+do
+	local player = players["chatte"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3652, 360, 1256, 148 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9929, 21, 32, 14544 }
+	end
+end
+do
+	local player = players["eberthil"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4479, 79, 250, 439 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9887, 31, 50, 14339 }
+	end
+end
+do
+	local player = players["wikkieaell"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9566, 83, 190, 13251 }
 	end
 end
 do
@@ -9085,7 +9169,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9046, 167, 413, 12309 }
+			player[9][3][12] = { 9044, 168, 417, 12309 }
 	end
 end
 do
@@ -9093,9 +9177,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4888, 295, 1005, 169 }
+			player[9][1][12] = { 4881, 298, 1013, 169 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8678, 216, 572, 11866 }
+			player[9][3][12] = { 8676, 217, 577, 11866 }
 	end
 end
 do
@@ -9103,7 +9187,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9757, 50, 106, 13806 }
+			player[9][3][12] = { 9756, 51, 107, 13806 }
 	end
 end
 do
@@ -9111,7 +9195,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5191, 72, 215, 1822 }
+			player[9][2][12] = { 5144, 73, 220, 1822 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9963, 12, 17, 15053 }
 	end
@@ -9121,7 +9205,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5286, 539, 2513, 9718 }
+			player[9][3][12] = { 5286, 546, 2540, 9718 }
 	end
 end
 do
@@ -9129,9 +9213,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6950, 206, 600, 208 }
+			player[9][1][12] = { 6950, 208, 604, 208 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8944, 179, 457, 12182 }
+			player[9][3][12] = { 8943, 180, 461, 12182 }
 	end
 end
 do
@@ -9139,7 +9223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5232, 555, 2609, 9618 }
+			player[9][3][12] = { 5232, 560, 2636, 9618 }
 	end
 end
 do
@@ -9147,7 +9231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8242, 269, 760, 11503 }
+			player[9][3][12] = { 8233, 272, 770, 11503 }
 	end
 end
 do
@@ -9155,9 +9239,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9730, 22, 54, 423 }
+			player[9][1][12] = { 9732, 22, 54, 423 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9375, 115, 271, 12841 }
+			player[9][3][12] = { 9373, 115, 274, 12841 }
 	end
 end
 do
@@ -9165,7 +9249,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9884, 31, 51, 14310 }
+			player[9][3][12] = { 9883, 32, 52, 14310 }
 	end
 end
 do
@@ -9173,7 +9257,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9722, 53, 121, 13651 }
+			player[9][3][12] = { 9722, 54, 122, 13651 }
 	end
 end
 do
@@ -9181,7 +9265,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9576, 79, 184, 13281 }
+			player[9][3][12] = { 9577, 80, 185, 13281 }
 	end
 end
 do
@@ -9189,9 +9273,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4048, 341, 1170, 154 }
+			player[9][1][12] = { 4036, 343, 1180, 154 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9553, 84, 194, 13227 }
+			player[9][3][12] = { 9554, 85, 195, 13227 }
 	end
 end
 do
@@ -9199,7 +9283,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4954, 292, 992, 171 }
+			player[9][1][12] = { 4947, 295, 1000, 171 }
 	end
 end
 do
@@ -9207,9 +9291,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8814, 102, 234, 275 }
+			player[9][1][12] = { 8811, 103, 236, 275 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6568, 412, 1483, 10629 }
+			player[9][3][12] = { 6550, 415, 1502, 10629 }
 	end
 end
 do
@@ -9217,7 +9301,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9298, 129, 304, 12729 }
+			player[9][3][12] = { 9297, 129, 307, 12729 }
 	end
 end
 do
@@ -9225,7 +9309,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9824, 39, 77, 14042 }
+			player[9][3][12] = { 9823, 40, 78, 14042 }
 	end
 end
 do
@@ -9233,17 +9317,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8810, 199, 515, 11998 }
-	end
-end
-do
-	local player = players["alirayeda"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3152, 369, 1346, 141 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9870, 33, 57, 14200 }
+			player[9][3][12] = { 8809, 200, 519, 11998 }
 	end
 end
 do
@@ -9251,37 +9325,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5677, 264, 850, 181 }
+			player[9][1][12] = { 5680, 266, 855, 181 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 9931, 20, 31, 14552 }
 	end
 end
 do
-	local player = players["rekless"]
+	local player = players["alirayeda"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1655, 409, 1640, 114 }
+			player[9][1][12] = { 3146, 371, 1356, 141 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9796, 45, 89, 13965 }
-	end
-end
-do
-	local player = players["dimitrixx"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7446, 352, 1104, 11015 }
-	end
-end
-do
-	local player = players["pickme"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7953, 149, 403, 235 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9032, 169, 419, 12300 }
+			player[9][3][12] = { 9869, 34, 58, 14200 }
 	end
 end
 do
@@ -9289,9 +9345,37 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2459, 393, 1482, 130 }
+			player[9][1][12] = { 2458, 395, 1492, 130 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9606, 73, 171, 13327 }
+			player[9][3][12] = { 9607, 74, 172, 13327 }
+	end
+end
+do
+	local player = players["rekless"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 1659, 411, 1650, 114 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9795, 46, 90, 13965 }
+	end
+end
+do
+	local player = players["dimitrixx"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7430, 353, 1119, 11015 }
+	end
+end
+do
+	local player = players["pickme"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7951, 151, 406, 235 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9030, 170, 423, 12300 }
 	end
 end
 do
@@ -9299,15 +9383,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7906, 301, 905, 11261 }
-	end
-end
-do
-	local player = players["adduz"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9451, 105, 238, 13024 }
+			player[9][3][12] = { 7892, 301, 918, 11261 }
 	end
 end
 do
@@ -9315,7 +9391,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5429, 500, 2218, 9981 }
+			player[9][3][12] = { 5429, 505, 2241, 9981 }
+	end
+end
+do
+	local player = players["adduz"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9448, 105, 241, 13024 }
 	end
 end
 do
@@ -9323,7 +9407,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7888, 303, 913, 11244 }
+			player[9][3][12] = { 7872, 303, 927, 11244 }
 	end
 end
 do
@@ -9331,7 +9415,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7675, 330, 1005, 11134 }
+			player[9][3][12] = { 7660, 330, 1019, 11134 }
 	end
 end
 do
@@ -9339,7 +9423,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9294, 131, 306, 12726 }
+			player[9][3][12] = { 9292, 131, 309, 12726 }
 	end
 end
 do
@@ -9347,7 +9431,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9641, 66, 156, 13409 }
+			player[9][3][12] = { 9641, 67, 157, 13409 }
 	end
 end
 do
@@ -9357,7 +9441,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 4712 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6240, 266, 965, 11243 }
+			player[9][3][12] = { 6240, 268, 976, 11243 }
 	end
 end
 do
@@ -9369,7 +9453,7 @@ do
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 3045, 17, 24, 76 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9934, 7, 14, 16667 }
+			player[9][3][12] = { 9925, 7, 16, 16667 }
 	end
 end
 do
@@ -9385,7 +9469,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6917, 96, 329, 152 }
+			player[9][1][12] = { 6919, 97, 331, 152 }
 	end
 end
 do
@@ -9393,7 +9477,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4314, 185, 606, 110 }
+			player[9][1][12] = { 4323, 186, 609, 110 }
 	end
 end
 do
@@ -9401,7 +9485,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8543, 41, 156, 291 }
+			player[9][1][12] = { 8553, 41, 156, 291 }
 	end
 end
 do
@@ -9409,9 +9493,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9276, 30, 78, 590 }
+			player[9][1][12] = { 9281, 30, 78, 590 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8141, 131, 369, 13448 }
+			player[9][3][12] = { 8127, 132, 375, 13448 }
 	end
 end
 do
@@ -9421,7 +9505,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9981, 3, 3, 2915 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6108, 288, 1101, 11006 }
+			player[9][3][12] = { 6108, 290, 1112, 11006 }
 	end
 end
 do
@@ -9429,7 +9513,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9586, 19, 45, 1031 }
+			player[9][1][12] = { 9589, 19, 45, 1031 }
 	end
 end
 do
@@ -9437,7 +9521,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9906, 10, 11, 2072 }
+			player[9][1][12] = { 9907, 10, 11, 2072 }
 	end
 end
 do
@@ -9445,7 +9529,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7265, 84, 292, 168 }
+			player[9][1][12] = { 7264, 85, 294, 168 }
 	end
 end
 do
@@ -9453,9 +9537,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9596, 18, 44, 1043 }
+			player[9][1][12] = { 9599, 18, 44, 1043 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5413, 374, 1715, 9753 }
+			player[9][3][12] = { 5413, 377, 1727, 9753 }
 	end
 end
 do
@@ -9463,9 +9547,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9915, 9, 10, 2087 }
+			player[9][1][12] = { 9916, 9, 10, 2087 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8737, 103, 251, 13975 }
+			player[9][3][12] = { 8728, 104, 255, 13975 }
 	end
 end
 do
@@ -9473,7 +9557,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9577, 20, 46, 1021 }
+			player[9][1][12] = { 9580, 20, 46, 1021 }
 	end
 end
 do
@@ -9481,7 +9565,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7650, 73, 251, 195 }
+			player[9][1][12] = { 7647, 74, 253, 195 }
 	end
 end
 do
@@ -9489,9 +9573,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9962, 5, 5, 2648 }
+			player[9][1][12] = { 9963, 5, 5, 2648 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6372, 252, 883, 11481 }
+			player[9][3][12] = { 6372, 255, 894, 11481 }
 	end
 end
 do
@@ -9499,7 +9583,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7914, 64, 223, 216 }
+			player[9][1][12] = { 7927, 64, 223, 216 }
 	end
 end
 do
@@ -9507,9 +9591,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8092, 56, 204, 233 }
+			player[9][1][12] = { 8105, 56, 204, 233 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8768, 101, 245, 13997 }
+			player[9][3][12] = { 8758, 102, 249, 13997 }
 	end
 end
 do
@@ -9517,9 +9601,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3214, 211, 723, 98 }
+			player[9][1][12] = { 3221, 213, 727, 98 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5322, 384, 1750, 9589 }
+			player[9][3][12] = { 5322, 387, 1764, 9589 }
 	end
 end
 do
@@ -9527,9 +9611,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8675, 36, 142, 328 }
+			player[9][1][12] = { 8683, 36, 142, 328 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4707, 412, 1901, 8482 }
+			player[9][3][12] = { 4707, 416, 1916, 8482 }
 	end
 end
 do
@@ -9537,9 +9621,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8750, 34, 134, 361 }
+			player[9][1][12] = { 8758, 34, 134, 361 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6092, 292, 1118, 10977 }
+			player[9][3][12] = { 6092, 294, 1129, 10977 }
 	end
 end
 do
@@ -9547,7 +9631,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1363, 241, 920, 52 }
+			player[9][1][12] = { 1354, 245, 927, 52 }
 	end
 end
 do
@@ -9563,9 +9647,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9878, 11, 14, 1961 }
+			player[9][1][12] = { 9879, 11, 14, 1961 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6441, 241, 828, 11605 }
+			player[9][3][12] = { 6441, 243, 838, 11605 }
 	end
 end
 do
@@ -9573,7 +9657,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8477, 43, 163, 278 }
+			player[9][1][12] = { 8487, 43, 163, 278 }
 	end
 end
 do
@@ -9581,7 +9665,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8045, 135, 388, 13348 }
+			player[9][3][12] = { 8032, 136, 394, 13348 }
 	end
 end
 do
@@ -9589,7 +9673,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7989, 61, 215, 223 }
+			player[9][1][12] = { 8002, 61, 215, 223 }
 	end
 end
 do
@@ -9597,9 +9681,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8045, 58, 209, 232 }
+			player[9][1][12] = { 8058, 58, 209, 232 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5329, 383, 1748, 9602 }
+			player[9][3][12] = { 5329, 386, 1761, 9602 }
 	end
 end
 do
@@ -9607,7 +9691,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2632, 224, 785, 89 }
+			player[9][1][12] = { 2624, 227, 791, 89 }
 	end
 end
 do
@@ -9615,9 +9699,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9727, 14, 30, 1372 }
+			player[9][1][12] = { 9729, 14, 30, 1372 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6087, 293, 1127, 10968 }
+			player[9][3][12] = { 6087, 295, 1138, 10968 }
 	end
 end
 do
@@ -9633,7 +9717,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6175, 121, 408, 136 }
+			player[9][1][12] = { 6181, 122, 410, 136 }
 	end
 end
 do
@@ -9641,7 +9725,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1776, 236, 876, 68 }
+			player[9][1][12] = { 1774, 239, 882, 68 }
 	end
 end
 do
@@ -9649,9 +9733,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9408, 27, 64, 750 }
+			player[9][1][12] = { 9412, 27, 64, 750 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6211, 272, 991, 11192 }
+			player[9][3][12] = { 6211, 274, 1002, 11192 }
 	end
 end
 do
@@ -9659,7 +9743,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8252, 49, 187, 252 }
+			player[9][1][12] = { 8263, 49, 187, 252 }
 	end
 end
 do
@@ -9667,7 +9751,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6184, 120, 407, 136 }
+			player[9][1][12] = { 6190, 121, 409, 136 }
 	end
 end
 do
@@ -9683,7 +9767,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6128, 122, 413, 135 }
+			player[9][1][12] = { 6134, 123, 415, 135 }
 	end
 end
 do
@@ -9691,7 +9775,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9530, 22, 51, 938 }
+			player[9][1][12] = { 9533, 22, 51, 938 }
 	end
 end
 do
@@ -9699,7 +9783,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6654, 110, 357, 144 }
+			player[9][1][12] = { 6657, 111, 359, 144 }
 	end
 end
 do
@@ -9707,7 +9791,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7932, 63, 221, 217 }
+			player[9][1][12] = { 7946, 63, 221, 217 }
 	end
 end
 do
@@ -9715,9 +9799,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6955, 94, 325, 154 }
+			player[9][1][12] = { 6956, 95, 327, 154 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8061, 134, 385, 13384 }
+			player[9][3][12] = { 8047, 135, 391, 13384 }
 	end
 end
 do
@@ -9725,7 +9809,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8899, 93, 219, 14092 }
+			player[9][3][12] = { 8888, 94, 223, 14092 }
 	end
 end
 do
@@ -9733,7 +9817,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8008, 60, 213, 226 }
+			player[9][1][12] = { 8021, 60, 213, 226 }
 	end
 end
 do
@@ -9741,7 +9825,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8581, 40, 152, 307 }
+			player[9][1][12] = { 8590, 40, 152, 307 }
 	end
 end
 do
@@ -9749,9 +9833,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6203, 118, 405, 136 }
+			player[9][1][12] = { 6209, 119, 407, 136 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4424, 423, 1929, 7972 }
+			player[9][3][12] = { 4424, 426, 1944, 7972 }
 	end
 end
 do
@@ -9759,7 +9843,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2030, 234, 849, 75 }
+			player[9][1][12] = { 2026, 237, 855, 75 }
 	end
 end
 do
@@ -9767,7 +9851,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9606, 44, 79, 15060 }
+			player[9][3][12] = { 9594, 44, 82, 15060 }
 	end
 end
 do
@@ -9775,7 +9859,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3524, 204, 690, 101 }
+			player[9][1][12] = { 3529, 206, 694, 101 }
 	end
 end
 do
@@ -9783,17 +9867,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6682, 108, 354, 144 }
-	end
-end
-do
-	local player = players["windofthewar"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4267, 188, 611, 110 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9652, 42, 70, 15191 }
+			player[9][1][12] = { 6685, 109, 356, 144 }
 	end
 end
 do
@@ -9801,9 +9875,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7613, 75, 255, 190 }
+			player[9][1][12] = { 7610, 76, 257, 190 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6129, 284, 1078, 11044 }
+			player[9][3][12] = { 6129, 286, 1089, 11044 }
+	end
+end
+do
+	local player = players["windofthewar"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4276, 189, 614, 110 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9644, 42, 72, 15191 }
 	end
 end
 do
@@ -9811,7 +9895,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7321, 82, 286, 171 }
+			player[9][1][12] = { 7320, 83, 288, 171 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 3606, 14, 19, 90 }
 	end
@@ -9821,9 +9905,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8130, 54, 200, 236 }
+			player[9][1][12] = { 8142, 54, 200, 236 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5907, 321, 1314, 10644 }
+			player[9][3][12] = { 5907, 323, 1325, 10644 }
 	end
 end
 do
@@ -9831,9 +9915,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4680, 171, 567, 115 }
+			player[9][1][12] = { 4687, 172, 570, 115 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5865, 328, 1371, 10568 }
+			player[9][3][12] = { 5865, 330, 1382, 10568 }
+	end
+end
+do
+	local player = players["rattamahata"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7778, 68, 239, 204 }
 	end
 end
 do
@@ -9841,9 +9933,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5780, 134, 450, 128 }
+			player[9][1][12] = { 5789, 135, 452, 128 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6517, 232, 769, 11743 }
+			player[9][3][12] = { 6517, 234, 778, 11743 }
 	end
 end
 do
@@ -9851,7 +9943,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5207, 155, 511, 120 }
+			player[9][1][12] = { 5210, 156, 514, 120 }
 	end
 end
 do
@@ -9859,9 +9951,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5949, 130, 432, 131 }
+			player[9][1][12] = { 5957, 131, 434, 131 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9768, 27, 47, 15613 }
+			player[9][3][12] = { 9760, 27, 49, 15613 }
 	end
 end
 do
@@ -9869,9 +9961,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6795, 104, 342, 148 }
+			player[9][1][12] = { 6797, 105, 344, 148 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6353, 255, 895, 11447 }
+			player[9][3][12] = { 6353, 258, 906, 11447 }
 	end
 end
 do
@@ -9879,9 +9971,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4098, 192, 629, 108 }
+			player[9][1][12] = { 4108, 193, 632, 108 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5445, 369, 1698, 9811 }
+			player[9][3][12] = { 5445, 372, 1710, 9811 }
 	end
 end
 do
@@ -9889,9 +9981,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2688, 223, 779, 89 }
+			player[9][1][12] = { 2680, 226, 785, 89 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6230, 268, 976, 11225 }
+			player[9][3][12] = { 6230, 270, 987, 11225 }
 	end
 end
 do
@@ -9899,7 +9991,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8665, 37, 143, 328 }
+			player[9][1][12] = { 8674, 37, 143, 328 }
 	end
 end
 do
@@ -9907,17 +9999,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 376, 256, 1025, 4 }
+			player[9][1][12] = { 373, 260, 1032, 4 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6599, 220, 719, 11891 }
-	end
-end
-do
-	local player = players["blessed"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5752, 135, 453, 128 }
+			player[9][3][12] = { 6599, 222, 728, 11891 }
 	end
 end
 do
@@ -9925,9 +10009,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5573, 144, 472, 125 }
+			player[9][1][12] = { 5584, 145, 474, 125 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9379, 63, 124, 14637 }
+			player[9][3][12] = { 9369, 63, 127, 14637 }
+	end
+end
+do
+	local player = players["blessed"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5761, 136, 455, 128 }
 	end
 end
 do
@@ -9935,9 +10027,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8383, 45, 173, 266 }
+			player[9][1][12] = { 8394, 45, 173, 266 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7737, 147, 449, 13100 }
+			player[9][3][12] = { 7722, 149, 456, 13100 }
 	end
 end
 do
@@ -9945,9 +10037,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9361, 28, 69, 690 }
+			player[9][1][12] = { 9365, 28, 69, 690 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5709, 349, 1522, 10287 }
+			player[9][3][12] = { 5709, 351, 1533, 10287 }
 	end
 end
 do
@@ -9955,7 +10047,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7359, 81, 282, 173 }
+			player[9][1][12] = { 7358, 82, 284, 173 }
 	end
 end
 do
@@ -9963,7 +10055,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6250, 116, 400, 137 }
+			player[9][1][12] = { 6256, 117, 402, 137 }
 	end
 end
 do
@@ -9971,7 +10063,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6504, 111, 373, 141 }
+			player[9][1][12] = { 6508, 112, 375, 141 }
 	end
 end
 do
@@ -9979,9 +10071,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6833, 102, 338, 150 }
+			player[9][1][12] = { 6835, 103, 340, 150 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5759, 344, 1482, 10376 }
+			player[9][3][12] = { 5759, 346, 1493, 10376 }
 	end
 end
 do
@@ -9989,55 +10081,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5103, 160, 522, 119 }
+			player[9][1][12] = { 5107, 161, 525, 119 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9591, 45, 82, 15021 }
-	end
-end
-do
-	local player = players["mangemaraie"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8167, 53, 196, 245 }
-	end
-end
-do
-	local player = players["nomaris"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 733, 251, 987, 18 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5654, 354, 1563, 10189 }
-	end
-end
-do
-	local player = players["pacifier"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5677, 139, 461, 127 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5810, 337, 1433, 10469 }
-	end
-end
-do
-	local player = players["anguirel"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9305, 29, 75, 647 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4681, 415, 1904, 8435 }
-	end
-end
-do
-	local player = players["yinchenchen"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5827, 132, 445, 129 }
+			player[9][3][12] = { 9579, 45, 85, 15021 }
 	end
 end
 do
@@ -10045,7 +10091,53 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9831, 12, 19, 1669 }
+			player[9][1][12] = { 9832, 12, 19, 1669 }
+	end
+end
+do
+	local player = players["mangemaraie"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8179, 53, 196, 245 }
+	end
+end
+do
+	local player = players["pacifier"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5686, 140, 463, 127 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5810, 339, 1444, 10469 }
+	end
+end
+do
+	local player = players["nomaris"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 728, 255, 994, 18 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5654, 356, 1574, 10189 }
+	end
+end
+do
+	local player = players["anguirel"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9309, 29, 75, 647 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6474, 237, 816, 11666 }
+	end
+end
+do
+	local player = players["yinchenchen"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5836, 133, 447, 129 }
 	end
 end
 do
@@ -10053,7 +10145,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2133, 233, 838, 79 }
+			player[9][1][12] = { 2129, 236, 844, 79 }
 	end
 end
 do
@@ -10061,9 +10153,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 940, 245, 965, 27 }
+			player[9][1][12] = { 934, 249, 972, 27 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1861, 438, 1979, 3353 }
+			player[9][3][12] = { 1861, 442, 1996, 3353 }
 	end
 end
 do
@@ -10071,7 +10163,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5301, 150, 501, 122 }
+			player[9][1][12] = { 5313, 151, 503, 122 }
 	end
 end
 do
@@ -10079,7 +10171,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6818, 188, 631, 12243 }
+			player[9][3][12] = { 6800, 191, 640, 12243 }
 	end
 end
 do
@@ -10087,7 +10179,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4079, 193, 631, 107 }
+			player[9][1][12] = { 4090, 194, 634, 107 }
 	end
 end
 do
@@ -10095,7 +10187,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7735, 70, 242, 202 }
+			player[9][1][12] = { 7731, 71, 244, 202 }
+	end
+end
+do
+	local player = players["sarumann"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 626, 256, 1005, 13 }
 	end
 end
 do
@@ -10103,7 +10203,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9126, 32, 94, 541 }
+			player[9][1][12] = { 9132, 32, 94, 541 }
+	end
+end
+do
+	local player = players["aphroditea"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 3763, 201, 669, 104 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5652, 357, 1579, 10185 }
 	end
 end
 do
@@ -10111,7 +10221,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7726, 71, 243, 201 }
+			player[9][1][12] = { 7722, 72, 245, 201 }
 	end
 end
 do
@@ -10119,9 +10229,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5545, 146, 475, 125 }
+			player[9][1][12] = { 5556, 147, 477, 125 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4534, 420, 1919, 8170 }
+			player[9][3][12] = { 4534, 423, 1934, 8170 }
 	end
 end
 do
@@ -10129,7 +10239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8111, 55, 202, 234 }
+			player[9][1][12] = { 8123, 55, 202, 234 }
 	end
 end
 do
@@ -10137,7 +10247,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1711, 237, 883, 64 }
+			player[9][1][12] = { 1699, 241, 890, 64 }
 	end
 end
 do
@@ -10145,7 +10255,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5028, 162, 530, 119 }
+			player[9][1][12] = { 5033, 163, 533, 119 }
 	end
 end
 do
@@ -10153,7 +10263,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1419, 239, 914, 52 }
+			player[9][1][12] = { 1410, 243, 921, 52 }
 	end
 end
 do
@@ -10161,7 +10271,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9680, 16, 35, 1208 }
+			player[9][1][12] = { 9683, 16, 35, 1208 }
 	end
 end
 do
@@ -10169,9 +10279,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3393, 209, 704, 99 }
+			player[9][1][12] = { 3399, 211, 708, 99 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6382, 251, 878, 11500 }
+			player[9][3][12] = { 6382, 254, 889, 11500 }
 	end
 end
 do
@@ -10179,15 +10289,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4765, 169, 558, 116 }
-	end
-end
-do
-	local player = players["pythia"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5273, 152, 504, 121 }
+			player[9][1][12] = { 4771, 170, 561, 116 }
 	end
 end
 do
@@ -10197,7 +10299,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9972, 4, 4, 2654 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6026, 301, 1181, 10858 }
+			player[9][3][12] = { 6026, 303, 1192, 10858 }
 	end
 end
 do
@@ -10205,7 +10307,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8524, 42, 158, 289 }
+			player[9][1][12] = { 8534, 42, 158, 289 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 1000, 19, 27, 13 }
 	end
@@ -10215,11 +10317,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 555, 254, 1006, 8 }
+			player[9][1][12] = { 551, 258, 1013, 8 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 9643, 2, 2, 206 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5039, 402, 1840, 9079 }
+			player[9][3][12] = { 5039, 405, 1854, 9079 }
 	end
 end
 do
@@ -10235,7 +10337,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9929, 8, 15, 16658 }
+			player[9][3][12] = { 9920, 8, 17, 16658 }
 	end
 end
 do
@@ -10251,7 +10353,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9015, 84, 196, 14189 }
+			player[9][3][12] = { 9009, 84, 199, 14189 }
 	end
 end
 do
@@ -10259,7 +10361,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9823, 22, 36, 15771 }
+			player[9][3][12] = { 9815, 22, 38, 15771 }
 	end
 end
 do
@@ -10267,9 +10369,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8336, 47, 178, 262 }
+			player[9][1][12] = { 8347, 47, 178, 262 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7015, 182, 592, 12412 }
+			player[9][3][12] = { 6995, 185, 601, 12412 }
 	end
 end
 do
@@ -10277,9 +10379,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6758, 105, 346, 147 }
+			player[9][1][12] = { 6760, 106, 348, 147 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9944, 6, 12, 16767 }
+			player[9][3][12] = { 9935, 6, 14, 16767 }
 	end
 end
 do
@@ -10287,7 +10389,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9106, 78, 178, 14310 }
+			player[9][3][12] = { 9099, 78, 181, 14310 }
 	end
 end
 do
@@ -10295,7 +10397,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7616, 153, 473, 12995 }
+			player[9][3][12] = { 7601, 155, 480, 12995 }
 	end
 end
 do
@@ -10303,41 +10405,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9359, 65, 128, 14620 }
-	end
-end
-do
-	local player = players["frenzypuck"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6688, 205, 675, 12051 }
-	end
-end
-do
-	local player = players["fakery"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9096, 79, 180, 14303 }
-	end
-end
-do
-	local player = players["wakemeup"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5620, 142, 467, 126 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6614, 217, 711, 11918 }
-	end
-end
-do
-	local player = players["veriet"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7051, 179, 585, 12463 }
+			player[9][3][12] = { 9349, 65, 131, 14620 }
 	end
 end
 do
@@ -10345,7 +10413,41 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9798, 25, 41, 15721 }
+			player[9][3][12] = { 9790, 25, 43, 15721 }
+	end
+end
+do
+	local player = players["fakery"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9089, 79, 183, 14303 }
+	end
+end
+do
+	local player = players["frenzypuck"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6688, 207, 684, 12051 }
+	end
+end
+do
+	local player = players["wakemeup"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5630, 143, 469, 126 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6614, 219, 720, 11918 }
+	end
+end
+do
+	local player = players["veriet"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7031, 182, 594, 12463 }
 	end
 end
 do
@@ -10353,7 +10455,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6869, 186, 621, 12268 }
+			player[9][3][12] = { 6850, 189, 630, 12268 }
 	end
 end
 do
@@ -10361,15 +10463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8934, 90, 212, 14136 }
-	end
-end
-do
-	local player = players["praystation"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7823, 144, 432, 13168 }
+			player[9][3][12] = { 8923, 91, 216, 14136 }
 	end
 end
 do
@@ -10377,9 +10471,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8957, 33, 112, 451 }
+			player[9][1][12] = { 8964, 33, 112, 451 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6630, 212, 701, 11947 }
+			player[9][3][12] = { 6630, 214, 710, 11947 }
+	end
+end
+do
+	local player = players["praystation"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7807, 146, 439, 13168 }
 	end
 end
 do
@@ -10387,7 +10489,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9682, 38, 64, 15263 }
+			player[9][3][12] = { 9675, 38, 66, 15263 }
 	end
 end
 do
@@ -10395,41 +10497,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9818, 23, 37, 15770 }
-	end
-end
-do
-	local player = players["peepopope"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9833, 20, 34, 15840 }
-	end
-end
-do
-	local player = players["xebek"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7462, 77, 271, 181 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8732, 104, 252, 13975 }
-	end
-end
-do
-	local player = players["pyrosvi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8182, 127, 361, 13480 }
-	end
-end
-do
-	local player = players["bloodypriest"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9364, 64, 127, 14625 }
+			player[9][3][12] = { 9810, 23, 39, 15770 }
 	end
 end
 do
@@ -10437,7 +10505,41 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9343, 68, 131, 14607 }
+			player[9][3][12] = { 9334, 68, 134, 14607 }
+	end
+end
+do
+	local player = players["peepopope"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9825, 20, 36, 15840 }
+	end
+end
+do
+	local player = players["xebek"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 7460, 78, 273, 181 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8723, 105, 256, 13975 }
+	end
+end
+do
+	local player = players["pyrosvi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8167, 128, 367, 13480 }
+	end
+end
+do
+	local player = players["bloodypriest"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9354, 64, 130, 14625 }
 	end
 end
 do
@@ -10445,7 +10547,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6793, 189, 636, 12224 }
+			player[9][3][12] = { 6784, 192, 645, 12224 }
 	end
 end
 do
@@ -10453,9 +10555,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4596, 175, 576, 114 }
+			player[9][1][12] = { 4603, 176, 579, 114 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6598, 221, 720, 11889 }
+			player[9][3][12] = { 6598, 223, 729, 11889 }
 	end
 end
 do
@@ -10463,9 +10565,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7143, 88, 305, 162 }
+			player[9][1][12] = { 7143, 89, 307, 162 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5442, 371, 1702, 9806 }
+			player[9][3][12] = { 5442, 374, 1714, 9806 }
 	end
 end
 do
@@ -10473,9 +10575,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9521, 23, 52, 934 }
+			player[9][1][12] = { 9524, 23, 52, 934 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9965, 4, 8, 17102 }
+			player[9][3][12] = { 9955, 4, 10, 17102 }
 	end
 end
 do
@@ -10483,7 +10585,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9439, 57, 112, 14679 }
+			player[9][3][12] = { 9429, 57, 115, 14679 }
 	end
 end
 do
@@ -10491,7 +10593,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6693, 203, 672, 12061 }
+			player[9][3][12] = { 6693, 205, 681, 12061 }
 	end
 end
 do
@@ -10499,7 +10601,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9808, 24, 39, 15769 }
+			player[9][3][12] = { 9800, 24, 41, 15769 }
 	end
 end
 do
@@ -10507,7 +10609,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6761, 192, 646, 12183 }
+			player[9][3][12] = { 6761, 195, 655, 12183 }
 	end
 end
 do
@@ -10515,7 +10617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9551, 50, 90, 14939 }
+			player[9][3][12] = { 9539, 50, 93, 14939 }
 	end
 end
 do
@@ -10523,7 +10625,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9389, 61, 122, 14638 }
+			player[9][3][12] = { 9379, 61, 125, 14638 }
 	end
 end
 do
@@ -10531,7 +10633,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9894, 12, 22, 16134 }
+			player[9][3][12] = { 9885, 12, 24, 16134 }
 	end
 end
 do
@@ -10539,9 +10641,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8233, 50, 189, 250 }
+			player[9][1][12] = { 8245, 50, 189, 250 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6214, 271, 990, 11196 }
+			player[9][3][12] = { 6214, 273, 1001, 11196 }
 	end
 end
 do
@@ -10549,31 +10651,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9960, 5, 9, 16865 }
-	end
-end
-do
-	local player = players["asmine"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9111, 77, 177, 14319 }
-	end
-end
-do
-	local player = players["myrabel"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9136, 75, 172, 14346 }
-	end
-end
-do
-	local player = players["starplatinum"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9879, 13, 25, 16086 }
+			player[9][3][12] = { 9950, 5, 11, 16865 }
 	end
 end
 do
@@ -10581,9 +10659,33 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9568, 21, 47, 1016 }
+			player[9][1][12] = { 9570, 21, 47, 1016 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9924, 9, 16, 16539 }
+			player[9][3][12] = { 9915, 9, 18, 16539 }
+	end
+end
+do
+	local player = players["asmine"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9104, 77, 180, 14319 }
+	end
+end
+do
+	local player = players["myrabel"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9129, 75, 175, 14346 }
+	end
+end
+do
+	local player = players["starplatinum"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9870, 13, 27, 16086 }
 	end
 end
 do
@@ -10591,9 +10693,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 19, 260, 1063, 0 }
+			player[9][1][12] = { 19, 264, 1070, 0 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9061, 81, 187, 14275 }
+			player[9][3][12] = { 9054, 81, 190, 14275 }
 	end
 end
 do
@@ -10601,7 +10703,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9495, 53, 101, 14798 }
+			player[9][3][12] = { 9484, 53, 104, 14798 }
 	end
 end
 do
@@ -10609,9 +10711,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7538, 76, 263, 183 }
+			player[9][1][12] = { 7535, 77, 265, 183 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9348, 67, 130, 14614 }
+			player[9][3][12] = { 9339, 67, 133, 14614 }
 	end
 end
 do
@@ -10619,9 +10721,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8073, 57, 206, 233 }
+			player[9][1][12] = { 8086, 57, 206, 233 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9753, 30, 50, 15506 }
+			player[9][3][12] = { 9745, 30, 52, 15506 }
 	end
 end
 do
@@ -10629,9 +10731,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4305, 186, 607, 110 }
+			player[9][1][12] = { 4314, 187, 610, 110 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7025, 181, 590, 12420 }
+			player[9][3][12] = { 7006, 184, 599, 12420 }
 	end
 end
 do
@@ -10639,77 +10741,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9000, 86, 199, 14182 }
-	end
-end
-do
-	local player = players["vhyles"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6733, 198, 660, 12132 }
-	end
-end
-do
-	local player = players["intention"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6621, 216, 708, 11930 }
-	end
-end
-do
-	local player = players["aimsaiyan"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9909, 11, 19, 16354 }
-	end
-end
-do
-	local player = players["kiter"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 789, 249, 981, 19 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9091, 80, 181, 14302 }
-	end
-end
-do
-	local player = players["minisyon"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5132, 158, 519, 119 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9399, 60, 120, 14639 }
-	end
-end
-do
-	local player = players["saintkott"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9914, 10, 18, 16446 }
-	end
-end
-do
-	local player = players["punkanana"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9586, 46, 83, 15006 }
-	end
-end
-do
-	local player = players["sour"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5451, 147, 485, 124 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6651, 209, 691, 11985 }
+			player[9][3][12] = { 8993, 86, 202, 14182 }
 	end
 end
 do
@@ -10717,7 +10749,77 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8540, 111, 290, 13806 }
+			player[9][3][12] = { 8533, 112, 294, 13806 }
+	end
+end
+do
+	local player = players["vhyles"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6733, 201, 669, 12132 }
+	end
+end
+do
+	local player = players["punkanana"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9574, 46, 86, 15006 }
+	end
+end
+do
+	local player = players["intention"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6621, 218, 717, 11930 }
+	end
+end
+do
+	local player = players["aimsaiyan"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9900, 11, 21, 16354 }
+	end
+end
+do
+	local player = players["kiter"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 784, 253, 988, 19 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9084, 80, 184, 14302 }
+	end
+end
+do
+	local player = players["minisyon"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5135, 159, 522, 119 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9389, 60, 123, 14639 }
+	end
+end
+do
+	local player = players["saintkott"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9905, 10, 20, 16446 }
+	end
+end
+do
+	local player = players["sour"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5462, 148, 487, 124 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6651, 211, 700, 11985 }
 	end
 end
 do
@@ -10733,33 +10835,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7415, 79, 276, 177 }
+			player[9][1][12] = { 7414, 80, 278, 177 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6584, 225, 727, 11863 }
-	end
-end
-do
-	local player = players["bantaris"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6276, 261, 944, 11309 }
-	end
-end
-do
-	local player = players["yarel"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9677, 39, 65, 15251 }
-	end
-end
-do
-	local player = players["traela"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9490, 54, 102, 14781 }
+			player[9][3][12] = { 6584, 227, 736, 11863 }
 	end
 end
 do
@@ -10767,7 +10845,31 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6772, 191, 642, 12202 }
+			player[9][3][12] = { 6772, 194, 651, 12202 }
+	end
+end
+do
+	local player = players["bantaris"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6276, 263, 955, 11309 }
+	end
+end
+do
+	local player = players["yarel"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9670, 39, 67, 15251 }
+	end
+end
+do
+	local player = players["traela"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9479, 54, 105, 14781 }
 	end
 end
 do
@@ -10775,7 +10877,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9874, 14, 26, 16000 }
+			player[9][3][12] = { 9865, 14, 28, 16000 }
 	end
 end
 do
@@ -10783,23 +10885,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9828, 21, 35, 15829 }
-	end
-end
-do
-	local player = players["vorthessia"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9566, 48, 87, 14978 }
-	end
-end
-do
-	local player = players["aldesnkocasi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9742, 31, 52, 15440 }
+			player[9][3][12] = { 9820, 21, 37, 15829 }
 	end
 end
 do
@@ -10807,7 +10893,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8919, 91, 215, 14125 }
+			player[9][3][12] = { 8908, 92, 219, 14125 }
+	end
+end
+do
+	local player = players["vorthessia"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9554, 48, 90, 14978 }
+	end
+end
+do
+	local player = players["aldesnkocasi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9735, 31, 54, 15440 }
 	end
 end
 do
@@ -10815,7 +10917,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7980, 138, 401, 13289 }
+			player[9][3][12] = { 7962, 140, 408, 13289 }
 	end
 end
 do
@@ -10823,7 +10925,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9525, 52, 95, 14865 }
+			player[9][3][12] = { 9514, 52, 98, 14865 }
 	end
 end
 do
@@ -10831,9 +10933,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8687, 35, 141, 336 }
+			player[9][1][12] = { 8707, 35, 141, 336 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9864, 16, 28, 15945 }
+			player[9][3][12] = { 9855, 16, 30, 15945 }
 	end
 end
 do
@@ -10841,7 +10943,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7571, 157, 482, 12958 }
+			player[9][3][12] = { 7556, 159, 489, 12958 }
 	end
 end
 do
@@ -10849,7 +10951,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7111, 176, 573, 12518 }
+			player[9][3][12] = { 7091, 179, 582, 12518 }
 	end
 end
 do
@@ -10857,7 +10959,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8955, 87, 208, 14151 }
+			player[9][3][12] = { 8943, 88, 212, 14151 }
 	end
 end
 do
@@ -10865,7 +10967,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5568, 361, 1629, 10033 }
+			player[9][3][12] = { 5568, 364, 1641, 10033 }
 	end
 end
 do
@@ -10873,7 +10975,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6644, 211, 694, 11971 }
+			player[9][3][12] = { 6644, 213, 703, 11971 }
 	end
 end
 do
@@ -10881,7 +10983,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6463, 237, 811, 11646 }
+			player[9][3][12] = { 6463, 239, 821, 11646 }
 	end
 end
 do
@@ -10889,7 +10991,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7045, 180, 586, 12448 }
+			player[9][3][12] = { 7026, 183, 595, 12448 }
 	end
 end
 do
@@ -10897,7 +10999,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6051, 298, 1163, 10903 }
+			player[9][3][12] = { 6051, 300, 1174, 10903 }
 	end
 end
 do
@@ -10905,9 +11007,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4793, 166, 555, 116 }
+			player[9][1][12] = { 4799, 167, 558, 116 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6096, 290, 1113, 10985 }
+			player[9][3][12] = { 6096, 292, 1124, 10985 }
 	end
 end
 do
@@ -10915,7 +11017,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9848, 18, 31, 15861 }
+			player[9][3][12] = { 9840, 18, 33, 15861 }
 	end
 end
 do
@@ -10923,15 +11025,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6759, 193, 647, 12178 }
-	end
-end
-do
-	local player = players["kharyn"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8273, 124, 343, 13565 }
+			player[9][3][12] = { 6759, 196, 656, 12178 }
 	end
 end
 do
@@ -10939,7 +11033,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9556, 49, 89, 14956 }
+			player[9][3][12] = { 9544, 49, 92, 14956 }
+	end
+end
+do
+	local player = players["kharyn"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8257, 125, 349, 13565 }
 	end
 end
 do
@@ -10947,11 +11049,11 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4549, 177, 581, 113 }
+			player[9][1][12] = { 4556, 178, 584, 113 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 7500, 6, 9, 122 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9763, 28, 48, 15559 }
+			player[9][3][12] = { 9755, 28, 50, 15559 }
 	end
 end
 do
@@ -10959,7 +11061,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8313, 118, 335, 13596 }
+			player[9][3][12] = { 8297, 119, 341, 13596 }
 	end
 end
 do
@@ -10967,9 +11069,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6400, 115, 384, 139 }
+			player[9][1][12] = { 6405, 116, 386, 139 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8424, 114, 313, 13694 }
+			player[9][3][12] = { 8408, 116, 319, 13694 }
 	end
 end
 do
@@ -10977,7 +11079,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7732, 148, 450, 13088 }
+			player[9][3][12] = { 7717, 150, 457, 13088 }
 	end
 end
 do
@@ -10985,7 +11087,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8763, 102, 246, 13991 }
+			player[9][3][12] = { 8753, 103, 250, 13991 }
 	end
 end
 do
@@ -10993,7 +11095,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8904, 92, 218, 14115 }
+			player[9][3][12] = { 8893, 93, 222, 14115 }
 	end
 end
 do
@@ -11001,7 +11103,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4803, 165, 554, 116 }
+			player[9][1][12] = { 4809, 166, 557, 116 }
 	end
 end
 do
@@ -11009,7 +11111,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9470, 55, 106, 14734 }
+			player[9][3][12] = { 9459, 55, 109, 14734 }
 	end
 end
 do
@@ -11017,15 +11119,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9429, 59, 114, 14669 }
-	end
-end
-do
-	local player = players["amuchina"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6241, 265, 963, 11246 }
+			player[9][3][12] = { 9419, 59, 117, 14669 }
 	end
 end
 do
@@ -11033,7 +11127,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5383, 376, 1727, 9700 }
+			player[9][3][12] = { 5383, 379, 1739, 9700 }
 	end
 end
 do
@@ -11041,9 +11135,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7002, 91, 320, 157 }
+			player[9][1][12] = { 7003, 92, 322, 157 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6069, 294, 1141, 10936 }
+			player[9][3][12] = { 6069, 296, 1152, 10936 }
+	end
+end
+do
+	local player = players["amuchina"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6241, 267, 974, 11246 }
 	end
 end
 do
@@ -11051,7 +11153,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5682, 351, 1543, 10238 }
+			player[9][3][12] = { 5682, 353, 1554, 10238 }
 	end
 end
 do
@@ -11059,7 +11161,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9722, 33, 56, 15405 }
+			player[9][3][12] = { 9715, 33, 58, 15405 }
 	end
 end
 do
@@ -11067,7 +11169,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9869, 15, 27, 15958 }
+			player[9][3][12] = { 9860, 15, 29, 15958 }
 	end
 end
 do
@@ -11075,9 +11177,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6429, 113, 381, 140 }
+			player[9][1][12] = { 6433, 114, 383, 140 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8384, 117, 321, 13672 }
+			player[9][3][12] = { 8368, 118, 327, 13672 }
 	end
 end
 do
@@ -11085,7 +11187,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5902, 322, 1317, 10636 }
+			player[9][3][12] = { 5902, 324, 1328, 10636 }
 	end
 end
 do
@@ -11093,9 +11195,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7425, 78, 275, 178 }
+			player[9][1][12] = { 7423, 79, 277, 178 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6657, 208, 687, 11996 }
+			player[9][3][12] = { 6657, 210, 696, 11996 }
 	end
 end
 do
@@ -11103,7 +11205,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 1382, 240, 918, 52 }
+			player[9][1][12] = { 1373, 244, 925, 52 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 5500, 10, 15, 96 }
 	end
@@ -11113,7 +11215,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9692, 37, 62, 15284 }
+			player[9][3][12] = { 9685, 37, 64, 15284 }
 	end
 end
 do
@@ -11121,7 +11223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8833, 98, 232, 14036 }
+			player[9][3][12] = { 8823, 99, 236, 14036 }
 	end
 end
 do
@@ -11129,7 +11231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9641, 43, 72, 15169 }
+			player[9][3][12] = { 9634, 43, 74, 15169 }
 	end
 end
 do
@@ -11137,7 +11239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5864, 329, 1376, 10567 }
+			player[9][3][12] = { 5864, 331, 1387, 10567 }
 	end
 end
 do
@@ -11145,17 +11247,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6936, 95, 327, 153 }
+			player[9][1][12] = { 6937, 96, 329, 153 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8202, 126, 357, 13503 }
-	end
-end
-do
-	local player = players["teemy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8652, 107, 268, 13908 }
+			player[9][3][12] = { 8187, 127, 363, 13503 }
 	end
 end
 do
@@ -11163,9 +11257,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2425, 229, 807, 85 }
+			player[9][1][12] = { 2418, 232, 813, 85 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5921, 317, 1293, 10669 }
+			player[9][3][12] = { 5921, 319, 1304, 10669 }
+	end
+end
+do
+	local player = players["teemy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8643, 108, 272, 13908 }
 	end
 end
 do
@@ -11173,17 +11275,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 761, 250, 984, 19 }
+			player[9][1][12] = { 756, 254, 991, 19 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6478, 234, 804, 11673 }
-	end
-end
-do
-	local player = players["cyndor"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9702, 35, 60, 15320 }
+			player[9][3][12] = { 6478, 235, 813, 11673 }
 	end
 end
 do
@@ -11191,7 +11285,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8298, 121, 338, 13585 }
+			player[9][3][12] = { 8282, 122, 344, 13585 }
+	end
+end
+do
+	local player = players["cyndor"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9695, 35, 62, 15320 }
 	end
 end
 do
@@ -11199,7 +11301,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7596, 154, 477, 12974 }
+			player[9][3][12] = { 7581, 156, 484, 12974 }
 	end
 end
 do
@@ -11207,7 +11309,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5717, 348, 1513, 10302 }
+			player[9][3][12] = { 5717, 350, 1524, 10302 }
 	end
 end
 do
@@ -11215,7 +11317,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9662, 41, 68, 15200 }
+			player[9][3][12] = { 9654, 41, 70, 15200 }
 	end
 end
 do
@@ -11223,7 +11325,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8308, 119, 336, 13594 }
+			player[9][3][12] = { 8292, 120, 342, 13594 }
 	end
 end
 do
@@ -11231,9 +11333,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 3600, 202, 682, 102 }
+			player[9][1][12] = { 3604, 204, 686, 102 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8843, 97, 230, 14047 }
+			player[9][3][12] = { 8833, 98, 234, 14047 }
+	end
+end
+do
+	local player = players["dotsitroll"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9234, 72, 154, 14495 }
 	end
 end
 do
@@ -11241,9 +11351,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7727, 6, 21, 11473 }
+			player[9][1][12] = { 7826, 6, 21, 11473 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8674, 120, 385, 13571 }
+			player[9][2][12] = { 8680, 121, 386, 13571 }
 	end
 end
 do
@@ -11251,9 +11361,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9091, 3, 16, 11809 }
+			player[9][1][12] = { 9130, 3, 16, 11809 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5302, 331, 1361, 11227 }
+			player[9][2][12] = { 5295, 332, 1373, 11227 }
 	end
 end
 do
@@ -11263,7 +11373,15 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 15507 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3059, 532, 2856, 7082 }
+			player[9][2][12] = { 3059, 535, 2877, 7082 }
+	end
+end
+do
+	local player = players["minimasha"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4523, 24, 57, 7015 }
 	end
 end
 do
@@ -11271,9 +11389,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8636, 4, 17, 11783 }
+			player[9][1][12] = { 8696, 4, 17, 11783 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4730, 367, 1610, 10951 }
+			player[9][2][12] = { 4730, 368, 1624, 10951 }
 	end
 end
 do
@@ -11281,7 +11399,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7485, 196, 729, 12390 }
+			player[9][2][12] = { 7490, 198, 733, 12390 }
 	end
 end
 do
@@ -11289,9 +11407,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7273, 7, 24, 11099 }
+			player[9][1][12] = { 7391, 7, 24, 11099 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4636, 391, 1783, 10733 }
+			player[9][2][12] = { 4636, 391, 1797, 10733 }
 	end
 end
 do
@@ -11299,7 +11417,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6943, 8, 27, 10767 }
+			player[9][1][12] = { 6957, 8, 27, 10767 }
 	end
 end
 do
@@ -11309,7 +11427,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6561, 14, 36, 10174 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4558, 415, 1944, 10553 }
+			player[9][2][12] = { 4558, 415, 1958, 10553 }
 	end
 end
 do
@@ -11325,7 +11443,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9427, 52, 167, 14714 }
+			player[9][2][12] = { 9431, 52, 167, 14714 }
 	end
 end
 do
@@ -11333,7 +11451,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8774, 113, 356, 13657 }
+			player[9][2][12] = { 8779, 114, 357, 13657 }
 	end
 end
 do
@@ -11341,7 +11459,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9820, 24, 53, 16039 }
+			player[9][2][12] = { 9822, 24, 53, 16039 }
 	end
 end
 do
@@ -11349,7 +11467,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9582, 44, 122, 15232 }
+			player[9][2][12] = { 9585, 44, 122, 15232 }
 	end
 end
 do
@@ -11357,7 +11475,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9092, 88, 264, 14103 }
+			player[9][2][12] = { 9095, 89, 265, 14103 }
 	end
 end
 do
@@ -11373,7 +11491,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9226, 76, 225, 14354 }
+			player[9][2][12] = { 9228, 77, 226, 14354 }
 	end
 end
 do
@@ -11381,7 +11499,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9244, 74, 220, 14381 }
+			player[9][2][12] = { 9246, 75, 221, 14381 }
 	end
 end
 do
@@ -11389,7 +11507,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9772, 31, 67, 15833 }
+			player[9][2][12] = { 9774, 31, 67, 15833 }
 	end
 end
 do
@@ -11397,7 +11515,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7095, 219, 842, 12113 }
+			player[9][2][12] = { 7102, 220, 846, 12113 }
 	end
 end
 do
@@ -11405,7 +11523,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8456, 136, 448, 13269 }
+			player[9][2][12] = { 8457, 138, 451, 13269 }
 	end
 end
 do
@@ -11413,7 +11531,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9720, 35, 82, 15641 }
+			player[9][2][12] = { 9722, 35, 82, 15641 }
 	end
 end
 do
@@ -11421,7 +11539,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7413, 200, 750, 12335 }
+			player[9][2][12] = { 7418, 201, 754, 12335 }
 	end
 end
 do
@@ -11429,7 +11547,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9869, 18, 39, 16516 }
+			player[9][2][12] = { 9870, 18, 39, 16516 }
 	end
 end
 do
@@ -11437,7 +11555,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7434, 198, 744, 12344 }
+			player[9][2][12] = { 7438, 199, 748, 12344 }
 	end
 end
 do
@@ -11445,55 +11563,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7610, 185, 693, 12476 }
-	end
-end
-do
-	local player = players["azlear"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9606, 41, 115, 15336 }
-	end
-end
-do
-	local player = players["steff"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8874, 105, 327, 13805 }
-	end
-end
-do
-	local player = players["rupertine"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8846, 108, 335, 13762 }
-	end
-end
-do
-	local player = players["maelna"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9378, 57, 181, 14614 }
-	end
-end
-do
-	local player = players["dolikus"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6269, 279, 1081, 11592 }
-	end
-end
-do
-	local player = players["muuzs"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9375, 58, 182, 14614 }
+			player[9][2][12] = { 7613, 187, 697, 12476 }
 	end
 end
 do
@@ -11501,7 +11571,55 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9872, 17, 38, 16525 }
+			player[9][2][12] = { 9873, 17, 38, 16525 }
+	end
+end
+do
+	local player = players["azlear"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9609, 41, 115, 15336 }
+	end
+end
+do
+	local player = players["steff"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8879, 106, 328, 13805 }
+	end
+end
+do
+	local player = players["rupertine"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8851, 109, 336, 13762 }
+	end
+end
+do
+	local player = players["maelna"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9383, 57, 181, 14614 }
+	end
+end
+do
+	local player = players["dolikus"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6262, 280, 1091, 11592 }
+	end
+end
+do
+	local player = players["muuzs"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9379, 58, 182, 14614 }
 	end
 end
 do
@@ -11509,7 +11627,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9168, 79, 242, 14247 }
+			player[9][2][12] = { 9170, 80, 243, 14247 }
 	end
 end
 do
@@ -11517,7 +11635,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6591, 258, 988, 11781 }
+			player[9][2][12] = { 6584, 260, 997, 11781 }
 	end
 end
 do
@@ -11525,7 +11643,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5074, 341, 1427, 11156 }
+			player[9][2][12] = { 5069, 342, 1439, 11156 }
 	end
 end
 do
@@ -11533,7 +11651,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9807, 27, 57, 15959 }
+			player[9][2][12] = { 9808, 27, 57, 15959 }
 	end
 end
 do
@@ -11541,7 +11659,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9855, 20, 43, 16313 }
+			player[9][2][12] = { 9856, 20, 43, 16313 }
 	end
 end
 do
@@ -11551,7 +11669,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6142, 17, 43, 9525 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6725, 245, 949, 11873 }
+			player[9][2][12] = { 6722, 247, 957, 11873 }
 	end
 end
 do
@@ -11559,7 +11677,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9886, 15, 34, 16600 }
+			player[9][2][12] = { 9887, 15, 34, 16600 }
 	end
 end
 do
@@ -11567,7 +11685,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4946, 348, 1464, 11117 }
+			player[9][2][12] = { 4938, 349, 1477, 11117 }
 	end
 end
 do
@@ -11575,7 +11693,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7679, 181, 673, 12555 }
+			player[9][2][12] = { 7682, 183, 677, 12555 }
 	end
 end
 do
@@ -11583,7 +11701,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9910, 11, 27, 16837 }
+			player[9][2][12] = { 9911, 11, 27, 16837 }
 	end
 end
 do
@@ -11591,7 +11709,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8453, 137, 449, 13267 }
+			player[9][2][12] = { 8453, 139, 452, 13267 }
 	end
 end
 do
@@ -11599,7 +11717,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9143, 82, 249, 14201 }
+			player[9][2][12] = { 9146, 83, 250, 14201 }
 	end
 end
 do
@@ -11607,7 +11725,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9896, 13, 31, 16636 }
+			player[9][2][12] = { 9897, 13, 31, 16636 }
 	end
 end
 do
@@ -11615,7 +11733,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9282, 68, 209, 14433 }
+			player[9][2][12] = { 9283, 69, 210, 14433 }
 	end
 end
 do
@@ -11623,7 +11741,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8342, 145, 481, 13157 }
+			player[9][2][12] = { 8344, 147, 484, 13157 }
 	end
 end
 do
@@ -11633,7 +11751,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6880, 11, 30, 10668 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7147, 215, 827, 12147 }
+			player[9][2][12] = { 7154, 216, 831, 12147 }
 	end
 end
 do
@@ -11649,9 +11767,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8182, 5, 18, 11767 }
+			player[9][1][12] = { 8261, 5, 18, 11767 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9109, 84, 259, 14139 }
+			player[9][2][12] = { 9112, 85, 260, 14139 }
 	end
 end
 do
@@ -11659,7 +11777,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9900, 12, 30, 16706 }
+			player[9][2][12] = { 9901, 12, 30, 16706 }
 	end
 end
 do
@@ -11667,15 +11785,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9824, 23, 52, 16056 }
-	end
-end
-do
-	local player = players["bjorke"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9385, 56, 179, 14621 }
+			player[9][2][12] = { 9825, 23, 52, 16056 }
 	end
 end
 do
@@ -11683,7 +11793,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7720, 179, 661, 12588 }
+			player[9][2][12] = { 7726, 180, 664, 12588 }
+	end
+end
+do
+	local player = players["bjorke"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9390, 56, 179, 14621 }
 	end
 end
 do
@@ -11691,7 +11809,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9838, 22, 48, 16205 }
+			player[9][2][12] = { 9839, 22, 48, 16205 }
 	end
 end
 do
@@ -11699,7 +11817,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9161, 80, 244, 14236 }
+			player[9][2][12] = { 9163, 81, 245, 14236 }
 	end
 end
 do
@@ -11707,7 +11825,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7012, 226, 866, 12060 }
+			player[9][2][12] = { 7020, 227, 870, 12060 }
 	end
 end
 do
@@ -11715,7 +11833,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9876, 16, 37, 16529 }
+			player[9][2][12] = { 9877, 16, 37, 16529 }
+	end
+end
+do
+	local player = players["connvert"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9990, 2, 4, 19641 }
 	end
 end
 do
@@ -11723,7 +11849,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7910, 169, 606, 12749 }
+			player[9][2][12] = { 7915, 170, 609, 12749 }
 	end
 end
 do
@@ -11731,7 +11857,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9948, 6, 16, 17726 }
+			player[9][2][12] = { 9949, 6, 16, 17726 }
 	end
 end
 do
@@ -11739,7 +11865,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9934, 7, 20, 17495 }
+			player[9][2][12] = { 9935, 7, 20, 17495 }
 	end
 end
 do
@@ -11747,7 +11873,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6656, 253, 969, 11825 }
+			player[9][2][12] = { 6653, 255, 977, 11825 }
 	end
 end
 do
@@ -11755,7 +11881,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6131, 285, 1121, 11538 }
+			player[9][2][12] = { 6125, 286, 1131, 11538 }
 	end
 end
 do
@@ -11763,7 +11889,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9105, 85, 260, 14136 }
+			player[9][2][12] = { 9108, 86, 261, 14136 }
 	end
 end
 do
@@ -11771,71 +11897,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9744, 33, 75, 15695 }
-	end
-end
-do
-	local player = players["jubeq"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9554, 45, 130, 15130 }
-	end
-end
-do
-	local player = players["judeq"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5762, 305, 1228, 11400 }
-	end
-end
-do
-	local player = players["veneruha"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9603, 42, 116, 15333 }
-	end
-end
-do
-	local player = players["skewdiebye"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9240, 75, 221, 14375 }
-	end
-end
-do
-	local player = players["stek"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7019, 225, 864, 12064 }
-	end
-end
-do
-	local player = players["koq"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9067, 92, 271, 14067 }
-	end
-end
-do
-	local player = players["nebivolol"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8180, 157, 528, 13011 }
-	end
-end
-do
-	local player = players["mideia"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7699, 180, 667, 12575 }
+			player[9][2][12] = { 9746, 33, 75, 15695 }
 	end
 end
 do
@@ -11843,7 +11905,71 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5917, 296, 1183, 11469 }
+			player[9][2][12] = { 5909, 298, 1194, 11469 }
+	end
+end
+do
+	local player = players["jubeq"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9558, 45, 130, 15130 }
+	end
+end
+do
+	local player = players["judeq"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5754, 306, 1239, 11400 }
+	end
+end
+do
+	local player = players["veneruha"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9606, 42, 116, 15333 }
+	end
+end
+do
+	local player = players["skewdiebye"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9242, 76, 222, 14375 }
+	end
+end
+do
+	local player = players["stek"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7027, 226, 868, 12064 }
+	end
+end
+do
+	local player = players["koq"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9071, 93, 272, 14067 }
+	end
+end
+do
+	local player = players["nebivolol"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8182, 159, 531, 13011 }
+	end
+end
+do
+	local player = players["mideia"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7706, 181, 670, 12575 }
 	end
 end
 do
@@ -11853,7 +11979,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6810, 12, 32, 10560 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5879, 300, 1194, 11458 }
+			player[9][2][12] = { 5871, 302, 1205, 11458 }
 	end
 end
 do
@@ -11861,7 +11987,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9199, 77, 233, 14305 }
+			player[9][2][12] = { 9201, 78, 234, 14305 }
 	end
 end
 do
@@ -11869,7 +11995,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7489, 195, 728, 12394 }
+			player[9][2][12] = { 7493, 197, 732, 12394 }
 	end
 end
 do
@@ -11877,31 +12003,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7402, 201, 753, 12333 }
-	end
-end
-do
-	local player = players["nihja"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8245, 150, 509, 13085 }
-	end
-end
-do
-	local player = players["stabydoo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8501, 132, 435, 13337 }
-	end
-end
-do
-	local player = players["veresa"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8560, 129, 418, 13433 }
+			player[9][2][12] = { 7407, 202, 757, 12333 }
 	end
 end
 do
@@ -11909,7 +12011,39 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8104, 162, 550, 12936 }
+			player[9][2][12] = { 8107, 164, 553, 12936 }
+	end
+end
+do
+	local player = players["nihja"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8248, 152, 512, 13085 }
+	end
+end
+do
+	local player = players["stabydoo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8501, 134, 438, 13337 }
+	end
+end
+do
+	local player = players["veresa"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8563, 131, 420, 13433 }
+	end
+end
+do
+	local player = players["shinjitsu"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9427, 53, 168, 14712 }
 	end
 end
 do
@@ -11917,7 +12051,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6152, 283, 1115, 11546 }
+			player[9][2][12] = { 6145, 284, 1125, 11546 }
 	end
 end
 do
@@ -11925,7 +12059,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6494, 268, 1016, 11709 }
+			player[9][2][12] = { 6485, 269, 1026, 11709 }
 	end
 end
 do
@@ -11933,7 +12067,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7492, 194, 727, 12396 }
+			player[9][2][12] = { 7497, 196, 731, 12396 }
 	end
 end
 do
@@ -11941,7 +12075,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4826, 355, 1499, 11081 }
+			player[9][2][12] = { 4815, 356, 1513, 11081 }
 	end
 end
 do
@@ -11949,7 +12083,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9261, 72, 215, 14418 }
+			player[9][2][12] = { 9263, 73, 216, 14418 }
 	end
 end
 do
@@ -11957,7 +12091,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9098, 86, 262, 14121 }
+			player[9][2][12] = { 9102, 87, 263, 14121 }
 	end
 end
 do
@@ -11965,7 +12099,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6774, 241, 935, 11901 }
+			player[9][2][12] = { 6776, 242, 941, 11901 }
 	end
 end
 do
@@ -11975,7 +12109,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6927, 10, 29, 10741 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4926, 350, 1470, 11107 }
+			player[9][2][12] = { 4918, 351, 1483, 11107 }
 	end
 end
 do
@@ -11983,7 +12117,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9085, 90, 266, 14094 }
+			player[9][2][12] = { 9088, 91, 267, 14094 }
 	end
 end
 do
@@ -11991,7 +12125,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9468, 50, 155, 14830 }
+			player[9][2][12] = { 9472, 50, 155, 14830 }
 	end
 end
 do
@@ -11999,15 +12133,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9247, 73, 219, 14383 }
-	end
-end
-do
-	local player = players["shinjitsu"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9423, 53, 168, 14712 }
+			player[9][2][12] = { 9249, 74, 220, 14383 }
 	end
 end
 do
@@ -12015,7 +12141,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4743, 364, 1590, 10980 }
+			player[9][2][12] = { 4743, 365, 1604, 10980 }
 	end
 end
 do
@@ -12023,7 +12149,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5851, 303, 1202, 11436 }
+			player[9][2][12] = { 5844, 305, 1213, 11436 }
 	end
 end
 do
@@ -12039,7 +12165,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8991, 97, 293, 13958 }
+			player[9][2][12] = { 8995, 98, 294, 13958 }
 	end
 end
 do
@@ -12047,7 +12173,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4763, 361, 1554, 11028 }
+			player[9][2][12] = { 4763, 362, 1568, 11028 }
 	end
 end
 do
@@ -12055,7 +12181,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8622, 125, 400, 13496 }
+			player[9][2][12] = { 8625, 127, 402, 13496 }
 	end
 end
 do
@@ -12065,7 +12191,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6931, 9, 28, 10747 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7496, 193, 726, 12399 }
+			player[9][2][12] = { 7500, 195, 730, 12399 }
 	end
 end
 do
@@ -12073,7 +12199,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8870, 106, 328, 13805 }
+			player[9][2][12] = { 8875, 107, 329, 13805 }
 	end
 end
 do
@@ -12081,7 +12207,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8929, 102, 311, 13881 }
+			player[9][2][12] = { 8933, 103, 312, 13881 }
 	end
 end
 do
@@ -12097,7 +12223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6573, 261, 993, 11760 }
+			player[9][2][12] = { 6564, 262, 1003, 11760 }
 	end
 end
 do
@@ -12105,7 +12231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9509, 48, 143, 14906 }
+			player[9][2][12] = { 9513, 48, 143, 14906 }
 	end
 end
 do
@@ -12113,7 +12239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4709, 372, 1646, 10902 }
+			player[9][2][12] = { 4709, 373, 1660, 10902 }
 	end
 end
 do
@@ -12121,7 +12247,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6791, 239, 930, 11908 }
+			player[9][2][12] = { 6794, 240, 936, 11908 }
 	end
 end
 do
@@ -12129,7 +12255,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9786, 29, 63, 15885 }
+			player[9][2][12] = { 9787, 29, 63, 15885 }
 	end
 end
 do
@@ -12137,7 +12263,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4733, 366, 1605, 10958 }
+			player[9][2][12] = { 4733, 367, 1619, 10958 }
 	end
 end
 do
@@ -12145,7 +12271,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8446, 138, 451, 13256 }
+			player[9][2][12] = { 8447, 140, 454, 13256 }
 	end
 end
 do
@@ -12153,7 +12279,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6857, 236, 911, 11949 }
+			player[9][2][12] = { 6859, 237, 917, 11949 }
 	end
 end
 do
@@ -12161,7 +12287,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8864, 107, 330, 13789 }
+			player[9][2][12] = { 8868, 108, 331, 13789 }
 	end
 end
 do
@@ -12169,7 +12295,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9340, 63, 192, 14526 }
+			player[9][2][12] = { 9342, 64, 193, 14526 }
 	end
 end
 do
@@ -12177,15 +12303,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6978, 230, 876, 12023 }
-	end
-end
-do
-	local player = players["darklbloodl"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8031, 167, 571, 12860 }
+			player[9][2][12] = { 6986, 231, 880, 12023 }
 	end
 end
 do
@@ -12193,7 +12311,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8366, 143, 474, 13183 }
+			player[9][2][12] = { 8368, 145, 477, 13183 }
+	end
+end
+do
+	local player = players["darklbloodl"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8035, 168, 574, 12860 }
 	end
 end
 do
@@ -12201,7 +12327,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5478, 322, 1310, 11299 }
+			player[9][2][12] = { 5470, 323, 1322, 11299 }
 	end
 end
 do
@@ -12209,7 +12335,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8591, 127, 409, 13448 }
+			player[9][2][12] = { 8594, 129, 411, 13448 }
 	end
 end
 do
@@ -12217,7 +12343,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9009, 95, 288, 13974 }
+			player[9][2][12] = { 9012, 96, 289, 13974 }
 	end
 end
 do
@@ -12225,7 +12351,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6207, 281, 1099, 11569 }
+			player[9][2][12] = { 6200, 282, 1109, 11569 }
 	end
 end
 do
@@ -12233,7 +12359,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9354, 61, 188, 14542 }
+			player[9][2][12] = { 9359, 61, 188, 14542 }
 	end
 end
 do
@@ -12241,7 +12367,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7192, 213, 814, 12172 }
+			player[9][2][12] = { 7198, 214, 818, 12172 }
 	end
 end
 do
@@ -12249,7 +12375,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9782, 30, 64, 15875 }
+			player[9][2][12] = { 9784, 30, 64, 15875 }
 	end
 end
 do
@@ -12261,11 +12387,27 @@ do
 	end
 end
 do
+	local player = players["seeg"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9760, 32, 71, 15777 }
+	end
+end
+do
 	local player = players["allel"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7672, 182, 675, 12555 }
+			player[9][2][12] = { 7675, 184, 679, 12555 }
+	end
+end
+do
+	local player = players["drnutsacks"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8896, 104, 323, 13830 }
 	end
 end
 do
@@ -12273,7 +12415,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4412, 448, 2234, 10214 }
+			player[9][2][12] = { 4412, 448, 2248, 10214 }
 	end
 end
 do
@@ -12281,7 +12423,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8556, 130, 419, 13430 }
+			player[9][2][12] = { 8560, 132, 421, 13430 }
 	end
 end
 do
@@ -12289,7 +12431,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6611, 257, 982, 11788 }
+			player[9][2][12] = { 6608, 259, 990, 11788 }
 	end
 end
 do
@@ -12297,7 +12439,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7879, 171, 615, 12730 }
+			player[9][2][12] = { 7884, 172, 618, 12730 }
 	end
 end
 do
@@ -12305,7 +12447,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6211, 280, 1098, 11572 }
+			player[9][2][12] = { 6204, 281, 1108, 11572 }
 	end
 end
 do
@@ -12313,7 +12455,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7527, 190, 717, 12427 }
+			player[9][2][12] = { 7531, 192, 721, 12427 }
 	end
 end
 do
@@ -12321,7 +12463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4725, 370, 1621, 10938 }
+			player[9][2][12] = { 4725, 371, 1635, 10938 }
 	end
 end
 do
@@ -12329,7 +12471,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9396, 55, 176, 14640 }
+			player[9][2][12] = { 9400, 55, 176, 14640 }
+	end
+end
+do
+	local player = players["szlifierka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9098, 88, 264, 14118 }
 	end
 end
 do
@@ -12345,7 +12495,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8770, 114, 357, 13650 }
+			player[9][2][12] = { 8776, 115, 358, 13650 }
 	end
 end
 do
@@ -12353,25 +12503,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9545, 2, 11, 13361 }
+			player[9][1][12] = { 9565, 2, 11, 13361 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9126, 83, 254, 14158 }
-	end
-end
-do
-	local player = players["seeg"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9758, 32, 71, 15777 }
-	end
-end
-do
-	local player = players["szlifierka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9095, 87, 263, 14118 }
+			player[9][2][12] = { 9129, 84, 255, 14158 }
 	end
 end
 do
@@ -12379,7 +12513,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4391, 458, 2283, 10166 }
+			player[9][2][12] = { 4391, 458, 2297, 10166 }
 	end
 end
 do
@@ -12387,7 +12521,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5392, 326, 1335, 11268 }
+			player[9][2][12] = { 5384, 327, 1347, 11268 }
 	end
 end
 do
@@ -12395,15 +12529,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6798, 238, 928, 11914 }
-	end
-end
-do
-	local player = players["drnutsacks"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8891, 103, 322, 13830 }
+			player[9][2][12] = { 6800, 239, 934, 11914 }
 	end
 end
 do
@@ -12411,55 +12537,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9893, 14, 32, 16634 }
-	end
-end
-do
-	local player = players["mindyy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5523, 316, 1297, 11312 }
-	end
-end
-do
-	local player = players["sumowning"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4305, 468, 2387, 9966 }
-	end
-end
-do
-	local player = players["fav"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9306, 66, 202, 14469 }
-	end
-end
-do
-	local player = players["bloodfactory"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5855, 302, 1201, 11437 }
-	end
-end
-do
-	local player = players["xylorinka"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9402, 54, 174, 14649 }
-	end
-end
-do
-	local player = players["satanicenemy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4774, 358, 1528, 11052 }
+			player[9][2][12] = { 9894, 14, 32, 16634 }
 	end
 end
 do
@@ -12467,7 +12545,63 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9810, 26, 56, 15999 }
+			player[9][2][12] = { 9811, 26, 56, 15999 }
+	end
+end
+do
+	local player = players["mindyy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5514, 317, 1309, 11312 }
+	end
+end
+do
+	local player = players["sumowning"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4305, 469, 2402, 9966 }
+	end
+end
+do
+	local player = players["fav"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9307, 67, 203, 14469 }
+	end
+end
+do
+	local player = players["bloodfactory"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5847, 304, 1212, 11437 }
+	end
+end
+do
+	local player = players["kutaro"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8820, 112, 345, 13722 }
+	end
+end
+do
+	local player = players["xylorinka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9407, 54, 174, 14649 }
+	end
+end
+do
+	local player = players["satanicenemy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4774, 359, 1542, 11052 }
 	end
 end
 do
@@ -12475,7 +12609,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7002, 229, 869, 12043 }
+			player[9][2][12] = { 7010, 230, 873, 12043 }
 	end
 end
 do
@@ -12483,15 +12617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9623, 39, 110, 15370 }
-	end
-end
-do
-	local player = players["martimarti"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4728, 368, 1613, 10947 }
+			player[9][2][12] = { 9626, 39, 110, 15370 }
 	end
 end
 do
@@ -12499,7 +12625,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5907, 298, 1186, 11465 }
+			player[9][2][12] = { 5898, 300, 1197, 11465 }
+	end
+end
+do
+	local player = players["martimarti"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4728, 369, 1627, 10947 }
 	end
 end
 do
@@ -12507,7 +12641,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6767, 242, 937, 11893 }
+			player[9][2][12] = { 6770, 243, 943, 11893 }
 	end
 end
 do
@@ -12515,7 +12649,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6663, 251, 967, 11828 }
+			player[9][2][12] = { 6660, 253, 975, 11828 }
 	end
 end
 do
@@ -12523,7 +12657,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6632, 255, 976, 11801 }
+			player[9][2][12] = { 6629, 257, 984, 11801 }
 	end
 end
 do
@@ -12531,7 +12665,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9430, 51, 166, 14718 }
+			player[9][2][12] = { 9434, 51, 166, 14718 }
 	end
 end
 do
@@ -12541,7 +12675,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 13398 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9412, 41, 67, 491 }
+			player[9][3][12] = { 9419, 41, 67, 491 }
 	end
 end
 do
@@ -12551,7 +12685,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9800, 2, 2, 12085 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1622, 287, 941, 10 }
+			player[9][3][12] = { 1620, 290, 953, 10 }
 	end
 end
 do
@@ -12567,9 +12701,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7262, 14, 24, 10227 }
+			player[9][2][12] = { 7176, 15, 25, 10227 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4332, 226, 637, 36 }
+			player[9][3][12] = { 4349, 228, 643, 36 }
 	end
 end
 do
@@ -12577,7 +12711,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4189, 230, 653, 34 }
+			player[9][3][12] = { 4208, 232, 659, 34 }
 	end
 end
 do
@@ -12585,7 +12719,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7602, 108, 270, 113 }
+			player[9][3][12] = { 7588, 110, 275, 113 }
 	end
 end
 do
@@ -12593,7 +12727,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9545, 29, 52, 547 }
+			player[9][3][12] = { 9551, 29, 52, 547 }
 	end
 end
 do
@@ -12601,15 +12735,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7041, 134, 333, 84 }
-	end
-end
-do
-	local player = players["bubaak"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1114, 300, 998, 4 }
+			player[9][3][12] = { 7033, 136, 338, 84 }
 	end
 end
 do
@@ -12617,7 +12743,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4635, 216, 603, 40 }
+			player[9][3][12] = { 4648, 218, 609, 40 }
+	end
+end
+do
+	local player = players["bubaak"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 1109, 303, 1011, 4 }
 	end
 end
 do
@@ -12625,7 +12759,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9100, 51, 102, 361 }
+			player[9][3][12] = { 9102, 52, 103, 361 }
 	end
 end
 do
@@ -12641,7 +12775,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9762, 3, 3, 13002 }
+			player[9][2][12] = { 9765, 3, 3, 13002 }
 	end
 end
 do
@@ -12649,9 +12783,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8333, 10, 15, 10827 }
+			player[9][2][12] = { 8235, 11, 16, 10827 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1765, 284, 925, 11 }
+			player[9][3][12] = { 1761, 287, 937, 11 }
 	end
 end
 do
@@ -12659,57 +12793,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8214, 11, 16, 10788 }
+			player[9][2][12] = { 8118, 12, 17, 10788 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8173, 88, 206, 156 }
-	end
-end
-do
-	local player = players["estfeal"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9048, 6, 9, 11637 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9626, 27, 43, 579 }
-	end
-end
-do
-	local player = players["felinere"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8929, 7, 10, 11601 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9733, 21, 31, 686 }
-	end
-end
-do
-	local player = players["tanges"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6262, 28, 61, 8954 }
-	end
-end
-do
-	local player = players["ugabunga"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9881, 2, 2, 13374 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3467, 249, 734, 27 }
-	end
-end
-do
-	local player = players["bahhsham"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8690, 8, 12, 11061 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5045, 208, 557, 45 }
+			player[9][3][12] = { 8187, 89, 207, 156 }
 	end
 end
 do
@@ -12717,7 +12803,55 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9643, 4, 4, 12823 }
+			player[9][2][12] = { 9647, 4, 4, 12823 }
+	end
+end
+do
+	local player = players["estfeal"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8941, 7, 10, 11637 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9630, 27, 43, 579 }
+	end
+end
+do
+	local player = players["felinere"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8824, 8, 11, 11601 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9736, 21, 31, 686 }
+	end
+end
+do
+	local player = players["tanges"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6262, 29, 62, 8954 }
+	end
+end
+do
+	local player = players["ugabunga"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9882, 2, 2, 13374 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 3442, 252, 746, 27 }
+	end
+end
+do
+	local player = players["bahhsham"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8588, 9, 13, 11061 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5053, 210, 563, 45 }
 	end
 end
 do
@@ -12725,7 +12859,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6577, 24, 52, 9405 }
+			player[9][2][12] = { 6577, 25, 53, 9405 }
 	end
 end
 do
@@ -12733,9 +12867,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6823, 18, 45, 9756 }
+			player[9][2][12] = { 6823, 19, 46, 9756 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9848, 14, 18, 830 }
+			player[9][3][12] = { 9850, 14, 18, 830 }
+	end
+end
+do
+	local player = players["catmachine"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 3477, 251, 742, 27 }
 	end
 end
 do
@@ -12743,7 +12885,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5922, 30, 70, 8468 }
+			player[9][2][12] = { 5922, 31, 71, 8468 }
 	end
 end
 do
@@ -12751,7 +12893,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6791, 146, 361, 78 }
+			player[9][3][12] = { 6787, 148, 366, 78 }
 	end
 end
 do
@@ -12759,9 +12901,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9286, 5, 7, 12303 }
+			player[9][2][12] = { 9176, 6, 8, 12303 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3512, 247, 729, 27 }
+			player[9][3][12] = { 3504, 249, 739, 27 }
 	end
 end
 do
@@ -12769,7 +12911,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7151, 15, 25, 10224 }
+			player[9][2][12] = { 7151, 16, 26, 10224 }
 	end
 end
 do
@@ -12777,7 +12919,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5429, 36, 79, 7763 }
+			player[9][2][12] = { 5429, 37, 80, 7763 }
 	end
 end
 do
@@ -12785,7 +12927,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3342, 251, 748, 25 }
+			player[9][3][12] = { 3319, 254, 760, 25 }
 	end
 end
 do
@@ -12809,7 +12951,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9759, 19, 28, 698 }
+			player[9][3][12] = { 9762, 19, 28, 698 }
 	end
 end
 do
@@ -12817,7 +12959,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4430, 221, 626, 38 }
+			player[9][3][12] = { 4445, 223, 632, 38 }
 	end
 end
 do
@@ -12825,7 +12967,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9501, 32, 57, 537 }
+			player[9][3][12] = { 9507, 32, 57, 537 }
 	end
 end
 do
@@ -12841,7 +12983,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8734, 63, 143, 267 }
+			player[9][3][12] = { 8741, 64, 144, 267 }
 	end
 end
 do
@@ -12849,7 +12991,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8565, 71, 162, 222 }
+			player[9][3][12] = { 8574, 72, 163, 222 }
 	end
 end
 do
@@ -12857,7 +12999,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9920, 8, 10, 1031 }
+			player[9][3][12] = { 9921, 8, 10, 1031 }
 	end
 end
 do
@@ -12865,7 +13007,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9171, 47, 94, 388 }
+			player[9][3][12] = { 9173, 48, 95, 388 }
 	end
 end
 do
@@ -12873,9 +13015,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7131, 16, 26, 10196 }
+			player[9][2][12] = { 7131, 17, 27, 10196 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9430, 39, 65, 506 }
+			player[9][3][12] = { 9437, 39, 65, 506 }
 	end
 end
 do
@@ -12883,7 +13025,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9742, 20, 30, 689 }
+			player[9][3][12] = { 9745, 20, 30, 689 }
 	end
 end
 do
@@ -12891,7 +13033,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6738, 148, 367, 78 }
+			player[9][3][12] = { 6734, 150, 372, 78 }
 	end
 end
 do
@@ -12899,7 +13041,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9519, 31, 55, 540 }
+			player[9][3][12] = { 9525, 31, 55, 540 }
 	end
 end
 do
@@ -12907,7 +13049,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9786, 18, 25, 721 }
+			player[9][3][12] = { 9789, 18, 25, 721 }
 	end
 end
 do
@@ -12923,7 +13065,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8708, 64, 146, 262 }
+			player[9][3][12] = { 8715, 65, 147, 262 }
 	end
 end
 do
@@ -12931,7 +13073,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9831, 15, 20, 811 }
+			player[9][3][12] = { 9833, 15, 20, 811 }
 	end
 end
 do
@@ -12939,7 +13081,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8030, 91, 222, 145 }
+			player[9][3][12] = { 8046, 92, 223, 145 }
 	end
 end
 do
@@ -12947,7 +13089,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7692, 104, 260, 118 }
+			player[9][3][12] = { 7676, 106, 265, 118 }
 	end
 end
 do
@@ -12955,7 +13097,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9376, 42, 71, 473 }
+			player[9][3][12] = { 9375, 43, 72, 473 }
 	end
 end
 do
@@ -12963,7 +13105,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8966, 56, 117, 335 }
+			player[9][3][12] = { 8970, 57, 118, 335 }
 	end
 end
 do
@@ -12971,7 +13113,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9813, 16, 22, 779 }
+			player[9][3][12] = { 9815, 16, 22, 779 }
 	end
 end
 do
@@ -12981,7 +13123,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9200, 5, 5, 10733 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7906, 98, 236, 134 }
+			player[9][3][12] = { 7923, 99, 237, 134 }
 	end
 end
 do
@@ -12989,7 +13131,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9875, 12, 15, 963 }
+			player[9][3][12] = { 9877, 12, 15, 963 }
 	end
 end
 do
@@ -12997,23 +13139,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9911, 9, 11, 1021 }
-	end
-end
-do
-	local player = players["contaminated"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6863, 143, 353, 80 }
-	end
-end
-do
-	local player = players["laniakea"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9118, 50, 100, 369 }
+			player[9][3][12] = { 9912, 9, 11, 1021 }
 	end
 end
 do
@@ -13025,13 +13151,37 @@ do
 	end
 end
 do
+	local player = players["contaminated"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 6857, 145, 358, 80 }
+	end
+end
+do
+	local player = players["laniakea"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9120, 51, 101, 369 }
+	end
+end
+do
 	local player = players["theorcgoggy"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5465, 35, 78, 7814 }
+			player[9][2][12] = { 5465, 36, 79, 7814 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9608, 28, 45, 560 }
+			player[9][3][12] = { 9613, 28, 45, 560 }
+	end
+end
+do
+	local player = players["whaka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7694, 105, 263, 118 }
 	end
 end
 do
@@ -13039,7 +13189,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 53, 321, 1117, 0 }
+			player[9][3][12] = { 53, 324, 1131, 0 }
 	end
 end
 do
@@ -13049,7 +13199,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 8600, 7, 8, 10461 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9055, 52, 107, 354 }
+			player[9][3][12] = { 9058, 53, 108, 354 }
 	end
 end
 do
@@ -13057,7 +13207,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9661, 25, 39, 637 }
+			player[9][3][12] = { 9665, 25, 39, 637 }
 	end
 end
 do
@@ -13065,7 +13215,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9242, 43, 86, 423 }
+			player[9][3][12] = { 9243, 44, 87, 423 }
 	end
 end
 do
@@ -13073,7 +13223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5936, 180, 457, 59 }
+			player[9][3][12] = { 5933, 182, 463, 59 }
 	end
 end
 do
@@ -13081,7 +13231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9679, 24, 37, 654 }
+			player[9][3][12] = { 9683, 24, 37, 654 }
 	end
 end
 do
@@ -13089,7 +13239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9465, 36, 61, 518 }
+			player[9][3][12] = { 9472, 36, 61, 518 }
 	end
 end
 do
@@ -13097,7 +13247,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9447, 38, 63, 513 }
+			player[9][3][12] = { 9454, 38, 63, 513 }
 	end
 end
 do
@@ -13105,7 +13255,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1070, 301, 1003, 4 }
+			player[9][3][12] = { 1065, 304, 1016, 4 }
 	end
 end
 do
@@ -13113,7 +13263,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9929, 7, 9, 1052 }
+			player[9][3][12] = { 9930, 7, 9, 1052 }
 	end
 end
 do
@@ -13121,7 +13271,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8449, 74, 175, 198 }
+			player[9][3][12] = { 8460, 75, 176, 198 }
 	end
 end
 do
@@ -13129,7 +13279,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8841, 61, 131, 303 }
+			player[9][3][12] = { 8847, 62, 132, 303 }
 	end
 end
 do
@@ -13137,7 +13287,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6711, 150, 370, 77 }
+			player[9][3][12] = { 6708, 152, 375, 77 }
 	end
 end
 do
@@ -13145,7 +13295,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3957, 238, 679, 33 }
+			player[9][3][12] = { 3979, 240, 685, 33 }
 	end
 end
 do
@@ -13153,7 +13303,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9857, 13, 17, 857 }
+			player[9][3][12] = { 9859, 13, 17, 857 }
 	end
 end
 do
@@ -13161,7 +13311,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9189, 45, 92, 397 }
+			player[9][3][12] = { 9190, 46, 93, 397 }
 	end
 end
 do
@@ -13169,7 +13319,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4795, 212, 585, 42 }
+			player[9][3][12] = { 4806, 214, 591, 42 }
 	end
 end
 do
@@ -13177,15 +13327,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8868, 59, 128, 308 }
-	end
-end
-do
-	local player = players["clayf"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9011, 54, 112, 340 }
+			player[9][3][12] = { 8873, 60, 129, 308 }
 	end
 end
 do
@@ -13193,7 +13335,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7175, 128, 318, 91 }
+			player[9][3][12] = { 7165, 130, 323, 91 }
+	end
+end
+do
+	local player = players["clayf"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9014, 55, 113, 340 }
 	end
 end
 do
@@ -13201,7 +13351,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7050, 133, 332, 84 }
+			player[9][3][12] = { 7042, 135, 337, 84 }
 	end
 end
 do
@@ -13209,7 +13359,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7344, 120, 299, 102 }
+			player[9][3][12] = { 7333, 122, 304, 102 }
 	end
 end
 do
@@ -13217,9 +13367,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6701, 21, 49, 9581 }
+			player[9][2][12] = { 6701, 22, 50, 9581 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8699, 65, 147, 261 }
+			player[9][3][12] = { 8706, 66, 148, 261 }
 	end
 end
 do
@@ -13227,7 +13377,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8414, 76, 179, 197 }
+			player[9][3][12] = { 8424, 77, 180, 197 }
 	end
 end
 do
@@ -13237,7 +13387,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9600, 3, 3, 11567 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9029, 53, 110, 344 }
+			player[9][3][12] = { 9032, 54, 111, 344 }
 	end
 end
 do
@@ -13245,7 +13395,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8467, 73, 173, 201 }
+			player[9][3][12] = { 8477, 74, 174, 201 }
 	end
 end
 do
@@ -13253,41 +13403,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7381, 13, 23, 10247 }
+			player[9][2][12] = { 7294, 14, 24, 10247 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6604, 155, 382, 73 }
-	end
-end
-do
-	local player = players["loodakk"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2736, 262, 816, 19 }
-	end
-end
-do
-	local player = players["kristinasi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5187, 206, 541, 47 }
-	end
-end
-do
-	local player = players["yuhai"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1185, 296, 990, 5 }
-	end
-end
-do
-	local player = players["adoration"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8850, 60, 130, 306 }
+			player[9][3][12] = { 6602, 157, 387, 73 }
 	end
 end
 do
@@ -13295,7 +13413,39 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9697, 22, 35, 668 }
+			player[9][3][12] = { 9701, 22, 35, 668 }
+	end
+end
+do
+	local player = players["loodakk"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 2720, 265, 828, 19 }
+	end
+end
+do
+	local player = players["kristinasi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5194, 208, 547, 47 }
+	end
+end
+do
+	local player = players["yuhai"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 1180, 299, 1003, 5 }
+	end
+end
+do
+	local player = players["adoration"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8856, 61, 131, 306 }
 	end
 end
 do
@@ -13303,7 +13453,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6328, 168, 413, 66 }
+			player[9][3][12] = { 6320, 170, 419, 66 }
 	end
 end
 do
@@ -13311,7 +13461,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5535, 192, 502, 52 }
+			player[9][3][12] = { 5537, 194, 508, 52 }
 	end
 end
 do
@@ -13319,7 +13469,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3708, 244, 707, 29 }
+			player[9][3][12] = { 3715, 246, 715, 29 }
 	end
 end
 do
@@ -13327,7 +13477,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 218, 315, 1101, 0 }
+			player[9][3][12] = { 216, 318, 1115, 0 }
 	end
 end
 do
@@ -13335,7 +13485,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8209, 85, 202, 161 }
+			player[9][3][12] = { 8222, 86, 203, 161 }
 	end
 end
 do
@@ -13351,7 +13501,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5847, 182, 467, 58 }
+			player[9][3][12] = { 5845, 184, 473, 58 }
 	end
 end
 do
@@ -13367,7 +13517,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2487, 270, 844, 17 }
+			player[9][3][12] = { 2474, 273, 856, 17 }
 	end
 end
 do
@@ -13375,7 +13525,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9528, 30, 54, 544 }
+			player[9][3][12] = { 9533, 30, 54, 544 }
 	end
 end
 do
@@ -13383,7 +13533,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4358, 225, 634, 37 }
+			player[9][3][12] = { 4375, 227, 640, 37 }
 	end
 end
 do
@@ -13391,7 +13541,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8155, 89, 208, 154 }
+			player[9][3][12] = { 8169, 90, 209, 154 }
 	end
 end
 do
@@ -13399,7 +13549,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7103, 132, 326, 86 }
+			player[9][3][12] = { 7095, 134, 331, 86 }
 	end
 end
 do
@@ -13407,15 +13557,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5250, 204, 534, 47 }
-	end
-end
-do
-	local player = players["kanelli"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3503, 248, 730, 27 }
+			player[9][3][12] = { 5255, 206, 540, 47 }
 	end
 end
 do
@@ -13423,7 +13565,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6364, 164, 409, 67 }
+			player[9][3][12] = { 6356, 166, 415, 67 }
+	end
+end
+do
+	local player = players["kanelli"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 3495, 250, 740, 27 }
 	end
 end
 do
@@ -13431,7 +13581,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2718, 263, 818, 19 }
+			player[9][3][12] = { 2702, 266, 830, 19 }
 	end
 end
 do
@@ -13439,7 +13589,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4144, 231, 658, 34 }
+			player[9][3][12] = { 4164, 233, 664, 34 }
 	end
 end
 do
@@ -13447,7 +13597,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7005, 136, 337, 83 }
+			player[9][3][12] = { 6998, 138, 342, 83 }
 	end
 end
 do
@@ -13455,7 +13605,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6355, 165, 410, 67 }
+			player[9][3][12] = { 6347, 167, 416, 67 }
 	end
 end
 do
@@ -13463,9 +13613,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7500, 12, 22, 10266 }
+			player[9][2][12] = { 7412, 13, 23, 10266 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6649, 154, 377, 74 }
+			player[9][3][12] = { 6646, 156, 382, 74 }
 	end
 end
 do
@@ -13473,7 +13623,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5758, 185, 477, 56 }
+			player[9][3][12] = { 5757, 187, 483, 56 }
 	end
 end
 do
@@ -13481,7 +13631,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8021, 92, 223, 143 }
+			player[9][3][12] = { 8037, 93, 224, 143 }
 	end
 end
 do
@@ -13489,7 +13639,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6881, 141, 351, 80 }
+			player[9][3][12] = { 6875, 143, 356, 80 }
 	end
 end
 do
@@ -13497,7 +13647,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5615, 191, 493, 53 }
+			player[9][3][12] = { 5616, 193, 499, 53 }
 	end
 end
 do
@@ -13505,7 +13655,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7193, 127, 316, 92 }
+			player[9][3][12] = { 7183, 129, 321, 92 }
 	end
 end
 do
@@ -13513,7 +13663,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5954, 179, 455, 59 }
+			player[9][3][12] = { 5951, 181, 461, 59 }
 	end
 end
 do
@@ -13521,7 +13671,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6800, 145, 360, 78 }
+			player[9][3][12] = { 6796, 147, 365, 78 }
 	end
 end
 do
@@ -13529,7 +13679,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9474, 35, 60, 528 }
+			player[9][3][12] = { 9481, 35, 60, 528 }
 	end
 end
 do
@@ -13537,7 +13687,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7620, 106, 268, 114 }
+			player[9][3][12] = { 7606, 108, 273, 114 }
 	end
 end
 do
@@ -13545,7 +13695,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6239, 170, 423, 64 }
+			player[9][3][12] = { 6232, 172, 429, 64 }
 	end
 end
 do
@@ -13555,7 +13705,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 6106, 22, 37, 8180 }
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9216, 44, 89, 410 }
+			player[9][3][12] = { 9217, 45, 90, 410 }
 	end
 end
 do
@@ -13563,7 +13713,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1176, 297, 991, 5 }
+			player[9][3][12] = { 1171, 300, 1004, 5 }
 	end
 end
 do
@@ -13571,7 +13721,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4973, 209, 565, 44 }
+			player[9][3][12] = { 4982, 211, 571, 44 }
 	end
 end
 do
@@ -13579,7 +13729,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5258, 203, 533, 47 }
+			player[9][3][12] = { 5264, 205, 539, 47 }
 	end
 end
 do
@@ -13587,7 +13737,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8262, 83, 196, 167 }
+			player[9][3][12] = { 8275, 84, 197, 167 }
 	end
 end
 do
@@ -13595,7 +13745,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8948, 57, 119, 329 }
+			player[9][3][12] = { 8952, 58, 120, 329 }
 	end
 end
 do
@@ -13603,7 +13753,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8217, 84, 201, 161 }
+			player[9][3][12] = { 8231, 85, 202, 161 }
 	end
 end
 do
@@ -13611,7 +13761,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7219, 125, 313, 94 }
+			player[9][3][12] = { 7210, 127, 318, 94 }
 	end
 end
 do
@@ -13619,7 +13769,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9421, 40, 66, 496 }
+			player[9][3][12] = { 9428, 40, 66, 496 }
 	end
 end
 do
@@ -13627,7 +13777,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 3075, 255, 778, 23 }
+			player[9][3][12] = { 3055, 258, 790, 23 }
 	end
 end
 do
@@ -13635,7 +13785,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7130, 130, 323, 88 }
+			player[9][3][12] = { 7121, 132, 328, 88 }
 	end
 end
 do
@@ -13643,7 +13793,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4724, 214, 593, 41 }
+			player[9][3][12] = { 4736, 216, 599, 41 }
 	end
 end
 do
@@ -13651,7 +13801,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8182, 87, 205, 157 }
+			player[9][3][12] = { 8195, 88, 206, 157 }
 	end
 end
 do
@@ -13659,7 +13809,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 1025, 302, 1008, 4 }
+			player[9][3][12] = { 1021, 305, 1021, 4 }
 	end
 end
 do
@@ -13667,7 +13817,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7959, 96, 230, 138 }
+			player[9][3][12] = { 7975, 97, 231, 138 }
 	end
 end
 do
@@ -13675,7 +13825,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9635, 26, 42, 628 }
+			player[9][3][12] = { 9639, 26, 42, 628 }
 	end
 end
 do
@@ -13683,7 +13833,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2656, 266, 825, 19 }
+			player[9][3][12] = { 2641, 269, 837, 19 }
 	end
 end
 do
@@ -13691,7 +13841,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4911, 210, 572, 43 }
+			player[9][3][12] = { 4921, 212, 578, 43 }
 	end
 end
 do
@@ -13699,7 +13849,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8360, 79, 185, 194 }
+			player[9][3][12] = { 8371, 80, 186, 194 }
 	end
 end
 do
@@ -13707,15 +13857,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8289, 81, 193, 179 }
-	end
-end
-do
-	local player = players["shokoasahara"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5740, 186, 479, 55 }
+			player[9][3][12] = { 8301, 82, 194, 179 }
 	end
 end
 do
@@ -13723,7 +13865,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6319, 169, 414, 66 }
+			player[9][3][12] = { 6312, 171, 420, 66 }
+	end
+end
+do
+	local player = players["shokoasahara"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5739, 188, 485, 55 }
+	end
+end
+do
+	local player = players["costta"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 7738, 103, 258, 120 }
 	end
 end
 do
@@ -13731,7 +13889,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4412, 222, 628, 37 }
+			player[9][3][12] = { 4428, 224, 634, 37 }
 	end
 end
 do
@@ -13739,15 +13897,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 775, 307, 1036, 2 }
-	end
-end
-do
-	local player = players["meechohub"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5865, 181, 465, 58 }
+			player[9][3][12] = { 775, 310, 1049, 2 }
 	end
 end
 do
@@ -13755,7 +13905,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 4109, 232, 662, 34 }
+			player[9][3][12] = { 4129, 234, 668, 34 }
+	end
+end
+do
+	local player = players["meechohub"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5863, 183, 471, 58 }
 	end
 end
 do
@@ -13763,7 +13921,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7638, 105, 266, 116 }
+			player[9][3][12] = { 7623, 107, 271, 116 }
 	end
 end
 do
@@ -13771,7 +13929,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9492, 33, 58, 532 }
+			player[9][3][12] = { 9498, 33, 58, 532 }
 	end
 end
 do
@@ -13779,7 +13937,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 7264, 124, 308, 98 }
+			player[9][3][12] = { 7254, 126, 313, 98 }
 	end
 end
 do
@@ -13787,7 +13945,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 6497, 161, 394, 71 }
+			player[9][3][12] = { 6488, 163, 400, 71 }
 	end
 end
 do
@@ -13795,7 +13953,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5472, 196, 509, 51 }
+			player[9][3][12] = { 5475, 198, 515, 51 }
 	end
 end
 do
@@ -13813,9 +13971,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9357, 13, 26, 14651 }
+			player[9][1][12] = { 9362, 13, 26, 14651 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9839, 12, 26, 15557 }
+			player[9][2][12] = { 9840, 12, 26, 15557 }
 	end
 end
 do
@@ -13823,9 +13981,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9280, 16, 29, 14458 }
+			player[9][1][12] = { 9286, 16, 29, 14458 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9477, 37, 82, 13967 }
+			player[9][2][12] = { 9462, 39, 85, 13967 }
 	end
 end
 do
@@ -13833,7 +13991,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9075, 18, 37, 14358 }
+			player[9][1][12] = { 9082, 18, 37, 14358 }
 	end
 end
 do
@@ -13851,7 +14009,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5238, 84, 208, 11339 }
+			player[9][1][12] = { 5238, 84, 211, 11339 }
 	end
 end
 do
@@ -13859,9 +14017,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9460, 11, 22, 14880 }
+			player[9][1][12] = { 9464, 11, 22, 14880 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4787, 287, 1144, 9865 }
+			player[9][2][12] = { 4787, 291, 1156, 9865 }
 	end
 end
 do
@@ -13869,7 +14027,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7584, 39, 95, 12940 }
+			player[9][1][12] = { 7602, 39, 95, 12940 }
 	end
 end
 do
@@ -13877,17 +14035,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8560, 25, 57, 13960 }
-	end
-end
-do
-	local player = players["jedrillin"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5156, 90, 233, 11161 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4783, 288, 1146, 9855 }
+			player[9][1][12] = { 8571, 25, 57, 13960 }
 	end
 end
 do
@@ -13895,9 +14043,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9640, 9, 15, 15283 }
+			player[9][1][12] = { 9643, 9, 15, 15283 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9645, 23, 56, 14489 }
+			player[9][2][12] = { 9641, 24, 57, 14489 }
+	end
+end
+do
+	local player = players["jedrillin"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5156, 90, 236, 11161 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4783, 292, 1158, 9855 }
 	end
 end
 do
@@ -13905,9 +14063,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5251, 82, 204, 11366 }
+			player[9][1][12] = { 5251, 82, 207, 11366 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6017, 188, 618, 11077 }
+			player[9][2][12] = { 6003, 190, 625, 11077 }
 	end
 end
 do
@@ -13915,7 +14073,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7789, 37, 87, 13148 }
+			player[9][1][12] = { 7806, 37, 87, 13148 }
 	end
 end
 do
@@ -13923,9 +14081,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9254, 17, 30, 14446 }
+			player[9][1][12] = { 9260, 17, 30, 14446 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7237, 143, 429, 11815 }
+			player[9][2][12] = { 7220, 145, 435, 11815 }
 	end
 end
 do
@@ -13935,15 +14093,15 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9923, 4, 4, 17174 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9567, 29, 68, 14323 }
+			player[9][2][12] = { 9564, 30, 69, 14323 }
 	end
 end
 do
-	local player = players["dotbott"]
+	local player = players["klora"]
 	if player then
 		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8226, 30, 70, 13479 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8994, 70, 158, 13232 }
 	end
 end
 do
@@ -13951,19 +14109,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9614, 10, 16, 15253 }
+			player[9][1][12] = { 9617, 10, 16, 15253 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9516, 33, 76, 14149 }
+			player[9][2][12] = { 9507, 34, 78, 14149 }
 	end
 end
 do
-	local player = players["impy"]
+	local player = players["dotbott"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5476, 71, 177, 11552 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9070, 64, 145, 13300 }
+			player[9][1][12] = { 8240, 30, 70, 13479 }
 	end
 end
 do
@@ -13971,9 +14127,19 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7198, 47, 110, 12543 }
+			player[9][1][12] = { 7219, 47, 110, 12543 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5101, 237, 857, 10511 }
+			player[9][2][12] = { 5101, 240, 866, 10511 }
+	end
+end
+do
+	local player = players["impy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5434, 72, 180, 11552 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9052, 66, 149, 13300 }
 	end
 end
 do
@@ -13981,9 +14147,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5810, 67, 164, 11639 }
+			player[9][1][12] = { 5765, 68, 167, 11639 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5765, 195, 657, 10980 }
+			player[9][2][12] = { 5746, 197, 665, 10980 }
 	end
 end
 do
@@ -13991,7 +14157,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9409, 12, 24, 14746 }
+			player[9][1][12] = { 9413, 12, 24, 14746 }
 	end
 end
 do
@@ -13999,9 +14165,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7866, 35, 84, 13201 }
+			player[9][1][12] = { 7883, 35, 84, 13201 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5997, 189, 621, 11075 }
+			player[9][2][12] = { 5983, 191, 628, 11075 }
 	end
 end
 do
@@ -14009,9 +14175,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5604, 70, 172, 11597 }
+			player[9][1][12] = { 5561, 71, 175, 11597 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5584, 201, 685, 10902 }
+			player[9][2][12] = { 5567, 203, 693, 10902 }
 	end
 end
 do
@@ -14019,7 +14185,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7404, 43, 102, 12746 }
+			player[9][1][12] = { 7423, 43, 102, 12746 }
 	end
 end
 do
@@ -14027,9 +14193,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5277, 80, 197, 11424 }
+			player[9][1][12] = { 5277, 80, 200, 11424 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4954, 266, 995, 10208 }
+			player[9][2][12] = { 4954, 270, 1007, 10208 }
 	end
 end
 do
@@ -14037,7 +14203,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9332, 14, 27, 14631 }
+			player[9][1][12] = { 9337, 14, 27, 14631 }
 	end
 end
 do
@@ -14045,7 +14211,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4665, 113, 328, 10098 }
+			player[9][1][12] = { 4665, 113, 331, 10098 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 5093, 3, 3, 5296 }
 	end
@@ -14055,27 +14221,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9871, 5, 6, 16189 }
-	end
-end
-do
-	local player = players["soulslut"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9846, 6, 7, 15886 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9832, 13, 27, 15486 }
-	end
-end
-do
-	local player = players["doted"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5128, 92, 242, 11101 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5170, 224, 792, 10654 }
+			player[9][1][12] = { 9872, 5, 6, 16189 }
 	end
 end
 do
@@ -14083,9 +14229,29 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8612, 24, 55, 14022 }
+			player[9][1][12] = { 8622, 24, 55, 14022 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6824, 160, 493, 11535 }
+			player[9][2][12] = { 6810, 162, 499, 11535 }
+	end
+end
+do
+	local player = players["soulslut"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9847, 6, 7, 15886 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9833, 13, 27, 15486 }
+	end
+end
+do
+	local player = players["doted"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5128, 92, 245, 11101 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5170, 226, 800, 10654 }
 	end
 end
 do
@@ -14095,7 +14261,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 21647 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8238, 99, 274, 12656 }
+			player[9][2][12] = { 8225, 101, 278, 12656 }
 	end
 end
 do
@@ -14103,55 +14269,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8355, 27, 65, 13697 }
+			player[9][1][12] = { 8367, 27, 65, 13697 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7108, 151, 449, 11707 }
-	end
-end
-do
-	local player = players["chembo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9400, 43, 94, 13857 }
-	end
-end
-do
-	local player = players["malzar"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9820, 7, 8, 15848 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9529, 31, 74, 14250 }
-	end
-end
-do
-	local player = players["paopao"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5198, 219, 769, 10712 }
-	end
-end
-do
-	local player = players["ooffliction"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6478, 57, 138, 11998 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5049, 247, 906, 10405 }
-	end
-end
-do
-	local player = players["haunt"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9306, 15, 28, 14568 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7740, 122, 351, 12225 }
+			player[9][2][12] = { 7092, 153, 455, 11707 }
 	end
 end
 do
@@ -14159,7 +14279,53 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7624, 128, 369, 12117 }
+			player[9][2][12] = { 7604, 130, 375, 12117 }
+	end
+end
+do
+	local player = players["malzar"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9821, 7, 8, 15848 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9526, 32, 75, 14250 }
+	end
+end
+do
+	local player = players["paopao"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5198, 221, 777, 10712 }
+	end
+end
+do
+	local player = players["ooffliction"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6454, 57, 140, 11998 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5049, 250, 915, 10405 }
+	end
+end
+do
+	local player = players["chembo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9385, 45, 97, 13857 }
+	end
+end
+do
+	local player = players["haunt"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 9311, 15, 28, 14568 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7719, 124, 357, 12225 }
 	end
 end
 do
@@ -14167,7 +14333,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5087, 95, 250, 11012 }
+			player[9][1][12] = { 5087, 95, 253, 11012 }
 	end
 end
 do
@@ -14175,7 +14341,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5278, 79, 196, 11427 }
+			player[9][1][12] = { 5278, 79, 199, 11427 }
+	end
+end
+do
+	local player = players["philandria"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7591, 131, 377, 12111 }
 	end
 end
 do
@@ -14183,7 +14357,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9716, 21, 45, 14655 }
+			player[9][2][12] = { 9718, 21, 45, 14655 }
 	end
 end
 do
@@ -14191,7 +14365,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8631, 86, 213, 12964 }
+			player[9][2][12] = { 8616, 88, 217, 12964 }
 	end
 end
 do
@@ -14209,7 +14383,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 9949, 3, 3, 17339 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9877, 10, 20, 15876 }
+			player[9][2][12] = { 9878, 10, 20, 15876 }
 	end
 end
 do
@@ -14217,7 +14391,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9864, 11, 22, 15713 }
+			player[9][2][12] = { 9865, 11, 22, 15713 }
 	end
 end
 do
@@ -14225,9 +14399,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 9023, 19, 39, 14336 }
+			player[9][1][12] = { 9031, 19, 39, 14336 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9600, 27, 63, 14373 }
+			player[9][2][12] = { 9596, 28, 64, 14373 }
 	end
 end
 do
@@ -14235,9 +14409,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7095, 49, 114, 12435 }
+			player[9][1][12] = { 7066, 49, 116, 12435 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7573, 131, 377, 12084 }
+			player[9][2][12] = { 7553, 133, 383, 12084 }
 	end
 end
 do
@@ -14245,7 +14419,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9406, 42, 93, 13877 }
+			player[9][2][12] = { 9391, 44, 96, 13877 }
 	end
 end
 do
@@ -14253,7 +14427,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9613, 26, 61, 14430 }
+			player[9][2][12] = { 9609, 27, 62, 14430 }
 	end
 end
 do
@@ -14261,9 +14435,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7686, 38, 91, 12978 }
+			player[9][1][12] = { 7704, 38, 91, 12978 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7218, 144, 432, 11806 }
+			player[9][2][12] = { 7201, 146, 438, 11806 }
 	end
 end
 do
@@ -14271,7 +14445,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9742, 19, 41, 14758 }
+			player[9][2][12] = { 9744, 19, 41, 14758 }
 	end
 end
 do
@@ -14279,7 +14453,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8406, 26, 63, 13759 }
+			player[9][1][12] = { 8418, 26, 63, 13759 }
 		player[9][2] = player[9][2] or {}
 			player[9][2][12] = { 9987, 3, 3, 18484 }
 	end
@@ -14289,7 +14463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7140, 148, 444, 11732 }
+			player[9][2][12] = { 7124, 150, 450, 11732 }
 	end
 end
 do
@@ -14297,7 +14471,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6385, 178, 561, 11289 }
+			player[9][2][12] = { 6368, 180, 568, 11289 }
 		player[9][3] = player[9][3] or {}
 			player[9][3][12] = { 10000, 1, 1, 10398 }
 	end
@@ -14307,7 +14481,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9800, 16, 32, 15273 }
+			player[9][2][12] = { 9801, 16, 32, 15273 }
 	end
 end
 do
@@ -14315,9 +14489,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 2173, 132, 385, 4704 }
+			player[9][1][12] = { 2173, 132, 388, 4704 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8657, 84, 209, 12983 }
+			player[9][2][12] = { 8642, 86, 213, 12983 }
 	end
 end
 do
@@ -14325,7 +14499,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5113, 234, 840, 10535 }
+			player[9][2][12] = { 5113, 237, 849, 10535 }
 	end
 end
 do
@@ -14333,7 +14507,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6495, 172, 544, 11337 }
+			player[9][2][12] = { 6483, 174, 550, 11337 }
 	end
 end
 do
@@ -14341,7 +14515,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8250, 97, 272, 12663 }
+			player[9][2][12] = { 8238, 99, 276, 12663 }
 	end
 end
 do
@@ -14349,9 +14523,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6504, 56, 137, 12015 }
+			player[9][1][12] = { 6480, 56, 139, 12015 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9781, 18, 35, 15025 }
+			player[9][2][12] = { 9782, 18, 35, 15025 }
 	end
 end
 do
@@ -14359,9 +14533,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7352, 44, 104, 12700 }
+			player[9][1][12] = { 7372, 44, 104, 12700 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9561, 30, 69, 14311 }
+			player[9][2][12] = { 9558, 31, 70, 14311 }
 	end
 end
 do
@@ -14369,7 +14543,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8528, 88, 229, 12882 }
+			player[9][2][12] = { 8514, 90, 233, 12882 }
 	end
 end
 do
@@ -14377,7 +14551,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5216, 216, 754, 10748 }
+			player[9][2][12] = { 5216, 218, 762, 10748 }
 	end
 end
 do
@@ -14385,9 +14559,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8997, 20, 40, 14335 }
+			player[9][1][12] = { 9005, 20, 40, 14335 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9471, 38, 83, 13962 }
+			player[9][2][12] = { 9455, 40, 86, 13962 }
 	end
 end
 do
@@ -14395,7 +14569,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9019, 67, 153, 13238 }
+			player[9][2][12] = { 9001, 69, 157, 13238 }
 	end
 end
 do
@@ -14403,7 +14577,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9819, 14, 29, 15399 }
+			player[9][2][12] = { 9821, 14, 29, 15399 }
 	end
 end
 do
@@ -14411,7 +14585,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7818, 117, 339, 12290 }
+			player[9][2][12] = { 7809, 119, 343, 12290 }
 	end
 end
 do
@@ -14419,7 +14593,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8270, 96, 269, 12677 }
+			player[9][2][12] = { 8258, 98, 273, 12677 }
 	end
 end
 do
@@ -14427,9 +14601,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4520, 120, 346, 9784 }
+			player[9][1][12] = { 4520, 120, 349, 9784 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9916, 7, 14, 16218 }
+			player[9][2][12] = { 9917, 7, 14, 16218 }
 	end
 end
 do
@@ -14445,7 +14619,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9154, 59, 132, 13394 }
+			player[9][2][12] = { 9135, 62, 136, 13394 }
 	end
 end
 do
@@ -14453,9 +14627,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5208, 86, 216, 11273 }
+			player[9][1][12] = { 5208, 86, 219, 11273 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9496, 35, 79, 14074 }
+			player[9][2][12] = { 9481, 37, 82, 14074 }
 	end
 end
 do
@@ -14463,7 +14637,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7282, 142, 422, 11839 }
+			player[9][2][12] = { 7265, 144, 428, 11839 }
 	end
 end
 do
@@ -14471,7 +14645,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7314, 141, 417, 11878 }
+			player[9][2][12] = { 7297, 143, 423, 11878 }
 	end
 end
 do
@@ -14479,7 +14653,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9445, 39, 87, 13946 }
+			player[9][2][12] = { 9430, 41, 90, 13946 }
 	end
 end
 do
@@ -14487,7 +14661,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5041, 250, 917, 10388 }
+			player[9][2][12] = { 5041, 253, 926, 10388 }
 	end
 end
 do
@@ -14495,9 +14669,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4927, 105, 296, 10667 }
+			player[9][1][12] = { 4927, 105, 299, 10667 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7760, 120, 348, 12261 }
+			player[9][2][12] = { 7751, 122, 352, 12261 }
 	end
 end
 do
@@ -14505,9 +14679,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4092, 129, 370, 8857 }
+			player[9][1][12] = { 4092, 129, 373, 8857 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5092, 239, 867, 10494 }
+			player[9][2][12] = { 5092, 242, 876, 10494 }
 	end
 end
 do
@@ -14515,7 +14689,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7669, 125, 362, 12164 }
+			player[9][2][12] = { 7649, 127, 368, 12164 }
 	end
 end
 do
@@ -14523,7 +14697,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7566, 132, 378, 12083 }
+			player[9][2][12] = { 7546, 134, 384, 12083 }
 	end
 end
 do
@@ -14531,9 +14705,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4647, 114, 330, 10060 }
+			player[9][1][12] = { 4647, 114, 333, 10060 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6423, 176, 555, 11305 }
+			player[9][2][12] = { 6406, 178, 562, 11305 }
 	end
 end
 do
@@ -14541,7 +14715,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5035, 252, 925, 10376 }
+			player[9][2][12] = { 5035, 255, 934, 10376 }
 	end
 end
 do
@@ -14549,9 +14723,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6067, 63, 154, 11732 }
+			player[9][1][12] = { 6046, 63, 156, 11732 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5110, 235, 846, 10530 }
+			player[9][2][12] = { 5110, 238, 855, 10530 }
 	end
 end
 do
@@ -14559,35 +14733,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4977, 100, 278, 10774 }
+			player[9][1][12] = { 4977, 100, 281, 10774 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9206, 57, 124, 13495 }
-	end
-end
-do
-	local player = players["klora"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9012, 68, 154, 13232 }
-	end
-end
-do
-	local player = players["alugardir"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6093, 62, 153, 11737 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4476, 323, 1343, 9223 }
-	end
-end
-do
-	local player = players["tmsfel"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5037, 251, 922, 10379 }
+			player[9][2][12] = { 9186, 60, 128, 13495 }
 	end
 end
 do
@@ -14595,7 +14743,25 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9212, 56, 123, 13496 }
+			player[9][2][12] = { 9193, 59, 127, 13496 }
+	end
+end
+do
+	local player = players["alugardir"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6071, 62, 155, 11737 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4476, 327, 1355, 9223 }
+	end
+end
+do
+	local player = players["tmsfel"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5037, 254, 931, 10379 }
 	end
 end
 do
@@ -14603,7 +14769,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7960, 113, 317, 12401 }
+			player[9][2][12] = { 7950, 115, 321, 12401 }
 	end
 end
 do
@@ -14611,9 +14777,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5291, 78, 192, 11454 }
+			player[9][1][12] = { 5291, 78, 195, 11454 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6243, 181, 583, 11207 }
+			player[9][2][12] = { 6227, 183, 590, 11207 }
 	end
 end
 do
@@ -14621,7 +14787,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9335, 47, 104, 13750 }
+			player[9][2][12] = { 9321, 49, 107, 13750 }
 	end
 end
 do
@@ -14629,7 +14795,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8935, 73, 166, 13182 }
+			player[9][2][12] = { 8917, 75, 170, 13182 }
 	end
 end
 do
@@ -14637,7 +14803,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8986, 71, 158, 13215 }
+			player[9][2][12] = { 8969, 73, 162, 13215 }
 	end
 end
 do
@@ -14645,9 +14811,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4450, 121, 352, 9634 }
+			player[9][1][12] = { 4450, 121, 355, 9634 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7728, 123, 353, 12191 }
+			player[9][2][12] = { 7707, 125, 359, 12191 }
 	end
 end
 do
@@ -14655,7 +14821,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9051, 65, 148, 13261 }
+			player[9][2][12] = { 9033, 67, 152, 13261 }
 	end
 end
 do
@@ -14671,7 +14837,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9522, 32, 75, 14179 }
+			player[9][2][12] = { 9513, 33, 77, 14179 }
 	end
 end
 do
@@ -14679,9 +14845,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7943, 34, 81, 13219 }
+			player[9][1][12] = { 7959, 34, 81, 13219 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8677, 83, 206, 12989 }
+			player[9][2][12] = { 8661, 85, 210, 12989 }
 	end
 end
 do
@@ -14689,7 +14855,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7043, 154, 459, 11654 }
+			player[9][2][12] = { 7028, 156, 465, 11654 }
 	end
 end
 do
@@ -14697,7 +14863,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4779, 289, 1148, 9849 }
+			player[9][2][12] = { 4779, 293, 1160, 9849 }
 	end
 end
 do
@@ -14705,7 +14871,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9361, 45, 100, 13809 }
+			player[9][2][12] = { 9347, 47, 103, 13809 }
 	end
 end
 do
@@ -14713,9 +14879,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8740, 23, 50, 14090 }
+			player[9][1][12] = { 8750, 23, 50, 14090 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9006, 69, 155, 13229 }
+			player[9][2][12] = { 8988, 71, 159, 13229 }
 	end
 end
 do
@@ -14723,9 +14889,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4711, 111, 321, 10199 }
+			player[9][1][12] = { 4711, 111, 324, 10199 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5952, 190, 628, 11059 }
+			player[9][2][12] = { 5939, 192, 635, 11059 }
 	end
 end
 do
@@ -14733,9 +14899,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5193, 87, 224, 11242 }
+			player[9][1][12] = { 5193, 87, 227, 11242 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9806, 15, 31, 15288 }
+			player[9][2][12] = { 9808, 15, 31, 15288 }
 	end
 end
 do
@@ -14743,9 +14909,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4572, 116, 336, 9897 }
+			player[9][1][12] = { 4572, 116, 339, 9897 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4893, 274, 1044, 10084 }
+			player[9][2][12] = { 4893, 278, 1056, 10084 }
 	end
 end
 do
@@ -14753,7 +14919,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6417, 177, 556, 11305 }
+			player[9][2][12] = { 6400, 179, 563, 11305 }
 	end
 end
 do
@@ -14761,7 +14927,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8993, 70, 157, 13225 }
+			player[9][2][12] = { 8975, 72, 161, 13225 }
 	end
 end
 do
@@ -14769,7 +14935,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9735, 20, 42, 14743 }
+			player[9][2][12] = { 9737, 20, 42, 14743 }
 	end
 end
 do
@@ -14777,7 +14943,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4800, 284, 1130, 9891 }
+			player[9][2][12] = { 4800, 288, 1142, 9891 }
 	end
 end
 do
@@ -14785,7 +14951,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5056, 98, 259, 10945 }
+			player[9][1][12] = { 5056, 98, 262, 10945 }
 	end
 end
 do
@@ -14793,9 +14959,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6864, 52, 123, 12188 }
+			player[9][1][12] = { 6837, 52, 125, 12188 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6643, 164, 521, 11424 }
+			player[9][2][12] = { 6630, 166, 527, 11424 }
 	end
 end
 do
@@ -14803,9 +14969,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 7995, 33, 79, 13321 }
+			player[9][1][12] = { 8010, 33, 79, 13321 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9580, 28, 66, 14331 }
+			player[9][2][12] = { 9577, 29, 67, 14331 }
 	end
 end
 do
@@ -14813,7 +14979,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5474, 206, 702, 10879 }
+			player[9][2][12] = { 5458, 208, 710, 10879 }
 	end
 end
 do
@@ -14821,7 +14987,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4948, 267, 999, 10196 }
+			player[9][2][12] = { 4948, 271, 1011, 10196 }
 	end
 end
 do
@@ -14829,7 +14995,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9380, 44, 97, 13821 }
+			player[9][2][12] = { 9366, 46, 100, 13821 }
 	end
 end
 do
@@ -14837,7 +15003,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6320, 179, 571, 11233 }
+			player[9][2][12] = { 6304, 181, 578, 11233 }
 	end
 end
 do
@@ -14845,7 +15011,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5019, 255, 933, 10342 }
+			player[9][2][12] = { 5019, 258, 942, 10342 }
 	end
 end
 do
@@ -14853,7 +15019,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5079, 240, 881, 10466 }
+			player[9][2][12] = { 5079, 243, 890, 10466 }
 	end
 end
 do
@@ -14861,7 +15027,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9238, 54, 119, 13534 }
+			player[9][2][12] = { 9218, 57, 123, 13534 }
 	end
 end
 do
@@ -14869,23 +15035,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5172, 223, 789, 10658 }
-	end
-end
-do
-	local player = players["mannaroth"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5494, 204, 699, 10886 }
-	end
-end
-do
-	local player = players["trvxon"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 6452, 58, 139, 11928 }
+			player[9][2][12] = { 5172, 225, 797, 10658 }
 	end
 end
 do
@@ -14893,7 +15043,23 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7211, 145, 433, 11790 }
+			player[9][2][12] = { 7194, 147, 439, 11790 }
+	end
+end
+do
+	local player = players["mannaroth"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5477, 206, 707, 10886 }
+	end
+end
+do
+	local player = players["trvxon"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 6429, 58, 141, 11928 }
 	end
 end
 do
@@ -14901,7 +15067,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8515, 90, 231, 12875 }
+			player[9][2][12] = { 8501, 92, 235, 12875 }
 	end
 end
 do
@@ -14909,7 +15075,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7159, 147, 441, 11738 }
+			player[9][2][12] = { 7143, 149, 447, 11738 }
 	end
 end
 do
@@ -14917,7 +15083,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8638, 85, 212, 12971 }
+			player[9][2][12] = { 8623, 87, 216, 12971 }
 	end
 end
 do
@@ -14925,7 +15091,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8786, 78, 189, 13075 }
+			player[9][2][12] = { 8770, 80, 193, 13075 }
 	end
 end
 do
@@ -14933,7 +15099,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4879, 107, 303, 10561 }
+			player[9][1][12] = { 4879, 107, 306, 10561 }
 	end
 end
 do
@@ -14941,7 +15107,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8728, 80, 198, 13018 }
+			player[9][2][12] = { 8712, 82, 202, 13018 }
 	end
 end
 do
@@ -14949,7 +15115,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8696, 82, 203, 12996 }
+			player[9][2][12] = { 8680, 84, 207, 12996 }
 	end
 end
 do
@@ -14957,7 +15123,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9316, 49, 107, 13671 }
+			player[9][2][12] = { 9295, 52, 111, 13671 }
 	end
 end
 do
@@ -14973,7 +15139,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5552, 202, 690, 10895 }
+			player[9][2][12] = { 5535, 204, 698, 10895 }
 	end
 end
 do
@@ -14981,7 +15147,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5099, 238, 859, 10507 }
+			player[9][2][12] = { 5099, 241, 868, 10507 }
 	end
 end
 do
@@ -14989,41 +15155,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4677, 306, 1227, 9639 }
-	end
-end
-do
-	local player = players["bududdshitb"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5487, 205, 700, 10884 }
-	end
-end
-do
-	local player = players["chaosbolt"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 3461, 358, 1511, 7131 }
-	end
-end
-do
-	local player = players["rebellionxa"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6624, 166, 524, 11418 }
-	end
-end
-do
-	local player = players["calli"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 8843, 22, 46, 14207 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8522, 89, 230, 12878 }
+			player[9][2][12] = { 4677, 310, 1239, 9639 }
 	end
 end
 do
@@ -15031,7 +15163,41 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8231, 100, 275, 12650 }
+			player[9][2][12] = { 8219, 102, 279, 12650 }
+	end
+end
+do
+	local player = players["bududdshitb"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5471, 207, 708, 10884 }
+	end
+end
+do
+	local player = players["chaosbolt"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 3461, 361, 1523, 7131 }
+	end
+end
+do
+	local player = players["rebellionxa"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6611, 168, 530, 11418 }
+	end
+end
+do
+	local player = players["calli"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 8852, 22, 46, 14207 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8507, 91, 234, 12878 }
 	end
 end
 do
@@ -15039,31 +15205,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7437, 137, 398, 11965 }
-	end
-end
-do
-	local player = players["tefarion"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8464, 92, 239, 12810 }
-	end
-end
-do
-	local player = players["stefdoom"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7560, 133, 379, 12079 }
-	end
-end
-do
-	local player = players["kutija"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5294, 212, 730, 10811 }
+			player[9][2][12] = { 7418, 139, 404, 11965 }
 	end
 end
 do
@@ -15071,7 +15213,31 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9903, 8, 16, 16128 }
+			player[9][2][12] = { 9904, 8, 16, 16128 }
+	end
+end
+do
+	local player = players["tefarion"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8450, 94, 243, 12810 }
+	end
+end
+do
+	local player = players["stefdoom"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7540, 135, 385, 12079 }
+	end
+end
+do
+	local player = players["kutija"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5279, 214, 738, 10811 }
 	end
 end
 do
@@ -15079,7 +15245,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8489, 91, 235, 12842 }
+			player[9][2][12] = { 8475, 93, 239, 12842 }
 	end
 end
 do
@@ -15087,7 +15253,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7353, 140, 411, 11902 }
+			player[9][2][12] = { 7335, 142, 417, 11902 }
 	end
 end
 do
@@ -15095,7 +15261,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5694, 199, 668, 10954 }
+			player[9][2][12] = { 5676, 201, 676, 10954 }
 	end
 end
 do
@@ -15103,7 +15269,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9632, 24, 58, 14475 }
+			player[9][2][12] = { 9628, 25, 59, 14475 }
 	end
 end
 do
@@ -15111,9 +15277,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5913, 66, 160, 11693 }
+			player[9][1][12] = { 5893, 66, 162, 11693 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8825, 77, 183, 13098 }
+			player[9][2][12] = { 8808, 79, 187, 13098 }
 	end
 end
 do
@@ -15121,9 +15287,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5180, 88, 227, 11214 }
+			player[9][1][12] = { 5180, 88, 230, 11214 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5307, 211, 728, 10813 }
+			player[9][2][12] = { 5291, 213, 736, 10813 }
 	end
 end
 do
@@ -15131,7 +15297,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4983, 261, 972, 10269 }
+			player[9][2][12] = { 4983, 264, 981, 10269 }
 	end
 end
 do
@@ -15139,7 +15305,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7050, 153, 458, 11655 }
+			player[9][2][12] = { 7034, 155, 464, 11655 }
 	end
 end
 do
@@ -15147,7 +15313,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7799, 118, 342, 12281 }
+			player[9][2][12] = { 7790, 120, 346, 12281 }
 	end
 end
 do
@@ -15155,7 +15321,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4914, 272, 1024, 10126 }
+			player[9][2][12] = { 4914, 276, 1036, 10126 }
 	end
 end
 do
@@ -15163,7 +15329,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4763, 295, 1164, 9816 }
+			player[9][2][12] = { 4763, 299, 1176, 9816 }
 	end
 end
 do
@@ -15171,7 +15337,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9793, 17, 33, 15195 }
+			player[9][2][12] = { 9795, 17, 33, 15195 }
 	end
 end
 do
@@ -15179,7 +15345,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5198, 220, 770, 10711 }
+			player[9][2][12] = { 5198, 222, 778, 10711 }
 	end
 end
 do
@@ -15187,7 +15353,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4686, 303, 1221, 9657 }
+			player[9][2][12] = { 4686, 307, 1233, 9657 }
 	end
 end
 do
@@ -15195,7 +15361,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9348, 46, 102, 13757 }
+			player[9][2][12] = { 9334, 48, 105, 13757 }
 	end
 end
 do
@@ -15203,7 +15369,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8128, 105, 291, 12545 }
+			player[9][2][12] = { 8117, 107, 295, 12545 }
 	end
 end
 do
@@ -15211,7 +15377,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7792, 119, 343, 12279 }
+			player[9][2][12] = { 7783, 121, 347, 12279 }
 	end
 end
 do
@@ -15219,15 +15385,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9419, 40, 91, 13884 }
-	end
-end
-do
-	local player = players["severakyy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5933, 191, 631, 11044 }
+			player[9][2][12] = { 9404, 42, 94, 13884 }
 	end
 end
 do
@@ -15235,7 +15393,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7172, 146, 439, 11763 }
+			player[9][2][12] = { 7156, 148, 445, 11763 }
+	end
+end
+do
+	local player = players["severakyy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5919, 193, 638, 11044 }
 	end
 end
 do
@@ -15243,19 +15409,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4857, 108, 307, 10514 }
+			player[9][1][12] = { 4857, 108, 310, 10514 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4355, 329, 1377, 8974 }
-	end
-end
-do
-	local player = players["fashik"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4947, 103, 287, 10710 }
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4878, 276, 1056, 10051 }
+			player[9][2][12] = { 4355, 333, 1389, 8974 }
 	end
 end
 do
@@ -15263,7 +15419,17 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9626, 25, 59, 14456 }
+			player[9][2][12] = { 9622, 26, 60, 14456 }
+	end
+end
+do
+	local player = players["fashik"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 4947, 103, 290, 10710 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4878, 280, 1068, 10051 }
 	end
 end
 do
@@ -15271,7 +15437,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5158, 225, 802, 10629 }
+			player[9][2][12] = { 5158, 228, 811, 10629 }
 	end
 end
 do
@@ -15279,9 +15445,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 4570, 117, 337, 9892 }
+			player[9][1][12] = { 4570, 117, 340, 9892 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6585, 168, 530, 11396 }
+			player[9][2][12] = { 6573, 170, 536, 11396 }
 	end
 end
 do
@@ -15289,7 +15455,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6475, 174, 547, 11331 }
+			player[9][2][12] = { 6464, 176, 553, 11331 }
 	end
 end
 do
@@ -15297,7 +15463,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8890, 76, 173, 13150 }
+			player[9][2][12] = { 8873, 78, 177, 13150 }
 	end
 end
 do
@@ -15305,7 +15471,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9322, 48, 106, 13680 }
+			player[9][2][12] = { 9302, 51, 110, 13680 }
 	end
 end
 do
@@ -15313,7 +15479,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4963, 263, 986, 10227 }
+			player[9][2][12] = { 4963, 267, 998, 10227 }
 	end
 end
 do
@@ -15321,9 +15487,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5681, 69, 169, 11623 }
+			player[9][1][12] = { 5638, 70, 172, 11623 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6546, 170, 536, 11381 }
+			player[9][2][12] = { 6534, 172, 542, 11381 }
 	end
 end
 do
@@ -15331,7 +15497,25 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5015, 99, 267, 10857 }
+			player[9][1][12] = { 5015, 99, 270, 10857 }
+	end
+end
+do
+	local player = players["eureka"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][1] = player[9][1] or {}
+			player[9][1][12] = { 5082, 96, 255, 11001 }
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 4875, 281, 1075, 10045 }
+	end
+end
+do
+	local player = players["gunrose"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7854, 118, 336, 12328 }
 	end
 end
 do
@@ -15339,9 +15523,9 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][1] = player[9][1] or {}
-			player[9][1][12] = { 5784, 68, 165, 11635 }
+			player[9][1][12] = { 5740, 69, 168, 11635 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5067, 244, 891, 10441 }
+			player[9][2][12] = { 5067, 247, 900, 10441 }
 	end
 end
 do
@@ -15357,7 +15541,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 4076, 346, 1450, 8399 }
+			player[9][2][12] = { 4076, 349, 1462, 8399 }
 	end
 end
 do
@@ -15367,7 +15551,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 10000, 1, 1, 20685 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9944, 17, 23, 17016 }
+			player[9][2][12] = { 9940, 18, 25, 17016 }
 	end
 end
 do
@@ -15383,7 +15567,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8109, 230, 749, 13528 }
+			player[9][2][12] = { 8083, 234, 765, 13528 }
 	end
 end
 do
@@ -15391,7 +15575,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9934, 20, 27, 16814 }
+			player[9][2][12] = { 9925, 21, 31, 16814 }
 	end
 end
 do
@@ -15415,7 +15599,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9343, 103, 261, 14855 }
+			player[9][2][12] = { 9325, 107, 270, 14855 }
 	end
 end
 do
@@ -15423,7 +15607,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5360, 517, 2968, 10877 }
+			player[9][2][12] = { 5360, 523, 2993, 10877 }
 	end
 end
 do
@@ -15431,7 +15615,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9583, 69, 166, 15335 }
+			player[9][2][12] = { 9571, 71, 172, 15335 }
 	end
 end
 do
@@ -15439,7 +15623,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9820, 31, 72, 16063 }
+			player[9][2][12] = { 9809, 32, 77, 16063 }
 	end
 end
 do
@@ -15447,7 +15631,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9970, 9, 13, 17947 }
+			player[9][2][12] = { 9965, 10, 15, 17947 }
 	end
 end
 do
@@ -15455,7 +15639,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9360, 101, 254, 14898 }
+			player[9][2][12] = { 9348, 104, 261, 14898 }
 	end
 end
 do
@@ -15471,7 +15655,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9917, 22, 34, 16681 }
+			player[9][2][12] = { 9907, 23, 38, 16681 }
 	end
 end
 do
@@ -15479,7 +15663,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9967, 10, 14, 17930 }
+			player[9][2][12] = { 9962, 11, 16, 17930 }
 	end
 end
 do
@@ -15487,7 +15671,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9874, 25, 51, 16422 }
+			player[9][2][12] = { 9862, 26, 56, 16422 }
 	end
 end
 do
@@ -15495,7 +15679,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8834, 167, 462, 14249 }
+			player[9][2][12] = { 8816, 171, 473, 14249 }
 	end
 end
 do
@@ -15503,7 +15687,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9216, 120, 311, 14667 }
+			player[9][2][12] = { 9199, 124, 320, 14667 }
 	end
 end
 do
@@ -15511,7 +15695,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5934, 401, 1823, 12042 }
+			player[9][2][12] = { 5934, 405, 1845, 12042 }
 	end
 end
 do
@@ -15519,7 +15703,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9138, 135, 342, 14581 }
+			player[9][2][12] = { 9119, 139, 352, 14581 }
 	end
 end
 do
@@ -15527,15 +15711,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9302, 107, 277, 14792 }
-	end
-end
-do
-	local player = players["sucuk"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5960, 394, 1770, 12093 }
+			player[9][2][12] = { 9285, 111, 286, 14792 }
 	end
 end
 do
@@ -15543,7 +15719,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9889, 24, 45, 16482 }
+			player[9][2][12] = { 9880, 25, 49, 16482 }
+	end
+end
+do
+	local player = players["sucuk"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5960, 398, 1792, 12093 }
 	end
 end
 do
@@ -15551,7 +15735,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7560, 272, 966, 13091 }
+			player[9][2][12] = { 7536, 276, 983, 13091 }
 	end
 end
 do
@@ -15559,7 +15743,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8569, 197, 567, 13961 }
+			player[9][2][12] = { 8552, 201, 578, 13961 }
 	end
 end
 do
@@ -15567,7 +15751,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9937, 19, 26, 16964 }
+			player[9][2][12] = { 9932, 20, 28, 16964 }
 	end
 end
 do
@@ -15575,7 +15759,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9426, 93, 228, 15001 }
+			player[9][2][12] = { 9413, 96, 235, 15001 }
 	end
 end
 do
@@ -15583,7 +15767,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9949, 15, 21, 17043 }
+			player[9][2][12] = { 9945, 16, 23, 17043 }
 	end
 end
 do
@@ -15591,7 +15775,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9565, 72, 173, 15315 }
+			player[9][2][12] = { 9553, 74, 179, 15315 }
+	end
+end
+do
+	local player = players["beeboy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9960, 12, 17, 17772 }
 	end
 end
 do
@@ -15599,7 +15791,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5403, 514, 2908, 10963 }
+			player[9][2][12] = { 5403, 520, 2933, 10963 }
 	end
 end
 do
@@ -15607,7 +15799,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9193, 124, 320, 14639 }
+			player[9][2][12] = { 9177, 128, 329, 14639 }
 	end
 end
 do
@@ -15615,7 +15807,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7391, 285, 1033, 12984 }
+			player[9][2][12] = { 7365, 290, 1051, 12984 }
 	end
 end
 do
@@ -15623,7 +15815,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9790, 34, 84, 15944 }
+			player[9][2][12] = { 9779, 35, 89, 15944 }
 	end
 end
 do
@@ -15639,15 +15831,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9828, 29, 69, 16128 }
-	end
-end
-do
-	local player = players["beeboy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9965, 11, 15, 17772 }
+			player[9][2][12] = { 9817, 30, 74, 16128 }
 	end
 end
 do
@@ -15663,7 +15847,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9277, 110, 287, 14737 }
+			player[9][2][12] = { 9260, 114, 296, 14737 }
 	end
 end
 do
@@ -15671,7 +15855,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5742, 443, 2232, 11651 }
+			player[9][2][12] = { 5742, 447, 2254, 11651 }
 	end
 end
 do
@@ -15687,67 +15871,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7643, 270, 933, 13170 }
-	end
-end
-do
-	local player = players["bumpey"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7350, 290, 1049, 12953 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 8084, 37, 246, 23911 }
-	end
-end
-do
-	local player = players["katieparry"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5289, 523, 3069, 10732 }
-	end
-end
-do
-	local player = players["sluttysteel"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9826, 30, 70, 16119 }
-	end
-end
-do
-	local player = players["jessicaalba"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9148, 133, 338, 14597 }
-	end
-end
-do
-	local player = players["wmr"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9092, 143, 360, 14523 }
-	end
-end
-do
-	local player = players["warrver"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7654, 267, 929, 13174 }
-	end
-end
-do
-	local player = players["muusdog"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5818, 425, 2052, 11805 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 9945, 7, 8, 46773 }
+			player[9][2][12] = { 7619, 274, 950, 13170 }
 	end
 end
 do
@@ -15755,15 +15879,67 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9421, 94, 230, 14985 }
+			player[9][2][12] = { 9408, 97, 237, 14985 }
 	end
 end
 do
-	local player = players["jehanne"]
+	local player = players["bumpey"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8941, 156, 420, 14343 }
+			player[9][2][12] = { 7325, 295, 1067, 12953 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 8029, 37, 255, 23911 }
+	end
+end
+do
+	local player = players["katieparry"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5289, 529, 3094, 10732 }
+	end
+end
+do
+	local player = players["sluttysteel"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9814, 31, 75, 16119 }
+	end
+end
+do
+	local player = players["jessicaalba"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9129, 137, 348, 14597 }
+	end
+end
+do
+	local player = players["wmr"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9074, 147, 370, 14523 }
+	end
+end
+do
+	local player = players["warrver"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7629, 271, 946, 13174 }
+	end
+end
+do
+	local player = players["muusdog"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5818, 429, 2074, 11805 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 9938, 7, 9, 46773 }
 	end
 end
 do
@@ -15771,55 +15947,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5889, 405, 1915, 11950 }
+			player[9][2][12] = { 5889, 409, 1937, 11950 }
 	end
 end
 do
-	local player = players["idkbruh"]
+	local player = players["jehanne"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9957, 13, 18, 17198 }
-	end
-end
-do
-	local player = players["reyna"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7912, 244, 827, 13370 }
-	end
-end
-do
-	local player = players["mikan"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9664, 54, 134, 15571 }
-	end
-end
-do
-	local player = players["stormburnsx"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9709, 46, 116, 15666 }
-	end
-end
-do
-	local player = players["zpevakos"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6174, 364, 1514, 12336 }
-	end
-end
-do
-	local player = players["wmz"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6700, 336, 1306, 12588 }
+			player[9][2][12] = { 8923, 160, 430, 14343 }
 	end
 end
 do
@@ -15831,11 +15967,59 @@ do
 	end
 end
 do
+	local player = players["idkbruh"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9952, 14, 20, 17198 }
+	end
+end
+do
+	local player = players["reyna"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7887, 248, 843, 13370 }
+	end
+end
+do
+	local player = players["mikan"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9651, 56, 140, 15571 }
+	end
+end
+do
+	local player = players["stormburnsx"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9696, 48, 122, 15666 }
+	end
+end
+do
+	local player = players["zpevakos"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6148, 368, 1536, 12336 }
+	end
+end
+do
+	local player = players["wmz"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6673, 340, 1327, 12588 }
+	end
+end
+do
 	local player = players["asraelmom"]
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9939, 18, 25, 16995 }
+			player[9][2][12] = { 9935, 19, 27, 16995 }
 	end
 end
 do
@@ -15843,71 +16027,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9960, 12, 17, 17209 }
-	end
-end
-do
-	local player = players["wilis"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9692, 49, 123, 15647 }
-	end
-end
-do
-	local player = players["rebeleques"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9110, 140, 353, 14545 }
-	end
-end
-do
-	local player = players["cumspewer"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8324, 213, 664, 13730 }
-	end
-end
-do
-	local player = players["johnnyblaze"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8574, 196, 565, 13972 }
-	end
-end
-do
-	local player = players["cleave"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5691, 456, 2337, 11549 }
-	end
-end
-do
-	local player = players["xunaerah"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9712, 45, 115, 15685 }
-	end
-end
-do
-	local player = players["dranbane"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9537, 76, 184, 15253 }
-	end
-end
-do
-	local player = players["warreina"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5257, 533, 3127, 10668 }
+			player[9][2][12] = { 9955, 13, 19, 17209 }
 	end
 end
 do
@@ -15915,7 +16035,71 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8867, 163, 449, 14278 }
+			player[9][2][12] = { 8851, 167, 459, 14278 }
+	end
+end
+do
+	local player = players["wilis"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9679, 51, 129, 15647 }
+	end
+end
+do
+	local player = players["rebeleques"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9092, 144, 363, 14545 }
+	end
+end
+do
+	local player = players["cumspewer"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8301, 217, 678, 13730 }
+	end
+end
+do
+	local player = players["johnnyblaze"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8557, 200, 576, 13972 }
+	end
+end
+do
+	local player = players["cleave"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5691, 460, 2359, 11549 }
+	end
+end
+do
+	local player = players["xunaerah"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9699, 47, 121, 15685 }
+	end
+end
+do
+	local player = players["dranbane"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9526, 78, 190, 15253 }
+	end
+end
+do
+	local player = players["warreina"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5257, 539, 3152, 10668 }
 	end
 end
 do
@@ -15923,7 +16107,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9661, 55, 135, 15552 }
+			player[9][2][12] = { 9649, 57, 141, 15552 }
 	end
 end
 do
@@ -15931,7 +16115,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9912, 23, 36, 16645 }
+			player[9][2][12] = { 9902, 24, 40, 16645 }
 	end
 end
 do
@@ -15939,7 +16123,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8215, 223, 707, 13636 }
+			player[9][2][12] = { 8193, 227, 721, 13636 }
 	end
 end
 do
@@ -15947,7 +16131,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9128, 137, 346, 14572 }
+			player[9][2][12] = { 9109, 141, 356, 14572 }
 	end
 end
 do
@@ -15955,7 +16139,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9123, 138, 348, 14568 }
+			player[9][2][12] = { 9104, 142, 358, 14568 }
 	end
 end
 do
@@ -15963,7 +16147,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9292, 109, 281, 14780 }
+			player[9][2][12] = { 9275, 113, 290, 14780 }
 	end
 end
 do
@@ -15971,15 +16155,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9312, 106, 273, 14803 }
-	end
-end
-do
-	local player = players["erolushi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6164, 366, 1518, 12332 }
+			player[9][2][12] = { 9295, 110, 282, 14803 }
 	end
 end
 do
@@ -15987,7 +16163,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9947, 16, 22, 17017 }
+			player[9][2][12] = { 9942, 17, 24, 17017 }
+	end
+end
+do
+	local player = players["erolushi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6138, 370, 1540, 12332 }
 	end
 end
 do
@@ -15995,35 +16179,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7788, 253, 876, 13268 }
-	end
-end
-do
-	local player = players["paraoros"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6796, 330, 1268, 12637 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 2971, 91, 900, 64 }
-	end
-end
-do
-	local player = players["bergg"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9702, 48, 119, 15656 }
-		player[9][3] = player[9][3] or {}
-			player[9][3][12] = { 5106, 71, 627, 186 }
-	end
-end
-do
-	local player = players["diagoztini"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5936, 399, 1819, 12046 }
+			player[9][2][12] = { 7762, 257, 893, 13268 }
 	end
 end
 do
@@ -16031,7 +16187,35 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9590, 67, 163, 15377 }
+			player[9][2][12] = { 9578, 69, 169, 15377 }
+	end
+end
+do
+	local player = players["paraoros"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6768, 334, 1289, 12637 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 2948, 91, 910, 64 }
+	end
+end
+do
+	local player = players["bergg"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9689, 50, 125, 15656 }
+		player[9][3] = player[9][3] or {}
+			player[9][3][12] = { 5066, 71, 637, 186 }
+	end
+end
+do
+	local player = players["diagoztini"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5936, 403, 1841, 12046 }
 	end
 end
 do
@@ -16039,7 +16223,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9783, 36, 87, 15930 }
+			player[9][2][12] = { 9772, 37, 92, 15930 }
 	end
 end
 do
@@ -16047,7 +16231,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9525, 79, 189, 15225 }
+			player[9][2][12] = { 9513, 81, 195, 15225 }
 	end
 end
 do
@@ -16055,7 +16239,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9241, 115, 301, 14704 }
+			player[9][2][12] = { 9225, 119, 310, 14704 }
 	end
 end
 do
@@ -16063,7 +16247,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9654, 56, 138, 15509 }
+			player[9][2][12] = { 9641, 58, 144, 15509 }
 	end
 end
 do
@@ -16071,7 +16255,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9772, 37, 91, 15894 }
+			player[9][2][12] = { 9759, 39, 97, 15894 }
 	end
 end
 do
@@ -16081,7 +16265,7 @@ do
 		player[9][1] = player[9][1] or {}
 			player[9][1][12] = { 8333, 2, 12, 14051 }
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9416, 95, 232, 14983 }
+			player[9][2][12] = { 9403, 98, 239, 14983 }
 	end
 end
 do
@@ -16089,7 +16273,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6807, 329, 1264, 12644 }
+			player[9][2][12] = { 6778, 333, 1285, 12644 }
+	end
+end
+do
+	local player = players["peepo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9488, 86, 205, 15174 }
 	end
 end
 do
@@ -16097,7 +16289,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9161, 129, 333, 14606 }
+			player[9][2][12] = { 9144, 133, 342, 14606 }
 	end
 end
 do
@@ -16105,7 +16297,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7019, 316, 1180, 12757 }
+			player[9][2][12] = { 6991, 321, 1200, 12757 }
 	end
 end
 do
@@ -16113,7 +16305,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6607, 343, 1343, 12549 }
+			player[9][2][12] = { 6580, 347, 1364, 12549 }
 	end
 end
 do
@@ -16121,7 +16313,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9178, 126, 326, 14624 }
+			player[9][2][12] = { 9162, 130, 335, 14624 }
 	end
 end
 do
@@ -16129,7 +16321,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5676, 458, 2369, 11518 }
+			player[9][2][12] = { 5676, 462, 2391, 11518 }
 	end
 end
 do
@@ -16137,7 +16329,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7841, 248, 855, 13308 }
+			player[9][2][12] = { 7817, 252, 871, 13308 }
 	end
 end
 do
@@ -16153,7 +16345,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9633, 59, 146, 15457 }
+			player[9][2][12] = { 9621, 61, 152, 15457 }
 	end
 end
 do
@@ -16161,7 +16353,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6872, 326, 1238, 12672 }
+			player[9][2][12] = { 6843, 330, 1259, 12672 }
 	end
 end
 do
@@ -16169,7 +16361,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9502, 83, 198, 15174 }
+			player[9][2][12] = { 9491, 85, 204, 15174 }
 	end
 end
 do
@@ -16177,7 +16369,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9552, 73, 178, 15285 }
+			player[9][2][12] = { 9541, 75, 184, 15285 }
 	end
 end
 do
@@ -16185,7 +16377,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9183, 125, 324, 14630 }
+			player[9][2][12] = { 9167, 129, 333, 14630 }
 	end
 end
 do
@@ -16193,7 +16385,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9638, 57, 144, 15458 }
+			player[9][2][12] = { 9626, 59, 150, 15458 }
+	end
+end
+do
+	local player = players["marjaan"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9980, 8, 9, 18681 }
 	end
 end
 do
@@ -16201,7 +16401,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8182, 228, 720, 13615 }
+			player[9][2][12] = { 8161, 232, 734, 13615 }
 	end
 end
 do
@@ -16209,7 +16409,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7075, 312, 1158, 12784 }
+			player[9][2][12] = { 7046, 317, 1178, 12784 }
 	end
 end
 do
@@ -16217,7 +16417,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6177, 363, 1513, 12337 }
+			player[9][2][12] = { 6151, 367, 1535, 12337 }
 	end
 end
 do
@@ -16225,7 +16425,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7087, 311, 1153, 12788 }
+			player[9][2][12] = { 7059, 316, 1173, 12788 }
 	end
 end
 do
@@ -16233,15 +16433,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8723, 181, 506, 14139 }
-	end
-end
-do
-	local player = players["weedy"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9831, 28, 68, 16141 }
+			player[9][2][12] = { 8705, 185, 517, 14139 }
 	end
 end
 do
@@ -16249,7 +16441,15 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9858, 26, 57, 16305 }
+			player[9][2][12] = { 9847, 27, 62, 16305 }
+	end
+end
+do
+	local player = players["weedy"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9819, 29, 73, 16141 }
 	end
 end
 do
@@ -16257,7 +16457,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9130, 136, 345, 14572 }
+			player[9][2][12] = { 9112, 140, 355, 14572 }
 	end
 end
 do
@@ -16265,7 +16465,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8640, 188, 539, 14063 }
+			player[9][2][12] = { 8622, 192, 550, 14063 }
 	end
 end
 do
@@ -16273,135 +16473,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8903, 160, 435, 14298 }
-	end
-end
-do
-	local player = players["peepo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9499, 84, 199, 15174 }
-	end
-end
-do
-	local player = players["djodjoo"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5588, 479, 2561, 11340 }
-	end
-end
-do
-	local player = players["kilarie"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9595, 65, 161, 15381 }
-	end
-end
-do
-	local player = players["dalarious"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5857, 416, 1980, 11885 }
-	end
-end
-do
-	local player = players["kubawar"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6632, 341, 1333, 12562 }
-	end
-end
-do
-	local player = players["wardawg"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9727, 42, 109, 15728 }
-	end
-end
-do
-	local player = players["carnagee"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5251, 534, 3135, 10656 }
-	end
-end
-do
-	local player = players["crixma"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8923, 158, 427, 14328 }
-	end
-end
-do
-	local player = players["doomsday"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7995, 239, 794, 13438 }
-	end
-end
-do
-	local player = players["xenovia"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8453, 202, 613, 13848 }
-	end
-end
-do
-	local player = players["grosslord"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7236, 299, 1094, 12867 }
-	end
-end
-do
-	local player = players["snout"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9808, 32, 77, 16035 }
-	end
-end
-do
-	local player = players["loxxa"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8056, 234, 770, 13482 }
-	end
-end
-do
-	local player = players["omidzi"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9239, 116, 302, 14697 }
-	end
-end
-do
-	local player = players["arianavente"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5821, 424, 2045, 11813 }
-	end
-end
-do
-	local player = players["erzaa"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5727, 448, 2268, 11621 }
+			player[9][2][12] = { 8886, 164, 445, 14298 }
 	end
 end
 do
@@ -16409,7 +16481,127 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9477, 88, 208, 15118 }
+			player[9][2][12] = { 9465, 90, 214, 15118 }
+	end
+end
+do
+	local player = players["djodjoo"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5588, 483, 2584, 11340 }
+	end
+end
+do
+	local player = players["kilarie"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9583, 67, 167, 15381 }
+	end
+end
+do
+	local player = players["dalarious"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5857, 420, 2002, 11885 }
+	end
+end
+do
+	local player = players["kubawar"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 6605, 345, 1354, 12562 }
+	end
+end
+do
+	local player = players["wardawg"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9714, 44, 115, 15728 }
+	end
+end
+do
+	local player = players["carnagee"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5251, 540, 3160, 10656 }
+	end
+end
+do
+	local player = players["crixma"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8906, 162, 437, 14328 }
+	end
+end
+do
+	local player = players["doomsday"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7970, 243, 810, 13438 }
+	end
+end
+do
+	local player = players["grosslord"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 7210, 304, 1113, 12867 }
+	end
+end
+do
+	local player = players["xenovia"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8432, 206, 626, 13848 }
+	end
+end
+do
+	local player = players["snout"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9797, 33, 82, 16035 }
+	end
+end
+do
+	local player = players["loxxa"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 8030, 238, 786, 13482 }
+	end
+end
+do
+	local player = players["omidzi"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9222, 120, 311, 14697 }
+	end
+end
+do
+	local player = players["arianavente"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5821, 428, 2067, 11813 }
+	end
+end
+do
+	local player = players["erzaa"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5727, 452, 2290, 11621 }
 	end
 end
 do
@@ -16417,7 +16609,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6011, 382, 1661, 12198 }
+			player[9][2][12] = { 6011, 386, 1683, 12198 }
 	end
 end
 do
@@ -16425,7 +16617,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5969, 389, 1748, 12112 }
+			player[9][2][12] = { 5969, 393, 1770, 12112 }
 	end
 end
 do
@@ -16433,7 +16625,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9163, 128, 332, 14608 }
+			player[9][2][12] = { 9147, 132, 341, 14608 }
 	end
 end
 do
@@ -16441,7 +16633,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 7686, 263, 916, 13203 }
+			player[9][2][12] = { 7661, 267, 933, 13203 }
 	end
 end
 do
@@ -16449,7 +16641,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 8705, 183, 513, 14127 }
+			player[9][2][12] = { 8688, 187, 524, 14127 }
 	end
 end
 do
@@ -16457,7 +16649,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5636, 466, 2442, 11436 }
+			player[9][2][12] = { 5636, 470, 2465, 11436 }
 	end
 end
 do
@@ -16465,7 +16657,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 6688, 339, 1311, 12585 }
+			player[9][2][12] = { 6660, 343, 1332, 12585 }
 	end
 end
 do
@@ -16473,7 +16665,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5662, 460, 2400, 11489 }
+			player[9][2][12] = { 5662, 464, 2422, 11489 }
 	end
 end
 do
@@ -16481,23 +16673,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9593, 66, 162, 15380 }
-	end
-end
-do
-	local player = players["tisztaideg"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 5755, 437, 2201, 11678 }
-	end
-end
-do
-	local player = players["nina"]
-	if player then
-		player[9] = player[9] or {}
-		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9363, 100, 253, 14903 }
+			player[9][2][12] = { 9581, 68, 168, 15380 }
 	end
 end
 do
@@ -16505,7 +16681,31 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9150, 132, 337, 14598 }
+			player[9][2][12] = { 9132, 136, 347, 14598 }
+	end
+end
+do
+	local player = players["tisztaideg"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 5755, 441, 2223, 11678 }
+	end
+end
+do
+	local player = players["nina"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9350, 103, 260, 14903 }
+	end
+end
+do
+	local player = players["miloraddodik"]
+	if player then
+		player[9] = player[9] or {}
+		player[9][2] = player[9][2] or {}
+			player[9][2][12] = { 9664, 54, 135, 15588 }
 	end
 end
 do
@@ -16513,7 +16713,7 @@ do
 	if player then
 		player[9] = player[9] or {}
 		player[9][2] = player[9][2] or {}
-			player[9][2][12] = { 9097, 142, 358, 14530 }
+			player[9][2][12] = { 9079, 146, 368, 14530 }
 	end
 end
 if coolstats and coolstats.MarkUwUDataRaidLayerLoaded then

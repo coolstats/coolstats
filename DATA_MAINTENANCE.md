@@ -51,12 +51,12 @@ the official player logs for the active phase.
 
 ## Current Caps And Size Guardrails
 
-As of `0.2.45` and the Onyxia ICC transition prep:
+As of `0.2.46` and the 2026-09-08 weekly refresh:
 
 - **Icecrown:** top 1,500 ranked players per class/specialization, resulting in
-  33,896 current ranked players and 35,803 total players in 12 player chunks.
+  33,946 current ranked players and 36,093 total players in 13 player chunks.
 - **Lordaeron:** top 1,000 ranked players per class/specialization, resulting
-  in 15,090 current ranked players and 15,517 total players in 6 player chunks.
+  in 15,106 current ranked players and 15,611 total players in 6 player chunks.
 - **Onyxia:** top 600 ranked players per class/specialization. During ICC
   transition, run one final TOGC refresh first and keep
   `coolstats_publish/data/uwu_logs_onyxia_toc.json` as the Phase 3 Overall
@@ -90,7 +90,7 @@ Large realm datasets are split into ranked Lua chunk tranches. The refresh
 tool chooses the chunk count dynamically from the total player count, targeting
 roughly 3,000 players per chunk, with a 6 chunk minimum for normal realm
 datasets and a 16 chunk cap. This currently keeps Onyxia and Lordaeron at 6
-chunks while Icecrown uses 12 smaller chunks. Keep the chunked data layout and
+chunks while Icecrown uses 13 smaller chunks. Keep the chunked data layout and
 validate with Lua 5.1 before handing off, because the Wrath client uses Lua 5.1
 and can fail on syntax or chunk-size/local-limit issues that newer tooling
 misses.
@@ -221,6 +221,29 @@ The updater should refuse to overwrite output when:
 - Onyxia ICC/Toravon leaderboards are still empty during a normal online ICC
   pull; use the explicit empty handoff builder instead of overwriting active
   data with a partially fetched online phase switch.
+
+On 2026-09-08 the normal weekly Onyxia check returned zero rows for all 30
+class/spec rankings and refused to write. For `0.2.46`, the existing empty ICC
+handoff and locked Phase 3 snapshot were retained unchanged. The remaining
+weekly refresh continued with `-Realms Lordaeron,Icecrown`. Do not lower the
+minimum-player guard or refresh the locked TOGC snapshot to bypass an empty
+Phase 4 response.
+
+The updater retries transient connection resets (including `WinError 10054`)
+within the existing request retry budget. If retries are exhausted, do not
+publish a partial refresh; rerun the affected realm and require clean boss
+failure counters before packaging. This is distinct from the sandbox's
+`WinError 10013`, which requires network escalation before starting the updater.
+
+The browser's **Show only Favourites** setting is stored account-wide as
+`coolstatsDB.tooltip.browserFavoritesOnly` (default `false`). It filters query
+rows and is part of the query-cache key. It does not
+change generated data, shard loading, or the browser's base index. Verify it
+with the focused Lua runtime test:
+
+```powershell
+& 'C:\Lua\Lua 5.1\lua5.1.exe' .\tools\test_browser_analysis.lua .\coolstats_publish\coolstats_tooltip.lua .\coolstats_publish\coolstats_player_menu.lua favourites
+```
 
 ## Pre-Release Safety Checklist
 

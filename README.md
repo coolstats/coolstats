@@ -21,7 +21,7 @@ cached.
 
 ## Current Bundled Logs Coverage
 
-As of the Onyxia ICC transition prep, the install-ready release ships separate
+As of the 2026-09-08 weekly refresh, the install-ready release ships separate
 load-on-demand data addons for each supported realm:
 
 - **Onyxia:** ICC-profile data covering Icecrown Citadel and Toravon, with the
@@ -33,12 +33,12 @@ load-on-demand data addons for each supported realm:
   the active Onyxia ICC dataset.
 - **Icecrown:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,500 ranked players per
-  class/specialization, with 35,803 total bundled player rows in 12 ranked load
-  chunks.
+  class/specialization, with 33,946 current ranked players and 36,093 total
+  bundled player rows in 13 ranked load chunks.
 - **Lordaeron:** ICC-profile data covering Icecrown Citadel, Halion, and
   Anub'arak, currently capped at the top 1,000 ranked players per
-  class/specialization, with 15,517 total bundled player rows in 6 ranked load
-  chunks.
+  class/specialization, with 15,106 current ranked players and 15,611 total
+  bundled player rows in 6 ranked load chunks.
 
 The ICC realm datasets intentionally exclude boss-only/rankless leaderboard
 players. This keeps the addon size and load behavior stable while still showing
@@ -96,6 +96,12 @@ table:
 - Your own character is highlighted in neon blue in ranking lists.
 - See whether logs, gear, and talents are available before opening a player.
 - Favourite players so they remain at the top of the default list.
+- Enable **Show only Favourites** in **Tooltip & Cache > Player Browser** or
+  use the small star in the browser's lower-left corner. Gold means enabled;
+  gray means disabled, with hover highlighting and a detailed tooltip.
+  This account-wide preference persists across sessions and combines with
+  name, class, specialization, and boss filters. **Clear** leaves it enabled.
+  It only filters the visible list; data loading and tooltip lookups are unchanged.
 - Right-click players to compare logs, whisper, invite, view cached talents,
   or favourite them.
 - Open the normal logs and cached-armory panels by clicking a player.
