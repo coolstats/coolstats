@@ -7147,6 +7147,24 @@ if type(coolstats) == "table" then
 		return coolstatsDB.cachedPlayerBrowserFavorites
 	end
 
+	function coolstats.IsCachedPlayerBrowserFavoritesOnly()
+		return coolstats.GetTooltipFeatureOptions().browserFavoritesOnly == true
+	end
+
+	function coolstats.SetCachedPlayerBrowserFavoritesOnly(enabled)
+		coolstats.GetTooltipFeatureOptions().browserFavoritesOnly = enabled == true
+		local panel = coolstats.cachedPlayerBrowser
+		if panel then
+			panel.browserQueryCache = nil
+			if panel:IsShown() then
+				coolstats.RefreshCachedPlayerBrowser(true)
+			end
+		end
+		if coolstats.RefreshTooltipOptionsPanel then
+			coolstats.RefreshTooltipOptionsPanel()
+		end
+	end
+
 	function coolstats.GetCachedPlayerBrowserFavoriteKey(nameOrKey)
 		local key = NormalizeName(nameOrKey or "")
 		if key == "" then
@@ -8027,6 +8045,7 @@ if type(coolstats) == "table" then
 			.. "\030" .. tostring(panel and panel.browserSortState or "")
 			.. "\030" .. tostring(panel and panel.showPhase2History or "")
 			.. "\030" .. tostring(playerLimit or "")
+			.. "\030" .. tostring(coolstats.IsCachedPlayerBrowserFavoritesOnly())
 	end
 
 	function coolstats.IsCachedPlayerBrowserQueryReusable(panel, queryKey)
@@ -8083,13 +8102,15 @@ if type(coolstats) == "table" then
 
 		profileStep = coolstats.ProfileBegin and coolstats.ProfileBegin("browser.scanRows")
 		local favorites = coolstats.GetCachedPlayerBrowserFavorites()
+		local favoritesOnly = coolstats.IsCachedPlayerBrowserFavoritesOnly()
 		local rows = {}
 		local baseRows, baseRowsPreSorted = coolstats.GetCachedPlayerBrowserSortedBaseRows(index, panel, bossIndex, favorites)
 		for rowIndex = 1, #baseRows do
 			local row = baseRows[rowIndex]
 			row.isFavorite = favorites and favorites[row.key] == true
 			row.isCurrentPlayer = playerKey ~= "" and (row.nameKey or NormalizeName(row.name or row.key or "")) == playerKey
-			if coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey) then
+			if (not favoritesOnly or row.isFavorite)
+				and coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey) then
 				if bossIndex and row.player then
 					local bossEntry, bossSpecIndex = coolstats.GetCachedPlayerBrowserBossEntry(row.player, bossIndex, specFilterKey)
 					row.bossIndex = bossIndex
@@ -8817,6 +8838,16 @@ if type(coolstats) == "table" then
 	end
 
 	coolstats.CHANGELOG_ENTRIES = {
+		{
+			version = "0.2.46",
+			date = "2026-09-08",
+			notes = {
+				"Added Show only Favourites in Tooltip & Cache settings and a matching lower-left browser star with gold/gray states, hover highlighting, pressed feedback, and a detailed tooltip.",
+				"The account-wide filter persists across sessions and combines with other browser filters without changing data loading or tooltip lookups.",
+				"Refreshed Lordaeron and Icecrown weekly logs with the usual per-spec caps, duplicate-name verification, and targeted boss-row repair.",
+				"Onyxia Phase 4 rankings still returned no rows. Preserved the locked 9,864 Phase 3 Overall rows and empty ICC/Toravon database.",
+			},
+		},
 		{
 			version = "0.2.45",
 			date = "2026-09-03",
@@ -12002,9 +12033,10 @@ if type(coolstats) == "table" then
 		else
 			parts[#parts + 1] = "Current ranked logs"
 		end
-		if sourcePanel and sourcePanel.browserClassFilter == "favorites" then
+		if coolstats.IsCachedPlayerBrowserFavoritesOnly() or (sourcePanel and sourcePanel.browserClassFilter == "favorites") then
 			parts[#parts + 1] = "Favourites"
-		elseif sourcePanel and sourcePanel.browserClassFilter ~= nil then
+		end
+		if sourcePanel and sourcePanel.browserClassFilter ~= nil and sourcePanel.browserClassFilter ~= "favorites" then
 			parts[#parts + 1] = "Class: " .. coolstats.GetCachedPlayerBrowserClassName(sourcePanel.browserClassFilter)
 		end
 		if sourcePanel and sourcePanel.browserSpecFilterKey then
@@ -12499,6 +12531,51 @@ if type(coolstats) == "table" then
 		end
 	end
 
+	function coolstats.ShowCachedPlayerBrowserFavoritesOnlyTooltip(button)
+		GameTooltip:SetOwner(button, "ANCHOR_RIGHT")
+		GameTooltip:SetText("Show only Favourites", 1, 0.82, 0.16)
+		GameTooltip:AddLine(coolstats.IsCachedPlayerBrowserFavoritesOnly() and "Enabled" or "Disabled", 0, 0.75, 1)
+		GameTooltip:AddLine("Only favourited characters appear while enabled. Click a player's row star or choose Favourite from their right-click menu to manage favourites.", 0.86, 0.86, 0.78, true)
+		GameTooltip:AddLine("Name, class, specialization and boss filters still apply. Clear resets those filters without turning this setting off.", 0.86, 0.86, 0.78, true)
+		GameTooltip:AddLine("Saved across sessions and shared with the Player Browser settings. This only filters the visible list; realm data loading and tooltip lookups are unchanged.", 0.86, 0.86, 0.78, true)
+		GameTooltip:Show()
+	end
+
+	function coolstats.CreateCachedPlayerBrowserFavoritesOnlyButton(panel)
+		local button = CreateFrame("Button", nil, panel)
+		SetFrameSize(button, 24, 24)
+		button:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 18, 10)
+		button:RegisterForClicks("LeftButtonUp")
+		button.icon = button:CreateTexture(nil, "ARTWORK")
+		button.icon:SetTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_1")
+		SetFrameSize(button.icon, 20, 20)
+		button.icon:SetPoint("CENTER", button, "CENTER", 0, 0)
+		button:SetHighlightTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_1", "ADD")
+		local highlight = button:GetHighlightTexture()
+		highlight:SetAllPoints(button.icon)
+		highlight:SetVertexColor(0.3, 0.75, 1, 0.65)
+		button:SetScript("OnMouseDown", function(self)
+			self.icon:SetPoint("CENTER", self, "CENTER", 1, -1)
+		end)
+		button:SetScript("OnMouseUp", function(self)
+			self.icon:SetPoint("CENTER", self, "CENTER", 0, 0)
+		end)
+		button:SetScript("OnClick", function(self)
+			coolstats.SetCachedPlayerBrowserFavoritesOnly(not coolstats.IsCachedPlayerBrowserFavoritesOnly())
+			coolstats.ShowCachedPlayerBrowserFavoritesOnlyTooltip(self)
+		end)
+		button:SetScript("OnEnter", coolstats.ShowCachedPlayerBrowserFavoritesOnlyTooltip)
+		button:SetScript("OnLeave", function(self)
+			self.icon:SetPoint("CENTER", self, "CENTER", 0, 0)
+			GameTooltip:Hide()
+		end)
+		button:SetScript("OnHide", function(self)
+			if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
+		end)
+		panel.favoritesOnlyButton = button
+		coolstats.UpdateCachedPlayerBrowserFavoriteIcon(button, coolstats.IsCachedPlayerBrowserFavoritesOnly())
+	end
+
 	function coolstats.CreateCachedPlayerBrowserRow(panel, index)
 		local row = CreateFrame("Button", "coolstatsCachedPlayerBrowserRow" .. tostring(index), panel)
 		local showPhase2History = panel and panel.showPhase2History
@@ -12928,6 +13005,7 @@ if type(coolstats) == "table" then
 		end
 
 		panel.cacheStatusText = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+		coolstats.CreateCachedPlayerBrowserFavoritesOnlyButton(panel)
 		panel.cacheStatusText:SetPoint("BOTTOMRIGHT", panel, "BOTTOMRIGHT", -34, 15)
 		panel.cacheStatusText:SetWidth(330)
 		panel.cacheStatusText:SetJustifyH("RIGHT")
@@ -12998,6 +13076,7 @@ if type(coolstats) == "table" then
 			panel.generatedText:SetText(coolstats.FormatCachedPlayerBrowserGeneratedAt())
 		end
 		coolstats.UpdateCachedPlayerBrowserStatus(panel)
+		coolstats.UpdateCachedPlayerBrowserFavoriteIcon(panel.favoritesOnlyButton, coolstats.IsCachedPlayerBrowserFavoritesOnly())
 		coolstats.UpdateCachedPlayerBrowserLayout(panel)
 		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
 		coolstats.UpdateCachedPlayerBrowserHeaderSort(panel)

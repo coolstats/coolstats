@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.2.46 - 2026-09-08
+
+### Player Browser
+
+- Added an account-wide **Show only Favourites** preference in Tooltip & Cache
+  settings and a matching star toggle in the browser's lower-left corner.
+- The star is gold when enabled and gray when disabled, with a star-shaped
+  hover highlight, pressed feedback, and a detailed tooltip.
+- Favourites-only combines with name, class, specialization, and boss filters.
+  Clear resets those filters while keeping this saved preference enabled.
+  Removing a favourite updates the visible list immediately.
+- Realm data loading and tooltip lookups are unchanged; this is a browser
+  display filter only.
+
+### Data
+
+- Refreshed Lordaeron and Icecrown through the weekly UwU Logs pipeline using
+  the top 1,000 and 1,500 players per class/spec respectively, with duplicate-name
+  verification and targeted boss-row repair.
+- Shipped Lordaeron with 15,106 current ranked players and 15,611 total players
+  in 6 chunks, and Icecrown with 33,946 current ranked players and 36,093 total
+  players in 13 chunks.
+- Checked Onyxia with the top-600 weekly profile. UwU still returned no current
+  Phase 4 rankings, so the existing 9,864 locked Phase 3 Overall rows and empty
+  ICC/Toravon database are preserved.
+
 ## 0.2.45 - 2026-09-03
 
 ### Data

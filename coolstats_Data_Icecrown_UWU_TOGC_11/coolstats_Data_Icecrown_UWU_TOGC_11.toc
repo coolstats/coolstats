@@ -1,8 +1,8 @@
 ## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown Trial of the Grand Crusader 11
-## Notes: Optional Trial of the Grand Crusader UwU Logs layer 11/12 for Icecrown.
+## Notes: Optional Trial of the Grand Crusader UwU Logs layer 11/13 for Icecrown.
 ## Author: coolstats
-## Version: 0.2.45
+## Version: 0.2.46
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Icecrown
@@ -12,6 +12,6 @@
 ## X-coolstats-RaidLayer: togc
 ## X-coolstats-RaidName: Trial of the Grand Crusader
 ## X-coolstats-ShardIndex: 11
-## X-coolstats-ShardCount: 12
+## X-coolstats-ShardCount: 13
 
 data\logs\icc\coolstats_uwu_data_togc_11.lua

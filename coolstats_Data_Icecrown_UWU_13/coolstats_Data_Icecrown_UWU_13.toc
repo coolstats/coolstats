@@ -1,0 +1,15 @@
+## Interface: 30300
+## Title: |cff00c0ffcoolstats|r Data - Icecrown UWU 13
+## Notes: Realm-specific UwU Logs shard 13/13 for Icecrown.
+## Author: coolstats
+## Version: 0.2.46
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## RequiredDeps: coolstats, coolstats_Data_Icecrown
+## X-coolstats-Realm: Icecrown
+## X-coolstats-Phase: icc
+## X-coolstats-BaseAddon: coolstats_Data_Icecrown
+## X-coolstats-ShardIndex: 13
+## X-coolstats-ShardCount: 13
+
+data\logs\icc\coolstats_uwu_data_13.lua
