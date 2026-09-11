@@ -1,5 +1,42 @@
 # Changelog
 
+## Unreleased
+
+## 0.2.47 - 2026-09-11
+
+### Player Browser
+
+- Centered the lower-left **Show only Favourites** star button in the browser
+  corner.
+- Added local guild-link caching after successful gear or talent inspection.
+  Browser search now matches cached guild names, UwU player panel guild
+  subtitles are clickable, and clicking a guild opens the browser filtered to
+  cached members of that guild.
+- Added a browser Guild dropdown, a Guild column, and manual guild assignment
+  from the player row right-click menu with known-guild selection plus manual
+  input.
+- Replaced the guild filter and manual assignment guild lists with a bounded
+  10-row scrolling picker, and added prefix autofill for manual guild
+  assignment.
+- Made manual guild assignment autofill respect backspace/delete instead of
+  immediately restoring the completed guild name.
+- Kept recorded and manually assigned guild links when clearing local
+  gear/talent caches, and prevented passive guild-only rows from tooltip hover.
+- Cached paperdoll socket parsing and throttled repeated same-player inspect
+  refreshes to prevent FPS drops while hovering inspected gear.
+- Made inspect paperdoll gem overlays non-interactive and skipped GearScore
+  tooltip cleanup on Blizzard inspect slot hovers to reduce sustained item
+  hover FPS loss.
+- Closing the Player Browser now clears temporary search/class/spec/guild/boss
+  filter state and releases browser query/index tables.
+- Reset Player Browser sort state on close and restored forced gear refreshes
+  when opening UWU Logs from a live player unit.
+- Stopped passive gear-cache refreshes from player tooltip hover, kept
+  GearScore suppression active on Blizzard inspect item tooltips, and restored
+  hover tooltips for inspect paperdoll socket gems.
+- Raised cached gear and talent retention from a flat 500-player limit to
+  higher per-store limits guarded by approximate SavedVariables memory budgets.
+
 ## 0.2.46 - 2026-09-08
 
 ### Player Browser
