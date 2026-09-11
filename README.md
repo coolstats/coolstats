@@ -126,10 +126,20 @@ nearby.
   specialization switching, and Blizzard-style talent tooltips when available.
 - Separate Tooltip & Cache options can disable cached gear updates and cached
   talent updates independently for players who prefer less inspect work.
-- The player browser shows cached gear/talent counts and coolstats memory at a
-  glance, with a Social-icon info button that opens the cache settings when
-  troubleshooting lag.
-- Up to 1,500 recent player snapshots are retained.
+- The player browser shows cached gear/talent/guild-link counts and coolstats
+  memory at a glance, with a Social-icon info button that opens the cache
+  settings when troubleshooting lag.
+- Player browser search includes names, classes, specializations, and cached
+  guild names. Guild links are learned locally after successful gear or talent
+  inspection, can be assigned manually from the player row right-click menu,
+  and can be filtered through the browser's scrollable Guild dropdown. Clicking
+  a known guild in the UwU player panel opens the browser filtered to cached
+  members of that guild.
+- Clearing the local gear/talent cache keeps recorded and manually assigned
+  guild links intact.
+- Recent inspection snapshots are retained with conservative per-store memory
+  budgets, so the cache can hold more lightweight entries while still trimming
+  large SavedVariables payloads before they become risky for the 3.3.5 client.
 - Snapshots older than 14 days are automatically removed.
 
 Cached gear statistics are estimates derived from item data. Cached gem and
@@ -272,8 +282,8 @@ talents, loot alerts, or the character-panel improvements.
 - Bundled logs are updated by installing a newer addon release.
 - Realm data is split into separate load-on-demand addons, and only the addon
   for your current realm is loaded during play.
-- Cached gear, talents, favourites, and settings are stored locally in
-  `coolstatsDB`.
+- Cached gear, talents, guild links, favourites, and settings are stored
+  locally in `coolstatsDB` and the separate `coolstatsCacheDB` cache addon.
 - Cached inspection data can be cleared from the player browser.
 
 ## For Nerds: Data Loading And Cleanup

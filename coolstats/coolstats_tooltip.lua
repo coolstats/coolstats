@@ -107,11 +107,99 @@ local UWU_INSPECT_SPEC_TAB_BG_TOP = 11
 -- Normalized talent snapshots share one catalog per class and only retain
 -- per-player rank strings, but keep a conservative cap while v2 rolls out.
 coolstats.CACHE_LIMITS = {
-	gearPlayers = 500,
-	talentPlayers = 500,
+	gearPlayers = 1200,
+	talentPlayers = 1200,
+	guildPlayers = 3000,
+	gearBytes = 4 * 1024 * 1024,
+	talentBytes = 4 * 1024 * 1024,
+	guildBytes = 384 * 1024,
 	maxAgeSeconds = SECONDS_PER_DAY * 14,
 	refreshSeconds = 900,
 }
+
+function coolstats.EstimateCacheValueWeight(value, seen)
+	local valueType = type(value)
+	if valueType == "string" then
+		return 40 + string.len(value)
+	elseif valueType == "number" or valueType == "boolean" then
+		return 16
+	elseif valueType ~= "table" then
+		return 0
+	end
+	seen = seen or {}
+	if seen[value] then
+		return 0
+	end
+	seen[value] = true
+	local weight = 48
+	for key, child in pairs(value) do
+		weight = weight + 16 + coolstats.EstimateCacheValueWeight(key, seen) + coolstats.EstimateCacheValueWeight(child, seen)
+	end
+	return weight
+end
+
+function coolstats.TrimCachedPlayerStoreByBudget(store, playerLimit, byteLimit)
+	if type(store) ~= "table" or type(store.players) ~= "table" then
+		return false
+	end
+	store.order = store.order or {}
+	local players = store.players
+	local order = store.order
+	local kept = {}
+	local newOrder = {}
+	local usedBytes = 0
+	local changed = false
+
+	local function TryKeep(key)
+		local snapshot = key and players[key]
+		if not key or not snapshot then
+			if key then
+				changed = true
+			end
+			return
+		end
+		if kept[key] then
+			changed = true
+			return
+		end
+		local weight = coolstats.EstimateCacheValueWeight(snapshot)
+		local withinCount = not playerLimit or playerLimit <= 0 or #newOrder < playerLimit
+		local withinBytes = not byteLimit or byteLimit <= 0 or usedBytes + weight <= byteLimit or #newOrder == 0
+		if withinCount and withinBytes then
+			kept[key] = true
+			newOrder[#newOrder + 1] = key
+			usedBytes = usedBytes + weight
+		else
+			players[key] = nil
+			changed = true
+		end
+	end
+
+	for _, key in ipairs(order) do
+		TryKeep(key)
+	end
+	for key in pairs(players) do
+		TryKeep(key)
+	end
+	for key in pairs(players) do
+		if not kept[key] then
+			players[key] = nil
+			changed = true
+		end
+	end
+	if #newOrder ~= #order then
+		changed = true
+	else
+		for index = 1, #newOrder do
+			if newOrder[index] ~= order[index] then
+				changed = true
+				break
+			end
+		end
+	end
+	store.order = newOrder
+	return changed
+end
 local UWU_CACHED_GEAR_PANEL_WIDTH = 274
 local UWU_CACHED_GEAR_PANEL_HEIGHT = 430
 local UWU_CACHED_GEAR_PANEL_GAP = 5
@@ -442,6 +530,7 @@ coolstats.cachedPlayerBrowserIndexVersion = coolstats.cachedPlayerBrowserIndexVe
 local uwuBossIndexSource = nil
 local uwuBossIndexByName = nil
 local lastCachedGearPruneAt = 0
+coolstats.lastCachedGuildPruneAt = coolstats.lastCachedGuildPruneAt or 0
 local pendingGearInspectName = nil
 local pendingGearInspectGuid = nil
 
@@ -977,6 +1066,7 @@ function coolstats.GetCacheDatabase()
 		type(coolstatsDB.cachedInspectGear) == "table"
 		or type(coolstatsDB.cachedInspectTalents) == "table"
 		or type(coolstatsDB.cachedTalentCatalogs) == "table"
+		or type(coolstatsDB.cachedPlayerGuilds) == "table"
 	) then
 		return coolstatsDB
 	end
@@ -988,7 +1078,7 @@ function coolstats.MigrateSplitCacheDatabase()
 	if type(coolstatsCacheDB) ~= "table" or type(coolstatsDB) ~= "table" then
 		return coolstats.GetCacheDatabase()
 	end
-	for _, field in ipairs({ "cachedInspectGear", "cachedInspectTalents" }) do
+	for _, field in ipairs({ "cachedInspectGear", "cachedInspectTalents", "cachedPlayerGuilds" }) do
 		local source = coolstatsDB[field]
 		if type(source) == "table" then
 			if type(coolstatsCacheDB[field]) ~= "table" then
@@ -1021,6 +1111,7 @@ local function EnsureTooltipDatabase()
 	local cacheDB = coolstats.MigrateSplitCacheDatabase()
 	cacheDB.cachedInspectGear = cacheDB.cachedInspectGear or {}
 	cacheDB.cachedInspectTalents = cacheDB.cachedInspectTalents or {}
+	cacheDB.cachedPlayerGuilds = cacheDB.cachedPlayerGuilds or {}
 	cacheDB.cachedTalentCatalogs = cacheDB.cachedTalentCatalogs or { version = 2, classes = {} }
 	cacheDB.cachedTalentCatalogs.classes = cacheDB.cachedTalentCatalogs.classes or {}
 	if coolstatsStaticTalentCatalogs and cacheDB.embeddedTalentCatalogVersion ~= 1 then
@@ -1099,6 +1190,11 @@ end
 function coolstats.GetCachedTalentStore()
 	EnsureTooltipDatabase()
 	return coolstats.GetCachedPlayerRealmStore(coolstats.GetCacheDatabase().cachedInspectTalents)
+end
+
+function coolstats.GetCachedGuildStore()
+	EnsureTooltipDatabase()
+	return coolstats.GetCachedPlayerRealmStore(coolstats.GetCacheDatabase().cachedPlayerGuilds)
 end
 
 function coolstats.IsCachedPlayerSnapshotFresh(snapshot)
@@ -1468,12 +1564,8 @@ local function PruneCachedGearCache(force)
 			changed = true
 		end
 	end
-	while #order > coolstats.CACHE_LIMITS.gearPlayers do
-		local staleKey = table.remove(order)
-		if staleKey then
-			players[staleKey] = nil
-			changed = true
-		end
+	if coolstats.TrimCachedPlayerStoreByBudget(store, coolstats.CACHE_LIMITS.gearPlayers, coolstats.CACHE_LIMITS.gearBytes) then
+		changed = true
 	end
 	if changed then
 		coolstats.InvalidateCachedPlayerBrowserIndex("pruneGear")
@@ -1497,14 +1589,8 @@ local function TouchCachedGearKey(store, key)
 		end
 	end
 	table.insert(order, 1, key)
-	while #order > coolstats.CACHE_LIMITS.gearPlayers do
-		local staleKey = table.remove(order)
-		if staleKey then
-			store.players[staleKey] = nil
-			if staleKey ~= key then
-				removedOther = true
-			end
-		end
+	if coolstats.TrimCachedPlayerStoreByBudget(store, coolstats.CACHE_LIMITS.gearPlayers, coolstats.CACHE_LIMITS.gearBytes) then
+		removedOther = true
 	end
 	return removedOther
 end
@@ -1547,12 +1633,8 @@ function coolstats.PruneCachedTalentCache(force)
 			changed = true
 		end
 	end
-	while #order > coolstats.CACHE_LIMITS.talentPlayers do
-		local staleKey = table.remove(order)
-		if staleKey then
-			players[staleKey] = nil
-			changed = true
-		end
+	if coolstats.TrimCachedPlayerStoreByBudget(store, coolstats.CACHE_LIMITS.talentPlayers, coolstats.CACHE_LIMITS.talentBytes) then
+		changed = true
 	end
 	if changed then
 		coolstats.InvalidateCachedPlayerBrowserIndex("pruneTalents")
@@ -1576,14 +1658,8 @@ function coolstats.TouchCachedTalentKey(store, key)
 		end
 	end
 	table.insert(order, 1, key)
-	while #order > coolstats.CACHE_LIMITS.talentPlayers do
-		local staleKey = table.remove(order)
-		if staleKey then
-			store.players[staleKey] = nil
-			if staleKey ~= key then
-				removedOther = true
-			end
-		end
+	if coolstats.TrimCachedPlayerStoreByBudget(store, coolstats.CACHE_LIMITS.talentPlayers, coolstats.CACHE_LIMITS.talentBytes) then
+		removedOther = true
 	end
 	return removedOther
 end
@@ -1592,6 +1668,200 @@ local function GetCachedGearSnapshot(name)
 	local key = GetCachedGearKeyForName(name)
 	local store = key and GetCachedGearStore()
 	return store and store.players[key] or nil
+end
+
+function coolstats.GetUnitGuildDetails(unit)
+	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) or not GetGuildInfo then
+		return nil
+	end
+	local guildName, guildRankName, guildRankIndex = GetGuildInfo(unit)
+	if guildName and guildName ~= "" then
+		return guildName, guildRankName, guildRankIndex
+	end
+	return nil
+end
+
+function coolstats.PruneCachedGuildCache(force)
+	local now = GetNowSeconds()
+	if not force and now - (coolstats.lastCachedGuildPruneAt or 0) < RAID_PROGRESS_PRUNE_INTERVAL_SECONDS then
+		return
+	end
+	coolstats.lastCachedGuildPruneAt = now
+
+	local store = coolstats.GetCachedGuildStore()
+	local players = store.players
+	local order = store.order
+	local changed = false
+	for key, snapshot in pairs(players) do
+		if not snapshot or not snapshot.guildName or snapshot.guildName == "" or now - (tonumber(snapshot.seenAt) or 0) > coolstats.CACHE_LIMITS.maxAgeSeconds then
+			players[key] = nil
+			changed = true
+		end
+	end
+	for index = #order, 1, -1 do
+		local key = order[index]
+		local snapshot = key and players[key]
+		if not key or not snapshot or now - (tonumber(snapshot.seenAt) or 0) > coolstats.CACHE_LIMITS.maxAgeSeconds then
+			if key then
+				players[key] = nil
+			end
+			table.remove(order, index)
+			changed = true
+		end
+	end
+	if coolstats.TrimCachedPlayerStoreByBudget(store, coolstats.CACHE_LIMITS.guildPlayers, coolstats.CACHE_LIMITS.guildBytes) then
+		changed = true
+	end
+	if changed then
+		coolstats.InvalidateCachedPlayerBrowserIndex("pruneGuilds")
+	end
+	return changed
+end
+
+function coolstats.TouchCachedGuildKey(store, key)
+	if not store or not key then
+		return false
+	end
+	local removedOther = false
+	for index = #store.order, 1, -1 do
+		local orderKey = store.order[index]
+		if orderKey == key then
+			table.remove(store.order, index)
+		elseif not store.players[orderKey] then
+			removedOther = true
+			table.remove(store.order, index)
+		end
+	end
+	table.insert(store.order, 1, key)
+	if coolstats.TrimCachedPlayerStoreByBudget(store, coolstats.CACHE_LIMITS.guildPlayers, coolstats.CACHE_LIMITS.guildBytes) then
+		removedOther = true
+	end
+	return removedOther
+end
+
+function coolstats.GetCachedPlayerGuildSnapshot(name)
+	local key = GetCachedGearKeyForName(name)
+	local store = key and coolstats.GetCachedGuildStore()
+	return store and store.players[key] or nil
+end
+
+function coolstats.GetCachedPlayerGuildName(name)
+	local snapshot = coolstats.GetCachedPlayerGuildSnapshot(name)
+	return snapshot and snapshot.guildName or nil
+end
+
+function coolstats.CachePlayerGuildForName(name, guildName, manual)
+	name = tostring(name or "")
+	guildName = tostring(guildName or "")
+	name = string.gsub(name, "^%s+", "")
+	name = string.gsub(name, "%s+$", "")
+	guildName = string.gsub(guildName, "^%s+", "")
+	guildName = string.gsub(guildName, "%s+$", "")
+	local key = GetCachedGearKeyForName(name)
+	local guildKey = NormalizeName(guildName)
+	if not key or guildKey == "" then
+		return nil
+	end
+	local store = coolstats.GetCachedGuildStore()
+	local snapshot = {
+		name = name,
+		realm = coolstats.GetCachedPlayerSnapshotRealmName(nil),
+		guildName = guildName,
+		guildKey = guildKey,
+		seenAt = GetNowSeconds(),
+		manual = manual and true or nil,
+	}
+	store.players[key] = snapshot
+	local removedOther = coolstats.TouchCachedGuildKey(store, key)
+	local pruned = coolstats.PruneCachedGuildCache(false)
+	if not pruned then
+		if removedOther then
+			coolstats.InvalidateCachedPlayerBrowserIndex("manualGuildRemovedOther")
+		elseif coolstats.PatchCachedPlayerBrowserGuildSnapshot then
+			local hadIndex = coolstats.cachedPlayerBrowserIndex ~= nil
+			if not coolstats.PatchCachedPlayerBrowserGuildSnapshot(key, snapshot) and hadIndex then
+				coolstats.InvalidateCachedPlayerBrowserIndex("manualGuildPatchMiss")
+			end
+		end
+	end
+	return snapshot
+end
+
+function coolstats.GetCachedPlayerBrowserGuildChoices()
+	local store = coolstats.GetCachedGuildStore and coolstats.GetCachedGuildStore()
+	local choicesByKey = {}
+	local choices = {}
+	for _, snapshot in pairs((store and store.players) or {}) do
+		if type(snapshot) == "table" and snapshot.guildName and snapshot.guildName ~= "" then
+			local key = snapshot.guildKey or NormalizeName(snapshot.guildName)
+			if key ~= "" then
+				local choice = choicesByKey[key]
+				if not choice then
+					choice = { key = key, name = snapshot.guildName, count = 0 }
+					choicesByKey[key] = choice
+					choices[#choices + 1] = choice
+				end
+				choice.count = (choice.count or 0) + 1
+			end
+		end
+	end
+	table.sort(choices, function(left, right)
+		return NormalizeName(left.name or "") < NormalizeName(right.name or "")
+	end)
+	return choices
+end
+
+function coolstats.CachePlayerGuildForUnit(unit)
+	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then
+		return nil
+	end
+	local name, realm = UnitName(unit)
+	local key = GetCachedGearKeyForName(name)
+	if not key then
+		return nil
+	end
+	local guildName, guildRankName, guildRankIndex = coolstats.GetUnitGuildDetails(unit)
+	if not guildName or guildName == "" then
+		return nil
+	end
+
+	local store = coolstats.GetCachedGuildStore()
+	local existing = store.players and store.players[key]
+	local now = GetNowSeconds()
+	if existing and existing.guildName == guildName and coolstats.IsCachedPlayerSnapshotFresh(existing) then
+		existing.seenAt = now
+		existing.guildRankName = guildRankName
+		existing.guildRankIndex = guildRankIndex
+		local removedOther = coolstats.TouchCachedGuildKey(store, key)
+		if removedOther then
+			coolstats.InvalidateCachedPlayerBrowserIndex("guildTouchRemovedOther")
+		end
+		return existing
+	end
+
+	local snapshot = {
+		name = name,
+		realm = coolstats.GetCachedPlayerSnapshotRealmName(realm),
+		guildName = guildName,
+		guildKey = NormalizeName(guildName),
+		guildRankName = guildRankName,
+		guildRankIndex = guildRankIndex,
+		seenAt = now,
+	}
+	store.players[key] = snapshot
+	local removedOther = coolstats.TouchCachedGuildKey(store, key)
+	local pruned = coolstats.PruneCachedGuildCache(false)
+	if not pruned then
+		if removedOther then
+			coolstats.InvalidateCachedPlayerBrowserIndex("guildSaveRemovedOther")
+		elseif coolstats.PatchCachedPlayerBrowserGuildSnapshot then
+			local hadIndex = coolstats.cachedPlayerBrowserIndex ~= nil
+			if not coolstats.PatchCachedPlayerBrowserGuildSnapshot(key, snapshot) and hadIndex then
+				coolstats.InvalidateCachedPlayerBrowserIndex("guildPatchMiss")
+			end
+		end
+	end
+	return snapshot
 end
 
 function coolstats.GetCachedTalentSnapshot(name)
@@ -2123,6 +2393,7 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 	if #groups == 0 then
 		return nil, false
 	end
+	local guildSnapshot = coolstats.CachePlayerGuildForUnit(unit)
 
 	local activeGroupIndex = 1
 	for groupIndex = 1, #groups do
@@ -2143,6 +2414,12 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 		groups = groups,
 		compactVersion = 1,
 	}
+	if guildSnapshot then
+		snapshot.guildName = guildSnapshot.guildName
+		snapshot.guildKey = guildSnapshot.guildKey
+		snapshot.guildRankName = guildSnapshot.guildRankName
+		snapshot.guildRankIndex = guildSnapshot.guildRankIndex
+	end
 	if not coolstats.CachedTalentSnapshotMatchesClass(snapshot) then
 		return nil, false
 	end
@@ -2163,7 +2440,7 @@ function coolstats.CacheInspectTalentsForUnit(unit)
 	return snapshot, #groups >= groupCount
 end
 
-local function CacheInspectGearForUnit(unit)
+local function CacheInspectGearForUnit(unit, forceRefresh)
 	local profileStart = coolstats.ProfileBegin and coolstats.ProfileBegin("gear.cacheInspect")
 	if not coolstats.IsGearCachingEnabled() then
 		if coolstats.ProfileEnd then
@@ -2192,10 +2469,32 @@ local function CacheInspectGearForUnit(unit)
 		end
 		return nil
 	end
+	local guildSnapshot = nil
 	local store = GetCachedGearStore()
 	local existing = store.players and store.players[key]
+	local now = GetNowSeconds()
 	if existing and coolstats.IsCachedPlayerSnapshotFresh(existing) then
-		if coolstats.RefreshCachedGearSnapshotFromUnit(existing, unit, name, realm) then
+		if not forceRefresh and existing.slotCount and existing.slotCount > 0 and existing.inspectRefreshAt and now - (tonumber(existing.inspectRefreshAt) or 0) < 10 then
+			if coolstats.ProfileCount then
+				coolstats.ProfileCount("gear.cacheInspectThrottled")
+			end
+			if coolstats.ProfileEnd then
+				coolstats.ProfileEnd("gear.cacheInspect", profileStart)
+			end
+			return existing, false
+		end
+		local refreshed = coolstats.RefreshCachedGearSnapshotFromUnit(existing, unit, name, realm)
+		if refreshed then
+			existing.inspectRefreshAt = now
+			guildSnapshot = coolstats.CachePlayerGuildForUnit(unit)
+		end
+		if guildSnapshot then
+			existing.guildName = guildSnapshot.guildName
+			existing.guildKey = guildSnapshot.guildKey
+			existing.guildRankName = guildSnapshot.guildRankName
+			existing.guildRankIndex = guildSnapshot.guildRankIndex
+		end
+		if refreshed then
 			BuildCachedGearStatSummary(existing)
 			coolstats.CompactCachedGearSnapshot(existing)
 			local removedOther = TouchCachedGearKey(store, key)
@@ -2211,7 +2510,7 @@ local function CacheInspectGearForUnit(unit)
 		if coolstats.ProfileEnd then
 			coolstats.ProfileEnd("gear.cacheInspect", profileStart)
 		end
-		return existing
+		return existing, refreshed
 	end
 
 	local snapshot = {
@@ -2219,11 +2518,25 @@ local function CacheInspectGearForUnit(unit)
 		realm = coolstats.GetCachedPlayerSnapshotRealmName(realm),
 		slots = {},
 	}
+	if guildSnapshot then
+		snapshot.guildName = guildSnapshot.guildName
+		snapshot.guildKey = guildSnapshot.guildKey
+		snapshot.guildRankName = guildSnapshot.guildRankName
+		snapshot.guildRankIndex = guildSnapshot.guildRankIndex
+	end
 	if not coolstats.RefreshCachedGearSnapshotFromUnit(snapshot, unit, name, realm) then
 		if coolstats.ProfileEnd then
 			coolstats.ProfileEnd("gear.cacheInspect", profileStart)
 		end
 		return nil
+	end
+	snapshot.inspectRefreshAt = now
+	guildSnapshot = coolstats.CachePlayerGuildForUnit(unit)
+	if guildSnapshot then
+		snapshot.guildName = guildSnapshot.guildName
+		snapshot.guildKey = guildSnapshot.guildKey
+		snapshot.guildRankName = guildSnapshot.guildRankName
+		snapshot.guildRankIndex = guildSnapshot.guildRankIndex
 	end
 
 	BuildCachedGearStatSummary(snapshot)
@@ -2244,7 +2557,7 @@ local function CacheInspectGearForUnit(unit)
 	if coolstats.ProfileEnd then
 		coolstats.ProfileEnd("gear.cacheInspect", profileStart)
 	end
-	return snapshot
+	return snapshot, true
 end
 
 function coolstats.TrackInspectRequest(unit)
@@ -2399,7 +2712,7 @@ local function TryCacheLookupGearFromUnit(unit, lookupKey)
 		return nil, false
 	end
 
-	local snapshot = CacheInspectGearForUnit(unit)
+	local snapshot = CacheInspectGearForUnit(unit, true)
 	local requested = RequestGearInspectForUnit(unit)
 	return snapshot, requested
 end
@@ -2843,11 +3156,7 @@ local function GetGuildRankText(guildRankName, guildRankIndex)
 end
 
 local function GetUnitGuildNameText(unit)
-	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) or not GetGuildInfo then
-		return nil
-	end
-
-	local guildName = GetGuildInfo(unit)
+	local guildName = coolstats.GetUnitGuildDetails and coolstats.GetUnitGuildDetails(unit)
 	if guildName and guildName ~= "" then
 		return "<" .. guildName .. ">"
 	end
@@ -2859,7 +3168,7 @@ local function ApplyGuildRankLine(unit)
 		return
 	end
 
-	local guildName, guildRankName, guildRankIndex = GetGuildInfo(unit)
+	local guildName, guildRankName, guildRankIndex = coolstats.GetUnitGuildDetails(unit)
 	if not guildName then
 		return
 	end
@@ -3989,7 +4298,7 @@ local function ToggleInspectPanelRaid(panel, raidName)
 	panel.collapsedRaids = panel.collapsedRaids or {}
 	panel.collapsedRaids[raidName] = not IsInspectPanelRaidCollapsed(panel, raidName)
 	if RenderUwUPanel then
-		RenderUwUPanel(panel, panel.renderName, panel.renderPlayer, panel.renderSubtitle)
+		RenderUwUPanel(panel, panel.renderName, panel.renderPlayer, panel.renderSubtitle, panel.renderGuildName)
 	end
 end
 
@@ -4194,7 +4503,7 @@ local function InspectPanelSpecButton_OnClick(self)
 		PlaySound("igCharacterInfoTab")
 	end
 	if RenderUwUPanel then
-		RenderUwUPanel(panel, panel.renderName, panel.renderPlayer, panel.renderSubtitle)
+		RenderUwUPanel(panel, panel.renderName, panel.renderPlayer, panel.renderSubtitle, panel.renderGuildName)
 	end
 end
 
@@ -4994,6 +5303,43 @@ local function CreateUwUPanel(frameName, parent, anchorFrame, standalone)
 	subtitle:SetText("UwU Logs")
 	panel.subtitle = subtitle
 
+	local guildButton = CreateFrame("Button", nil, panel)
+	SetFrameSize(guildButton, UWU_INSPECT_PANEL_WIDTH - 36, 16)
+	guildButton:SetPoint("CENTER", subtitle, "CENTER", 0, 0)
+	guildButton:SetFrameLevel(panel:GetFrameLevel() + 9)
+	guildButton:RegisterForClicks("LeftButtonUp")
+	guildButton:SetScript("OnClick", function(self)
+		local ownerPanel = self:GetParent()
+		local guildName = ownerPanel and ownerPanel.renderGuildName
+		if guildName and guildName ~= "" and coolstats.OpenCachedPlayerBrowserGuild then
+			coolstats.OpenCachedPlayerBrowserGuild(guildName)
+		end
+	end)
+	guildButton:SetScript("OnEnter", function(self)
+		local ownerPanel = self:GetParent()
+		local guildName = ownerPanel and ownerPanel.renderGuildName
+		if not guildName or guildName == "" then
+			return
+		end
+		if ownerPanel.subtitle then
+			ownerPanel.subtitle:SetTextColor(0.35, 0.95, 1.0)
+		end
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetText("<" .. guildName .. ">", 0.0, 0.75, 1.0)
+		GameTooltip:AddLine("Open the Player Browser filtered to cached members of this guild.", 0.86, 0.86, 0.78, true)
+		GameTooltip:AddLine("The roster grows as you inspect players or assign guilds manually.", 0.62, 0.86, 0.72, true)
+		GameTooltip:Show()
+	end)
+	guildButton:SetScript("OnLeave", function(self)
+		local ownerPanel = self:GetParent()
+		if ownerPanel and ownerPanel.subtitle then
+			ownerPanel.subtitle:SetTextColor(0.0, 0.75, 1.0)
+		end
+		GameTooltip:Hide()
+	end)
+	guildButton:Hide()
+	panel.guildButton = guildButton
+
 	panel.specButtons = {}
 	for index = 1, 3 do
 		local button = CreateFrame("CheckButton", nil, panel)
@@ -5185,7 +5531,20 @@ function coolstats.ResizeUwUPanelForRows(panel, state)
 	SetFrameSize(panel, UWU_INSPECT_PANEL_WIDTH, math.max(UWU_INSPECT_PANEL_HEIGHT, requiredHeight))
 end
 
-RenderUwUPanel = function(panel, name, player, subtitle)
+function coolstats.UpdateUwUPanelGuildButton(panel, guildName)
+	if not panel or not panel.guildButton then
+		return
+	end
+	if guildName and guildName ~= "" and coolstats.OpenCachedPlayerBrowserGuild then
+		panel.guildButton:Show()
+		panel.guildButton:Enable()
+	else
+		panel.guildButton:Hide()
+		panel.guildButton:Disable()
+	end
+end
+
+RenderUwUPanel = function(panel, name, player, subtitle, guildName)
 	if not panel then
 		return
 	end
@@ -5203,6 +5562,16 @@ RenderUwUPanel = function(panel, name, player, subtitle)
 	panel.renderName = name
 	panel.renderPlayer = player
 	panel.renderSubtitle = subtitle
+	panel.renderGuildName = guildName
+	local displaySubtitle = guildName and guildName ~= "" and ("<" .. guildName .. ">") or subtitle or "UwU Logs"
+	coolstats.UpdateUwUPanelGuildButton(panel, guildName)
+	if panel.subtitle then
+		if guildName and guildName ~= "" then
+			panel.subtitle:SetTextColor(0.0, 0.75, 1.0)
+		else
+			panel.subtitle:SetTextColor(0.82, 0.82, 0.76)
+		end
+	end
 	if panel.logLinkButton then
 		if player and name and name ~= "" then
 			panel.logLinkButton:Show()
@@ -5234,7 +5603,7 @@ RenderUwUPanel = function(panel, name, player, subtitle)
 		HideInspectPanelSpecButtons(panel)
 		panel.title:SetText(name or "No player")
 		panel.title:SetTextColor(ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B)
-		panel.subtitle:SetText(subtitle or "UwU Logs")
+		panel.subtitle:SetText(displaySubtitle)
 		local state = { rows = panel.rows, index = 1, stripeIndex = 1, panel = panel }
 		AddInspectPanelSection(state, "Summary")
 		AddInspectPanelLine(state, "Raid Score", "Not ranked", 0.45, 0.45, 0.45)
@@ -5264,7 +5633,7 @@ RenderUwUPanel = function(panel, name, player, subtitle)
 	else
 		panel.title:SetTextColor(red, green, blue)
 	end
-	panel.subtitle:SetText(subtitle or "UwU Logs")
+	panel.subtitle:SetText(displaySubtitle)
 	UpdateInspectPanelSpecButtons(panel, player, selectedSpecIndex)
 	AddInspectPanelSection(state, "Summary")
 	AddInspectPanelLine(state, "Raid Score", currentPhaseRanked and FormatUwUScoreWithRank(scoreCenti, rank) or "Not ranked", red, green, blue)
@@ -5336,7 +5705,6 @@ UpdateInspectUwUPanel = function()
 	end
 
 	local unit = GetInspectUwUUnit()
-	CacheInspectGearForUnit(unit)
 	local name = unit and UnitName(unit)
 	local normalizedName = NormalizeName(name or "")
 	if inspectUwUPanel.dismissedName == normalizedName then
@@ -5345,7 +5713,19 @@ UpdateInspectUwUPanel = function()
 	end
 	inspectUwUPanel.dismissedName = nil
 	local player = name and GetUwUPlayerByName(name)
-	RenderUwUPanel(inspectUwUPanel, name or "No inspected player", player, GetUnitGuildNameText(unit) or "UwU Logs")
+	local gearSnapshot = GetCachedGearSnapshot(player and player[1] or name)
+	local guildName = gearSnapshot and gearSnapshot.guildName or coolstats.GetCachedPlayerGuildName(name)
+	local renderKey = table.concat({
+		tostring(normalizedName or ""),
+		tostring(player),
+		tostring(guildName or ""),
+		tostring(inspectUwUPanel.selectedSpecIndex or ""),
+	}, "\030")
+	if inspectUwUPanel:IsShown() and inspectUwUPanel.lastInspectRenderKey == renderKey then
+		return
+	end
+	inspectUwUPanel.lastInspectRenderKey = renderKey
+	RenderUwUPanel(inspectUwUPanel, name or "No inspected player", player, GetUnitGuildNameText(unit) or "UwU Logs", guildName)
 end
 
 function coolstats.ShowUwULogsPanelForName(name)
@@ -5364,7 +5744,7 @@ function coolstats.ShowUwULogsPanelForName(name)
 	local player = GetUwUPlayerByName(lookupName)
 	CacheGearForLookupName(player and player[1] or lookupName)
 	lookupUwUPanel.forceTalentPanelOpenSound = true
-	RenderUwUPanel(lookupUwUPanel, lookupName, player, "UwU Logs Lookup")
+	RenderUwUPanel(lookupUwUPanel, lookupName, player, "UwU Logs Lookup", coolstats.GetCachedPlayerGuildName(player and player[1] or lookupName))
 	coolstats.RaiseManagedWindow(lookupUwUPanel)
 	return player ~= nil, player and player[1] or lookupName
 end
@@ -7512,6 +7892,7 @@ if type(coolstats) == "table" then
 		row.nameKey = row.key or NormalizeName(row.name or "")
 		row.classNameKey = nil
 		row.specNameKey = nil
+		row.guildNameKey = row.guildKey or NormalizeName(row.guildName or "")
 	end
 
 	function coolstats.EnsureCachedPlayerBrowserSearchKeys(row)
@@ -7523,6 +7904,9 @@ if type(coolstats) == "table" then
 		end
 		if not row.classNameKey then
 			row.classNameKey = NormalizeName(coolstats.GetCachedPlayerBrowserClassName(row.classIndex))
+		end
+		if row.guildNameKey == nil then
+			row.guildNameKey = row.guildKey or NormalizeName(row.guildName or "")
 		end
 		if row.specNameKey ~= nil then
 			return
@@ -7587,6 +7971,8 @@ if type(coolstats) == "table" then
 		row.slotCount = snapshot.slotCount
 		row.classFile = snapshot.classFile or row.classFile
 		row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
+		row.guildName = snapshot.guildName or row.guildName
+		row.guildKey = snapshot.guildKey or row.guildKey or NormalizeName(row.guildName or "")
 		row.browserDisplay = nil
 		UpdateCachedPlayerBrowserSearchKeys(row)
 		coolstats.ClearCachedPlayerBrowserSortedOrders()
@@ -7616,12 +8002,42 @@ if type(coolstats) == "table" then
 		row.talentsSeenAt = snapshot.seenAt
 		row.classFile = snapshot.classFile or row.classFile
 		row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
+		row.guildName = snapshot.guildName or row.guildName
+		row.guildKey = snapshot.guildKey or row.guildKey or NormalizeName(row.guildName or "")
 		row.browserDisplay = nil
 		UpdateCachedPlayerBrowserSearchKeys(row)
 		coolstats.ClearCachedPlayerBrowserSortedOrders()
 		coolstats.InvalidateCachedPlayerBrowserQuery()
 		if coolstats.ProfileCount then
 			coolstats.ProfileCount("browser.indexPatchedTalents")
+		end
+		return true
+	end
+
+	function coolstats.PatchCachedPlayerBrowserGuildSnapshot(key, snapshot)
+		if not coolstats.cachedPlayerBrowserIndex then
+			if coolstats.ProfileCount then
+				coolstats.ProfileCount("browser.patchGuildNoIndex")
+			end
+			return false
+		end
+		if not snapshot or not snapshot.guildName or snapshot.guildName == "" then
+			return false
+		end
+		local row = coolstats.FindCachedPlayerBrowserIndexRow(key, snapshot.name)
+		if not row then
+			return false
+		end
+		row.name = snapshot.name or row.name
+		row.guildName = snapshot.guildName
+		row.guildKey = snapshot.guildKey or NormalizeName(snapshot.guildName)
+		row.guildSeenAt = snapshot.seenAt
+		row.browserDisplay = nil
+		UpdateCachedPlayerBrowserSearchKeys(row)
+		coolstats.ClearCachedPlayerBrowserSortedOrders()
+		coolstats.InvalidateCachedPlayerBrowserQuery()
+		if coolstats.ProfileCount then
+			coolstats.ProfileCount("browser.indexPatchedGuild")
 		end
 		return true
 	end
@@ -7641,11 +8057,13 @@ if type(coolstats) == "table" then
 		local data = coolstats.GetCachedPlayerBrowserData()
 		local store = GetCachedGearStore()
 		local talentStore = coolstats.GetCachedTalentStore()
+		local guildStore = coolstats.GetCachedGuildStore()
 		local index = coolstats.cachedPlayerBrowserIndex
 		if index
 			and index.data == data
 			and index.gearPlayers == (store and store.players)
-			and index.talentPlayers == (talentStore and talentStore.players) then
+			and index.talentPlayers == (talentStore and talentStore.players)
+			and index.guildPlayers == (guildStore and guildStore.players) then
 			if coolstats.ProfileCount then
 				coolstats.ProfileCount("browser.buildIndexReused")
 			end
@@ -7666,6 +8084,9 @@ if type(coolstats) == "table" then
 				end
 				if index.talentPlayers ~= (talentStore and talentStore.players) then
 					coolstats.ProfileCount("browser.buildIndexMissTalentStore")
+				end
+				if index.guildPlayers ~= (guildStore and guildStore.players) then
+					coolstats.ProfileCount("browser.buildIndexMissGuildStore")
 				end
 			end
 		end
@@ -7714,6 +8135,8 @@ if type(coolstats) == "table" then
 					row.slotCount = snapshot.slotCount
 					row.classFile = snapshot.classFile or row.classFile
 					row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
+					row.guildName = snapshot.guildName or row.guildName
+					row.guildKey = snapshot.guildKey or row.guildKey or NormalizeName(row.guildName or "")
 					UpdateCachedPlayerBrowserSearchKeys(row)
 				end
 			end
@@ -7732,6 +8155,8 @@ if type(coolstats) == "table" then
 					row.talentsSeenAt = snapshot.seenAt
 					row.classFile = snapshot.classFile or row.classFile
 					row.classIndex = row.classIndex or snapshot.classIndex or (snapshot.classFile and UWU_CLASS_INDEX_BY_FILE[snapshot.classFile])
+					row.guildName = snapshot.guildName or row.guildName
+					row.guildKey = snapshot.guildKey or row.guildKey or NormalizeName(row.guildName or "")
 					UpdateCachedPlayerBrowserSearchKeys(row)
 				end
 			end
@@ -7740,10 +8165,31 @@ if type(coolstats) == "table" then
 			coolstats.ProfileEnd("browser.indexTalents", profileStep)
 		end
 
+		profileStep = coolstats.ProfileBegin and coolstats.ProfileBegin("browser.indexGuilds")
+		if guildStore and guildStore.players then
+			for key, snapshot in pairs(guildStore.players) do
+				local row = rowsByKey[key]
+				if not row and snapshot and snapshot.manual == true then
+					row = GetRow(key, snapshot.name)
+				end
+				if row and snapshot.guildName and snapshot.guildName ~= "" then
+					row.name = snapshot.name or row.name
+					row.guildName = snapshot.guildName
+					row.guildKey = snapshot.guildKey or NormalizeName(snapshot.guildName)
+					row.guildSeenAt = snapshot.seenAt
+					UpdateCachedPlayerBrowserSearchKeys(row)
+				end
+			end
+		end
+		if coolstats.ProfileEnd then
+			coolstats.ProfileEnd("browser.indexGuilds", profileStep)
+		end
+
 		coolstats.cachedPlayerBrowserIndex = {
 			data = data,
 			gearPlayers = store and store.players,
 			talentPlayers = talentStore and talentStore.players,
+			guildPlayers = guildStore and guildStore.players,
 			rows = rows,
 			version = coolstats.cachedPlayerBrowserIndexVersion,
 		}
@@ -7753,9 +8199,15 @@ if type(coolstats) == "table" then
 		return coolstats.cachedPlayerBrowserIndex
 	end
 
-	function coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey)
+	function coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey, guildFilterKey)
 		if not row then
 			return false
+		end
+		if guildFilterKey and guildFilterKey ~= "" then
+			local rowGuildKey = row.guildKey or NormalizeName(row.guildName or "")
+			if rowGuildKey ~= guildFilterKey then
+				return false
+			end
 		end
 		if classFilter ~= nil then
 			if classFilter == "favorites" then
@@ -7782,7 +8234,11 @@ if type(coolstats) == "table" then
 			local nameKey = row.nameKey or NormalizeName(row.name or row.key or "")
 			local classNameKey = row.classNameKey or NormalizeName(coolstats.GetCachedPlayerBrowserClassName(row.classIndex))
 			local specNameKey = row.specNameKey or ""
-			if string.find(nameKey, filterKey, 1, true) == nil and string.find(classNameKey, filterKey, 1, true) == nil and string.find(specNameKey, filterKey, 1, true) == nil then
+			local guildNameKey = row.guildNameKey or row.guildKey or NormalizeName(row.guildName or "")
+			if string.find(nameKey, filterKey, 1, true) == nil
+				and string.find(classNameKey, filterKey, 1, true) == nil
+				and string.find(specNameKey, filterKey, 1, true) == nil
+				and string.find(guildNameKey, filterKey, 1, true) == nil then
 				return false
 			end
 		end
@@ -7817,6 +8273,8 @@ if type(coolstats) == "table" then
 			return tonumber(row.phase2ScoreCenti) or -1
 		elseif sortKey == "cache" then
 			return tonumber(row.seenAt) or 0
+		elseif sortKey == "guild" then
+			return row.guildKey or NormalizeName(row.guildName or "")
 		end
 		return row.nameKey or NormalizeName(row.name or row.key or "")
 	end
@@ -8035,11 +8493,16 @@ if type(coolstats) == "table" then
 		local filterKey = NormalizeName(filterText or "")
 		local classFilter = panel and panel.browserClassFilter
 		local specFilterKey = panel and panel.browserSpecFilterKey
+		local guildFilterKey = panel and panel.browserGuildFilterKey
+		if type(guildFilterKey) ~= "string" then
+			guildFilterKey = nil
+		end
 		local bossIndex = panel and panel.browserBossIndex
 		local playerLimit = coolstats.GetCachedPlayerBrowserPlayerLimit()
 		return filterKey
 			.. "\030" .. tostring(classFilter or "")
 			.. "\030" .. tostring(specFilterKey or "")
+			.. "\030" .. tostring(guildFilterKey or "")
 			.. "\030" .. tostring(bossIndex or "")
 			.. "\030" .. tostring(panel and panel.browserSortKey or "")
 			.. "\030" .. tostring(panel and panel.browserSortState or "")
@@ -8065,10 +8528,14 @@ if type(coolstats) == "table" then
 		local filterKey = NormalizeName(filterText or "")
 		local classFilter = panel and panel.browserClassFilter
 		local specFilterKey = panel and panel.browserSpecFilterKey
+		local guildFilterKey = panel and panel.browserGuildFilterKey
+		if type(guildFilterKey) ~= "string" then
+			guildFilterKey = nil
+		end
 		local bossIndex = panel and panel.browserBossIndex
 		local playerLimit = coolstats.GetCachedPlayerBrowserPlayerLimit()
 		if panel then
-			panel.browserPrioritizeFavorites = filterKey == "" and classFilter == nil and specFilterKey == nil and bossIndex == nil
+			panel.browserPrioritizeFavorites = filterKey == "" and classFilter == nil and specFilterKey == nil and guildFilterKey == nil and bossIndex == nil
 		end
 
 		local queryKey = coolstats.GetCachedPlayerBrowserQueryKey(filterText, panel)
@@ -8085,6 +8552,7 @@ if type(coolstats) == "table" then
 		local profileStep = coolstats.ProfileBegin and coolstats.ProfileBegin("browser.pruneCaches")
 		PruneCachedGearCache(false)
 		coolstats.PruneCachedTalentCache(false)
+		coolstats.PruneCachedGuildCache(false)
 		if coolstats.ProfileEnd then
 			coolstats.ProfileEnd("browser.pruneCaches", profileStep)
 		end
@@ -8110,7 +8578,7 @@ if type(coolstats) == "table" then
 			row.isFavorite = favorites and favorites[row.key] == true
 			row.isCurrentPlayer = playerKey ~= "" and (row.nameKey or NormalizeName(row.name or row.key or "")) == playerKey
 			if (not favoritesOnly or row.isFavorite)
-				and coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey) then
+				and coolstats.DoesCachedPlayerBrowserRowMatch(row, filterKey, classFilter, specFilterKey, guildFilterKey) then
 				if bossIndex and row.player then
 					local bossEntry, bossSpecIndex = coolstats.GetCachedPlayerBrowserBossEntry(row.player, bossIndex, specFilterKey)
 					row.bossIndex = bossIndex
@@ -8244,6 +8712,9 @@ if type(coolstats) == "table" then
 		GameTooltip:AddDoubleLine("Cached Talents", self.hasTalents and "Available" or "Missing", 0.86, 0.86, 0.78, self.hasTalents and 0.25 or 1, self.hasTalents and 1 or 0.25, 0.25)
 		if self.className then
 			GameTooltip:AddDoubleLine("Class", self.className, 0.86, 0.86, 0.78, 1, 1, 1)
+		end
+		if self.guildName and self.guildName ~= "" then
+			GameTooltip:AddDoubleLine("Guild", "<" .. self.guildName .. ">", 0.86, 0.86, 0.78, 0.0, 0.75, 1.0)
 		end
 		if self.mainSpecText and self.mainSpecText ~= "-" then
 			GameTooltip:AddDoubleLine("Main Spec", self.mainSpecText, 0.86, 0.86, 0.78, self.mainSpecR or 1, self.mainSpecG or 1, self.mainSpecB or 1)
@@ -9127,7 +9598,7 @@ if type(coolstats) == "table" then
 		},
 		{
 			title = "Player Browser",
-			body = "Search narrows the current realm data by player name. It is delayed very slightly while typing so the browser stays smooth instead of rebuilding on every keypress.",
+			body = "Search narrows the current realm data by player name, class, specialization, or cached guild. It is delayed very slightly while typing so the browser stays smooth instead of rebuilding on every keypress.",
 			target = function(panel) return panel and panel.searchBox end,
 			action = "browserSearch",
 			anchor = "BELOW",
@@ -9453,6 +9924,8 @@ if type(coolstats) == "table" then
 			coolstats.ClearFeatureGuideBrowserText(panel)
 			panel.browserClassFilter = nil
 			panel.browserSpecFilterKey = nil
+			panel.browserGuildFilterKey = nil
+			panel.browserGuildFilterName = nil
 			panel.browserBossIndex = nil
 			panel.browserBossName = nil
 			if panel.browserSortKey == "boss" or panel.browserSortKey == "bossRank" or panel.browserSortKey == "bossDps" then
@@ -10494,6 +10967,457 @@ if type(coolstats) == "table" then
 		GameTooltip:Hide()
 	end
 
+	function coolstats.FindCachedPlayerBrowserGuildChoiceByPrefix(text)
+		text = NormalizeName(text or "")
+		if text == "" then
+			return nil
+		end
+		local choices = coolstats.GetCachedPlayerBrowserGuildChoices and coolstats.GetCachedPlayerBrowserGuildChoices() or {}
+		for index = 1, #choices do
+			local choice = choices[index]
+			if choice and choice.name and string.sub(NormalizeName(choice.name), 1, string.len(text)) == text then
+				return choice
+			end
+		end
+		return nil
+	end
+
+	function coolstats.CreateGuildPickerPopup()
+		if coolstats.guildPickerPopup then
+			return coolstats.guildPickerPopup
+		end
+		local popup = CreateFrame("Frame", "coolstatsGuildPickerPopup", UIParent)
+		coolstats.guildPickerPopup = popup
+		popup.visibleRows = 10
+		popup.rowHeight = 18
+		SetFrameSize(popup, 246, (popup.visibleRows * popup.rowHeight) + 12)
+		popup:SetFrameStrata("FULLSCREEN_DIALOG")
+		popup:SetFrameLevel(300)
+		if popup.SetClampedToScreen then
+			popup:SetClampedToScreen(true)
+		end
+		popup:EnableMouse(true)
+		popup:EnableMouseWheel(true)
+		popup:SetScript("OnMouseWheel", function(self, delta)
+			if not self.scrollFrame or not self.scrollFrame.GetVerticalScroll then
+				return
+			end
+			local range = self.scrollFrame.GetVerticalScrollRange and self.scrollFrame:GetVerticalScrollRange() or 0
+			local current = self.scrollFrame:GetVerticalScroll() or 0
+			local nextOffset = math.max(0, math.min(range, current - ((delta or 0) * (self.rowHeight or 18) * 3)))
+			self.scrollFrame:SetVerticalScroll(nextOffset)
+		end)
+		popup:SetBackdrop({
+			bgFile = "Interface\\Buttons\\WHITE8X8",
+			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+			tile = false,
+			edgeSize = 12,
+			insets = { left = 4, right = 4, top = 4, bottom = 4 },
+		})
+		popup:SetBackdropColor(0.01, 0.01, 0.01, 0.94)
+		popup:SetBackdropBorderColor(0.48, 0.48, 0.48, 1)
+		local scroll = CreateFrame("ScrollFrame", "coolstatsGuildPickerPopupScrollFrame", popup, "UIPanelScrollFrameTemplate")
+		scroll:SetPoint("TOPLEFT", popup, "TOPLEFT", 6, -6)
+		scroll:SetPoint("BOTTOMRIGHT", popup, "BOTTOMRIGHT", -28, 6)
+		scroll:SetFrameLevel(popup:GetFrameLevel() + 10)
+		scroll:EnableMouseWheel(true)
+		scroll:SetScript("OnMouseWheel", function(self, delta)
+			if popup and popup:GetScript("OnMouseWheel") then
+				popup:GetScript("OnMouseWheel")(popup, delta)
+			end
+		end)
+		local child = CreateFrame("Frame", nil, scroll)
+		child:SetFrameLevel(scroll:GetFrameLevel() + 1)
+		scroll:SetScrollChild(child)
+		local scrollBar = _G[scroll:GetName() .. "ScrollBar"]
+		if scrollBar and scrollBar.SetFrameLevel then
+			scrollBar:SetFrameLevel(popup:GetFrameLevel() + 20)
+		end
+		popup.scrollFrame = scroll
+		popup.scrollChild = child
+		popup.rows = {}
+		popup:Hide()
+		return popup
+	end
+
+	function coolstats.CreateGuildPickerPopupRow(popup, index)
+		local row = CreateFrame("Button", nil, popup.scrollChild)
+		row:SetFrameLevel((popup:GetFrameLevel() or 300) + 12)
+		SetFrameSize(row, popup.contentWidth or 210, popup.rowHeight)
+		row:SetPoint("TOPLEFT", popup.scrollChild, "TOPLEFT", 0, -((index - 1) * popup.rowHeight))
+		row.highlight = row:CreateTexture(nil, "HIGHLIGHT")
+		row.highlight:SetTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight")
+		row.highlight:SetBlendMode("ADD")
+		row.highlight:SetAllPoints(row)
+		row.text = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+		if row.text.SetDrawLayer then
+			row.text:SetDrawLayer("OVERLAY", 7)
+		end
+		row.text:SetPoint("LEFT", row, "LEFT", 4, 0)
+		row.text:SetPoint("RIGHT", row, "RIGHT", -4, 0)
+		row.text:SetJustifyH("LEFT")
+		row:SetScript("OnClick", function(self)
+			local owner = self.ownerPopup
+			local item = self.item
+			if owner and item and owner.onSelect then
+				owner.onSelect(item)
+			end
+			if owner then
+				owner:Hide()
+			end
+		end)
+		row.ownerPopup = popup
+		popup.rows[index] = row
+		return row
+	end
+
+	function coolstats.PaintGuildPickerPopup()
+		local popup = coolstats.guildPickerPopup
+		if not popup then
+			return
+		end
+		local items = popup.items or {}
+		local rowHeight = popup.rowHeight or 18
+		local contentWidth = popup.contentWidth or 210
+		local contentHeight = math.max((popup.visibleRows or 10) * rowHeight, #items * rowHeight)
+		SetFrameSize(popup.scrollChild, contentWidth, contentHeight)
+		if popup.scrollFrame and popup.scrollFrame.SetFrameLevel then
+			popup.scrollFrame:SetFrameLevel(popup:GetFrameLevel() + 10)
+		end
+		if popup.scrollChild and popup.scrollChild.SetFrameLevel then
+			popup.scrollChild:SetFrameLevel(popup:GetFrameLevel() + 11)
+		end
+		for index = 1, #items do
+			local row = popup.rows[index] or coolstats.CreateGuildPickerPopupRow(popup, index)
+			local item = items[index]
+			row.item = item
+			if row.SetFrameLevel then
+				row:SetFrameLevel(popup:GetFrameLevel() + 12)
+			end
+			row:SetWidth(contentWidth)
+			row:ClearAllPoints()
+			row:SetPoint("TOPLEFT", popup.scrollChild, "TOPLEFT", 0, -((index - 1) * rowHeight))
+			local prefix = item.checked and "|TInterface\\Buttons\\UI-CheckBox-Check:12:12:0:0|t " or "   "
+			row.text:SetText(prefix .. (item.text or ""))
+			if item.manual then
+				row.text:SetTextColor(0.0, 0.75, 1.0)
+			elseif item.checked then
+				row.text:SetTextColor(1.0, 0.82, 0.16)
+			else
+				row.text:SetTextColor(0.0, 0.75, 1.0)
+			end
+			row:Show()
+		end
+		for index = #items + 1, #(popup.rows or {}) do
+			local row = popup.rows[index]
+			if row then
+				row.item = nil
+				row:Hide()
+			end
+		end
+	end
+
+	function coolstats.ShowGuildPickerPopup(anchor, items, selectedKey, onSelect, width)
+		if not anchor then
+			return
+		end
+		local popup = coolstats.CreateGuildPickerPopup()
+		if popup:IsShown() and popup.ownerAnchor == anchor then
+			popup:Hide()
+			return popup
+		end
+		popup.items = items or {}
+		popup.selectedKey = selectedKey
+		popup.onSelect = onSelect
+		popup.ownerAnchor = anchor
+		if width then
+			popup:SetWidth(width)
+		end
+		popup.contentWidth = (width or popup:GetWidth() or 246) - 36
+		popup:ClearAllPoints()
+		popup:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", 16, 0)
+		coolstats.PaintGuildPickerPopup()
+		if popup.scrollFrame and popup.scrollFrame.SetVerticalScroll then
+			popup.scrollFrame:SetVerticalScroll(0)
+		end
+		popup:Show()
+		if popup.Raise then
+			popup:Raise()
+		end
+		return popup
+	end
+
+	function coolstats.HideGuildPickerPopup()
+		if coolstats.guildPickerPopup then
+			coolstats.guildPickerPopup:Hide()
+		end
+	end
+
+	function coolstats.GetGuildPickerBrowserItems(panel)
+		local items = {
+			{ text = "All Guilds", key = nil, checked = panel and panel.browserGuildFilterKey == nil },
+		}
+		local choices = coolstats.GetCachedPlayerBrowserGuildChoices and coolstats.GetCachedPlayerBrowserGuildChoices() or {}
+		for index = 1, #choices do
+			local choice = choices[index]
+			items[#items + 1] = {
+				text = (choice.name or "") .. " (" .. tostring(choice.count or 0) .. ")",
+				name = choice.name,
+				key = choice.key,
+				checked = panel and panel.browserGuildFilterKey == choice.key,
+			}
+		end
+		return items
+	end
+
+	function coolstats.GetGuildPickerAssignItems(dialog)
+		local items = {
+			{ text = "+ manual input", key = nil, manual = true, checked = dialog and dialog.selectedGuildKey == nil },
+		}
+		local choices = coolstats.GetCachedPlayerBrowserGuildChoices and coolstats.GetCachedPlayerBrowserGuildChoices() or {}
+		for index = 1, #choices do
+			local choice = choices[index]
+			items[#items + 1] = {
+				text = (choice.name or "") .. " (" .. tostring(choice.count or 0) .. ")",
+				name = choice.name,
+				key = choice.key,
+				checked = dialog and dialog.selectedGuildKey == choice.key,
+			}
+		end
+		return items
+	end
+
+	function coolstats.InitializeAssignGuildDropdown(frame, level)
+		local dialog = frame and frame.ownerDialog
+		if not dialog or not UIDropDownMenu_CreateInfo or not UIDropDownMenu_AddButton then
+			return
+		end
+		local info = UIDropDownMenu_CreateInfo()
+		info.text = "+ manual input"
+		info.notCheckable = nil
+		info.checked = dialog.selectedGuildKey == nil
+		info.colorCode = "|cff00bfff"
+		info.func = function()
+			dialog.selectedGuildKey = nil
+			dialog.selectedGuildName = nil
+			if dialog.editBox then
+				dialog.editBox:SetText("")
+				dialog.editBox:SetFocus()
+			end
+			if UIDropDownMenu_SetText and dialog.guildDropdown then
+				UIDropDownMenu_SetText(dialog.guildDropdown, "+ manual input")
+			end
+			if CloseDropDownMenus then
+				CloseDropDownMenus()
+			end
+		end
+		UIDropDownMenu_AddButton(info, level)
+	end
+
+	function coolstats.CreateAssignGuildDialog()
+		if coolstats.assignGuildDialog then
+			return coolstats.assignGuildDialog
+		end
+		local dialog = CreateFrame("Frame", "coolstatsAssignGuildDialog", UIParent)
+		coolstats.assignGuildDialog = dialog
+		SetFrameSize(dialog, 330, 174)
+		dialog:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+		dialog:SetFrameStrata("DIALOG")
+		dialog:SetFrameLevel(120)
+		if dialog.SetToplevel then
+			dialog:SetToplevel(true)
+		end
+		dialog:EnableMouse(true)
+		dialog:SetBackdrop({
+			bgFile = "Interface\\Buttons\\WHITE8X8",
+			edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+			tile = false,
+			edgeSize = 16,
+			insets = { left = 5, right = 5, top = 5, bottom = 5 },
+		})
+		dialog:SetBackdropColor(0.02, 0.018, 0.014, 0.96)
+		dialog:SetBackdropBorderColor(0.55, 0.52, 0.48, 1)
+		if coolstats.ApplyTabardPanelBackground then
+			coolstats.ApplyTabardPanelBackground(dialog, 0.82, 0.38)
+		end
+		dialog:SetScript("OnHide", function()
+			coolstats.HideGuildPickerPopup()
+		end)
+		local title = dialog:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+		title:SetPoint("TOP", dialog, "TOP", 0, -16)
+		title:SetTextColor(0.0, 0.75, 1.0)
+		title:SetText("Assign Guild")
+		dialog.title = title
+		local subtitle = dialog:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+		subtitle:SetPoint("TOP", title, "BOTTOM", 0, -6)
+		subtitle:SetWidth(292)
+		subtitle:SetJustifyH("CENTER")
+		dialog.subtitle = subtitle
+		local dropdown = CreateFrame("Frame", "coolstatsAssignGuildDropdown", dialog, "UIDropDownMenuTemplate")
+		dropdown.ownerDialog = dialog
+		dropdown:SetPoint("TOPLEFT", dialog, "TOPLEFT", 36, -56)
+		dropdown:EnableMouse(true)
+		dropdown.point = "TOPLEFT"
+		dropdown.relativePoint = "BOTTOMLEFT"
+		dropdown.xOffset = 16
+		dropdown.yOffset = 0
+		UIDropDownMenu_SetWidth(dropdown, 220)
+		UIDropDownMenu_Initialize(dropdown, coolstats.InitializeAssignGuildDropdown)
+		dropdown:SetScript("OnMouseDown", function()
+			coolstats.ShowGuildPickerPopup(dropdown, coolstats.GetGuildPickerAssignItems(dialog), dialog.selectedGuildKey, function(item)
+				if item.manual then
+					dialog.selectedGuildKey = nil
+					dialog.selectedGuildName = nil
+					if dialog.editBox then
+						dialog.editBox:SetText("")
+						dialog.editBox:SetFocus()
+					end
+					if UIDropDownMenu_SetText then
+						UIDropDownMenu_SetText(dropdown, "+ manual input")
+					end
+					return
+				end
+				dialog.selectedGuildKey = item.key
+				dialog.selectedGuildName = item.name
+				if dialog.editBox then
+					dialog.suppressGuildAutofill = true
+					dialog.editBox:SetText(item.name or "")
+					dialog.editBox:ClearFocus()
+					dialog.suppressGuildAutofill = nil
+				end
+				if UIDropDownMenu_SetText then
+					UIDropDownMenu_SetText(dropdown, item.name or "")
+				end
+			end, 246)
+		end)
+		local dropdownButton = _G[dropdown:GetName() .. "Button"]
+		if dropdownButton then
+			dropdownButton:SetScript("OnClick", dropdown:GetScript("OnMouseDown"))
+		end
+		dialog.guildDropdown = dropdown
+		local editBox = CreateFrame("EditBox", "coolstatsAssignGuildEditBox", dialog, "InputBoxTemplate")
+		SetFrameSize(editBox, 240, 20)
+		editBox:SetPoint("TOP", dropdown, "BOTTOM", 0, -12)
+		editBox:SetAutoFocus(false)
+		editBox:SetScript("OnTextChanged", function(self)
+			local text = self:GetText() or ""
+			if dialog.suppressGuildAutofill then
+				dialog.guildAutofillLastText = text
+				return
+			end
+			local typedLength = string.len(text)
+			local previousLength = string.len(dialog.guildAutofillLastText or "")
+			local typingForward = typedLength > previousLength
+			dialog.guildAutofillLastText = text
+			dialog.selectedGuildKey = nil
+			dialog.selectedGuildName = nil
+			if text == "" then
+				if UIDropDownMenu_SetText and dialog.guildDropdown then
+					UIDropDownMenu_SetText(dialog.guildDropdown, "+ manual input")
+				end
+				return
+			end
+			local choice = coolstats.FindCachedPlayerBrowserGuildChoiceByPrefix(text)
+			if not choice then
+				if UIDropDownMenu_SetText and dialog.guildDropdown then
+					UIDropDownMenu_SetText(dialog.guildDropdown, "+ manual input")
+				end
+				return
+			end
+			if NormalizeName(choice.name) == NormalizeName(text) then
+				dialog.selectedGuildKey = choice.key
+				dialog.selectedGuildName = choice.name
+				if UIDropDownMenu_SetText and dialog.guildDropdown then
+					UIDropDownMenu_SetText(dialog.guildDropdown, choice.name)
+				end
+				return
+			end
+			if typingForward then
+				dialog.selectedGuildKey = choice.key
+				dialog.selectedGuildName = choice.name
+				if UIDropDownMenu_SetText and dialog.guildDropdown then
+					UIDropDownMenu_SetText(dialog.guildDropdown, choice.name)
+				end
+				dialog.suppressGuildAutofill = true
+				self:SetText(choice.name)
+				self:HighlightText(typedLength, -1)
+				dialog.suppressGuildAutofill = nil
+				dialog.guildAutofillLastText = choice.name
+			elseif UIDropDownMenu_SetText and dialog.guildDropdown then
+				UIDropDownMenu_SetText(dialog.guildDropdown, "+ manual input")
+			end
+		end)
+		editBox:SetScript("OnEnterPressed", function(self)
+			coolstats.ConfirmAssignGuildDialog()
+		end)
+		editBox:SetScript("OnEscapePressed", function(self)
+			self:ClearFocus()
+			dialog:Hide()
+		end)
+		dialog.editBox = editBox
+		local confirm = CreateFrame("Button", nil, dialog, "UIPanelButtonTemplate")
+		SetFrameSize(confirm, 92, 22)
+		confirm:SetPoint("BOTTOM", dialog, "BOTTOM", -52, 16)
+		confirm:SetText("Assign")
+		confirm:SetScript("OnClick", function()
+			coolstats.ConfirmAssignGuildDialog()
+		end)
+		dialog.confirmButton = confirm
+		local cancel = CreateFrame("Button", nil, dialog, "UIPanelButtonTemplate")
+		SetFrameSize(cancel, 92, 22)
+		cancel:SetPoint("LEFT", confirm, "RIGHT", 12, 0)
+		cancel:SetText(CANCEL or "Cancel")
+		cancel:SetScript("OnClick", function()
+			dialog:Hide()
+		end)
+		dialog.cancelButton = cancel
+		dialog:Hide()
+		return dialog
+	end
+
+	function coolstats.ShowAssignGuildDialog(name)
+		if not name or name == "" then
+			return
+		end
+		local dialog = coolstats.CreateAssignGuildDialog()
+		dialog.playerName = name
+		dialog.selectedGuildKey = nil
+		dialog.selectedGuildName = nil
+		dialog.subtitle:SetText("Player: " .. name)
+		local currentGuild = coolstats.GetCachedPlayerGuildName and coolstats.GetCachedPlayerGuildName(name) or ""
+		local currentChoice = currentGuild and currentGuild ~= "" and coolstats.FindCachedPlayerBrowserGuildChoiceByPrefix(currentGuild) or nil
+		if currentChoice and NormalizeName(currentChoice.name) == NormalizeName(currentGuild) then
+			dialog.selectedGuildKey = currentChoice.key
+			dialog.selectedGuildName = currentChoice.name
+		end
+		dialog.suppressGuildAutofill = true
+		dialog.editBox:SetText(currentGuild or "")
+		dialog.suppressGuildAutofill = nil
+		if UIDropDownMenu_SetText then
+			UIDropDownMenu_SetText(dialog.guildDropdown, dialog.selectedGuildName or "+ manual input")
+		end
+		dialog:Show()
+		dialog:Raise()
+		dialog.editBox:SetFocus()
+		dialog.editBox:HighlightText()
+	end
+
+	function coolstats.ConfirmAssignGuildDialog()
+		local dialog = coolstats.assignGuildDialog
+		if not dialog or not dialog.playerName then
+			return
+		end
+		local guildName = dialog.editBox and dialog.editBox:GetText() or dialog.selectedGuildName
+		local snapshot = coolstats.CachePlayerGuildForName(dialog.playerName, guildName, true)
+		if snapshot then
+			if DEFAULT_CHAT_FRAME then
+				DEFAULT_CHAT_FRAME:AddMessage("|cff00bfffcoolstats:|r assigned " .. dialog.playerName .. " to <" .. snapshot.guildName .. ">.")
+			end
+			dialog:Hide()
+			coolstats.RefreshCachedPlayerBrowser(true)
+		end
+	end
+
 	function coolstats.InitializeCachedPlayerBrowserRowMenu(frame, level)
 		local name = frame and frame.playerName
 		if not name or name == "" or not UIDropDownMenu_CreateInfo or not UIDropDownMenu_AddButton then
@@ -10564,6 +11488,17 @@ if type(coolstats) == "table" then
 		info.notCheckable = 1
 		info.func = function()
 			coolstats.ToggleCachedPlayerBrowserFavorite(name)
+		end
+		UIDropDownMenu_AddButton(info, level)
+
+		info = UIDropDownMenu_CreateInfo()
+		info.text = "Assign Guild"
+		info.notCheckable = 1
+		info.func = function()
+			if CloseDropDownMenus then
+				CloseDropDownMenus()
+			end
+			coolstats.ShowAssignGuildDialog(name)
 		end
 		UIDropDownMenu_AddButton(info, level)
 
@@ -10744,6 +11679,21 @@ if type(coolstats) == "table" then
 		return button
 	end
 
+	function coolstats.SetCachedPlayerBrowserDropdownTextColor(dropdown, active)
+		if not dropdown or not dropdown.GetName then
+			return
+		end
+		local text = _G[dropdown:GetName() .. "Text"]
+		if not text or not text.SetTextColor then
+			return
+		end
+		if active then
+			text:SetTextColor(0.0, 0.75, 1.0)
+		else
+			text:SetTextColor(1.0, 0.82, 0.16)
+		end
+	end
+
 	function coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
 		if not panel then
 			return
@@ -10765,6 +11715,7 @@ if type(coolstats) == "table" then
 		end
 		if panel.classDropdown and UIDropDownMenu_SetText then
 			UIDropDownMenu_SetText(panel.classDropdown, classText)
+			coolstats.SetCachedPlayerBrowserDropdownTextColor(panel.classDropdown, panel.browserClassFilter ~= nil)
 		end
 		local specText = "Spec: All"
 		if panel.browserSpecFilterKey then
@@ -10777,10 +11728,22 @@ if type(coolstats) == "table" then
 		if panel.specFilterButton then
 			panel.specFilterButton:SetText(specText)
 		end
-		if panel.specDropdown and UIDropDownMenu_SetText then
-			UIDropDownMenu_SetText(panel.specDropdown, specText)
-		end
-		local bossText = "Boss: All"
+			if panel.specDropdown and UIDropDownMenu_SetText then
+				UIDropDownMenu_SetText(panel.specDropdown, specText)
+				coolstats.SetCachedPlayerBrowserDropdownTextColor(panel.specDropdown, panel.browserSpecFilterKey ~= nil)
+			end
+			local guildText = "Guild: All"
+			if type(panel.browserGuildFilterName) == "string" and panel.browserGuildFilterName ~= "" then
+				guildText = "Guild: " .. panel.browserGuildFilterName
+			end
+			if type(panel.guildFilterButton) == "table" and panel.guildFilterButton.SetText then
+				panel.guildFilterButton:SetText(guildText)
+			end
+			if type(panel.guildDropdown) == "table" and UIDropDownMenu_SetText then
+				UIDropDownMenu_SetText(panel.guildDropdown, guildText)
+				coolstats.SetCachedPlayerBrowserDropdownTextColor(panel.guildDropdown, panel.browserGuildFilterKey ~= nil)
+			end
+			local bossText = "Boss: All"
 		if panel.browserBossIndex then
 			local bossLabel = coolstats.GetCachedPlayerBrowserBossLabel(panel.browserBossIndex)
 			if bossLabel then
@@ -10794,6 +11757,7 @@ if type(coolstats) == "table" then
 		end
 		if panel.bossDropdown and UIDropDownMenu_SetText then
 			UIDropDownMenu_SetText(panel.bossDropdown, bossText)
+			coolstats.SetCachedPlayerBrowserDropdownTextColor(panel.bossDropdown, panel.browserBossIndex ~= nil)
 		end
 	end
 
@@ -10834,6 +11798,24 @@ if type(coolstats) == "table" then
 			end
 		end
 		panel.browserSpecFilterKey = specKey
+		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
+		coolstats.RefreshCachedPlayerBrowser(true)
+	end
+
+	function coolstats.SetCachedPlayerBrowserGuildFilter(panel, guildName)
+		if not panel then
+			return
+		end
+		guildName = tostring(guildName or "")
+		guildName = string.gsub(guildName, "^%s+", "")
+		guildName = string.gsub(guildName, "%s+$", "")
+		local guildKey = NormalizeName(guildName)
+		if guildKey == "" then
+			guildName = nil
+			guildKey = nil
+		end
+		panel.browserGuildFilterKey = guildKey
+		panel.browserGuildFilterName = guildName
 		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
 		coolstats.RefreshCachedPlayerBrowser(true)
 	end
@@ -10987,9 +11969,75 @@ if type(coolstats) == "table" then
 	function coolstats.CreateCachedPlayerBrowserSpecDropdown(panel)
 		local dropdown = CreateFrame("Frame", "coolstatsCachedPlayerBrowserSpecDropdown", panel, "UIDropDownMenuTemplate")
 		dropdown.ownerPanel = panel
-		UIDropDownMenu_SetWidth(dropdown, 180)
+		UIDropDownMenu_SetWidth(dropdown, 150)
 		UIDropDownMenu_Initialize(dropdown, coolstats.InitializeCachedPlayerBrowserSpecDropdown)
 		panel.specDropdown = dropdown
+		return dropdown
+	end
+
+	function coolstats.InitializeCachedPlayerBrowserGuildDropdown(frame, level)
+		local panel = frame and frame.ownerPanel
+		if not panel or not UIDropDownMenu_CreateInfo or not UIDropDownMenu_AddButton then
+			return
+		end
+		local info = UIDropDownMenu_CreateInfo()
+		info.text = "All Guilds"
+		info.notCheckable = nil
+		info.checked = panel.browserGuildFilterKey == nil
+		info.func = function()
+			coolstats.SetCachedPlayerBrowserGuildFilter(panel, nil)
+			if CloseDropDownMenus then
+				CloseDropDownMenus()
+			end
+		end
+		UIDropDownMenu_AddButton(info, level)
+	end
+
+	function coolstats.PositionCachedPlayerBrowserGuildDropdownList(dropdown)
+		local list = _G and _G.DropDownList1
+		if not list or not dropdown then
+			return
+		end
+		list:ClearAllPoints()
+		list:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 16, 0)
+		if list.SetFrameStrata then
+			list:SetFrameStrata("TOOLTIP")
+		end
+		if list.SetFrameLevel and dropdown.GetFrameLevel then
+			list:SetFrameLevel(dropdown:GetFrameLevel() + 80)
+		end
+	end
+
+	function coolstats.OpenCachedPlayerBrowserGuildDropdownMenu(dropdown)
+		if not dropdown then
+			return
+		end
+		local panel = dropdown.ownerPanel
+		coolstats.ShowGuildPickerPopup(dropdown, coolstats.GetGuildPickerBrowserItems(panel), panel and panel.browserGuildFilterKey, function(item)
+			if panel then
+				coolstats.SetCachedPlayerBrowserGuildFilter(panel, item.name)
+			end
+		end, 246)
+	end
+
+	function coolstats.CreateCachedPlayerBrowserGuildDropdown(panel)
+		local dropdown = CreateFrame("Frame", "coolstatsCachedPlayerBrowserGuildDropdown", panel, "UIDropDownMenuTemplate")
+		dropdown.ownerPanel = panel
+		dropdown:EnableMouse(true)
+		dropdown:SetScript("OnMouseDown", function()
+			coolstats.OpenCachedPlayerBrowserGuildDropdownMenu(dropdown)
+		end)
+		dropdown.point = "TOPLEFT"
+		dropdown.relativePoint = "BOTTOMLEFT"
+		dropdown.xOffset = 16
+		dropdown.yOffset = 0
+		UIDropDownMenu_SetWidth(dropdown, 150)
+		UIDropDownMenu_Initialize(dropdown, coolstats.InitializeCachedPlayerBrowserGuildDropdown)
+		local button = _G[dropdown:GetName() .. "Button"]
+		if button then
+			button:SetScript("OnClick", dropdown:GetScript("OnMouseDown"))
+		end
+		panel.guildDropdown = dropdown
 		return dropdown
 	end
 
@@ -11041,7 +12089,7 @@ if type(coolstats) == "table" then
 	function coolstats.CreateCachedPlayerBrowserBossDropdown(panel)
 		local dropdown = CreateFrame("Frame", "coolstatsCachedPlayerBrowserBossDropdown", panel, "UIDropDownMenuTemplate")
 		dropdown.ownerPanel = panel
-		UIDropDownMenu_SetWidth(dropdown, 230)
+		UIDropDownMenu_SetWidth(dropdown, 150)
 		UIDropDownMenu_Initialize(dropdown, coolstats.InitializeCachedPlayerBrowserBossDropdown)
 		panel.bossDropdown = dropdown
 		return dropdown
@@ -11084,6 +12132,26 @@ if type(coolstats) == "table" then
 			GameTooltip:Hide()
 		end)
 		panel.specResetButton = reset
+		return reset
+	end
+
+	function coolstats.CreateCachedPlayerBrowserGuildResetButton(panel, anchor)
+		local reset = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
+		SetFrameSize(reset, 24, 22)
+		reset:SetText("x")
+		reset:SetPoint("LEFT", anchor, "RIGHT", -6, 3)
+		reset:SetScript("OnClick", function()
+			coolstats.SetCachedPlayerBrowserGuildFilter(panel, nil)
+		end)
+		reset:SetScript("OnEnter", function(self)
+			GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+			GameTooltip:SetText("Reset Guild Filter", 1, 0.82, 0.16)
+			GameTooltip:Show()
+		end)
+		reset:SetScript("OnLeave", function()
+			GameTooltip:Hide()
+		end)
+		panel.guildResetButton = reset
 		return reset
 	end
 
@@ -11131,13 +12199,13 @@ if type(coolstats) == "table" then
 		talentStore.players = {}
 		talentStore.order = {}
 		coolstats.lastCachedTalentPruneAt = 0
-		coolstats.InvalidateCachedPlayerBrowserIndex("clearGearTalents")
+		coolstats.InvalidateCachedPlayerBrowserIndex("clearGearTalentCaches")
 		if lookupUwUPanel and lookupUwUPanel:IsShown() then
 			UpdateCachedGearPanel(lookupUwUPanel, lookupUwUPanel.renderName, lookupUwUPanel.renderPlayer)
 		end
 		coolstats.RefreshCachedPlayerBrowser(true)
 		if DEFAULT_CHAT_FRAME then
-			DEFAULT_CHAT_FRAME:AddMessage("|cff00bfffcoolstats:|r cached gear and talents cleared for " .. (GetRealmName and GetRealmName() or "this realm") .. ".")
+			DEFAULT_CHAT_FRAME:AddMessage("|cff00bfffcoolstats:|r cached gear and talents cleared for " .. (GetRealmName and GetRealmName() or "this realm") .. ". Guild links were kept.")
 		end
 	end
 
@@ -11148,7 +12216,7 @@ if type(coolstats) == "table" then
 		end
 		if not StaticPopupDialogs["COOLSTATS_CLEAR_CACHED_GEAR"] then
 			StaticPopupDialogs["COOLSTATS_CLEAR_CACHED_GEAR"] = {
-				text = "Clear cached gear and talents for this realm?\n\nLogs data and caches from other realms will stay intact.",
+				text = "Clear cached gear and talents for this realm?\n\nGuild links, logs data, and caches from other realms will stay intact.",
 				button1 = YES or "Yes",
 				button2 = NO or "No",
 				OnAccept = function()
@@ -11191,38 +12259,25 @@ if type(coolstats) == "table" then
 		return {
 			gear = coolstats.CountCachedPlayerStore(cacheDB and cacheDB.cachedInspectGear),
 			talents = coolstats.CountCachedPlayerStore(cacheDB and cacheDB.cachedInspectTalents),
+			guilds = coolstats.CountCachedPlayerStore(cacheDB and cacheDB.cachedPlayerGuilds),
 		}
 	end
 
 	function coolstats.EstimateCachedPlayerBrowserValueWeight(value, seen)
-		local valueType = type(value)
-		if valueType == "string" then
-			return 40 + string.len(value)
-		elseif valueType == "number" or valueType == "boolean" then
-			return 16
-		elseif valueType ~= "table" then
-			return 0
-		end
-		seen = seen or {}
-		if seen[value] then
-			return 0
-		end
-		seen[value] = true
-		local weight = 48
-		for key, child in pairs(value) do
-			weight = weight + 16 + coolstats.EstimateCachedPlayerBrowserValueWeight(key, seen) + coolstats.EstimateCachedPlayerBrowserValueWeight(child, seen)
-		end
-		return weight
+		return coolstats.EstimateCacheValueWeight(value, seen)
 	end
 
 	function coolstats.GetCachedPlayerBrowserCacheWeightStats()
 		local gearStore = GetCachedGearStore()
 		local talentStore = coolstats.GetCachedTalentStore()
+		local guildStore = coolstats.GetCachedGuildStore()
 		local stats = {
 			gearBytes = 0,
 			talentBytes = 0,
+			guildBytes = 0,
 			gearPlayers = 0,
 			talentPlayers = 0,
+			guildPlayers = 0,
 		}
 		for _, snapshot in pairs((gearStore and gearStore.players) or {}) do
 			if type(snapshot) == "table" then
@@ -11236,9 +12291,16 @@ if type(coolstats) == "table" then
 				stats.talentBytes = stats.talentBytes + coolstats.EstimateCachedPlayerBrowserValueWeight(snapshot)
 			end
 		end
+		for _, snapshot in pairs((guildStore and guildStore.players) or {}) do
+			if type(snapshot) == "table" then
+				stats.guildPlayers = stats.guildPlayers + 1
+				stats.guildBytes = stats.guildBytes + coolstats.EstimateCachedPlayerBrowserValueWeight(snapshot)
+			end
+		end
 		stats.gearKB = stats.gearBytes / 1024
 		stats.talentKB = stats.talentBytes / 1024
-		stats.totalKB = stats.gearKB + stats.talentKB
+		stats.guildKB = stats.guildBytes / 1024
+		stats.totalKB = stats.gearKB + stats.talentKB + stats.guildKB
 		return stats
 	end
 
@@ -11257,6 +12319,7 @@ if type(coolstats) == "table" then
 		stats.bossIndex = panel and panel.browserBossIndex or nil
 		stats.classFilter = panel and panel.browserClassFilter or nil
 		stats.specFilter = panel and panel.browserSpecFilterKey or nil
+		stats.guildFilter = panel and panel.browserGuildFilterName or nil
 		stats.sortedOrders = 0
 		stats.sortedOrderRows = 0
 		if index and index.sortedOrders then
@@ -11334,17 +12397,26 @@ if type(coolstats) == "table" then
 		return statsPanel and statsPanel:IsShown() and statsPanel.sourceBrowser == panel
 	end
 
-	function coolstats.ClearCachedPlayerBrowserBossFilterOnClose(panel)
-		if not panel or coolstats.IsCachedPlayerBrowserHeldByStatsPanel(panel) then
+	function coolstats.ClearCachedPlayerBrowserFiltersOnClose(panel)
+		if not panel then
 			return
 		end
+		if panel.searchBox then
+			panel.searchBox.suppressTextChanged = true
+			panel.searchBox:SetText("")
+			panel.searchBox.suppressTextChanged = nil
+			panel.searchBox:ClearFocus()
+		end
+		panel.browserClassFilter = nil
+		panel.browserSpecFilterKey = nil
+		panel.browserGuildFilterKey = nil
+		panel.browserGuildFilterName = nil
 		panel.browserBossIndex = nil
 		panel.browserBossName = nil
-		if panel.browserSortKey == "boss" or panel.browserSortKey == "bossRank" or panel.browserSortKey == "bossDps" then
-			panel.browserSortKey = nil
-			panel.browserSortState = nil
-		end
+		panel.browserSortKey = nil
+		panel.browserSortState = nil
 		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
+		coolstats.UpdateCachedPlayerBrowserHeaderSort(panel)
 		coolstats.UpdateCachedPlayerBrowserLayout(panel)
 		if panel.bossDistributionFrame then
 			panel.bossDistributionFrame:Hide()
@@ -11370,6 +12442,9 @@ if type(coolstats) == "table" then
 		panel.browserRows = nil
 		panel.browserCounts = nil
 		panel.browserLastPaintKey = nil
+		if coolstats.ClearCachedPlayerBrowserSortedOrders then
+			coolstats.ClearCachedPlayerBrowserSortedOrders()
+		end
 		if coolstats.cachedPlayerBrowserIndex then
 			if coolstats.ProfileCount then
 				coolstats.ProfileCount("browser.indexReleased")
@@ -11524,6 +12599,7 @@ if type(coolstats) == "table" then
 			updatedAt = now,
 			gear = counts.gear or 0,
 			talents = counts.talents or 0,
+			guilds = counts.guilds or 0,
 			memoryKB = memory.total or 0,
 			memory = memory,
 			addonSpecific = memory.addonSpecific and true or false,
@@ -11552,6 +12628,7 @@ if type(coolstats) == "table" then
 		GameTooltip:SetText("Cache And Memory", 1, 0.82, 0.16)
 		GameTooltip:AddLine("Cached gear: " .. tostring(status and status.gear or 0) .. " players", 0.86, 0.86, 0.78)
 		GameTooltip:AddLine("Cached talents: " .. tostring(status and status.talents or 0) .. " players", 0.86, 0.86, 0.78)
+		GameTooltip:AddLine("Cached guild links: " .. tostring(status and status.guilds or 0) .. " players", 0.86, 0.86, 0.78)
 		if status and status.addonSpecific and status.memory then
 			GameTooltip:AddLine("Memory uses Blizzard's addon memory API.", 0.58, 0.76, 0.86, true)
 			GameTooltip:AddDoubleLine("Core", coolstats.FormatCachedPlayerBrowserMemory(status.memory.core), 0.86, 0.86, 0.78, 1, 1, 1)
@@ -11810,23 +12887,23 @@ if type(coolstats) == "table" then
 		end
 		local bossMode = panel.browserBossIndex ~= nil
 		local showPhase2History = panel.showPhase2History
-		local scoreX, scoreWidth = 494, 60
-		local rankX, rankWidth = 562, 66
-		local dpsX, dpsWidth = 616, 68
-		local phase2X, phase2Width = 638, 106
-		local cacheX = showPhase2History and 754 or 638
-		local cacheWidth = showPhase2History and 88 or 104
+		local scoreX, scoreWidth = 545, 58
+		local rankX, rankWidth = 608, 62
+		local dpsX, dpsWidth = 664, 60
+		local phase2X, phase2Width = 684, 92
+		local cacheX = showPhase2History and 786 or 684
+		local cacheWidth = showPhase2History and 86 or 110
 
 		if bossMode then
 			scoreWidth = 52
-			rankX, rankWidth = 552, 58
+			rankX, rankWidth = 604, 54
 			if showPhase2History then
-				dpsX, dpsWidth = 616, 68
-				phase2X, phase2Width = 690, 78
-				cacheX, cacheWidth = 774, 72
+				dpsX, dpsWidth = 664, 56
+				phase2X, phase2Width = 724, 74
+				cacheX, cacheWidth = 804, 68
 			else
-				dpsX, dpsWidth = 616, 68
-				cacheX, cacheWidth = 704, 138
+				dpsX, dpsWidth = 664, 60
+				cacheX, cacheWidth = 738, 134
 			end
 		end
 
@@ -12544,7 +13621,7 @@ if type(coolstats) == "table" then
 	function coolstats.CreateCachedPlayerBrowserFavoritesOnlyButton(panel)
 		local button = CreateFrame("Button", nil, panel)
 		SetFrameSize(button, 24, 24)
-		button:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 18, 10)
+		button:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 8, 10)
 		button:RegisterForClicks("LeftButtonUp")
 		button.icon = button:CreateTexture(nil, "ARTWORK")
 		button.icon:SetTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_1")
@@ -12579,7 +13656,7 @@ if type(coolstats) == "table" then
 	function coolstats.CreateCachedPlayerBrowserRow(panel, index)
 		local row = CreateFrame("Button", "coolstatsCachedPlayerBrowserRow" .. tostring(index), panel)
 		local showPhase2History = panel and panel.showPhase2History
-		SetFrameSize(row, 860, 18)
+		SetFrameSize(row, 880, 18)
 		row:SetPoint("TOPLEFT", panel.listTop, "BOTTOMLEFT", 0, -((index - 1) * 18))
 		row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
 		row:SetScript("OnClick", coolstats.CachedPlayerBrowserRow_OnClick)
@@ -12630,62 +13707,74 @@ if type(coolstats) == "table" then
 
 		local nameText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
 		nameText:SetPoint("LEFT", row, "LEFT", 40, 0)
-		nameText:SetWidth(145)
+		nameText:SetWidth(120)
 		nameText:SetJustifyH("LEFT")
 		row.nameText = nameText
 
 		local mainSpecText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		mainSpecText:SetPoint("LEFT", row, "LEFT", 190, 0)
-		mainSpecText:SetWidth(84)
+		mainSpecText:SetPoint("LEFT", row, "LEFT", 165, 0)
+		mainSpecText:SetWidth(74)
 		mainSpecText:SetJustifyH("CENTER")
 		row.mainSpecTextFrame = mainSpecText
 
 		local offSpecText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		offSpecText:SetPoint("LEFT", row, "LEFT", 280, 0)
-		offSpecText:SetWidth(84)
+		offSpecText:SetPoint("LEFT", row, "LEFT", 244, 0)
+		offSpecText:SetWidth(74)
 		offSpecText:SetJustifyH("CENTER")
 		row.offSpecTextFrame = offSpecText
 
+		local guildText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+		guildText:SetPoint("LEFT", row, "LEFT", 323, 0)
+		guildText:SetWidth(92)
+		guildText:SetJustifyH("CENTER")
+		if guildText.SetWordWrap then
+			guildText:SetWordWrap(false)
+		end
+		if guildText.SetNonSpaceWrap then
+			guildText:SetNonSpaceWrap(false)
+		end
+		row.guildTextFrame = guildText
+
 		local logsText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		logsText:SetPoint("LEFT", row, "LEFT", 370, 0)
+		logsText:SetPoint("LEFT", row, "LEFT", 421, 0)
 		logsText:SetWidth(32)
 		logsText:SetJustifyH("CENTER")
 		row.logsText = logsText
 
 		local gearText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		gearText:SetPoint("LEFT", row, "LEFT", 405, 0)
+		gearText:SetPoint("LEFT", row, "LEFT", 456, 0)
 		gearText:SetWidth(32)
 		gearText:SetJustifyH("CENTER")
 		row.gearText = gearText
 
 		local talentsText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		talentsText:SetPoint("LEFT", row, "LEFT", 440, 0)
+		talentsText:SetPoint("LEFT", row, "LEFT", 491, 0)
 		talentsText:SetWidth(44)
 		talentsText:SetJustifyH("CENTER")
 		row.talentsText = talentsText
 
 		local scoreText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		scoreText:SetPoint("LEFT", row, "LEFT", 494, 0)
-		scoreText:SetWidth(60)
+		scoreText:SetPoint("LEFT", row, "LEFT", 545, 0)
+		scoreText:SetWidth(58)
 		scoreText:SetJustifyH("RIGHT")
 		row.scoreText = scoreText
 
 		local bestRankText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		bestRankText:SetPoint("LEFT", row, "LEFT", 562, 0)
-		bestRankText:SetWidth(66)
+		bestRankText:SetPoint("LEFT", row, "LEFT", 608, 0)
+		bestRankText:SetWidth(62)
 		bestRankText:SetJustifyH("RIGHT")
 		row.bestRankTextFrame = bestRankText
 
 		local bossDpsText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		bossDpsText:SetPoint("LEFT", row, "LEFT", 616, 0)
-		bossDpsText:SetWidth(68)
+		bossDpsText:SetPoint("LEFT", row, "LEFT", 664, 0)
+		bossDpsText:SetWidth(60)
 		bossDpsText:SetJustifyH("RIGHT")
 		bossDpsText:Hide()
 		row.bossDpsTextFrame = bossDpsText
 
 		local phase2Text = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		phase2Text:SetPoint("LEFT", row, "LEFT", 638, 0)
-		phase2Text:SetWidth(106)
+		phase2Text:SetPoint("LEFT", row, "LEFT", 684, 0)
+		phase2Text:SetWidth(92)
 		phase2Text:SetJustifyH("RIGHT")
 		if not showPhase2History then
 			phase2Text:Hide()
@@ -12693,8 +13782,8 @@ if type(coolstats) == "table" then
 		row.phase2TextFrame = phase2Text
 
 		local cacheText = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-		cacheText:SetPoint("LEFT", row, "LEFT", showPhase2History and 754 or 638, 0)
-		cacheText:SetWidth(showPhase2History and 88 or 104)
+		cacheText:SetPoint("LEFT", row, "LEFT", showPhase2History and 786 or 684, 0)
+		cacheText:SetWidth(showPhase2History and 86 or 110)
 		cacheText:SetJustifyH("RIGHT")
 		row.cacheTextFrame = cacheText
 
@@ -12768,9 +13857,10 @@ if type(coolstats) == "table" then
 			end
 			self.searchDelay = nil
 			self:SetScript("OnUpdate", nil)
+			coolstats.HideGuildPickerPopup()
 			coolstats.ClearUwUTooltipCache()
-			coolstats.ClearCachedPlayerBrowserBossFilterOnClose(self)
-			coolstats.ClearCachedPlayerBrowserResultCache(self, false)
+			coolstats.ClearCachedPlayerBrowserFiltersOnClose(self)
+			coolstats.ClearCachedPlayerBrowserResultCache(self, true)
 			coolstats.ScheduleCachedPlayerBrowserGarbageCollector(8)
 		end)
 		local title = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
@@ -12838,6 +13928,8 @@ if type(coolstats) == "table" then
 			panel.searchBox.suppressTextChanged = nil
 			panel.browserClassFilter = nil
 			panel.browserSpecFilterKey = nil
+			panel.browserGuildFilterKey = nil
+			panel.browserGuildFilterName = nil
 			panel.browserBossIndex = nil
 			panel.browserBossName = nil
 			if panel.browserSortKey == "boss" or panel.browserSortKey == "bossRank" or panel.browserSortKey == "bossDps" then
@@ -12931,66 +14023,72 @@ if type(coolstats) == "table" then
 		panel.changelogButton = changelogButton
 
 		local classFilter = coolstats.CreateCachedPlayerBrowserClassDropdown(panel)
-		classFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 34, -84)
+		classFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 22, -84)
 		panel.classFilter = classFilter
 		coolstats.CreateCachedPlayerBrowserClassResetButton(panel, classFilter)
 		local specFilter = coolstats.CreateCachedPlayerBrowserSpecDropdown(panel)
-		specFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 244, -84)
+		specFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 246, -84)
 		panel.specFilter = specFilter
 		coolstats.CreateCachedPlayerBrowserSpecResetButton(panel, specFilter)
+		local guildFilter = coolstats.CreateCachedPlayerBrowserGuildDropdown(panel)
+		guildFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 470, -84)
+		panel.guildFilter = guildFilter
+		coolstats.CreateCachedPlayerBrowserGuildResetButton(panel, guildFilter)
 		local bossFilter = coolstats.CreateCachedPlayerBrowserBossDropdown(panel)
-		bossFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 488, -84)
+		bossFilter:SetPoint("TOPLEFT", panel, "TOPLEFT", 694, -84)
 		panel.bossFilter = bossFilter
 		coolstats.CreateCachedPlayerBrowserBossResetButton(panel, bossFilter)
 		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
 
 		local header = CreateFrame("Frame", nil, panel)
-		SetFrameSize(header, 860, 18)
-		header:SetPoint("TOPLEFT", panel, "TOPLEFT", 46, -124)
+		SetFrameSize(header, 880, 18)
+		header:SetPoint("TOPLEFT", panel, "TOPLEFT", 24, -124)
 		header.columns = {}
 		coolstats.ApplyCachedPlayerBrowserHeaderBackground(header)
-		header.nameText = coolstats.CreateCachedPlayerBrowserColumn(header, "Name", 40, 145, "LEFT", "name")
-		header.mainSpecText = coolstats.CreateCachedPlayerBrowserColumn(header, "Main Spec", 190, 84, "CENTER", "main")
-		header.offSpecText = coolstats.CreateCachedPlayerBrowserColumn(header, "Off Spec", 280, 84, "CENTER", "off")
-		header.logsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Logs", 370, 32, "CENTER", "logs")
-		header.gearText = coolstats.CreateCachedPlayerBrowserColumn(header, "Gear", 405, 32, "CENTER", "gear")
-		header.talentsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Talents", 440, 44, "CENTER", "talents")
+		header.nameText = coolstats.CreateCachedPlayerBrowserColumn(header, "Name", 40, 120, "LEFT", "name")
+		header.mainSpecText = coolstats.CreateCachedPlayerBrowserColumn(header, "Main Spec", 165, 74, "CENTER", "main")
+		header.offSpecText = coolstats.CreateCachedPlayerBrowserColumn(header, "Off Spec", 244, 74, "CENTER", "off")
+		header.guildText = coolstats.CreateCachedPlayerBrowserColumn(header, "Guild", 323, 92, "CENTER", "guild")
+		header.logsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Logs", 421, 32, "CENTER", "logs")
+		header.gearText = coolstats.CreateCachedPlayerBrowserColumn(header, "Gear", 456, 32, "CENTER", "gear")
+		header.talentsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Talents", 491, 44, "CENTER", "talents")
 		header.cacheGuideTarget = CreateFrame("Frame", nil, header)
 		SetFrameSize(header.cacheGuideTarget, 84, 18)
 		header.cacheGuideTarget:SetPoint("LEFT", header, "LEFT", 402, 0)
 		header.cacheGuideTarget:EnableMouse(false)
 		local phaseLabels = coolstats.GetCachedPlayerBrowserPhaseLabels()
-		header.scoreText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and phaseLabels.currentParse or "Parses", 494, 60, "RIGHT", "parses")
-		header.rankText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and phaseLabels.currentRank or "Best Rank", 562, 66, "RIGHT", "rank")
-		header.dpsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Boss DPS", 616, 68, "RIGHT", "bossDps")
+		header.scoreText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and phaseLabels.currentParse or "Parses", 545, 58, "RIGHT", "parses")
+		header.rankText = coolstats.CreateCachedPlayerBrowserColumn(header, panel.showPhase2History and phaseLabels.currentRank or "Best Rank", 608, 62, "RIGHT", "rank")
+		header.dpsText = coolstats.CreateCachedPlayerBrowserColumn(header, "Boss DPS", 664, 60, "RIGHT", "bossDps")
 		header.dpsText:Hide()
-		header.phase2Text = coolstats.CreateCachedPlayerBrowserColumn(header, phaseLabels.historyOverall or "Previous Overall", 638, 106, "RIGHT", "phase2")
+		header.phase2Text = coolstats.CreateCachedPlayerBrowserColumn(header, phaseLabels.historyOverall or "Previous Overall", 684, 92, "RIGHT", "phase2")
 		if not panel.showPhase2History then
 			header.phase2Text:Hide()
 		end
-		header.cacheText = coolstats.CreateCachedPlayerBrowserColumn(header, "Gear Cached", panel.showPhase2History and 754 or 638, panel.showPhase2History and 88 or 104, "RIGHT", "cache")
+		header.cacheText = coolstats.CreateCachedPlayerBrowserColumn(header, "Gear Cached", panel.showPhase2History and 786 or 684, panel.showPhase2History and 86 or 110, "RIGHT", "cache")
 		header.columns[1] = header.nameText
 		header.columns[2] = header.mainSpecText
 		header.columns[3] = header.offSpecText
-		header.columns[4] = header.logsText
-		header.columns[5] = header.gearText
-		header.columns[6] = header.talentsText
-		header.columns[7] = header.scoreText
-		header.columns[8] = header.rankText
+		header.columns[4] = header.guildText
+		header.columns[5] = header.logsText
+		header.columns[6] = header.gearText
+		header.columns[7] = header.talentsText
+		header.columns[8] = header.scoreText
+		header.columns[9] = header.rankText
 		if panel.showPhase2History then
-			header.columns[9] = header.dpsText
-			header.columns[10] = header.phase2Text
-			header.columns[11] = header.cacheText
+			header.columns[10] = header.dpsText
+			header.columns[11] = header.phase2Text
+			header.columns[12] = header.cacheText
 		else
-			header.columns[9] = header.dpsText
-			header.columns[10] = header.cacheText
+			header.columns[10] = header.dpsText
+			header.columns[11] = header.cacheText
 		end
 		panel.header = header
 		panel.listTop = header
 
 		local scrollFrame = CreateFrame("ScrollFrame", "coolstatsCachedPlayerBrowserScrollFrame", panel, "FauxScrollFrameTemplate")
-		SetFrameSize(scrollFrame, 860, 342)
-		scrollFrame:SetPoint("TOPLEFT", panel, "TOPLEFT", 46, -144)
+		SetFrameSize(scrollFrame, 880, 342)
+		scrollFrame:SetPoint("TOPLEFT", panel, "TOPLEFT", 24, -144)
 		scrollFrame:SetScript("OnVerticalScroll", function(self, offset)
 			if FauxScrollFrame_OnVerticalScroll then
 				FauxScrollFrame_OnVerticalScroll(self, offset, 18, coolstats.PaintCachedPlayerBrowserRows)
@@ -13064,13 +14162,14 @@ if type(coolstats) == "table" then
 				shownText = shownText .. string.format(" (data %d/%d)", counts.realmDataLoadedPlayers, counts.realmDataTotalPlayers)
 			end
 		end
+		local guildText = type(panel.browserGuildFilterName) == "string" and panel.browserGuildFilterName ~= "" and ("   Guild <" .. panel.browserGuildFilterName .. ">") or ""
 		if panel.showPhase2History then
 			local bossText = panel.browserBossIndex and string.format("   Boss Logs %d", counts.boss or 0) or ""
 			local phaseLabels = coolstats.GetCachedPlayerBrowserPhaseLabels()
-			panel.subtitle:SetText(string.format("%s   %s %d   %s %d   Gear %d   Talents %d   Both %d%s", shownText, phaseLabels.currentCount or "Logs", counts.current or 0, phaseLabels.historyCount or "History", counts.phase2 or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
+			panel.subtitle:SetText(string.format("%s   %s %d   %s %d   Gear %d   Talents %d   Both %d%s%s", shownText, phaseLabels.currentCount or "Logs", counts.current or 0, phaseLabels.historyCount or "History", counts.phase2 or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText, guildText))
 		else
 			local bossText = panel.browserBossIndex and string.format("   Boss Logs %d", counts.boss or 0) or ""
-			panel.subtitle:SetText(string.format("%s   Logs %d   Gear %d   Talents %d   Both %d%s", shownText, counts.logs or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText))
+			panel.subtitle:SetText(string.format("%s   Logs %d   Gear %d   Talents %d   Both %d%s%s", shownText, counts.logs or 0, counts.gear or 0, counts.talents or 0, counts.both or 0, bossText, guildText))
 		end
 		if panel.generatedText then
 			panel.generatedText:SetText(coolstats.FormatCachedPlayerBrowserGeneratedAt())
@@ -13096,7 +14195,7 @@ if type(coolstats) == "table" then
 		for index = 1, 18 do
 			local row = rows[offset + index]
 			if row then
-				paintKey = paintKey .. "\030" .. tostring(row.key or row.name or "") .. ":" .. tostring(row.isFavorite or "") .. ":" .. tostring(row.isCurrentPlayer or "") .. ":" .. tostring(row.hasGear or "") .. ":" .. tostring(row.hasTalents or "") .. ":" .. tostring(row.scoreCenti or "") .. ":" .. tostring(row.bestRank or "") .. ":" .. tostring(row.bossScoreCenti or "") .. ":" .. tostring(row.bossDps or "")
+				paintKey = paintKey .. "\030" .. tostring(row.key or row.name or "") .. ":" .. tostring(row.isFavorite or "") .. ":" .. tostring(row.isCurrentPlayer or "") .. ":" .. tostring(row.hasGear or "") .. ":" .. tostring(row.hasTalents or "") .. ":" .. tostring(row.guildName or "") .. ":" .. tostring(row.scoreCenti or "") .. ":" .. tostring(row.bestRank or "") .. ":" .. tostring(row.bossScoreCenti or "") .. ":" .. tostring(row.bossDps or "")
 			else
 				paintKey = paintKey .. "\030-"
 			end
@@ -13125,6 +14224,16 @@ if type(coolstats) == "table" then
 				rowFrame.hasLogs = row.hasLogs
 				rowFrame.hasGear = row.hasGear
 				rowFrame.hasTalents = row.hasTalents
+				rowFrame.guildName = row.guildName
+				if rowFrame.guildTextFrame then
+					if row.guildName and row.guildName ~= "" then
+						rowFrame.guildTextFrame:SetText(row.guildName)
+						rowFrame.guildTextFrame:SetTextColor(0.0, 0.75, 1.0)
+					else
+						rowFrame.guildTextFrame:SetText("-")
+						rowFrame.guildTextFrame:SetTextColor(0.62, 0.62, 0.58)
+					end
+				end
 				rowFrame.cacheText = display and display.cacheText or coolstats.GetCachedPlayerBrowserCacheText(row)
 				rowFrame.className = display and display.className or coolstats.GetCachedPlayerBrowserClassName(row.classIndex)
 				rowFrame.bestRankText = display and display.bestRankText or (row.currentPhaseRanked and row.bestRank and ("#" .. tostring(row.bestRank)) or "-")
@@ -13278,6 +14387,7 @@ if type(coolstats) == "table" then
 				rowFrame.hasLogs = nil
 				rowFrame.hasGear = nil
 				rowFrame.hasTalents = nil
+				rowFrame.guildName = nil
 				rowFrame.className = nil
 				rowFrame.bestRankText = nil
 				rowFrame.bestRankSpecName = nil
@@ -13293,6 +14403,9 @@ if type(coolstats) == "table" then
 				rowFrame.bossDpsText = nil
 				if rowFrame.talentsText then
 					rowFrame.talentsText:SetText("")
+				end
+				if rowFrame.guildTextFrame then
+					rowFrame.guildTextFrame:SetText("")
 				end
 				if rowFrame.bossDpsTextFrame then
 					rowFrame.bossDpsTextFrame:SetText("")
@@ -13371,6 +14484,48 @@ if type(coolstats) == "table" then
 			coolstats.PlayCachedPlayerBrowserGuildBankSound(true)
 		end
 	end
+
+	function coolstats.OpenCachedPlayerBrowserGuild(guildName)
+		guildName = tostring(guildName or "")
+		guildName = string.gsub(guildName, "^%s+", "")
+		guildName = string.gsub(guildName, "%s+$", "")
+		local guildKey = NormalizeName(guildName)
+		if guildKey == "" then
+			return false
+		end
+		if coolstats.EnsureRealmDataLoaded then
+			coolstats.EnsureRealmDataLoaded()
+		end
+		local panel = coolstats.CreateCachedPlayerBrowser()
+		local wasShown = panel and panel:IsShown()
+		panel.searchBox.suppressTextChanged = true
+		panel.searchBox:SetText("")
+		panel.searchBox.suppressTextChanged = nil
+		panel.browserClassFilter = nil
+		panel.browserSpecFilterKey = nil
+		panel.browserBossIndex = nil
+		panel.browserBossName = nil
+		panel.browserGuildFilterKey = guildKey
+		panel.browserGuildFilterName = guildName
+		if panel.browserSortKey == "boss" or panel.browserSortKey == "bossRank" or panel.browserSortKey == "bossDps" then
+			panel.browserSortKey = nil
+			panel.browserSortState = nil
+		end
+		coolstats.UpdateCachedPlayerBrowserFilterButtons(panel)
+		coolstats.RefreshCachedPlayerBrowser(true)
+		panel:Show()
+		if panel.Raise then
+			panel:Raise()
+		end
+		coolstats.RaiseManagedWindow(panel)
+		if panel.Raise then
+			panel:Raise()
+		end
+		if not wasShown and coolstats.PlayCachedPlayerBrowserGuildBankSound then
+			coolstats.PlayCachedPlayerBrowserGuildBankSound(true)
+		end
+		return true
+	end
 end
 
 local function AddTooltipLines()
@@ -13383,9 +14538,6 @@ local function AddTooltipLines()
 		return
 	end
 	local options = coolstats.GetTooltipFeatureOptions()
-	if coolstats.IsGearCachingEnabled() then
-		CacheInspectGearForUnit(unit)
-	end
 
 	if options.guildRank ~= false then
 		ApplyGuildRankLine(unit)
@@ -13455,6 +14607,7 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 			PruneRaidProgressCache(true)
 			PruneCachedGearCache(true)
 			coolstats.PruneCachedTalentCache(true)
+			coolstats.PruneCachedGuildCache(true)
 			HookInspectUwUPanel()
 		elseif addonName == "Blizzard_InspectUI" then
 			HookInspectUwUPanel()

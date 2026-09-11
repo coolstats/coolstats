@@ -32,6 +32,8 @@ local updateElapsed = 0
 local tooltipsHooked = false
 local gearScoreTamed = false
 local QueueUpdate
+coolstats.paperDollSocketTypeCache = coolstats.paperDollSocketTypeCache or {}
+coolstats.paperDollGemEntryCache = coolstats.paperDollGemEntryCache or {}
 coolstats.UPDATE_DELAY_SECONDS = coolstats.UPDATE_DELAY_SECONDS or 0.08
 coolstats.updateCenterLastBroadcastAt = coolstats.updateCenterLastBroadcastAt or 0
 coolstats.updateCenterRequestUntil = coolstats.updateCenterRequestUntil or 0
@@ -2332,14 +2334,21 @@ function coolstats.GetPaperDollItemSocketTypes(itemLink)
 	if not itemLink then
 		return nil
 	end
+	local cacheKey = coolstats.GetPaperDollUngemmedItemString(itemLink) or itemLink
+	local cached = coolstats.paperDollSocketTypeCache[cacheKey]
+	if cached ~= nil then
+		return cached ~= false and cached or nil
+	end
 
 	local expectedCount = coolstats.GetPaperDollExpectedSocketCount(itemLink)
 	if expectedCount <= 0 then
+		coolstats.paperDollSocketTypeCache[cacheKey] = false
 		return nil
 	end
 
 	local tooltip = coolstats.GetPaperDollSocketTooltip()
 	if not tooltip then
+		coolstats.paperDollSocketTypeCache[cacheKey] = false
 		return nil
 	end
 
@@ -2397,6 +2406,7 @@ function coolstats.GetPaperDollItemSocketTypes(itemLink)
 		sockets[#sockets + 1] = "PRISMATIC"
 	end
 
+	coolstats.paperDollSocketTypeCache[cacheKey] = sockets
 	return sockets
 end
 
@@ -2464,6 +2474,10 @@ function coolstats.GetPaperDollGemEntriesFromItemLink(itemLink)
 	if not itemLink then
 		return nil
 	end
+	local cached = coolstats.paperDollGemEntryCache[itemLink]
+	if cached ~= nil then
+		return cached ~= false and cached or nil
+	end
 
 	local gems = nil
 	local socketTypes = coolstats.GetPaperDollItemSocketTypes(itemLink)
@@ -2472,6 +2486,7 @@ function coolstats.GetPaperDollGemEntriesFromItemLink(itemLink)
 		return nil
 	end
 
+	local pendingItemInfo = false
 	for index = 1, max(3, socketCount) do
 		local gemLink = nil
 		if GetItemGem then
@@ -2489,6 +2504,8 @@ function coolstats.GetPaperDollGemEntriesFromItemLink(itemLink)
 				gem.socketType = socketTypes and socketTypes[index] or gem.gemSocketType or gem.socketType
 				gem.socketIndex = index
 				gems[#gems + 1] = gem
+			else
+				pendingItemInfo = true
 			end
 		elseif socketTypes and socketTypes[index] then
 			if not gems then
@@ -2502,6 +2519,9 @@ function coolstats.GetPaperDollGemEntriesFromItemLink(itemLink)
 		end
 	end
 
+	if not pendingItemInfo then
+		coolstats.paperDollGemEntryCache[itemLink] = gems or false
+	end
 	return gems
 end
 
@@ -7990,12 +8010,51 @@ local function TameGearScore()
 	HideFontString(_G.GearScore2)
 end
 
+coolstats.GEAR_SCORE_TOOLTIP_HIDDEN_TOKENS = coolstats.GEAR_SCORE_TOOLTIP_HIDDEN_TOKENS or { "Spec" .. "Score", "Custom" .. "Score", "Hunter" .. "Score" }
+
+function coolstats.IsInspectPaperDollItemTooltip(tooltip)
+	if not InspectFrame or not InspectFrame:IsShown() or not tooltip or not tooltip.GetOwner then
+		return false
+	end
+	local owner = tooltip:GetOwner()
+	if not owner then
+		return false
+	end
+	local ownerName = owner.GetName and owner:GetName()
+	if ownerName and match(ownerName, "^Inspect.*Slot$") then
+		return true
+	end
+	local parent = owner.GetParent and owner:GetParent()
+	while parent do
+		if parent == InspectFrame or parent == InspectPaperDollFrame then
+			return true
+		end
+		parent = parent.GetParent and parent:GetParent()
+	end
+	if tooltip.GetItem and GetInventoryItemLink then
+		local _, tooltipLink = tooltip:GetItem()
+		local unit = GetInspectUnit()
+		if tooltipLink and unit and UnitExists(unit) then
+			for index = 1, #inspectSlotButtons do
+				local slot = inspectSlotButtons[index].slot
+				if slot and GetInventoryItemLink(unit, slot) == tooltipLink then
+					return true
+				end
+			end
+		end
+	end
+	return false
+end
+
 local function CleanTooltip(tooltip)
 	if not db or not db.cleanGearScoreTooltips or not tooltip or not tooltip.GetName or not tooltip.NumLines then
 		return
 	end
+	if coolstats.IsInspectPaperDollItemTooltip(tooltip) then
+		return
+	end
 
-	local hiddenScoreTokens = { "Spec" .. "Score", "Custom" .. "Score", "Hunter" .. "Score" }
+	local hiddenScoreTokens = coolstats.GEAR_SCORE_TOOLTIP_HIDDEN_TOKENS
 	local name = tooltip:GetName()
 	local lines = tooltip:NumLines() or 0
 	for index = 1, lines do
@@ -8021,9 +8080,15 @@ local function HookTooltip(tooltip)
 	tooltip.__coolstatsCleanHooked = true
 	tooltip:HookScript("OnTooltipSetItem", function(self)
 		TameGearScore()
+		if coolstats.IsInspectPaperDollItemTooltip(self) then
+			return
+		end
 		CleanTooltip(self)
 	end)
 	tooltip:HookScript("OnTooltipCleared", function(self)
+		if coolstats.IsInspectPaperDollItemTooltip(self) then
+			return
+		end
 		CleanTooltip(self)
 	end)
 end
@@ -8081,6 +8146,8 @@ local function RefreshCharacterHooks()
 	if InspectFrame and not InspectFrame.__coolstatsHooked then
 		InspectFrame.__coolstatsHooked = true
 		InspectFrame:HookScript("OnShow", function()
+			coolstats.lastCharacterInspectReadyKey = nil
+			coolstats.lastCharacterInspectReadyAt = 0
 			CreateBadges()
 			CreateInspectSummary()
 			coolstats.CreatePaperDollGemToggleButton()
@@ -8089,6 +8156,8 @@ local function RefreshCharacterHooks()
 		end)
 		InspectFrame:HookScript("OnHide", function()
 			coolstats.lastInspectGemUnitKey = nil
+			coolstats.lastCharacterInspectReadyKey = nil
+			coolstats.lastCharacterInspectReadyAt = 0
 			coolstats.ClearInspectPaperDollGems()
 			UpdateAllImmediate()
 		end)
@@ -8173,7 +8242,7 @@ function coolstats.PrintPerformanceSnapshot(label)
 		local status = coolstats.GetCachedPlayerBrowserStatus()
 		if status and status.memory then
 			Print(prefix .. "Memory in use " .. coolstats.FormatPerformanceMemory(status.memoryKB) .. " (core " .. coolstats.FormatPerformanceMemory(status.memory.core) .. ", data " .. coolstats.FormatPerformanceMemory(status.memory.data) .. ", cache " .. coolstats.FormatPerformanceMemory(status.memory.cache) .. ")")
-			Print(prefix .. "Cached gear " .. tostring(status.gear or 0) .. ", talents " .. tostring(status.talents or 0))
+			Print(prefix .. "Cached gear " .. tostring(status.gear or 0) .. ", talents " .. tostring(status.talents or 0) .. ", guild links " .. tostring(status.guilds or 0))
 			if status.memory.raidLayers and #status.memory.raidLayers > 0 then
 				for index = 1, #status.memory.raidLayers do
 					local layer = status.memory.raidLayers[index]
@@ -8209,8 +8278,9 @@ function coolstats.PrintPerformanceSnapshot(label)
 		if stats then
 			local shownText = stats.browserShown and "shown" or "closed"
 			local bossText = stats.bossIndex and (" boss " .. tostring(stats.bossIndex)) or ""
+			local guildText = stats.guildFilter and (" guild " .. tostring(stats.guildFilter)) or ""
 			local sortText = stats.sortKey and (" sort " .. tostring(stats.sortKey) .. ":" .. tostring(stats.sortState or "default")) or " sort default"
-			Print(prefix .. "Browser runtime " .. shownText .. " rows " .. tostring(stats.browserRows or 0) .. " query " .. (stats.queryCached and "cached" or "none") .. " qrows " .. tostring(stats.queryRows or 0) .. sortText .. bossText)
+			Print(prefix .. "Browser runtime " .. shownText .. " rows " .. tostring(stats.browserRows or 0) .. " query " .. (stats.queryCached and "cached" or "none") .. " qrows " .. tostring(stats.queryRows or 0) .. sortText .. bossText .. guildText)
 			if (stats.sortedOrders or 0) > 0 then
 				Print(prefix .. "Browser sorted orders " .. tostring(stats.sortedOrders or 0) .. " arrays / " .. tostring(stats.sortedOrderRows or 0) .. " row refs")
 			end
@@ -8219,7 +8289,7 @@ function coolstats.PrintPerformanceSnapshot(label)
 	if coolstats.GetCachedPlayerBrowserCacheWeightStats then
 		local weights = coolstats.GetCachedPlayerBrowserCacheWeightStats()
 		if weights then
-			Print(prefix .. "Approx cache weight gear " .. coolstats.FormatPerformanceMemory(weights.gearKB or 0) .. ", talents " .. coolstats.FormatPerformanceMemory(weights.talentKB or 0) .. ", total " .. coolstats.FormatPerformanceMemory(weights.totalKB or 0))
+			Print(prefix .. "Approx cache weight gear " .. coolstats.FormatPerformanceMemory(weights.gearKB or 0) .. ", talents " .. coolstats.FormatPerformanceMemory(weights.talentKB or 0) .. ", guilds " .. coolstats.FormatPerformanceMemory(weights.guildKB or 0) .. ", total " .. coolstats.FormatPerformanceMemory(weights.totalKB or 0))
 		end
 	end
 end
@@ -8429,8 +8499,9 @@ coolstats.characterPanelEventFrame:SetScript("OnEvent", function(self, event, ar
 	end
 
 	if event == "GET_ITEM_INFO_RECEIVED" then
+		coolstats.paperDollGemEntryCache = {}
 		if PaperDollIsVisible() or (InspectFrame and InspectFrame:IsShown()) then
-			coolstats.RunCharacterPanelUpdateCategories({ gear = true, stats = true })
+			QueueUpdate({ "gear", "stats" })
 		end
 		return
 	end
@@ -8444,6 +8515,15 @@ coolstats.characterPanelEventFrame:SetScript("OnEvent", function(self, event, ar
 	if not ui.panel and CharacterFrame then
 		InitializeUI()
 	end
+	if event == "INSPECT_READY" and InspectFrame and InspectFrame:IsShown() then
+		local inspectKey = coolstats.GetInspectGemUnitKey and coolstats.GetInspectGemUnitKey()
+		if inspectKey and inspectKey == coolstats.lastCharacterInspectReadyKey then
+			return
+		end
+		coolstats.lastCharacterInspectReadyKey = inspectKey
+		coolstats.lastCharacterInspectReadyAt = GetTime and GetTime() or 0
+	end
+
 	if event == "PLAYER_EQUIPMENT_CHANGED" or event == "UNIT_INVENTORY_CHANGED" or event == "INSPECT_READY" then
 		QueueUpdate({ "gear", "stats" })
 	elseif event == "UNIT_STATS" or event == "UNIT_AURA" or event == "UNIT_MAXHEALTH" or event == "UNIT_MAXPOWER" or event == "UNIT_MAXMANA" or event == "UNIT_MAXRAGE" or event == "UNIT_MAXENERGY" or event == "UNIT_MAXRUNIC_POWER" or event == "COMBAT_RATING_UPDATE" then
