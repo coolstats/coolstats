@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+## 0.2.48 - 2026-09-13
+
+### Data
+
+- Refreshed Lordaeron and Icecrown through the weekly UwU Logs pipeline using
+  the realm-aware top 1,000 and top 1,500 players per class/spec caps, with
+  duplicate-name verification and targeted boss-row repair.
+- Shipped Lordaeron with 15,101 current ranked players and 15,654 total players
+  in 6 chunks, and Icecrown with 33,976 current ranked players and 36,279 total
+  players in 13 chunks.
+- Checked Onyxia with the top-600 weekly profile and preserved the existing
+  Phase 4 dataset after the updater found only 101 fresh active players, below
+  the safety floor for overwriting generated data.
+
 ## 0.2.47 - 2026-09-11
 
 ### Player Browser

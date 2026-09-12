@@ -7,2793 +7,2806 @@ local players = coolstatsUwUData and coolstatsUwUData.players
 if not players or not coolstatsUwUData or coolstatsUwUData.loadLimit == 0 then
 	return
 end
-players["omgburst"] = { "Omgburst", 10000, 0, 1, 1, { [1] = 10000, [3] = 9769 }, { [1] = 1, [3] = 120 }, nil, nil, nil, true }
-players["scourx"] = { "Scourx", 9998, 0, 1, 2, { [1] = 9998, [3] = 9991 }, { [1] = 2, [3] = 6 }, nil, nil, nil, true }
-players["besterx"] = { "Besterx", 9997, 0, 1, 3, { [1] = 9997, [3] = 9738 }, { [1] = 3, [3] = 132 }, nil, nil, nil, true }
-players["simplydk"] = { "Simplydk", 9994, 0, 1, 4, { [1] = 9994, [2] = 6928 }, { [1] = 4, [2] = 1000 }, nil, nil, nil, true }
-players["ebolavictim"] = { "Ebolavictim", 9992, 0, 1, 5, { [1] = 9992, [2] = 9660, [3] = 8668 }, { [1] = 5, [2] = 79, [3] = 847 }, nil, nil, nil, true }
-players["chillxdogx"] = { "Chillxdogx", 9987, 0, 1, 6, { [1] = 9987, [3] = 9718 }, { [1] = 6, [3] = 147 }, nil, nil, nil, true }
-players["zorg"] = { "Zorg", 9986, 0, 1, 7, { [1] = 9986, [3] = 3623 }, { [1] = 7, [3] = 7201 }, nil, nil, nil, true }
-players["chillxgodx"] = { "Chillxgodx", 9978, 0, 1, 9, { [1] = 9978, [2] = 7904, [3] = 9552 }, { [1] = 9, [2] = 636, [3] = 225 }, nil, nil, nil, true }
-players["braxxia"] = { "Braxxia", 9978, 0, 1, 10, { [1] = 9978, [2] = 9871, [3] = 8380 }, { [1] = 10, [2] = 26, [3] = 1090 }, nil, nil, nil, true }
-players["ninjut"] = { "Ninjut", 9973, 0, 1, 11, { [1] = 9973, [2] = 786, [3] = 6816 }, { [1] = 11, [2] = 4958, [3] = 2652 }, nil, nil, nil, true }
-players["shadowrune"] = { "Shadowrune", 9971, 0, 1, 12, { [1] = 9971, [3] = 9748 }, { [1] = 12, [3] = 129 }, nil, nil, nil, true }
-players["palepad"] = { "Palepad", 9971, 0, 1, 13, { [1] = 9971, [2] = 9632, [3] = 9782 }, { [1] = 13, [2] = 89, [3] = 116 }, nil, nil, nil, true }
-players["miracled"] = { "Miracled", 9968, 0, 1, 14, { [1] = 9968, [3] = 9211 }, { [1] = 14, [3] = 420 }, nil, nil, nil, true }
-players["unwhorydk"] = { "Unwhorydk", 9968, 0, 1, 15, { [1] = 9968, [2] = 9578 }, { [1] = 15, [2] = 106 }, nil, nil, nil, true }
-players["khuran"] = { "Khuran", 9967, 0, 1, 16, { [1] = 9967, [3] = 9583 }, { [1] = 16, [3] = 208 }, nil, nil, nil, true }
-players["ibrahimovic"] = { "Ibrahimovic", 9966, 0, 1, 17, { [1] = 9966, [2] = 8438 }, { [1] = 17, [2] = 455 }, nil, nil, nil, true }
+players["omgburst"] = { "Omgburst", 10000, 0, 1, 1, { [1] = 10000, [3] = 9768 }, { [1] = 1, [3] = 120 }, nil, nil, nil, true }
+players["scourx"] = { "Scourx", 9997, 0, 1, 2, { [1] = 9997, [3] = 9990 }, { [1] = 2, [3] = 6 }, nil, nil, nil, true }
+players["besterx"] = { "Besterx", 9996, 0, 1, 3, { [1] = 9996, [3] = 9735 }, { [1] = 3, [3] = 133 }, nil, nil, nil, true }
+players["simplydk"] = { "Simplydk", 9994, 0, 1, 4, { [1] = 9994, [2] = 6927 }, { [1] = 4, [2] = 1000 }, nil, nil, nil, true }
+players["ebolavictim"] = { "Ebolavictim", 9991, 0, 1, 5, { [1] = 9991, [2] = 9659, [3] = 8663 }, { [1] = 5, [2] = 79, [3] = 854 }, nil, nil, nil, true }
+players["chillxdogx"] = { "Chillxdogx", 9986, 0, 1, 6, { [1] = 9986, [3] = 9717 }, { [1] = 6, [3] = 147 }, nil, nil, nil, true }
+players["zorg"] = { "Zorg", 9986, 0, 1, 7, { [1] = 9986, [3] = 3614 }, { [1] = 7, [3] = 7235 }, nil, nil, nil, true }
+players["chillxgodx"] = { "Chillxgodx", 9978, 0, 1, 9, { [1] = 9978, [2] = 7908, [3] = 9550 }, { [1] = 9, [2] = 638, [3] = 226 }, nil, nil, nil, true }
+players["braxxia"] = { "Braxxia", 9977, 0, 1, 10, { [1] = 9977, [2] = 9870, [3] = 8374 }, { [1] = 10, [2] = 26, [3] = 1098 }, nil, nil, nil, true }
+players["ninjut"] = { "Ninjut", 9972, 0, 1, 11, { [1] = 9972, [2] = 785, [3] = 6806 }, { [1] = 11, [2] = 4982, [3] = 2665 }, nil, nil, nil, true }
+players["shadowrune"] = { "Shadowrune", 9971, 0, 1, 12, { [1] = 9971, [3] = 9747 }, { [1] = 12, [3] = 130 }, nil, nil, nil, true }
+players["palepad"] = { "Palepad", 9971, 0, 1, 13, { [1] = 9971, [2] = 9632, [3] = 9779 }, { [1] = 13, [2] = 89, [3] = 116 }, nil, nil, nil, true }
+players["khuran"] = { "Khuran", 9970, 0, 1, 14, { [1] = 9970, [3] = 9582 }, { [1] = 14, [3] = 210 }, nil, nil, nil, true }
+players["miracled"] = { "Miracled", 9968, 0, 1, 15, { [1] = 9968, [3] = 9207 }, { [1] = 15, [3] = 423 }, nil, nil, nil, true }
+players["unwhorydk"] = { "Unwhorydk", 9967, 0, 1, 16, { [1] = 9967, [2] = 9578 }, { [1] = 16, [2] = 107 }, nil, nil, nil, true }
+players["ibrahimovic"] = { "Ibrahimovic", 9966, 0, 1, 17, { [1] = 9966, [2] = 8439 }, { [1] = 17, [2] = 455 }, nil, nil, nil, true }
 players["jodeath"] = { "Jodeath", 9964, 0, 1, 18, { [1] = 9964 }, { [1] = 18 }, nil, nil, nil, true }
-players["berjerk"] = { "Berjerk", 9964, 0, 1, 19, { [1] = 9964, [2] = 8457 }, { [1] = 19, [2] = 448 }, nil, nil, nil, true }
-players["hysterrya"] = { "Hysterrya", 9960, 0, 1, 20, { [1] = 9960 }, { [1] = 20 }, nil, nil, nil, true }
-players["doktordikej"] = { "Doktordikej", 9958, 0, 1, 21, { [1] = 9958, [2] = 627, [3] = 9527 }, { [1] = 21, [2] = 5200, [3] = 239 }, nil, nil, nil, true }
-players["halfers"] = { "Halfers", 9956, 0, 1, 22, { [1] = 9956, [2] = 9559, [3] = 8578 }, { [1] = 22, [2] = 114, [3] = 929 }, nil, nil, nil, true }
-players["bukmop"] = { "Bukmop", 9956, 0, 1, 23, { [1] = 9956, [3] = 9894 }, { [1] = 23, [3] = 54 }, nil, nil, nil, true }
-players["lhucyfer"] = { "Lhucyfer", 9956, 0, 1, 24, { [1] = 9956, [2] = 9151, [3] = 7615 }, { [1] = 24, [2] = 225, [3] = 1792 }, nil, nil, nil, true }
-players["icytosh"] = { "Icytosh", 9954, 0, 1, 25, { [1] = 9954, [2] = 8393 }, { [1] = 25, [2] = 472 }, nil, nil, nil, true }
-players["eradicating"] = { "Eradicating", 9953, 0, 1, 26, { [1] = 9953, [3] = 850 }, { [1] = 26, [3] = 12317 }, nil, nil, nil, true }
-players["icytouchftw"] = { "Icytouchftw", 9951, 0, 1, 27, { [1] = 9951, [2] = 4874, [3] = 9633 }, { [1] = 27, [2] = 1872, [3] = 191 }, nil, nil, nil, true }
-players["beerto"] = { "Beerto", 9951, 0, 1, 28, { [1] = 9951, [3] = 7296 }, { [1] = 28, [3] = 2111 }, nil, nil, nil, true }
-players["etendark"] = { "Etendark", 9950, 0, 1, 29, { [1] = 9950, [2] = 9059, [3] = 755 }, { [1] = 29, [2] = 257, [3] = 12405 }, nil, nil, nil, true }
-players["rimebag"] = { "Rimebag", 9948, 0, 1, 30, { [1] = 9948, [2] = 9320, [3] = 9647 }, { [1] = 30, [2] = 182, [3] = 187 }, nil, nil, nil, true }
-players["eggdropsoup"] = { "Eggdropsoup", 9945, 0, 1, 31, { [1] = 9945, [3] = 8952 }, { [1] = 31, [3] = 619 }, nil, nil, nil, true }
-players["blodforge"] = { "Blodforge", 9944, 0, 1, 32, { [1] = 9944, [3] = 6146 }, { [1] = 32, [3] = 3541 }, nil, nil, nil, true }
-players["riparche"] = { "Riparche", 9941, 0, 1, 33, { [1] = 9941, [2] = 5992, [3] = 9693 }, { [1] = 33, [2] = 1339, [3] = 161 }, nil, nil, nil, true }
-players["thishappened"] = { "Thishappened", 9939, 0, 1, 34, { [1] = 9939, [2] = 4466, [3] = 8828 }, { [1] = 34, [2] = 2365, [3] = 714 }, nil, nil, nil, true }
-players["lium"] = { "Lium", 9937, 0, 1, 35, { [1] = 9937, [3] = 8872 }, { [1] = 35, [3] = 686 }, nil, nil, nil, true }
-players["kazeshini"] = { "Kazeshini", 9937, 0, 1, 36, { [1] = 9937 }, { [1] = 36 }, nil, nil, nil, true }
-players["bishopdk"] = { "Bishopdk", 9931, 0, 1, 37, { [1] = 9931, [3] = 9234 }, { [1] = 37, [3] = 401 }, nil, nil, nil, true }
-players["sunkstina"] = { "Sunkstina", 9929, 0, 1, 39, { [1] = 9929, [3] = 8540 }, { [1] = 39, [3] = 953 }, nil, nil, nil, true }
-players["dke"] = { "Dke", 9928, 0, 1, 40, { [1] = 9928 }, { [1] = 40 }, nil, nil, nil, true }
-players["yourlastfunz"] = { "Yourlastfunz", 9925, 0, 1, 41, { [1] = 9925 }, { [1] = 41 }, nil, nil, nil, true }
-players["bertto"] = { "Bertto", 9922, 0, 1, 42, { [1] = 9922, [2] = 6680, [3] = 8187 }, { [1] = 42, [2] = 1091, [3] = 1250 }, nil, nil, nil, true }
-players["jetblood"] = { "Jetblood", 9920, 0, 1, 43, { [1] = 9920 }, { [1] = 43 }, nil, nil, nil, true }
-players["blooddrainer"] = { "Blooddrainer", 9920, 0, 1, 44, { [1] = 9920 }, { [1] = 44 }, nil, nil, nil, true }
-players["lemberg"] = { "Lemberg", 9918, 0, 1, 45, { [1] = 9918, [3] = 8060 }, { [1] = 45, [3] = 1382 }, nil, nil, nil, true }
-players["zexonyx"] = { "Zexonyx", 9915, 0, 1, 46, { [1] = 9915, [3] = 7090 }, { [1] = 46, [3] = 2341 }, nil, nil, nil, true }
-players["vileheart"] = { "Vileheart", 9913, 0, 1, 47, { [1] = 9913, [2] = 2553, [3] = 8003 }, { [1] = 47, [2] = 4157, [3] = 1433 }, nil, nil, nil, true }
-players["anyrunes"] = { "Anyrunes", 9910, 0, 1, 48, { [1] = 9910, [2] = 5237, [3] = 9693 }, { [1] = 48, [2] = 1626, [3] = 162 }, nil, nil, nil, true }
-players["zubila"] = { "Zubila", 9909, 0, 1, 49, { [1] = 9909 }, { [1] = 49 }, nil, nil, nil, true }
-players["goneinsane"] = { "Goneinsane", 9908, 0, 1, 50, { [1] = 9908, [2] = 1424, [3] = 5825 }, { [1] = 50, [2] = 4621, [3] = 3993 }, nil, nil, nil, true }
-players["macabredance"] = { "Macabredance", 9906, 0, 1, 51, { [1] = 9906, [2] = 9860, [3] = 8966 }, { [1] = 51, [2] = 28, [3] = 607 }, nil, nil, nil, true }
-players["breaddk"] = { "Breaddk", 9906, 0, 1, 52, { [1] = 9906, [3] = 8861 }, { [1] = 52, [3] = 693 }, nil, nil, nil, true }
-players["iscariiota"] = { "Iscariiota", 9905, 0, 1, 53, { [1] = 9905, [2] = 9424, [3] = 9122 }, { [1] = 53, [2] = 143, [3] = 493 }, nil, nil, nil, true }
-players["amnesiadk"] = { "Amnesiadk", 9902, 0, 1, 54, { [1] = 9902, [3] = 8580 }, { [1] = 54, [3] = 927 }, nil, nil, nil, true }
+players["berjerk"] = { "Berjerk", 9963, 0, 1, 19, { [1] = 9963, [2] = 8458 }, { [1] = 19, [2] = 448 }, nil, nil, nil, true }
+players["hysterrya"] = { "Hysterrya", 9959, 0, 1, 20, { [1] = 9959 }, { [1] = 20 }, nil, nil, nil, true }
+players["doktordikej"] = { "Doktordikej", 9958, 0, 1, 21, { [1] = 9958, [2] = 626, [3] = 9525 }, { [1] = 21, [2] = 5228, [3] = 240 }, nil, nil, nil, true }
+players["halfers"] = { "Halfers", 9956, 0, 1, 22, { [1] = 9956, [2] = 9558, [3] = 8571 }, { [1] = 22, [2] = 115, [3] = 940 }, nil, nil, nil, true }
+players["bukmop"] = { "Bukmop", 9955, 0, 1, 23, { [1] = 9955, [3] = 9893 }, { [1] = 23, [3] = 55 }, nil, nil, nil, true }
+players["lhucyfer"] = { "Lhucyfer", 9955, 0, 1, 24, { [1] = 9955, [2] = 9152, [3] = 7607 }, { [1] = 24, [2] = 225, [3] = 1801 }, nil, nil, nil, true }
+players["icytosh"] = { "Icytosh", 9954, 0, 1, 25, { [1] = 9954, [2] = 8392 }, { [1] = 25, [2] = 470 }, nil, nil, nil, true }
+players["eradicating"] = { "Eradicating", 9952, 0, 1, 26, { [1] = 9952, [3] = 850 }, { [1] = 26, [3] = 12360 }, nil, nil, nil, true }
+players["icytouchftw"] = { "Icytouchftw", 9951, 0, 1, 27, { [1] = 9951, [2] = 4874, [3] = 9630 }, { [1] = 27, [2] = 1882, [3] = 193 }, nil, nil, nil, true }
+players["beerto"] = { "Beerto", 9950, 0, 1, 28, { [1] = 9950, [3] = 7288 }, { [1] = 28, [3] = 2116 }, nil, nil, nil, true }
+players["etendark"] = { "Etendark", 9950, 0, 1, 29, { [1] = 9950, [2] = 9058, [3] = 749 }, { [1] = 29, [2] = 258, [3] = 12454 }, nil, nil, nil, true }
+players["rimebag"] = { "Rimebag", 9947, 0, 1, 30, { [1] = 9947, [2] = 9320, [3] = 9644 }, { [1] = 30, [2] = 182, [3] = 190 }, nil, nil, nil, true }
+players["eggdropsoup"] = { "Eggdropsoup", 9944, 0, 1, 31, { [1] = 9944, [3] = 8945 }, { [1] = 31, [3] = 626 }, nil, nil, nil, true }
+players["blodforge"] = { "Blodforge", 9944, 0, 1, 32, { [1] = 9944, [3] = 6140 }, { [1] = 32, [3] = 3558 }, nil, nil, nil, true }
+players["riparche"] = { "Riparche", 9941, 0, 1, 33, { [1] = 9941, [2] = 5990, [3] = 9691 }, { [1] = 33, [2] = 1342, [3] = 163 }, nil, nil, nil, true }
+players["thishappened"] = { "Thishappened", 9938, 0, 1, 34, { [1] = 9938, [2] = 4466, [3] = 8825 }, { [1] = 34, [2] = 2363, [3] = 716 }, nil, nil, nil, true }
+players["lium"] = { "Lium", 9937, 0, 1, 35, { [1] = 9937, [3] = 8870 }, { [1] = 35, [3] = 689 }, nil, nil, nil, true }
+players["kazeshini"] = { "Kazeshini", 9936, 0, 1, 36, { [1] = 9936 }, { [1] = 36 }, nil, nil, nil, true }
+players["anyrunes"] = { "Anyrunes", 9932, 0, 1, 37, { [1] = 9932, [2] = 5236, [3] = 9691 }, { [1] = 37, [2] = 1632, [3] = 164 }, nil, nil, nil, true }
+players["comaira"] = { "Comaira", 9930, 0, 1, 38, { [1] = 9930, [3] = 9522 }, { [1] = 38, [3] = 245 }, nil, nil, nil, true }
+players["bishopdk"] = { "Bishopdk", 9930, 0, 1, 39, { [1] = 9930, [3] = 9228 }, { [1] = 39, [3] = 406 }, nil, nil, nil, true }
+players["sunkstina"] = { "Sunkstina", 9928, 0, 1, 41, { [1] = 9928, [3] = 8534 }, { [1] = 41, [3] = 962 }, nil, nil, nil, true }
+players["bertto"] = { "Bertto", 9928, 0, 1, 42, { [1] = 9928, [2] = 6676, [3] = 8180 }, { [1] = 42, [2] = 1094, [3] = 1258 }, nil, nil, nil, true }
+players["dke"] = { "Dke", 9928, 0, 1, 43, { [1] = 9928 }, { [1] = 43 }, nil, nil, nil, true }
+players["yourlastfunz"] = { "Yourlastfunz", 9924, 0, 1, 44, { [1] = 9924 }, { [1] = 44 }, nil, nil, nil, true }
+players["jetblood"] = { "Jetblood", 9920, 0, 1, 45, { [1] = 9920 }, { [1] = 45 }, nil, nil, nil, true }
+players["blooddrainer"] = { "Blooddrainer", 9919, 0, 1, 46, { [1] = 9919 }, { [1] = 46 }, nil, nil, nil, true }
+players["lemberg"] = { "Lemberg", 9917, 0, 1, 47, { [1] = 9917, [3] = 8051 }, { [1] = 47, [3] = 1391 }, nil, nil, nil, true }
+players["zexonyx"] = { "Zexonyx", 9914, 0, 1, 48, { [1] = 9914, [3] = 7081 }, { [1] = 48, [3] = 2349 }, nil, nil, nil, true }
+players["vileheart"] = { "Vileheart", 9912, 0, 1, 49, { [1] = 9912, [2] = 2551, [3] = 7997 }, { [1] = 49, [2] = 4181, [3] = 1444 }, nil, nil, nil, true }
+players["zubila"] = { "Zubila", 9908, 0, 1, 50, { [1] = 9908 }, { [1] = 50 }, nil, nil, nil, true }
+players["goneinsane"] = { "Goneinsane", 9908, 0, 1, 51, { [1] = 9908, [2] = 1422, [3] = 5813 }, { [1] = 51, [2] = 4644, [3] = 4020 }, nil, nil, nil, true }
+players["breaddk"] = { "Breaddk", 9905, 0, 1, 52, { [1] = 9905, [3] = 8856 }, { [1] = 52, [3] = 697 }, nil, nil, nil, true }
+players["macabredance"] = { "Macabredance", 9905, 0, 1, 53, { [1] = 9905, [2] = 9859, [3] = 8962 }, { [1] = 53, [2] = 28, [3] = 610 }, nil, nil, nil, true }
+players["iscariiota"] = { "Iscariiota", 9904, 0, 1, 54, { [1] = 9904, [2] = 9424, [3] = 9118 }, { [1] = 54, [2] = 144, [3] = 496 }, nil, nil, nil, true }
+players["amnesiadk"] = { "Amnesiadk", 9901, 0, 1, 55, { [1] = 9901, [3] = 8572 }, { [1] = 55, [3] = 937 }, nil, nil, nil, true }
 players["nives"] = { "Nives", 9900, 0, 1, 55, { [1] = 9900, [2] = 1557 }, { [1] = 55, [2] = 16830 }, nil, nil, nil, false }
-players["rvi"] = { "Rvi", 9901, 0, 1, 55, { [1] = 9901, [2] = 4742 }, { [1] = 55, [2] = 2020 }, nil, nil, nil, true }
-players["ebonrak"] = { "Ebonrak", 9901, 0, 1, 56, { [1] = 9901, [2] = 8825, [3] = 9619 }, { [1] = 56, [2] = 319, [3] = 195 }, nil, nil, nil, true }
-players["sebeksqrwiel"] = { "Sebeksqrwiel", 9899, 0, 1, 57, { [1] = 9899 }, { [1] = 57 }, nil, nil, nil, true }
-players["monegx"] = { "Monegx", 9898, 0, 1, 58, { [1] = 9898 }, { [1] = 58 }, nil, nil, nil, true }
-players["plaguelips"] = { "Plaguelips", 9897, 0, 1, 59, { [1] = 9897, [3] = 6885 }, { [1] = 59, [3] = 2550 }, nil, nil, nil, true }
-players["kredoring"] = { "Kredoring", 9895, 0, 1, 60, { [1] = 9895, [2] = 9858 }, { [1] = 60, [2] = 29 }, nil, nil, nil, true }
-players["ponetnaola"] = { "Ponetnaola", 9893, 0, 1, 62, { [1] = 9893, [3] = 9190 }, { [1] = 62, [3] = 444 }, nil, nil, nil, true }
-players["congrulation"] = { "Congrulation", 9892, 0, 1, 63, { [1] = 9892, [2] = 838, [3] = 8697 }, { [1] = 63, [2] = 4923, [3] = 824 }, nil, nil, nil, true }
-players["risealghouls"] = { "Risealghouls", 9891, 0, 1, 64, { [1] = 9891, [3] = 4617 }, { [1] = 64, [3] = 5904 }, nil, nil, nil, true }
-players["korgaz"] = { "Korgaz", 9883, 0, 1, 65, { [1] = 9883 }, { [1] = 65 }, nil, nil, nil, true }
-players["dkacholado"] = { "Dkacholado", 9883, 0, 1, 66, { [1] = 9883, [2] = 4742, [3] = 4480 }, { [1] = 66, [2] = 2019, [3] = 6125 }, nil, nil, nil, true }
-players["cloudioss"] = { "Cloudioss", 9878, 0, 1, 67, { [1] = 9878, [3] = 7622 }, { [1] = 67, [3] = 1784 }, nil, nil, nil, true }
-players["tutyfruti"] = { "Tutyfruti", 9876, 0, 1, 68, { [1] = 9876, [2] = 7488 }, { [1] = 68, [2] = 816 }, nil, nil, nil, true }
-players["deathabove"] = { "Deathabove", 9874, 0, 1, 69, { [1] = 9874, [3] = 9034 }, { [1] = 69, [3] = 546 }, nil, nil, nil, true }
-players["johnnygrip"] = { "Johnnygrip", 9872, 0, 1, 70, { [1] = 9872, [3] = 9816 }, { [1] = 70, [3] = 94 }, nil, nil, nil, true }
-players["preciiosoo"] = { "Preciiosoo", 9871, 0, 1, 71, { [1] = 9871, [2] = 3218 }, { [1] = 71, [2] = 3837 }, nil, nil, nil, true }
-players["kenjataimu"] = { "Kenjataimu", 9868, 0, 1, 72, { [1] = 9868 }, { [1] = 72 }, nil, nil, nil, true }
-players["axio"] = { "Axio", 9868, 0, 1, 73, { [1] = 9868, [3] = 2771 }, { [1] = 73, [3] = 8937 }, nil, nil, nil, true }
-players["twinssixtwo"] = { "Twinssixtwo", 9866, 0, 1, 74, { [1] = 9866, [2] = 9707, [3] = 9558 }, { [1] = 74, [2] = 64, [3] = 222 }, nil, nil, nil, true }
-players["fancyunicorn"] = { "Fancyunicorn", 9864, 0, 1, 75, { [1] = 9864, [3] = 7417 }, { [1] = 75, [3] = 2005 }, nil, nil, nil, true }
-players["werip"] = { "Werip", 9857, 0, 1, 76, { [1] = 9857, [3] = 6257 }, { [1] = 76, [3] = 3372 }, nil, nil, nil, true }
-players["cornomarcio"] = { "Cornomarcio", 9856, 0, 1, 77, { [1] = 9856, [2] = 7968 }, { [1] = 77, [2] = 615 }, nil, nil, nil, true }
-players["swingindk"] = { "Swingindk", 9854, 0, 1, 78, { [1] = 9854, [3] = 9816 }, { [1] = 78, [3] = 95 }, nil, nil, nil, true }
+players["rvi"] = { "Rvi", 9900, 0, 1, 56, { [1] = 9900, [2] = 4739 }, { [1] = 56, [2] = 2027 }, nil, nil, nil, true }
+players["ebonrak"] = { "Ebonrak", 9900, 0, 1, 57, { [1] = 9900, [2] = 8823, [3] = 9617 }, { [1] = 57, [2] = 321, [3] = 197 }, nil, nil, nil, true }
+players["sebeksqrwiel"] = { "Sebeksqrwiel", 9898, 0, 1, 58, { [1] = 9898 }, { [1] = 58 }, nil, nil, nil, true }
+players["monegx"] = { "Monegx", 9897, 0, 1, 59, { [1] = 9897 }, { [1] = 59 }, nil, nil, nil, true }
+players["plaguelips"] = { "Plaguelips", 9896, 0, 1, 60, { [1] = 9896, [3] = 6872 }, { [1] = 60, [3] = 2569 }, nil, nil, nil, true }
+players["kredoring"] = { "Kredoring", 9894, 0, 1, 61, { [1] = 9894, [2] = 9857 }, { [1] = 61, [2] = 29 }, nil, nil, nil, true }
+players["ponetnaola"] = { "Ponetnaola", 9893, 0, 1, 63, { [1] = 9893, [3] = 9187 }, { [1] = 63, [3] = 445 }, nil, nil, nil, true }
+players["congrulation"] = { "Congrulation", 9890, 0, 1, 64, { [1] = 9890, [2] = 838, [3] = 8692 }, { [1] = 64, [2] = 4947, [3] = 829 }, nil, nil, nil, true }
+players["risealghouls"] = { "Risealghouls", 9890, 0, 1, 65, { [1] = 9890, [3] = 4612 }, { [1] = 65, [3] = 5929 }, nil, nil, nil, true }
+players["korgaz"] = { "Korgaz", 9882, 0, 1, 66, { [1] = 9882 }, { [1] = 66 }, nil, nil, nil, true }
+players["dkacholado"] = { "Dkacholado", 9882, 0, 1, 67, { [1] = 9882, [2] = 4739, [3] = 4470 }, { [1] = 67, [2] = 2028, [3] = 6161 }, nil, nil, nil, true }
+players["cloudioss"] = { "Cloudioss", 9877, 0, 1, 68, { [1] = 9877, [3] = 7614 }, { [1] = 68, [3] = 1794 }, nil, nil, nil, true }
+players["tutyfruti"] = { "Tutyfruti", 9876, 0, 1, 69, { [1] = 9876, [2] = 7488 }, { [1] = 69, [2] = 816 }, nil, nil, nil, true }
+players["deathabove"] = { "Deathabove", 9874, 0, 1, 70, { [1] = 9874, [3] = 9029 }, { [1] = 70, [3] = 550 }, nil, nil, nil, true }
+players["johnnygrip"] = { "Johnnygrip", 9871, 0, 1, 71, { [1] = 9871, [3] = 9815 }, { [1] = 71, [3] = 94 }, nil, nil, nil, true }
+players["preciiosoo"] = { "Preciiosoo", 9870, 0, 1, 72, { [1] = 9870, [2] = 3214 }, { [1] = 72, [2] = 3860 }, nil, nil, nil, true }
+players["kenjataimu"] = { "Kenjataimu", 9867, 0, 1, 73, { [1] = 9867 }, { [1] = 73 }, nil, nil, nil, true }
+players["axio"] = { "Axio", 9866, 0, 1, 74, { [1] = 9866, [3] = 2766 }, { [1] = 74, [3] = 8989 }, nil, nil, nil, true }
+players["twinssixtwo"] = { "Twinssixtwo", 9865, 0, 1, 75, { [1] = 9865, [2] = 9705, [3] = 9555 }, { [1] = 75, [2] = 64, [3] = 225 }, nil, nil, nil, true }
+players["fancyunicorn"] = { "Fancyunicorn", 9863, 0, 1, 76, { [1] = 9863, [3] = 7410 }, { [1] = 76, [3] = 2012 }, nil, nil, nil, true }
+players["werip"] = { "Werip", 9856, 0, 1, 77, { [1] = 9856, [3] = 6249 }, { [1] = 77, [3] = 3388 }, nil, nil, nil, true }
+players["cornomarcio"] = { "Cornomarcio", 9855, 0, 1, 78, { [1] = 9855, [2] = 7968 }, { [1] = 78, [2] = 618 }, nil, nil, nil, true }
 players["steppehy"] = { "Steppehy", 9853, 0, 1, 79, { [1] = 9853 }, { [1] = 79 }, nil, nil, nil, true }
-players["goatbob"] = { "Goatbob", 9853, 0, 1, 80, { [1] = 9853, [2] = 9556, [3] = 9716 }, { [1] = 80, [2] = 116, [3] = 148 }, nil, nil, nil, true }
-players["madbone"] = { "Madbone", 9851, 0, 1, 81, { [1] = 9851, [2] = 9742 }, { [1] = 81, [2] = 59 }, nil, nil, nil, true }
-players["bloodyimp"] = { "Bloodyimp", 9850, 0, 1, 82, { [1] = 9850, [2] = 8659 }, { [1] = 82, [2] = 376 }, nil, nil, nil, true }
-players["sangracolas"] = { "Sangracolas", 9848, 0, 1, 83, { [1] = 9848, [2] = 7884 }, { [1] = 83, [2] = 644 }, nil, nil, nil, true }
-players["skvig"] = { "Skvig", 9847, 0, 1, 85, { [1] = 9847, [2] = 7754, [3] = 3825 }, { [1] = 85, [2] = 699, [3] = 6936 }, nil, nil, nil, true }
-players["ruthlessdk"] = { "Ruthlessdk", 9846, 0, 1, 86, { [1] = 9846 }, { [1] = 86 }, nil, nil, nil, true }
-players["aemara"] = { "Aemara", 9844, 0, 1, 87, { [1] = 9844, [2] = 1725 }, { [1] = 87, [2] = 4528 }, nil, nil, nil, true }
-players["beatris"] = { "Beatris", 9843, 0, 1, 88, { [1] = 9843 }, { [1] = 88 }, nil, nil, nil, true }
-players["revlover"] = { "Revlover", 9842, 0, 1, 89, { [1] = 9842 }, { [1] = 89 }, nil, nil, nil, true }
-players["propitall"] = { "Propitall", 9842, 0, 1, 90, { [1] = 9842, [2] = 594, [3] = 6652 }, { [1] = 90, [2] = 5422, [3] = 2854 }, nil, nil, nil, true }
-players["yaggy"] = { "Yaggy", 9840, 0, 1, 91, { [1] = 9840, [2] = 8989, [3] = 8953 }, { [1] = 91, [2] = 271, [3] = 617 }, nil, nil, nil, true }
-players["jovqee"] = { "Jovqee", 9839, 0, 1, 92, { [1] = 9839 }, { [1] = 92 }, nil, nil, nil, true }
-players["aachilles"] = { "Aachilles", 9838, 0, 1, 93, { [1] = 9838, [3] = 8002 }, { [1] = 93, [3] = 1436 }, nil, nil, nil, true }
-players["bloodfest"] = { "Bloodfest", 9836, 0, 1, 94, { [1] = 9836, [3] = 1148 }, { [1] = 94, [3] = 12063 }, nil, nil, nil, true }
-players["shurk"] = { "Shurk", 9834, 0, 1, 95, { [1] = 9834, [2] = 6673, [3] = 1066 }, { [1] = 95, [2] = 1093, [3] = 12119 }, nil, nil, nil, true }
-players["ymura"] = { "Ymura", 9834, 0, 1, 96, { [1] = 9834, [3] = 9098 }, { [1] = 96, [3] = 505 }, nil, nil, nil, true }
-players["cynic"] = { "Cynic", 9833, 0, 1, 97, { [1] = 9833, [2] = 3809, [3] = 5791 }, { [1] = 97, [2] = 3317, [3] = 4049 }, nil, nil, nil, true }
-players["gleipnir"] = { "Gleipnir", 9831, 0, 1, 98, { [1] = 9831, [2] = 9181, [3] = 9826 }, { [1] = 98, [2] = 217, [3] = 84 }, nil, nil, nil, true }
-players["celdoriath"] = { "Celdoriath", 9829, 0, 1, 99, { [1] = 9829, [3] = 9008 }, { [1] = 99, [3] = 575 }, nil, nil, nil, true }
-players["aimerdk"] = { "Aimerdk", 9828, 0, 1, 100, { [1] = 9828, [2] = 953, [3] = 9551 }, { [1] = 100, [2] = 4884, [3] = 227 }, nil, nil, nil, true }
-players["comaira"] = { "Comaira", 9826, 0, 1, 101, { [1] = 9826, [3] = 9525 }, { [1] = 101, [3] = 243 }, nil, nil, nil, true }
-players["jokicmvp"] = { "Jokicmvp", 9824, 0, 1, 102, { [1] = 9824, [2] = 3376 }, { [1] = 102, [2] = 10473 }, nil, nil, nil, true }
-players["wendy"] = { "Wendy", 9824, 0, 1, 103, { [1] = 9824, [2] = 6367 }, { [1] = 103, [2] = 1208 }, nil, nil, nil, true }
+players["swingindk"] = { "Swingindk", 9853, 0, 1, 80, { [1] = 9853, [3] = 9814 }, { [1] = 80, [3] = 95 }, nil, nil, nil, true }
+players["goatbob"] = { "Goatbob", 9853, 0, 1, 81, { [1] = 9853, [2] = 9556, [3] = 9715 }, { [1] = 81, [2] = 116, [3] = 149 }, nil, nil, nil, true }
+players["madbone"] = { "Madbone", 9850, 0, 1, 82, { [1] = 9850, [2] = 9742 }, { [1] = 82, [2] = 59 }, nil, nil, nil, true }
+players["bloodyimp"] = { "Bloodyimp", 9850, 0, 1, 83, { [1] = 9850, [2] = 8657 }, { [1] = 83, [2] = 378 }, nil, nil, nil, true }
+players["sangracolas"] = { "Sangracolas", 9847, 0, 1, 84, { [1] = 9847, [2] = 7883 }, { [1] = 84, [2] = 647 }, nil, nil, nil, true }
+players["skvig"] = { "Skvig", 9846, 0, 1, 86, { [1] = 9846, [2] = 7755, [3] = 3821 }, { [1] = 86, [2] = 701, [3] = 6970 }, nil, nil, nil, true }
+players["ruthlessdk"] = { "Ruthlessdk", 9845, 0, 1, 87, { [1] = 9845 }, { [1] = 87 }, nil, nil, nil, true }
+players["aemara"] = { "Aemara", 9843, 0, 1, 88, { [1] = 9843, [2] = 1724 }, { [1] = 88, [2] = 4550 }, nil, nil, nil, true }
+players["beatris"] = { "Beatris", 9842, 0, 1, 89, { [1] = 9842 }, { [1] = 89 }, nil, nil, nil, true }
+players["propitall"] = { "Propitall", 9841, 0, 1, 90, { [1] = 9841, [2] = 594, [3] = 6638 }, { [1] = 90, [2] = 5445, [3] = 2875 }, nil, nil, nil, true }
+players["revlover"] = { "Revlover", 9841, 0, 1, 91, { [1] = 9841 }, { [1] = 91 }, nil, nil, nil, true }
+players["yaggy"] = { "Yaggy", 9839, 0, 1, 92, { [1] = 9839, [2] = 8988, [3] = 8948 }, { [1] = 92, [2] = 271, [3] = 620 }, nil, nil, nil, true }
+players["jovqee"] = { "Jovqee", 9838, 0, 1, 93, { [1] = 9838 }, { [1] = 93 }, nil, nil, nil, true }
+players["aachilles"] = { "Aachilles", 9837, 0, 1, 94, { [1] = 9837, [3] = 7995 }, { [1] = 94, [3] = 1448 }, nil, nil, nil, true }
+players["bloodfest"] = { "Bloodfest", 9835, 0, 1, 95, { [1] = 9835, [3] = 1148 }, { [1] = 95, [3] = 12103 }, nil, nil, nil, true }
+players["shurk"] = { "Shurk", 9834, 0, 1, 96, { [1] = 9834, [2] = 6671, [3] = 1064 }, { [1] = 96, [2] = 1097, [3] = 12165 }, nil, nil, nil, true }
+players["ymura"] = { "Ymura", 9834, 0, 1, 97, { [1] = 9834, [3] = 9093 }, { [1] = 97, [3] = 510 }, nil, nil, nil, true }
+players["cynic"] = { "Cynic", 9832, 0, 1, 98, { [1] = 9832, [2] = 3803, [3] = 5786 }, { [1] = 98, [2] = 3343, [3] = 4064 }, nil, nil, nil, true }
+players["celdoriath"] = { "Celdoriath", 9829, 0, 1, 100, { [1] = 9829, [3] = 9004 }, { [1] = 100, [3] = 579 }, nil, nil, nil, true }
+players["aimerdk"] = { "Aimerdk", 9827, 0, 1, 101, { [1] = 9827, [2] = 953, [3] = 9547 }, { [1] = 101, [2] = 4909, [3] = 229 }, nil, nil, nil, true }
+players["jokicmvp"] = { "Jokicmvp", 9824, 0, 1, 102, { [1] = 9824, [2] = 3373 }, { [1] = 102, [2] = 10503 }, nil, nil, nil, true }
+players["wendy"] = { "Wendy", 9823, 0, 1, 103, { [1] = 9823, [2] = 6360 }, { [1] = 103, [2] = 1214 }, nil, nil, nil, true }
 players["nigmalegend"] = { "Nigmalegend", 9823, 0, 1, 104, { [1] = 9823 }, { [1] = 104 }, nil, nil, nil, true }
-players["surma"] = { "Surma", 9823, 0, 1, 105, { [1] = 9823, [3] = 8251 }, { [1] = 105, [3] = 1204 }, nil, nil, nil, true }
-players["lanausee"] = { "Lanausee", 10000, 0, 2, 1, { [1] = 962, [2] = 10000 }, { [1] = 10724, [2] = 1 }, nil, nil, nil, true }
-players["apakalipsis"] = { "Apakalipsis", 9994, 0, 2, 2, { [1] = 9986, [2] = 9994, [3] = 9929 }, { [1] = 8, [2] = 2, [3] = 36 }, nil, nil, nil, true }
-players["henesys"] = { "Henesys", 9976, 0, 2, 3, { [2] = 9976, [3] = 6336 }, { [2] = 3, [3] = 3267 }, nil, nil, nil, true }
-players["honkostin"] = { "Honkostin", 9971, 0, 2, 4, { [1] = 7678, [2] = 9971 }, { [1] = 1174, [2] = 4 }, nil, nil, nil, true }
-players["whiskeyblues"] = { "Whiskeyblues", 9970, 0, 2, 5, { [1] = 1049, [2] = 9970 }, { [1] = 10595, [2] = 5 }, nil, nil, nil, true }
-players["imbackbois"] = { "Imbackbois", 9964, 0, 2, 6, { [1] = 7489, [2] = 9964 }, { [1] = 1354, [2] = 6 }, nil, nil, nil, true }
-players["strykerx"] = { "Strykerx", 9959, 0, 2, 7, { [1] = 8992, [2] = 9959 }, { [1] = 356, [2] = 7 }, nil, nil, nil, true }
-players["bleksaf"] = { "Bleksaf", 9957, 0, 2, 8, { [2] = 9957 }, { [2] = 8 }, nil, nil, nil, true }
-players["apieceofcake"] = { "Apieceofcake", 9954, 0, 2, 9, { [1] = 9291, [2] = 9954 }, { [1] = 245, [2] = 9 }, nil, nil, nil, true }
-players["coaldust"] = { "Coaldust", 9953, 0, 2, 10, { [2] = 9953 }, { [2] = 10 }, nil, nil, nil, true }
-players["hydancold"] = { "Hydancold", 9953, 0, 2, 11, { [2] = 9953 }, { [2] = 11 }, nil, nil, nil, true }
-players["harribeli"] = { "Harribeli", 9951, 0, 2, 12, { [1] = 1695, [2] = 9951 }, { [1] = 9497, [2] = 12 }, nil, nil, nil, true }
-players["pvesobakaz"] = { "Pvesobakaz", 9948, 0, 2, 13, { [2] = 9948, [3] = 8263 }, { [2] = 13, [3] = 1198 }, nil, nil, nil, true }
-players["midfield"] = { "Midfield", 9947, 0, 2, 14, { [1] = 6245, [2] = 9947 }, { [1] = 2560, [2] = 14 }, nil, nil, nil, true }
-players["cakesteak"] = { "Cakesteak", 9937, 0, 2, 15, { [1] = 6469, [2] = 9937, [3] = 9433 }, { [1] = 2331, [2] = 15, [3] = 292 }, nil, nil, nil, true }
-players["kenshi"] = { "Kenshi", 9936, 0, 2, 16, { [1] = 9053, [2] = 9936 }, { [1] = 333, [2] = 16 }, nil, nil, nil, true }
-players["ancientknght"] = { "Ancientknght", 9926, 0, 2, 17, { [1] = 8786, [2] = 9926, [3] = 4874 }, { [1] = 462, [2] = 17, [3] = 5505 }, nil, nil, nil, true }
-players["fluential"] = { "Fluential", 9916, 0, 2, 18, { [1] = 118, [2] = 9916 }, { [1] = 12037, [2] = 18 }, nil, nil, nil, true }
-players["shoxlol"] = { "Shoxlol", 9915, 0, 2, 19, { [2] = 4012, [3] = 424 }, { [2] = 5190, [3] = 23633 }, nil, nil, nil, true }
-players["arkailfdk"] = { "Arkailfdk", 9914, 0, 2, 20, { [1] = 954, [2] = 9914, [3] = 2986 }, { [1] = 10752, [2] = 20, [3] = 8328 }, nil, nil, nil, true }
+players["surma"] = { "Surma", 9822, 0, 1, 105, { [1] = 9822, [3] = 8244 }, { [1] = 105, [3] = 1212 }, nil, nil, nil, true }
+players["decs"] = { "Decs", 9821, 0, 1, 106, { [1] = 9821, [3] = 9275 }, { [1] = 106, [3] = 368 }, nil, nil, nil, true }
+players["lanausee"] = { "Lanausee", 10000, 0, 2, 1, { [1] = 962, [2] = 10000 }, { [1] = 10746, [2] = 1 }, nil, nil, nil, true }
+players["apakalipsis"] = { "Apakalipsis", 9994, 0, 2, 2, { [1] = 9986, [2] = 9994, [3] = 9928 }, { [1] = 8, [2] = 2, [3] = 36 }, nil, nil, nil, true }
+players["henesys"] = { "Henesys", 9976, 0, 2, 3, { [2] = 9976, [3] = 6326 }, { [2] = 3, [3] = 3286 }, nil, nil, nil, true }
+players["honkostin"] = { "Honkostin", 9974, 0, 2, 4, { [1] = 7666, [2] = 9974 }, { [1] = 1186, [2] = 4 }, nil, nil, nil, true }
+players["whiskeyblues"] = { "Whiskeyblues", 9970, 0, 2, 5, { [1] = 1046, [2] = 9970 }, { [1] = 10623, [2] = 5 }, nil, nil, nil, true }
+players["imbackbois"] = { "Imbackbois", 9964, 0, 2, 6, { [1] = 7476, [2] = 9964 }, { [1] = 1366, [2] = 6 }, nil, nil, nil, true }
+players["strykerx"] = { "Strykerx", 9958, 0, 2, 7, { [1] = 8987, [2] = 9958 }, { [1] = 359, [2] = 7 }, nil, nil, nil, true }
+players["harribeli"] = { "Harribeli", 9958, 0, 2, 8, { [1] = 8511, [2] = 9958 }, { [1] = 641, [2] = 8 }, nil, nil, nil, true }
+players["bleksaf"] = { "Bleksaf", 9957, 0, 2, 9, { [2] = 9957 }, { [2] = 9 }, nil, nil, nil, true }
+players["apieceofcake"] = { "Apieceofcake", 9954, 0, 2, 10, { [1] = 9289, [2] = 9954 }, { [1] = 247, [2] = 10 }, nil, nil, nil, true }
+players["coaldust"] = { "Coaldust", 9953, 0, 2, 11, { [2] = 9953 }, { [2] = 11 }, nil, nil, nil, true }
+players["hydancold"] = { "Hydancold", 9953, 0, 2, 12, { [2] = 9953 }, { [2] = 12 }, nil, nil, nil, true }
+players["pvesobakaz"] = { "Pvesobakaz", 9948, 0, 2, 13, { [2] = 9948, [3] = 8255 }, { [2] = 13, [3] = 1206 }, nil, nil, nil, true }
+players["midfield"] = { "Midfield", 9947, 0, 2, 14, { [1] = 6231, [2] = 9947 }, { [1] = 2575, [2] = 14 }, nil, nil, nil, true }
+players["cakesteak"] = { "Cakesteak", 9937, 0, 2, 15, { [1] = 6461, [2] = 9937, [3] = 9430 }, { [1] = 2331, [2] = 15, [3] = 293 }, nil, nil, nil, true }
+players["kenshi"] = { "Kenshi", 9935, 0, 2, 16, { [1] = 9049, [2] = 9935 }, { [1] = 337, [2] = 16 }, nil, nil, nil, true }
+players["ancientknght"] = { "Ancientknght", 9926, 0, 2, 17, { [1] = 8780, [2] = 9926, [3] = 4866 }, { [1] = 465, [2] = 17, [3] = 5534 }, nil, nil, nil, true }
+players["fluential"] = { "Fluential", 9916, 0, 2, 18, { [1] = 115, [2] = 9916 }, { [1] = 12077, [2] = 18 }, nil, nil, nil, true }
+players["shoxlol"] = { "Shoxlol", 9915, 0, 2, 19, { [2] = 3999, [3] = 424 }, { [2] = 5214, [3] = 23699 }, nil, nil, nil, true }
+players["arkailfdk"] = { "Arkailfdk", 9913, 0, 2, 20, { [1] = 954, [2] = 9913, [3] = 2986 }, { [1] = 10775, [2] = 20, [3] = 8350 }, nil, nil, nil, true }
 players["wintersclaw"] = { "Wintersclaw", 9912, 0, 2, 21, { [2] = 9912 }, { [2] = 21 }, nil, nil, nil, true }
-players["annissa"] = { "Annissa", 9906, 0, 2, 22, { [2] = 9906 }, { [2] = 22 }, nil, nil, nil, true }
-players["haylli"] = { "Haylli", 9897, 0, 2, 23, { [2] = 9897, [3] = 2053 }, { [2] = 23, [3] = 10950 }, nil, nil, nil, true }
-players["ibf"] = { "Ibf", 9892, 0, 2, 24, { [1] = 9186, [2] = 9892 }, { [1] = 266, [2] = 24 }, nil, nil, nil, true }
-players["skaduche"] = { "Skaduche", 9888, 0, 2, 25, { [1] = 7749, [2] = 9888 }, { [1] = 1114, [2] = 25 }, nil, nil, nil, true }
-players["apakalypsis"] = { "Apakalypsis", 9860, 0, 2, 27, { [2] = 9860, [3] = 9245 }, { [2] = 27, [3] = 398 }, nil, nil, nil, true }
-players["olrun"] = { "Olrun", 9855, 0, 2, 30, { [1] = 1902, [2] = 9855, [3] = 9582 }, { [1] = 8986, [2] = 30, [3] = 209 }, nil, nil, nil, true }
-players["simen"] = { "Simen", 9848, 0, 2, 31, { [1] = 1721, [2] = 9848 }, { [1] = 9428, [2] = 31 }, nil, nil, nil, true }
-players["skillboy"] = { "Skillboy", 9847, 0, 2, 32, { [1] = 5248, [2] = 9847 }, { [1] = 3862, [2] = 32 }, nil, nil, nil, true }
-players["insanedekay"] = { "Insanedekay", 9845, 0, 2, 33, { [2] = 9845, [3] = 4388 }, { [2] = 33, [3] = 6277 }, nil, nil, nil, true }
+players["annissa"] = { "Annissa", 9905, 0, 2, 22, { [2] = 9905 }, { [2] = 22 }, nil, nil, nil, true }
+players["haylli"] = { "Haylli", 9897, 0, 2, 23, { [2] = 9897, [3] = 2053 }, { [2] = 23, [3] = 10979 }, nil, nil, nil, true }
+players["ibf"] = { "Ibf", 9891, 0, 2, 24, { [1] = 9185, [2] = 9891 }, { [1] = 269, [2] = 24 }, nil, nil, nil, true }
+players["skaduche"] = { "Skaduche", 9888, 0, 2, 25, { [1] = 7737, [2] = 9888 }, { [1] = 1125, [2] = 25 }, nil, nil, nil, true }
+players["apakalypsis"] = { "Apakalypsis", 9860, 0, 2, 27, { [2] = 9860, [3] = 9240 }, { [2] = 27, [3] = 402 }, nil, nil, nil, true }
+players["olrun"] = { "Olrun", 9855, 0, 2, 30, { [1] = 1897, [2] = 9855, [3] = 9579 }, { [1] = 9006, [2] = 30, [3] = 211 }, nil, nil, nil, true }
+players["simen"] = { "Simen", 9848, 0, 2, 31, { [1] = 1713, [2] = 9848 }, { [1] = 9450, [2] = 31 }, nil, nil, nil, true }
+players["skillboy"] = { "Skillboy", 9847, 0, 2, 32, { [1] = 5232, [2] = 9847 }, { [1] = 3885, [2] = 32 }, nil, nil, nil, true }
+players["insanedekay"] = { "Insanedekay", 9844, 0, 2, 33, { [2] = 9844, [3] = 4383 }, { [2] = 33, [3] = 6304 }, nil, nil, nil, true }
 players["sprriww"] = { "Sprriww", 9838, 0, 2, 34, { [2] = 9838 }, { [2] = 34 }, nil, nil, nil, true }
-players["jarzy"] = { "Jarzy", 9838, 0, 2, 35, { [1] = 925, [2] = 9838, [3] = 4109 }, { [1] = 10895, [2] = 35, [3] = 6618 }, nil, nil, nil, true }
-players["tianacho"] = { "Tianacho", 9832, 0, 2, 36, { [1] = 3963, [2] = 9832 }, { [1] = 5303, [2] = 36 }, nil, nil, nil, true }
-players["fleancuskrr"] = { "Fleancuskrr", 9829, 0, 2, 37, { [1] = 6109, [2] = 9829 }, { [1] = 2706, [2] = 37 }, nil, nil, nil, true }
-players["panofcakes"] = { "Panofcakes", 9828, 0, 2, 38, { [1] = 8372, [2] = 9828, [3] = 9826 }, { [1] = 717, [2] = 38, [3] = 85 }, nil, nil, nil, true }
-players["nopasaran"] = { "Nopasaran", 9823, 0, 2, 39, { [1] = 8369, [2] = 9823 }, { [1] = 721, [2] = 39 }, nil, nil, nil, true }
-players["frostzefyra"] = { "Frostzefyra", 9813, 0, 2, 40, { [1] = 5854, [2] = 9813, [3] = 9175 }, { [1] = 3016, [2] = 40, [3] = 455 }, nil, nil, nil, true }
-players["fakecake"] = { "Fakecake", 9803, 0, 2, 42, { [1] = 8973, [2] = 9803 }, { [1] = 367, [2] = 42 }, nil, nil, nil, true }
-players["letmeown"] = { "Letmeown", 9794, 0, 2, 43, { [2] = 9794 }, { [2] = 43 }, nil, nil, nil, true }
-players["blopblep"] = { "Blopblep", 9792, 0, 2, 44, { [1] = 7018, [2] = 9792, [3] = 7027 }, { [1] = 1774, [2] = 44, [3] = 2409 }, nil, nil, nil, true }
-players["nonguardarmi"] = { "Nonguardarmi", 9785, 0, 2, 45, { [1] = 9084, [2] = 9785, [3] = 8218 }, { [1] = 313, [2] = 45, [3] = 1231 }, nil, nil, nil, true }
-players["bumsowner"] = { "Bumsowner", 9781, 0, 2, 46, { [1] = 944, [2] = 9781 }, { [1] = 10801, [2] = 46 }, nil, nil, nil, true }
-players["thekae"] = { "Thekae", 9781, 0, 2, 47, { [2] = 9781, [3] = 7573 }, { [2] = 47, [3] = 1844 }, nil, nil, nil, true }
+players["jarzy"] = { "Jarzy", 9837, 0, 2, 35, { [1] = 925, [2] = 9837, [3] = 4104 }, { [1] = 10928, [2] = 35, [3] = 6648 }, nil, nil, nil, true }
+players["tianacho"] = { "Tianacho", 9832, 0, 2, 36, { [1] = 3943, [2] = 9832 }, { [1] = 5334, [2] = 36 }, nil, nil, nil, true }
+players["fleancuskrr"] = { "Fleancuskrr", 9829, 0, 2, 37, { [1] = 6094, [2] = 9829 }, { [1] = 2723, [2] = 37 }, nil, nil, nil, true }
+players["panofcakes"] = { "Panofcakes", 9827, 0, 2, 38, { [1] = 8366, [2] = 9827, [3] = 9824 }, { [1] = 721, [2] = 38, [3] = 85 }, nil, nil, nil, true }
+players["nopasaran"] = { "Nopasaran", 9822, 0, 2, 39, { [1] = 8362, [2] = 9822 }, { [1] = 726, [2] = 39 }, nil, nil, nil, true }
+players["frostzefyra"] = { "Frostzefyra", 9812, 0, 2, 41, { [1] = 5842, [2] = 9812, [3] = 9170 }, { [1] = 3038, [2] = 41, [3] = 459 }, nil, nil, nil, true }
+players["fakecake"] = { "Fakecake", 9803, 0, 2, 42, { [1] = 8969, [2] = 9803 }, { [1] = 369, [2] = 42 }, nil, nil, nil, true }
+players["letmeown"] = { "Letmeown", 9793, 0, 2, 43, { [2] = 9793 }, { [2] = 43 }, nil, nil, nil, true }
+players["blopblep"] = { "Blopblep", 9792, 0, 2, 44, { [1] = 7005, [2] = 9792, [3] = 7020 }, { [1] = 1791, [2] = 44, [3] = 2415 }, nil, nil, nil, true }
+players["nonguardarmi"] = { "Nonguardarmi", 9784, 0, 2, 45, { [1] = 9081, [2] = 9784, [3] = 8211 }, { [1] = 317, [2] = 45, [3] = 1237 }, nil, nil, nil, true }
+players["thekae"] = { "Thekae", 9781, 0, 2, 46, { [2] = 9781, [3] = 7566 }, { [2] = 46, [3] = 1854 }, nil, nil, nil, true }
+players["bumsowner"] = { "Bumsowner", 9781, 0, 2, 47, { [1] = 944, [2] = 9781 }, { [1] = 10819, [2] = 47 }, nil, nil, nil, true }
 players["massterpiece"] = { "Massterpiece", 9761, 0, 2, 48, { [1] = 1513, [2] = 9761 }, { [1] = 9699, [2] = 48 }, nil, nil, nil, false }
-players["yourlastwtf"] = { "Yourlastwtf", 9776, 0, 2, 48, { [1] = 429, [2] = 9776 }, { [1] = 11543, [2] = 48 }, nil, nil, nil, true }
-players["marcaritta"] = { "Marcaritta", 9775, 0, 2, 49, { [1] = 8466, [2] = 9775 }, { [1] = 662, [2] = 49 }, nil, nil, nil, true }
-players["honn"] = { "Honn", 9774, 0, 2, 50, { [2] = 9774, [3] = 7084 }, { [2] = 50, [3] = 2348 }, nil, nil, nil, true }
-players["wujustyle"] = { "Wujustyle", 9774, 0, 2, 51, { [1] = 9293, [2] = 9774 }, { [1] = 244, [2] = 51 }, nil, nil, nil, true }
-players["interro"] = { "Interro", 9763, 0, 2, 53, { [1] = 9147, [2] = 9763 }, { [1] = 287, [2] = 53 }, nil, nil, nil, true }
-players["vaankka"] = { "Vaankka", 9762, 0, 2, 54, { [1] = 4893, [2] = 9762 }, { [1] = 4277, [2] = 54 }, nil, nil, nil, true }
-players["liplip"] = { "Liplip", 9757, 0, 2, 55, { [1] = 6808, [2] = 9757 }, { [1] = 1997, [2] = 55 }, nil, nil, nil, true }
-players["natashax"] = { "Natashax", 9750, 0, 2, 56, { [1] = 9030, [2] = 9750, [3] = 7765 }, { [1] = 343, [2] = 56, [3] = 1637 }, nil, nil, nil, true }
-players["trabezund"] = { "Trabezund", 9748, 0, 2, 57, { [1] = 6594, [2] = 9748 }, { [1] = 2208, [2] = 57 }, nil, nil, nil, true }
-players["demacia"] = { "Demacia", 9748, 0, 2, 58, { [1] = 9210, [2] = 9748 }, { [1] = 261, [2] = 58 }, nil, nil, nil, true }
-players["rimefiend"] = { "Rimefiend", 9729, 0, 2, 60, { [2] = 9729, [3] = 4683 }, { [2] = 60, [3] = 5809 }, nil, nil, nil, true }
-players["mugiwarakun"] = { "Mugiwarakun", 9720, 0, 2, 61, { [1] = 7656, [2] = 9720 }, { [1] = 1201, [2] = 61 }, nil, nil, nil, true }
+players["yourlastwtf"] = { "Yourlastwtf", 9776, 0, 2, 48, { [1] = 428, [2] = 9776 }, { [1] = 11576, [2] = 48 }, nil, nil, nil, true }
+players["marcaritta"] = { "Marcaritta", 9775, 0, 2, 49, { [1] = 8459, [2] = 9775 }, { [1] = 664, [2] = 49 }, nil, nil, nil, true }
+players["honn"] = { "Honn", 9774, 0, 2, 50, { [2] = 9774, [3] = 7074 }, { [2] = 50, [3] = 2359 }, nil, nil, nil, true }
+players["wujustyle"] = { "Wujustyle", 9774, 0, 2, 51, { [1] = 9291, [2] = 9774 }, { [1] = 246, [2] = 51 }, nil, nil, nil, true }
+players["interro"] = { "Interro", 9763, 0, 2, 53, { [1] = 9144, [2] = 9763 }, { [1] = 290, [2] = 53 }, nil, nil, nil, true }
+players["vaankka"] = { "Vaankka", 9761, 0, 2, 54, { [1] = 4953, [2] = 9761 }, { [1] = 4208, [2] = 54 }, nil, nil, nil, true }
+players["liplip"] = { "Liplip", 9756, 0, 2, 55, { [1] = 6796, [2] = 9756 }, { [1] = 2008, [2] = 55 }, nil, nil, nil, true }
+players["natashax"] = { "Natashax", 9750, 0, 2, 56, { [1] = 9025, [2] = 9750, [3] = 7755 }, { [1] = 348, [2] = 56, [3] = 1649 }, nil, nil, nil, true }
+players["trabezund"] = { "Trabezund", 9748, 0, 2, 57, { [1] = 6580, [2] = 9748 }, { [1] = 2218, [2] = 57 }, nil, nil, nil, true }
+players["demacia"] = { "Demacia", 9747, 0, 2, 58, { [1] = 9208, [2] = 9747 }, { [1] = 264, [2] = 58 }, nil, nil, nil, true }
+players["rimefiend"] = { "Rimefiend", 9729, 0, 2, 60, { [2] = 9729, [3] = 4678 }, { [2] = 60, [3] = 5833 }, nil, nil, nil, true }
+players["mugiwarakun"] = { "Mugiwarakun", 9720, 0, 2, 61, { [1] = 7645, [2] = 9720 }, { [1] = 1211, [2] = 61 }, nil, nil, nil, true }
 players["gurdor"] = { "Gurdor", 9718, 0, 2, 62, { [2] = 9718 }, { [2] = 62 }, nil, nil, nil, true }
-players["phamtomhand"] = { "Phamtomhand", 9713, 0, 2, 63, { [1] = 9141, [2] = 9713 }, { [1] = 293, [2] = 63 }, nil, nil, nil, true }
+players["phamtomhand"] = { "Phamtomhand", 9714, 0, 2, 63, { [1] = 9138, [2] = 9714 }, { [1] = 295, [2] = 63 }, nil, nil, nil, true }
 players["pulexx"] = { "Pulexx", 9699, 0, 2, 65, { [2] = 9699 }, { [2] = 65 }, nil, nil, nil, true }
 players["skora"] = { "Skora", 9697, 0, 2, 66, { [2] = 9697 }, { [2] = 66 }, nil, nil, nil, true }
 players["dazoo"] = { "Dazoo", 9697, 0, 2, 67, { [2] = 9697 }, { [2] = 67 }, nil, nil, nil, true }
-players["dimkadk"] = { "Dimkadk", 9691, 0, 2, 68, { [2] = 9691, [3] = 8748 }, { [2] = 68, [3] = 786 }, nil, nil, nil, true }
+players["dimkadk"] = { "Dimkadk", 9690, 0, 2, 68, { [2] = 9690, [3] = 8742 }, { [2] = 68, [3] = 792 }, nil, nil, nil, true }
 players["sciabolata"] = { "Sciabolata", 9689, 0, 2, 69, { [2] = 9689 }, { [2] = 69 }, nil, nil, nil, true }
-players["randombruce"] = { "Randombruce", 9680, 0, 2, 70, { [1] = 8865, [2] = 9680, [3] = 6662 }, { [1] = 425, [2] = 70, [3] = 2836 }, nil, nil, nil, true }
-players["ophaelliidk"] = { "Ophaelliidk", 9680, 0, 2, 71, { [1] = 6647, [2] = 9680 }, { [1] = 2141, [2] = 71 }, nil, nil, nil, true }
-players["masturbek"] = { "Masturbek", 9677, 0, 2, 72, { [1] = 7743, [2] = 9677 }, { [1] = 1117, [2] = 72 }, nil, nil, nil, true }
+players["randombruce"] = { "Randombruce", 9680, 0, 2, 70, { [1] = 8860, [2] = 9680, [3] = 6655 }, { [1] = 428, [2] = 70, [3] = 2846 }, nil, nil, nil, true }
+players["ophaelliidk"] = { "Ophaelliidk", 9680, 0, 2, 71, { [1] = 6636, [2] = 9680 }, { [1] = 2151, [2] = 71 }, nil, nil, nil, true }
+players["masturbek"] = { "Masturbek", 9677, 0, 2, 72, { [1] = 7732, [2] = 9677 }, { [1] = 1127, [2] = 72 }, nil, nil, nil, true }
 players["geraldeus"] = { "Geraldeus", 9677, 0, 2, 73, { [2] = 9677 }, { [2] = 73 }, nil, nil, nil, true }
 players["pinhead"] = { "Pinhead", 9675, 0, 2, 74, { [2] = 9675 }, { [2] = 74 }, nil, nil, nil, true }
-players["urinalakut"] = { "Urinalakut", 9672, 0, 2, 75, { [2] = 9672 }, { [2] = 75 }, nil, nil, nil, true }
-players["sslayer"] = { "Sslayer", 9672, 0, 2, 76, { [2] = 9672 }, { [2] = 76 }, nil, nil, nil, true }
-players["tubandida"] = { "Tubandida", 9669, 0, 2, 77, { [1] = 918, [2] = 9669 }, { [1] = 10920, [2] = 77 }, nil, nil, nil, true }
-players["anonimm"] = { "Anonimm", 9668, 0, 2, 78, { [1] = 6616, [2] = 9668, [3] = 8499 }, { [1] = 2181, [2] = 78, [3] = 994 }, nil, nil, nil, true }
-players["ccapable"] = { "Ccapable", 9659, 0, 2, 80, { [1] = 3953, [2] = 9659 }, { [1] = 5312, [2] = 80 }, nil, nil, nil, true }
-players["keelass"] = { "Keelass", 9653, 0, 2, 81, { [2] = 9653, [3] = 9508 }, { [2] = 81, [3] = 252 }, nil, nil, nil, true }
-players["nokduk"] = { "Nokduk", 9649, 0, 2, 82, { [2] = 9649 }, { [2] = 82 }, nil, nil, nil, true }
-players["pestoe"] = { "Pestoe", 9648, 0, 2, 83, { [1] = 7715, [2] = 9648, [3] = 8672 }, { [1] = 1137, [2] = 83, [3] = 842 }, nil, nil, nil, true }
-players["showburnz"] = { "Showburnz", 9647, 0, 2, 84, { [2] = 9647, [3] = 7908 }, { [2] = 84, [3] = 1516 }, nil, nil, nil, true }
-players["inimate"] = { "Inimate", 9643, 0, 2, 85, { [1] = 6560, [2] = 9643 }, { [1] = 2244, [2] = 85 }, nil, nil, nil, true }
-players["ron"] = { "Ron", 9640, 0, 2, 86, { [1] = 2802, [2] = 9640, [3] = 7373 }, { [1] = 7083, [2] = 86, [3] = 2049 }, nil, nil, nil, true }
-players["areare"] = { "Areare", 9635, 0, 2, 87, { [2] = 9635 }, { [2] = 87 }, nil, nil, nil, true }
+players["sslayer"] = { "Sslayer", 9672, 0, 2, 75, { [2] = 9672 }, { [2] = 75 }, nil, nil, nil, true }
+players["urinalakut"] = { "Urinalakut", 9672, 0, 2, 76, { [2] = 9672 }, { [2] = 76 }, nil, nil, nil, true }
+players["tubandida"] = { "Tubandida", 9669, 0, 2, 77, { [1] = 918, [2] = 9669 }, { [1] = 10949, [2] = 77 }, nil, nil, nil, true }
+players["anonimm"] = { "Anonimm", 9668, 0, 2, 78, { [1] = 6603, [2] = 9668, [3] = 8491 }, { [1] = 2190, [2] = 78, [3] = 1004 }, nil, nil, nil, true }
+players["ccapable"] = { "Ccapable", 9659, 0, 2, 80, { [1] = 3946, [2] = 9659 }, { [1] = 5330, [2] = 80 }, nil, nil, nil, true }
+players["keelass"] = { "Keelass", 9652, 0, 2, 81, { [2] = 9652, [3] = 9504 }, { [2] = 81, [3] = 253 }, nil, nil, nil, true }
+players["nokduk"] = { "Nokduk", 9650, 0, 2, 82, { [2] = 9650 }, { [2] = 82 }, nil, nil, nil, true }
+players["pestoe"] = { "Pestoe", 9648, 0, 2, 83, { [1] = 7703, [2] = 9648, [3] = 8666 }, { [1] = 1148, [2] = 83, [3] = 849 }, nil, nil, nil, true }
+players["showburnz"] = { "Showburnz", 9647, 0, 2, 84, { [2] = 9647, [3] = 7902 }, { [2] = 84, [3] = 1527 }, nil, nil, nil, true }
+players["inimate"] = { "Inimate", 9643, 0, 2, 85, { [1] = 6544, [2] = 9643 }, { [1] = 2259, [2] = 85 }, nil, nil, nil, true }
+players["ron"] = { "Ron", 9640, 0, 2, 86, { [1] = 2789, [2] = 9640, [3] = 7368 }, { [1] = 7117, [2] = 86, [3] = 2051 }, nil, nil, nil, true }
+players["areare"] = { "Areare", 9636, 0, 2, 87, { [2] = 9636 }, { [2] = 87 }, nil, nil, nil, true }
 players["madeatsyou"] = { "Madeatsyou", 9634, 0, 2, 88, { [2] = 9634 }, { [2] = 88 }, nil, nil, nil, true }
-players["khirah"] = { "Khirah", 9626, 0, 2, 90, { [1] = 3765, [2] = 9626, [3] = 2040 }, { [1] = 5562, [2] = 90, [3] = 10967 }, nil, nil, nil, true }
-players["etenblood"] = { "Etenblood", 9626, 0, 2, 91, { [1] = 8957, [2] = 9626 }, { [1] = 372, [2] = 91 }, nil, nil, nil, true }
+players["etenblood"] = { "Etenblood", 9626, 0, 2, 90, { [1] = 8953, [2] = 9626 }, { [1] = 375, [2] = 90 }, nil, nil, nil, true }
+players["khirah"] = { "Khirah", 9626, 0, 2, 91, { [1] = 3756, [2] = 9626, [3] = 2040 }, { [1] = 5582, [2] = 91, [3] = 10998 }, nil, nil, nil, true }
 players["jeffcucks"] = { "Jeffcucks", 9624, 0, 2, 92, { [2] = 9624 }, { [2] = 92 }, nil, nil, nil, true }
 players["bamidele"] = { "Bamidele", 9618, 0, 2, 93, { [2] = 9618 }, { [2] = 93 }, nil, nil, nil, true }
-players["desperator"] = { "Desperator", 9617, 0, 2, 94, { [2] = 9617 }, { [2] = 94 }, nil, nil, nil, true }
-players["cryomourne"] = { "Cryomourne", 9616, 0, 2, 95, { [1] = 1360, [2] = 9616 }, { [1] = 10168, [2] = 95 }, nil, nil, nil, true }
-players["ivete"] = { "Ivete", 9612, 0, 2, 96, { [2] = 9612 }, { [2] = 96 }, nil, nil, nil, true }
-players["lyssam"] = { "Lyssam", 9610, 0, 2, 97, { [1] = 683, [2] = 9610, [3] = 5722 }, { [1] = 11235, [2] = 97, [3] = 4158 }, nil, nil, nil, true }
-players["broxidar"] = { "Broxidar", 9607, 0, 2, 98, { [1] = 4336, [2] = 9607 }, { [1] = 4904, [2] = 98 }, nil, nil, nil, true }
-players["crixmaqt"] = { "Crixmaqt", 9598, 0, 2, 99, { [1] = 452, [2] = 9598 }, { [1] = 11516, [2] = 99 }, nil, nil, nil, true }
-players["lolzzxzzlol"] = { "Lolzzxzzlol", 9595, 0, 2, 100, { [1] = 8491, [2] = 9595, [3] = 8147 }, { [1] = 648, [2] = 100, [3] = 1289 }, nil, nil, nil, true }
+players["desperator"] = { "Desperator", 9616, 0, 2, 94, { [2] = 9616 }, { [2] = 94 }, nil, nil, nil, true }
+players["cryomourne"] = { "Cryomourne", 9615, 0, 2, 95, { [1] = 1352, [2] = 9615 }, { [1] = 10199, [2] = 95 }, nil, nil, nil, true }
+players["ivete"] = { "Ivete", 9611, 0, 2, 96, { [2] = 9611 }, { [2] = 96 }, nil, nil, nil, true }
+players["lyssam"] = { "Lyssam", 9610, 0, 2, 97, { [1] = 681, [2] = 9610, [3] = 5717 }, { [1] = 11268, [2] = 97, [3] = 4175 }, nil, nil, nil, true }
+players["broxidar"] = { "Broxidar", 9607, 0, 2, 98, { [1] = 4329, [2] = 9607 }, { [1] = 4919, [2] = 98 }, nil, nil, nil, true }
+players["crixmaqt"] = { "Crixmaqt", 9598, 0, 2, 99, { [1] = 451, [2] = 9598 }, { [1] = 11549, [2] = 99 }, nil, nil, nil, true }
+players["lolzzxzzlol"] = { "Lolzzxzzlol", 9595, 0, 2, 100, { [1] = 8484, [2] = 9595, [3] = 8141 }, { [1] = 652, [2] = 100, [3] = 1298 }, nil, nil, nil, true }
 players["summarize"] = { "Summarize", 9598, 0, 2, 100, { [1] = 8502, [2] = 9598, [3] = 8157 }, { [1] = 641, [2] = 100, [3] = 1281 }, nil, nil, nil, false }
 players["iordgrim"] = { "Iordgrim", 9590, 0, 2, 102, { [2] = 9590 }, { [2] = 102 }, nil, nil, nil, true }
-players["zekka"] = { "Zekka", 9588, 0, 2, 103, { [1] = 8909, [2] = 9588, [3] = 5624 }, { [1] = 393, [2] = 103, [3] = 4312 }, nil, nil, nil, true }
-players["gramwolfso"] = { "Gramwolfso", 9582, 0, 2, 104, { [1] = 7355, [2] = 9582 }, { [1] = 1480, [2] = 104 }, nil, nil, nil, true }
-players["darhken"] = { "Darhken", 9579, 0, 2, 105, { [1] = 9299, [2] = 9579 }, { [1] = 239, [2] = 105 }, nil, nil, nil, true }
-players["flamel"] = { "Flamel", 9578, 0, 2, 107, { [2] = 9578 }, { [2] = 107 }, nil, nil, nil, true }
-players["whataggro"] = { "Whataggro", 9570, 0, 2, 108, { [1] = 8433, [2] = 9570 }, { [1] = 687, [2] = 108 }, nil, nil, nil, true }
-players["bral"] = { "Bral", 10000, 0, 3, 1, { [1] = 9150, [2] = 607, [3] = 10000 }, { [1] = 284, [2] = 5366, [3] = 1 }, nil, nil, nil, true }
-players["tmrw"] = { "Tmrw", 9997, 0, 3, 2, { [1] = 9060, [2] = 4925, [3] = 9997 }, { [1] = 328, [2] = 1832, [3] = 2 }, nil, nil, nil, true }
-players["aikami"] = { "Aikami", 9994, 0, 3, 3, { [1] = 9026, [2] = 5038, [3] = 9994 }, { [1] = 347, [2] = 1755, [3] = 3 }, nil, nil, nil, true }
-players["besteri"] = { "Besteri", 9992, 0, 3, 4, { [1] = 9161, [3] = 9992 }, { [1] = 280, [3] = 4 }, nil, nil, nil, true }
-players["currse"] = { "Currse", 9991, 0, 3, 5, { [1] = 9166, [2] = 5095, [3] = 9991 }, { [1] = 276, [2] = 1712, [3] = 5 }, nil, nil, nil, true }
-players["pacaq"] = { "Pacaq", 9989, 0, 3, 7, { [1] = 5854, [3] = 9989 }, { [1] = 3018, [3] = 7 }, nil, nil, nil, true }
-players["buuss"] = { "Buuss", 9988, 0, 3, 8, { [1] = 938, [3] = 9988 }, { [1] = 10838, [3] = 8 }, nil, nil, nil, true }
-players["goatdktank"] = { "Goatdktank", 9986, 0, 3, 9, { [1] = 9449, [2] = 361, [3] = 9986 }, { [1] = 220, [2] = 5529, [3] = 9 }, nil, nil, nil, true }
-players["wakebakecake"] = { "Wakebakecake", 9979, 0, 3, 10, { [1] = 8393, [3] = 9979 }, { [1] = 703, [3] = 10 }, nil, nil, nil, true }
-players["mmomo"] = { "Mmomo", 9976, 0, 3, 11, { [1] = 9847, [3] = 9976 }, { [1] = 84, [3] = 11 }, nil, nil, nil, true }
-players["pacau"] = { "Pacau", 9973, 0, 3, 12, { [1] = 946, [3] = 9973 }, { [1] = 10790, [3] = 12 }, nil, nil, nil, true }
-players["ggdecay"] = { "Ggdecay", 9971, 0, 3, 13, { [1] = 1319, [2] = 761, [3] = 9971 }, { [1] = 10243, [2] = 4985, [3] = 13 }, nil, nil, nil, true }
-players["paacaqq"] = { "Paacaqq", 9970, 0, 3, 14, { [1] = 7607, [2] = 9518, [3] = 9970 }, { [1] = 1245, [2] = 121, [3] = 14 }, nil, nil, nil, true }
-players["belt"] = { "Belt", 9969, 0, 3, 15, { [1] = 9143, [3] = 9969 }, { [1] = 289, [3] = 15 }, nil, nil, nil, true }
-players["paacaa"] = { "Paacaa", 9967, 0, 3, 16, { [1] = 4029, [2] = 5058, [3] = 9967 }, { [1] = 5229, [2] = 1736, [3] = 16 }, nil, nil, nil, true }
-players["raitare"] = { "Raitare", 9967, 0, 3, 17, { [2] = 886, [3] = 9967 }, { [2] = 4902, [3] = 17 }, nil, nil, nil, true }
-players["radonjatank"] = { "Radonjatank", 9966, 0, 3, 18, { [1] = 9337, [2] = 4968, [3] = 9966 }, { [1] = 233, [2] = 1801, [3] = 18 }, nil, nil, nil, true }
-players["paacaq"] = { "Paacaq", 9965, 0, 3, 19, { [1] = 940, [3] = 9965 }, { [1] = 10823, [3] = 19 }, nil, nil, nil, true }
-players["coolrotation"] = { "Coolrotation", 9965, 0, 3, 20, { [1] = 7774, [2] = 8663, [3] = 9965 }, { [1] = 1094, [2] = 374, [3] = 20 }, nil, nil, nil, true }
-players["tosmokey"] = { "Tosmokey", 9963, 0, 3, 21, { [1] = 928, [3] = 9963 }, { [1] = 10888, [3] = 21 }, nil, nil, nil, true }
-players["pacaqq"] = { "Pacaqq", 9962, 0, 3, 22, { [1] = 1600, [3] = 9962 }, { [1] = 9702, [3] = 22 }, nil, nil, nil, true }
+players["zekka"] = { "Zekka", 9588, 0, 2, 103, { [1] = 8906, [2] = 9588, [3] = 5619 }, { [1] = 394, [2] = 103, [3] = 4330 }, nil, nil, nil, true }
+players["gramwolfso"] = { "Gramwolfso", 9582, 0, 2, 104, { [1] = 7341, [2] = 9582 }, { [1] = 1494, [2] = 104 }, nil, nil, nil, true }
+players["darhken"] = { "Darhken", 9578, 0, 2, 105, { [1] = 9298, [2] = 9578 }, { [1] = 241, [2] = 105 }, nil, nil, nil, true }
+players["flamel"] = { "Flamel", 9578, 0, 2, 106, { [2] = 9578 }, { [2] = 106 }, nil, nil, nil, true }
+players["whataggro"] = { "Whataggro", 9570, 0, 2, 108, { [1] = 8424, [2] = 9570 }, { [1] = 692, [2] = 108 }, nil, nil, nil, true }
+players["bral"] = { "Bral", 10000, 0, 3, 1, { [1] = 9146, [2] = 606, [3] = 10000 }, { [1] = 288, [2] = 5394, [3] = 1 }, nil, nil, nil, true }
+players["tmrw"] = { "Tmrw", 9997, 0, 3, 2, { [1] = 9098, [2] = 4922, [3] = 9997 }, { [1] = 310, [2] = 1841, [3] = 2 }, nil, nil, nil, true }
+players["aikami"] = { "Aikami", 9993, 0, 3, 3, { [1] = 9034, [2] = 5037, [3] = 9993 }, { [1] = 343, [2] = 1760, [3] = 3 }, nil, nil, nil, true }
+players["besteri"] = { "Besteri", 9992, 0, 3, 4, { [1] = 9158, [3] = 9992 }, { [1] = 283, [3] = 4 }, nil, nil, nil, true }
+players["currse"] = { "Currse", 9991, 0, 3, 5, { [1] = 9260, [2] = 5095, [3] = 9991 }, { [1] = 254, [2] = 1716, [3] = 5 }, nil, nil, nil, true }
+players["pacaq"] = { "Pacaq", 9988, 0, 3, 7, { [1] = 5853, [3] = 9988 }, { [1] = 3018, [3] = 7 }, nil, nil, nil, true }
+players["buuss"] = { "Buuss", 9987, 0, 3, 8, { [1] = 938, [3] = 9987 }, { [1] = 10856, [3] = 8 }, nil, nil, nil, true }
+players["goatdktank"] = { "Goatdktank", 9986, 0, 3, 9, { [1] = 9449, [2] = 364, [3] = 9986 }, { [1] = 221, [2] = 5558, [3] = 9 }, nil, nil, nil, true }
+players["wakebakecake"] = { "Wakebakecake", 9979, 0, 3, 10, { [1] = 8392, [3] = 9979 }, { [1] = 704, [3] = 10 }, nil, nil, nil, true }
+players["mmomo"] = { "Mmomo", 9975, 0, 3, 11, { [1] = 9846, [3] = 9975 }, { [1] = 85, [3] = 11 }, nil, nil, nil, true }
+players["pacau"] = { "Pacau", 9972, 0, 3, 12, { [1] = 946, [3] = 9972 }, { [1] = 10812, [3] = 12 }, nil, nil, nil, true }
+players["ggdecay"] = { "Ggdecay", 9971, 0, 3, 13, { [1] = 1317, [2] = 760, [3] = 9971 }, { [1] = 10260, [2] = 5009, [3] = 13 }, nil, nil, nil, true }
+players["paacaqq"] = { "Paacaqq", 9970, 0, 3, 14, { [1] = 7596, [2] = 9517, [3] = 9970 }, { [1] = 1255, [2] = 121, [3] = 14 }, nil, nil, nil, true }
+players["belt"] = { "Belt", 9969, 0, 3, 15, { [1] = 9140, [3] = 9969 }, { [1] = 292, [3] = 15 }, nil, nil, nil, true }
+players["paacaa"] = { "Paacaa", 9967, 0, 3, 16, { [1] = 4023, [2] = 5055, [3] = 9967 }, { [1] = 5247, [2] = 1741, [3] = 16 }, nil, nil, nil, true }
+players["raitare"] = { "Raitare", 9966, 0, 3, 17, { [2] = 886, [3] = 9966 }, { [2] = 4926, [3] = 17 }, nil, nil, nil, true }
+players["radonjatank"] = { "Radonjatank", 9965, 0, 3, 18, { [1] = 9337, [2] = 4967, [3] = 9965 }, { [1] = 234, [2] = 1806, [3] = 18 }, nil, nil, nil, true }
+players["coolrotation"] = { "Coolrotation", 9964, 0, 3, 19, { [1] = 7771, [2] = 8664, [3] = 9964 }, { [1] = 1102, [2] = 373, [3] = 19 }, nil, nil, nil, true }
+players["paacaq"] = { "Paacaq", 9964, 0, 3, 20, { [1] = 940, [3] = 9964 }, { [1] = 10838, [3] = 20 }, nil, nil, nil, true }
+players["tosmokey"] = { "Tosmokey", 9963, 0, 3, 21, { [1] = 928, [3] = 9963 }, { [1] = 10918, [3] = 21 }, nil, nil, nil, true }
+players["pacaqq"] = { "Pacaqq", 9961, 0, 3, 22, { [1] = 1600, [3] = 9961 }, { [1] = 9716, [3] = 22 }, nil, nil, nil, true }
 players["akkattosh"] = { "Akkattosh", 9960, 0, 3, 23, { [3] = 9960 }, { [3] = 23 }, nil, nil, nil, true }
 players["tuneling"] = { "Tuneling", 9959, 0, 3, 24, { [1] = 9794, [3] = 9959 }, { [1] = 123, [3] = 24 }, nil, nil, nil, true }
-players["chandarian"] = { "Chandarian", 9957, 0, 3, 25, { [1] = 935, [2] = 3119, [3] = 9957 }, { [1] = 10856, [2] = 3918, [3] = 25 }, nil, nil, nil, true }
-players["greencani"] = { "Greencani", 9955, 0, 3, 26, { [1] = 3964, [3] = 9955 }, { [1] = 5300, [3] = 26 }, nil, nil, nil, true }
-players["asmore"] = { "Asmore", 9951, 0, 3, 27, { [1] = 944, [3] = 9951 }, { [1] = 10802, [3] = 27 }, nil, nil, nil, true }
-players["nie"] = { "Nie", 9951, 0, 3, 28, { [1] = 185, [3] = 9951 }, { [1] = 11890, [3] = 28 }, nil, nil, nil, true }
-players["nibdk"] = { "Nibdk", 9947, 0, 3, 29, { [1] = 960, [3] = 9947 }, { [1] = 10733, [3] = 29 }, nil, nil, nil, true }
-players["halfro"] = { "Halfro", 9945, 0, 3, 30, { [1] = 4652, [3] = 9945 }, { [1] = 4562, [3] = 30 }, nil, nil, nil, true }
-players["doramus"] = { "Doramus", 9944, 0, 3, 31, { [1] = 9929, [2] = 8585, [3] = 9944 }, { [1] = 38, [2] = 399, [3] = 31 }, nil, nil, nil, true }
-players["scourged"] = { "Scourged", 9941, 0, 3, 32, { [1] = 8728, [2] = 5428, [3] = 9941 }, { [1] = 502, [2] = 1555, [3] = 32 }, nil, nil, nil, true }
-players["yapomnuvas"] = { "Yapomnuvas", 9940, 0, 3, 33, { [2] = 981, [3] = 9940 }, { [2] = 4878, [3] = 33 }, nil, nil, nil, true }
-players["biruleibe"] = { "Biruleibe", 9938, 0, 3, 34, { [1] = 7298, [2] = 3347, [3] = 9938 }, { [1] = 1521, [2] = 3772, [3] = 34 }, nil, nil, nil, true }
-players["symbolix"] = { "Symbolix", 9933, 0, 3, 35, { [1] = 5394, [3] = 9933 }, { [1] = 3689, [3] = 35 }, nil, nil, nil, true }
-players["ebolatouch"] = { "Ebolatouch", 9926, 0, 3, 37, { [1] = 5803, [3] = 9926 }, { [1] = 3108, [3] = 37 }, nil, nil, nil, true }
-players["chingthot"] = { "Chingthot", 9926, 0, 3, 38, { [3] = 9926 }, { [3] = 38 }, nil, nil, nil, true }
-players["ponpa"] = { "Ponpa", 9925, 0, 3, 39, { [3] = 9925 }, { [3] = 39 }, nil, nil, nil, true }
-players["neocyclonext"] = { "Neocyclonext", 9925, 0, 3, 40, { [1] = 8591, [3] = 9925 }, { [1] = 590, [3] = 40 }, nil, nil, nil, true }
-players["hiperionx"] = { "Hiperionx", 9918, 0, 3, 41, { [1] = 8695, [3] = 9918 }, { [1] = 520, [3] = 41 }, nil, nil, nil, true }
-players["thelastcarry"] = { "Thelastcarry", 9914, 0, 3, 42, { [1] = 8738, [3] = 9914 }, { [1] = 497, [3] = 42 }, nil, nil, nil, true }
-players["indra"] = { "Indra", 9912, 0, 3, 43, { [1] = 4829, [2] = 2564, [3] = 9912 }, { [1] = 4355, [2] = 4143, [3] = 43 }, nil, nil, nil, true }
-players["zaby"] = { "Zaby", 9910, 0, 3, 44, { [3] = 9910 }, { [3] = 44 }, nil, nil, nil, true }
-players["arkail"] = { "Arkail", 9909, 0, 3, 45, { [1] = 8728, [2] = 9414, [3] = 9909 }, { [1] = 501, [2] = 144, [3] = 45 }, nil, nil, nil, true }
-players["cooled"] = { "Cooled", 9909, 0, 3, 46, { [1] = 9080, [2] = 9804, [3] = 9909 }, { [1] = 317, [2] = 41, [3] = 46 }, nil, nil, nil, true }
-players["unzug"] = { "Unzug", 9908, 0, 3, 47, { [1] = 8972, [2] = 4809, [3] = 9908 }, { [1] = 368, [2] = 1938, [3] = 47 }, nil, nil, nil, true }
-players["hubkki"] = { "Hubkki", 9903, 0, 3, 48, { [1] = 9347, [3] = 9903 }, { [1] = 231, [3] = 48 }, nil, nil, nil, true }
-players["wrathstark"] = { "Wrathstark", 9901, 0, 3, 49, { [1] = 6571, [2] = 4648, [3] = 9901 }, { [1] = 2231, [2] = 2131, [3] = 49 }, nil, nil, nil, true }
-players["froozenqt"] = { "Froozenqt", 9897, 0, 3, 50, { [1] = 332, [3] = 9897 }, { [1] = 11699, [3] = 50 }, nil, nil, nil, true }
-players["karnox"] = { "Karnox", 9897, 0, 3, 51, { [1] = 9298, [2] = 5095, [3] = 9897 }, { [1] = 241, [2] = 1711, [3] = 51 }, nil, nil, nil, true }
-players["npsngs"] = { "Npsngs", 9896, 0, 3, 52, { [2] = 8502, [3] = 9896 }, { [2] = 430, [3] = 52 }, nil, nil, nil, true }
-players["nalgon"] = { "Nalgon", 9896, 0, 3, 53, { [1] = 918, [3] = 9896 }, { [1] = 10921, [3] = 53 }, nil, nil, nil, true }
-players["bojdk"] = { "Bojdk", 9886, 0, 3, 55, { [1] = 7912, [3] = 9886 }, { [1] = 989, [3] = 55 }, nil, nil, nil, true }
-players["noi"] = { "Noi", 9882, 0, 3, 56, { [1] = 9270, [2] = 5102, [3] = 9882 }, { [1] = 250, [2] = 1707, [3] = 56 }, nil, nil, nil, true }
-players["drvitaum"] = { "Drvitaum", 9879, 0, 3, 57, { [1] = 924, [2] = 7866, [3] = 9879 }, { [1] = 10897, [2] = 653, [3] = 57 }, nil, nil, nil, true }
-players["freaktime"] = { "Freaktime", 9876, 0, 3, 58, { [1] = 939, [3] = 9876 }, { [1] = 10832, [3] = 58 }, nil, nil, nil, true }
-players["karnix"] = { "Karnix", 9875, 0, 3, 59, { [1] = 962, [3] = 9875 }, { [1] = 10728, [3] = 59 }, nil, nil, nil, true }
-players["unholyoza"] = { "Unholyoza", 9875, 0, 3, 60, { [1] = 7344, [2] = 3247, [3] = 9875 }, { [1] = 1487, [2] = 3818, [3] = 60 }, nil, nil, nil, true }
-players["cowindbis"] = { "Cowindbis", 9874, 0, 3, 61, { [1] = 6400, [3] = 9874 }, { [1] = 2400, [3] = 61 }, nil, nil, nil, true }
-players["heonx"] = { "Heonx", 9871, 0, 3, 62, { [2] = 7316, [3] = 9871 }, { [2] = 872, [3] = 62 }, nil, nil, nil, true }
-players["egormashina"] = { "Egormashina", 9871, 0, 3, 63, { [2] = 550, [3] = 9871 }, { [2] = 5512, [3] = 63 }, nil, nil, nil, true }
-players["dimelindura"] = { "Dimelindura", 9868, 0, 3, 64, { [1] = 1058, [3] = 9868 }, { [1] = 10587, [3] = 64 }, nil, nil, nil, true }
-players["virulence"] = { "Virulence", 9864, 0, 3, 65, { [1] = 9156, [3] = 9864 }, { [1] = 281, [3] = 65 }, nil, nil, nil, true }
-players["unholycake"] = { "Unholycake", 9862, 0, 3, 66, { [1] = 8602, [3] = 9862 }, { [1] = 582, [3] = 66 }, nil, nil, nil, true }
-players["zeriath"] = { "Zeriath", 9861, 0, 3, 67, { [1] = 8906, [2] = 1180, [3] = 9861 }, { [1] = 396, [2] = 4847, [3] = 67 }, nil, nil, nil, true }
-players["deathvarg"] = { "Deathvarg", 9857, 0, 3, 68, { [2] = 9047, [3] = 9857 }, { [2] = 262, [3] = 68 }, nil, nil, nil, true }
-players["doomsower"] = { "Doomsower", 9856, 0, 3, 69, { [1] = 8139, [3] = 9856 }, { [1] = 856, [3] = 69 }, nil, nil, nil, true }
-players["gayman"] = { "Gayman", 9851, 0, 3, 70, { [2] = 1607, [3] = 9851 }, { [2] = 4556, [3] = 70 }, nil, nil, nil, true }
-players["edva"] = { "Edva", 9851, 0, 3, 71, { [1] = 5835, [2] = 1914, [3] = 9851 }, { [1] = 3050, [2] = 4403, [3] = 71 }, nil, nil, nil, true }
-players["trickdecay"] = { "Trickdecay", 9847, 0, 3, 72, { [1] = 965, [3] = 9847 }, { [1] = 10714, [3] = 72 }, nil, nil, nil, true }
-players["anicdk"] = { "Anicdk", 9846, 0, 3, 73, { [1] = 924, [3] = 9846 }, { [1] = 10896, [3] = 73 }, nil, nil, nil, true }
-players["soulcleave"] = { "Soulcleave", 9846, 0, 3, 74, { [1] = 947, [3] = 9846 }, { [1] = 10787, [3] = 74 }, nil, nil, nil, true }
-players["aryaastark"] = { "Aryaastark", 9837, 0, 3, 75, { [3] = 9837 }, { [3] = 75 }, nil, nil, nil, true }
-players["lejdyboj"] = { "Lejdyboj", 9832, 0, 3, 76, { [1] = 938, [3] = 9832 }, { [1] = 10842, [3] = 76 }, nil, nil, nil, true }
-players["stoleu"] = { "Stoleu", 9831, 0, 3, 77, { [1] = 939, [3] = 9831 }, { [1] = 10836, [3] = 77 }, nil, nil, nil, true }
-players["farmingachi"] = { "Farmingachi", 9831, 0, 3, 78, { [1] = 8229, [3] = 9831 }, { [1] = 807, [3] = 78 }, nil, nil, nil, true }
+players["chandarian"] = { "Chandarian", 9956, 0, 3, 25, { [1] = 935, [2] = 3115, [3] = 9956 }, { [1] = 10877, [2] = 3940, [3] = 25 }, nil, nil, nil, true }
+players["greencani"] = { "Greencani", 9954, 0, 3, 26, { [1] = 3957, [3] = 9954 }, { [1] = 5315, [3] = 26 }, nil, nil, nil, true }
+players["asmore"] = { "Asmore", 9952, 0, 3, 27, { [1] = 944, [3] = 9952 }, { [1] = 10820, [3] = 27 }, nil, nil, nil, true }
+players["nie"] = { "Nie", 9950, 0, 3, 28, { [1] = 182, [3] = 9950 }, { [1] = 11931, [3] = 28 }, nil, nil, nil, true }
+players["nibdk"] = { "Nibdk", 9946, 0, 3, 29, { [1] = 960, [3] = 9946 }, { [1] = 10755, [3] = 29 }, nil, nil, nil, true }
+players["halfro"] = { "Halfro", 9945, 0, 3, 30, { [1] = 4632, [3] = 9945 }, { [1] = 4587, [3] = 30 }, nil, nil, nil, true }
+players["doramus"] = { "Doramus", 9943, 0, 3, 31, { [1] = 9928, [2] = 8586, [3] = 9943 }, { [1] = 40, [2] = 397, [3] = 31 }, nil, nil, nil, true }
+players["biruleibe"] = { "Biruleibe", 9942, 0, 3, 32, { [1] = 7290, [2] = 3344, [3] = 9942 }, { [1] = 1534, [2] = 3793, [3] = 32 }, nil, nil, nil, true }
+players["scourged"] = { "Scourged", 9940, 0, 3, 33, { [1] = 8723, [2] = 5426, [3] = 9940 }, { [1] = 505, [2] = 1559, [3] = 33 }, nil, nil, nil, true }
+players["yapomnuvas"] = { "Yapomnuvas", 9939, 0, 3, 34, { [2] = 980, [3] = 9939 }, { [2] = 4904, [3] = 34 }, nil, nil, nil, true }
+players["symbolix"] = { "Symbolix", 9932, 0, 3, 35, { [1] = 5384, [3] = 9932 }, { [1] = 3701, [3] = 35 }, nil, nil, nil, true }
+players["ebolatouch"] = { "Ebolatouch", 9926, 0, 3, 37, { [1] = 5802, [3] = 9926 }, { [1] = 3114, [3] = 37 }, nil, nil, nil, true }
+players["ponpa"] = { "Ponpa", 9925, 0, 3, 38, { [3] = 9925 }, { [3] = 38 }, nil, nil, nil, true }
+players["chingthot"] = { "Chingthot", 9925, 0, 3, 39, { [3] = 9925 }, { [3] = 39 }, nil, nil, nil, true }
+players["neocyclonext"] = { "Neocyclonext", 9924, 0, 3, 40, { [1] = 8584, [3] = 9924 }, { [1] = 594, [3] = 40 }, nil, nil, nil, true }
+players["hiperionx"] = { "Hiperionx", 9917, 0, 3, 41, { [1] = 8688, [3] = 9917 }, { [1] = 523, [3] = 41 }, nil, nil, nil, true }
+players["drvitaum"] = { "Drvitaum", 9915, 0, 3, 42, { [1] = 924, [2] = 7863, [3] = 9915 }, { [1] = 10931, [2] = 657, [3] = 42 }, nil, nil, nil, true }
+players["thelastcarry"] = { "Thelastcarry", 9914, 0, 3, 43, { [1] = 8732, [3] = 9914 }, { [1] = 499, [3] = 43 }, nil, nil, nil, true }
+players["indra"] = { "Indra", 9912, 0, 3, 44, { [1] = 4829, [2] = 2562, [3] = 9912 }, { [1] = 4359, [2] = 4169, [3] = 44 }, nil, nil, nil, true }
+players["arkail"] = { "Arkail", 9911, 0, 3, 45, { [1] = 8724, [2] = 9414, [3] = 9911 }, { [1] = 504, [2] = 145, [3] = 45 }, nil, nil, nil, true }
+players["zaby"] = { "Zaby", 9909, 0, 3, 46, { [3] = 9909 }, { [3] = 46 }, nil, nil, nil, true }
+players["cooled"] = { "Cooled", 9908, 0, 3, 47, { [1] = 9076, [2] = 9813, [3] = 9908 }, { [1] = 321, [2] = 40, [3] = 47 }, nil, nil, nil, true }
+players["unzug"] = { "Unzug", 9908, 0, 3, 48, { [1] = 8968, [2] = 4808, [3] = 9908 }, { [1] = 371, [2] = 1943, [3] = 48 }, nil, nil, nil, true }
+players["hubkki"] = { "Hubkki", 9902, 0, 3, 49, { [1] = 9346, [3] = 9902 }, { [1] = 232, [3] = 49 }, nil, nil, nil, true }
+players["wrathstark"] = { "Wrathstark", 9900, 0, 3, 50, { [1] = 6558, [2] = 4642, [3] = 9900 }, { [1] = 2241, [2] = 2141, [3] = 50 }, nil, nil, nil, true }
+players["froozenqt"] = { "Froozenqt", 9896, 0, 3, 51, { [1] = 330, [3] = 9896 }, { [1] = 11732, [3] = 51 }, nil, nil, nil, true }
+players["karnox"] = { "Karnox", 9896, 0, 3, 52, { [1] = 9297, [2] = 5092, [3] = 9896 }, { [1] = 243, [2] = 1717, [3] = 52 }, nil, nil, nil, true }
+players["npsngs"] = { "Npsngs", 9896, 0, 3, 53, { [2] = 8502, [3] = 9896 }, { [2] = 430, [3] = 53 }, nil, nil, nil, true }
+players["nalgon"] = { "Nalgon", 9895, 0, 3, 54, { [1] = 918, [3] = 9895 }, { [1] = 10950, [3] = 54 }, nil, nil, nil, true }
+players["unholycake"] = { "Unholycake", 9887, 0, 3, 56, { [1] = 8595, [3] = 9887 }, { [1] = 589, [3] = 56 }, nil, nil, nil, true }
+players["bojdk"] = { "Bojdk", 9885, 0, 3, 57, { [1] = 7904, [3] = 9885 }, { [1] = 997, [3] = 57 }, nil, nil, nil, true }
+players["noi"] = { "Noi", 9882, 0, 3, 58, { [1] = 9269, [2] = 5102, [3] = 9882 }, { [1] = 252, [2] = 1710, [3] = 58 }, nil, nil, nil, true }
+players["freaktime"] = { "Freaktime", 9874, 0, 3, 59, { [1] = 939, [3] = 9874 }, { [1] = 10848, [3] = 59 }, nil, nil, nil, true }
+players["karnix"] = { "Karnix", 9874, 0, 3, 60, { [1] = 962, [3] = 9874 }, { [1] = 10750, [3] = 60 }, nil, nil, nil, true }
+players["unholyoza"] = { "Unholyoza", 9874, 0, 3, 61, { [1] = 7333, [2] = 3241, [3] = 9874 }, { [1] = 1499, [2] = 3839, [3] = 61 }, nil, nil, nil, true }
+players["cowindbis"] = { "Cowindbis", 9872, 0, 3, 62, { [1] = 6387, [3] = 9872 }, { [1] = 2415, [3] = 62 }, nil, nil, nil, true }
+players["heonx"] = { "Heonx", 9871, 0, 3, 63, { [2] = 7313, [3] = 9871 }, { [2] = 876, [3] = 63 }, nil, nil, nil, true }
+players["egormashina"] = { "Egormashina", 9869, 0, 3, 64, { [2] = 549, [3] = 9869 }, { [2] = 5541, [3] = 64 }, nil, nil, nil, true }
+players["arisena"] = { "Arisena", 9867, 0, 3, 65, { [2] = 2246, [3] = 9867 }, { [2] = 4349, [3] = 65 }, nil, nil, nil, true }
+players["dimelindura"] = { "Dimelindura", 9867, 0, 3, 66, { [1] = 1055, [3] = 9867 }, { [1] = 10610, [3] = 66 }, nil, nil, nil, true }
+players["virulence"] = { "Virulence", 9863, 0, 3, 67, { [1] = 9153, [3] = 9863 }, { [1] = 284, [3] = 67 }, nil, nil, nil, true }
+players["zeriath"] = { "Zeriath", 9859, 0, 3, 68, { [1] = 8900, [2] = 1178, [3] = 9859 }, { [1] = 398, [2] = 4872, [3] = 68 }, nil, nil, nil, true }
+players["deathvarg"] = { "Deathvarg", 9855, 0, 3, 69, { [2] = 9045, [3] = 9855 }, { [2] = 262, [3] = 69 }, nil, nil, nil, true }
+players["doomsower"] = { "Doomsower", 9855, 0, 3, 70, { [1] = 8131, [3] = 9855 }, { [1] = 861, [3] = 70 }, nil, nil, nil, true }
+players["gayman"] = { "Gayman", 9850, 0, 3, 71, { [2] = 1605, [3] = 9850 }, { [2] = 4579, [3] = 71 }, nil, nil, nil, true }
+players["edva"] = { "Edva", 9850, 0, 3, 72, { [1] = 5824, [2] = 1911, [3] = 9850 }, { [1] = 3069, [2] = 4426, [3] = 72 }, nil, nil, nil, true }
+players["trickdecay"] = { "Trickdecay", 9846, 0, 3, 73, { [1] = 965, [3] = 9846 }, { [1] = 10735, [3] = 73 }, nil, nil, nil, true }
+players["anicdk"] = { "Anicdk", 9845, 0, 3, 74, { [1] = 924, [3] = 9845 }, { [1] = 10930, [3] = 74 }, nil, nil, nil, true }
+players["soulcleave"] = { "Soulcleave", 9844, 0, 3, 75, { [1] = 947, [3] = 9844 }, { [1] = 10809, [3] = 75 }, nil, nil, nil, true }
+players["aryaastark"] = { "Aryaastark", 9835, 0, 3, 76, { [3] = 9835 }, { [3] = 76 }, nil, nil, nil, true }
+players["gleipnir"] = { "Gleipnir", 9833, 0, 3, 77, { [1] = 9831, [2] = 9180, [3] = 9833 }, { [1] = 99, [2] = 217, [3] = 77 }, nil, nil, nil, true }
+players["lejdyboj"] = { "Lejdyboj", 9831, 0, 3, 78, { [1] = 938, [3] = 9831 }, { [1] = 10859, [3] = 78 }, nil, nil, nil, true }
 players["bomoblight"] = { "Bomoblight", 9832, 0, 3, 79, { [1] = 8966, [2] = 4853, [3] = 9832 }, { [1] = 365, [2] = 1869, [3] = 79 }, nil, nil, nil, false }
-players["gobble"] = { "Gobble", 9830, 0, 3, 79, { [1] = 9622, [2] = 8850, [3] = 9830 }, { [1] = 197, [2] = 314, [3] = 79 }, nil, nil, nil, true }
-players["arisena"] = { "Arisena", 9830, 0, 3, 80, { [2] = 2247, [3] = 9830 }, { [2] = 4326, [3] = 80 }, nil, nil, nil, true }
-players["rizuke"] = { "Rizuke", 9830, 0, 3, 81, { [2] = 9414, [3] = 9830 }, { [2] = 145, [3] = 81 }, nil, nil, nil, true }
-players["nthercr"] = { "Nthercr", 9829, 0, 3, 82, { [1] = 4198, [3] = 9829 }, { [1] = 5035, [3] = 82 }, nil, nil, nil, true }
-players["gagulesku"] = { "Gagulesku", 9826, 0, 3, 83, { [1] = 931, [3] = 9826 }, { [1] = 10878, [3] = 83 }, nil, nil, nil, true }
-players["moommo"] = { "Moommo", 9824, 0, 3, 86, { [1] = 953, [3] = 9824 }, { [1] = 10757, [3] = 86 }, nil, nil, nil, true }
-players["glaciated"] = { "Glaciated", 9824, 0, 3, 87, { [1] = 9240, [2] = 4842, [3] = 9824 }, { [1] = 256, [2] = 1906, [3] = 87 }, nil, nil, nil, true }
-players["inaku"] = { "Inaku", 9821, 0, 3, 88, { [1] = 8525, [2] = 866, [3] = 3765 }, { [1] = 630, [2] = 4908, [3] = 10927 }, nil, nil, nil, true }
-players["bukowssky"] = { "Bukowssky", 9820, 0, 3, 89, { [1] = 534, [3] = 9820 }, { [1] = 11412, [3] = 89 }, nil, nil, nil, true }
-players["trapquin"] = { "Trapquin", 9820, 0, 3, 90, { [1] = 6161, [3] = 9820 }, { [1] = 2651, [3] = 90 }, nil, nil, nil, true }
-players["delobuchlolz"] = { "Delobuchlolz", 9818, 0, 3, 91, { [1] = 235, [3] = 9818 }, { [1] = 11817, [3] = 91 }, nil, nil, nil, true }
-players["nykola"] = { "Nykola", 9818, 0, 3, 92, { [3] = 9818 }, { [3] = 92 }, nil, nil, nil, true }
-players["xexy"] = { "Xexy", 9817, 0, 3, 93, { [1] = 8520, [2] = 1503, [3] = 9817 }, { [1] = 637, [2] = 4586, [3] = 93 }, nil, nil, nil, true }
-players["gonzagrave"] = { "Gonzagrave", 9815, 0, 3, 96, { [3] = 9815 }, { [3] = 96 }, nil, nil, nil, true }
-players["askmeificare"] = { "Askmeificare", 9812, 0, 3, 97, { [1] = 1296, [2] = 4774, [3] = 9812 }, { [1] = 10273, [2] = 5439, [3] = 97 }, nil, nil, nil, true }
-players["fuelhatred"] = { "Fuelhatred", 9811, 0, 3, 98, { [1] = 8304, [2] = 2939, [3] = 9811 }, { [1] = 764, [2] = 4024, [3] = 98 }, nil, nil, nil, true }
-players["trompowsky"] = { "Trompowsky", 9808, 0, 3, 99, { [1] = 7901, [3] = 9808 }, { [1] = 1000, [3] = 99 }, nil, nil, nil, true }
-players["roxdk"] = { "Roxdk", 9803, 0, 3, 100, { [2] = 9593, [3] = 9803 }, { [2] = 101, [3] = 100 }, nil, nil, nil, true }
-players["colette"] = { "Colette", 9802, 0, 3, 101, { [1] = 8222, [3] = 9802 }, { [1] = 812, [3] = 101 }, nil, nil, nil, true }
-players["fiorcia"] = { "Fiorcia", 9798, 0, 3, 102, { [2] = 6724, [3] = 9798 }, { [2] = 1072, [3] = 102 }, nil, nil, nil, true }
-players["theunholiest"] = { "Theunholiest", 9797, 0, 3, 103, { [1] = 932, [3] = 9797 }, { [1] = 10873, [3] = 103 }, nil, nil, nil, true }
-players["cousecouse"] = { "Cousecouse", 9797, 0, 3, 104, { [1] = 7271, [2] = 1624, [3] = 9797 }, { [1] = 1546, [2] = 4553, [3] = 104 }, nil, nil, nil, true }
-players["amatoeodiato"] = { "Amatoeodiato", 9796, 0, 3, 105, { [1] = 9134, [2] = 2807, [3] = 9796 }, { [1] = 295, [2] = 4054, [3] = 105 }, nil, nil, nil, true }
-players["earien"] = { "Earien", 9793, 0, 3, 106, { [1] = 8407, [3] = 9793 }, { [1] = 695, [3] = 106 }, nil, nil, nil, true }
-players["yeadk"] = { "Yeadk", 9792, 0, 3, 107, { [1] = 5732, [3] = 9792 }, { [1] = 3236, [3] = 107 }, nil, nil, nil, true }
-players["oneonrealm"] = { "Oneonrealm", 9792, 0, 3, 108, { [1] = 9071, [2] = 8098, [3] = 9792 }, { [1] = 322, [2] = 575, [3] = 108 }, nil, nil, nil, true }
-players["delfozx"] = { "Delfozx", 9791, 0, 3, 109, { [1] = 6591, [3] = 9791 }, { [1] = 2215, [3] = 109 }, nil, nil, nil, true }
-players["joytodestroy"] = { "Joytodestroy", 9787, 0, 3, 110, { [1] = 953, [2] = 7542, [3] = 9787 }, { [1] = 10760, [2] = 786, [3] = 110 }, nil, nil, nil, true }
-players["clipperuh"] = { "Clipperuh", 9785, 0, 3, 111, { [3] = 9785 }, { [3] = 111 }, nil, nil, nil, true }
-players["protestantka"] = { "Protestantka", 9785, 0, 3, 112, { [3] = 9785 }, { [3] = 112 }, nil, nil, nil, true }
-players["duritar"] = { "Duritar", 9784, 0, 3, 113, { [1] = 3516, [3] = 9784 }, { [1] = 5891, [3] = 113 }, nil, nil, nil, true }
-players["hanekawa"] = { "Hanekawa", 9784, 0, 3, 114, { [3] = 9784 }, { [3] = 114 }, nil, nil, nil, true }
-players["kybrat"] = { "Kybrat", 9782, 0, 3, 115, { [1] = 5884, [3] = 9782 }, { [1] = 2975, [3] = 115 }, nil, nil, nil, true }
-players["djitza"] = { "Djitza", 9778, 0, 3, 117, { [1] = 5457, [3] = 9778 }, { [1] = 3619, [3] = 117 }, nil, nil, nil, true }
-players["muertesor"] = { "Muertesor", 9774, 0, 3, 118, { [1] = 5282, [3] = 9774 }, { [1] = 3820, [3] = 118 }, nil, nil, nil, true }
-players["shendellzare"] = { "Shendellzare", 9772, 0, 3, 119, { [1] = 8684, [2] = 9092, [3] = 9772 }, { [1] = 527, [2] = 244, [3] = 119 }, nil, nil, nil, true }
-players["snezhevna"] = { "Snezhevna", 9762, 0, 3, 121, { [1] = 7222, [3] = 9762 }, { [1] = 1588, [3] = 121 }, nil, nil, nil, true }
-players["crixma"] = { "Crixma", 9758, 0, 3, 122, { [3] = 9758 }, { [3] = 122 }, nil, nil, nil, true }
-players["classicend"] = { "Classicend", 9755, 0, 3, 123, { [2] = 9501, [3] = 9755 }, { [2] = 125, [3] = 123 }, nil, nil, nil, true }
+players["stoleu"] = { "Stoleu", 9830, 0, 3, 79, { [1] = 939, [3] = 9830 }, { [1] = 10855, [3] = 79 }, nil, nil, nil, true }
+players["farmingachi"] = { "Farmingachi", 9828, 0, 3, 80, { [1] = 8221, [3] = 9828 }, { [1] = 812, [3] = 80 }, nil, nil, nil, true }
+players["gobble"] = { "Gobble", 9828, 0, 3, 81, { [1] = 9620, [2] = 8850, [3] = 9828 }, { [1] = 198, [2] = 315, [3] = 81 }, nil, nil, nil, true }
+players["rizuke"] = { "Rizuke", 9828, 0, 3, 82, { [2] = 9413, [3] = 9828 }, { [2] = 147, [3] = 82 }, nil, nil, nil, true }
+players["nthercr"] = { "Nthercr", 9827, 0, 3, 83, { [1] = 4190, [3] = 9827 }, { [1] = 5055, [3] = 83 }, nil, nil, nil, true }
+players["gagulesku"] = { "Gagulesku", 9825, 0, 3, 84, { [1] = 931, [3] = 9825 }, { [1] = 10904, [3] = 84 }, nil, nil, nil, true }
+players["moommo"] = { "Moommo", 9823, 0, 3, 86, { [1] = 953, [3] = 9823 }, { [1] = 10778, [3] = 86 }, nil, nil, nil, true }
+players["glaciated"] = { "Glaciated", 9822, 0, 3, 87, { [1] = 9238, [2] = 4839, [3] = 9822 }, { [1] = 259, [2] = 1918, [3] = 87 }, nil, nil, nil, true }
+players["inaku"] = { "Inaku", 9820, 0, 3, 88, { [1] = 8519, [2] = 866, [3] = 3760 }, { [1] = 633, [2] = 4932, [3] = 10957 }, nil, nil, nil, true }
+players["bukowssky"] = { "Bukowssky", 9819, 0, 3, 89, { [1] = 533, [3] = 9819 }, { [1] = 11449, [3] = 89 }, nil, nil, nil, true }
+players["trapquin"] = { "Trapquin", 9819, 0, 3, 90, { [1] = 6147, [3] = 9819 }, { [1] = 2667, [3] = 90 }, nil, nil, nil, true }
+players["nykola"] = { "Nykola", 9816, 0, 3, 91, { [3] = 9816 }, { [3] = 91 }, nil, nil, nil, true }
+players["xexy"] = { "Xexy", 9816, 0, 3, 92, { [1] = 8512, [2] = 1503, [3] = 9816 }, { [1] = 640, [2] = 4608, [3] = 92 }, nil, nil, nil, true }
+players["delobuchlolz"] = { "Delobuchlolz", 9816, 0, 3, 93, { [1] = 233, [3] = 9816 }, { [1] = 11855, [3] = 93 }, nil, nil, nil, true }
+players["gonzagrave"] = { "Gonzagrave", 9814, 0, 3, 96, { [3] = 9814 }, { [3] = 96 }, nil, nil, nil, true }
+players["askmeificare"] = { "Askmeificare", 9812, 0, 3, 97, { [1] = 1294, [2] = 4767, [3] = 9812 }, { [1] = 10301, [2] = 5459, [3] = 97 }, nil, nil, nil, true }
+players["fuelhatred"] = { "Fuelhatred", 9809, 0, 3, 98, { [1] = 8312, [2] = 2934, [3] = 9809 }, { [1] = 752, [2] = 4049, [3] = 98 }, nil, nil, nil, true }
+players["trompowsky"] = { "Trompowsky", 9807, 0, 3, 99, { [1] = 7900, [3] = 9807 }, { [1] = 999, [3] = 99 }, nil, nil, nil, true }
+players["colette"] = { "Colette", 9801, 0, 3, 100, { [1] = 8218, [3] = 9801 }, { [1] = 813, [3] = 100 }, nil, nil, nil, true }
+players["roxdk"] = { "Roxdk", 9801, 0, 3, 101, { [2] = 9593, [3] = 9801 }, { [2] = 101, [3] = 101 }, nil, nil, nil, true }
+players["fiorcia"] = { "Fiorcia", 9796, 0, 3, 102, { [2] = 6722, [3] = 9796 }, { [2] = 1072, [3] = 102 }, nil, nil, nil, true }
+players["cousecouse"] = { "Cousecouse", 9795, 0, 3, 103, { [1] = 7259, [2] = 1623, [3] = 9795 }, { [1] = 1559, [2] = 4576, [3] = 103 }, nil, nil, nil, true }
+players["theunholiest"] = { "Theunholiest", 9795, 0, 3, 104, { [1] = 932, [3] = 9795 }, { [1] = 10896, [3] = 104 }, nil, nil, nil, true }
+players["amatoeodiato"] = { "Amatoeodiato", 9794, 0, 3, 105, { [1] = 9131, [2] = 2806, [3] = 9794 }, { [1] = 298, [2] = 4077, [3] = 105 }, nil, nil, nil, true }
+players["earien"] = { "Earien", 9792, 0, 3, 106, { [1] = 8399, [3] = 9792 }, { [1] = 701, [3] = 106 }, nil, nil, nil, true }
+players["duritar"] = { "Duritar", 9791, 0, 3, 107, { [1] = 3507, [3] = 9791 }, { [1] = 5907, [3] = 107 }, nil, nil, nil, true }
+players["yeadk"] = { "Yeadk", 9791, 0, 3, 108, { [1] = 5717, [3] = 9791 }, { [1] = 3270, [3] = 108 }, nil, nil, nil, true }
+players["oneonrealm"] = { "Oneonrealm", 9791, 0, 3, 109, { [1] = 9067, [2] = 8097, [3] = 9791 }, { [1] = 326, [2] = 575, [3] = 109 }, nil, nil, nil, true }
+players["delfozx"] = { "Delfozx", 9789, 0, 3, 110, { [1] = 6575, [3] = 9789 }, { [1] = 2227, [3] = 110 }, nil, nil, nil, true }
+players["joytodestroy"] = { "Joytodestroy", 9785, 0, 3, 111, { [1] = 953, [2] = 7538, [3] = 9785 }, { [1] = 10782, [2] = 791, [3] = 111 }, nil, nil, nil, true }
+players["clipperuh"] = { "Clipperuh", 9784, 0, 3, 112, { [3] = 9784 }, { [3] = 112 }, nil, nil, nil, true }
+players["protestantka"] = { "Protestantka", 9783, 0, 3, 113, { [3] = 9783 }, { [3] = 113 }, nil, nil, nil, true }
+players["hanekawa"] = { "Hanekawa", 9782, 0, 3, 114, { [3] = 9782 }, { [3] = 114 }, nil, nil, nil, true }
+players["kybrat"] = { "Kybrat", 9780, 0, 3, 115, { [1] = 5884, [3] = 9780 }, { [1] = 2981, [3] = 115 }, nil, nil, nil, true }
+players["djitza"] = { "Djitza", 9776, 0, 3, 117, { [1] = 5443, [3] = 9776 }, { [1] = 3634, [3] = 117 }, nil, nil, nil, true }
+players["muertesor"] = { "Muertesor", 9772, 0, 3, 118, { [1] = 5267, [3] = 9772 }, { [1] = 3842, [3] = 118 }, nil, nil, nil, true }
+players["shendellzare"] = { "Shendellzare", 9770, 0, 3, 119, { [1] = 8678, [2] = 9092, [3] = 9770 }, { [1] = 531, [2] = 244, [3] = 119 }, nil, nil, nil, true }
+players["snezhevna"] = { "Snezhevna", 9760, 0, 3, 121, { [1] = 7206, [3] = 9760 }, { [1] = 1604, [3] = 121 }, nil, nil, nil, true }
+players["icebraids"] = { "Icebraids", 9757, 0, 3, 122, { [3] = 9757 }, { [3] = 122 }, nil, nil, nil, true }
+players["crixma"] = { "Crixma", 9756, 0, 3, 123, { [3] = 9756 }, { [3] = 123 }, nil, nil, nil, true }
 players["jimbose"] = { "Jimbose", 10000, 1, 1, 1, { [1] = 10000, [3] = 5983 }, { [1] = 1, [3] = 195 }, nil, nil, nil, true }
 players["azoia"] = { "Azoia", 9998, 1, 1, 2, { [1] = 9998 }, { [1] = 2 }, nil, nil, nil, true }
 players["carpe"] = { "Carpe", 9995, 1, 1, 3, { [1] = 9995 }, { [1] = 3 }, nil, nil, nil, true }
-players["trep"] = { "Trep", 9993, 1, 1, 4, { [1] = 9993, [2] = 648 }, { [1] = 4, [2] = 9249 }, nil, nil, nil, true }
-players["ponpo"] = { "Ponpo", 9991, 1, 1, 5, { [1] = 9991, [2] = 882 }, { [1] = 5, [2] = 9047 }, nil, nil, nil, true }
-players["procer"] = { "Procer", 9989, 1, 1, 6, { [1] = 9989 }, { [1] = 6 }, nil, nil, nil, true }
-players["jhe"] = { "Jhe", 9985, 1, 1, 7, { [1] = 9985, [2] = 9380 }, { [1] = 7, [2] = 292 }, nil, nil, nil, true }
-players["ariusb"] = { "Ariusb", 9980, 1, 1, 8, { [1] = 9980 }, { [1] = 8 }, nil, nil, nil, true }
-players["jenjon"] = { "Jenjon", 9979, 1, 1, 9, { [1] = 9979 }, { [1] = 9 }, nil, nil, nil, true }
-players["mantadruida"] = { "Mantadruida", 9979, 1, 1, 10, { [1] = 9979 }, { [1] = 10 }, nil, nil, nil, true }
-players["jackhererer"] = { "Jackhererer", 9975, 1, 1, 11, { [1] = 9975 }, { [1] = 11 }, nil, nil, nil, true }
-players["seismicxz"] = { "Seismicxz", 9974, 1, 1, 12, { [1] = 9974 }, { [1] = 12 }, nil, nil, nil, true }
-players["utocnik"] = { "Utocnik", 9970, 1, 1, 13, { [1] = 9970 }, { [1] = 13 }, nil, nil, nil, true }
-players["iluminatdud"] = { "Iluminatdud", 9967, 1, 1, 14, { [1] = 9967, [2] = 8910 }, { [1] = 14, [2] = 600 }, nil, nil, nil, true }
-players["smackperer"] = { "Smackperer", 9966, 1, 1, 15, { [1] = 9966 }, { [1] = 15 }, nil, nil, nil, true }
-players["koalacake"] = { "Koalacake", 9964, 1, 1, 16, { [1] = 9964 }, { [1] = 16 }, nil, nil, nil, true }
-players["besterr"] = { "Besterr", 9962, 1, 1, 17, { [1] = 9962 }, { [1] = 17 }, nil, nil, nil, true }
-players["mozdaapke"] = { "Mozdaapke", 9962, 1, 1, 18, { [1] = 9962 }, { [1] = 18 }, nil, nil, nil, true }
-players["obtain"] = { "Obtain", 9957, 1, 1, 19, { [1] = 9957 }, { [1] = 19 }, nil, nil, nil, true }
-players["kwaky"] = { "Kwaky", 9955, 1, 1, 20, { [1] = 9955, [2] = 936 }, { [1] = 20, [2] = 8979 }, nil, nil, nil, true }
-players["owlgore"] = { "Owlgore", 9954, 1, 1, 21, { [1] = 9954 }, { [1] = 21 }, nil, nil, nil, true }
-players["racecake"] = { "Racecake", 9953, 1, 1, 22, { [1] = 9953, [3] = 3924 }, { [1] = 22, [3] = 1188 }, nil, nil, nil, true }
-players["kwakj"] = { "Kwakj", 9952, 1, 1, 23, { [1] = 9952 }, { [1] = 23 }, nil, nil, nil, true }
-players["forcakesake"] = { "Forcakesake", 9952, 1, 1, 24, { [1] = 9952, [3] = 1691 }, { [1] = 24, [3] = 4507 }, nil, nil, nil, true }
-players["cellulose"] = { "Cellulose", 9946, 1, 1, 25, { [1] = 9946, [3] = 984 }, { [1] = 25, [3] = 5884 }, nil, nil, nil, true }
+players["trep"] = { "Trep", 9993, 1, 1, 4, { [1] = 9993, [2] = 648 }, { [1] = 4, [2] = 9274 }, nil, nil, nil, true }
+players["teams"] = { "Teams", 9992, 1, 1, 5, { [1] = 9992 }, { [1] = 5 }, nil, nil, nil, true }
+players["ponpo"] = { "Ponpo", 9991, 1, 1, 6, { [1] = 9991, [2] = 882 }, { [1] = 6, [2] = 9072 }, nil, nil, nil, true }
+players["procer"] = { "Procer", 9989, 1, 1, 7, { [1] = 9989 }, { [1] = 7 }, nil, nil, nil, true }
+players["jhe"] = { "Jhe", 9985, 1, 1, 8, { [1] = 9985, [2] = 9377 }, { [1] = 8, [2] = 297 }, nil, nil, nil, true }
+players["ariusb"] = { "Ariusb", 9980, 1, 1, 9, { [1] = 9980 }, { [1] = 9 }, nil, nil, nil, true }
+players["jenjon"] = { "Jenjon", 9979, 1, 1, 10, { [1] = 9979 }, { [1] = 10 }, nil, nil, nil, true }
+players["mantadruida"] = { "Mantadruida", 9978, 1, 1, 11, { [1] = 9978 }, { [1] = 11 }, nil, nil, nil, true }
+players["jackhererer"] = { "Jackhererer", 9975, 1, 1, 12, { [1] = 9975 }, { [1] = 12 }, nil, nil, nil, true }
+players["seismicxz"] = { "Seismicxz", 9974, 1, 1, 13, { [1] = 9974 }, { [1] = 13 }, nil, nil, nil, true }
+players["utocnik"] = { "Utocnik", 9969, 1, 1, 14, { [1] = 9969 }, { [1] = 14 }, nil, nil, nil, true }
+players["iluminatdud"] = { "Iluminatdud", 9967, 1, 1, 15, { [1] = 9967, [2] = 8907 }, { [1] = 15, [2] = 603 }, nil, nil, nil, true }
+players["smackperer"] = { "Smackperer", 9965, 1, 1, 16, { [1] = 9965 }, { [1] = 16 }, nil, nil, nil, true }
+players["koalacake"] = { "Koalacake", 9964, 1, 1, 17, { [1] = 9964 }, { [1] = 17 }, nil, nil, nil, true }
+players["besterr"] = { "Besterr", 9962, 1, 1, 18, { [1] = 9962 }, { [1] = 18 }, nil, nil, nil, true }
+players["mozdaapke"] = { "Mozdaapke", 9961, 1, 1, 19, { [1] = 9961 }, { [1] = 19 }, nil, nil, nil, true }
+players["obtain"] = { "Obtain", 9957, 1, 1, 20, { [1] = 9957 }, { [1] = 20 }, nil, nil, nil, true }
+players["kwaky"] = { "Kwaky", 9955, 1, 1, 21, { [1] = 9955, [2] = 936 }, { [1] = 21, [2] = 9000 }, nil, nil, nil, true }
+players["owlgore"] = { "Owlgore", 9953, 1, 1, 22, { [1] = 9953 }, { [1] = 22 }, nil, nil, nil, true }
+players["racecake"] = { "Racecake", 9953, 1, 1, 23, { [1] = 9953, [3] = 3924 }, { [1] = 23, [3] = 1194 }, nil, nil, nil, true }
+players["kwakj"] = { "Kwakj", 9952, 1, 1, 24, { [1] = 9952 }, { [1] = 24 }, nil, nil, nil, true }
+players["forcakesake"] = { "Forcakesake", 9951, 1, 1, 25, { [1] = 9951, [3] = 1692 }, { [1] = 25, [3] = 4527 }, nil, nil, nil, true }
 players["boomis"] = { "Boomis", 9947, 1, 1, 26, { [1] = 9947 }, { [1] = 26 }, nil, nil, nil, false }
-players["tastycake"] = { "Tastycake", 9944, 1, 1, 26, { [1] = 9944, [3] = 1001 }, { [1] = 26, [3] = 5851 }, nil, nil, nil, true }
-players["ellethey"] = { "Ellethey", 9943, 1, 1, 27, { [1] = 9943 }, { [1] = 27 }, nil, nil, nil, true }
-players["imsurprising"] = { "Imsurprising", 9943, 1, 1, 28, { [1] = 9943 }, { [1] = 28 }, nil, nil, nil, true }
-players["ispljuvak"] = { "Ispljuvak", 9942, 1, 1, 29, { [1] = 9942, [2] = 3118 }, { [1] = 29, [2] = 6059 }, nil, nil, nil, true }
-players["teams"] = { "Teams", 9939, 1, 1, 30, { [1] = 9939 }, { [1] = 30 }, nil, nil, nil, true }
-players["bezter"] = { "Bezter", 9938, 1, 1, 31, { [1] = 9938 }, { [1] = 31 }, nil, nil, nil, true }
-players["surco"] = { "Surco", 9937, 1, 1, 32, { [1] = 9937, [3] = 1269 }, { [1] = 32, [3] = 5522 }, nil, nil, nil, true }
-players["lonellyboy"] = { "Lonellyboy", 9935, 1, 1, 33, { [1] = 9935 }, { [1] = 33 }, nil, nil, nil, true }
+players["cellulose"] = { "Cellulose", 9946, 1, 1, 26, { [1] = 9946, [3] = 984 }, { [1] = 26, [3] = 5907 }, nil, nil, nil, true }
+players["tastycake"] = { "Tastycake", 9944, 1, 1, 27, { [1] = 9944, [3] = 1001 }, { [1] = 27, [3] = 5875 }, nil, nil, nil, true }
+players["ellethey"] = { "Ellethey", 9943, 1, 1, 28, { [1] = 9943 }, { [1] = 28 }, nil, nil, nil, true }
+players["imsurprising"] = { "Imsurprising", 9942, 1, 1, 29, { [1] = 9942 }, { [1] = 29 }, nil, nil, nil, true }
+players["ispljuvak"] = { "Ispljuvak", 9942, 1, 1, 30, { [1] = 9942, [2] = 3109 }, { [1] = 30, [2] = 6082 }, nil, nil, nil, true }
+players["bezter"] = { "Bezter", 9937, 1, 1, 31, { [1] = 9937 }, { [1] = 31 }, nil, nil, nil, true }
+players["surco"] = { "Surco", 9937, 1, 1, 32, { [1] = 9937, [3] = 1267 }, { [1] = 32, [3] = 5547 }, nil, nil, nil, true }
+players["lonellyboy"] = { "Lonellyboy", 9934, 1, 1, 33, { [1] = 9934 }, { [1] = 33 }, nil, nil, nil, true }
 players["morphfrog"] = { "Morphfrog", 9934, 1, 1, 34, { [1] = 9934 }, { [1] = 34 }, nil, nil, nil, true }
-players["minkica"] = { "Minkica", 9934, 1, 1, 35, { [1] = 9934, [3] = 1614 }, { [1] = 35, [3] = 4695 }, nil, nil, nil, true }
-players["selenagomezz"] = { "Selenagomezz", 9934, 1, 1, 36, { [1] = 9934, [2] = 9307, [3] = 734 }, { [1] = 36, [2] = 336, [3] = 6955 }, nil, nil, nil, true }
-players["mouka"] = { "Mouka", 9930, 1, 1, 37, { [1] = 9930, [3] = 852 }, { [1] = 37, [3] = 6509 }, nil, nil, nil, true }
-players["petronax"] = { "Petronax", 9928, 1, 1, 38, { [1] = 9928, [2] = 5331 }, { [1] = 38, [2] = 4008 }, nil, nil, nil, true }
-players["chapras"] = { "Chapras", 9923, 1, 1, 39, { [1] = 9923 }, { [1] = 39 }, nil, nil, nil, true }
+players["minkica"] = { "Minkica", 9934, 1, 1, 35, { [1] = 9934, [3] = 1613 }, { [1] = 35, [3] = 4719 }, nil, nil, nil, true }
+players["selenagomezz"] = { "Selenagomezz", 9933, 1, 1, 36, { [1] = 9933, [2] = 9305, [3] = 736 }, { [1] = 36, [2] = 338, [3] = 6974 }, nil, nil, nil, true }
+players["mouka"] = { "Mouka", 9929, 1, 1, 37, { [1] = 9929, [3] = 850 }, { [1] = 37, [3] = 6535 }, nil, nil, nil, true }
+players["petronax"] = { "Petronax", 9928, 1, 1, 38, { [1] = 9928, [2] = 5328 }, { [1] = 38, [2] = 4023 }, nil, nil, nil, true }
+players["chapras"] = { "Chapras", 9922, 1, 1, 39, { [1] = 9922 }, { [1] = 39 }, nil, nil, nil, true }
 players["antivoodoo"] = { "Antivoodoo", 9922, 1, 1, 40, { [1] = 9922 }, { [1] = 40 }, nil, nil, nil, true }
-players["copisopx"] = { "Copisopx", 9922, 1, 1, 41, { [1] = 9922 }, { [1] = 41 }, nil, nil, nil, true }
-players["pezondebebe"] = { "Pezondebebe", 9922, 1, 1, 42, { [1] = 9922 }, { [1] = 42 }, nil, nil, nil, true }
-players["wundheilung"] = { "Wundheilung", 9920, 1, 1, 43, { [1] = 9920, [3] = 1652 }, { [1] = 43, [3] = 4611 }, nil, nil, nil, true }
-players["balageddon"] = { "Balageddon", 9918, 1, 1, 44, { [1] = 9918, [3] = 922 }, { [1] = 44, [3] = 6160 }, nil, nil, nil, true }
-players["prgava"] = { "Prgava", 9917, 1, 1, 45, { [1] = 9917 }, { [1] = 45 }, nil, nil, nil, true }
-players["mafboomy"] = { "Mafboomy", 9910, 1, 1, 46, { [1] = 9910, [2] = 5990 }, { [1] = 46, [2] = 3320 }, nil, nil, nil, true }
-players["snakecake"] = { "Snakecake", 9904, 1, 1, 47, { [1] = 9904, [3] = 7545 }, { [1] = 47, [3] = 55 }, nil, nil, nil, true }
-players["juddy"] = { "Juddy", 9904, 1, 1, 48, { [1] = 9904, [2] = 244 }, { [1] = 48, [2] = 9860 }, nil, nil, nil, true }
-players["hotdog"] = { "Hotdog", 9902, 1, 1, 49, { [1] = 9902, [3] = 942 }, { [1] = 49, [3] = 6047 }, nil, nil, nil, true }
-players["elwadudu"] = { "Elwadudu", 9901, 1, 1, 50, { [1] = 9901 }, { [1] = 50 }, nil, nil, nil, true }
-players["copisop"] = { "Copisop", 9894, 1, 1, 51, { [1] = 9894, [3] = 3266 }, { [1] = 51, [3] = 1923 }, nil, nil, nil, true }
-players["belzz"] = { "Belzz", 9893, 1, 1, 52, { [1] = 9893 }, { [1] = 52 }, nil, nil, nil, true }
-players["gazarocket"] = { "Gazarocket", 9893, 1, 1, 53, { [1] = 9893 }, { [1] = 53 }, nil, nil, nil, true }
-players["seisx"] = { "Seisx", 9888, 1, 1, 54, { [1] = 9888 }, { [1] = 54 }, nil, nil, nil, true }
-players["nijeapke"] = { "Nijeapke", 9887, 1, 1, 55, { [1] = 9887 }, { [1] = 55 }, nil, nil, nil, true }
-players["mezonb"] = { "Mezonb", 9884, 1, 1, 56, { [1] = 9884 }, { [1] = 56 }, nil, nil, nil, true }
-players["gayz"] = { "Gayz", 9884, 1, 1, 57, { [1] = 9884 }, { [1] = 57 }, nil, nil, nil, true }
-players["panchis"] = { "Panchis", 9880, 1, 1, 58, { [1] = 9880, [3] = 3903 }, { [1] = 58, [3] = 1202 }, nil, nil, nil, true }
-players["neobite"] = { "Neobite", 9880, 1, 1, 59, { [1] = 9880, [2] = 8367 }, { [1] = 59, [2] = 1022 }, nil, nil, nil, true }
-players["jessid"] = { "Jessid", 9876, 1, 1, 60, { [1] = 9876 }, { [1] = 60 }, nil, nil, nil, true }
-players["shtou"] = { "Shtou", 9876, 1, 1, 61, { [1] = 9876, [3] = 957 }, { [1] = 61, [3] = 5982 }, nil, nil, nil, true }
-players["dopelemon"] = { "Dopelemon", 9874, 1, 1, 62, { [1] = 9874, [3] = 755 }, { [1] = 62, [3] = 6880 }, nil, nil, nil, true }
-players["ripx"] = { "Ripx", 9873, 1, 1, 63, { [1] = 9873, [2] = 9713 }, { [1] = 63, [2] = 123 }, nil, nil, nil, true }
-players["copisopxz"] = { "Copisopxz", 9873, 1, 1, 64, { [1] = 9873 }, { [1] = 64 }, nil, nil, nil, true }
-players["kiy"] = { "Kiy", 9873, 1, 1, 65, { [1] = 2669, [2] = 9255 }, { [1] = 8290, [2] = 369 }, nil, nil, nil, true }
-players["fatyoza"] = { "Fatyoza", 9872, 1, 1, 66, { [1] = 9872 }, { [1] = 66 }, nil, nil, nil, true }
-players["kalasha"] = { "Kalasha", 9871, 1, 1, 67, { [1] = 9871 }, { [1] = 67 }, nil, nil, nil, true }
-players["barrio"] = { "Barrio", 9869, 1, 1, 68, { [1] = 9869 }, { [1] = 68 }, nil, nil, nil, true }
-players["cwelfall"] = { "Cwelfall", 9867, 1, 1, 69, { [1] = 9867 }, { [1] = 69 }, nil, nil, nil, true }
-players["hurep"] = { "Hurep", 9865, 1, 1, 70, { [1] = 9865 }, { [1] = 70 }, nil, nil, nil, true }
-players["walkman"] = { "Walkman", 9864, 1, 1, 71, { [1] = 9864, [2] = 3863 }, { [1] = 71, [2] = 5235 }, nil, nil, nil, true }
-players["icedg"] = { "Icedg", 9864, 1, 1, 72, { [1] = 9864, [2] = 8923 }, { [1] = 72, [2] = 589 }, nil, nil, nil, true }
-players["iasked"] = { "Iasked", 9864, 1, 1, 73, { [1] = 9864, [3] = 628 }, { [1] = 73, [3] = 7725 }, nil, nil, nil, true }
-players["ggmoon"] = { "Ggmoon", 9864, 1, 1, 74, { [1] = 9864, [3] = 1262 }, { [1] = 74, [3] = 5547 }, nil, nil, nil, true }
-players["faerie"] = { "Faerie", 9862, 1, 1, 75, { [1] = 9862, [3] = 723 }, { [1] = 75, [3] = 7020 }, nil, nil, nil, true }
-players["bullswift"] = { "Bullswift", 9860, 1, 1, 76, { [1] = 9860, [3] = 642 }, { [1] = 76, [3] = 7535 }, nil, nil, nil, true }
-players["srkuka"] = { "Srkuka", 9859, 1, 1, 77, { [1] = 9859 }, { [1] = 77 }, nil, nil, nil, true }
-players["miracledudu"] = { "Miracledudu", 9857, 1, 1, 78, { [1] = 9857 }, { [1] = 78 }, nil, nil, nil, true }
-players["kwaki"] = { "Kwaki", 9857, 1, 1, 79, { [1] = 9857, [2] = 7614, [3] = 964 }, { [1] = 79, [2] = 1626, [3] = 5957 }, nil, nil, nil, true }
-players["roxxyed"] = { "Roxxyed", 9856, 1, 1, 80, { [1] = 9856 }, { [1] = 80 }, nil, nil, nil, true }
-players["zhstar"] = { "Zhstar", 9855, 1, 1, 81, { [1] = 9855, [3] = 851 }, { [1] = 81, [3] = 6511 }, nil, nil, nil, true }
-players["skoli"] = { "Skoli", 9854, 1, 1, 82, { [1] = 9854, [2] = 9458 }, { [1] = 82, [2] = 252 }, nil, nil, nil, true }
-players["indiscreet"] = { "Indiscreet", 9854, 1, 1, 83, { [1] = 9854, [3] = 659 }, { [1] = 83, [3] = 7328 }, nil, nil, nil, true }
-players["close"] = { "Close", 9854, 1, 1, 84, { [1] = 9854, [2] = 8682 }, { [1] = 84, [2] = 772 }, nil, nil, nil, true }
-players["bleksau"] = { "Bleksau", 9853, 1, 1, 85, { [1] = 9853 }, { [1] = 85 }, nil, nil, nil, true }
-players["icac"] = { "Icac", 9852, 1, 1, 86, { [1] = 9852, [2] = 96, [3] = 4130 }, { [1] = 86, [2] = 10058, [3] = 1003 }, nil, nil, nil, true }
-players["crystowlize"] = { "Crystowlize", 9849, 1, 1, 87, { [1] = 9849 }, { [1] = 87 }, nil, nil, nil, true }
-players["rabbit"] = { "Rabbit", 9845, 1, 1, 88, { [1] = 9845, [2] = 2083 }, { [1] = 88, [2] = 7805 }, nil, nil, nil, true }
-players["letmeparse"] = { "Letmeparse", 9844, 1, 1, 89, { [1] = 9844 }, { [1] = 89 }, nil, nil, nil, true }
-players["papalukosas"] = { "Papalukosas", 9844, 1, 1, 90, { [1] = 9844 }, { [1] = 90 }, nil, nil, nil, true }
-players["vikkyy"] = { "Vikkyy", 9844, 1, 1, 91, { [1] = 9844 }, { [1] = 91 }, nil, nil, nil, true }
-players["elwaadudu"] = { "Elwaadudu", 9843, 1, 1, 92, { [1] = 9843, [3] = 922 }, { [1] = 92, [3] = 6159 }, nil, nil, nil, true }
-players["amamantar"] = { "Amamantar", 9840, 1, 1, 93, { [1] = 9840 }, { [1] = 93 }, nil, nil, nil, true }
-players["modliszka"] = { "Modliszka", 9838, 1, 1, 94, { [1] = 9838, [2] = 673, [3] = 2024 }, { [1] = 94, [2] = 9220, [3] = 3809 }, nil, nil, nil, true }
-players["envoke"] = { "Envoke", 9837, 1, 1, 95, { [1] = 9837 }, { [1] = 95 }, nil, nil, nil, true }
-players["likevoodoo"] = { "Likevoodoo", 9835, 1, 1, 96, { [1] = 9835 }, { [1] = 96 }, nil, nil, nil, true }
+players["pezondebebe"] = { "Pezondebebe", 9921, 1, 1, 41, { [1] = 9921 }, { [1] = 41 }, nil, nil, nil, true }
+players["copisopx"] = { "Copisopx", 9921, 1, 1, 42, { [1] = 9921 }, { [1] = 42 }, nil, nil, nil, true }
+players["wundheilung"] = { "Wundheilung", 9920, 1, 1, 43, { [1] = 9920, [3] = 1650 }, { [1] = 43, [3] = 4637 }, nil, nil, nil, true }
+players["balageddon"] = { "Balageddon", 9917, 1, 1, 44, { [1] = 9917, [3] = 922 }, { [1] = 44, [3] = 6186 }, nil, nil, nil, true }
+players["prgava"] = { "Prgava", 9916, 1, 1, 45, { [1] = 9916 }, { [1] = 45 }, nil, nil, nil, true }
+players["mafboomy"] = { "Mafboomy", 9910, 1, 1, 46, { [1] = 9910, [2] = 5988 }, { [1] = 46, [2] = 3329 }, nil, nil, nil, true }
+players["snakecake"] = { "Snakecake", 9903, 1, 1, 47, { [1] = 9903, [3] = 7544 }, { [1] = 47, [3] = 55 }, nil, nil, nil, true }
+players["juddy"] = { "Juddy", 9903, 1, 1, 48, { [1] = 9903, [2] = 244 }, { [1] = 48, [2] = 9892 }, nil, nil, nil, true }
+players["hotdog"] = { "Hotdog", 9901, 1, 1, 49, { [1] = 9901, [3] = 942 }, { [1] = 49, [3] = 6073 }, nil, nil, nil, true }
+players["elwadudu"] = { "Elwadudu", 9900, 1, 1, 50, { [1] = 9900 }, { [1] = 50 }, nil, nil, nil, true }
+players["copisop"] = { "Copisop", 9893, 1, 1, 51, { [1] = 9893, [3] = 3262 }, { [1] = 51, [3] = 1936 }, nil, nil, nil, true }
+players["belzz"] = { "Belzz", 9892, 1, 1, 52, { [1] = 9892 }, { [1] = 52 }, nil, nil, nil, true }
+players["gazarocket"] = { "Gazarocket", 9892, 1, 1, 53, { [1] = 9892 }, { [1] = 53 }, nil, nil, nil, true }
+players["seisx"] = { "Seisx", 9887, 1, 1, 54, { [1] = 9887 }, { [1] = 54 }, nil, nil, nil, true }
+players["nijeapke"] = { "Nijeapke", 9886, 1, 1, 55, { [1] = 9886 }, { [1] = 55 }, nil, nil, nil, true }
+players["mezonb"] = { "Mezonb", 9883, 1, 1, 56, { [1] = 9883 }, { [1] = 56 }, nil, nil, nil, true }
+players["gayz"] = { "Gayz", 9882, 1, 1, 57, { [1] = 9882 }, { [1] = 57 }, nil, nil, nil, true }
+players["panchis"] = { "Panchis", 9880, 1, 1, 58, { [1] = 9880, [3] = 3902 }, { [1] = 58, [3] = 1209 }, nil, nil, nil, true }
+players["neobite"] = { "Neobite", 9880, 1, 1, 59, { [1] = 9880, [2] = 8362 }, { [1] = 59, [2] = 1025 }, nil, nil, nil, true }
+players["jessid"] = { "Jessid", 9875, 1, 1, 60, { [1] = 9875 }, { [1] = 60 }, nil, nil, nil, true }
+players["shtou"] = { "Shtou", 9875, 1, 1, 61, { [1] = 9875, [3] = 957 }, { [1] = 61, [3] = 6005 }, nil, nil, nil, true }
+players["dopelemon"] = { "Dopelemon", 9873, 1, 1, 62, { [1] = 9873, [3] = 753 }, { [1] = 62, [3] = 6905 }, nil, nil, nil, true }
+players["copisopxz"] = { "Copisopxz", 9872, 1, 1, 63, { [1] = 9872 }, { [1] = 63 }, nil, nil, nil, true }
+players["kiy"] = { "Kiy", 9872, 1, 1, 64, { [1] = 2664, [2] = 9254 }, { [1] = 8311, [2] = 371 }, nil, nil, nil, true }
+players["ripx"] = { "Ripx", 9872, 1, 1, 65, { [1] = 9872, [2] = 9712 }, { [1] = 65, [2] = 124 }, nil, nil, nil, true }
+players["fatyoza"] = { "Fatyoza", 9871, 1, 1, 66, { [1] = 9871 }, { [1] = 66 }, nil, nil, nil, true }
+players["kalasha"] = { "Kalasha", 9870, 1, 1, 67, { [1] = 9870 }, { [1] = 67 }, nil, nil, nil, true }
+players["barrio"] = { "Barrio", 9868, 1, 1, 68, { [1] = 9868 }, { [1] = 68 }, nil, nil, nil, true }
+players["cwelfall"] = { "Cwelfall", 9866, 1, 1, 69, { [1] = 9866 }, { [1] = 69 }, nil, nil, nil, true }
+players["hurep"] = { "Hurep", 9864, 1, 1, 70, { [1] = 9864 }, { [1] = 70 }, nil, nil, nil, true }
+players["walkman"] = { "Walkman", 9864, 1, 1, 71, { [1] = 9864, [2] = 3860 }, { [1] = 71, [2] = 5248 }, nil, nil, nil, true }
+players["ggmoon"] = { "Ggmoon", 9863, 1, 1, 72, { [1] = 9863, [3] = 1260 }, { [1] = 72, [3] = 5572 }, nil, nil, nil, true }
+players["iasked"] = { "Iasked", 9863, 1, 1, 73, { [1] = 9863, [3] = 627 }, { [1] = 73, [3] = 7749 }, nil, nil, nil, true }
+players["icedg"] = { "Icedg", 9863, 1, 1, 74, { [1] = 9863, [2] = 8919 }, { [1] = 74, [2] = 593 }, nil, nil, nil, true }
+players["faerie"] = { "Faerie", 9862, 1, 1, 75, { [1] = 9862, [3] = 721 }, { [1] = 75, [3] = 7046 }, nil, nil, nil, true }
+players["srkuka"] = { "Srkuka", 9861, 1, 1, 76, { [1] = 9861 }, { [1] = 76 }, nil, nil, nil, true }
+players["bullswift"] = { "Bullswift", 9859, 1, 1, 77, { [1] = 9859, [3] = 641 }, { [1] = 77, [3] = 7558 }, nil, nil, nil, true }
+players["miracledudu"] = { "Miracledudu", 9856, 1, 1, 78, { [1] = 9856 }, { [1] = 78 }, nil, nil, nil, true }
+players["kwaki"] = { "Kwaki", 9856, 1, 1, 79, { [1] = 9856, [2] = 7608, [3] = 963 }, { [1] = 79, [2] = 1634, [3] = 5984 }, nil, nil, nil, true }
+players["roxxyed"] = { "Roxxyed", 9855, 1, 1, 80, { [1] = 9855 }, { [1] = 80 }, nil, nil, nil, true }
+players["zhstar"] = { "Zhstar", 9853, 1, 1, 81, { [1] = 9853, [3] = 850 }, { [1] = 81, [3] = 6537 }, nil, nil, nil, true }
+players["skoli"] = { "Skoli", 9853, 1, 1, 82, { [1] = 9853, [2] = 9456 }, { [1] = 82, [2] = 253 }, nil, nil, nil, true }
+players["indiscreet"] = { "Indiscreet", 9853, 1, 1, 83, { [1] = 9853, [3] = 657 }, { [1] = 83, [3] = 7353 }, nil, nil, nil, true }
+players["close"] = { "Close", 9852, 1, 1, 84, { [1] = 9852, [2] = 8677 }, { [1] = 84, [2] = 777 }, nil, nil, nil, true }
+players["bleksau"] = { "Bleksau", 9852, 1, 1, 85, { [1] = 9852 }, { [1] = 85 }, nil, nil, nil, true }
+players["icac"] = { "Icac", 9852, 1, 1, 86, { [1] = 9852, [2] = 92, [3] = 4130 }, { [1] = 86, [2] = 10090, [3] = 1009 }, nil, nil, nil, true }
+players["crystowlize"] = { "Crystowlize", 9848, 1, 1, 87, { [1] = 9848 }, { [1] = 87 }, nil, nil, nil, true }
+players["rabbit"] = { "Rabbit", 9844, 1, 1, 88, { [1] = 9844, [2] = 2083 }, { [1] = 88, [2] = 7823 }, nil, nil, nil, true }
+players["letmeparse"] = { "Letmeparse", 9843, 1, 1, 89, { [1] = 9843 }, { [1] = 89 }, nil, nil, nil, true }
+players["vikkyy"] = { "Vikkyy", 9843, 1, 1, 90, { [1] = 9843 }, { [1] = 90 }, nil, nil, nil, true }
+players["papalukosas"] = { "Papalukosas", 9843, 1, 1, 91, { [1] = 9843 }, { [1] = 91 }, nil, nil, nil, true }
+players["elwaadudu"] = { "Elwaadudu", 9842, 1, 1, 92, { [1] = 9842, [3] = 922 }, { [1] = 92, [3] = 6185 }, nil, nil, nil, true }
+players["modliszka"] = { "Modliszka", 9840, 1, 1, 93, { [1] = 9840, [2] = 663, [3] = 2023 }, { [1] = 93, [2] = 9259, [3] = 3820 }, nil, nil, nil, true }
+players["amamantar"] = { "Amamantar", 9838, 1, 1, 94, { [1] = 9838 }, { [1] = 94 }, nil, nil, nil, true }
+players["envoke"] = { "Envoke", 9836, 1, 1, 95, { [1] = 9836 }, { [1] = 95 }, nil, nil, nil, true }
+players["likevoodoo"] = { "Likevoodoo", 9834, 1, 1, 96, { [1] = 9834 }, { [1] = 96 }, nil, nil, nil, true }
 players["sebrosan"] = { "Sebrosan", 9839, 1, 1, 96, { [1] = 9839 }, { [1] = 96 }, nil, nil, nil, false }
-players["lingur"] = { "Lingur", 9831, 1, 1, 97, { [1] = 9831, [3] = 915 }, { [1] = 97, [3] = 6195 }, nil, nil, nil, true }
-players["dimhqqtwo"] = { "Dimhqqtwo", 9830, 1, 1, 98, { [1] = 9830 }, { [1] = 98 }, nil, nil, nil, true }
-players["dirtychick"] = { "Dirtychick", 9830, 1, 1, 99, { [1] = 9830, [3] = 940 }, { [1] = 99, [3] = 6065 }, nil, nil, nil, true }
-players["ggnextboss"] = { "Ggnextboss", 9827, 1, 1, 100, { [1] = 9827 }, { [1] = 100 }, nil, nil, nil, true }
+players["theserk"] = { "Theserk", 9834, 1, 1, 97, { [1] = 9834 }, { [1] = 97 }, nil, nil, nil, true }
+players["lingur"] = { "Lingur", 9830, 1, 1, 98, { [1] = 9830, [3] = 915 }, { [1] = 98, [3] = 6222 }, nil, nil, nil, true }
+players["dimhqqtwo"] = { "Dimhqqtwo", 9829, 1, 1, 99, { [1] = 9829 }, { [1] = 99 }, nil, nil, nil, true }
+players["dirtychick"] = { "Dirtychick", 9829, 1, 1, 100, { [1] = 9829, [3] = 939 }, { [1] = 100, [3] = 6095 }, nil, nil, nil, true }
 players["simplykaboom"] = { "Simplykaboom", 9826, 1, 1, 101, { [1] = 9826 }, { [1] = 101 }, nil, nil, nil, true }
-players["anisics"] = { "Anisics", 9824, 1, 1, 102, { [1] = 9824 }, { [1] = 102 }, nil, nil, nil, true }
-players["theserk"] = { "Theserk", 9824, 1, 1, 103, { [1] = 9824 }, { [1] = 103 }, nil, nil, nil, true }
-players["moonkin"] = { "Moonkin", 9824, 1, 1, 104, { [1] = 9824 }, { [1] = 104 }, nil, nil, nil, true }
-players["fakechash"] = { "Fakechash", 9823, 1, 1, 105, { [1] = 9823 }, { [1] = 105 }, nil, nil, nil, true }
-players["osky"] = { "Osky", 9822, 1, 1, 106, { [1] = 9822, [3] = 3946 }, { [1] = 106, [3] = 1170 }, nil, nil, nil, true }
-players["belzzy"] = { "Belzzy", 9820, 1, 1, 107, { [1] = 9820 }, { [1] = 107 }, nil, nil, nil, true }
-players["bobbie"] = { "Bobbie", 9819, 1, 1, 108, { [1] = 9819, [3] = 840 }, { [1] = 108, [3] = 6560 }, nil, nil, nil, true }
-players["topgboomy"] = { "Topgboomy", 9818, 1, 1, 109, { [1] = 9818 }, { [1] = 109 }, nil, nil, nil, true }
-players["admair"] = { "Admair", 9817, 1, 1, 110, { [1] = 9817, [3] = 697 }, { [1] = 110, [3] = 7132 }, nil, nil, nil, true }
-players["kotb"] = { "Kotb", 9817, 1, 1, 111, { [1] = 9817 }, { [1] = 111 }, nil, nil, nil, true }
-players["owlkingodx"] = { "Owlkingodx", 9817, 1, 1, 112, { [1] = 9817, [3] = 4305 }, { [1] = 112, [3] = 850 }, nil, nil, nil, true }
-players["beryi"] = { "Beryi", 9816, 1, 1, 113, { [1] = 9816, [3] = 2319 }, { [1] = 113, [3] = 3297 }, nil, nil, nil, true }
-players["oldidiot"] = { "Oldidiot", 9811, 1, 1, 114, { [1] = 9811 }, { [1] = 114 }, nil, nil, nil, true }
-players["jajcard"] = { "Jajcard", 9809, 1, 1, 115, { [1] = 9809, [2] = 9697 }, { [1] = 115, [2] = 130 }, nil, nil, nil, true }
-players["finalboss"] = { "Finalboss", 9809, 1, 1, 116, { [1] = 9809, [2] = 931 }, { [1] = 116, [2] = 8987 }, nil, nil, nil, true }
-players["barkskin"] = { "Barkskin", 9809, 1, 1, 117, { [1] = 9809 }, { [1] = 117 }, nil, nil, nil, true }
-players["vyrem"] = { "Vyrem", 9807, 1, 1, 118, { [1] = 9807, [3] = 742 }, { [1] = 118, [3] = 6920 }, nil, nil, nil, true }
-players["eltoxiko"] = { "Eltoxiko", 9803, 1, 1, 119, { [1] = 9803, [3] = 2764 }, { [1] = 119, [3] = 2510 }, nil, nil, nil, true }
-players["chymezzd"] = { "Chymezzd", 9802, 1, 1, 120, { [1] = 9802 }, { [1] = 120 }, nil, nil, nil, true }
-players["aaya"] = { "Aaya", 9801, 1, 1, 121, { [1] = 9801 }, { [1] = 121 }, nil, nil, nil, true }
-players["dazzo"] = { "Dazzo", 9800, 1, 1, 122, { [1] = 9800, [3] = 1321 }, { [1] = 122, [3] = 5369 }, nil, nil, nil, true }
-players["ortex"] = { "Ortex", 9800, 1, 1, 123, { [1] = 9800, [2] = 610, [3] = 727 }, { [1] = 123, [2] = 9286, [3] = 7001 }, nil, nil, nil, true }
-players["demolish"] = { "Demolish", 9798, 1, 1, 124, { [1] = 9798, [2] = 8894 }, { [1] = 124, [2] = 609 }, nil, nil, nil, true }
-players["babycomet"] = { "Babycomet", 9797, 1, 1, 125, { [1] = 9797, [3] = 970 }, { [1] = 125, [3] = 5936 }, nil, nil, nil, true }
-players["optiimizovan"] = { "Optiimizovan", 9797, 1, 1, 126, { [1] = 9797 }, { [1] = 126 }, nil, nil, nil, true }
-players["natural"] = { "Natural", 9797, 1, 1, 127, { [1] = 9797, [3] = 1296 }, { [1] = 127, [3] = 5428 }, nil, nil, nil, true }
-players["wtfisinnerv"] = { "Wtfisinnerv", 9796, 1, 1, 128, { [1] = 9796 }, { [1] = 128 }, nil, nil, nil, true }
-players["curycantcook"] = { "Curycantcook", 9792, 1, 1, 129, { [1] = 9792, [2] = 2922 }, { [1] = 129, [2] = 6348 }, nil, nil, nil, true }
-players["pangasito"] = { "Pangasito", 9789, 1, 1, 131, { [1] = 9789 }, { [1] = 131 }, nil, nil, nil, true }
-players["jiraiyax"] = { "Jiraiyax", 9787, 1, 1, 132, { [1] = 9787, [2] = 453 }, { [1] = 132, [2] = 9467 }, nil, nil, nil, true }
-players["killurself"] = { "Killurself", 9785, 1, 1, 133, { [1] = 9785 }, { [1] = 133 }, nil, nil, nil, true }
-players["wipewipewipe"] = { "Wipewipewipe", 9785, 1, 1, 134, { [1] = 9785 }, { [1] = 134 }, nil, nil, nil, true }
-players["sovakin"] = { "Sovakin", 9783, 1, 1, 135, { [1] = 9783 }, { [1] = 135 }, nil, nil, nil, true }
-players["tionaccho"] = { "Tionaccho", 9783, 1, 1, 136, { [1] = 9783, [3] = 829 }, { [1] = 136, [3] = 6592 }, nil, nil, nil, true }
-players["fmalchemistt"] = { "Fmalchemistt", 9782, 1, 1, 137, { [1] = 9782 }, { [1] = 137 }, nil, nil, nil, true }
-players["pechugaslaru"] = { "Pechugaslaru", 9778, 1, 1, 138, { [1] = 9778 }, { [1] = 138 }, nil, nil, nil, true }
-players["benford"] = { "Benford", 9777, 1, 1, 139, { [1] = 9777, [3] = 1827 }, { [1] = 139, [3] = 4228 }, nil, nil, nil, true }
-players["wectrum"] = { "Wectrum", 9775, 1, 1, 140, { [1] = 9775 }, { [1] = 140 }, nil, nil, nil, true }
-players["muus"] = { "Muus", 9772, 1, 1, 141, { [1] = 9772, [2] = 9282 }, { [1] = 141, [2] = 348 }, nil, nil, nil, true }
-players["renoxi"] = { "Renoxi", 9772, 1, 1, 142, { [1] = 9772 }, { [1] = 142 }, nil, nil, nil, true }
-players["pubis"] = { "Pubis", 9771, 1, 1, 143, { [1] = 9771 }, { [1] = 143 }, nil, nil, nil, true }
-players["ctrlshiftt"] = { "Ctrlshiftt", 9767, 1, 1, 144, { [1] = 9767 }, { [1] = 144 }, nil, nil, nil, true }
-players["lidenbrock"] = { "Lidenbrock", 9764, 1, 1, 145, { [1] = 9764 }, { [1] = 145 }, nil, nil, nil, true }
-players["feareq"] = { "Feareq", 9764, 1, 1, 146, { [1] = 9764, [3] = 970 }, { [1] = 146, [3] = 5934 }, nil, nil, nil, true }
-players["primebeef"] = { "Primebeef", 10000, 1, 2, 1, { [2] = 10000 }, { [2] = 1 }, nil, nil, nil, true }
-players["erudax"] = { "Erudax", 10000, 1, 2, 2, { [1] = 4079, [2] = 10000 }, { [1] = 9843, [2] = 2 }, nil, nil, nil, true }
+players["ggnextboss"] = { "Ggnextboss", 9825, 1, 1, 102, { [1] = 9825 }, { [1] = 102 }, nil, nil, nil, true }
+players["anisics"] = { "Anisics", 9823, 1, 1, 103, { [1] = 9823 }, { [1] = 103 }, nil, nil, nil, true }
+players["moonkin"] = { "Moonkin", 9822, 1, 1, 104, { [1] = 9822 }, { [1] = 104 }, nil, nil, nil, true }
+players["osky"] = { "Osky", 9821, 1, 1, 105, { [1] = 9821, [3] = 3942 }, { [1] = 105, [3] = 1177 }, nil, nil, nil, true }
+players["fakechash"] = { "Fakechash", 9821, 1, 1, 106, { [1] = 9821 }, { [1] = 106 }, nil, nil, nil, true }
+players["belzzy"] = { "Belzzy", 9819, 1, 1, 107, { [1] = 9819 }, { [1] = 107 }, nil, nil, nil, true }
+players["bobbie"] = { "Bobbie", 9818, 1, 1, 108, { [1] = 9818, [3] = 839 }, { [1] = 108, [3] = 6585 }, nil, nil, nil, true }
+players["topgboomy"] = { "Topgboomy", 9817, 1, 1, 109, { [1] = 9817 }, { [1] = 109 }, nil, nil, nil, true }
+players["admair"] = { "Admair", 9816, 1, 1, 110, { [1] = 9816, [3] = 695 }, { [1] = 110, [3] = 7157 }, nil, nil, nil, true }
+players["owlkingodx"] = { "Owlkingodx", 9816, 1, 1, 111, { [1] = 9816, [3] = 4299 }, { [1] = 111, [3] = 855 }, nil, nil, nil, true }
+players["kotb"] = { "Kotb", 9816, 1, 1, 112, { [1] = 9816 }, { [1] = 112 }, nil, nil, nil, true }
+players["beryi"] = { "Beryi", 9815, 1, 1, 113, { [1] = 9815, [3] = 2316 }, { [1] = 113, [3] = 3315 }, nil, nil, nil, true }
+players["oldidiot"] = { "Oldidiot", 9809, 1, 1, 114, { [1] = 9809 }, { [1] = 114 }, nil, nil, nil, true }
+players["jajcard"] = { "Jajcard", 9808, 1, 1, 115, { [1] = 9808, [2] = 9695 }, { [1] = 115, [2] = 130 }, nil, nil, nil, true }
+players["barkskin"] = { "Barkskin", 9807, 1, 1, 116, { [1] = 9807 }, { [1] = 116 }, nil, nil, nil, true }
+players["finalboss"] = { "Finalboss", 9807, 1, 1, 117, { [1] = 9807, [2] = 931 }, { [1] = 117, [2] = 9011 }, nil, nil, nil, true }
+players["vyrem"] = { "Vyrem", 9806, 1, 1, 118, { [1] = 9806, [3] = 744 }, { [1] = 118, [3] = 6936 }, nil, nil, nil, true }
+players["chymezzd"] = { "Chymezzd", 9801, 1, 1, 119, { [1] = 9801 }, { [1] = 119 }, nil, nil, nil, true }
+players["eltoxiko"] = { "Eltoxiko", 9801, 1, 1, 120, { [1] = 9801, [3] = 2762 }, { [1] = 120, [3] = 2525 }, nil, nil, nil, true }
+players["aaya"] = { "Aaya", 9800, 1, 1, 121, { [1] = 9800 }, { [1] = 121 }, nil, nil, nil, true }
+players["dazzo"] = { "Dazzo", 9799, 1, 1, 122, { [1] = 9799, [3] = 1319 }, { [1] = 122, [3] = 5396 }, nil, nil, nil, true }
+players["ortex"] = { "Ortex", 9799, 1, 1, 123, { [1] = 9799, [2] = 610, [3] = 725 }, { [1] = 123, [2] = 9312, [3] = 7028 }, nil, nil, nil, true }
+players["demolish"] = { "Demolish", 9797, 1, 1, 124, { [1] = 9797, [2] = 8891 }, { [1] = 124, [2] = 613 }, nil, nil, nil, true }
+players["natural"] = { "Natural", 9796, 1, 1, 125, { [1] = 9796, [3] = 1294 }, { [1] = 125, [3] = 5456 }, nil, nil, nil, true }
+players["babycomet"] = { "Babycomet", 9796, 1, 1, 126, { [1] = 9796, [3] = 970 }, { [1] = 126, [3] = 5960 }, nil, nil, nil, true }
+players["optiimizovan"] = { "Optiimizovan", 9796, 1, 1, 127, { [1] = 9796 }, { [1] = 127 }, nil, nil, nil, true }
+players["wtfisinnerv"] = { "Wtfisinnerv", 9794, 1, 1, 128, { [1] = 9794 }, { [1] = 128 }, nil, nil, nil, true }
+players["curycantcook"] = { "Curycantcook", 9790, 1, 1, 129, { [1] = 9790, [2] = 2911 }, { [1] = 129, [2] = 6380 }, nil, nil, nil, true }
+players["pangasito"] = { "Pangasito", 9788, 1, 1, 131, { [1] = 9788 }, { [1] = 131 }, nil, nil, nil, true }
+players["jiraiyax"] = { "Jiraiyax", 9785, 1, 1, 132, { [1] = 9785, [2] = 452 }, { [1] = 132, [2] = 9496 }, nil, nil, nil, true }
+players["wipewipewipe"] = { "Wipewipewipe", 9784, 1, 1, 133, { [1] = 9784 }, { [1] = 133 }, nil, nil, nil, true }
+players["killurself"] = { "Killurself", 9784, 1, 1, 134, { [1] = 9784 }, { [1] = 134 }, nil, nil, nil, true }
+players["tionaccho"] = { "Tionaccho", 9781, 1, 1, 135, { [1] = 9781, [3] = 828 }, { [1] = 135, [3] = 6619 }, nil, nil, nil, true }
+players["sovakin"] = { "Sovakin", 9781, 1, 1, 136, { [1] = 9781 }, { [1] = 136 }, nil, nil, nil, true }
+players["fmalchemistt"] = { "Fmalchemistt", 9781, 1, 1, 137, { [1] = 9781 }, { [1] = 137 }, nil, nil, nil, true }
+players["pechugaslaru"] = { "Pechugaslaru", 9776, 1, 1, 138, { [1] = 9776 }, { [1] = 138 }, nil, nil, nil, true }
+players["benford"] = { "Benford", 9775, 1, 1, 139, { [1] = 9775, [3] = 1828 }, { [1] = 139, [3] = 4241 }, nil, nil, nil, true }
+players["wectrum"] = { "Wectrum", 9773, 1, 1, 140, { [1] = 9773 }, { [1] = 140 }, nil, nil, nil, true }
+players["renoxi"] = { "Renoxi", 9770, 1, 1, 141, { [1] = 9770 }, { [1] = 141 }, nil, nil, nil, true }
+players["muus"] = { "Muus", 9770, 1, 1, 142, { [1] = 9770, [2] = 9279 }, { [1] = 142, [2] = 351 }, nil, nil, nil, true }
+players["pubis"] = { "Pubis", 9770, 1, 1, 143, { [1] = 9770 }, { [1] = 143 }, nil, nil, nil, true }
+players["ctrlshiftt"] = { "Ctrlshiftt", 9765, 1, 1, 144, { [1] = 9765 }, { [1] = 144 }, nil, nil, nil, true }
+players["feareq"] = { "Feareq", 9762, 1, 1, 145, { [1] = 9762, [3] = 969 }, { [1] = 145, [3] = 5962 }, nil, nil, nil, true }
+players["lidenbrock"] = { "Lidenbrock", 9762, 1, 1, 146, { [1] = 9762 }, { [1] = 146 }, nil, nil, nil, true }
+players["vukordudu"] = { "Vukordudu", 9761, 1, 1, 147, { [1] = 9761, [2] = 8162, [3] = 5953 }, { [1] = 147, [2] = 1169, [3] = 203 }, nil, nil, nil, true }
+players["erudax"] = { "Erudax", 10000, 1, 2, 1, { [1] = 4072, [2] = 10000 }, { [1] = 9877, [2] = 1 }, nil, nil, nil, true }
+players["primebeef"] = { "Primebeef", 10000, 1, 2, 2, { [2] = 10000 }, { [2] = 2 }, nil, nil, nil, true }
 players["hysterical"] = { "Hysterical", 9994, 1, 2, 3, { [2] = 9994 }, { [2] = 3 }, nil, nil, nil, true }
-players["dennip"] = { "Dennip", 9991, 1, 2, 4, { [2] = 9991 }, { [2] = 4 }, nil, nil, nil, true }
+players["dennip"] = { "Dennip", 9990, 1, 2, 4, { [2] = 9990 }, { [2] = 4 }, nil, nil, nil, true }
 players["fiftycentz"] = { "Fiftycentz", 9990, 1, 2, 4, { [2] = 9990 }, { [2] = 4 }, nil, nil, nil, false }
-players["dudugood"] = { "Dudugood", 9990, 1, 2, 5, { [2] = 9990 }, { [2] = 5 }, nil, nil, nil, true }
-players["jhee"] = { "Jhee", 9988, 1, 2, 6, { [2] = 9988 }, { [2] = 6 }, nil, nil, nil, true }
-players["prudlivkotak"] = { "Prudlivkotak", 9981, 1, 2, 7, { [2] = 9981 }, { [2] = 7 }, nil, nil, nil, true }
+players["dudugood"] = { "Dudugood", 9989, 1, 2, 5, { [2] = 9989 }, { [2] = 5 }, nil, nil, nil, true }
+players["jhee"] = { "Jhee", 9987, 1, 2, 6, { [2] = 9987 }, { [2] = 6 }, nil, nil, nil, true }
+players["prudlivkotak"] = { "Prudlivkotak", 9980, 1, 2, 7, { [2] = 9980 }, { [2] = 7 }, nil, nil, nil, true }
 players["migatitomiau"] = { "Migatitomiau", 9975, 1, 2, 8, { [2] = 9975 }, { [2] = 8 }, nil, nil, nil, true }
-players["karenpage"] = { "Karenpage", 9974, 1, 2, 9, { [2] = 9974, [3] = 804 }, { [2] = 9, [3] = 6685 }, nil, nil, nil, true }
-players["erudaxthree"] = { "Erudaxthree", 9970, 1, 2, 10, { [2] = 9970 }, { [2] = 10 }, nil, nil, nil, true }
+players["karenpage"] = { "Karenpage", 9974, 1, 2, 9, { [2] = 9974, [3] = 802 }, { [2] = 9, [3] = 6711 }, nil, nil, nil, true }
+players["erudaxthree"] = { "Erudaxthree", 9969, 1, 2, 10, { [2] = 9969 }, { [2] = 10 }, nil, nil, nil, true }
 players["ritocs"] = { "Ritocs", 9964, 1, 2, 11, { [2] = 9964 }, { [2] = 11 }, nil, nil, nil, true }
 players["erudaxtwo"] = { "Erudaxtwo", 9964, 1, 2, 12, { [2] = 9964 }, { [2] = 12 }, nil, nil, nil, true }
-players["ejmangal"] = { "Ejmangal", 9962, 1, 2, 13, { [2] = 9962 }, { [2] = 13 }, nil, nil, nil, true }
+players["ejmangal"] = { "Ejmangal", 9961, 1, 2, 13, { [2] = 9961 }, { [2] = 13 }, nil, nil, nil, true }
 players["framezboo"] = { "Framezboo", 9959, 1, 2, 14, { [2] = 9959 }, { [2] = 14 }, nil, nil, nil, false }
-players["paramount"] = { "Paramount", 9959, 1, 2, 14, { [2] = 9959 }, { [2] = 14 }, nil, nil, nil, true }
-players["lazarqt"] = { "Lazarqt", 9955, 1, 2, 15, { [2] = 9955 }, { [2] = 15 }, nil, nil, nil, true }
+players["paramount"] = { "Paramount", 9958, 1, 2, 14, { [2] = 9958 }, { [2] = 14 }, nil, nil, nil, true }
+players["lazarqt"] = { "Lazarqt", 9954, 1, 2, 15, { [2] = 9954 }, { [2] = 15 }, nil, nil, nil, true }
 players["cinekgodx"] = { "Cinekgodx", 9949, 1, 2, 16, { [2] = 9949 }, { [2] = 16 }, nil, nil, nil, true }
-players["epiclipse"] = { "Epiclipse", 9944, 1, 2, 17, { [2] = 9944, [3] = 942 }, { [2] = 17, [3] = 6050 }, nil, nil, nil, true }
-players["savageness"] = { "Savageness", 9942, 1, 2, 18, { [2] = 9942 }, { [2] = 18 }, nil, nil, nil, true }
-players["meowyaghi"] = { "Meowyaghi", 9942, 1, 2, 19, { [1] = 2550, [2] = 9942 }, { [1] = 14300, [2] = 19 }, nil, nil, nil, true }
-players["soulbite"] = { "Soulbite", 9938, 1, 2, 20, { [2] = 9938 }, { [2] = 20 }, nil, nil, nil, true }
-players["pvesobakaxx"] = { "Pvesobakaxx", 9933, 1, 2, 21, { [2] = 9933 }, { [2] = 21 }, nil, nil, nil, true }
-players["simplyshred"] = { "Simplyshred", 9930, 1, 2, 22, { [2] = 9930 }, { [2] = 22 }, nil, nil, nil, true }
-players["nvz"] = { "Nvz", 9930, 1, 2, 23, { [2] = 9930 }, { [2] = 23 }, nil, nil, nil, true }
-players["spaerow"] = { "Spaerow", 9929, 1, 2, 24, { [2] = 9929 }, { [2] = 24 }, nil, nil, nil, true }
-players["dazzx"] = { "Dazzx", 9925, 1, 2, 25, { [1] = 9200, [2] = 9925 }, { [1] = 504, [2] = 25 }, nil, nil, nil, true }
-players["honeywhiskey"] = { "Honeywhiskey", 9915, 1, 2, 26, { [2] = 9915 }, { [2] = 26 }, nil, nil, nil, true }
-players["tritish"] = { "Tritish", 9915, 1, 2, 27, { [2] = 9915, [3] = 2889 }, { [2] = 27, [3] = 2362 }, nil, nil, nil, true }
-players["fryn"] = { "Fryn", 9913, 1, 2, 28, { [2] = 9913 }, { [2] = 28 }, nil, nil, nil, true }
-players["kytta"] = { "Kytta", 9913, 1, 2, 29, { [2] = 9913 }, { [2] = 29 }, nil, nil, nil, true }
-players["vardher"] = { "Vardher", 9910, 1, 2, 30, { [2] = 9910 }, { [2] = 30 }, nil, nil, nil, true }
-players["anicxd"] = { "Anicxd", 9908, 1, 2, 31, { [2] = 9908 }, { [2] = 31 }, nil, nil, nil, true }
-players["galcyn"] = { "Galcyn", 9904, 1, 2, 32, { [2] = 9904 }, { [2] = 32 }, nil, nil, nil, true }
-players["cluelesscat"] = { "Cluelesscat", 9902, 1, 2, 33, { [2] = 9902 }, { [2] = 33 }, nil, nil, nil, true }
-players["pooinyourtea"] = { "Pooinyourtea", 9900, 1, 2, 34, { [2] = 9900 }, { [2] = 34 }, nil, nil, nil, true }
-players["ninjakotek"] = { "Ninjakotek", 9897, 1, 2, 35, { [2] = 9897 }, { [2] = 35 }, nil, nil, nil, true }
-players["galcyon"] = { "Galcyon", 9897, 1, 2, 36, { [2] = 9897 }, { [2] = 36 }, nil, nil, nil, true }
-players["catrunner"] = { "Catrunner", 9896, 1, 2, 37, { [2] = 9896 }, { [2] = 37 }, nil, nil, nil, true }
-players["shibanakotka"] = { "Shibanakotka", 9896, 1, 2, 38, { [1] = 3330, [2] = 9896 }, { [1] = 11475, [2] = 38 }, nil, nil, nil, true }
-players["michimichuu"] = { "Michimichuu", 9892, 1, 2, 39, { [1] = 4864, [2] = 9892 }, { [1] = 7909, [2] = 39 }, nil, nil, nil, true }
-players["mezond"] = { "Mezond", 9890, 1, 2, 40, { [2] = 9890 }, { [2] = 40 }, nil, nil, nil, true }
-players["cinkrof"] = { "Cinkrof", 9889, 1, 2, 41, { [2] = 9889 }, { [2] = 41 }, nil, nil, nil, true }
-players["swipebot"] = { "Swipebot", 9885, 1, 2, 42, { [1] = 4565, [2] = 9885 }, { [1] = 8724, [2] = 42 }, nil, nil, nil, true }
-players["healingtouch"] = { "Healingtouch", 9884, 1, 2, 43, { [1] = 5935, [2] = 9884 }, { [1] = 5041, [2] = 43 }, nil, nil, nil, true }
+players["spaerow"] = { "Spaerow", 9944, 1, 2, 17, { [2] = 9944 }, { [2] = 17 }, nil, nil, nil, true }
+players["epiclipse"] = { "Epiclipse", 9944, 1, 2, 18, { [2] = 9944, [3] = 942 }, { [2] = 18, [3] = 6076 }, nil, nil, nil, true }
+players["savageness"] = { "Savageness", 9941, 1, 2, 19, { [2] = 9941 }, { [2] = 19 }, nil, nil, nil, true }
+players["meowyaghi"] = { "Meowyaghi", 9941, 1, 2, 20, { [1] = 2547, [2] = 9941 }, { [1] = 14324, [2] = 20 }, nil, nil, nil, true }
+players["soulbite"] = { "Soulbite", 9937, 1, 2, 21, { [2] = 9937 }, { [2] = 21 }, nil, nil, nil, true }
+players["pvesobakaxx"] = { "Pvesobakaxx", 9933, 1, 2, 22, { [2] = 9933 }, { [2] = 22 }, nil, nil, nil, true }
+players["simplyshred"] = { "Simplyshred", 9929, 1, 2, 23, { [2] = 9929 }, { [2] = 23 }, nil, nil, nil, true }
+players["nvz"] = { "Nvz", 9929, 1, 2, 24, { [2] = 9929 }, { [2] = 24 }, nil, nil, nil, true }
+players["dazzx"] = { "Dazzx", 9924, 1, 2, 25, { [1] = 9195, [2] = 9924 }, { [1] = 513, [2] = 25 }, nil, nil, nil, true }
+players["anicxd"] = { "Anicxd", 9918, 1, 2, 26, { [2] = 9918 }, { [2] = 26 }, nil, nil, nil, true }
+players["honeywhiskey"] = { "Honeywhiskey", 9914, 1, 2, 27, { [2] = 9914 }, { [2] = 27 }, nil, nil, nil, true }
+players["tritish"] = { "Tritish", 9914, 1, 2, 28, { [2] = 9914, [3] = 2886 }, { [2] = 28, [3] = 2379 }, nil, nil, nil, true }
+players["fryn"] = { "Fryn", 9913, 1, 2, 29, { [2] = 9913 }, { [2] = 29 }, nil, nil, nil, true }
+players["kytta"] = { "Kytta", 9912, 1, 2, 30, { [2] = 9912 }, { [2] = 30 }, nil, nil, nil, true }
+players["vardher"] = { "Vardher", 9909, 1, 2, 31, { [2] = 9909 }, { [2] = 31 }, nil, nil, nil, true }
+players["ninjakotek"] = { "Ninjakotek", 9908, 1, 2, 32, { [2] = 9908 }, { [2] = 32 }, nil, nil, nil, true }
+players["galcyn"] = { "Galcyn", 9903, 1, 2, 33, { [2] = 9903 }, { [2] = 33 }, nil, nil, nil, true }
+players["cluelesscat"] = { "Cluelesscat", 9902, 1, 2, 34, { [2] = 9902 }, { [2] = 34 }, nil, nil, nil, true }
+players["pooinyourtea"] = { "Pooinyourtea", 9900, 1, 2, 35, { [2] = 9900 }, { [2] = 35 }, nil, nil, nil, true }
+players["dududru"] = { "Dududru", 9898, 1, 2, 36, { [2] = 9898 }, { [2] = 36 }, nil, nil, nil, true }
+players["galcyon"] = { "Galcyon", 9896, 1, 2, 37, { [2] = 9896 }, { [2] = 37 }, nil, nil, nil, true }
+players["catrunner"] = { "Catrunner", 9896, 1, 2, 38, { [2] = 9896 }, { [2] = 38 }, nil, nil, nil, true }
+players["shibanakotka"] = { "Shibanakotka", 9895, 1, 2, 39, { [1] = 3326, [2] = 9895 }, { [1] = 11509, [2] = 39 }, nil, nil, nil, true }
+players["michimichuu"] = { "Michimichuu", 9892, 1, 2, 40, { [1] = 4858, [2] = 9892 }, { [1] = 7939, [2] = 40 }, nil, nil, nil, true }
+players["mezond"] = { "Mezond", 9890, 1, 2, 41, { [2] = 9890 }, { [2] = 41 }, nil, nil, nil, true }
+players["cinkrof"] = { "Cinkrof", 9888, 1, 2, 42, { [2] = 9888 }, { [2] = 42 }, nil, nil, nil, true }
+players["healingtouch"] = { "Healingtouch", 9885, 1, 2, 43, { [1] = 5926, [2] = 9885 }, { [1] = 5069, [2] = 43 }, nil, nil, nil, true }
 players["raadonja"] = { "Raadonja", 9887, 1, 2, 43, { [2] = 9887 }, { [2] = 43 }, nil, nil, nil, false }
-players["bleksad"] = { "Bleksad", 9882, 1, 2, 44, { [2] = 9882 }, { [2] = 44 }, nil, nil, nil, true }
-players["manglebot"] = { "Manglebot", 9881, 1, 2, 45, { [2] = 9881 }, { [2] = 45 }, nil, nil, nil, true }
-players["hryziem"] = { "Hryziem", 9880, 1, 2, 46, { [2] = 9880 }, { [2] = 46 }, nil, nil, nil, true }
-players["yeapa"] = { "Yeapa", 9880, 1, 2, 47, { [2] = 9880 }, { [2] = 47 }, nil, nil, nil, true }
-players["prajdog"] = { "Prajdog", 9880, 1, 2, 48, { [2] = 9880 }, { [2] = 48 }, nil, nil, nil, true }
-players["darling"] = { "Darling", 9872, 1, 2, 49, { [2] = 9872, [3] = 2128 }, { [2] = 49, [3] = 3640 }, nil, nil, nil, true }
-players["chinna"] = { "Chinna", 9872, 1, 2, 50, { [2] = 9872 }, { [2] = 50 }, nil, nil, nil, true }
-players["joaquinferal"] = { "Joaquinferal", 9863, 1, 2, 51, { [2] = 9863 }, { [2] = 51 }, nil, nil, nil, true }
-players["sanspeur"] = { "Sanspeur", 9862, 1, 2, 52, { [1] = 1370, [2] = 9862, [3] = 165 }, { [1] = 17531, [2] = 52, [3] = 8145 }, nil, nil, nil, true }
-players["zingragosa"] = { "Zingragosa", 9859, 1, 2, 53, { [2] = 9859 }, { [2] = 53 }, nil, nil, nil, true }
-players["mayibite"] = { "Mayibite", 9857, 1, 2, 54, { [2] = 9857 }, { [2] = 54 }, nil, nil, nil, true }
-players["bulvarix"] = { "Bulvarix", 9856, 1, 2, 55, { [2] = 9856 }, { [2] = 55 }, nil, nil, nil, true }
-players["aniecat"] = { "Aniecat", 9854, 1, 2, 56, { [2] = 9854 }, { [2] = 56 }, nil, nil, nil, true }
-players["rickx"] = { "Rickx", 9852, 1, 2, 57, { [2] = 9852 }, { [2] = 57 }, nil, nil, nil, true }
-players["xymba"] = { "Xymba", 9846, 1, 2, 58, { [2] = 9846 }, { [2] = 58 }, nil, nil, nil, true }
-players["panpu"] = { "Panpu", 9840, 1, 2, 59, { [2] = 9840 }, { [2] = 59 }, nil, nil, nil, true }
-players["jse"] = { "Jse", 9835, 1, 2, 60, { [2] = 9835 }, { [2] = 60 }, nil, nil, nil, true }
-players["gaanc"] = { "Gaanc", 9831, 1, 2, 61, { [2] = 9831 }, { [2] = 61 }, nil, nil, nil, true }
-players["kainpiller"] = { "Kainpiller", 9829, 1, 2, 62, { [2] = 9829, [3] = 994 }, { [2] = 62, [3] = 5867 }, nil, nil, nil, true }
-players["sanixa"] = { "Sanixa", 9829, 1, 2, 63, { [2] = 9829 }, { [2] = 63 }, nil, nil, nil, true }
-players["saylem"] = { "Saylem", 9828, 1, 2, 64, { [2] = 9828 }, { [2] = 64 }, nil, nil, nil, true }
-players["drudoto"] = { "Drudoto", 9826, 1, 2, 65, { [2] = 9826 }, { [2] = 65 }, nil, nil, nil, true }
-players["sarcasme"] = { "Sarcasme", 9825, 1, 2, 66, { [1] = 7655, [2] = 9825 }, { [1] = 2021, [2] = 66 }, nil, nil, nil, true }
+players["swipebot"] = { "Swipebot", 9884, 1, 2, 44, { [1] = 4559, [2] = 9884 }, { [1] = 8759, [2] = 44 }, nil, nil, nil, true }
+players["bleksad"] = { "Bleksad", 9881, 1, 2, 45, { [2] = 9881 }, { [2] = 45 }, nil, nil, nil, true }
+players["manglebot"] = { "Manglebot", 9880, 1, 2, 46, { [2] = 9880 }, { [2] = 46 }, nil, nil, nil, true }
+players["hryziem"] = { "Hryziem", 9880, 1, 2, 47, { [2] = 9880 }, { [2] = 47 }, nil, nil, nil, true }
+players["prajdog"] = { "Prajdog", 9879, 1, 2, 48, { [2] = 9879 }, { [2] = 48 }, nil, nil, nil, true }
+players["yeapa"] = { "Yeapa", 9879, 1, 2, 49, { [2] = 9879 }, { [2] = 49 }, nil, nil, nil, true }
+players["darling"] = { "Darling", 9871, 1, 2, 50, { [2] = 9871, [3] = 2125 }, { [2] = 50, [3] = 3657 }, nil, nil, nil, true }
+players["chinna"] = { "Chinna", 9871, 1, 2, 51, { [2] = 9871 }, { [2] = 51 }, nil, nil, nil, true }
+players["joaquinferal"] = { "Joaquinferal", 9863, 1, 2, 52, { [2] = 9863 }, { [2] = 52 }, nil, nil, nil, true }
+players["sanspeur"] = { "Sanspeur", 9861, 1, 2, 53, { [1] = 1370, [2] = 9861, [3] = 166 }, { [1] = 17581, [2] = 53, [3] = 8168 }, nil, nil, nil, true }
+players["zingragosa"] = { "Zingragosa", 9858, 1, 2, 54, { [2] = 9858 }, { [2] = 54 }, nil, nil, nil, true }
+players["mayibite"] = { "Mayibite", 9857, 1, 2, 55, { [2] = 9857 }, { [2] = 55 }, nil, nil, nil, true }
+players["bulvarix"] = { "Bulvarix", 9855, 1, 2, 56, { [2] = 9855 }, { [2] = 56 }, nil, nil, nil, true }
+players["aniecat"] = { "Aniecat", 9853, 1, 2, 57, { [2] = 9853 }, { [2] = 57 }, nil, nil, nil, true }
+players["rickx"] = { "Rickx", 9851, 1, 2, 58, { [2] = 9851 }, { [2] = 58 }, nil, nil, nil, true }
+players["xymba"] = { "Xymba", 9846, 1, 2, 59, { [2] = 9846 }, { [2] = 59 }, nil, nil, nil, true }
+players["panpu"] = { "Panpu", 9839, 1, 2, 60, { [2] = 9839 }, { [2] = 60 }, nil, nil, nil, true }
+players["jse"] = { "Jse", 9834, 1, 2, 61, { [2] = 9834 }, { [2] = 61 }, nil, nil, nil, true }
+players["sanixa"] = { "Sanixa", 9832, 1, 2, 62, { [2] = 9832 }, { [2] = 62 }, nil, nil, nil, true }
+players["gaanc"] = { "Gaanc", 9830, 1, 2, 63, { [2] = 9830 }, { [2] = 63 }, nil, nil, nil, true }
+players["kainpiller"] = { "Kainpiller", 9828, 1, 2, 64, { [2] = 9828, [3] = 994 }, { [2] = 64, [3] = 5892 }, nil, nil, nil, true }
+players["saylem"] = { "Saylem", 9826, 1, 2, 65, { [2] = 9826 }, { [2] = 65 }, nil, nil, nil, true }
+players["drudoto"] = { "Drudoto", 9824, 1, 2, 66, { [2] = 9824 }, { [2] = 66 }, nil, nil, nil, true }
 players["shudoh"] = { "Shudoh", 9824, 1, 2, 67, { [2] = 9824 }, { [2] = 67 }, nil, nil, nil, true }
-players["kurwagodx"] = { "Kurwagodx", 9823, 1, 2, 68, { [1] = 9790, [2] = 9823, [3] = 3807 }, { [1] = 130, [2] = 68, [3] = 1288 }, nil, nil, nil, true }
-players["dududru"] = { "Dududru", 9813, 1, 2, 69, { [2] = 9813 }, { [2] = 69 }, nil, nil, nil, true }
-players["podailulata"] = { "Podailulata", 9812, 1, 2, 70, { [2] = 9812 }, { [2] = 70 }, nil, nil, nil, true }
-players["koshaba"] = { "Koshaba", 9803, 1, 2, 71, { [2] = 9803, [3] = 4446 }, { [2] = 71, [3] = 742 }, nil, nil, nil, true }
-players["elmare"] = { "Elmare", 9802, 1, 2, 72, { [2] = 9802 }, { [2] = 72 }, nil, nil, nil, true }
-players["tigerfury"] = { "Tigerfury", 9802, 1, 2, 73, { [1] = 9534, [2] = 9802 }, { [1] = 281, [2] = 73 }, nil, nil, nil, true }
-players["sprawts"] = { "Sprawts", 9800, 1, 2, 74, { [2] = 9800 }, { [2] = 74 }, nil, nil, nil, true }
-players["canelovisk"] = { "Canelovisk", 9799, 1, 2, 75, { [2] = 9799, [3] = 5949 }, { [2] = 75, [3] = 204 }, nil, nil, nil, true }
-players["swiftybeast"] = { "Swiftybeast", 9799, 1, 2, 76, { [2] = 9799 }, { [2] = 76 }, nil, nil, nil, true }
-players["szkotik"] = { "Szkotik", 9798, 1, 2, 77, { [2] = 9798 }, { [2] = 77 }, nil, nil, nil, true }
-players["feralyoza"] = { "Feralyoza", 9795, 1, 2, 78, { [2] = 9795 }, { [2] = 78 }, nil, nil, nil, true }
-players["doomdeedoom"] = { "Doomdeedoom", 9794, 1, 2, 79, { [1] = 2216, [2] = 9794 }, { [1] = 15545, [2] = 79 }, nil, nil, nil, true }
-players["miracledu"] = { "Miracledu", 9792, 1, 2, 80, { [2] = 9792 }, { [2] = 80 }, nil, nil, nil, true }
-players["rinoxx"] = { "Rinoxx", 9791, 1, 2, 81, { [2] = 9791 }, { [2] = 81 }, nil, nil, nil, true }
-players["pinn"] = { "Pinn", 9790, 1, 2, 82, { [2] = 9790 }, { [2] = 82 }, nil, nil, nil, true }
-players["quadrobear"] = { "Quadrobear", 9786, 1, 2, 83, { [2] = 9786 }, { [2] = 83 }, nil, nil, nil, true }
-players["nvscorpion"] = { "Nvscorpion", 9786, 1, 2, 84, { [2] = 9786 }, { [2] = 84 }, nil, nil, nil, true }
-players["darkdeathbmx"] = { "Darkdeathbmx", 9784, 1, 2, 85, { [2] = 9784 }, { [2] = 85 }, nil, nil, nil, true }
-players["gownogryz"] = { "Gownogryz", 9784, 1, 2, 86, { [2] = 9784 }, { [2] = 86 }, nil, nil, nil, true }
-players["insaneclaws"] = { "Insaneclaws", 9780, 1, 2, 87, { [2] = 9780 }, { [2] = 87 }, nil, nil, nil, true }
-players["trapstorm"] = { "Trapstorm", 9780, 1, 2, 88, { [2] = 9780 }, { [2] = 88 }, nil, nil, nil, true }
-players["moonligth"] = { "Moonligth", 9778, 1, 2, 89, { [2] = 9778 }, { [2] = 89 }, nil, nil, nil, true }
-players["shed"] = { "Shed", 9778, 1, 2, 90, { [2] = 9778 }, { [2] = 90 }, nil, nil, nil, true }
-players["inoirel"] = { "Inoirel", 9777, 1, 2, 91, { [2] = 9777, [3] = 2344 }, { [2] = 91, [3] = 3248 }, nil, nil, nil, true }
-players["mentabg"] = { "Mentabg", 9776, 1, 2, 92, { [2] = 9776 }, { [2] = 92 }, nil, nil, nil, true }
-players["baltika"] = { "Baltika", 9774, 1, 2, 93, { [1] = 7724, [2] = 9774 }, { [1] = 1923, [2] = 93 }, nil, nil, nil, true }
-players["insure"] = { "Insure", 9771, 1, 2, 94, { [1] = 6330, [2] = 9771 }, { [1] = 4135, [2] = 94 }, nil, nil, nil, true }
-players["amiraxd"] = { "Amiraxd", 9770, 1, 2, 95, { [2] = 9770 }, { [2] = 95 }, nil, nil, nil, true }
-players["kias"] = { "Kias", 9768, 1, 2, 96, { [2] = 9768 }, { [2] = 96 }, nil, nil, nil, true }
-players["ggshred"] = { "Ggshred", 9768, 1, 2, 97, { [2] = 9768 }, { [2] = 97 }, nil, nil, nil, true }
-players["ixzey"] = { "Ixzey", 9767, 1, 2, 98, { [2] = 9767 }, { [2] = 98 }, nil, nil, nil, true }
-players["vltavaa"] = { "Vltavaa", 9765, 1, 2, 99, { [2] = 9765, [3] = 1503 }, { [2] = 99, [3] = 4969 }, nil, nil, nil, true }
-players["weldycat"] = { "Weldycat", 9765, 1, 2, 100, { [2] = 9765 }, { [2] = 100 }, nil, nil, nil, true }
-players["icedcoffee"] = { "Icedcoffee", 9762, 1, 2, 101, { [2] = 9762 }, { [2] = 101 }, nil, nil, nil, true }
-players["jajcarf"] = { "Jajcarf", 9756, 1, 2, 102, { [1] = 9223, [2] = 9756 }, { [1] = 491, [2] = 102 }, nil, nil, nil, true }
-players["strythxcat"] = { "Strythxcat", 9750, 1, 2, 103, { [2] = 9750 }, { [2] = 103 }, nil, nil, nil, true }
-players["zaytex"] = { "Zaytex", 9749, 1, 2, 104, { [2] = 9749 }, { [2] = 104 }, nil, nil, nil, true }
-players["effectivehp"] = { "Effectivehp", 9749, 1, 2, 105, { [2] = 9749 }, { [2] = 105 }, nil, nil, nil, true }
-players["nswipe"] = { "Nswipe", 9749, 1, 2, 106, { [2] = 9749 }, { [2] = 106 }, nil, nil, nil, true }
-players["purro"] = { "Purro", 9742, 1, 2, 107, { [2] = 9742 }, { [2] = 107 }, nil, nil, nil, true }
-players["anictwin"] = { "Anictwin", 9741, 1, 2, 108, { [1] = 7858, [2] = 9741 }, { [1] = 1792, [2] = 108 }, nil, nil, nil, true }
-players["ornifex"] = { "Ornifex", 9737, 1, 2, 109, { [2] = 9737 }, { [2] = 109 }, nil, nil, nil, true }
-players["askeladd"] = { "Askeladd", 9735, 1, 2, 110, { [2] = 9735 }, { [2] = 110 }, nil, nil, nil, true }
-players["mavrau"] = { "Mavrau", 9734, 1, 2, 111, { [1] = 6749, [2] = 9734 }, { [1] = 3353, [2] = 111 }, nil, nil, nil, true }
-players["notsurprised"] = { "Notsurprised", 9733, 1, 2, 112, { [2] = 9733, [3] = 5238 }, { [2] = 112, [3] = 397 }, nil, nil, nil, true }
-players["shatzeh"] = { "Shatzeh", 9731, 1, 2, 113, { [2] = 9731 }, { [2] = 113 }, nil, nil, nil, true }
+players["sarcasme"] = { "Sarcasme", 9824, 1, 2, 68, { [1] = 7648, [2] = 9824 }, { [1] = 2031, [2] = 68 }, nil, nil, nil, true }
+players["kurwagodx"] = { "Kurwagodx", 9823, 1, 2, 69, { [1] = 9788, [2] = 9823, [3] = 3806 }, { [1] = 130, [2] = 69, [3] = 1291 }, nil, nil, nil, true }
+players["podailulata"] = { "Podailulata", 9814, 1, 2, 70, { [2] = 9814 }, { [2] = 70 }, nil, nil, nil, true }
+players["koshaba"] = { "Koshaba", 9802, 1, 2, 71, { [2] = 9802, [3] = 4441 }, { [2] = 71, [3] = 745 }, nil, nil, nil, true }
+players["tigerfury"] = { "Tigerfury", 9801, 1, 2, 72, { [1] = 9531, [2] = 9801 }, { [1] = 287, [2] = 72 }, nil, nil, nil, true }
+players["elmare"] = { "Elmare", 9800, 1, 2, 73, { [2] = 9800 }, { [2] = 73 }, nil, nil, nil, true }
+players["sprawts"] = { "Sprawts", 9799, 1, 2, 74, { [2] = 9799 }, { [2] = 74 }, nil, nil, nil, true }
+players["canelovisk"] = { "Canelovisk", 9798, 1, 2, 75, { [2] = 9798, [3] = 5942 }, { [2] = 75, [3] = 205 }, nil, nil, nil, true }
+players["swiftybeast"] = { "Swiftybeast", 9797, 1, 2, 76, { [2] = 9797 }, { [2] = 76 }, nil, nil, nil, true }
+players["szkotik"] = { "Szkotik", 9797, 1, 2, 77, { [2] = 9797 }, { [2] = 77 }, nil, nil, nil, true }
+players["feralyoza"] = { "Feralyoza", 9794, 1, 2, 78, { [2] = 9794 }, { [2] = 78 }, nil, nil, nil, true }
+players["doomdeedoom"] = { "Doomdeedoom", 9792, 1, 2, 79, { [1] = 2216, [2] = 9792 }, { [1] = 15577, [2] = 79 }, nil, nil, nil, true }
+players["miracledu"] = { "Miracledu", 9791, 1, 2, 80, { [2] = 9791 }, { [2] = 80 }, nil, nil, nil, true }
+players["rinoxx"] = { "Rinoxx", 9790, 1, 2, 81, { [2] = 9790 }, { [2] = 81 }, nil, nil, nil, true }
+players["pinn"] = { "Pinn", 9789, 1, 2, 82, { [2] = 9789 }, { [2] = 82 }, nil, nil, nil, true }
+players["nvscorpion"] = { "Nvscorpion", 9785, 1, 2, 83, { [2] = 9785 }, { [2] = 83 }, nil, nil, nil, true }
+players["quadrobear"] = { "Quadrobear", 9785, 1, 2, 84, { [2] = 9785 }, { [2] = 84 }, nil, nil, nil, true }
+players["nswipe"] = { "Nswipe", 9784, 1, 2, 85, { [2] = 9784 }, { [2] = 85 }, nil, nil, nil, true }
+players["darkdeathbmx"] = { "Darkdeathbmx", 9783, 1, 2, 86, { [2] = 9783 }, { [2] = 86 }, nil, nil, nil, true }
+players["gownogryz"] = { "Gownogryz", 9782, 1, 2, 87, { [2] = 9782 }, { [2] = 87 }, nil, nil, nil, true }
+players["insaneclaws"] = { "Insaneclaws", 9780, 1, 2, 88, { [2] = 9780 }, { [2] = 88 }, nil, nil, nil, true }
+players["trapstorm"] = { "Trapstorm", 9778, 1, 2, 89, { [2] = 9778 }, { [2] = 89 }, nil, nil, nil, true }
+players["shed"] = { "Shed", 9777, 1, 2, 90, { [2] = 9777 }, { [2] = 90 }, nil, nil, nil, true }
+players["moonligth"] = { "Moonligth", 9777, 1, 2, 91, { [2] = 9777 }, { [2] = 91 }, nil, nil, nil, true }
+players["zekinha"] = { "Zekinha", 9776, 1, 2, 92, { [2] = 9776 }, { [2] = 92 }, nil, nil, nil, true }
+players["inoirel"] = { "Inoirel", 9776, 1, 2, 93, { [2] = 9776, [3] = 2341 }, { [2] = 93, [3] = 3263 }, nil, nil, nil, true }
+players["mentabg"] = { "Mentabg", 9776, 1, 2, 94, { [2] = 9776 }, { [2] = 94 }, nil, nil, nil, true }
+players["baltika"] = { "Baltika", 9773, 1, 2, 95, { [1] = 7717, [2] = 9773 }, { [1] = 1938, [2] = 95 }, nil, nil, nil, true }
+players["insure"] = { "Insure", 9770, 1, 2, 96, { [1] = 6324, [2] = 9770 }, { [1] = 4149, [2] = 96 }, nil, nil, nil, true }
+players["amiraxd"] = { "Amiraxd", 9768, 1, 2, 97, { [2] = 9768 }, { [2] = 97 }, nil, nil, nil, true }
+players["kias"] = { "Kias", 9768, 1, 2, 98, { [2] = 9768 }, { [2] = 98 }, nil, nil, nil, true }
+players["ggshred"] = { "Ggshred", 9767, 1, 2, 99, { [2] = 9767 }, { [2] = 99 }, nil, nil, nil, true }
+players["ixzey"] = { "Ixzey", 9766, 1, 2, 100, { [2] = 9766 }, { [2] = 100 }, nil, nil, nil, true }
+players["vltavaa"] = { "Vltavaa", 9764, 1, 2, 101, { [2] = 9764, [3] = 1502 }, { [2] = 101, [3] = 4992 }, nil, nil, nil, true }
+players["weldycat"] = { "Weldycat", 9763, 1, 2, 102, { [2] = 9763 }, { [2] = 102 }, nil, nil, nil, true }
+players["icedcoffee"] = { "Icedcoffee", 9761, 1, 2, 103, { [2] = 9761 }, { [2] = 103 }, nil, nil, nil, true }
+players["jajcarf"] = { "Jajcarf", 9756, 1, 2, 104, { [1] = 9219, [2] = 9756 }, { [1] = 500, [2] = 104 }, nil, nil, nil, true }
+players["nyako"] = { "Nyako", 9749, 1, 2, 105, { [1] = 7851, [2] = 9749 }, { [1] = 1802, [2] = 105 }, nil, nil, nil, true }
+players["strythxcat"] = { "Strythxcat", 9749, 1, 2, 106, { [2] = 9749 }, { [2] = 106 }, nil, nil, nil, true }
+players["zaytex"] = { "Zaytex", 9748, 1, 2, 107, { [2] = 9748 }, { [2] = 107 }, nil, nil, nil, true }
+players["anictwin"] = { "Anictwin", 9741, 1, 2, 108, { [1] = 7858, [2] = 9741 }, { [1] = 1792, [2] = 108 }, nil, nil, nil, false }
+players["effectivehp"] = { "Effectivehp", 9748, 1, 2, 108, { [2] = 9748 }, { [2] = 108 }, nil, nil, nil, true }
+players["ebakasobaka"] = { "Ebakasobaka", 9742, 1, 2, 109, { [2] = 9742 }, { [2] = 109 }, nil, nil, nil, true }
+players["purro"] = { "Purro", 9741, 1, 2, 110, { [2] = 9741 }, { [2] = 110 }, nil, nil, nil, true }
+players["ornifex"] = { "Ornifex", 9736, 1, 2, 111, { [2] = 9736 }, { [2] = 111 }, nil, nil, nil, true }
+players["askeladd"] = { "Askeladd", 9734, 1, 2, 112, { [2] = 9734 }, { [2] = 112 }, nil, nil, nil, true }
+players["mavrau"] = { "Mavrau", 9733, 1, 2, 113, { [1] = 6745, [2] = 9733 }, { [1] = 3360, [2] = 113 }, nil, nil, nil, true }
+players["notsurprised"] = { "Notsurprised", 9732, 1, 2, 114, { [2] = 9732, [3] = 5233 }, { [2] = 114, [3] = 402 }, nil, nil, nil, true }
 players["skoobydaw"] = { "Skoobydaw", 9727, 1, 2, 114, { [2] = 9727 }, { [2] = 114 }, nil, nil, nil, false }
-players["zekinha"] = { "Zekinha", 9727, 1, 2, 114, { [2] = 9727 }, { [2] = 114 }, nil, nil, nil, true }
-players["bawolinka"] = { "Bawolinka", 9727, 1, 2, 115, { [1] = 7404, [2] = 9727, [3] = 3452 }, { [1] = 2349, [2] = 115, [3] = 1691 }, nil, nil, nil, true }
-players["wutkuh"] = { "Wutkuh", 9725, 1, 2, 116, { [2] = 9725 }, { [2] = 116 }, nil, nil, nil, true }
-players["moz"] = { "Moz", 9724, 1, 2, 117, { [1] = 5977, [2] = 9724 }, { [1] = 4935, [2] = 117 }, nil, nil, nil, true }
-players["kxxttwo"] = { "Kxxttwo", 9723, 1, 2, 118, { [2] = 9723 }, { [2] = 118 }, nil, nil, nil, true }
-players["irugazera"] = { "Irugazera", 9723, 1, 2, 119, { [2] = 9723, [3] = 2448 }, { [2] = 119, [3] = 3067 }, nil, nil, nil, true }
-players["kalusi"] = { "Kalusi", 9722, 1, 2, 120, { [2] = 9722 }, { [2] = 120 }, nil, nil, nil, true }
-players["anymoon"] = { "Anymoon", 10000, 1, 3, 1, { [1] = 2781, [3] = 10000 }, { [1] = 13349, [3] = 1 }, nil, nil, nil, true }
-players["zorkic"] = { "Zorkic", 9960, 1, 3, 2, { [1] = 8635, [3] = 9960 }, { [1] = 989, [3] = 2 }, nil, nil, nil, true }
-players["catvv"] = { "Catvv", 9588, 1, 3, 3, { [1] = 9061, [3] = 9588 }, { [1] = 638, [3] = 3 }, nil, nil, nil, true }
-players["treesenpai"] = { "Treesenpai", 9579, 1, 3, 4, { [1] = 2002, [3] = 9579 }, { [1] = 16169, [3] = 4 }, nil, nil, nil, true }
+players["shatzeh"] = { "Shatzeh", 9729, 1, 2, 115, { [2] = 9729 }, { [2] = 115 }, nil, nil, nil, true }
+players["bawolinka"] = { "Bawolinka", 9725, 1, 2, 116, { [1] = 7397, [2] = 9725, [3] = 3450 }, { [1] = 2359, [2] = 116, [3] = 1703 }, nil, nil, nil, true }
+players["wutkuh"] = { "Wutkuh", 9723, 1, 2, 117, { [2] = 9723 }, { [2] = 117 }, nil, nil, nil, true }
+players["moz"] = { "Moz", 9722, 1, 2, 118, { [1] = 5972, [2] = 9722 }, { [1] = 4952, [2] = 118 }, nil, nil, nil, true }
+players["kxxttwo"] = { "Kxxttwo", 9722, 1, 2, 119, { [2] = 9722 }, { [2] = 119 }, nil, nil, nil, true }
+players["anymoon"] = { "Anymoon", 10000, 1, 3, 1, { [1] = 2778, [3] = 10000 }, { [1] = 13378, [3] = 1 }, nil, nil, nil, true }
+players["zorkic"] = { "Zorkic", 9960, 1, 3, 2, { [1] = 8629, [3] = 9960 }, { [1] = 991, [3] = 2 }, nil, nil, nil, true }
+players["catvv"] = { "Catvv", 9589, 1, 3, 3, { [1] = 9056, [3] = 9589 }, { [1] = 645, [3] = 3 }, nil, nil, nil, true }
+players["treesenpai"] = { "Treesenpai", 9580, 1, 3, 4, { [1] = 2002, [3] = 9580 }, { [1] = 16213, [3] = 4 }, nil, nil, nil, true }
 players["zagon"] = { "Zagon", 9351, 1, 3, 7, { [3] = 9351 }, { [3] = 7 }, nil, nil, nil, true }
-players["malfarion"] = { "Malfarion", 9325, 1, 3, 8, { [1] = 8298, [3] = 9325 }, { [1] = 1313, [3] = 8 }, nil, nil, nil, true }
-players["muffinhater"] = { "Muffinhater", 9267, 1, 3, 9, { [1] = 5635, [3] = 9267 }, { [1] = 5788, [3] = 9 }, nil, nil, nil, true }
-players["infuze"] = { "Infuze", 9182, 1, 3, 10, { [3] = 9182 }, { [3] = 10 }, nil, nil, nil, true }
-players["chzsh"] = { "Chzsh", 9095, 1, 3, 11, { [3] = 9095 }, { [3] = 11 }, nil, nil, nil, true }
-players["cocotree"] = { "Cocotree", 8876, 1, 3, 13, { [1] = 6405, [3] = 8876 }, { [1] = 3983, [3] = 13 }, nil, nil, nil, true }
-players["starfallstar"] = { "Starfallstar", 8797, 1, 3, 14, { [1] = 8403, [3] = 8797 }, { [1] = 1213, [3] = 14 }, nil, nil, nil, true }
-players["surru"] = { "Surru", 8664, 1, 3, 15, { [3] = 8664 }, { [3] = 15 }, nil, nil, nil, true }
+players["malfarion"] = { "Malfarion", 9324, 1, 3, 8, { [1] = 8293, [3] = 9324 }, { [1] = 1315, [3] = 8 }, nil, nil, nil, true }
+players["muffinhater"] = { "Muffinhater", 9268, 1, 3, 9, { [1] = 5628, [3] = 9268 }, { [1] = 5823, [3] = 9 }, nil, nil, nil, true }
+players["infuze"] = { "Infuze", 9179, 1, 3, 10, { [3] = 9179 }, { [3] = 10 }, nil, nil, nil, true }
+players["chzsh"] = { "Chzsh", 9096, 1, 3, 11, { [3] = 9096 }, { [3] = 11 }, nil, nil, nil, true }
+players["cocotree"] = { "Cocotree", 8873, 1, 3, 13, { [1] = 6408, [3] = 8873 }, { [1] = 3981, [3] = 13 }, nil, nil, nil, true }
+players["starfallstar"] = { "Starfallstar", 8798, 1, 3, 14, { [1] = 8395, [3] = 8798 }, { [1] = 1218, [3] = 14 }, nil, nil, nil, true }
+players["surru"] = { "Surru", 8663, 1, 3, 15, { [3] = 8663 }, { [3] = 15 }, nil, nil, nil, true }
 players["dekalabasa"] = { "Dekalabasa", 8584, 1, 3, 16, { [1] = 5864, [3] = 8584 }, { [1] = 5188, [3] = 16 }, nil, nil, nil, false }
-players["kyndx"] = { "Kyndx", 8656, 1, 3, 16, { [3] = 8656 }, { [3] = 16 }, nil, nil, nil, true }
-players["discopriesst"] = { "Discopriesst", 8583, 1, 3, 17, { [1] = 5849, [3] = 8583 }, { [1] = 5208, [3] = 17 }, nil, nil, nil, true }
-players["vaga"] = { "Vaga", 8564, 1, 3, 18, { [1] = 4642, [3] = 8564 }, { [1] = 8515, [3] = 18 }, nil, nil, nil, true }
-players["sakoldruid"] = { "Sakoldruid", 8516, 1, 3, 19, { [1] = 8003, [3] = 8516 }, { [1] = 1640, [3] = 19 }, nil, nil, nil, true }
-players["treeinbed"] = { "Treeinbed", 8514, 1, 3, 20, { [1] = 294, [3] = 8514 }, { [1] = 18995, [3] = 20 }, nil, nil, nil, true }
-players["dealduck"] = { "Dealduck", 8491, 1, 3, 21, { [2] = 2908, [3] = 8491 }, { [2] = 6374, [3] = 21 }, nil, nil, nil, true }
-players["xintos"] = { "Xintos", 8387, 1, 3, 22, { [3] = 8387 }, { [3] = 22 }, nil, nil, nil, true }
-players["greenlightqt"] = { "Greenlightqt", 8357, 1, 3, 23, { [2] = 957, [3] = 8357 }, { [2] = 8955, [3] = 23 }, nil, nil, nil, true }
-players["mairoumon"] = { "Mairoumon", 8352, 1, 3, 24, { [1] = 6245, [3] = 8352 }, { [1] = 4318, [3] = 24 }, nil, nil, nil, true }
-players["giveahoof"] = { "Giveahoof", 8325, 1, 3, 25, { [1] = 5724, [2] = 3193, [3] = 8325 }, { [1] = 5508, [2] = 5951, [3] = 25 }, nil, nil, nil, true }
-players["cottonprison"] = { "Cottonprison", 8301, 1, 3, 26, { [1] = 1482, [3] = 8301 }, { [1] = 17332, [3] = 26 }, nil, nil, nil, true }
-players["naturekeeper"] = { "Naturekeeper", 8265, 1, 3, 27, { [2] = 5862, [3] = 8265 }, { [2] = 3458, [3] = 27 }, nil, nil, nil, true }
-players["thastorresto"] = { "Thastorresto", 8200, 1, 3, 28, { [3] = 8200 }, { [3] = 28 }, nil, nil, nil, true }
-players["apollotp"] = { "Apollotp", 8177, 1, 3, 29, { [1] = 5267, [3] = 8177 }, { [1] = 6799, [3] = 29 }, nil, nil, nil, true }
-players["knockonwood"] = { "Knockonwood", 8168, 1, 3, 30, { [1] = 1869, [3] = 8168 }, { [1] = 16537, [3] = 30 }, nil, nil, nil, true }
-players["tryndawins"] = { "Tryndawins", 8128, 1, 3, 31, { [2] = 1278, [3] = 8128 }, { [2] = 8604, [3] = 31 }, nil, nil, nil, true }
-players["cheveuxdange"] = { "Cheveuxdange", 8083, 1, 3, 32, { [1] = 6427, [3] = 8083 }, { [1] = 3935, [3] = 32 }, nil, nil, nil, true }
+players["kyndx"] = { "Kyndx", 8653, 1, 3, 16, { [3] = 8653 }, { [3] = 16 }, nil, nil, nil, true }
+players["discopriesst"] = { "Discopriesst", 8580, 1, 3, 17, { [1] = 5846, [3] = 8580 }, { [1] = 5224, [3] = 17 }, nil, nil, nil, true }
+players["vaga"] = { "Vaga", 8563, 1, 3, 18, { [1] = 4637, [3] = 8563 }, { [1] = 8550, [3] = 18 }, nil, nil, nil, true }
+players["sakoldruid"] = { "Sakoldruid", 8516, 1, 3, 19, { [1] = 7994, [3] = 8516 }, { [1] = 1651, [3] = 19 }, nil, nil, nil, true }
+players["treeinbed"] = { "Treeinbed", 8513, 1, 3, 20, { [1] = 294, [3] = 8513 }, { [1] = 19052, [3] = 20 }, nil, nil, nil, true }
+players["dealduck"] = { "Dealduck", 8490, 1, 3, 21, { [2] = 2899, [3] = 8490 }, { [2] = 6403, [3] = 21 }, nil, nil, nil, true }
+players["xintos"] = { "Xintos", 8385, 1, 3, 22, { [3] = 8385 }, { [3] = 22 }, nil, nil, nil, true }
+players["greenlightqt"] = { "Greenlightqt", 8357, 1, 3, 23, { [2] = 950, [3] = 8357 }, { [2] = 8984, [3] = 23 }, nil, nil, nil, true }
+players["mairoumon"] = { "Mairoumon", 8351, 1, 3, 24, { [1] = 6241, [3] = 8351 }, { [1] = 4333, [3] = 24 }, nil, nil, nil, true }
+players["giveahoof"] = { "Giveahoof", 8320, 1, 3, 25, { [1] = 5717, [2] = 3185, [3] = 8320 }, { [1] = 5544, [2] = 5974, [3] = 25 }, nil, nil, nil, true }
+players["cottonprison"] = { "Cottonprison", 8302, 1, 3, 26, { [1] = 1482, [3] = 8302 }, { [1] = 17382, [3] = 26 }, nil, nil, nil, true }
+players["naturekeeper"] = { "Naturekeeper", 8264, 1, 3, 27, { [2] = 5861, [3] = 8264 }, { [2] = 3467, [3] = 27 }, nil, nil, nil, true }
+players["thastorresto"] = { "Thastorresto", 8201, 1, 3, 28, { [3] = 8201 }, { [3] = 28 }, nil, nil, nil, true }
+players["apollotp"] = { "Apollotp", 8172, 1, 3, 29, { [1] = 5264, [3] = 8172 }, { [1] = 6824, [3] = 29 }, nil, nil, nil, true }
+players["knockonwood"] = { "Knockonwood", 8168, 1, 3, 30, { [1] = 1870, [3] = 8168 }, { [1] = 16583, [3] = 30 }, nil, nil, nil, true }
+players["tryndawins"] = { "Tryndawins", 8127, 1, 3, 31, { [2] = 1271, [3] = 8127 }, { [2] = 8633, [3] = 31 }, nil, nil, nil, true }
+players["cheveuxdange"] = { "Cheveuxdange", 8080, 1, 3, 32, { [1] = 6422, [3] = 8080 }, { [1] = 3951, [3] = 32 }, nil, nil, nil, true }
 players["megabidoof"] = { "Megabidoof", 8029, 1, 3, 32, { [1] = 6283, [3] = 8029 }, { [1] = 4266, [3] = 32 }, nil, nil, nil, false }
-players["curaocareca"] = { "Curaocareca", 8033, 1, 3, 33, { [3] = 8033 }, { [3] = 33 }, nil, nil, nil, true }
-players["boscotetro"] = { "Boscotetro", 8022, 1, 3, 34, { [1] = 5334, [3] = 8022 }, { [1] = 6600, [3] = 34 }, nil, nil, nil, true }
-players["gilka"] = { "Gilka", 7918, 1, 3, 35, { [1] = 7399, [3] = 7918 }, { [1] = 2360, [3] = 35 }, nil, nil, nil, true }
-players["seaye"] = { "Seaye", 7896, 1, 3, 36, { [3] = 7896 }, { [3] = 36 }, nil, nil, nil, true }
-players["courtly"] = { "Courtly", 7800, 1, 3, 39, { [1] = 4647, [3] = 7800 }, { [1] = 8504, [3] = 39 }, nil, nil, nil, true }
+players["curaocareca"] = { "Curaocareca", 8030, 1, 3, 33, { [3] = 8030 }, { [3] = 33 }, nil, nil, nil, true }
+players["boscotetro"] = { "Boscotetro", 8017, 1, 3, 34, { [1] = 5328, [3] = 8017 }, { [1] = 6630, [3] = 34 }, nil, nil, nil, true }
+players["gilka"] = { "Gilka", 7919, 1, 3, 35, { [1] = 7388, [3] = 7919 }, { [1] = 2378, [3] = 35 }, nil, nil, nil, true }
+players["seaye"] = { "Seaye", 7897, 1, 3, 36, { [3] = 7897 }, { [3] = 36 }, nil, nil, nil, true }
+players["courtly"] = { "Courtly", 7795, 1, 3, 39, { [1] = 4645, [3] = 7795 }, { [1] = 8530, [3] = 39 }, nil, nil, nil, true }
 players["iverne"] = { "Iverne", 7788, 1, 3, 40, { [3] = 7788 }, { [3] = 40 }, nil, nil, nil, true }
-players["heavenmoon"] = { "Heavenmoon", 7768, 1, 3, 41, { [1] = 2855, [3] = 7768 }, { [1] = 13052, [3] = 41 }, nil, nil, nil, true }
-players["segidruid"] = { "Segidruid", 7695, 1, 3, 43, { [3] = 7695 }, { [3] = 43 }, nil, nil, nil, true }
-players["angrybirdz"] = { "Angrybirdz", 7660, 1, 3, 45, { [1] = 6227, [3] = 7660 }, { [1] = 4355, [3] = 45 }, nil, nil, nil, true }
-players["pomoivalanir"] = { "Pomoivalanir", 7638, 1, 3, 47, { [1] = 2092, [3] = 7638 }, { [1] = 15911, [3] = 47 }, nil, nil, nil, true }
-players["edagonczyk"] = { "Edagonczyk", 7631, 1, 3, 48, { [3] = 7631 }, { [3] = 48 }, nil, nil, nil, true }
-players["samagon"] = { "Samagon", 7603, 1, 3, 49, { [1] = 5695, [3] = 7603 }, { [1] = 5607, [3] = 49 }, nil, nil, nil, true }
-players["wraxiustss"] = { "Wraxiustss", 7602, 1, 3, 50, { [1] = 5777, [3] = 7602 }, { [1] = 5378, [3] = 50 }, nil, nil, nil, true }
-players["kellsy"] = { "Kellsy", 7570, 1, 3, 51, { [1] = 6018, [3] = 7570 }, { [1] = 4843, [3] = 51 }, nil, nil, nil, true }
-players["rshamann"] = { "Rshamann", 7569, 1, 3, 52, { [1] = 6666, [3] = 7569 }, { [1] = 3510, [3] = 52 }, nil, nil, nil, true }
-players["drzewolonboy"] = { "Drzewolonboy", 7565, 1, 3, 53, { [1] = 7531, [3] = 7565 }, { [1] = 2183, [3] = 53 }, nil, nil, nil, true }
-players["wetcow"] = { "Wetcow", 7558, 1, 3, 54, { [3] = 7558 }, { [3] = 54 }, nil, nil, nil, true }
-players["kynra"] = { "Kynra", 7530, 1, 3, 56, { [1] = 3149, [3] = 7530 }, { [1] = 12008, [3] = 56 }, nil, nil, nil, true }
-players["karga"] = { "Karga", 7529, 1, 3, 57, { [1] = 3638, [2] = 6152, [3] = 7529 }, { [1] = 10754, [2] = 3152, [3] = 57 }, nil, nil, nil, true }
-players["rejuvat"] = { "Rejuvat", 7505, 1, 3, 58, { [1] = 6171, [3] = 7505 }, { [1] = 4498, [3] = 58 }, nil, nil, nil, true }
+players["heavenmoon"] = { "Heavenmoon", 7764, 1, 3, 41, { [1] = 2852, [3] = 7764 }, { [1] = 13080, [3] = 41 }, nil, nil, nil, true }
+players["segidruid"] = { "Segidruid", 7693, 1, 3, 44, { [3] = 7693 }, { [3] = 44 }, nil, nil, nil, true }
+players["angrybirdz"] = { "Angrybirdz", 7656, 1, 3, 45, { [1] = 6219, [3] = 7656 }, { [1] = 4381, [3] = 45 }, nil, nil, nil, true }
+players["pomoivalanir"] = { "Pomoivalanir", 7635, 1, 3, 47, { [1] = 2092, [3] = 7635 }, { [1] = 15943, [3] = 47 }, nil, nil, nil, true }
+players["edagonczyk"] = { "Edagonczyk", 7626, 1, 3, 48, { [3] = 7626 }, { [3] = 48 }, nil, nil, nil, true }
+players["wraxiustss"] = { "Wraxiustss", 7600, 1, 3, 49, { [1] = 5775, [3] = 7600 }, { [1] = 5399, [3] = 49 }, nil, nil, nil, true }
+players["samagon"] = { "Samagon", 7597, 1, 3, 50, { [1] = 5690, [3] = 7597 }, { [1] = 5639, [3] = 50 }, nil, nil, nil, true }
+players["kellsy"] = { "Kellsy", 7567, 1, 3, 51, { [1] = 6007, [3] = 7567 }, { [1] = 4872, [3] = 51 }, nil, nil, nil, true }
+players["rshamann"] = { "Rshamann", 7562, 1, 3, 52, { [1] = 6658, [3] = 7562 }, { [1] = 3527, [3] = 52 }, nil, nil, nil, true }
+players["drzewolonboy"] = { "Drzewolonboy", 7562, 1, 3, 53, { [1] = 7523, [3] = 7562 }, { [1] = 2190, [3] = 53 }, nil, nil, nil, true }
+players["wetcow"] = { "Wetcow", 7557, 1, 3, 54, { [3] = 7557 }, { [3] = 54 }, nil, nil, nil, true }
+players["kynra"] = { "Kynra", 7527, 1, 3, 56, { [1] = 3147, [3] = 7527 }, { [1] = 12038, [3] = 56 }, nil, nil, nil, true }
+players["karga"] = { "Karga", 7526, 1, 3, 57, { [1] = 3633, [2] = 6149, [3] = 7526 }, { [1] = 10781, [2] = 3160, [3] = 57 }, nil, nil, nil, true }
+players["rejuvat"] = { "Rejuvat", 7505, 1, 3, 58, { [1] = 6167, [3] = 7505 }, { [1] = 4508, [3] = 58 }, nil, nil, nil, true }
 players["dekalabaw"] = { "Dekalabaw", 7450, 1, 3, 59, { [1] = 6535, [3] = 7450 }, { [1] = 3710, [3] = 59 }, nil, nil, nil, false }
-players["lalar"] = { "Lalar", 7499, 1, 3, 59, { [3] = 7499 }, { [3] = 59 }, nil, nil, nil, true }
-players["wyyg"] = { "Wyyg", 7492, 1, 3, 60, { [2] = 1283, [3] = 7492 }, { [2] = 8597, [3] = 60 }, nil, nil, nil, true }
-players["starfallpls"] = { "Starfallpls", 7450, 1, 3, 61, { [1] = 6816, [3] = 7450 }, { [1] = 3235, [3] = 61 }, nil, nil, nil, true }
-players["macmillan"] = { "Macmillan", 7447, 1, 3, 62, { [3] = 7447 }, { [3] = 62 }, nil, nil, nil, true }
-players["duduonyouyou"] = { "Duduonyouyou", 7412, 1, 3, 63, { [1] = 3876, [3] = 7412 }, { [1] = 10256, [3] = 63 }, nil, nil, nil, true }
-players["brpls"] = { "Brpls", 7394, 1, 3, 64, { [3] = 7394 }, { [3] = 64 }, nil, nil, nil, true }
-players["ddolikk"] = { "Ddolikk", 7385, 1, 3, 65, { [3] = 7385 }, { [3] = 65 }, nil, nil, nil, true }
-players["cataang"] = { "Cataang", 7374, 1, 3, 66, { [2] = 4022, [3] = 7374 }, { [2] = 5101, [3] = 66 }, nil, nil, nil, true }
+players["lalar"] = { "Lalar", 7494, 1, 3, 59, { [3] = 7494 }, { [3] = 59 }, nil, nil, nil, true }
+players["wyyg"] = { "Wyyg", 7491, 1, 3, 60, { [2] = 1280, [3] = 7491 }, { [2] = 8625, [3] = 60 }, nil, nil, nil, true }
+players["starfallpls"] = { "Starfallpls", 7447, 1, 3, 61, { [1] = 6810, [3] = 7447 }, { [1] = 3246, [3] = 61 }, nil, nil, nil, true }
+players["macmillan"] = { "Macmillan", 7443, 1, 3, 62, { [3] = 7443 }, { [3] = 62 }, nil, nil, nil, true }
+players["duduonyouyou"] = { "Duduonyouyou", 7413, 1, 3, 63, { [1] = 3871, [3] = 7413 }, { [1] = 10287, [3] = 63 }, nil, nil, nil, true }
+players["brpls"] = { "Brpls", 7392, 1, 3, 64, { [3] = 7392 }, { [3] = 64 }, nil, nil, nil, true }
+players["ddolikk"] = { "Ddolikk", 7382, 1, 3, 65, { [3] = 7382 }, { [3] = 65 }, nil, nil, nil, true }
+players["cataang"] = { "Cataang", 7372, 1, 3, 66, { [2] = 4020, [3] = 7372 }, { [2] = 5111, [3] = 66 }, nil, nil, nil, true }
 players["roseta"] = { "Roseta", 7308, 1, 3, 68, { [3] = 7308 }, { [3] = 68 }, nil, nil, nil, true }
-players["razjarenibik"] = { "Razjarenibik", 7287, 1, 3, 69, { [3] = 7287 }, { [3] = 69 }, nil, nil, nil, true }
-players["thortino"] = { "Thortino", 7285, 1, 3, 70, { [1] = 6446, [3] = 7285 }, { [1] = 3907, [3] = 70 }, nil, nil, nil, true }
-players["opscurei"] = { "Opscurei", 7236, 1, 3, 71, { [3] = 7236 }, { [3] = 71 }, nil, nil, nil, true }
-players["simplay"] = { "Simplay", 7190, 1, 3, 72, { [2] = 2766, [3] = 7190 }, { [2] = 6646, [3] = 72 }, nil, nil, nil, true }
+players["thortino"] = { "Thortino", 7281, 1, 3, 69, { [1] = 6439, [3] = 7281 }, { [1] = 3925, [3] = 69 }, nil, nil, nil, true }
+players["razjarenibik"] = { "Razjarenibik", 7280, 1, 3, 70, { [3] = 7280 }, { [3] = 70 }, nil, nil, nil, true }
+players["opscurei"] = { "Opscurei", 7231, 1, 3, 71, { [3] = 7231 }, { [3] = 71 }, nil, nil, nil, true }
+players["simplay"] = { "Simplay", 7189, 1, 3, 72, { [2] = 2751, [3] = 7189 }, { [2] = 6703, [3] = 72 }, nil, nil, nil, true }
 players["casandra"] = { "Casandra", 7181, 1, 3, 73, { [3] = 7181 }, { [3] = 73 }, nil, nil, nil, true }
-players["amicilabrys"] = { "Amicilabrys", 7171, 1, 3, 74, { [1] = 5912, [3] = 7171 }, { [1] = 5080, [3] = 74 }, nil, nil, nil, true }
-players["sisafile"] = { "Sisafile", 7117, 1, 3, 76, { [1] = 2000, [2] = 2306, [3] = 7117 }, { [1] = 16176, [2] = 7502, [3] = 76 }, nil, nil, nil, true }
-players["sakolik"] = { "Sakolik", 7101, 1, 3, 77, { [3] = 7101 }, { [3] = 77 }, nil, nil, nil, true }
-players["opsmorri"] = { "Opsmorri", 7036, 1, 3, 81, { [3] = 7036 }, { [3] = 81 }, nil, nil, nil, true }
-players["homeopatia"] = { "Homeopatia", 7018, 1, 3, 82, { [1] = 2169, [3] = 7018 }, { [1] = 15695, [3] = 82 }, nil, nil, nil, true }
-players["treelogy"] = { "Treelogy", 6966, 1, 3, 83, { [1] = 5939, [3] = 6966 }, { [1] = 5031, [3] = 83 }, nil, nil, nil, true }
-players["hotsforraid"] = { "Hotsforraid", 6909, 1, 3, 84, { [1] = 4945, [3] = 6909 }, { [1] = 7691, [3] = 84 }, nil, nil, nil, true }
-players["rarezz"] = { "Rarezz", 6904, 1, 3, 85, { [1] = 5712, [3] = 6904 }, { [1] = 5554, [3] = 85 }, nil, nil, nil, true }
-players["feyserrah"] = { "Feyserrah", 6863, 1, 3, 87, { [1] = 5650, [3] = 6863 }, { [1] = 5748, [3] = 87 }, nil, nil, nil, true }
-players["farshik"] = { "Farshik", 6789, 1, 3, 91, { [1] = 5291, [3] = 6789 }, { [1] = 6727, [3] = 91 }, nil, nil, nil, true }
-players["besterq"] = { "Besterq", 10000, 2, 1, 1, { [1] = 10000, [2] = 9724, [3] = 9238 }, { [1] = 1, [2] = 182, [3] = 40 }, nil, nil, nil, true }
-players["yourlastshot"] = { "Yourlastshot", 9823, 2, 1, 2, { [1] = 9823, [2] = 9284 }, { [1] = 2, [2] = 481 }, nil, nil, nil, true }
-players["yourlastgoat"] = { "Yourlastgoat", 9703, 2, 1, 4, { [1] = 9703, [2] = 2099 }, { [1] = 4, [2] = 14796 }, nil, nil, nil, true }
-players["wtbarrow"] = { "Wtbarrow", 9691, 2, 1, 5, { [1] = 9691, [2] = 8752, [3] = 9193 }, { [1] = 5, [2] = 863, [3] = 43 }, nil, nil, nil, true }
-players["mijelikki"] = { "Mijelikki", 9656, 2, 1, 6, { [1] = 9656, [2] = 456 }, { [1] = 6, [2] = 19543 }, nil, nil, nil, true }
-players["egaroto"] = { "Egaroto", 9600, 2, 1, 7, { [1] = 9600, [2] = 9486, [3] = 9189 }, { [1] = 7, [2] = 353, [3] = 44 }, nil, nil, nil, true }
-players["oneshotimeno"] = { "Oneshotimeno", 9594, 2, 1, 8, { [1] = 9594, [2] = 9167 }, { [1] = 8, [2] = 557 }, nil, nil, nil, true }
-players["xixider"] = { "Xixider", 9568, 2, 1, 9, { [1] = 9568 }, { [1] = 9 }, nil, nil, nil, true }
-players["shootnoku"] = { "Shootnoku", 9556, 2, 1, 10, { [1] = 9556, [2] = 8968 }, { [1] = 10, [2] = 701 }, nil, nil, nil, true }
-players["jessepikmin"] = { "Jessepikmin", 9512, 2, 1, 11, { [1] = 9512, [2] = 6586 }, { [1] = 11, [2] = 3237 }, nil, nil, nil, true }
-players["ghalta"] = { "Ghalta", 9507, 2, 1, 12, { [1] = 9507 }, { [1] = 12 }, nil, nil, nil, true }
-players["hierodula"] = { "Hierodula", 9494, 2, 1, 13, { [1] = 9494, [3] = 2940 }, { [1] = 13, [3] = 553 }, nil, nil, nil, true }
-players["amrandir"] = { "Amrandir", 9437, 2, 1, 15, { [1] = 9437, [2] = 5298 }, { [1] = 15, [2] = 5907 }, nil, nil, nil, true }
-players["xlkk"] = { "Xlkk", 9424, 2, 1, 16, { [1] = 9424, [2] = 9380, [3] = 1786 }, { [1] = 16, [2] = 409, [3] = 777 }, nil, nil, nil, true }
-players["yourlastzer"] = { "Yourlastzer", 9336, 2, 1, 17, { [1] = 9336, [2] = 7617, [3] = 8715 }, { [1] = 17, [2] = 1928, [3] = 70 }, nil, nil, nil, true }
-players["elcazaortos"] = { "Elcazaortos", 9325, 2, 1, 18, { [1] = 9325, [2] = 6580 }, { [1] = 18, [2] = 3247 }, nil, nil, nil, true }
-players["rikaya"] = { "Rikaya", 9155, 2, 1, 20, { [1] = 9155, [2] = 5070, [3] = 6601 }, { [1] = 20, [2] = 8584, [3] = 199 }, nil, nil, nil, true }
-players["paulcezanne"] = { "Paulcezanne", 8804, 2, 1, 22, { [1] = 8804, [2] = 6682 }, { [1] = 22, [2] = 3091 }, nil, nil, nil, true }
-players["bmblaster"] = { "Bmblaster", 8765, 2, 1, 23, { [1] = 8765 }, { [1] = 23 }, nil, nil, nil, true }
-players["liseth"] = { "Liseth", 8723, 2, 1, 24, { [1] = 8723, [2] = 7301, [3] = 3049 }, { [1] = 24, [2] = 2330, [3] = 538 }, nil, nil, nil, true }
-players["abithunt"] = { "Abithunt", 8714, 2, 1, 25, { [1] = 8714, [3] = 5904 }, { [1] = 25, [3] = 259 }, nil, nil, nil, true }
+players["amicilabrys"] = { "Amicilabrys", 7167, 1, 3, 74, { [1] = 5904, [3] = 7167 }, { [1] = 5104, [3] = 74 }, nil, nil, nil, true }
+players["sisafile"] = { "Sisafile", 7114, 1, 3, 76, { [1] = 2000, [2] = 2306, [3] = 7114 }, { [1] = 16219, [2] = 7518, [3] = 76 }, nil, nil, nil, true }
+players["sakolik"] = { "Sakolik", 7099, 1, 3, 77, { [3] = 7099 }, { [3] = 77 }, nil, nil, nil, true }
+players["opsmorri"] = { "Opsmorri", 7033, 1, 3, 81, { [3] = 7033 }, { [3] = 81 }, nil, nil, nil, true }
+players["homeopatia"] = { "Homeopatia", 7020, 1, 3, 82, { [1] = 2166, [3] = 7020 }, { [1] = 15734, [3] = 82 }, nil, nil, nil, true }
+players["treelogy"] = { "Treelogy", 6966, 1, 3, 83, { [1] = 5931, [3] = 6966 }, { [1] = 5057, [3] = 83 }, nil, nil, nil, true }
+players["hotsforraid"] = { "Hotsforraid", 6903, 1, 3, 84, { [1] = 4941, [3] = 6903 }, { [1] = 7715, [3] = 84 }, nil, nil, nil, true }
+players["rarezz"] = { "Rarezz", 6899, 1, 3, 85, { [1] = 5702, [3] = 6899 }, { [1] = 5596, [3] = 85 }, nil, nil, nil, true }
+players["feyserrah"] = { "Feyserrah", 6858, 1, 3, 87, { [1] = 5859, [3] = 6858 }, { [1] = 5197, [3] = 87 }, nil, nil, nil, true }
+players["farshik"] = { "Farshik", 6787, 1, 3, 91, { [1] = 5290, [3] = 6787 }, { [1] = 6749, [3] = 91 }, nil, nil, nil, true }
+players["wansokra"] = { "Wansokra", 6786, 1, 3, 92, { [1] = 3071, [3] = 6786 }, { [1] = 12307, [3] = 92 }, nil, nil, nil, true }
+players["besterq"] = { "Besterq", 10000, 2, 1, 1, { [1] = 10000, [2] = 9721, [3] = 9237 }, { [1] = 1, [2] = 184, [3] = 40 }, nil, nil, nil, true }
+players["yourlastshot"] = { "Yourlastshot", 9824, 2, 1, 2, { [1] = 9824, [2] = 9278 }, { [1] = 2, [2] = 489 }, nil, nil, nil, true }
+players["yourlastgoat"] = { "Yourlastgoat", 9704, 2, 1, 4, { [1] = 9704, [2] = 2098 }, { [1] = 4, [2] = 14850 }, nil, nil, nil, true }
+players["wtbarrow"] = { "Wtbarrow", 9692, 2, 1, 5, { [1] = 9692, [2] = 8744, [3] = 9188 }, { [1] = 5, [2] = 870, [3] = 44 }, nil, nil, nil, true }
+players["mijelikki"] = { "Mijelikki", 9658, 2, 1, 6, { [1] = 9658, [2] = 456 }, { [1] = 6, [2] = 19609 }, nil, nil, nil, true }
+players["egaroto"] = { "Egaroto", 9602, 2, 1, 7, { [1] = 9602, [2] = 9481, [3] = 9189 }, { [1] = 7, [2] = 356, [3] = 43 }, nil, nil, nil, true }
+players["oneshotimeno"] = { "Oneshotimeno", 9595, 2, 1, 8, { [1] = 9595, [2] = 9161 }, { [1] = 8, [2] = 561 }, nil, nil, nil, true }
+players["xixider"] = { "Xixider", 9571, 2, 1, 9, { [1] = 9571 }, { [1] = 9 }, nil, nil, nil, true }
+players["shootnoku"] = { "Shootnoku", 9559, 2, 1, 10, { [1] = 9559, [2] = 9463 }, { [1] = 10, [2] = 363 }, nil, nil, nil, true }
+players["jessepikmin"] = { "Jessepikmin", 9515, 2, 1, 11, { [1] = 9515, [2] = 6579 }, { [1] = 11, [2] = 3247 }, nil, nil, nil, true }
+players["ghalta"] = { "Ghalta", 9509, 2, 1, 12, { [1] = 9509 }, { [1] = 12 }, nil, nil, nil, true }
+players["hierodula"] = { "Hierodula", 9496, 2, 1, 13, { [1] = 9496, [3] = 2925 }, { [1] = 13, [3] = 558 }, nil, nil, nil, true }
+players["amrandir"] = { "Amrandir", 9440, 2, 1, 15, { [1] = 9440, [2] = 5291 }, { [1] = 15, [2] = 5927 }, nil, nil, nil, true }
+players["xlkk"] = { "Xlkk", 9427, 2, 1, 16, { [1] = 9427, [2] = 9375, [3] = 1773 }, { [1] = 16, [2] = 415, [3] = 784 }, nil, nil, nil, true }
+players["yourlastzer"] = { "Yourlastzer", 9338, 2, 1, 17, { [1] = 9338, [2] = 7607, [3] = 8712 }, { [1] = 17, [2] = 1943, [3] = 71 }, nil, nil, nil, true }
+players["elcazaortos"] = { "Elcazaortos", 9326, 2, 1, 18, { [1] = 9326, [2] = 6576 }, { [1] = 18, [2] = 3255 }, nil, nil, nil, true }
+players["rikaya"] = { "Rikaya", 9159, 2, 1, 20, { [1] = 9159, [2] = 5070, [3] = 6579 }, { [1] = 20, [2] = 8614, [3] = 203 }, nil, nil, nil, true }
+players["paulcezanne"] = { "Paulcezanne", 8807, 2, 1, 22, { [1] = 8807, [2] = 6676 }, { [1] = 22, [2] = 3098 }, nil, nil, nil, true }
+players["bmblaster"] = { "Bmblaster", 8768, 2, 1, 23, { [1] = 8768 }, { [1] = 23 }, nil, nil, nil, true }
+players["liseth"] = { "Liseth", 8728, 2, 1, 24, { [1] = 8728, [2] = 7653, [3] = 3036 }, { [1] = 24, [2] = 1897, [3] = 543 }, nil, nil, nil, true }
+players["abithunt"] = { "Abithunt", 8716, 2, 1, 25, { [1] = 8716, [3] = 5886 }, { [1] = 25, [3] = 261 }, nil, nil, nil, true }
 players["marytwo"] = { "Marytwo", 10000, 2, 2, 1, { [2] = 10000 }, { [2] = 1 }, nil, nil, nil, true }
 players["marythree"] = { "Marythree", 9999, 2, 2, 2, { [2] = 9999 }, { [2] = 2 }, nil, nil, nil, true }
-players["maryluh"] = { "Maryluh", 9995, 2, 2, 3, { [2] = 9995, [3] = 1002 }, { [2] = 3, [3] = 894 }, nil, nil, nil, true }
-players["ebk"] = { "Ebk", 9995, 2, 2, 4, { [2] = 9995 }, { [2] = 4 }, nil, nil, nil, true }
+players["maryluh"] = { "Maryluh", 9995, 2, 2, 3, { [2] = 9995, [3] = 1002 }, { [2] = 3, [3] = 900 }, nil, nil, nil, true }
+players["ebk"] = { "Ebk", 9994, 2, 2, 4, { [2] = 9994 }, { [2] = 4 }, nil, nil, nil, true }
 players["dishwaasher"] = { "Dishwaasher", 9994, 2, 2, 5, { [2] = 9994 }, { [2] = 5 }, nil, nil, nil, true }
-players["shootcigans"] = { "Shootcigans", 9993, 2, 2, 6, { [2] = 9993 }, { [2] = 6 }, nil, nil, nil, true }
+players["shootcigans"] = { "Shootcigans", 9992, 2, 2, 6, { [2] = 9992 }, { [2] = 6 }, nil, nil, nil, true }
 players["spunkify"] = { "Spunkify", 9992, 2, 2, 7, { [2] = 9992 }, { [2] = 7 }, nil, nil, nil, true }
-players["fawnz"] = { "Fawnz", 9988, 2, 2, 8, { [2] = 9988 }, { [2] = 8 }, nil, nil, nil, true }
-players["whoisurdady"] = { "Whoisurdady", 9985, 2, 2, 9, { [2] = 9985 }, { [2] = 9 }, nil, nil, nil, true }
+players["fawnz"] = { "Fawnz", 9987, 2, 2, 8, { [2] = 9987 }, { [2] = 8 }, nil, nil, nil, true }
+players["whoisurdady"] = { "Whoisurdady", 9984, 2, 2, 9, { [2] = 9984 }, { [2] = 9 }, nil, nil, nil, true }
 players["gilifabian"] = { "Gilifabian", 9984, 2, 2, 11, { [2] = 9984 }, { [2] = 11 }, nil, nil, nil, true }
-players["durk"] = { "Durk", 9982, 2, 2, 12, { [2] = 9982 }, { [2] = 12 }, nil, nil, nil, true }
+players["durk"] = { "Durk", 9981, 2, 2, 12, { [2] = 9981 }, { [2] = 12 }, nil, nil, nil, true }
 players["aimasistance"] = { "Aimasistance", 9981, 2, 2, 13, { [2] = 9981 }, { [2] = 13 }, nil, nil, nil, true }
-players["slavemind"] = { "Slavemind", 9979, 2, 2, 14, { [2] = 9979 }, { [2] = 14 }, nil, nil, nil, true }
-players["fawnzhunt"] = { "Fawnzhunt", 9977, 2, 2, 15, { [2] = 9977 }, { [2] = 15 }, nil, nil, nil, true }
+players["slavemind"] = { "Slavemind", 9978, 2, 2, 14, { [2] = 9978 }, { [2] = 14 }, nil, nil, nil, true }
+players["fawnzhunt"] = { "Fawnzhunt", 9976, 2, 2, 15, { [2] = 9976 }, { [2] = 15 }, nil, nil, nil, true }
 players["galcyox"] = { "Galcyox", 9973, 2, 2, 16, { [2] = 9973 }, { [2] = 16 }, nil, nil, nil, true }
-players["stng"] = { "Stng", 9973, 2, 2, 17, { [2] = 9973 }, { [2] = 17 }, nil, nil, nil, true }
-players["crvenazvezda"] = { "Crvenazvezda", 9971, 2, 2, 18, { [2] = 9971, [3] = 8322 }, { [2] = 18, [3] = 90 }, nil, nil, nil, true }
+players["stng"] = { "Stng", 9972, 2, 2, 17, { [2] = 9972 }, { [2] = 17 }, nil, nil, nil, true }
+players["crvenazvezda"] = { "Crvenazvezda", 9970, 2, 2, 18, { [2] = 9970, [3] = 8322 }, { [2] = 18, [3] = 90 }, nil, nil, nil, true }
 players["jheeh"] = { "Jheeh", 9970, 2, 2, 19, { [2] = 9970 }, { [2] = 19 }, nil, nil, nil, true }
-players["yajua"] = { "Yajua", 9969, 2, 2, 20, { [2] = 9969 }, { [2] = 20 }, nil, nil, nil, true }
-players["sigris"] = { "Sigris", 9969, 2, 2, 21, { [2] = 9969, [3] = 8986 }, { [2] = 21, [3] = 51 }, nil, nil, nil, true }
-players["maryzhu"] = { "Maryzhu", 9968, 2, 2, 22, { [2] = 9968 }, { [2] = 22 }, nil, nil, nil, true }
-players["flyinraccoon"] = { "Flyinraccoon", 9967, 2, 2, 23, { [2] = 9967 }, { [2] = 23 }, nil, nil, nil, true }
-players["jaerai"] = { "Jaerai", 9966, 2, 2, 24, { [2] = 9966 }, { [2] = 24 }, nil, nil, nil, true }
-players["sapph"] = { "Sapph", 9966, 2, 2, 25, { [2] = 9966 }, { [2] = 25 }, nil, nil, nil, true }
+players["yajua"] = { "Yajua", 9968, 2, 2, 20, { [2] = 9968 }, { [2] = 20 }, nil, nil, nil, true }
+players["aquablue"] = { "Aquablue", 9968, 2, 2, 21, { [2] = 9968 }, { [2] = 21 }, nil, nil, nil, true }
+players["sigris"] = { "Sigris", 9968, 2, 2, 22, { [2] = 9968, [3] = 8983 }, { [2] = 22, [3] = 51 }, nil, nil, nil, true }
+players["maryzhu"] = { "Maryzhu", 9967, 2, 2, 23, { [2] = 9967 }, { [2] = 23 }, nil, nil, nil, true }
+players["flyinraccoon"] = { "Flyinraccoon", 9967, 2, 2, 24, { [2] = 9967 }, { [2] = 24 }, nil, nil, nil, true }
+players["lunarelle"] = { "Lunarelle", 9966, 2, 2, 25, { [2] = 9966 }, { [2] = 25 }, nil, nil, nil, true }
 players["bakury"] = { "Bakury", 9965, 2, 2, 26, { [2] = 9965 }, { [2] = 26 }, nil, nil, nil, false }
-players["marysixseven"] = { "Marysixseven", 9965, 2, 2, 26, { [2] = 9965 }, { [2] = 26 }, nil, nil, nil, true }
-players["anico"] = { "Anico", 9962, 2, 2, 27, { [2] = 9962 }, { [2] = 27 }, nil, nil, nil, true }
+players["sapph"] = { "Sapph", 9966, 2, 2, 26, { [2] = 9966 }, { [2] = 26 }, nil, nil, nil, true }
 players["deusgaby"] = { "Deusgaby", 9963, 2, 2, 27, { [2] = 9963 }, { [2] = 27 }, nil, nil, nil, false }
-players["lunarelle"] = { "Lunarelle", 9959, 2, 2, 28, { [2] = 9959 }, { [2] = 28 }, nil, nil, nil, true }
-players["aquablue"] = { "Aquablue", 9958, 2, 2, 29, { [2] = 9958 }, { [2] = 29 }, nil, nil, nil, true }
-players["leeda"] = { "Leeda", 9958, 2, 2, 30, { [2] = 9958 }, { [2] = 30 }, nil, nil, nil, true }
-players["galehunter"] = { "Galehunter", 9958, 2, 2, 31, { [2] = 9958 }, { [2] = 31 }, nil, nil, nil, true }
-players["onlytunnel"] = { "Onlytunnel", 9956, 2, 2, 32, { [2] = 9956 }, { [2] = 32 }, nil, nil, nil, true }
+players["jaerai"] = { "Jaerai", 9965, 2, 2, 27, { [2] = 9965 }, { [2] = 27 }, nil, nil, nil, true }
+players["marysixseven"] = { "Marysixseven", 9964, 2, 2, 28, { [2] = 9964 }, { [2] = 28 }, nil, nil, nil, true }
+players["anico"] = { "Anico", 9962, 2, 2, 29, { [2] = 9962 }, { [2] = 29 }, nil, nil, nil, true }
+players["leeda"] = { "Leeda", 9957, 2, 2, 30, { [2] = 9957 }, { [2] = 30 }, nil, nil, nil, true }
+players["galehunter"] = { "Galehunter", 9957, 2, 2, 31, { [2] = 9957 }, { [2] = 31 }, nil, nil, nil, true }
+players["onlytunnel"] = { "Onlytunnel", 9955, 2, 2, 32, { [2] = 9955 }, { [2] = 32 }, nil, nil, nil, true }
 players["lifehorde"] = { "Lifehorde", 9952, 2, 2, 33, { [2] = 9952 }, { [2] = 33 }, nil, nil, nil, false }
-players["pinpu"] = { "Pinpu", 9955, 2, 2, 33, { [2] = 9955 }, { [2] = 33 }, nil, nil, nil, true }
-players["momykohunter"] = { "Momykohunter", 9949, 2, 2, 34, { [2] = 9949 }, { [2] = 34 }, nil, nil, nil, true }
-players["lifethree"] = { "Lifethree", 9949, 2, 2, 35, { [2] = 9949 }, { [2] = 35 }, nil, nil, nil, true }
-players["mugiwarayia"] = { "Mugiwarayia", 9949, 2, 2, 36, { [2] = 9949 }, { [2] = 36 }, nil, nil, nil, true }
-players["nagabloorn"] = { "Nagabloorn", 9947, 2, 2, 37, { [2] = 9947 }, { [2] = 37 }, nil, nil, nil, true }
-players["lifefour"] = { "Lifefour", 9944, 2, 2, 38, { [2] = 9944 }, { [2] = 38 }, nil, nil, nil, true }
-players["oiuoiuoiuoiu"] = { "Oiuoiuoiuoiu", 9935, 2, 2, 39, { [2] = 9935, [3] = 8947 }, { [2] = 39, [3] = 52 }, nil, nil, nil, true }
-players["pvesobakax"] = { "Pvesobakax", 9932, 2, 2, 40, { [2] = 9932 }, { [2] = 40 }, nil, nil, nil, true }
-players["cottondog"] = { "Cottondog", 9932, 2, 2, 41, { [2] = 9932, [3] = 3761 }, { [2] = 41, [3] = 461 }, nil, nil, nil, true }
-players["lifetwink"] = { "Lifetwink", 9931, 2, 2, 42, { [2] = 9931 }, { [2] = 42 }, nil, nil, nil, true }
-players["ateasisback"] = { "Ateasisback", 9930, 2, 2, 43, { [2] = 9930 }, { [2] = 43 }, nil, nil, nil, true }
-players["lifetwo"] = { "Lifetwo", 9929, 2, 2, 44, { [2] = 9929 }, { [2] = 44 }, nil, nil, nil, true }
-players["raumenutesla"] = { "Raumenutesla", 9929, 2, 2, 45, { [2] = 9929 }, { [2] = 45 }, nil, nil, nil, true }
-players["maekerc"] = { "Maekerc", 9929, 2, 2, 46, { [2] = 9929 }, { [2] = 46 }, nil, nil, nil, true }
-players["katsarrow"] = { "Katsarrow", 9928, 2, 2, 47, { [2] = 9928 }, { [2] = 47 }, nil, nil, nil, true }
-players["zezaleza"] = { "Zezaleza", 9927, 2, 2, 48, { [2] = 9927 }, { [2] = 48 }, nil, nil, nil, true }
-players["bustymadame"] = { "Bustymadame", 9927, 2, 2, 49, { [2] = 9927 }, { [2] = 49 }, nil, nil, nil, true }
-players["legolasus"] = { "Legolasus", 9927, 2, 2, 50, { [2] = 9927 }, { [2] = 50 }, nil, nil, nil, true }
-players["mezonh"] = { "Mezonh", 9927, 2, 2, 51, { [2] = 9927 }, { [2] = 51 }, nil, nil, nil, true }
-players["avivis"] = { "Avivis", 9922, 2, 2, 52, { [2] = 9922 }, { [2] = 52 }, nil, nil, nil, true }
-players["delusion"] = { "Delusion", 9921, 2, 2, 53, { [2] = 9921, [3] = 7578 }, { [2] = 53, [3] = 137 }, nil, nil, nil, true }
-players["insanetaunta"] = { "Insanetaunta", 9920, 2, 2, 54, { [2] = 9920, [3] = 8141 }, { [2] = 54, [3] = 102 }, nil, nil, nil, true }
-players["bigdypski"] = { "Bigdypski", 9920, 2, 2, 55, { [2] = 9920 }, { [2] = 55 }, nil, nil, nil, true }
-players["keksakoks"] = { "Keksakoks", 9920, 2, 2, 56, { [2] = 9920 }, { [2] = 56 }, nil, nil, nil, true }
-players["notmyfault"] = { "Notmyfault", 9918, 2, 2, 57, { [2] = 9918 }, { [2] = 57 }, nil, nil, nil, true }
-players["huntgood"] = { "Huntgood", 9918, 2, 2, 58, { [2] = 9918 }, { [2] = 58 }, nil, nil, nil, true }
-players["hontrap"] = { "Hontrap", 9918, 2, 2, 59, { [2] = 9918 }, { [2] = 59 }, nil, nil, nil, true }
-players["ggshot"] = { "Ggshot", 9917, 2, 2, 60, { [2] = 9917 }, { [2] = 60 }, nil, nil, nil, true }
-players["fanofbender"] = { "Fanofbender", 9916, 2, 2, 61, { [2] = 9916 }, { [2] = 61 }, nil, nil, nil, true }
-players["nightthorn"] = { "Nightthorn", 9914, 2, 2, 62, { [2] = 9914 }, { [2] = 62 }, nil, nil, nil, true }
-players["seetah"] = { "Seetah", 9914, 2, 2, 63, { [2] = 9914, [3] = 8901 }, { [2] = 63, [3] = 55 }, nil, nil, nil, true }
-players["hyagi"] = { "Hyagi", 9910, 2, 2, 64, { [2] = 9910, [3] = 9789 }, { [2] = 64, [3] = 14 }, nil, nil, nil, true }
-players["leldorin"] = { "Leldorin", 9906, 2, 2, 65, { [2] = 9906 }, { [2] = 65 }, nil, nil, nil, true }
-players["esno"] = { "Esno", 9905, 2, 2, 66, { [2] = 9905 }, { [2] = 66 }, nil, nil, nil, true }
-players["hrabonszcz"] = { "Hrabonszcz", 9902, 2, 2, 67, { [2] = 9902 }, { [2] = 67 }, nil, nil, nil, true }
-players["fanofhyst"] = { "Fanofhyst", 9899, 2, 2, 68, { [2] = 9899 }, { [2] = 68 }, nil, nil, nil, true }
-players["hkulek"] = { "Hkulek", 9896, 2, 2, 69, { [2] = 9896 }, { [2] = 69 }, nil, nil, nil, true }
-players["ciganshot"] = { "Ciganshot", 9896, 2, 2, 70, { [2] = 9896 }, { [2] = 70 }, nil, nil, nil, true }
-players["ggshots"] = { "Ggshots", 9896, 2, 2, 71, { [2] = 9896 }, { [2] = 71 }, nil, nil, nil, true }
-players["skancito"] = { "Skancito", 9896, 2, 2, 72, { [2] = 9896, [3] = 2490 }, { [2] = 72, [3] = 636 }, nil, nil, nil, true }
-players["hyakkimaru"] = { "Hyakkimaru", 9893, 2, 2, 73, { [2] = 9893 }, { [2] = 73 }, nil, nil, nil, true }
-players["lifelement"] = { "Lifelement", 9892, 2, 2, 74, { [2] = 9892, [3] = 9741 }, { [2] = 74, [3] = 17 }, nil, nil, nil, true }
-players["dadykohunter"] = { "Dadykohunter", 9892, 2, 2, 75, { [2] = 9892 }, { [2] = 75 }, nil, nil, nil, true }
-players["dumberth"] = { "Dumberth", 9888, 2, 2, 76, { [2] = 9888 }, { [2] = 76 }, nil, nil, nil, true }
-players["ripezarrow"] = { "Ripezarrow", 9886, 2, 2, 77, { [2] = 9886 }, { [2] = 77 }, nil, nil, nil, true }
-players["nyilren"] = { "Nyilren", 9885, 2, 2, 78, { [2] = 9885 }, { [2] = 78 }, nil, nil, nil, true }
-players["antresse"] = { "Antresse", 9884, 2, 2, 79, { [2] = 9884 }, { [2] = 79 }, nil, nil, nil, true }
-players["robihunt"] = { "Robihunt", 9881, 2, 2, 80, { [2] = 9881 }, { [2] = 80 }, nil, nil, nil, true }
-players["shotcop"] = { "Shotcop", 9879, 2, 2, 81, { [2] = 9879 }, { [2] = 81 }, nil, nil, nil, true }
-players["hyst"] = { "Hyst", 9874, 2, 2, 82, { [2] = 9874, [3] = 3801 }, { [2] = 82, [3] = 455 }, nil, nil, nil, true }
-players["manifold"] = { "Manifold", 9874, 2, 2, 83, { [2] = 9874 }, { [2] = 83 }, nil, nil, nil, true }
+players["pinpu"] = { "Pinpu", 9954, 2, 2, 33, { [2] = 9954 }, { [2] = 33 }, nil, nil, nil, true }
+players["momykohunter"] = { "Momykohunter", 9948, 2, 2, 34, { [2] = 9948 }, { [2] = 34 }, nil, nil, nil, true }
+players["lifethree"] = { "Lifethree", 9948, 2, 2, 35, { [2] = 9948 }, { [2] = 35 }, nil, nil, nil, true }
+players["mugiwarayia"] = { "Mugiwarayia", 9948, 2, 2, 36, { [2] = 9948 }, { [2] = 36 }, nil, nil, nil, true }
+players["nagabloorn"] = { "Nagabloorn", 9946, 2, 2, 37, { [2] = 9946 }, { [2] = 37 }, nil, nil, nil, true }
+players["lifefour"] = { "Lifefour", 9943, 2, 2, 38, { [2] = 9943 }, { [2] = 38 }, nil, nil, nil, true }
+players["oiuoiuoiuoiu"] = { "Oiuoiuoiuoiu", 9934, 2, 2, 39, { [2] = 9934, [3] = 8945 }, { [2] = 39, [3] = 52 }, nil, nil, nil, true }
+players["hontrap"] = { "Hontrap", 9933, 2, 2, 40, { [2] = 9933 }, { [2] = 40 }, nil, nil, nil, true }
+players["pvesobakax"] = { "Pvesobakax", 9931, 2, 2, 41, { [2] = 9931 }, { [2] = 41 }, nil, nil, nil, true }
+players["cottondog"] = { "Cottondog", 9930, 2, 2, 42, { [2] = 9930, [3] = 3808 }, { [2] = 42, [3] = 455 }, nil, nil, nil, true }
+players["lifetwink"] = { "Lifetwink", 9930, 2, 2, 43, { [2] = 9930 }, { [2] = 43 }, nil, nil, nil, true }
+players["delusion"] = { "Delusion", 9930, 2, 2, 44, { [2] = 9930, [3] = 7554 }, { [2] = 44, [3] = 138 }, nil, nil, nil, true }
+players["ateasisback"] = { "Ateasisback", 9928, 2, 2, 45, { [2] = 9928 }, { [2] = 45 }, nil, nil, nil, true }
+players["lifetwo"] = { "Lifetwo", 9928, 2, 2, 46, { [2] = 9928 }, { [2] = 46 }, nil, nil, nil, true }
+players["raumenutesla"] = { "Raumenutesla", 9928, 2, 2, 47, { [2] = 9928 }, { [2] = 47 }, nil, nil, nil, true }
+players["maekerc"] = { "Maekerc", 9927, 2, 2, 48, { [2] = 9927 }, { [2] = 48 }, nil, nil, nil, true }
+players["katsarrow"] = { "Katsarrow", 9927, 2, 2, 49, { [2] = 9927 }, { [2] = 49 }, nil, nil, nil, true }
+players["zezaleza"] = { "Zezaleza", 9927, 2, 2, 50, { [2] = 9927 }, { [2] = 50 }, nil, nil, nil, true }
+players["mezonh"] = { "Mezonh", 9926, 2, 2, 51, { [2] = 9926 }, { [2] = 51 }, nil, nil, nil, true }
+players["bustymadame"] = { "Bustymadame", 9925, 2, 2, 52, { [2] = 9925 }, { [2] = 52 }, nil, nil, nil, true }
+players["legolasus"] = { "Legolasus", 9925, 2, 2, 53, { [2] = 9925 }, { [2] = 53 }, nil, nil, nil, true }
+players["ggshot"] = { "Ggshot", 9924, 2, 2, 54, { [2] = 9924 }, { [2] = 54 }, nil, nil, nil, true }
+players["insanetaunta"] = { "Insanetaunta", 9920, 2, 2, 54, { [2] = 9920, [3] = 8141 }, { [2] = 54, [3] = 102 }, nil, nil, nil, false }
+players["avivis"] = { "Avivis", 9921, 2, 2, 55, { [2] = 9921 }, { [2] = 55 }, nil, nil, nil, true }
+players["numberthree"] = { "Numberthree", 9919, 2, 2, 56, { [2] = 9919, [3] = 8126 }, { [2] = 56, [3] = 104 }, nil, nil, nil, true }
+players["keksakoks"] = { "Keksakoks", 9919, 2, 2, 57, { [2] = 9919 }, { [2] = 57 }, nil, nil, nil, true }
+players["bigdypski"] = { "Bigdypski", 9919, 2, 2, 58, { [2] = 9919 }, { [2] = 58 }, nil, nil, nil, true }
+players["avianna"] = { "Avianna", 9918, 2, 2, 59, { [2] = 9918 }, { [2] = 59 }, nil, nil, nil, true }
+players["notmyfault"] = { "Notmyfault", 9917, 2, 2, 60, { [2] = 9917 }, { [2] = 60 }, nil, nil, nil, true }
+players["huntgood"] = { "Huntgood", 9917, 2, 2, 61, { [2] = 9917 }, { [2] = 61 }, nil, nil, nil, true }
+players["fanofbender"] = { "Fanofbender", 9915, 2, 2, 62, { [2] = 9915 }, { [2] = 62 }, nil, nil, nil, true }
+players["seetah"] = { "Seetah", 9913, 2, 2, 63, { [2] = 9913, [3] = 8897 }, { [2] = 63, [3] = 55 }, nil, nil, nil, true }
+players["nightthorn"] = { "Nightthorn", 9912, 2, 2, 64, { [2] = 9912 }, { [2] = 64 }, nil, nil, nil, true }
+players["hyagi"] = { "Hyagi", 9909, 2, 2, 65, { [2] = 9909, [3] = 9788 }, { [2] = 65, [3] = 15 }, nil, nil, nil, true }
+players["leldorin"] = { "Leldorin", 9904, 2, 2, 66, { [2] = 9904 }, { [2] = 66 }, nil, nil, nil, true }
+players["esno"] = { "Esno", 9903, 2, 2, 67, { [2] = 9903 }, { [2] = 67 }, nil, nil, nil, true }
+players["hrabonszcz"] = { "Hrabonszcz", 9901, 2, 2, 68, { [2] = 9901 }, { [2] = 68 }, nil, nil, nil, true }
+players["fanofhyst"] = { "Fanofhyst", 9898, 2, 2, 69, { [2] = 9898 }, { [2] = 69 }, nil, nil, nil, true }
+players["hkulek"] = { "Hkulek", 9895, 2, 2, 70, { [2] = 9895 }, { [2] = 70 }, nil, nil, nil, true }
+players["ciganshot"] = { "Ciganshot", 9895, 2, 2, 71, { [2] = 9895 }, { [2] = 71 }, nil, nil, nil, true }
+players["ggshots"] = { "Ggshots", 9894, 2, 2, 72, { [2] = 9894 }, { [2] = 72 }, nil, nil, nil, true }
+players["skancito"] = { "Skancito", 9894, 2, 2, 73, { [2] = 9894, [3] = 2487 }, { [2] = 73, [3] = 639 }, nil, nil, nil, true }
+players["hyakkimaru"] = { "Hyakkimaru", 9891, 2, 2, 74, { [2] = 9891 }, { [2] = 74 }, nil, nil, nil, true }
+players["gunshy"] = { "Gunshy", 9891, 2, 2, 75, { [2] = 9891, [3] = 9429 }, { [2] = 75, [3] = 30 }, nil, nil, nil, true }
+players["lifelement"] = { "Lifelement", 9891, 2, 2, 76, { [1] = 675, [2] = 9891, [3] = 9819 }, { [1] = 444, [2] = 76, [3] = 13 }, nil, nil, nil, true }
+players["dadykohunter"] = { "Dadykohunter", 9890, 2, 2, 77, { [2] = 9890 }, { [2] = 77 }, nil, nil, nil, true }
+players["nyilren"] = { "Nyilren", 9889, 2, 2, 78, { [2] = 9889 }, { [2] = 78 }, nil, nil, nil, true }
+players["shotcop"] = { "Shotcop", 9887, 2, 2, 79, { [2] = 9887 }, { [2] = 79 }, nil, nil, nil, true }
+players["dumberth"] = { "Dumberth", 9886, 2, 2, 80, { [2] = 9886 }, { [2] = 80 }, nil, nil, nil, true }
+players["ripezarrow"] = { "Ripezarrow", 9884, 2, 2, 81, { [2] = 9884 }, { [2] = 81 }, nil, nil, nil, true }
+players["antresse"] = { "Antresse", 9882, 2, 2, 82, { [2] = 9882 }, { [2] = 82 }, nil, nil, nil, true }
+players["robihunt"] = { "Robihunt", 9879, 2, 2, 83, { [2] = 9879 }, { [2] = 83 }, nil, nil, nil, true }
+players["hyst"] = { "Hyst", 9873, 2, 2, 84, { [2] = 9873, [3] = 3795 }, { [2] = 84, [3] = 457 }, nil, nil, nil, true }
 players["sebro"] = { "Sebro", 9873, 2, 2, 84, { [2] = 9873 }, { [2] = 84 }, nil, nil, nil, false }
-players["senhunt"] = { "Senhunt", 9872, 2, 2, 84, { [2] = 9872 }, { [2] = 84 }, nil, nil, nil, true }
-players["killercop"] = { "Killercop", 9871, 2, 2, 85, { [2] = 9871 }, { [2] = 85 }, nil, nil, nil, true }
-players["vodolaska"] = { "Vodolaska", 9871, 2, 2, 86, { [2] = 9871 }, { [2] = 86 }, nil, nil, nil, true }
-players["neptunedr"] = { "Neptunedr", 9870, 2, 2, 87, { [2] = 9870 }, { [2] = 87 }, nil, nil, nil, true }
-players["stokrotka"] = { "Stokrotka", 9870, 2, 2, 88, { [2] = 9870 }, { [2] = 88 }, nil, nil, nil, true }
-players["aniehunt"] = { "Aniehunt", 9869, 2, 2, 89, { [2] = 9869, [3] = 9026 }, { [2] = 89, [3] = 48 }, nil, nil, nil, true }
-players["deviltrick"] = { "Deviltrick", 9868, 2, 2, 90, { [2] = 9868 }, { [2] = 90 }, nil, nil, nil, true }
-players["reportmyaim"] = { "Reportmyaim", 9867, 2, 2, 91, { [2] = 9867 }, { [2] = 91 }, nil, nil, nil, true }
-players["chinnazes"] = { "Chinnazes", 9866, 2, 2, 92, { [2] = 9866, [3] = 9442 }, { [2] = 92, [3] = 29 }, nil, nil, nil, true }
-players["avianna"] = { "Avianna", 9866, 2, 2, 93, { [2] = 9866 }, { [2] = 93 }, nil, nil, nil, true }
-players["scatterboy"] = { "Scatterboy", 9861, 2, 2, 95, { [2] = 9861 }, { [2] = 95 }, nil, nil, nil, true }
-players["teecole"] = { "Teecole", 9860, 2, 2, 96, { [2] = 9860 }, { [2] = 96 }, nil, nil, nil, true }
-players["marlasinger"] = { "Marlasinger", 9859, 2, 2, 97, { [2] = 9859, [3] = 4079 }, { [2] = 97, [3] = 420 }, nil, nil, nil, true }
-players["verisana"] = { "Verisana", 9859, 2, 2, 98, { [2] = 9859 }, { [2] = 98 }, nil, nil, nil, true }
-players["mantahunter"] = { "Mantahunter", 9858, 2, 2, 99, { [2] = 9858 }, { [2] = 99 }, nil, nil, nil, true }
-players["elclasico"] = { "Elclasico", 9857, 2, 2, 100, { [2] = 9857 }, { [2] = 100 }, nil, nil, nil, true }
-players["darkhuntress"] = { "Darkhuntress", 9854, 2, 2, 101, { [2] = 9854 }, { [2] = 101 }, nil, nil, nil, true }
-players["makarina"] = { "Makarina", 9854, 2, 2, 102, { [2] = 9854 }, { [2] = 102 }, nil, nil, nil, true }
-players["lolokohunter"] = { "Lolokohunter", 9853, 2, 2, 103, { [1] = 3292, [2] = 9853 }, { [1] = 202, [2] = 103 }, nil, nil, nil, true }
-players["cyrilla"] = { "Cyrilla", 9851, 2, 2, 104, { [2] = 9851 }, { [2] = 104 }, nil, nil, nil, true }
-players["clapmaster"] = { "Clapmaster", 9851, 2, 2, 105, { [2] = 9851 }, { [2] = 105 }, nil, nil, nil, true }
-players["zhpqr"] = { "Zhpqr", 9848, 2, 2, 106, { [2] = 9848 }, { [2] = 106 }, nil, nil, nil, true }
-players["gunshy"] = { "Gunshy", 9847, 2, 2, 107, { [2] = 9847, [3] = 9434 }, { [2] = 107, [3] = 30 }, nil, nil, nil, true }
-players["lurox"] = { "Lurox", 9847, 2, 2, 108, { [2] = 9847 }, { [2] = 108 }, nil, nil, nil, true }
-players["bojh"] = { "Bojh", 9846, 2, 2, 109, { [2] = 9846 }, { [2] = 109 }, nil, nil, nil, true }
-players["betametazona"] = { "Betametazona", 9845, 2, 2, 110, { [2] = 9845 }, { [2] = 110 }, nil, nil, nil, true }
+players["manifold"] = { "Manifold", 9872, 2, 2, 85, { [2] = 9872 }, { [2] = 85 }, nil, nil, nil, true }
+players["senhunt"] = { "Senhunt", 9870, 2, 2, 86, { [2] = 9870 }, { [2] = 86 }, nil, nil, nil, true }
+players["vodolaska"] = { "Vodolaska", 9869, 2, 2, 87, { [2] = 9869 }, { [2] = 87 }, nil, nil, nil, true }
+players["killercop"] = { "Killercop", 9869, 2, 2, 88, { [2] = 9869 }, { [2] = 88 }, nil, nil, nil, true }
+players["neptunedr"] = { "Neptunedr", 9869, 2, 2, 89, { [2] = 9869 }, { [2] = 89 }, nil, nil, nil, true }
+players["stokrotka"] = { "Stokrotka", 9868, 2, 2, 90, { [2] = 9868 }, { [2] = 90 }, nil, nil, nil, true }
+players["aniehunt"] = { "Aniehunt", 9867, 2, 2, 91, { [2] = 9867, [3] = 9025 }, { [2] = 91, [3] = 48 }, nil, nil, nil, true }
+players["deviltrick"] = { "Deviltrick", 9867, 2, 2, 92, { [2] = 9867 }, { [2] = 92 }, nil, nil, nil, true }
+players["reportmyaim"] = { "Reportmyaim", 9865, 2, 2, 93, { [2] = 9865 }, { [2] = 93 }, nil, nil, nil, true }
+players["chinnazes"] = { "Chinnazes", 9864, 2, 2, 94, { [2] = 9864, [3] = 9439 }, { [2] = 94, [3] = 29 }, nil, nil, nil, true }
+players["scatterboy"] = { "Scatterboy", 9859, 2, 2, 96, { [2] = 9859 }, { [2] = 96 }, nil, nil, nil, true }
+players["teecole"] = { "Teecole", 9859, 2, 2, 97, { [2] = 9859 }, { [2] = 97 }, nil, nil, nil, true }
+players["verisana"] = { "Verisana", 9857, 2, 2, 98, { [2] = 9857 }, { [2] = 98 }, nil, nil, nil, true }
+players["marlasinger"] = { "Marlasinger", 9857, 2, 2, 99, { [2] = 9857, [3] = 4062 }, { [2] = 99, [3] = 422 }, nil, nil, nil, true }
+players["mantahunter"] = { "Mantahunter", 9856, 2, 2, 100, { [2] = 9856 }, { [2] = 100 }, nil, nil, nil, true }
+players["elclasico"] = { "Elclasico", 9855, 2, 2, 101, { [2] = 9855 }, { [2] = 101 }, nil, nil, nil, true }
+players["makarina"] = { "Makarina", 9852, 2, 2, 102, { [2] = 9852 }, { [2] = 102 }, nil, nil, nil, true }
+players["darkhuntress"] = { "Darkhuntress", 9852, 2, 2, 103, { [2] = 9852 }, { [2] = 103 }, nil, nil, nil, true }
+players["lolokohunter"] = { "Lolokohunter", 9850, 2, 2, 104, { [1] = 3293, [2] = 9850 }, { [1] = 202, [2] = 104 }, nil, nil, nil, true }
+players["clapmaster"] = { "Clapmaster", 9848, 2, 2, 105, { [2] = 9848 }, { [2] = 105 }, nil, nil, nil, true }
+players["cyrilla"] = { "Cyrilla", 9848, 2, 2, 106, { [2] = 9848 }, { [2] = 106 }, nil, nil, nil, true }
+players["zhpqr"] = { "Zhpqr", 9846, 2, 2, 107, { [2] = 9846 }, { [2] = 107 }, nil, nil, nil, true }
+players["lurox"] = { "Lurox", 9845, 2, 2, 108, { [2] = 9845 }, { [2] = 108 }, nil, nil, nil, true }
+players["bojh"] = { "Bojh", 9843, 2, 2, 109, { [2] = 9843 }, { [2] = 109 }, nil, nil, nil, true }
+players["betametazona"] = { "Betametazona", 9843, 2, 2, 110, { [2] = 9843 }, { [2] = 110 }, nil, nil, nil, true }
 players["complexmind"] = { "Complexmind", 9840, 2, 2, 111, { [2] = 9840 }, { [2] = 111 }, nil, nil, nil, false }
-players["insaneio"] = { "Insaneio", 9844, 2, 2, 111, { [2] = 9844 }, { [2] = 111 }, nil, nil, nil, true }
-players["robike"] = { "Robike", 9844, 2, 2, 112, { [2] = 9844 }, { [2] = 112 }, nil, nil, nil, true }
-players["plakar"] = { "Plakar", 9843, 2, 2, 113, { [2] = 9843 }, { [2] = 113 }, nil, nil, nil, true }
-players["tauriel"] = { "Tauriel", 9841, 2, 2, 114, { [2] = 9841 }, { [2] = 114 }, nil, nil, nil, true }
-players["piupiupowpow"] = { "Piupiupowpow", 9840, 2, 2, 115, { [1] = 9733, [2] = 9840, [3] = 9590 }, { [1] = 3, [2] = 115, [3] = 24 }, nil, nil, nil, true }
-players["vairussh"] = { "Vairussh", 9838, 2, 2, 116, { [2] = 9838 }, { [2] = 116 }, nil, nil, nil, true }
-players["snipercop"] = { "Snipercop", 9832, 2, 2, 118, { [2] = 9832 }, { [2] = 118 }, nil, nil, nil, true }
-players["emeyzinghunt"] = { "Emeyzinghunt", 9829, 2, 2, 119, { [2] = 9829 }, { [2] = 119 }, nil, nil, nil, true }
-players["brashela"] = { "Brashela", 9829, 2, 2, 120, { [2] = 9829, [3] = 9248 }, { [2] = 120, [3] = 39 }, nil, nil, nil, true }
-players["scatterboi"] = { "Scatterboi", 9829, 2, 2, 121, { [2] = 9829 }, { [2] = 121 }, nil, nil, nil, true }
-players["liiop"] = { "Liiop", 9828, 2, 2, 122, { [2] = 9828 }, { [2] = 122 }, nil, nil, nil, true }
-players["pepelina"] = { "Pepelina", 9828, 2, 2, 123, { [2] = 9828 }, { [2] = 123 }, nil, nil, nil, true }
-players["ebolashot"] = { "Ebolashot", 9828, 2, 2, 124, { [2] = 9828 }, { [2] = 124 }, nil, nil, nil, true }
-players["warningshots"] = { "Warningshots", 9827, 2, 2, 125, { [2] = 9827 }, { [2] = 125 }, nil, nil, nil, true }
-players["bojhx"] = { "Bojhx", 9826, 2, 2, 126, { [2] = 9826 }, { [2] = 126 }, nil, nil, nil, true }
-players["anabbolik"] = { "Anabbolik", 9825, 2, 2, 127, { [1] = 963, [2] = 9825, [3] = 7956 }, { [1] = 12972, [2] = 127, [3] = 1660 }, nil, nil, nil, true }
-players["honkahunt"] = { "Honkahunt", 9822, 2, 2, 128, { [2] = 9822 }, { [2] = 128 }, nil, nil, nil, true }
-players["brucewayner"] = { "Brucewayner", 9821, 2, 2, 129, { [2] = 9821 }, { [2] = 129 }, nil, nil, nil, true }
+players["insaneio"] = { "Insaneio", 9842, 2, 2, 111, { [2] = 9842 }, { [2] = 111 }, nil, nil, nil, true }
+players["robike"] = { "Robike", 9842, 2, 2, 112, { [2] = 9842 }, { [2] = 112 }, nil, nil, nil, true }
+players["plakar"] = { "Plakar", 9840, 2, 2, 113, { [2] = 9840 }, { [2] = 113 }, nil, nil, nil, true }
+players["tauriel"] = { "Tauriel", 9839, 2, 2, 114, { [2] = 9839 }, { [2] = 114 }, nil, nil, nil, true }
+players["piupiupowpow"] = { "Piupiupowpow", 9838, 2, 2, 115, { [1] = 9734, [2] = 9838, [3] = 9592 }, { [1] = 3, [2] = 115, [3] = 24 }, nil, nil, nil, true }
+players["vairussh"] = { "Vairussh", 9836, 2, 2, 116, { [2] = 9836 }, { [2] = 116 }, nil, nil, nil, true }
+players["liiop"] = { "Liiop", 9832, 2, 2, 118, { [2] = 9832 }, { [2] = 118 }, nil, nil, nil, true }
+players["snipercop"] = { "Snipercop", 9829, 2, 2, 119, { [2] = 9829 }, { [2] = 119 }, nil, nil, nil, true }
+players["emeyzinghunt"] = { "Emeyzinghunt", 9827, 2, 2, 120, { [2] = 9827 }, { [2] = 120 }, nil, nil, nil, true }
+players["brashela"] = { "Brashela", 9827, 2, 2, 121, { [2] = 9827, [3] = 9247 }, { [2] = 121, [3] = 39 }, nil, nil, nil, true }
+players["scatterboi"] = { "Scatterboi", 9826, 2, 2, 122, { [2] = 9826 }, { [2] = 122 }, nil, nil, nil, true }
+players["pepelina"] = { "Pepelina", 9825, 2, 2, 123, { [2] = 9825 }, { [2] = 123 }, nil, nil, nil, true }
+players["ebolashot"] = { "Ebolashot", 9825, 2, 2, 124, { [2] = 9825 }, { [2] = 124 }, nil, nil, nil, true }
+players["bojhx"] = { "Bojhx", 9824, 2, 2, 125, { [2] = 9824 }, { [2] = 125 }, nil, nil, nil, true }
+players["warningshots"] = { "Warningshots", 9824, 2, 2, 126, { [2] = 9824 }, { [2] = 126 }, nil, nil, nil, true }
+players["anabbolik"] = { "Anabbolik", 9822, 2, 2, 127, { [1] = 960, [2] = 9822, [3] = 7951 }, { [1] = 13002, [2] = 127, [3] = 1667 }, nil, nil, nil, true }
+players["honkahunt"] = { "Honkahunt", 9820, 2, 2, 128, { [2] = 9820 }, { [2] = 128 }, nil, nil, nil, true }
+players["brucewayner"] = { "Brucewayner", 9819, 2, 2, 129, { [2] = 9819 }, { [2] = 129 }, nil, nil, nil, true }
 players["xcesdezahar"] = { "Xcesdezahar", 4999, 2, 2, 129, { [2] = 4999 }, { [2] = 6511 }, nil, nil, nil, false }
-players["crawlesx"] = { "Crawlesx", 9819, 2, 2, 130, { [2] = 9819 }, { [2] = 130 }, nil, nil, nil, true }
-players["miszx"] = { "Miszx", 9819, 2, 2, 131, { [2] = 9819 }, { [2] = 131 }, nil, nil, nil, true }
-players["bobbj"] = { "Bobbj", 9818, 2, 2, 132, { [2] = 9818 }, { [2] = 132 }, nil, nil, nil, true }
-players["mirageslayer"] = { "Mirageslayer", 9816, 2, 2, 133, { [2] = 9816 }, { [2] = 133 }, nil, nil, nil, true }
-players["egal"] = { "Egal", 9815, 2, 2, 134, { [2] = 9815 }, { [2] = 134 }, nil, nil, nil, true }
-players["kubai"] = { "Kubai", 9815, 2, 2, 135, { [1] = 9475, [2] = 9815, [3] = 8746 }, { [1] = 14, [2] = 135, [3] = 67 }, nil, nil, nil, true }
-players["cyberrhunter"] = { "Cyberrhunter", 9814, 2, 2, 136, { [2] = 9814 }, { [2] = 136 }, nil, nil, nil, true }
-players["exacer"] = { "Exacer", 9811, 2, 2, 137, { [2] = 9811, [3] = 5658 }, { [2] = 137, [3] = 284 }, nil, nil, nil, true }
-players["yoza"] = { "Yoza", 9806, 2, 2, 138, { [2] = 9806 }, { [2] = 138 }, nil, nil, nil, true }
-players["isurprisedu"] = { "Isurprisedu", 9806, 2, 2, 139, { [2] = 9806 }, { [2] = 139 }, nil, nil, nil, true }
-players["hiroshiima"] = { "Hiroshiima", 9805, 2, 2, 140, { [2] = 9805 }, { [2] = 140 }, nil, nil, nil, true }
-players["invmebral"] = { "Invmebral", 9805, 2, 2, 141, { [2] = 9805, [3] = 345 }, { [2] = 141, [3] = 1024 }, nil, nil, nil, true }
-players["devilhuntx"] = { "Devilhuntx", 9803, 2, 2, 142, { [2] = 9803 }, { [2] = 142 }, nil, nil, nil, true }
-players["lillylunar"] = { "Lillylunar", 9802, 2, 2, 143, { [2] = 9802 }, { [2] = 143 }, nil, nil, nil, true }
-players["rayehunter"] = { "Rayehunter", 9801, 2, 2, 144, { [2] = 9801 }, { [2] = 144 }, nil, nil, nil, true }
-players["gucciprada"] = { "Gucciprada", 9800, 2, 2, 145, { [2] = 9800 }, { [2] = 145 }, nil, nil, nil, true }
-players["qwertzuzuiui"] = { "Qwertzuzuiui", 9798, 2, 2, 146, { [2] = 9798 }, { [2] = 146 }, nil, nil, nil, true }
-players["amordeynics"] = { "Amordeynics", 9797, 2, 2, 147, { [2] = 9797 }, { [2] = 147 }, nil, nil, nil, true }
-players["luciiqt"] = { "Luciiqt", 9797, 2, 2, 148, { [2] = 9797 }, { [2] = 148 }, nil, nil, nil, true }
-players["werther"] = { "Werther", 9794, 2, 2, 149, { [2] = 9794 }, { [2] = 149 }, nil, nil, nil, true }
-players["insanehunts"] = { "Insanehunts", 9793, 2, 2, 151, { [2] = 9793 }, { [2] = 151 }, nil, nil, nil, true }
-players["yasmin"] = { "Yasmin", 9792, 2, 2, 152, { [2] = 9792 }, { [2] = 152 }, nil, nil, nil, true }
-players["muzan"] = { "Muzan", 9791, 2, 2, 153, { [2] = 9791 }, { [2] = 153 }, nil, nil, nil, true }
-players["pepechicka"] = { "Pepechicka", 9791, 2, 2, 154, { [2] = 9791, [3] = 5402 }, { [2] = 154, [3] = 307 }, nil, nil, nil, true }
-players["superheaven"] = { "Superheaven", 9789, 2, 2, 155, { [2] = 9789, [3] = 9720 }, { [2] = 155, [3] = 18 }, nil, nil, nil, true }
-players["roxxye"] = { "Roxxye", 9789, 2, 2, 156, { [2] = 9789 }, { [2] = 156 }, nil, nil, nil, true }
-players["disengage"] = { "Disengage", 9788, 2, 2, 157, { [2] = 9788 }, { [2] = 157 }, nil, nil, nil, true }
+players["miszx"] = { "Miszx", 9817, 2, 2, 130, { [2] = 9817 }, { [2] = 130 }, nil, nil, nil, true }
+players["bobbj"] = { "Bobbj", 9817, 2, 2, 131, { [2] = 9817 }, { [2] = 131 }, nil, nil, nil, true }
+players["crawlesx"] = { "Crawlesx", 9817, 2, 2, 132, { [2] = 9817 }, { [2] = 132 }, nil, nil, nil, true }
+players["mirageslayer"] = { "Mirageslayer", 9814, 2, 2, 133, { [2] = 9814 }, { [2] = 133 }, nil, nil, nil, true }
+players["egal"] = { "Egal", 9813, 2, 2, 134, { [2] = 9813 }, { [2] = 134 }, nil, nil, nil, true }
+players["kubai"] = { "Kubai", 9812, 2, 2, 135, { [1] = 9475, [2] = 9812, [3] = 8768 }, { [1] = 14, [2] = 135, [3] = 66 }, nil, nil, nil, true }
+players["cyberrhunter"] = { "Cyberrhunter", 9812, 2, 2, 136, { [2] = 9812 }, { [2] = 136 }, nil, nil, nil, true }
+players["exacer"] = { "Exacer", 9808, 2, 2, 137, { [2] = 9808, [3] = 5633 }, { [2] = 137, [3] = 286 }, nil, nil, nil, true }
+players["lifeseven"] = { "Lifeseven", 9807, 2, 2, 138, { [2] = 9807, [3] = 9644 }, { [2] = 138, [3] = 21 }, nil, nil, nil, true }
+players["yoza"] = { "Yoza", 9804, 2, 2, 139, { [2] = 9804 }, { [2] = 139 }, nil, nil, nil, true }
+players["invmebral"] = { "Invmebral", 9804, 2, 2, 140, { [2] = 9804, [3] = 345 }, { [2] = 140, [3] = 1031 }, nil, nil, nil, true }
+players["isurprisedu"] = { "Isurprisedu", 9803, 2, 2, 141, { [2] = 9803 }, { [2] = 141 }, nil, nil, nil, true }
+players["hiroshiima"] = { "Hiroshiima", 9803, 2, 2, 142, { [2] = 9803 }, { [2] = 142 }, nil, nil, nil, true }
+players["devilhuntx"] = { "Devilhuntx", 9800, 2, 2, 143, { [2] = 9800 }, { [2] = 143 }, nil, nil, nil, true }
+players["lillylunar"] = { "Lillylunar", 9800, 2, 2, 144, { [2] = 9800 }, { [2] = 144 }, nil, nil, nil, true }
+players["didozz"] = { "Didozz", 9800, 2, 2, 145, { [2] = 9800 }, { [2] = 145 }, nil, nil, nil, true }
+players["rayehunter"] = { "Rayehunter", 9798, 2, 2, 146, { [2] = 9798 }, { [2] = 146 }, nil, nil, nil, true }
+players["gucciprada"] = { "Gucciprada", 9797, 2, 2, 147, { [2] = 9797 }, { [2] = 147 }, nil, nil, nil, true }
+players["qwertzuzuiui"] = { "Qwertzuzuiui", 9796, 2, 2, 148, { [2] = 9796 }, { [2] = 148 }, nil, nil, nil, true }
+players["amordeynics"] = { "Amordeynics", 9795, 2, 2, 149, { [2] = 9795 }, { [2] = 149 }, nil, nil, nil, true }
+players["luciiqt"] = { "Luciiqt", 9794, 2, 2, 150, { [2] = 9794 }, { [2] = 150 }, nil, nil, nil, true }
+players["werther"] = { "Werther", 9792, 2, 2, 151, { [2] = 9792 }, { [2] = 151 }, nil, nil, nil, true }
+players["insanehunts"] = { "Insanehunts", 9791, 2, 2, 152, { [2] = 9791 }, { [2] = 152 }, nil, nil, nil, true }
+players["yasmin"] = { "Yasmin", 9790, 2, 2, 154, { [2] = 9790 }, { [2] = 154 }, nil, nil, nil, true }
+players["muzan"] = { "Muzan", 9788, 2, 2, 155, { [2] = 9788 }, { [2] = 155 }, nil, nil, nil, true }
+players["pepechicka"] = { "Pepechicka", 9788, 2, 2, 156, { [2] = 9788, [3] = 5396 }, { [2] = 156, [3] = 307 }, nil, nil, nil, true }
+players["superheaven"] = { "Superheaven", 9786, 2, 2, 157, { [2] = 9786, [3] = 9719 }, { [2] = 157, [3] = 18 }, nil, nil, nil, true }
+players["disengage"] = { "Disengage", 9786, 2, 2, 158, { [2] = 9786 }, { [2] = 158 }, nil, nil, nil, true }
 players["killercopx"] = { "Killercopx", 9773, 2, 2, 158, { [2] = 9773 }, { [2] = 158 }, nil, nil, nil, false }
-players["radicstefan"] = { "Radicstefan", 9785, 2, 2, 158, { [2] = 9785 }, { [2] = 158 }, nil, nil, nil, true }
-players["dushka"] = { "Dushka", 9781, 2, 2, 159, { [2] = 9781 }, { [2] = 159 }, nil, nil, nil, true }
-players["lifesix"] = { "Lifesix", 9781, 2, 2, 160, { [2] = 9781, [3] = 8782 }, { [2] = 160, [3] = 62 }, nil, nil, nil, true }
-players["ilovepangu"] = { "Ilovepangu", 10000, 2, 3, 1, { [2] = 7530, [3] = 10000 }, { [2] = 2022, [3] = 1 }, nil, nil, nil, true }
-players["maryloh"] = { "Maryloh", 9983, 2, 3, 2, { [2] = 9837, [3] = 9983 }, { [2] = 117, [3] = 2 }, nil, nil, nil, true }
-players["justonemd"] = { "Justonemd", 9980, 2, 3, 3, { [2] = 9492, [3] = 9980 }, { [2] = 348, [3] = 3 }, nil, nil, nil, true }
-players["marywho"] = { "Marywho", 9972, 2, 3, 4, { [1] = 8536, [3] = 9972 }, { [1] = 26, [3] = 4 }, nil, nil, nil, true }
-players["ponpuy"] = { "Ponpuy", 9958, 2, 3, 5, { [2] = 2587, [3] = 9958 }, { [2] = 12417, [3] = 5 }, nil, nil, nil, true }
-players["jheez"] = { "Jheez", 9956, 2, 3, 6, { [2] = 288, [3] = 9956 }, { [2] = 19937, [3] = 6 }, nil, nil, nil, true }
-players["cheating"] = { "Cheating", 9950, 2, 3, 7, { [2] = 6368, [3] = 9950 }, { [2] = 3590, [3] = 7 }, nil, nil, nil, true }
-players["tednug"] = { "Tednug", 9909, 2, 3, 8, { [1] = 5308, [2] = 6423, [3] = 9909 }, { [1] = 88, [2] = 4205, [3] = 8 }, nil, nil, nil, true }
-players["akirasama"] = { "Akirasama", 9902, 2, 3, 9, { [3] = 9902 }, { [3] = 9 }, nil, nil, nil, true }
-players["strikera"] = { "Strikera", 9874, 2, 3, 10, { [2] = 1609, [3] = 9874 }, { [2] = 17209, [3] = 10 }, nil, nil, nil, true }
-players["maeker"] = { "Maeker", 9874, 2, 3, 11, { [2] = 9437, [3] = 9874 }, { [2] = 377, [3] = 11 }, nil, nil, nil, true }
-players["durkio"] = { "Durkio", 9860, 2, 3, 12, { [2] = 8990, [3] = 9860 }, { [2] = 678, [3] = 12 }, nil, nil, nil, true }
-players["zbotroch"] = { "Zbotroch", 9806, 2, 3, 13, { [3] = 9806 }, { [3] = 13 }, nil, nil, nil, true }
-players["smokinshisha"] = { "Smokinshisha", 9771, 2, 3, 15, { [1] = 5732, [2] = 9760, [3] = 9771 }, { [1] = 77, [2] = 168, [3] = 15 }, nil, nil, nil, true }
-players["eptic"] = { "Eptic", 9760, 2, 3, 16, { [2] = 8485, [3] = 9760 }, { [2] = 1075, [3] = 16 }, nil, nil, nil, true }
-players["oulga"] = { "Oulga", 9676, 2, 3, 19, { [2] = 9505, [3] = 9676 }, { [2] = 335, [3] = 19 }, nil, nil, nil, true }
+players["roxxye"] = { "Roxxye", 9785, 2, 2, 159, { [2] = 9785 }, { [2] = 159 }, nil, nil, nil, true }
+players["lifesix"] = { "Lifesix", 9782, 2, 2, 160, { [2] = 9782, [3] = 8868 }, { [2] = 160, [3] = 58 }, nil, nil, nil, true }
+players["ilovepangu"] = { "Ilovepangu", 10000, 2, 3, 1, { [2] = 7522, [3] = 10000 }, { [2] = 2035, [3] = 1 }, nil, nil, nil, true }
+players["marywho"] = { "Marywho", 9993, 2, 3, 2, { [1] = 8538, [3] = 9993 }, { [1] = 26, [3] = 2 }, nil, nil, nil, true }
+players["maryloh"] = { "Maryloh", 9982, 2, 3, 3, { [2] = 9835, [3] = 9982 }, { [2] = 117, [3] = 3 }, nil, nil, nil, true }
+players["justonemd"] = { "Justonemd", 9980, 2, 3, 4, { [2] = 9491, [3] = 9980 }, { [2] = 349, [3] = 4 }, nil, nil, nil, true }
+players["ponpuy"] = { "Ponpuy", 9958, 2, 3, 5, { [2] = 2584, [3] = 9958 }, { [2] = 12455, [3] = 5 }, nil, nil, nil, true }
+players["jheez"] = { "Jheez", 9956, 2, 3, 6, { [2] = 285, [3] = 9956 }, { [2] = 20010, [3] = 6 }, nil, nil, nil, true }
+players["cheating"] = { "Cheating", 9949, 2, 3, 7, { [2] = 6363, [3] = 9949 }, { [2] = 3603, [3] = 7 }, nil, nil, nil, true }
+players["tednug"] = { "Tednug", 9909, 2, 3, 8, { [1] = 5308, [2] = 6421, [3] = 9909 }, { [1] = 89, [2] = 4221, [3] = 8 }, nil, nil, nil, true }
+players["akirasama"] = { "Akirasama", 9900, 2, 3, 9, { [3] = 9900 }, { [3] = 9 }, nil, nil, nil, true }
+players["strikera"] = { "Strikera", 9873, 2, 3, 10, { [2] = 1607, [3] = 9873 }, { [2] = 17270, [3] = 10 }, nil, nil, nil, true }
+players["maeker"] = { "Maeker", 9872, 2, 3, 11, { [2] = 9432, [3] = 9872 }, { [2] = 382, [3] = 11 }, nil, nil, nil, true }
+players["durkio"] = { "Durkio", 9859, 2, 3, 12, { [2] = 8987, [3] = 9859 }, { [2] = 682, [3] = 12 }, nil, nil, nil, true }
+players["zbotroch"] = { "Zbotroch", 9805, 2, 3, 14, { [3] = 9805 }, { [3] = 14 }, nil, nil, nil, true }
+players["smokinshisha"] = { "Smokinshisha", 9770, 2, 3, 16, { [1] = 5734, [2] = 9758, [3] = 9770 }, { [1] = 78, [2] = 171, [3] = 16 }, nil, nil, nil, true }
+players["eptic"] = { "Eptic", 9760, 2, 3, 17, { [2] = 8478, [3] = 9760 }, { [2] = 1081, [3] = 17 }, nil, nil, nil, true }
+players["oulga"] = { "Oulga", 9674, 2, 3, 19, { [2] = 9500, [3] = 9674 }, { [2] = 339, [3] = 19 }, nil, nil, nil, true }
 players["twin"] = { "Twin", 9659, 2, 3, 19, { [2] = 9016, [3] = 9659 }, { [2] = 664, [3] = 19 }, nil, nil, nil, false }
-players["zastrelimta"] = { "Zastrelimta", 9654, 2, 3, 20, { [3] = 9654 }, { [3] = 20 }, nil, nil, nil, true }
-players["whoisurpapy"] = { "Whoisurpapy", 9631, 2, 3, 22, { [2] = 9337, [3] = 9631 }, { [2] = 440, [3] = 22 }, nil, nil, nil, true }
-players["zoidarrow"] = { "Zoidarrow", 9536, 2, 3, 25, { [2] = 8016, [3] = 9536 }, { [2] = 1526, [3] = 25 }, nil, nil, nil, true }
-players["anicby"] = { "Anicby", 9504, 2, 3, 26, { [2] = 9117, [3] = 9504 }, { [2] = 599, [3] = 26 }, nil, nil, nil, true }
+players["zastrelimta"] = { "Zastrelimta", 9652, 2, 3, 20, { [3] = 9652 }, { [3] = 20 }, nil, nil, nil, true }
+players["whoisurpapy"] = { "Whoisurpapy", 9626, 2, 3, 22, { [2] = 9332, [3] = 9626 }, { [2] = 446, [3] = 22 }, nil, nil, nil, true }
+players["zoidarrow"] = { "Zoidarrow", 9535, 2, 3, 25, { [2] = 8008, [3] = 9535 }, { [2] = 1532, [3] = 25 }, nil, nil, nil, true }
+players["anicby"] = { "Anicby", 9502, 2, 3, 26, { [2] = 9146, [3] = 9502 }, { [2] = 575, [3] = 26 }, nil, nil, nil, true }
 players["deusgabby"] = { "Deusgabby", 9502, 2, 3, 26, { [2] = 9124, [3] = 9502 }, { [2] = 595, [3] = 26 }, nil, nil, nil, false }
-players["morepewpew"] = { "Morepewpew", 9499, 2, 3, 27, { [2] = 8320, [3] = 9499 }, { [2] = 1229, [3] = 27 }, nil, nil, nil, true }
-players["greaet"] = { "Greaet", 9459, 2, 3, 28, { [2] = 9301, [3] = 9459 }, { [2] = 470, [3] = 28 }, nil, nil, nil, true }
+players["morepewpew"] = { "Morepewpew", 9494, 2, 3, 27, { [2] = 8312, [3] = 9494 }, { [2] = 1232, [3] = 27 }, nil, nil, nil, true }
+players["greaet"] = { "Greaet", 9459, 2, 3, 28, { [2] = 9295, [3] = 9459 }, { [2] = 476, [3] = 28 }, nil, nil, nil, true }
 players["anictwt"] = { "Anictwt", 9388, 2, 3, 31, { [2] = 5223, [3] = 9388 }, { [2] = 5925, [3] = 31 }, nil, nil, nil, false }
-players["kriticalshot"] = { "Kriticalshot", 9422, 2, 3, 31, { [2] = 9331, [3] = 9422 }, { [2] = 445, [3] = 31 }, nil, nil, nil, true }
-players["edouardmanet"] = { "Edouardmanet", 9403, 2, 3, 32, { [1] = 966, [2] = 988, [3] = 9403 }, { [1] = 416, [2] = 18768, [3] = 32 }, nil, nil, nil, true }
-players["tedtwo"] = { "Tedtwo", 9394, 2, 3, 34, { [3] = 9394 }, { [3] = 34 }, nil, nil, nil, true }
-players["sasin"] = { "Sasin", 9364, 2, 3, 35, { [2] = 1144, [3] = 9364 }, { [2] = 18508, [3] = 35 }, nil, nil, nil, true }
-players["yourlastmdxx"] = { "Yourlastmdxx", 9363, 2, 3, 36, { [2] = 4570, [3] = 9363 }, { [2] = 7860, [3] = 36 }, nil, nil, nil, true }
-players["survived"] = { "Survived", 9303, 2, 3, 37, { [2] = 6691, [3] = 9303 }, { [2] = 3076, [3] = 37 }, nil, nil, nil, true }
-players["torra"] = { "Torra", 9272, 2, 3, 38, { [2] = 8864, [3] = 9272 }, { [2] = 774, [3] = 38 }, nil, nil, nil, true }
-players["druisuoh"] = { "Druisuoh", 9236, 2, 3, 41, { [2] = 9117, [3] = 9236 }, { [2] = 598, [3] = 41 }, nil, nil, nil, true }
-players["hihihihihi"] = { "Hihihihihi", 9202, 2, 3, 42, { [2] = 5206, [3] = 9202 }, { [2] = 6123, [3] = 42 }, nil, nil, nil, true }
-players["slothli"] = { "Slothli", 9166, 2, 3, 45, { [1] = 1725, [2] = 8683, [3] = 9166 }, { [1] = 348, [2] = 910, [3] = 45 }, nil, nil, nil, true }
-players["scadiy"] = { "Scadiy", 9061, 2, 3, 46, { [1] = 1426, [2] = 7893, [3] = 9061 }, { [1] = 376, [2] = 1652, [3] = 46 }, nil, nil, nil, true }
-players["xpriquito"] = { "Xpriquito", 8989, 2, 3, 50, { [2] = 4850, [3] = 8989 }, { [2] = 7069, [3] = 50 }, nil, nil, nil, true }
-players["trapspec"] = { "Trapspec", 8936, 2, 3, 53, { [2] = 291, [3] = 8936 }, { [2] = 19925, [3] = 53 }, nil, nil, nil, true }
-players["kemosabee"] = { "Kemosabee", 8935, 2, 3, 54, { [2] = 7215, [3] = 8935 }, { [2] = 2418, [3] = 54 }, nil, nil, nil, true }
-players["vaskh"] = { "Vaskh", 8888, 2, 3, 57, { [2] = 556, [3] = 8888 }, { [2] = 19387, [3] = 57 }, nil, nil, nil, true }
-players["kilerstinct"] = { "Kilerstinct", 8874, 2, 3, 58, { [2] = 6067, [3] = 8874 }, { [2] = 4160, [3] = 58 }, nil, nil, nil, true }
-players["iluminatmag"] = { "Iluminatmag", 10000, 3, 1, 1, { [1] = 10000, [2] = 9561 }, { [1] = 1, [2] = 292 }, nil, nil, nil, true }
-players["dredziula"] = { "Dredziula", 9970, 3, 1, 2, { [1] = 9970, [2] = 9253 }, { [1] = 2, [2] = 532 }, nil, nil, nil, true }
+players["kriticalshot"] = { "Kriticalshot", 9420, 2, 3, 31, { [2] = 9327, [3] = 9420 }, { [2] = 450, [3] = 31 }, nil, nil, nil, true }
+players["edouardmanet"] = { "Edouardmanet", 9402, 2, 3, 32, { [1] = 966, [2] = 988, [3] = 9402 }, { [1] = 417, [2] = 18829, [3] = 32 }, nil, nil, nil, true }
+players["tedtwo"] = { "Tedtwo", 9390, 2, 3, 34, { [3] = 9390 }, { [3] = 34 }, nil, nil, nil, true }
+players["pullout"] = { "Pullout", 9379, 2, 3, 35, { [2] = 8857, [3] = 9379 }, { [2] = 781, [3] = 35 }, nil, nil, nil, true }
+players["sasin"] = { "Sasin", 9363, 2, 3, 36, { [2] = 1144, [3] = 9363 }, { [2] = 18575, [3] = 36 }, nil, nil, nil, true }
+players["yourlastmdxx"] = { "Yourlastmdxx", 9360, 2, 3, 37, { [2] = 4566, [3] = 9360 }, { [2] = 7893, [3] = 37 }, nil, nil, nil, true }
+players["survived"] = { "Survived", 9299, 2, 3, 38, { [2] = 6682, [3] = 9299 }, { [2] = 3091, [3] = 38 }, nil, nil, nil, true }
+players["torra"] = { "Torra", 9272, 2, 3, 38, { [2] = 8864, [3] = 9272 }, { [2] = 774, [3] = 38 }, nil, nil, nil, false }
+players["druisuoh"] = { "Druisuoh", 9232, 2, 3, 41, { [2] = 9111, [3] = 9232 }, { [2] = 603, [3] = 41 }, nil, nil, nil, true }
+players["hihihihihi"] = { "Hihihihihi", 9197, 2, 3, 42, { [2] = 5202, [3] = 9197 }, { [2] = 6138, [3] = 42 }, nil, nil, nil, true }
+players["slothli"] = { "Slothli", 9161, 2, 3, 45, { [1] = 1726, [2] = 8676, [3] = 9161 }, { [1] = 349, [2] = 915, [3] = 45 }, nil, nil, nil, true }
+players["scadiy"] = { "Scadiy", 9058, 2, 3, 46, { [1] = 1426, [2] = 7883, [3] = 9058 }, { [1] = 377, [2] = 1663, [3] = 46 }, nil, nil, nil, true }
+players["xpriquito"] = { "Xpriquito", 8985, 2, 3, 50, { [2] = 4846, [3] = 8985 }, { [2] = 7102, [3] = 50 }, nil, nil, nil, true }
+players["kemosabee"] = { "Kemosabee", 8932, 2, 3, 53, { [2] = 7208, [3] = 8932 }, { [2] = 2424, [3] = 53 }, nil, nil, nil, true }
+players["trapspec"] = { "Trapspec", 8932, 2, 3, 54, { [2] = 289, [3] = 8932 }, { [2] = 20004, [3] = 54 }, nil, nil, nil, true }
+players["vaskh"] = { "Vaskh", 8884, 2, 3, 57, { [2] = 556, [3] = 8884 }, { [2] = 19453, [3] = 57 }, nil, nil, nil, true }
+players["iluminatmag"] = { "Iluminatmag", 10000, 3, 1, 1, { [1] = 10000, [2] = 9557 }, { [1] = 1, [2] = 293 }, nil, nil, nil, true }
+players["dredziula"] = { "Dredziula", 9970, 3, 1, 2, { [1] = 9970, [2] = 9247 }, { [1] = 2, [2] = 540 }, nil, nil, nil, true }
 players["adofire"] = { "Adofire", 9969, 3, 1, 3, { [1] = 9969, [2] = 9936 }, { [1] = 3, [2] = 32 }, nil, nil, nil, true }
-players["tsigabiga"] = { "Tsigabiga", 9966, 3, 1, 4, { [1] = 9966, [2] = 795 }, { [1] = 4, [2] = 21543 }, nil, nil, nil, true }
-players["strenks"] = { "Strenks", 9886, 3, 1, 5, { [1] = 9886, [2] = 8993 }, { [1] = 5, [2] = 733 }, nil, nil, nil, true }
-players["lirus"] = { "Lirus", 9867, 3, 1, 6, { [1] = 9867, [2] = 8854 }, { [1] = 6, [2] = 846 }, nil, nil, nil, true }
-players["magotunelero"] = { "Magotunelero", 9866, 3, 1, 7, { [1] = 9866, [2] = 9089 }, { [1] = 7, [2] = 642 }, nil, nil, nil, true }
-players["yourlastspam"] = { "Yourlastspam", 9858, 3, 1, 8, { [1] = 9858, [2] = 6890, [3] = 1878 }, { [1] = 8, [2] = 3216, [3] = 46 }, nil, nil, nil, true }
-players["dirtysmom"] = { "Dirtysmom", 9821, 3, 1, 9, { [1] = 9821 }, { [1] = 9 }, nil, nil, nil, true }
-players["nthrcr"] = { "Nthrcr", 9774, 3, 1, 10, { [1] = 9774, [2] = 9002 }, { [1] = 10, [2] = 724 }, nil, nil, nil, true }
-players["porchofgeese"] = { "Porchofgeese", 9749, 3, 1, 11, { [1] = 9749, [2] = 9068 }, { [1] = 11, [2] = 660 }, nil, nil, nil, true }
-players["mech"] = { "Mech", 9743, 3, 1, 12, { [1] = 9743, [2] = 9084, [3] = 7779 }, { [1] = 12, [2] = 647, [3] = 11 }, nil, nil, nil, true }
-players["mageahh"] = { "Mageahh", 9620, 3, 1, 13, { [1] = 9620, [2] = 494 }, { [1] = 13, [2] = 21974 }, nil, nil, nil, true }
-players["sosochka"] = { "Sosochka", 9607, 3, 1, 14, { [1] = 9607, [2] = 7633 }, { [1] = 14, [2] = 2130 }, nil, nil, nil, true }
-players["frostrationn"] = { "Frostrationn", 9588, 3, 1, 15, { [1] = 9588 }, { [1] = 15 }, nil, nil, nil, true }
-players["stindy"] = { "Stindy", 9507, 3, 1, 16, { [1] = 9507, [2] = 8025 }, { [1] = 16, [2] = 1667 }, nil, nil, nil, true }
-players["karlan"] = { "Karlan", 9487, 3, 1, 17, { [1] = 9487, [2] = 9330 }, { [1] = 17, [2] = 467 }, nil, nil, nil, true }
-players["bbeauty"] = { "Bbeauty", 9487, 3, 1, 18, { [1] = 9487, [2] = 8218 }, { [1] = 18, [2] = 1480 }, nil, nil, nil, true }
-players["iwoarcane"] = { "Iwoarcane", 9468, 3, 1, 19, { [1] = 9468, [2] = 6014 }, { [1] = 19, [2] = 5361 }, nil, nil, nil, true }
-players["kontonfs"] = { "Kontonfs", 9459, 3, 1, 21, { [1] = 9459 }, { [1] = 21 }, nil, nil, nil, true }
-players["zonger"] = { "Zonger", 9445, 3, 1, 22, { [1] = 9445, [2] = 284 }, { [1] = 22, [2] = 22425 }, nil, nil, nil, true }
-players["arcaneflux"] = { "Arcaneflux", 9417, 3, 1, 23, { [1] = 9417 }, { [1] = 23 }, nil, nil, nil, true }
-players["pipocadoce"] = { "Pipocadoce", 9409, 3, 1, 24, { [1] = 9409 }, { [1] = 24 }, nil, nil, nil, true }
-players["feverrx"] = { "Feverrx", 9398, 3, 1, 25, { [1] = 9398 }, { [1] = 25 }, nil, nil, nil, true }
-players["grigorr"] = { "Grigorr", 9381, 3, 1, 27, { [1] = 9381 }, { [1] = 27 }, nil, nil, nil, true }
-players["dudenukem"] = { "Dudenukem", 9303, 3, 1, 28, { [1] = 9303 }, { [1] = 28 }, nil, nil, nil, true }
-players["kilermage"] = { "Kilermage", 9269, 3, 1, 30, { [1] = 9269 }, { [1] = 30 }, nil, nil, nil, true }
-players["zongov"] = { "Zongov", 9215, 3, 1, 31, { [1] = 9215, [2] = 4193 }, { [1] = 31, [2] = 11140 }, nil, nil, nil, true }
-players["kroha"] = { "Kroha", 9168, 3, 1, 32, { [1] = 9168, [2] = 4151 }, { [1] = 32, [2] = 11238 }, nil, nil, nil, true }
-players["arcanefixpls"] = { "Arcanefixpls", 9163, 3, 1, 33, { [1] = 9163, [2] = 7319 }, { [1] = 33, [2] = 2526 }, nil, nil, nil, true }
-players["yivo"] = { "Yivo", 9155, 3, 1, 34, { [1] = 9155, [2] = 8975 }, { [1] = 34, [2] = 747 }, nil, nil, nil, true }
-players["anilagirl"] = { "Anilagirl", 9153, 3, 1, 35, { [1] = 9153 }, { [1] = 35 }, nil, nil, nil, true }
-players["ijacked"] = { "Ijacked", 9145, 3, 1, 36, { [1] = 9145, [2] = 1927 }, { [1] = 36, [2] = 19094 }, nil, nil, nil, true }
-players["hyourynmaru"] = { "Hyourynmaru", 9138, 3, 1, 37, { [1] = 9138, [3] = 7171 }, { [1] = 37, [3] = 13 }, nil, nil, nil, true }
-players["shirrley"] = { "Shirrley", 9112, 3, 1, 38, { [1] = 9112 }, { [1] = 38 }, nil, nil, nil, true }
-players["themonk"] = { "Themonk", 8949, 3, 1, 41, { [1] = 8949, [2] = 2361 }, { [1] = 41, [2] = 17136 }, nil, nil, nil, true }
-players["kinforri"] = { "Kinforri", 8947, 3, 1, 42, { [1] = 8947, [3] = 3311 }, { [1] = 42, [3] = 27 }, nil, nil, nil, true }
-players["blastlust"] = { "Blastlust", 8888, 3, 1, 44, { [1] = 8888 }, { [1] = 44 }, nil, nil, nil, true }
-players["grdla"] = { "Grdla", 8766, 3, 1, 46, { [1] = 8766, [2] = 6200 }, { [1] = 46, [2] = 4836 }, nil, nil, nil, true }
-players["blukezera"] = { "Blukezera", 8750, 3, 1, 47, { [1] = 8750, [2] = 8408 }, { [1] = 47, [2] = 1287 }, nil, nil, nil, true }
-players["evilmages"] = { "Evilmages", 8739, 3, 1, 48, { [1] = 8739, [2] = 5698 }, { [1] = 48, [2] = 6419 }, nil, nil, nil, true }
-players["karlag"] = { "Karlag", 8691, 3, 1, 49, { [1] = 8691, [2] = 8062 }, { [1] = 49, [2] = 1628 }, nil, nil, nil, true }
-players["ashriot"] = { "Ashriot", 8660, 3, 1, 50, { [1] = 8660, [2] = 5499 }, { [1] = 50, [2] = 7117 }, nil, nil, nil, true }
-players["zharco"] = { "Zharco", 8637, 3, 1, 51, { [1] = 8637, [2] = 6656 }, { [1] = 51, [2] = 3671 }, nil, nil, nil, true }
-players["wedrinka"] = { "Wedrinka", 8633, 3, 1, 52, { [1] = 8633 }, { [1] = 52 }, nil, nil, nil, true }
-players["dzo"] = { "Dzo", 8620, 3, 1, 54, { [1] = 8620, [2] = 8460 }, { [1] = 54, [2] = 1225 }, nil, nil, nil, true }
-players["freemidget"] = { "Freemidget", 8592, 3, 1, 55, { [1] = 8592, [2] = 7978 }, { [1] = 55, [2] = 1705 }, nil, nil, nil, true }
-players["sahira"] = { "Sahira", 8592, 3, 1, 56, { [1] = 8592, [2] = 5718, [3] = 910 }, { [1] = 56, [2] = 6341, [3] = 65 }, nil, nil, nil, true }
-players["yasoftw"] = { "Yasoftw", 8564, 3, 1, 58, { [1] = 8564 }, { [1] = 58 }, nil, nil, nil, true }
-players["riju"] = { "Riju", 8552, 3, 1, 59, { [1] = 8552 }, { [1] = 59 }, nil, nil, nil, true }
-players["fuse"] = { "Fuse", 8552, 3, 1, 60, { [1] = 8552, [2] = 706 }, { [1] = 60, [2] = 21682 }, nil, nil, nil, true }
-players["fslqq"] = { "Fslqq", 8527, 3, 1, 61, { [1] = 8527 }, { [1] = 61 }, nil, nil, nil, true }
-players["bopmefastpls"] = { "Bopmefastpls", 8420, 3, 1, 62, { [1] = 8420, [2] = 6995 }, { [1] = 62, [2] = 3015 }, nil, nil, nil, true }
-players["siistine"] = { "Siistine", 8410, 3, 1, 63, { [1] = 8410, [2] = 7763 }, { [1] = 63, [2] = 1953 }, nil, nil, nil, true }
-players["alcaedas"] = { "Alcaedas", 8408, 3, 1, 64, { [1] = 8408, [2] = 5349 }, { [1] = 64, [2] = 7650 }, nil, nil, nil, true }
-players["kalezzi"] = { "Kalezzi", 8386, 3, 1, 65, { [1] = 8386 }, { [1] = 65 }, nil, nil, nil, true }
-players["alexismage"] = { "Alexismage", 8375, 3, 1, 66, { [1] = 8375, [2] = 529 }, { [1] = 66, [2] = 21917 }, nil, nil, nil, true }
-players["desttinys"] = { "Desttinys", 8309, 3, 1, 68, { [1] = 8309, [2] = 7172 }, { [1] = 68, [2] = 2740 }, nil, nil, nil, true }
-players["flaggedd"] = { "Flaggedd", 8267, 3, 1, 70, { [1] = 8267 }, { [1] = 70 }, nil, nil, nil, true }
-players["drowrrangerr"] = { "Drowrrangerr", 8241, 3, 1, 71, { [1] = 8241, [2] = 855 }, { [1] = 71, [2] = 21459 }, nil, nil, nil, true }
-players["magvxlam"] = { "Magvxlam", 8172, 3, 1, 75, { [1] = 8172, [2] = 5632 }, { [1] = 75, [2] = 6663 }, nil, nil, nil, true }
-players["minimuha"] = { "Minimuha", 8155, 3, 1, 76, { [1] = 8155 }, { [1] = 76 }, nil, nil, nil, true }
-players["guznakurva"] = { "Guznakurva", 8106, 3, 1, 77, { [1] = 8106 }, { [1] = 77 }, nil, nil, nil, true }
-players["hoorus"] = { "Hoorus", 8036, 3, 1, 79, { [1] = 8036, [2] = 7835 }, { [1] = 79, [2] = 1863 }, nil, nil, nil, true }
-players["magos"] = { "Magos", 7995, 3, 1, 80, { [1] = 7995, [2] = 6941 }, { [1] = 80, [2] = 3110 }, nil, nil, nil, true }
+players["tsigabiga"] = { "Tsigabiga", 9962, 3, 1, 4, { [1] = 9962, [2] = 794 }, { [1] = 4, [2] = 21617 }, nil, nil, nil, true }
+players["strenks"] = { "Strenks", 9879, 3, 1, 5, { [1] = 9879, [2] = 8985 }, { [1] = 5, [2] = 737 }, nil, nil, nil, true }
+players["lirus"] = { "Lirus", 9862, 3, 1, 6, { [1] = 9862, [2] = 8844 }, { [1] = 6, [2] = 851 }, nil, nil, nil, true }
+players["magotunelero"] = { "Magotunelero", 9859, 3, 1, 7, { [1] = 9859, [2] = 9082 }, { [1] = 7, [2] = 651 }, nil, nil, nil, true }
+players["yourlastspam"] = { "Yourlastspam", 9850, 3, 1, 8, { [1] = 9850, [2] = 6887, [3] = 1879 }, { [1] = 8, [2] = 3221, [3] = 46 }, nil, nil, nil, true }
+players["dirtysmom"] = { "Dirtysmom", 9817, 3, 1, 9, { [1] = 9817 }, { [1] = 9 }, nil, nil, nil, true }
+players["nthrcr"] = { "Nthrcr", 9764, 3, 1, 10, { [1] = 9764, [2] = 8994 }, { [1] = 10, [2] = 729 }, nil, nil, nil, true }
+players["porchofgeese"] = { "Porchofgeese", 9741, 3, 1, 11, { [1] = 9741, [2] = 9065 }, { [1] = 11, [2] = 666 }, nil, nil, nil, true }
+players["mech"] = { "Mech", 9734, 3, 1, 12, { [1] = 9734, [2] = 9078, [3] = 7763 }, { [1] = 12, [2] = 654, [3] = 11 }, nil, nil, nil, true }
+players["mageahh"] = { "Mageahh", 9611, 3, 1, 13, { [1] = 9611, [2] = 494 }, { [1] = 13, [2] = 22045 }, nil, nil, nil, true }
+players["sosochka"] = { "Sosochka", 9598, 3, 1, 14, { [1] = 9598, [2] = 7624 }, { [1] = 14, [2] = 2146 }, nil, nil, nil, true }
+players["frostrationn"] = { "Frostrationn", 9579, 3, 1, 15, { [1] = 9579 }, { [1] = 15 }, nil, nil, nil, true }
+players["stindy"] = { "Stindy", 9501, 3, 1, 16, { [1] = 9501, [2] = 8015 }, { [1] = 16, [2] = 1678 }, nil, nil, nil, true }
+players["karlan"] = { "Karlan", 9483, 3, 1, 17, { [1] = 9483, [2] = 9325 }, { [1] = 17, [2] = 472 }, nil, nil, nil, true }
+players["bbeauty"] = { "Bbeauty", 9479, 3, 1, 18, { [1] = 9479, [2] = 8205 }, { [1] = 18, [2] = 1494 }, nil, nil, nil, true }
+players["iwoarcane"] = { "Iwoarcane", 9459, 3, 1, 19, { [1] = 9459, [2] = 6014 }, { [1] = 19, [2] = 5375 }, nil, nil, nil, true }
+players["kontonfs"] = { "Kontonfs", 9454, 3, 1, 21, { [1] = 9454 }, { [1] = 21 }, nil, nil, nil, true }
+players["zonger"] = { "Zonger", 9436, 3, 1, 22, { [1] = 9436, [2] = 284 }, { [1] = 22, [2] = 22494 }, nil, nil, nil, true }
+players["arcaneflux"] = { "Arcaneflux", 9411, 3, 1, 23, { [1] = 9411 }, { [1] = 23 }, nil, nil, nil, true }
+players["pipocadoce"] = { "Pipocadoce", 9399, 3, 1, 24, { [1] = 9399 }, { [1] = 24 }, nil, nil, nil, true }
+players["feverrx"] = { "Feverrx", 9393, 3, 1, 25, { [1] = 9393 }, { [1] = 25 }, nil, nil, nil, true }
+players["grigorr"] = { "Grigorr", 9371, 3, 1, 27, { [1] = 9371 }, { [1] = 27 }, nil, nil, nil, true }
+players["ijacked"] = { "Ijacked", 9301, 3, 1, 28, { [1] = 9301, [2] = 1927 }, { [1] = 28, [2] = 19157 }, nil, nil, nil, true }
+players["dudenukem"] = { "Dudenukem", 9293, 3, 1, 29, { [1] = 9293 }, { [1] = 29 }, nil, nil, nil, true }
+players["kilermage"] = { "Kilermage", 9264, 3, 1, 31, { [1] = 9264 }, { [1] = 31 }, nil, nil, nil, true }
+players["zongov"] = { "Zongov", 9206, 3, 1, 32, { [1] = 9206, [2] = 4193 }, { [1] = 32, [2] = 11183 }, nil, nil, nil, true }
+players["kroha"] = { "Kroha", 9161, 3, 1, 33, { [1] = 9161, [2] = 4151 }, { [1] = 33, [2] = 11284 }, nil, nil, nil, true }
+players["arcanefixpls"] = { "Arcanefixpls", 9156, 3, 1, 34, { [1] = 9156, [2] = 7310 }, { [1] = 34, [2] = 2545 }, nil, nil, nil, true }
+players["yivo"] = { "Yivo", 9150, 3, 1, 35, { [1] = 9150, [2] = 8967 }, { [1] = 35, [2] = 751 }, nil, nil, nil, true }
+players["anilagirl"] = { "Anilagirl", 9142, 3, 1, 36, { [1] = 9142 }, { [1] = 36 }, nil, nil, nil, true }
+players["hyourynmaru"] = { "Hyourynmaru", 9132, 3, 1, 37, { [1] = 9132, [3] = 7165 }, { [1] = 37, [3] = 13 }, nil, nil, nil, true }
+players["shirrley"] = { "Shirrley", 9122, 3, 1, 38, { [1] = 9122 }, { [1] = 38 }, nil, nil, nil, true }
+players["themonk"] = { "Themonk", 8941, 3, 1, 41, { [1] = 8941, [2] = 2361 }, { [1] = 41, [2] = 17183 }, nil, nil, nil, true }
+players["kinforri"] = { "Kinforri", 8936, 3, 1, 42, { [1] = 8936, [3] = 3312 }, { [1] = 42, [3] = 27 }, nil, nil, nil, true }
+players["blastlust"] = { "Blastlust", 8881, 3, 1, 44, { [1] = 8881 }, { [1] = 44 }, nil, nil, nil, true }
+players["irugaft"] = { "Irugaft", 8786, 3, 1, 47, { [1] = 8786 }, { [1] = 47 }, nil, nil, nil, true }
+players["grdla"] = { "Grdla", 8751, 3, 1, 48, { [1] = 8751, [2] = 6195 }, { [1] = 48, [2] = 4855 }, nil, nil, nil, true }
+players["blukezera"] = { "Blukezera", 8745, 3, 1, 49, { [1] = 8745, [2] = 8396 }, { [1] = 49, [2] = 1300 }, nil, nil, nil, true }
+players["evilmages"] = { "Evilmages", 8732, 3, 1, 50, { [1] = 8732, [2] = 5697 }, { [1] = 50, [2] = 6443 }, nil, nil, nil, true }
+players["karlag"] = { "Karlag", 8685, 3, 1, 51, { [1] = 8685, [2] = 8056 }, { [1] = 51, [2] = 1638 }, nil, nil, nil, true }
+players["ashriot"] = { "Ashriot", 8652, 3, 1, 52, { [1] = 8652, [2] = 5499 }, { [1] = 52, [2] = 7142 }, nil, nil, nil, true }
+players["zharco"] = { "Zharco", 8627, 3, 1, 53, { [1] = 8627, [2] = 6648 }, { [1] = 53, [2] = 3693 }, nil, nil, nil, true }
+players["wedrinka"] = { "Wedrinka", 8621, 3, 1, 54, { [1] = 8621 }, { [1] = 54 }, nil, nil, nil, true }
+players["dzo"] = { "Dzo", 8612, 3, 1, 56, { [1] = 8612, [2] = 8453 }, { [1] = 56, [2] = 1228 }, nil, nil, nil, true }
+players["freemidget"] = { "Freemidget", 8587, 3, 1, 57, { [1] = 8587, [2] = 7968 }, { [1] = 57, [2] = 1719 }, nil, nil, nil, true }
+players["sahira"] = { "Sahira", 8582, 3, 1, 58, { [1] = 8582, [2] = 5712, [3] = 910 }, { [1] = 58, [2] = 6380, [3] = 65 }, nil, nil, nil, true }
+players["yasoftw"] = { "Yasoftw", 8554, 3, 1, 60, { [1] = 8554 }, { [1] = 60 }, nil, nil, nil, true }
+players["riju"] = { "Riju", 8544, 3, 1, 61, { [1] = 8544 }, { [1] = 61 }, nil, nil, nil, true }
+players["fuse"] = { "Fuse", 8544, 3, 1, 62, { [1] = 8544, [2] = 704 }, { [1] = 62, [2] = 21753 }, nil, nil, nil, true }
+players["fslqq"] = { "Fslqq", 8512, 3, 1, 63, { [1] = 8512 }, { [1] = 63 }, nil, nil, nil, true }
+players["bopmefastpls"] = { "Bopmefastpls", 8407, 3, 1, 64, { [1] = 8407, [2] = 6983 }, { [1] = 64, [2] = 3036 }, nil, nil, nil, true }
+players["alcaedas"] = { "Alcaedas", 8396, 3, 1, 65, { [1] = 8396, [2] = 5349 }, { [1] = 65, [2] = 7677 }, nil, nil, nil, true }
+players["siistine"] = { "Siistine", 8395, 3, 1, 66, { [1] = 8395, [2] = 7750 }, { [1] = 66, [2] = 1969 }, nil, nil, nil, true }
+players["kalezzi"] = { "Kalezzi", 8374, 3, 1, 67, { [1] = 8374 }, { [1] = 67 }, nil, nil, nil, true }
+players["alexismage"] = { "Alexismage", 8361, 3, 1, 69, { [1] = 8361, [2] = 529 }, { [1] = 69, [2] = 21988 }, nil, nil, nil, true }
+players["desttinys"] = { "Desttinys", 8298, 3, 1, 70, { [1] = 8298, [2] = 7165 }, { [1] = 70, [2] = 2752 }, nil, nil, nil, true }
+players["flaggedd"] = { "Flaggedd", 8257, 3, 1, 72, { [1] = 8257 }, { [1] = 72 }, nil, nil, nil, true }
+players["drowrrangerr"] = { "Drowrrangerr", 8230, 3, 1, 73, { [1] = 8230, [2] = 1597 }, { [1] = 73, [2] = 20226 }, nil, nil, nil, true }
+players["magvxlam"] = { "Magvxlam", 8165, 3, 1, 77, { [1] = 8165, [2] = 5630 }, { [1] = 77, [2] = 6690 }, nil, nil, nil, true }
+players["minimuha"] = { "Minimuha", 8146, 3, 1, 78, { [1] = 8146 }, { [1] = 78 }, nil, nil, nil, true }
+players["guznakurva"] = { "Guznakurva", 8096, 3, 1, 79, { [1] = 8096 }, { [1] = 79 }, nil, nil, nil, true }
+players["hoorus"] = { "Hoorus", 8026, 3, 1, 81, { [1] = 8026, [2] = 7826 }, { [1] = 81, [2] = 1881 }, nil, nil, nil, true }
+players["magos"] = { "Magos", 7983, 3, 1, 82, { [1] = 7983, [2] = 6934 }, { [1] = 82, [2] = 3120 }, nil, nil, nil, true }
 players["esco"] = { "Esco", 10000, 3, 2, 1, { [2] = 10000 }, { [2] = 1 }, nil, nil, nil, true }
-players["swiftie"] = { "Swiftie", 10000, 3, 2, 2, { [1] = 955, [2] = 10000 }, { [1] = 1365, [2] = 2 }, nil, nil, nil, true }
+players["swiftie"] = { "Swiftie", 10000, 3, 2, 2, { [1] = 955, [2] = 10000 }, { [1] = 1374, [2] = 2 }, nil, nil, nil, true }
 players["jengo"] = { "Jengo", 9999, 3, 2, 3, { [2] = 9999 }, { [2] = 3 }, nil, nil, nil, true }
 players["slatt"] = { "Slatt", 9997, 3, 2, 4, { [2] = 9997 }, { [2] = 4 }, nil, nil, nil, true }
-players["sosa"] = { "Sosa", 9992, 3, 2, 5, { [2] = 9992 }, { [2] = 5 }, nil, nil, nil, true }
-players["uwu"] = { "Uwu", 9989, 3, 2, 6, { [1] = 4447, [2] = 9989 }, { [1] = 349, [2] = 6 }, nil, nil, nil, true }
+players["sosa"] = { "Sosa", 9991, 3, 2, 5, { [2] = 9991 }, { [2] = 5 }, nil, nil, nil, true }
+players["uwu"] = { "Uwu", 9989, 3, 2, 6, { [1] = 4445, [2] = 9989 }, { [1] = 352, [2] = 6 }, nil, nil, nil, true }
 players["livinz"] = { "Livinz", 9987, 3, 2, 7, { [2] = 9987 }, { [2] = 7 }, nil, nil, nil, true }
 players["zharctwo"] = { "Zharctwo", 9986, 3, 2, 8, { [2] = 9986 }, { [2] = 8 }, nil, nil, nil, true }
-players["admirfire"] = { "Admirfire", 9984, 3, 2, 9, { [2] = 9984 }, { [2] = 9 }, nil, nil, nil, true }
-players["carti"] = { "Carti", 9983, 3, 2, 10, { [2] = 9983 }, { [2] = 10 }, nil, nil, nil, true }
+players["carti"] = { "Carti", 9984, 3, 2, 9, { [2] = 9984 }, { [2] = 9 }, nil, nil, nil, true }
+players["admirfire"] = { "Admirfire", 9983, 3, 2, 10, { [2] = 9983 }, { [2] = 10 }, nil, nil, nil, true }
 players["zharc"] = { "Zharc", 9983, 3, 2, 11, { [2] = 9983 }, { [2] = 11 }, nil, nil, nil, true }
 players["stinngg"] = { "Stinngg", 9980, 3, 2, 12, { [2] = 9980 }, { [2] = 12 }, nil, nil, nil, true }
 players["swiftiez"] = { "Swiftiez", 9974, 3, 2, 12, { [2] = 9974 }, { [2] = 12 }, nil, nil, nil, false }
 players["zhbr"] = { "Zhbr", 9979, 3, 2, 13, { [2] = 9979 }, { [2] = 13 }, nil, nil, nil, true }
-players["sryforblast"] = { "Sryforblast", 9973, 3, 2, 14, { [2] = 9973 }, { [2] = 14 }, nil, nil, nil, true }
-players["appear"] = { "Appear", 9971, 3, 2, 15, { [2] = 9971 }, { [2] = 15 }, nil, nil, nil, true }
-players["zhms"] = { "Zhms", 9970, 3, 2, 16, { [2] = 9970 }, { [2] = 16 }, nil, nil, nil, true }
-players["zhbrasil"] = { "Zhbrasil", 9969, 3, 2, 17, { [2] = 9969 }, { [2] = 17 }, nil, nil, nil, true }
-players["zarocrits"] = { "Zarocrits", 9968, 3, 2, 18, { [2] = 9968 }, { [2] = 18 }, nil, nil, nil, true }
-players["conventin"] = { "Conventin", 9967, 3, 2, 19, { [2] = 9967 }, { [2] = 19 }, nil, nil, nil, true }
-players["ignitetick"] = { "Ignitetick", 9967, 3, 2, 20, { [2] = 9967 }, { [2] = 20 }, nil, nil, nil, true }
-players["dip"] = { "Dip", 9964, 3, 2, 21, { [2] = 9964 }, { [2] = 21 }, nil, nil, nil, true }
-players["snuskungenn"] = { "Snuskungenn", 9964, 3, 2, 22, { [2] = 9964 }, { [2] = 22 }, nil, nil, nil, true }
-players["zharcus"] = { "Zharcus", 9958, 3, 2, 23, { [2] = 9958 }, { [2] = 23 }, nil, nil, nil, true }
+players["zharcus"] = { "Zharcus", 9974, 3, 2, 14, { [2] = 9974 }, { [2] = 14 }, nil, nil, nil, true }
+players["sryforblast"] = { "Sryforblast", 9973, 3, 2, 15, { [2] = 9973 }, { [2] = 15 }, nil, nil, nil, true }
+players["appear"] = { "Appear", 9970, 3, 2, 16, { [2] = 9970 }, { [2] = 16 }, nil, nil, nil, true }
+players["zhms"] = { "Zhms", 9970, 3, 2, 17, { [2] = 9970 }, { [2] = 17 }, nil, nil, nil, true }
+players["zhbrasil"] = { "Zhbrasil", 9969, 3, 2, 18, { [2] = 9969 }, { [2] = 18 }, nil, nil, nil, true }
+players["zarocrits"] = { "Zarocrits", 9968, 3, 2, 19, { [2] = 9968 }, { [2] = 19 }, nil, nil, nil, true }
+players["dip"] = { "Dip", 9967, 3, 2, 20, { [2] = 9967 }, { [2] = 20 }, nil, nil, nil, true }
+players["ignitetick"] = { "Ignitetick", 9966, 3, 2, 21, { [2] = 9966 }, { [2] = 21 }, nil, nil, nil, true }
+players["conventin"] = { "Conventin", 9966, 3, 2, 22, { [2] = 9966 }, { [2] = 22 }, nil, nil, nil, true }
+players["snuskungenn"] = { "Snuskungenn", 9963, 3, 2, 23, { [2] = 9963 }, { [2] = 23 }, nil, nil, nil, true }
 players["seisxx"] = { "Seisxx", 9954, 3, 2, 24, { [2] = 9954 }, { [2] = 24 }, nil, nil, nil, true }
-players["fullclip"] = { "Fullclip", 9953, 3, 2, 25, { [2] = 9953 }, { [2] = 25 }, nil, nil, nil, true }
-players["metindoi"] = { "Metindoi", 9949, 3, 2, 26, { [2] = 9949 }, { [2] = 26 }, nil, nil, nil, true }
+players["fullclip"] = { "Fullclip", 9952, 3, 2, 25, { [2] = 9952 }, { [2] = 25 }, nil, nil, nil, true }
+players["metindoi"] = { "Metindoi", 9948, 3, 2, 26, { [2] = 9948 }, { [2] = 26 }, nil, nil, nil, true }
 players["graf"] = { "Graf", 9946, 3, 2, 27, { [2] = 9946 }, { [2] = 27 }, nil, nil, nil, true }
-players["mezonm"] = { "Mezonm", 9943, 3, 2, 28, { [2] = 9943 }, { [2] = 28 }, nil, nil, nil, true }
-players["piinned"] = { "Piinned", 9943, 3, 2, 29, { [2] = 9943 }, { [2] = 29 }, nil, nil, nil, true }
-players["soulsmage"] = { "Soulsmage", 9941, 3, 2, 30, { [2] = 9941 }, { [2] = 30 }, nil, nil, nil, true }
-players["zhzh"] = { "Zhzh", 9939, 3, 2, 31, { [2] = 9939 }, { [2] = 31 }, nil, nil, nil, true }
-players["skolik"] = { "Skolik", 9935, 3, 2, 33, { [2] = 9935 }, { [2] = 33 }, nil, nil, nil, true }
-players["parses"] = { "Parses", 9934, 3, 2, 34, { [2] = 9934 }, { [2] = 34 }, nil, nil, nil, true }
-players["tarragona"] = { "Tarragona", 9934, 3, 2, 35, { [2] = 9934 }, { [2] = 35 }, nil, nil, nil, true }
-players["zhtwo"] = { "Zhtwo", 9932, 3, 2, 36, { [2] = 9932 }, { [2] = 36 }, nil, nil, nil, true }
-players["zhfire"] = { "Zhfire", 9930, 3, 2, 37, { [2] = 9930 }, { [2] = 37 }, nil, nil, nil, true }
-players["snuskungen"] = { "Snuskungen", 9930, 3, 2, 38, { [2] = 9930 }, { [2] = 38 }, nil, nil, nil, true }
-players["problems"] = { "Problems", 9928, 3, 2, 39, { [2] = 9928 }, { [2] = 39 }, nil, nil, nil, true }
-players["madjijaam"] = { "Madjijaam", 9926, 3, 2, 40, { [2] = 9926 }, { [2] = 40 }, nil, nil, nil, true }
-players["firebreath"] = { "Firebreath", 9920, 3, 2, 41, { [2] = 9920 }, { [2] = 41 }, nil, nil, nil, true }
-players["blastitute"] = { "Blastitute", 9919, 3, 2, 42, { [2] = 9919 }, { [2] = 42 }, nil, nil, nil, true }
-players["danipapazov"] = { "Danipapazov", 9918, 3, 2, 43, { [2] = 9918 }, { [2] = 43 }, nil, nil, nil, true }
-players["kinzzy"] = { "Kinzzy", 9917, 3, 2, 44, { [2] = 9917 }, { [2] = 44 }, nil, nil, nil, true }
-players["erienxd"] = { "Erienxd", 9913, 3, 2, 45, { [2] = 9913 }, { [2] = 45 }, nil, nil, nil, true }
-players["riphh"] = { "Riphh", 9913, 3, 2, 46, { [2] = 9913 }, { [2] = 46 }, nil, nil, nil, true }
-players["krakmage"] = { "Krakmage", 9912, 3, 2, 47, { [2] = 9912 }, { [2] = 47 }, nil, nil, nil, true }
-players["covidbalast"] = { "Covidbalast", 9911, 3, 2, 48, { [1] = 2041, [2] = 9911 }, { [1] = 1003, [2] = 48 }, nil, nil, nil, true }
-players["livingbomb"] = { "Livingbomb", 9908, 3, 2, 49, { [2] = 9908 }, { [2] = 49 }, nil, nil, nil, true }
-players["chromosome"] = { "Chromosome", 9907, 3, 2, 50, { [2] = 9907 }, { [2] = 50 }, nil, nil, nil, true }
-players["sainfon"] = { "Sainfon", 9906, 3, 2, 51, { [2] = 9906 }, { [2] = 51 }, nil, nil, nil, true }
+players["soulsmage"] = { "Soulsmage", 9945, 3, 2, 28, { [2] = 9945 }, { [2] = 28 }, nil, nil, nil, true }
+players["mezonm"] = { "Mezonm", 9942, 3, 2, 29, { [2] = 9942 }, { [2] = 29 }, nil, nil, nil, true }
+players["piinned"] = { "Piinned", 9942, 3, 2, 30, { [2] = 9942 }, { [2] = 30 }, nil, nil, nil, true }
+players["zhzh"] = { "Zhzh", 9938, 3, 2, 31, { [2] = 9938 }, { [2] = 31 }, nil, nil, nil, true }
+players["skolik"] = { "Skolik", 9934, 3, 2, 33, { [2] = 9934 }, { [2] = 33 }, nil, nil, nil, true }
+players["parses"] = { "Parses", 9933, 3, 2, 34, { [2] = 9933 }, { [2] = 34 }, nil, nil, nil, true }
+players["tarragona"] = { "Tarragona", 9933, 3, 2, 35, { [2] = 9933 }, { [2] = 35 }, nil, nil, nil, true }
+players["zhtwo"] = { "Zhtwo", 9931, 3, 2, 36, { [2] = 9931 }, { [2] = 36 }, nil, nil, nil, true }
+players["zhfire"] = { "Zhfire", 9929, 3, 2, 37, { [2] = 9929 }, { [2] = 37 }, nil, nil, nil, true }
+players["snuskungen"] = { "Snuskungen", 9929, 3, 2, 38, { [2] = 9929 }, { [2] = 38 }, nil, nil, nil, true }
+players["problems"] = { "Problems", 9926, 3, 2, 39, { [2] = 9926 }, { [2] = 39 }, nil, nil, nil, true }
+players["madjijaam"] = { "Madjijaam", 9925, 3, 2, 40, { [2] = 9925 }, { [2] = 40 }, nil, nil, nil, true }
+players["firebreath"] = { "Firebreath", 9919, 3, 2, 41, { [2] = 9919 }, { [2] = 41 }, nil, nil, nil, true }
+players["blastitute"] = { "Blastitute", 9918, 3, 2, 42, { [2] = 9918 }, { [2] = 42 }, nil, nil, nil, true }
+players["danipapazov"] = { "Danipapazov", 9917, 3, 2, 43, { [2] = 9917 }, { [2] = 43 }, nil, nil, nil, true }
+players["kinzzy"] = { "Kinzzy", 9916, 3, 2, 44, { [2] = 9916 }, { [2] = 44 }, nil, nil, nil, true }
+players["erienxd"] = { "Erienxd", 9912, 3, 2, 45, { [2] = 9912 }, { [2] = 45 }, nil, nil, nil, true }
+players["riphh"] = { "Riphh", 9912, 3, 2, 46, { [2] = 9912 }, { [2] = 46 }, nil, nil, nil, true }
+players["krakmage"] = { "Krakmage", 9911, 3, 2, 47, { [2] = 9911 }, { [2] = 47 }, nil, nil, nil, true }
+players["covidbalast"] = { "Covidbalast", 9910, 3, 2, 48, { [1] = 2041, [2] = 9910 }, { [1] = 1010, [2] = 48 }, nil, nil, nil, true }
+players["livingbomb"] = { "Livingbomb", 9907, 3, 2, 49, { [2] = 9907 }, { [2] = 49 }, nil, nil, nil, true }
+players["chromosome"] = { "Chromosome", 9906, 3, 2, 50, { [2] = 9906 }, { [2] = 50 }, nil, nil, nil, true }
+players["zuldazarxq"] = { "Zuldazarxq", 9905, 3, 2, 51, { [2] = 9905 }, { [2] = 51 }, nil, nil, nil, true }
+players["sainfon"] = { "Sainfon", 9905, 3, 2, 52, { [2] = 9905 }, { [2] = 52 }, nil, nil, nil, true }
 players["zhfive"] = { "Zhfive", 9905, 3, 2, 52, { [2] = 9905 }, { [2] = 52 }, nil, nil, nil, false }
-players["zuldazarxq"] = { "Zuldazarxq", 9906, 3, 2, 52, { [2] = 9906 }, { [2] = 52 }, nil, nil, nil, true }
-players["oskai"] = { "Oskai", 9906, 3, 2, 53, { [1] = 8836, [2] = 9906 }, { [1] = 45, [2] = 53 }, nil, nil, nil, true }
-players["nekonyan"] = { "Nekonyan", 9905, 3, 2, 54, { [2] = 9905 }, { [2] = 54 }, nil, nil, nil, true }
+players["oskai"] = { "Oskai", 9905, 3, 2, 53, { [1] = 8832, [2] = 9905 }, { [1] = 46, [2] = 53 }, nil, nil, nil, true }
+players["nekonyan"] = { "Nekonyan", 9904, 3, 2, 54, { [2] = 9904 }, { [2] = 54 }, nil, nil, nil, true }
 players["doonnada"] = { "Doonnada", 9896, 3, 2, 55, { [2] = 9896 }, { [2] = 55 }, nil, nil, nil, false }
-players["jecika"] = { "Jecika", 9904, 3, 2, 55, { [2] = 9904 }, { [2] = 55 }, nil, nil, nil, true }
+players["jecika"] = { "Jecika", 9903, 3, 2, 55, { [2] = 9903 }, { [2] = 55 }, nil, nil, nil, true }
 players["luganoo"] = { "Luganoo", 9899, 3, 2, 55, { [2] = 9899 }, { [2] = 55 }, nil, nil, nil, false }
-players["pyropls"] = { "Pyropls", 9902, 3, 2, 56, { [2] = 9902 }, { [2] = 56 }, nil, nil, nil, true }
-players["ignaby"] = { "Ignaby", 9898, 3, 2, 57, { [2] = 9898 }, { [2] = 57 }, nil, nil, nil, true }
-players["inna"] = { "Inna", 9898, 3, 2, 58, { [2] = 9898 }, { [2] = 58 }, nil, nil, nil, true }
-players["bbcprovider"] = { "Bbcprovider", 9892, 3, 2, 59, { [2] = 9892 }, { [2] = 59 }, nil, nil, nil, true }
-players["brinner"] = { "Brinner", 9890, 3, 2, 60, { [2] = 9890 }, { [2] = 60 }, nil, nil, nil, true }
-players["inflamezx"] = { "Inflamezx", 9889, 3, 2, 61, { [2] = 9889 }, { [2] = 61 }, nil, nil, nil, true }
-players["beastfire"] = { "Beastfire", 9889, 3, 2, 62, { [2] = 9889 }, { [2] = 62 }, nil, nil, nil, true }
-players["sundress"] = { "Sundress", 9887, 3, 2, 63, { [2] = 9887 }, { [2] = 63 }, nil, nil, nil, true }
-players["icybaby"] = { "Icybaby", 9885, 3, 2, 64, { [2] = 9885 }, { [2] = 64 }, nil, nil, nil, true }
-players["knockout"] = { "Knockout", 9882, 3, 2, 65, { [2] = 9882 }, { [2] = 65 }, nil, nil, nil, true }
-players["xyz"] = { "Xyz", 9882, 3, 2, 66, { [2] = 9882 }, { [2] = 66 }, nil, nil, nil, true }
-players["framez"] = { "Framez", 9880, 3, 2, 67, { [1] = 994, [2] = 9880 }, { [1] = 1350, [2] = 67 }, nil, nil, nil, true }
-players["damagemother"] = { "Damagemother", 9878, 3, 2, 68, { [2] = 9878 }, { [2] = 68 }, nil, nil, nil, true }
-players["ziboda"] = { "Ziboda", 9877, 3, 2, 69, { [2] = 9877 }, { [2] = 69 }, nil, nil, nil, true }
-players["lafrifayer"] = { "Lafrifayer", 9875, 3, 2, 70, { [2] = 9875 }, { [2] = 70 }, nil, nil, nil, true }
-players["cajnbabymage"] = { "Cajnbabymage", 9874, 3, 2, 71, { [1] = 3890, [2] = 9874 }, { [1] = 452, [2] = 71 }, nil, nil, nil, true }
-players["zannex"] = { "Zannex", 9874, 3, 2, 72, { [2] = 9874 }, { [2] = 72 }, nil, nil, nil, true }
-players["flamz"] = { "Flamz", 9874, 3, 2, 73, { [2] = 9874, [3] = 6825 }, { [2] = 73, [3] = 14 }, nil, nil, nil, true }
-players["burnsouth"] = { "Burnsouth", 9873, 3, 2, 74, { [2] = 9873 }, { [2] = 74 }, nil, nil, nil, true }
-players["terpsichorax"] = { "Terpsichorax", 9871, 3, 2, 75, { [2] = 9871 }, { [2] = 75 }, nil, nil, nil, true }
-players["dazzxmage"] = { "Dazzxmage", 9870, 3, 2, 76, { [2] = 9870 }, { [2] = 76 }, nil, nil, nil, true }
-players["bealaus"] = { "Bealaus", 9868, 3, 2, 77, { [2] = 9868 }, { [2] = 77 }, nil, nil, nil, true }
-players["xmoony"] = { "Xmoony", 9865, 3, 2, 78, { [2] = 9865 }, { [2] = 78 }, nil, nil, nil, true }
-players["cornela"] = { "Cornela", 9862, 3, 2, 79, { [2] = 9862 }, { [2] = 79 }, nil, nil, nil, true }
-players["khamikatze"] = { "Khamikatze", 9862, 3, 2, 80, { [2] = 9862 }, { [2] = 80 }, nil, nil, nil, true }
-players["riseftw"] = { "Riseftw", 9862, 3, 2, 81, { [2] = 9862 }, { [2] = 81 }, nil, nil, nil, true }
-players["dictamagee"] = { "Dictamagee", 9860, 3, 2, 82, { [2] = 9860 }, { [2] = 82 }, nil, nil, nil, true }
-players["dictamage"] = { "Dictamage", 9859, 3, 2, 83, { [2] = 9859 }, { [2] = 83 }, nil, nil, nil, true }
-players["noedtveidt"] = { "Noedtveidt", 9858, 3, 2, 84, { [2] = 9858 }, { [2] = 84 }, nil, nil, nil, true }
-players["zhodin"] = { "Zhodin", 9858, 3, 2, 85, { [2] = 9858 }, { [2] = 85 }, nil, nil, nil, true }
-players["stammer"] = { "Stammer", 9854, 3, 2, 86, { [2] = 9854 }, { [2] = 86 }, nil, nil, nil, true }
-players["becca"] = { "Becca", 9854, 3, 2, 87, { [2] = 9854 }, { [2] = 87 }, nil, nil, nil, true }
-players["cristol"] = { "Cristol", 9853, 3, 2, 88, { [2] = 9853 }, { [2] = 88 }, nil, nil, nil, true }
-players["embarassed"] = { "Embarassed", 9853, 3, 2, 89, { [2] = 9853 }, { [2] = 89 }, nil, nil, nil, true }
-players["deadfire"] = { "Deadfire", 9849, 3, 2, 90, { [2] = 9849 }, { [2] = 90 }, nil, nil, nil, true }
+players["pyropls"] = { "Pyropls", 9901, 3, 2, 56, { [2] = 9901 }, { [2] = 56 }, nil, nil, nil, true }
+players["ignaby"] = { "Ignaby", 9897, 3, 2, 57, { [2] = 9897 }, { [2] = 57 }, nil, nil, nil, true }
+players["inna"] = { "Inna", 9896, 3, 2, 58, { [2] = 9896 }, { [2] = 58 }, nil, nil, nil, true }
+players["bbcprovider"] = { "Bbcprovider", 9891, 3, 2, 59, { [2] = 9891 }, { [2] = 59 }, nil, nil, nil, true }
+players["brinner"] = { "Brinner", 9888, 3, 2, 60, { [2] = 9888 }, { [2] = 60 }, nil, nil, nil, true }
+players["inflamezx"] = { "Inflamezx", 9888, 3, 2, 61, { [2] = 9888 }, { [2] = 61 }, nil, nil, nil, true }
+players["beastfire"] = { "Beastfire", 9888, 3, 2, 62, { [2] = 9888 }, { [2] = 62 }, nil, nil, nil, true }
+players["sundress"] = { "Sundress", 9886, 3, 2, 63, { [2] = 9886 }, { [2] = 63 }, nil, nil, nil, true }
+players["icybaby"] = { "Icybaby", 9884, 3, 2, 64, { [2] = 9884 }, { [2] = 64 }, nil, nil, nil, true }
+players["cornela"] = { "Cornela", 9884, 3, 2, 65, { [2] = 9884 }, { [2] = 65 }, nil, nil, nil, true }
+players["knockout"] = { "Knockout", 9881, 3, 2, 66, { [2] = 9881 }, { [2] = 66 }, nil, nil, nil, true }
+players["xyz"] = { "Xyz", 9880, 3, 2, 67, { [2] = 9880 }, { [2] = 67 }, nil, nil, nil, true }
+players["framez"] = { "Framez", 9878, 3, 2, 68, { [1] = 994, [2] = 9878 }, { [1] = 1358, [2] = 68 }, nil, nil, nil, true }
+players["damagemother"] = { "Damagemother", 9877, 3, 2, 69, { [2] = 9877 }, { [2] = 69 }, nil, nil, nil, true }
+players["ziboda"] = { "Ziboda", 9875, 3, 2, 70, { [2] = 9875 }, { [2] = 70 }, nil, nil, nil, true }
+players["lafrifayer"] = { "Lafrifayer", 9874, 3, 2, 71, { [2] = 9874 }, { [2] = 71 }, nil, nil, nil, true }
+players["cajnbabymage"] = { "Cajnbabymage", 9872, 3, 2, 72, { [1] = 3889, [2] = 9872 }, { [1] = 455, [2] = 72 }, nil, nil, nil, true }
+players["flamz"] = { "Flamz", 9872, 3, 2, 73, { [2] = 9872, [3] = 6809 }, { [2] = 73, [3] = 14 }, nil, nil, nil, true }
+players["zannex"] = { "Zannex", 9872, 3, 2, 74, { [2] = 9872 }, { [2] = 74 }, nil, nil, nil, true }
+players["burnsouth"] = { "Burnsouth", 9871, 3, 2, 75, { [2] = 9871 }, { [2] = 75 }, nil, nil, nil, true }
+players["xmoony"] = { "Xmoony", 9871, 3, 2, 76, { [2] = 9871 }, { [2] = 76 }, nil, nil, nil, true }
+players["terpsichorax"] = { "Terpsichorax", 9869, 3, 2, 77, { [2] = 9869 }, { [2] = 77 }, nil, nil, nil, true }
+players["dazzxmage"] = { "Dazzxmage", 9869, 3, 2, 78, { [2] = 9869 }, { [2] = 78 }, nil, nil, nil, true }
+players["bealaus"] = { "Bealaus", 9866, 3, 2, 79, { [2] = 9866 }, { [2] = 79 }, nil, nil, nil, true }
+players["dictamagee"] = { "Dictamagee", 9865, 3, 2, 80, { [2] = 9865 }, { [2] = 80 }, nil, nil, nil, true }
+players["khamikatze"] = { "Khamikatze", 9862, 3, 2, 80, { [2] = 9862 }, { [2] = 80 }, nil, nil, nil, false }
+players["riseftw"] = { "Riseftw", 9863, 3, 2, 81, { [2] = 9863 }, { [2] = 81 }, nil, nil, nil, true }
+players["zaytunna"] = { "Zaytunna", 9861, 3, 2, 82, { [2] = 9861 }, { [2] = 82 }, nil, nil, nil, true }
+players["dictamage"] = { "Dictamage", 9858, 3, 2, 83, { [2] = 9858 }, { [2] = 83 }, nil, nil, nil, true }
+players["noedtveidt"] = { "Noedtveidt", 9856, 3, 2, 84, { [2] = 9856 }, { [2] = 84 }, nil, nil, nil, true }
+players["zhodin"] = { "Zhodin", 9856, 3, 2, 85, { [2] = 9856 }, { [2] = 85 }, nil, nil, nil, true }
+players["stammer"] = { "Stammer", 9852, 3, 2, 86, { [2] = 9852 }, { [2] = 86 }, nil, nil, nil, true }
+players["becca"] = { "Becca", 9852, 3, 2, 87, { [2] = 9852 }, { [2] = 87 }, nil, nil, nil, true }
+players["cristol"] = { "Cristol", 9851, 3, 2, 88, { [2] = 9851 }, { [2] = 88 }, nil, nil, nil, true }
+players["embarassed"] = { "Embarassed", 9851, 3, 2, 89, { [2] = 9851 }, { [2] = 89 }, nil, nil, nil, true }
+players["deadfire"] = { "Deadfire", 9847, 3, 2, 90, { [2] = 9847 }, { [2] = 90 }, nil, nil, nil, true }
 players["destroj"] = { "Destroj", 9846, 3, 2, 91, { [2] = 9846 }, { [2] = 91 }, nil, nil, nil, true }
-players["bager"] = { "Bager", 9846, 3, 2, 92, { [2] = 9846 }, { [2] = 92 }, nil, nil, nil, true }
-players["remigiusz"] = { "Remigiusz", 9844, 3, 2, 93, { [2] = 9844 }, { [2] = 93 }, nil, nil, nil, true }
-players["mislitelq"] = { "Mislitelq", 9844, 3, 2, 94, { [2] = 9844 }, { [2] = 94 }, nil, nil, nil, true }
-players["zharcqt"] = { "Zharcqt", 9840, 3, 2, 95, { [2] = 9840, [3] = 9204 }, { [2] = 95, [3] = 5 }, nil, nil, nil, true }
-players["mjollnir"] = { "Mjollnir", 9839, 3, 2, 96, { [2] = 9839 }, { [2] = 96 }, nil, nil, nil, true }
-players["boxem"] = { "Boxem", 9839, 3, 2, 97, { [2] = 9839 }, { [2] = 97 }, nil, nil, nil, true }
-players["neurontin"] = { "Neurontin", 9836, 3, 2, 98, { [2] = 9836 }, { [2] = 98 }, nil, nil, nil, true }
-players["velinisse"] = { "Velinisse", 9834, 3, 2, 99, { [1] = 9392, [2] = 9834 }, { [1] = 26, [2] = 99 }, nil, nil, nil, true }
-players["critstealer"] = { "Critstealer", 9833, 3, 2, 100, { [2] = 9833 }, { [2] = 100 }, nil, nil, nil, true }
-players["strythxz"] = { "Strythxz", 9829, 3, 2, 101, { [2] = 9829 }, { [2] = 101 }, nil, nil, nil, true }
-players["nipax"] = { "Nipax", 9829, 3, 2, 102, { [2] = 9829 }, { [2] = 102 }, nil, nil, nil, true }
-players["thesurpriser"] = { "Thesurpriser", 9827, 3, 2, 103, { [2] = 9827 }, { [2] = 103 }, nil, nil, nil, true }
-players["pyg"] = { "Pyg", 9825, 3, 2, 104, { [1] = 1056, [2] = 9825 }, { [1] = 1338, [2] = 104 }, nil, nil, nil, true }
-players["cwelbustion"] = { "Cwelbustion", 9824, 3, 2, 105, { [2] = 9824 }, { [2] = 105 }, nil, nil, nil, true }
-players["nalice"] = { "Nalice", 9823, 3, 2, 106, { [2] = 9823 }, { [2] = 106 }, nil, nil, nil, true }
+players["bager"] = { "Bager", 9845, 3, 2, 92, { [2] = 9845 }, { [2] = 92 }, nil, nil, nil, true }
+players["remigiusz"] = { "Remigiusz", 9843, 3, 2, 93, { [2] = 9843 }, { [2] = 93 }, nil, nil, nil, true }
+players["mislitelq"] = { "Mislitelq", 9842, 3, 2, 94, { [2] = 9842 }, { [2] = 94 }, nil, nil, nil, true }
+players["cypher"] = { "Cypher", 9839, 3, 2, 95, { [2] = 9839 }, { [2] = 95 }, nil, nil, nil, true }
+players["mjollnir"] = { "Mjollnir", 9838, 3, 2, 96, { [2] = 9838 }, { [2] = 96 }, nil, nil, nil, true }
+players["zharcqt"] = { "Zharcqt", 9838, 3, 2, 97, { [2] = 9838, [3] = 9204 }, { [2] = 97, [3] = 5 }, nil, nil, nil, true }
+players["boxem"] = { "Boxem", 9837, 3, 2, 98, { [2] = 9837 }, { [2] = 98 }, nil, nil, nil, true }
+players["neurontin"] = { "Neurontin", 9835, 3, 2, 99, { [2] = 9835 }, { [2] = 99 }, nil, nil, nil, true }
+players["velinisse"] = { "Velinisse", 9832, 3, 2, 100, { [1] = 9379, [2] = 9832 }, { [1] = 26, [2] = 100 }, nil, nil, nil, true }
+players["critstealer"] = { "Critstealer", 9832, 3, 2, 101, { [2] = 9832 }, { [2] = 101 }, nil, nil, nil, true }
+players["strythxz"] = { "Strythxz", 9827, 3, 2, 102, { [2] = 9827 }, { [2] = 102 }, nil, nil, nil, true }
+players["nipax"] = { "Nipax", 9827, 3, 2, 103, { [2] = 9827 }, { [2] = 103 }, nil, nil, nil, true }
+players["thesurpriser"] = { "Thesurpriser", 9826, 3, 2, 104, { [2] = 9826 }, { [2] = 104 }, nil, nil, nil, true }
+players["pyg"] = { "Pyg", 9823, 3, 2, 105, { [1] = 1056, [2] = 9823 }, { [1] = 1346, [2] = 105 }, nil, nil, nil, true }
+players["cwelbustion"] = { "Cwelbustion", 9822, 3, 2, 106, { [2] = 9822 }, { [2] = 106 }, nil, nil, nil, true }
 players["burnbabyburn"] = { "Burnbabyburn", 9806, 3, 2, 107, { [2] = 9806 }, { [2] = 107 }, nil, nil, nil, false }
-players["xtreamass"] = { "Xtreamass", 9816, 3, 2, 107, { [2] = 9816 }, { [2] = 107 }, nil, nil, nil, true }
-players["carrymodm"] = { "Carrymodm", 9815, 3, 2, 108, { [2] = 9815 }, { [2] = 108 }, nil, nil, nil, true }
-players["apkebaam"] = { "Apkebaam", 9814, 3, 2, 109, { [2] = 9814 }, { [2] = 109 }, nil, nil, nil, true }
-players["zhcrit"] = { "Zhcrit", 9814, 3, 2, 110, { [2] = 9814 }, { [2] = 110 }, nil, nil, nil, true }
-players["batsali"] = { "Batsali", 9810, 3, 2, 111, { [1] = 410, [2] = 9810 }, { [1] = 1669, [2] = 111 }, nil, nil, nil, true }
-players["rubeuss"] = { "Rubeuss", 9810, 3, 2, 112, { [2] = 9810 }, { [2] = 112 }, nil, nil, nil, true }
-players["kakkao"] = { "Kakkao", 9810, 3, 2, 113, { [2] = 9810 }, { [2] = 113 }, nil, nil, nil, true }
-players["whooplius"] = { "Whooplius", 9804, 3, 2, 114, { [2] = 9804 }, { [2] = 114 }, nil, nil, nil, true }
-players["mezonqt"] = { "Mezonqt", 9804, 3, 2, 115, { [2] = 9804 }, { [2] = 115 }, nil, nil, nil, true }
-players["mysticalfire"] = { "Mysticalfire", 9804, 3, 2, 116, { [2] = 9804 }, { [2] = 116 }, nil, nil, nil, true }
-players["imcrazyx"] = { "Imcrazyx", 9801, 3, 2, 117, { [2] = 9801 }, { [2] = 117 }, nil, nil, nil, true }
-players["migrant"] = { "Migrant", 9799, 3, 2, 118, { [2] = 9799 }, { [2] = 118 }, nil, nil, nil, true }
-players["dotaisfire"] = { "Dotaisfire", 9799, 3, 2, 119, { [2] = 9799 }, { [2] = 119 }, nil, nil, nil, true }
-players["bullemimage"] = { "Bullemimage", 9799, 3, 2, 120, { [2] = 9799, [3] = 304 }, { [2] = 120, [3] = 121 }, nil, nil, nil, true }
-players["cypher"] = { "Cypher", 9796, 3, 2, 121, { [2] = 9796 }, { [2] = 121 }, nil, nil, nil, true }
-players["zzss"] = { "Zzss", 9795, 3, 2, 122, { [2] = 9795 }, { [2] = 122 }, nil, nil, nil, true }
-players["haka"] = { "Haka", 9791, 3, 2, 123, { [2] = 9791 }, { [2] = 123 }, nil, nil, nil, true }
-players["bigblast"] = { "Bigblast", 9791, 3, 2, 124, { [2] = 9791 }, { [2] = 124 }, nil, nil, nil, true }
-players["camacho"] = { "Camacho", 9791, 3, 2, 125, { [2] = 9791 }, { [2] = 125 }, nil, nil, nil, true }
-players["dictamagxe"] = { "Dictamagxe", 9789, 3, 2, 126, { [2] = 9789 }, { [2] = 126 }, nil, nil, nil, true }
-players["behonest"] = { "Behonest", 9788, 3, 2, 127, { [2] = 9788 }, { [2] = 127 }, nil, nil, nil, true }
-players["cetvrtak"] = { "Cetvrtak", 9786, 3, 2, 128, { [2] = 9786 }, { [2] = 128 }, nil, nil, nil, true }
-players["biqloshi"] = { "Biqloshi", 9784, 3, 2, 129, { [2] = 9784 }, { [2] = 129 }, nil, nil, nil, true }
-players["odmg"] = { "Odmg", 9782, 3, 2, 130, { [2] = 9782 }, { [2] = 130 }, nil, nil, nil, true }
-players["gejzeria"] = { "Gejzeria", 9781, 3, 2, 131, { [2] = 9781 }, { [2] = 131 }, nil, nil, nil, true }
-players["nordymage"] = { "Nordymage", 9780, 3, 2, 132, { [2] = 9780 }, { [2] = 132 }, nil, nil, nil, true }
-players["txmmy"] = { "Txmmy", 9776, 3, 2, 133, { [2] = 9776 }, { [2] = 133 }, nil, nil, nil, true }
-players["arderqt"] = { "Arderqt", 9776, 3, 2, 134, { [2] = 9776 }, { [2] = 134 }, nil, nil, nil, true }
-players["awnigodx"] = { "Awnigodx", 9775, 3, 2, 135, { [2] = 9775 }, { [2] = 135 }, nil, nil, nil, true }
-players["skolitrotl"] = { "Skolitrotl", 9773, 3, 2, 136, { [2] = 9773 }, { [2] = 136 }, nil, nil, nil, true }
-players["arcanestorm"] = { "Arcanestorm", 9772, 3, 2, 137, { [2] = 9772 }, { [2] = 137 }, nil, nil, nil, true }
-players["roadjack"] = { "Roadjack", 9770, 3, 2, 138, { [2] = 9770 }, { [2] = 138 }, nil, nil, nil, true }
-players["beemice"] = { "Beemice", 9769, 3, 2, 139, { [2] = 9769 }, { [2] = 139 }, nil, nil, nil, true }
-players["necekrita"] = { "Necekrita", 9767, 3, 2, 140, { [2] = 9767 }, { [2] = 140 }, nil, nil, nil, true }
-players["wzlom"] = { "Wzlom", 9764, 3, 2, 141, { [2] = 9764 }, { [2] = 141 }, nil, nil, nil, true }
-players["pyroskinfo"] = { "Pyroskinfo", 9764, 3, 2, 142, { [2] = 9764 }, { [2] = 142 }, nil, nil, nil, true }
-players["ninesbunshin"] = { "Ninesbunshin", 9762, 3, 2, 143, { [2] = 9762 }, { [2] = 143 }, nil, nil, nil, true }
-players["bobbi"] = { "Bobbi", 9761, 3, 2, 144, { [1] = 8624, [2] = 9761, [3] = 8483 }, { [1] = 53, [2] = 144, [3] = 7 }, nil, nil, nil, true }
-players["vairusxd"] = { "Vairusxd", 9760, 3, 2, 145, { [2] = 9760 }, { [2] = 145 }, nil, nil, nil, true }
-players["lilypls"] = { "Lilypls", 9758, 3, 2, 146, { [2] = 9758 }, { [2] = 146 }, nil, nil, nil, true }
-players["arya"] = { "Arya", 9756, 3, 2, 147, { [2] = 9756 }, { [2] = 147 }, nil, nil, nil, true }
-players["anidaedric"] = { "Anidaedric", 9756, 3, 2, 148, { [2] = 9756 }, { [2] = 148 }, nil, nil, nil, true }
-players["closetobest"] = { "Closetobest", 9754, 3, 2, 149, { [2] = 9754 }, { [2] = 149 }, nil, nil, nil, true }
+players["nalice"] = { "Nalice", 9821, 3, 2, 107, { [2] = 9821 }, { [2] = 107 }, nil, nil, nil, true }
+players["mezonqt"] = { "Mezonqt", 9817, 3, 2, 108, { [2] = 9817 }, { [2] = 108 }, nil, nil, nil, true }
+players["xtreamass"] = { "Xtreamass", 9814, 3, 2, 109, { [2] = 9814 }, { [2] = 109 }, nil, nil, nil, true }
+players["carrymodm"] = { "Carrymodm", 9813, 3, 2, 110, { [2] = 9813 }, { [2] = 110 }, nil, nil, nil, true }
+players["apkebaam"] = { "Apkebaam", 9812, 3, 2, 111, { [2] = 9812 }, { [2] = 111 }, nil, nil, nil, true }
+players["zhcrit"] = { "Zhcrit", 9812, 3, 2, 112, { [2] = 9812 }, { [2] = 112 }, nil, nil, nil, true }
+players["batsali"] = { "Batsali", 9808, 3, 2, 113, { [1] = 410, [2] = 9808 }, { [1] = 1679, [2] = 113 }, nil, nil, nil, true }
+players["rubeuss"] = { "Rubeuss", 9808, 3, 2, 114, { [2] = 9808 }, { [2] = 114 }, nil, nil, nil, true }
+players["kakkao"] = { "Kakkao", 9807, 3, 2, 115, { [2] = 9807 }, { [2] = 115 }, nil, nil, nil, true }
+players["cetvrtak"] = { "Cetvrtak", 9805, 3, 2, 116, { [2] = 9805 }, { [2] = 116 }, nil, nil, nil, true }
+players["whooplius"] = { "Whooplius", 9803, 3, 2, 117, { [2] = 9803 }, { [2] = 117 }, nil, nil, nil, true }
+players["mysticalfire"] = { "Mysticalfire", 9802, 3, 2, 118, { [2] = 9802 }, { [2] = 118 }, nil, nil, nil, true }
+players["imcrazyx"] = { "Imcrazyx", 9799, 3, 2, 119, { [2] = 9799 }, { [2] = 119 }, nil, nil, nil, true }
+players["migrant"] = { "Migrant", 9798, 3, 2, 120, { [2] = 9798 }, { [2] = 120 }, nil, nil, nil, true }
+players["bullemimage"] = { "Bullemimage", 9797, 3, 2, 121, { [2] = 9797, [3] = 304 }, { [2] = 121, [3] = 121 }, nil, nil, nil, true }
+players["dotaisfire"] = { "Dotaisfire", 9797, 3, 2, 122, { [2] = 9797 }, { [2] = 122 }, nil, nil, nil, true }
+players["zzss"] = { "Zzss", 9794, 3, 2, 123, { [2] = 9794 }, { [2] = 123 }, nil, nil, nil, true }
+players["bigblast"] = { "Bigblast", 9789, 3, 2, 124, { [2] = 9789 }, { [2] = 124 }, nil, nil, nil, true }
+players["haka"] = { "Haka", 9789, 3, 2, 125, { [2] = 9789 }, { [2] = 125 }, nil, nil, nil, true }
+players["camacho"] = { "Camacho", 9788, 3, 2, 126, { [2] = 9788 }, { [2] = 126 }, nil, nil, nil, true }
+players["dictamagxe"] = { "Dictamagxe", 9786, 3, 2, 127, { [2] = 9786 }, { [2] = 127 }, nil, nil, nil, true }
+players["behonest"] = { "Behonest", 9786, 3, 2, 128, { [2] = 9786 }, { [2] = 128 }, nil, nil, nil, true }
+players["biqloshi"] = { "Biqloshi", 9782, 3, 2, 129, { [2] = 9782 }, { [2] = 129 }, nil, nil, nil, true }
+players["odmg"] = { "Odmg", 9780, 3, 2, 130, { [2] = 9780 }, { [2] = 130 }, nil, nil, nil, true }
+players["gejzeria"] = { "Gejzeria", 9779, 3, 2, 131, { [2] = 9779 }, { [2] = 131 }, nil, nil, nil, true }
+players["nordymage"] = { "Nordymage", 9778, 3, 2, 132, { [2] = 9778 }, { [2] = 132 }, nil, nil, nil, true }
+players["txmmy"] = { "Txmmy", 9774, 3, 2, 133, { [2] = 9774 }, { [2] = 133 }, nil, nil, nil, true }
+players["awnigodx"] = { "Awnigodx", 9773, 3, 2, 134, { [2] = 9773 }, { [2] = 134 }, nil, nil, nil, true }
+players["arderqt"] = { "Arderqt", 9773, 3, 2, 135, { [2] = 9773 }, { [2] = 135 }, nil, nil, nil, true }
+players["skolitrotl"] = { "Skolitrotl", 9771, 3, 2, 136, { [2] = 9771 }, { [2] = 136 }, nil, nil, nil, true }
+players["arcanestorm"] = { "Arcanestorm", 9770, 3, 2, 137, { [2] = 9770 }, { [2] = 137 }, nil, nil, nil, true }
+players["roadjack"] = { "Roadjack", 9768, 3, 2, 138, { [2] = 9768 }, { [2] = 138 }, nil, nil, nil, true }
+players["beemice"] = { "Beemice", 9767, 3, 2, 139, { [2] = 9767 }, { [2] = 139 }, nil, nil, nil, true }
+players["necekrita"] = { "Necekrita", 9764, 3, 2, 140, { [2] = 9764 }, { [2] = 140 }, nil, nil, nil, true }
+players["wzlom"] = { "Wzlom", 9762, 3, 2, 141, { [2] = 9762 }, { [2] = 141 }, nil, nil, nil, true }
+players["arya"] = { "Arya", 9762, 3, 2, 142, { [2] = 9762 }, { [2] = 142 }, nil, nil, nil, true }
+players["pyroskinfo"] = { "Pyroskinfo", 9761, 3, 2, 143, { [2] = 9761 }, { [2] = 143 }, nil, nil, nil, true }
+players["ninesbunshin"] = { "Ninesbunshin", 9759, 3, 2, 144, { [2] = 9759 }, { [2] = 144 }, nil, nil, nil, true }
+players["bobbi"] = { "Bobbi", 9758, 3, 2, 145, { [1] = 8620, [2] = 9758, [3] = 8484 }, { [1] = 55, [2] = 145, [3] = 7 }, nil, nil, nil, true }
+players["vairusxd"] = { "Vairusxd", 9758, 3, 2, 146, { [2] = 9758 }, { [2] = 146 }, nil, nil, nil, true }
+players["lilypls"] = { "Lilypls", 9756, 3, 2, 147, { [2] = 9756 }, { [2] = 147 }, nil, nil, nil, true }
+players["anidaedric"] = { "Anidaedric", 9754, 3, 2, 148, { [2] = 9754 }, { [2] = 148 }, nil, nil, nil, true }
+players["closetobest"] = { "Closetobest", 9752, 3, 2, 149, { [2] = 9752 }, { [2] = 149 }, nil, nil, nil, true }
 players["hakaa"] = { "Hakaa", 9757, 3, 2, 149, { [2] = 9757 }, { [2] = 149 }, nil, nil, nil, false }
-players["trytocrit"] = { "Trytocrit", 9753, 3, 2, 150, { [2] = 9753 }, { [2] = 150 }, nil, nil, nil, true }
-players["proloka"] = { "Proloka", 9752, 3, 2, 151, { [2] = 9752 }, { [2] = 151 }, nil, nil, nil, true }
-players["kukies"] = { "Kukies", 9752, 3, 2, 152, { [1] = 8374, [2] = 9752 }, { [1] = 67, [2] = 152 }, nil, nil, nil, true }
-players["upallnight"] = { "Upallnight", 9751, 3, 2, 153, { [2] = 9751 }, { [2] = 153 }, nil, nil, nil, true }
-players["ardergodx"] = { "Ardergodx", 9748, 3, 2, 154, { [1] = 5556, [2] = 9748 }, { [1] = 220, [2] = 154 }, nil, nil, nil, true }
-players["sindysweeney"] = { "Sindysweeney", 9748, 3, 2, 155, { [2] = 9748 }, { [2] = 155 }, nil, nil, nil, true }
-players["rampmage"] = { "Rampmage", 9747, 3, 2, 156, { [2] = 9747 }, { [2] = 156 }, nil, nil, nil, true }
-players["blastermagus"] = { "Blastermagus", 9746, 3, 2, 157, { [2] = 9746 }, { [2] = 157 }, nil, nil, nil, true }
-players["fdy"] = { "Fdy", 9745, 3, 2, 158, { [2] = 9745 }, { [2] = 158 }, nil, nil, nil, true }
-players["fireandy"] = { "Fireandy", 9745, 3, 2, 159, { [2] = 9745 }, { [2] = 159 }, nil, nil, nil, true }
-players["dimhasd"] = { "Dimhasd", 9744, 3, 2, 160, { [2] = 9744 }, { [2] = 160 }, nil, nil, nil, true }
-players["yellofello"] = { "Yellofello", 9743, 3, 2, 161, { [2] = 9743 }, { [2] = 161 }, nil, nil, nil, true }
-players["karinox"] = { "Karinox", 9742, 3, 2, 162, { [2] = 9742 }, { [2] = 162 }, nil, nil, nil, true }
-players["rayemage"] = { "Rayemage", 9740, 3, 2, 163, { [2] = 9740 }, { [2] = 163 }, nil, nil, nil, true }
-players["horing"] = { "Horing", 9740, 3, 2, 164, { [2] = 9740 }, { [2] = 164 }, nil, nil, nil, true }
-players["dotaisblastr"] = { "Dotaisblastr", 9739, 3, 2, 165, { [2] = 9739 }, { [2] = 165 }, nil, nil, nil, true }
-players["ziboo"] = { "Ziboo", 9739, 3, 2, 166, { [2] = 9739 }, { [2] = 166 }, nil, nil, nil, true }
-players["akhmatsila"] = { "Akhmatsila", 9738, 3, 2, 167, { [2] = 9738 }, { [2] = 167 }, nil, nil, nil, true }
-players["priya"] = { "Priya", 9737, 3, 2, 168, { [2] = 9737 }, { [2] = 168 }, nil, nil, nil, true }
-players["sagerra"] = { "Sagerra", 9736, 3, 2, 169, { [2] = 9736, [3] = 9718 }, { [2] = 169, [3] = 3 }, nil, nil, nil, true }
-players["fuga"] = { "Fuga", 9734, 3, 2, 170, { [2] = 9734 }, { [2] = 170 }, nil, nil, nil, true }
-players["fritosh"] = { "Fritosh", 9732, 3, 2, 171, { [2] = 9732 }, { [2] = 171 }, nil, nil, nil, true }
-players["jouina"] = { "Jouina", 9730, 3, 2, 172, { [2] = 9730 }, { [2] = 172 }, nil, nil, nil, true }
-players["anthonydavis"] = { "Anthonydavis", 10000, 3, 3, 1, { [1] = 8582, [2] = 7753, [3] = 10000 }, { [1] = 57, [2] = 1967, [3] = 1 }, nil, nil, nil, true }
-players["iamanoob"] = { "Iamanoob", 9903, 3, 3, 2, { [1] = 8221, [2] = 9565, [3] = 9903 }, { [1] = 73, [2] = 290, [3] = 2 }, nil, nil, nil, true }
-players["everchill"] = { "Everchill", 8611, 3, 3, 6, { [3] = 8611 }, { [3] = 6 }, nil, nil, nil, true }
-players["mizery"] = { "Mizery", 10000, 4, 1, 1, { [1] = 10000, [3] = 8582 }, { [1] = 1, [3] = 982 }, nil, nil, nil, true }
-players["zoid"] = { "Zoid", 9997, 4, 1, 2, { [1] = 9997, [2] = 5702 }, { [1] = 2, [2] = 2736 }, nil, nil, nil, true }
-players["maraadx"] = { "Maraadx", 9995, 4, 1, 3, { [1] = 9995, [2] = 3870 }, { [1] = 3, [2] = 5470 }, nil, nil, nil, true }
-players["axiator"] = { "Axiator", 9994, 4, 1, 4, { [1] = 9994, [3] = 4297 }, { [1] = 4, [3] = 11649 }, nil, nil, nil, true }
-players["dundii"] = { "Dundii", 9993, 4, 1, 5, { [1] = 9993, [3] = 6547 }, { [1] = 5, [3] = 4105 }, nil, nil, nil, true }
-players["thall"] = { "Thall", 9990, 4, 1, 6, { [1] = 9990, [2] = 8216 }, { [1] = 6, [2] = 432 }, nil, nil, nil, true }
-players["zaocadin"] = { "Zaocadin", 9990, 4, 1, 7, { [1] = 9990, [3] = 7498 }, { [1] = 7, [3] = 2285 }, nil, nil, nil, true }
+players["qoik"] = { "Qoik", 9751, 3, 2, 150, { [2] = 9751 }, { [2] = 150 }, nil, nil, nil, true }
+players["trytocrit"] = { "Trytocrit", 9750, 3, 2, 151, { [2] = 9750 }, { [2] = 151 }, nil, nil, nil, true }
+players["kukies"] = { "Kukies", 9750, 3, 2, 152, { [1] = 8367, [2] = 9750 }, { [1] = 68, [2] = 152 }, nil, nil, nil, true }
+players["proloka"] = { "Proloka", 9749, 3, 2, 153, { [2] = 9749 }, { [2] = 153 }, nil, nil, nil, true }
+players["upallnight"] = { "Upallnight", 9749, 3, 2, 154, { [2] = 9749 }, { [2] = 154 }, nil, nil, nil, true }
+players["halfbaked"] = { "Halfbaked", 9749, 3, 2, 155, { [2] = 9749 }, { [2] = 155 }, nil, nil, nil, true }
+players["ardergodx"] = { "Ardergodx", 9746, 3, 2, 156, { [1] = 5554, [2] = 9746 }, { [1] = 223, [2] = 156 }, nil, nil, nil, true }
+players["sindysweeney"] = { "Sindysweeney", 9746, 3, 2, 157, { [2] = 9746 }, { [2] = 157 }, nil, nil, nil, true }
+players["rampmage"] = { "Rampmage", 9744, 3, 2, 158, { [2] = 9744 }, { [2] = 158 }, nil, nil, nil, true }
+players["blastermagus"] = { "Blastermagus", 9744, 3, 2, 159, { [2] = 9744 }, { [2] = 159 }, nil, nil, nil, true }
+players["fdy"] = { "Fdy", 9742, 3, 2, 160, { [2] = 9742 }, { [2] = 160 }, nil, nil, nil, true }
+players["fireandy"] = { "Fireandy", 9742, 3, 2, 161, { [2] = 9742 }, { [2] = 161 }, nil, nil, nil, true }
+players["dimhasd"] = { "Dimhasd", 9741, 3, 2, 162, { [2] = 9741 }, { [2] = 162 }, nil, nil, nil, true }
+players["yellofello"] = { "Yellofello", 9740, 3, 2, 163, { [2] = 9740 }, { [2] = 163 }, nil, nil, nil, true }
+players["ziboo"] = { "Ziboo", 9739, 3, 2, 164, { [2] = 9739 }, { [2] = 164 }, nil, nil, nil, true }
+players["karinox"] = { "Karinox", 9739, 3, 2, 165, { [2] = 9739 }, { [2] = 165 }, nil, nil, nil, true }
+players["rayemage"] = { "Rayemage", 9738, 3, 2, 166, { [2] = 9738 }, { [2] = 166 }, nil, nil, nil, true }
+players["dotaisblastr"] = { "Dotaisblastr", 9738, 3, 2, 167, { [2] = 9738 }, { [2] = 167 }, nil, nil, nil, true }
+players["horing"] = { "Horing", 9738, 3, 2, 168, { [2] = 9738 }, { [2] = 168 }, nil, nil, nil, true }
+players["akhmatsila"] = { "Akhmatsila", 9735, 3, 2, 169, { [2] = 9735 }, { [2] = 169 }, nil, nil, nil, true }
+players["neodt"] = { "Neodt", 9734, 3, 2, 170, { [2] = 9734 }, { [2] = 170 }, nil, nil, nil, true }
+players["priya"] = { "Priya", 9734, 3, 2, 171, { [2] = 9734 }, { [2] = 171 }, nil, nil, nil, true }
+players["sagerra"] = { "Sagerra", 9734, 3, 2, 172, { [2] = 9734, [3] = 9718 }, { [2] = 172, [3] = 3 }, nil, nil, nil, true }
+players["anthonydavis"] = { "Anthonydavis", 10000, 3, 3, 1, { [1] = 8566, [2] = 7743, [3] = 10000 }, { [1] = 59, [2] = 1986, [3] = 1 }, nil, nil, nil, true }
+players["iamanoob"] = { "Iamanoob", 9903, 3, 3, 2, { [1] = 8214, [2] = 9561, [3] = 9903 }, { [1] = 75, [2] = 291, [3] = 2 }, nil, nil, nil, true }
+players["everchill"] = { "Everchill", 8606, 3, 3, 6, { [3] = 8606 }, { [3] = 6 }, nil, nil, nil, true }
+players["mizery"] = { "Mizery", 10000, 4, 1, 1, { [1] = 10000, [3] = 8578 }, { [1] = 1, [3] = 984 }, nil, nil, nil, true }
+players["zoid"] = { "Zoid", 9997, 4, 1, 2, { [1] = 9997, [2] = 5688 }, { [1] = 2, [2] = 2753 }, nil, nil, nil, true }
+players["maraadx"] = { "Maraadx", 9995, 4, 1, 3, { [1] = 9995, [2] = 3858 }, { [1] = 3, [2] = 5487 }, nil, nil, nil, true }
+players["axiator"] = { "Axiator", 9994, 4, 1, 4, { [1] = 9994, [3] = 4296 }, { [1] = 4, [3] = 11696 }, nil, nil, nil, true }
+players["dundii"] = { "Dundii", 9993, 4, 1, 5, { [1] = 9993, [3] = 6545 }, { [1] = 5, [3] = 4118 }, nil, nil, nil, true }
+players["thall"] = { "Thall", 9990, 4, 1, 6, { [1] = 9990, [2] = 8212 }, { [1] = 6, [2] = 433 }, nil, nil, nil, true }
+players["zaocadin"] = { "Zaocadin", 9990, 4, 1, 7, { [1] = 9990, [3] = 7495 }, { [1] = 7, [3] = 2291 }, nil, nil, nil, true }
 players["greencephone"] = { "Greencephone", 9984, 4, 1, 8, { [1] = 9984 }, { [1] = 8 }, nil, nil, nil, true }
 players["ourhope"] = { "Ourhope", 9976, 4, 1, 9, { [1] = 9976 }, { [1] = 9 }, nil, nil, nil, true }
-players["robosonic"] = { "Robosonic", 9970, 4, 1, 10, { [1] = 9970, [2] = 9646, [3] = 940 }, { [1] = 10, [2] = 57, [3] = 22502 }, nil, nil, nil, true }
-players["skutyboboo"] = { "Skutyboboo", 9967, 4, 1, 11, { [1] = 9967, [2] = 6028 }, { [1] = 11, [2] = 2323 }, nil, nil, nil, true }
-players["candlethief"] = { "Candlethief", 9966, 4, 1, 12, { [1] = 9966, [2] = 8602, [3] = 9842 }, { [1] = 12, [2] = 274, [3] = 85 }, nil, nil, nil, true }
+players["robosonic"] = { "Robosonic", 9970, 4, 1, 10, { [1] = 9970, [2] = 9645, [3] = 940 }, { [1] = 10, [2] = 57, [3] = 22569 }, nil, nil, nil, true }
+players["skutyboboo"] = { "Skutyboboo", 9967, 4, 1, 11, { [1] = 9967, [2] = 6018 }, { [1] = 11, [2] = 2336 }, nil, nil, nil, true }
+players["candlethief"] = { "Candlethief", 9966, 4, 1, 12, { [1] = 9966, [2] = 8600, [3] = 9841 }, { [1] = 12, [2] = 274, [3] = 86 }, nil, nil, nil, true }
 players["lovemykiss"] = { "Lovemykiss", 9959, 4, 1, 14, { [1] = 9959 }, { [1] = 14 }, nil, nil, nil, true }
 players["mezonhp"] = { "Mezonhp", 9962, 4, 1, 14, { [1] = 9962 }, { [1] = 14 }, nil, nil, nil, false }
 players["histerija"] = { "Histerija", 9947, 4, 1, 15, { [1] = 9947 }, { [1] = 15 }, nil, nil, nil, true }
-players["dazo"] = { "Dazo", 9945, 4, 1, 16, { [1] = 9945, [2] = 2767, [3] = 9523 }, { [1] = 16, [2] = 7805, [3] = 270 }, nil, nil, nil, true }
-players["cutexx"] = { "Cutexx", 9942, 4, 1, 17, { [1] = 9942, [3] = 9050 }, { [1] = 17, [3] = 586 }, nil, nil, nil, true }
+players["dazo"] = { "Dazo", 9944, 4, 1, 16, { [1] = 9944, [2] = 2758, [3] = 9522 }, { [1] = 16, [2] = 7827, [3] = 270 }, nil, nil, nil, true }
+players["cutexx"] = { "Cutexx", 9942, 4, 1, 17, { [1] = 9942, [3] = 9048 }, { [1] = 17, [3] = 588 }, nil, nil, nil, true }
 players["superskill"] = { "Superskill", 9929, 4, 1, 18, { [1] = 9929 }, { [1] = 18 }, nil, nil, nil, true }
-players["tramamuro"] = { "Tramamuro", 9922, 4, 1, 19, { [1] = 9922 }, { [1] = 19 }, nil, nil, nil, true }
-players["anjela"] = { "Anjela", 9917, 4, 1, 20, { [1] = 9917, [3] = 5711 }, { [1] = 20, [3] = 6607 }, nil, nil, nil, true }
-players["xaxaxaxxa"] = { "Xaxaxaxxa", 9894, 4, 1, 21, { [1] = 9894, [2] = 6675 }, { [1] = 21, [2] = 1604 }, nil, nil, nil, true }
-players["hawcks"] = { "Hawcks", 9890, 4, 1, 22, { [1] = 9890, [3] = 4925 }, { [1] = 22, [3] = 9700 }, nil, nil, nil, true }
-players["vevess"] = { "Vevess", 9874, 4, 1, 23, { [1] = 9874, [3] = 1672 }, { [1] = 23, [3] = 21341 }, nil, nil, nil, true }
-players["cizmiak"] = { "Cizmiak", 9859, 4, 1, 24, { [1] = 9859, [2] = 4287 }, { [1] = 24, [2] = 4738 }, nil, nil, nil, true }
-players["lipicka"] = { "Lipicka", 9844, 4, 1, 25, { [1] = 9844, [3] = 9351 }, { [1] = 25, [3] = 383 }, nil, nil, nil, true }
-players["katlynx"] = { "Katlynx", 9830, 4, 1, 26, { [1] = 9830, [3] = 7268 }, { [1] = 26, [3] = 2637 }, nil, nil, nil, true }
-players["nesumlqgal"] = { "Nesumlqgal", 9818, 4, 1, 27, { [1] = 9818 }, { [1] = 27 }, nil, nil, nil, true }
-players["candlekeep"] = { "Candlekeep", 9810, 4, 1, 28, { [1] = 9810 }, { [1] = 28 }, nil, nil, nil, true }
-players["esspi"] = { "Esspi", 9801, 4, 1, 29, { [1] = 9801, [3] = 5722 }, { [1] = 29, [3] = 6562 }, nil, nil, nil, true }
-players["treecutter"] = { "Treecutter", 9797, 4, 1, 30, { [1] = 9797, [3] = 7047 }, { [1] = 30, [3] = 3055 }, nil, nil, nil, true }
-players["blacckgirl"] = { "Blacckgirl", 9781, 4, 1, 31, { [1] = 9781, [3] = 3787 }, { [1] = 31, [3] = 12997 }, nil, nil, nil, true }
-players["sweetchill"] = { "Sweetchill", 9766, 4, 1, 32, { [1] = 9766, [3] = 6302 }, { [1] = 32, [3] = 4739 }, nil, nil, nil, true }
-players["daeryk"] = { "Daeryk", 9760, 4, 1, 33, { [1] = 9760, [3] = 7655 }, { [1] = 33, [3] = 2046 }, nil, nil, nil, true }
-players["loganshpala"] = { "Loganshpala", 9754, 4, 1, 34, { [1] = 9754 }, { [1] = 34 }, nil, nil, nil, true }
-players["cizma"] = { "Cizma", 9754, 4, 1, 35, { [1] = 9754, [3] = 6241 }, { [1] = 35, [3] = 4907 }, nil, nil, nil, true }
-players["thastordjdj"] = { "Thastordjdj", 9726, 4, 1, 36, { [1] = 9726 }, { [1] = 36 }, nil, nil, nil, true }
-players["figoladin"] = { "Figoladin", 9724, 4, 1, 37, { [1] = 9724, [2] = 4140, [3] = 9344 }, { [1] = 37, [2] = 4968, [3] = 388 }, nil, nil, nil, true }
-players["histerijaa"] = { "Histerijaa", 9718, 4, 1, 38, { [1] = 9718 }, { [1] = 38 }, nil, nil, nil, true }
-players["ksyushaa"] = { "Ksyushaa", 9716, 4, 1, 39, { [1] = 9716, [3] = 4725 }, { [1] = 39, [3] = 10388 }, nil, nil, nil, true }
-players["esyl"] = { "Esyl", 9700, 4, 1, 41, { [1] = 9700, [2] = 5172 }, { [1] = 41, [2] = 3418 }, nil, nil, nil, true }
-players["bengotron"] = { "Bengotron", 9700, 4, 1, 42, { [1] = 9700, [2] = 7536, [3] = 5702 }, { [1] = 42, [2] = 825, [3] = 6635 }, nil, nil, nil, true }
-players["holyshotovna"] = { "Holyshotovna", 9697, 4, 1, 43, { [1] = 9697, [3] = 7041 }, { [1] = 43, [3] = 3068 }, nil, nil, nil, true }
-players["fwash"] = { "Fwash", 9697, 4, 1, 44, { [1] = 9697 }, { [1] = 44 }, nil, nil, nil, true }
-players["radical"] = { "Radical", 9687, 4, 1, 45, { [1] = 9687, [3] = 1532 }, { [1] = 45, [3] = 21613 }, nil, nil, nil, true }
-players["loganshhpala"] = { "Loganshhpala", 9680, 4, 1, 46, { [1] = 9680, [2] = 4750 }, { [1] = 46, [2] = 3984 }, nil, nil, nil, true }
-players["fatlinka"] = { "Fatlinka", 9676, 4, 1, 47, { [1] = 9676 }, { [1] = 47 }, nil, nil, nil, true }
-players["fogell"] = { "Fogell", 9663, 4, 1, 48, { [1] = 9663, [2] = 8266, [3] = 8971 }, { [1] = 48, [2] = 408, [3] = 652 }, nil, nil, nil, true }
-players["nodisuck"] = { "Nodisuck", 9656, 4, 1, 50, { [1] = 9656 }, { [1] = 50 }, nil, nil, nil, true }
-players["piskavatetka"] = { "Piskavatetka", 9654, 4, 1, 51, { [1] = 9654 }, { [1] = 51 }, nil, nil, nil, true }
-players["mistrchad"] = { "Mistrchad", 9650, 4, 1, 52, { [1] = 9650 }, { [1] = 52 }, nil, nil, nil, true }
-players["kixelated"] = { "Kixelated", 9641, 4, 1, 53, { [1] = 9641, [2] = 6628 }, { [1] = 53, [2] = 1652 }, nil, nil, nil, true }
-players["friele"] = { "Friele", 9639, 4, 1, 54, { [1] = 9639 }, { [1] = 54 }, nil, nil, nil, true }
-players["lovecheeryxd"] = { "Lovecheeryxd", 9611, 4, 1, 55, { [1] = 9611, [3] = 9491 }, { [1] = 55, [3] = 290 }, nil, nil, nil, true }
-players["elizabeht"] = { "Elizabeht", 9607, 4, 1, 56, { [1] = 9607, [2] = 5676 }, { [1] = 56, [2] = 2767 }, nil, nil, nil, true }
-players["holylylee"] = { "Holylylee", 9607, 4, 1, 57, { [1] = 9607, [3] = 6731 }, { [1] = 57, [3] = 3684 }, nil, nil, nil, true }
-players["holyclass"] = { "Holyclass", 9596, 4, 1, 58, { [1] = 9596 }, { [1] = 58 }, nil, nil, nil, true }
-players["speco"] = { "Speco", 9594, 4, 1, 59, { [1] = 9594, [2] = 6384 }, { [1] = 59, [2] = 1906 }, nil, nil, nil, true }
-players["cataclyzm"] = { "Cataclyzm", 9582, 4, 1, 61, { [1] = 9582, [2] = 1459, [3] = 4341 }, { [1] = 61, [2] = 10714, [3] = 11519 }, nil, nil, nil, true }
-players["legionx"] = { "Legionx", 9580, 4, 1, 62, { [1] = 9580, [3] = 6071 }, { [1] = 62, [3] = 5384 }, nil, nil, nil, true }
-players["trenzu"] = { "Trenzu", 9579, 4, 1, 63, { [1] = 9579 }, { [1] = 63 }, nil, nil, nil, true }
-players["falesh"] = { "Falesh", 9577, 4, 1, 64, { [1] = 9577, [2] = 5670, [3] = 6545 }, { [1] = 64, [2] = 2772, [3] = 4109 }, nil, nil, nil, true }
-players["blain"] = { "Blain", 9572, 4, 1, 65, { [1] = 9572, [3] = 7846 }, { [1] = 65, [3] = 1780 }, nil, nil, nil, true }
-players["valxala"] = { "Valxala", 9564, 4, 1, 66, { [1] = 9564 }, { [1] = 66 }, nil, nil, nil, true }
-players["wickedwilly"] = { "Wickedwilly", 9563, 4, 1, 67, { [1] = 9563, [3] = 8888 }, { [1] = 67, [3] = 708 }, nil, nil, nil, true }
-players["callmesensei"] = { "Callmesensei", 9563, 4, 1, 68, { [1] = 9563, [2] = 7520 }, { [1] = 68, [2] = 838 }, nil, nil, nil, true }
-players["jelenarozgax"] = { "Jelenarozgax", 9559, 4, 1, 69, { [1] = 9559 }, { [1] = 69 }, nil, nil, nil, true }
-players["neverundead"] = { "Neverundead", 9556, 4, 1, 70, { [1] = 9556 }, { [1] = 70 }, nil, nil, nil, true }
-players["fs"] = { "Fs", 9546, 4, 1, 71, { [1] = 9546 }, { [1] = 71 }, nil, nil, nil, true }
-players["sunshine"] = { "Sunshine", 9545, 4, 1, 72, { [1] = 9545 }, { [1] = 72 }, nil, nil, nil, true }
-players["manadin"] = { "Manadin", 9542, 4, 1, 73, { [1] = 9542, [3] = 3786 }, { [1] = 73, [3] = 13000 }, nil, nil, nil, true }
-players["hayrpum"] = { "Hayrpum", 9541, 4, 1, 74, { [1] = 9541, [2] = 2523 }, { [1] = 74, [2] = 8429 }, nil, nil, nil, true }
-players["bronx"] = { "Bronx", 9540, 4, 1, 75, { [1] = 9540, [3] = 5255 }, { [1] = 75, [3] = 8390 }, nil, nil, nil, true }
-players["nwf"] = { "Nwf", 9527, 4, 1, 76, { [1] = 9527, [3] = 7211 }, { [1] = 76, [3] = 2722 }, nil, nil, nil, true }
-players["serejalgbt"] = { "Serejalgbt", 9525, 4, 1, 77, { [1] = 9525 }, { [1] = 77 }, nil, nil, nil, true }
-players["drle"] = { "Drle", 9525, 4, 1, 78, { [1] = 9525 }, { [1] = 78 }, nil, nil, nil, true }
-players["aocwipe"] = { "Aocwipe", 9525, 4, 1, 79, { [1] = 9525 }, { [1] = 79 }, nil, nil, nil, true }
-players["theramond"] = { "Theramond", 9515, 4, 1, 80, { [1] = 9515, [2] = 8367, [3] = 8735 }, { [1] = 80, [2] = 365, [3] = 828 }, nil, nil, nil, true }
-players["snejokjz"] = { "Snejokjz", 9495, 4, 1, 81, { [1] = 9495 }, { [1] = 81 }, nil, nil, nil, true }
-players["baldcore"] = { "Baldcore", 9488, 4, 1, 82, { [1] = 9488, [3] = 2842 }, { [1] = 82, [3] = 16774 }, nil, nil, nil, true }
-players["lolenka"] = { "Lolenka", 9486, 4, 1, 83, { [1] = 9486, [2] = 7209, [3] = 9421 }, { [1] = 83, [2] = 1108, [3] = 336 }, nil, nil, nil, true }
-players["farmkilov"] = { "Farmkilov", 9485, 4, 1, 84, { [1] = 9485, [2] = 7380, [3] = 4905 }, { [1] = 84, [2] = 962, [3] = 9767 }, nil, nil, nil, true }
-players["holagi"] = { "Holagi", 9482, 4, 1, 85, { [1] = 9482 }, { [1] = 85 }, nil, nil, nil, true }
-players["wtbpotion"] = { "Wtbpotion", 9480, 4, 1, 86, { [1] = 9480, [3] = 4231 }, { [1] = 86, [3] = 11845 }, nil, nil, nil, true }
-players["proher"] = { "Proher", 9479, 4, 1, 87, { [1] = 9479, [2] = 6840, [3] = 6532 }, { [1] = 87, [2] = 1446, [3] = 4143 }, nil, nil, nil, true }
-players["kukumopax"] = { "Kukumopax", 9476, 4, 1, 88, { [1] = 9476 }, { [1] = 88 }, nil, nil, nil, true }
-players["holyjoy"] = { "Holyjoy", 9475, 4, 1, 89, { [1] = 9475, [2] = 7410 }, { [1] = 89, [2] = 933 }, nil, nil, nil, true }
-players["mkpal"] = { "Mkpal", 9475, 4, 1, 90, { [1] = 9475 }, { [1] = 90 }, nil, nil, nil, true }
-players["dexxyloveqx"] = { "Dexxyloveqx", 9470, 4, 1, 91, { [1] = 9470 }, { [1] = 91 }, nil, nil, nil, true }
-players["metth"] = { "Metth", 9454, 4, 1, 92, { [1] = 9454, [2] = 3757 }, { [1] = 92, [2] = 5711 }, nil, nil, nil, true }
-players["renoxx"] = { "Renoxx", 9452, 4, 1, 93, { [1] = 9452 }, { [1] = 93 }, nil, nil, nil, true }
-players["pexnx"] = { "Pexnx", 9450, 4, 1, 94, { [1] = 9450, [3] = 3410 }, { [1] = 94, [3] = 14089 }, nil, nil, nil, true }
-players["lexsandra"] = { "Lexsandra", 9450, 4, 1, 95, { [1] = 9450, [2] = 7307, [3] = 9040 }, { [1] = 95, [2] = 1021, [3] = 593 }, nil, nil, nil, true }
-players["rozholly"] = { "Rozholly", 9447, 4, 1, 96, { [1] = 9447, [2] = 7501 }, { [1] = 96, [2] = 853 }, nil, nil, nil, true }
-players["aeleroelholy"] = { "Aeleroelholy", 9441, 4, 1, 97, { [1] = 9441 }, { [1] = 97 }, nil, nil, nil, true }
-players["samarto"] = { "Samarto", 9435, 4, 1, 98, { [1] = 9435, [3] = 472 }, { [1] = 98, [3] = 23422 }, nil, nil, nil, true }
-players["dashenka"] = { "Dashenka", 9428, 4, 1, 99, { [1] = 9428, [2] = 6874, [3] = 5482 }, { [1] = 99, [2] = 1413, [3] = 7505 }, nil, nil, nil, true }
-players["stemi"] = { "Stemi", 9412, 4, 1, 100, { [1] = 9412, [2] = 8706, [3] = 8969 }, { [1] = 100, [2] = 240, [3] = 656 }, nil, nil, nil, true }
-players["shivlight"] = { "Shivlight", 9412, 4, 1, 101, { [1] = 9412 }, { [1] = 101 }, nil, nil, nil, true }
-players["sisterfour"] = { "Sisterfour", 9412, 4, 1, 102, { [1] = 9412 }, { [1] = 102 }, nil, nil, nil, true }
-players["umigame"] = { "Umigame", 9406, 4, 1, 103, { [1] = 9406 }, { [1] = 103 }, nil, nil, nil, true }
-players["eskillergg"] = { "Eskillergg", 9405, 4, 1, 104, { [1] = 9405 }, { [1] = 104 }, nil, nil, nil, true }
-players["sonasol"] = { "Sonasol", 9404, 4, 1, 105, { [1] = 9404, [2] = 6517 }, { [1] = 105, [2] = 1757 }, nil, nil, nil, true }
-players["wannabe"] = { "Wannabe", 9401, 4, 1, 106, { [1] = 9401, [3] = 5394 }, { [1] = 106, [3] = 7845 }, nil, nil, nil, true }
-players["seregalgbt"] = { "Seregalgbt", 9393, 4, 1, 107, { [1] = 9393 }, { [1] = 107 }, nil, nil, nil, true }
-players["thanthos"] = { "Thanthos", 9392, 4, 1, 108, { [1] = 9392 }, { [1] = 108 }, nil, nil, nil, true }
-players["zasa"] = { "Zasa", 9390, 4, 1, 109, { [1] = 9390, [2] = 2588 }, { [1] = 109, [2] = 8270 }, nil, nil, nil, true }
-players["ivkiz"] = { "Ivkiz", 9387, 4, 1, 110, { [1] = 9387, [2] = 7603 }, { [1] = 110, [2] = 786 }, nil, nil, nil, true }
-players["katakura"] = { "Katakura", 9386, 4, 1, 111, { [1] = 9386, [2] = 7374 }, { [1] = 111, [2] = 966 }, nil, nil, nil, true }
-players["hallogen"] = { "Hallogen", 9384, 4, 1, 112, { [1] = 9384, [3] = 5894 }, { [1] = 112, [3] = 5965 }, nil, nil, nil, true }
-players["deexter"] = { "Deexter", 9381, 4, 1, 113, { [1] = 9381, [3] = 8224 }, { [1] = 113, [3] = 1354 }, nil, nil, nil, true }
-players["divinehell"] = { "Divinehell", 9373, 4, 1, 114, { [1] = 9373 }, { [1] = 114 }, nil, nil, nil, true }
-players["raylander"] = { "Raylander", 9367, 4, 1, 115, { [1] = 9367, [3] = 5706 }, { [1] = 115, [3] = 6625 }, nil, nil, nil, true }
-players["keyapala"] = { "Keyapala", 9363, 4, 1, 117, { [1] = 9363, [3] = 8493 }, { [1] = 117, [3] = 1066 }, nil, nil, nil, true }
-players["pendosebuchi"] = { "Pendosebuchi", 9362, 4, 1, 118, { [1] = 9362, [2] = 116, [3] = 5567 }, { [1] = 118, [2] = 12246, [3] = 7196 }, nil, nil, nil, true }
+players["tramamuro"] = { "Tramamuro", 9921, 4, 1, 19, { [1] = 9921 }, { [1] = 19 }, nil, nil, nil, true }
+players["anjela"] = { "Anjela", 9917, 4, 1, 20, { [1] = 9917, [3] = 5708 }, { [1] = 20, [3] = 6642 }, nil, nil, nil, true }
+players["thanthos"] = { "Thanthos", 9902, 4, 1, 21, { [1] = 9902 }, { [1] = 21 }, nil, nil, nil, true }
+players["xaxaxaxxa"] = { "Xaxaxaxxa", 9894, 4, 1, 22, { [1] = 9894, [2] = 6667 }, { [1] = 22, [2] = 1616 }, nil, nil, nil, true }
+players["hawcks"] = { "Hawcks", 9890, 4, 1, 23, { [1] = 9890, [3] = 4924 }, { [1] = 23, [3] = 9749 }, nil, nil, nil, true }
+players["vevess"] = { "Vevess", 9874, 4, 1, 24, { [1] = 9874, [3] = 1672 }, { [1] = 24, [3] = 21408 }, nil, nil, nil, true }
+players["cizmiak"] = { "Cizmiak", 9859, 4, 1, 25, { [1] = 9859, [2] = 4281 }, { [1] = 25, [2] = 4756 }, nil, nil, nil, true }
+players["lipicka"] = { "Lipicka", 9844, 4, 1, 26, { [1] = 9844, [3] = 9349 }, { [1] = 26, [3] = 384 }, nil, nil, nil, true }
+players["esspi"] = { "Esspi", 9840, 4, 1, 27, { [1] = 9840, [3] = 5722 }, { [1] = 27, [3] = 6582 }, nil, nil, nil, true }
+players["katlynx"] = { "Katlynx", 9830, 4, 1, 28, { [1] = 9830, [3] = 7259 }, { [1] = 28, [3] = 2658 }, nil, nil, nil, true }
+players["nesumlqgal"] = { "Nesumlqgal", 9817, 4, 1, 29, { [1] = 9817 }, { [1] = 29 }, nil, nil, nil, true }
+players["candlekeep"] = { "Candlekeep", 9810, 4, 1, 30, { [1] = 9810 }, { [1] = 30 }, nil, nil, nil, true }
+players["treecutter"] = { "Treecutter", 9796, 4, 1, 31, { [1] = 9796, [3] = 7133 }, { [1] = 31, [3] = 2879 }, nil, nil, nil, true }
+players["blacckgirl"] = { "Blacckgirl", 9780, 4, 1, 32, { [1] = 9780, [3] = 3786 }, { [1] = 32, [3] = 13043 }, nil, nil, nil, true }
+players["sweetchill"] = { "Sweetchill", 9765, 4, 1, 33, { [1] = 9765, [3] = 6297 }, { [1] = 33, [3] = 4770 }, nil, nil, nil, true }
+players["daeryk"] = { "Daeryk", 9759, 4, 1, 34, { [1] = 9759, [3] = 7648 }, { [1] = 34, [3] = 2055 }, nil, nil, nil, true }
+players["cizma"] = { "Cizma", 9754, 4, 1, 35, { [1] = 9754, [3] = 6238 }, { [1] = 35, [3] = 4930 }, nil, nil, nil, true }
+players["loganshpala"] = { "Loganshpala", 9754, 4, 1, 36, { [1] = 9754 }, { [1] = 36 }, nil, nil, nil, true }
+players["thastordjdj"] = { "Thastordjdj", 9726, 4, 1, 37, { [1] = 9726 }, { [1] = 37 }, nil, nil, nil, true }
+players["figoladin"] = { "Figoladin", 9723, 4, 1, 38, { [1] = 9723, [2] = 4124, [3] = 9341 }, { [1] = 38, [2] = 4993, [3] = 389 }, nil, nil, nil, true }
+players["histerijaa"] = { "Histerijaa", 9717, 4, 1, 39, { [1] = 9717 }, { [1] = 39 }, nil, nil, nil, true }
+players["ksyushaa"] = { "Ksyushaa", 9714, 4, 1, 40, { [1] = 9714, [3] = 4724 }, { [1] = 40, [3] = 10425 }, nil, nil, nil, true }
+players["esyl"] = { "Esyl", 9699, 4, 1, 42, { [1] = 9699, [2] = 5158 }, { [1] = 42, [2] = 3431 }, nil, nil, nil, true }
+players["bengotron"] = { "Bengotron", 9699, 4, 1, 43, { [1] = 9699, [2] = 7530, [3] = 5701 }, { [1] = 43, [2] = 833, [3] = 6662 }, nil, nil, nil, true }
+players["holyshotovna"] = { "Holyshotovna", 9697, 4, 1, 44, { [1] = 9697, [3] = 7034 }, { [1] = 44, [3] = 3073 }, nil, nil, nil, true }
+players["fwash"] = { "Fwash", 9696, 4, 1, 45, { [1] = 9696 }, { [1] = 45 }, nil, nil, nil, true }
+players["radical"] = { "Radical", 9686, 4, 1, 46, { [1] = 9686, [3] = 1532 }, { [1] = 46, [3] = 21677 }, nil, nil, nil, true }
+players["loganshhpala"] = { "Loganshhpala", 9679, 4, 1, 47, { [1] = 9679, [2] = 4739 }, { [1] = 47, [2] = 4002 }, nil, nil, nil, true }
+players["fatlinka"] = { "Fatlinka", 9675, 4, 1, 48, { [1] = 9675 }, { [1] = 48 }, nil, nil, nil, true }
+players["fogell"] = { "Fogell", 9662, 4, 1, 49, { [1] = 9662, [2] = 8261, [3] = 8968 }, { [1] = 49, [2] = 411, [3] = 656 }, nil, nil, nil, true }
+players["nodisuck"] = { "Nodisuck", 9654, 4, 1, 51, { [1] = 9654 }, { [1] = 51 }, nil, nil, nil, true }
+players["piskavatetka"] = { "Piskavatetka", 9653, 4, 1, 52, { [1] = 9653 }, { [1] = 52 }, nil, nil, nil, true }
+players["mistrchad"] = { "Mistrchad", 9649, 4, 1, 53, { [1] = 9649 }, { [1] = 53 }, nil, nil, nil, true }
+players["kixelated"] = { "Kixelated", 9639, 4, 1, 54, { [1] = 9639, [2] = 6619 }, { [1] = 54, [2] = 1667 }, nil, nil, nil, true }
+players["friele"] = { "Friele", 9637, 4, 1, 55, { [1] = 9637 }, { [1] = 55 }, nil, nil, nil, true }
+players["lovecheeryxd"] = { "Lovecheeryxd", 9610, 4, 1, 56, { [1] = 9610, [3] = 9488 }, { [1] = 56, [3] = 290 }, nil, nil, nil, true }
+players["holylylee"] = { "Holylylee", 9606, 4, 1, 57, { [1] = 9606, [3] = 6727 }, { [1] = 57, [3] = 3696 }, nil, nil, nil, true }
+players["elizabeht"] = { "Elizabeht", 9605, 4, 1, 58, { [1] = 9605, [2] = 5664 }, { [1] = 58, [2] = 2780 }, nil, nil, nil, true }
+players["holyclass"] = { "Holyclass", 9594, 4, 1, 59, { [1] = 9594 }, { [1] = 59 }, nil, nil, nil, true }
+players["speco"] = { "Speco", 9592, 4, 1, 60, { [1] = 9592, [2] = 6376 }, { [1] = 60, [2] = 1918 }, nil, nil, nil, true }
+players["cataclyzm"] = { "Cataclyzm", 9580, 4, 1, 62, { [1] = 9580, [2] = 1455, [3] = 4407 }, { [1] = 62, [2] = 10738, [3] = 11384 }, nil, nil, nil, true }
+players["legionx"] = { "Legionx", 9578, 4, 1, 63, { [1] = 9578, [3] = 6069 }, { [1] = 63, [3] = 5408 }, nil, nil, nil, true }
+players["trenzu"] = { "Trenzu", 9577, 4, 1, 64, { [1] = 9577 }, { [1] = 64 }, nil, nil, nil, true }
+players["falesh"] = { "Falesh", 9574, 4, 1, 65, { [1] = 9574, [2] = 5661, [3] = 6539 }, { [1] = 65, [2] = 2783, [3] = 4136 }, nil, nil, nil, true }
+players["blain"] = { "Blain", 9570, 4, 1, 66, { [1] = 9570, [3] = 7839 }, { [1] = 66, [3] = 1791 }, nil, nil, nil, true }
+players["wickedwilly"] = { "Wickedwilly", 9561, 4, 1, 67, { [1] = 9561, [3] = 8884 }, { [1] = 67, [3] = 712 }, nil, nil, nil, true }
+players["valxala"] = { "Valxala", 9561, 4, 1, 68, { [1] = 9561 }, { [1] = 68 }, nil, nil, nil, true }
+players["callmesensei"] = { "Callmesensei", 9561, 4, 1, 69, { [1] = 9561, [2] = 7513 }, { [1] = 69, [2] = 843 }, nil, nil, nil, true }
+players["jelenarozgax"] = { "Jelenarozgax", 9557, 4, 1, 70, { [1] = 9557 }, { [1] = 70 }, nil, nil, nil, true }
+players["neverundead"] = { "Neverundead", 9554, 4, 1, 71, { [1] = 9554 }, { [1] = 71 }, nil, nil, nil, true }
+players["fs"] = { "Fs", 9543, 4, 1, 72, { [1] = 9543 }, { [1] = 72 }, nil, nil, nil, true }
+players["sunshine"] = { "Sunshine", 9542, 4, 1, 73, { [1] = 9542 }, { [1] = 73 }, nil, nil, nil, true }
+players["manadin"] = { "Manadin", 9541, 4, 1, 74, { [1] = 9541, [3] = 5427 }, { [1] = 74, [3] = 7730 }, nil, nil, nil, true }
+players["hayrpum"] = { "Hayrpum", 9539, 4, 1, 75, { [1] = 9539, [2] = 2518 }, { [1] = 75, [2] = 8432 }, nil, nil, nil, true }
+players["bronx"] = { "Bronx", 9538, 4, 1, 76, { [1] = 9538, [3] = 5255 }, { [1] = 76, [3] = 8436 }, nil, nil, nil, true }
+players["nwf"] = { "Nwf", 9525, 4, 1, 77, { [1] = 9525, [3] = 7206 }, { [1] = 77, [3] = 2727 }, nil, nil, nil, true }
+players["aocwipe"] = { "Aocwipe", 9524, 4, 1, 78, { [1] = 9524 }, { [1] = 78 }, nil, nil, nil, true }
+players["serejalgbt"] = { "Serejalgbt", 9524, 4, 1, 79, { [1] = 9524 }, { [1] = 79 }, nil, nil, nil, true }
+players["drle"] = { "Drle", 9524, 4, 1, 80, { [1] = 9524 }, { [1] = 80 }, nil, nil, nil, true }
+players["theramond"] = { "Theramond", 9513, 4, 1, 81, { [1] = 9513, [2] = 8364, [3] = 8731 }, { [1] = 81, [2] = 369, [3] = 832 }, nil, nil, nil, true }
+players["snejokjz"] = { "Snejokjz", 9494, 4, 1, 82, { [1] = 9494 }, { [1] = 82 }, nil, nil, nil, true }
+players["baldcore"] = { "Baldcore", 9486, 4, 1, 83, { [1] = 9486, [3] = 2842 }, { [1] = 83, [3] = 16826 }, nil, nil, nil, true }
+players["farmkilov"] = { "Farmkilov", 9482, 4, 1, 84, { [1] = 9482, [2] = 7378, [3] = 4905 }, { [1] = 84, [2] = 957, [3] = 9813 }, nil, nil, nil, true }
+players["lolenka"] = { "Lolenka", 9482, 4, 1, 85, { [1] = 9482, [2] = 7200, [3] = 9419 }, { [1] = 85, [2] = 1112, [3] = 337 }, nil, nil, nil, true }
+players["holagi"] = { "Holagi", 9482, 4, 1, 86, { [1] = 9482 }, { [1] = 86 }, nil, nil, nil, true }
+players["kukumopax"] = { "Kukumopax", 9478, 4, 1, 87, { [1] = 9478 }, { [1] = 87 }, nil, nil, nil, true }
+players["wtbpotion"] = { "Wtbpotion", 9478, 4, 1, 88, { [1] = 9478, [3] = 4230 }, { [1] = 88, [3] = 11889 }, nil, nil, nil, true }
+players["proher"] = { "Proher", 9476, 4, 1, 89, { [1] = 9476, [2] = 6883, [3] = 6530 }, { [1] = 89, [2] = 1409, [3] = 4160 }, nil, nil, nil, true }
+players["mkpal"] = { "Mkpal", 9473, 4, 1, 90, { [1] = 9473 }, { [1] = 90 }, nil, nil, nil, true }
+players["holyjoy"] = { "Holyjoy", 9472, 4, 1, 91, { [1] = 9472, [2] = 7404 }, { [1] = 91, [2] = 933 }, nil, nil, nil, true }
+players["dexxyloveqx"] = { "Dexxyloveqx", 9469, 4, 1, 92, { [1] = 9469 }, { [1] = 92 }, nil, nil, nil, true }
+players["metth"] = { "Metth", 9452, 4, 1, 93, { [1] = 9452, [2] = 3744 }, { [1] = 93, [2] = 5732 }, nil, nil, nil, true }
+players["renoxx"] = { "Renoxx", 9450, 4, 1, 94, { [1] = 9450 }, { [1] = 94 }, nil, nil, nil, true }
+players["pexnx"] = { "Pexnx", 9448, 4, 1, 95, { [1] = 9448, [3] = 3410 }, { [1] = 95, [3] = 14131 }, nil, nil, nil, true }
+players["lexsandra"] = { "Lexsandra", 9447, 4, 1, 96, { [1] = 9447, [2] = 7300, [3] = 9038 }, { [1] = 96, [2] = 1022, [3] = 595 }, nil, nil, nil, true }
+players["rozholly"] = { "Rozholly", 9444, 4, 1, 97, { [1] = 9444, [2] = 7492 }, { [1] = 97, [2] = 859 }, nil, nil, nil, true }
+players["aeleroelholy"] = { "Aeleroelholy", 9440, 4, 1, 98, { [1] = 9440 }, { [1] = 98 }, nil, nil, nil, true }
+players["samarto"] = { "Samarto", 9432, 4, 1, 99, { [1] = 9432, [3] = 472 }, { [1] = 99, [3] = 23489 }, nil, nil, nil, true }
+players["dashenka"] = { "Dashenka", 9425, 4, 1, 100, { [1] = 9425, [2] = 6864, [3] = 5481 }, { [1] = 100, [2] = 1426, [3] = 7532 }, nil, nil, nil, true }
+players["stemi"] = { "Stemi", 9410, 4, 1, 101, { [1] = 9410, [2] = 8702, [3] = 8966 }, { [1] = 101, [2] = 241, [3] = 659 }, nil, nil, nil, true }
+players["shivlight"] = { "Shivlight", 9409, 4, 1, 102, { [1] = 9409 }, { [1] = 102 }, nil, nil, nil, true }
+players["sisterfour"] = { "Sisterfour", 9409, 4, 1, 103, { [1] = 9409 }, { [1] = 103 }, nil, nil, nil, true }
+players["umigame"] = { "Umigame", 9404, 4, 1, 104, { [1] = 9404 }, { [1] = 104 }, nil, nil, nil, true }
+players["eskillergg"] = { "Eskillergg", 9403, 4, 1, 105, { [1] = 9403 }, { [1] = 105 }, nil, nil, nil, true }
+players["sonasol"] = { "Sonasol", 9401, 4, 1, 106, { [1] = 9401, [2] = 6507 }, { [1] = 106, [2] = 1774 }, nil, nil, nil, true }
+players["zasa"] = { "Zasa", 9400, 4, 1, 107, { [1] = 9400, [2] = 2576 }, { [1] = 107, [2] = 8295 }, nil, nil, nil, true }
+players["wannabe"] = { "Wannabe", 9398, 4, 1, 108, { [1] = 9398, [3] = 5393 }, { [1] = 108, [3] = 7877 }, nil, nil, nil, true }
+players["seregalgbt"] = { "Seregalgbt", 9390, 4, 1, 109, { [1] = 9390 }, { [1] = 109 }, nil, nil, nil, true }
+players["ivkiz"] = { "Ivkiz", 9385, 4, 1, 110, { [1] = 9385, [2] = 7596 }, { [1] = 110, [2] = 790 }, nil, nil, nil, true }
+players["katakura"] = { "Katakura", 9384, 4, 1, 111, { [1] = 9384, [2] = 7366 }, { [1] = 111, [2] = 967 }, nil, nil, nil, true }
+players["hallogen"] = { "Hallogen", 9382, 4, 1, 112, { [1] = 9382, [3] = 6002 }, { [1] = 112, [3] = 5613 }, nil, nil, nil, true }
+players["deexter"] = { "Deexter", 9378, 4, 1, 113, { [1] = 9378, [3] = 8218 }, { [1] = 113, [3] = 1359 }, nil, nil, nil, true }
+players["divinehell"] = { "Divinehell", 9370, 4, 1, 114, { [1] = 9370 }, { [1] = 114 }, nil, nil, nil, true }
+players["raylander"] = { "Raylander", 9364, 4, 1, 115, { [1] = 9364, [3] = 5704 }, { [1] = 115, [3] = 6657 }, nil, nil, nil, true }
+players["keyapala"] = { "Keyapala", 9360, 4, 1, 117, { [1] = 9360, [3] = 8490 }, { [1] = 117, [3] = 1065 }, nil, nil, nil, true }
+players["pendosebuchi"] = { "Pendosebuchi", 9360, 4, 1, 118, { [1] = 9360, [2] = 113, [3] = 5564 }, { [1] = 118, [2] = 12276, [3] = 7226 }, nil, nil, nil, true }
 players["trycker"] = { "Trycker", 10000, 4, 2, 1, { [2] = 10000 }, { [2] = 1 }, nil, nil, nil, true }
-players["happysalt"] = { "Happysalt", 9999, 4, 2, 2, { [2] = 9999, [3] = 8940 }, { [2] = 2, [3] = 673 }, nil, nil, nil, true }
-players["selaya"] = { "Selaya", 9998, 4, 2, 3, { [1] = 1178, [2] = 9998, [3] = 9956 }, { [1] = 12552, [2] = 3, [3] = 16 }, nil, nil, nil, true }
-players["mamochka"] = { "Mamochka", 9997, 4, 2, 4, { [1] = 7637, [2] = 9997, [3] = 9642 }, { [1] = 1300, [2] = 4, [3] = 198 }, nil, nil, nil, true }
-players["turdin"] = { "Turdin", 9989, 4, 2, 5, { [2] = 9989, [3] = 9745 }, { [2] = 5, [3] = 136 }, nil, nil, nil, true }
-players["neckomatahc"] = { "Neckomatahc", 9985, 4, 2, 6, { [1] = 7368, [2] = 9985, [3] = 7433 }, { [1] = 1582, [2] = 6, [3] = 2390 }, nil, nil, nil, true }
-players["sonofdogx"] = { "Sonofdogx", 9982, 4, 2, 7, { [2] = 9982, [3] = 8637 }, { [2] = 7, [3] = 930 }, nil, nil, nil, true }
-players["yobunny"] = { "Yobunny", 9980, 4, 2, 8, { [2] = 9980, [3] = 6849 }, { [2] = 8, [3] = 3407 }, nil, nil, nil, true }
-players["protwarrior"] = { "Protwarrior", 9965, 4, 2, 9, { [1] = 8306, [2] = 9965 }, { [1] = 713, [2] = 9 }, nil, nil, nil, true }
-players["fanuilos"] = { "Fanuilos", 9959, 4, 2, 10, { [1] = 235, [2] = 9959, [3] = 9328 }, { [1] = 15311, [2] = 10, [3] = 403 }, nil, nil, nil, true }
-players["siegfriedxcz"] = { "Siegfriedxcz", 9958, 4, 2, 11, { [1] = 9704, [2] = 9958, [3] = 9794 }, { [1] = 40, [2] = 11, [3] = 115 }, nil, nil, nil, true }
-players["bariarla"] = { "Bariarla", 9958, 4, 2, 12, { [1] = 7833, [2] = 9958, [3] = 7657 }, { [1] = 1120, [2] = 12, [3] = 2040 }, nil, nil, nil, true }
-players["isoneverdies"] = { "Isoneverdies", 9942, 4, 2, 13, { [1] = 684, [2] = 9942, [3] = 8503 }, { [1] = 13747, [2] = 13, [3] = 1051 }, nil, nil, nil, true }
-players["belzeayz"] = { "Belzeayz", 9928, 4, 2, 14, { [2] = 9928, [3] = 5628 }, { [2] = 14, [3] = 6947 }, nil, nil, nil, true }
+players["happysalt"] = { "Happysalt", 9999, 4, 2, 2, { [2] = 9999, [3] = 8937 }, { [2] = 2, [3] = 676 }, nil, nil, nil, true }
+players["selaya"] = { "Selaya", 9998, 4, 2, 3, { [1] = 1175, [2] = 9998, [3] = 9956 }, { [1] = 12581, [2] = 3, [3] = 16 }, nil, nil, nil, true }
+players["mamochka"] = { "Mamochka", 9997, 4, 2, 4, { [1] = 7630, [2] = 9997, [3] = 9641 }, { [1] = 1307, [2] = 4, [3] = 198 }, nil, nil, nil, true }
+players["turdin"] = { "Turdin", 9989, 4, 2, 5, { [2] = 9989, [3] = 9744 }, { [2] = 5, [3] = 139 }, nil, nil, nil, true }
+players["neckomatahc"] = { "Neckomatahc", 9985, 4, 2, 6, { [1] = 7359, [2] = 9985, [3] = 7426 }, { [1] = 1588, [2] = 6, [3] = 2399 }, nil, nil, nil, true }
+players["sonofdogx"] = { "Sonofdogx", 9982, 4, 2, 7, { [2] = 9982, [3] = 8635 }, { [2] = 7, [3] = 931 }, nil, nil, nil, true }
+players["yobunny"] = { "Yobunny", 9980, 4, 2, 8, { [2] = 9980, [3] = 6841 }, { [2] = 8, [3] = 3429 }, nil, nil, nil, true }
+players["protwarrior"] = { "Protwarrior", 9965, 4, 2, 9, { [1] = 8300, [2] = 9965 }, { [1] = 715, [2] = 9 }, nil, nil, nil, true }
+players["fanuilos"] = { "Fanuilos", 9959, 4, 2, 10, { [1] = 232, [2] = 9959, [3] = 9325 }, { [1] = 15348, [2] = 10, [3] = 405 }, nil, nil, nil, true }
+players["siegfriedxcz"] = { "Siegfriedxcz", 9958, 4, 2, 11, { [1] = 9703, [2] = 9958, [3] = 9793 }, { [1] = 41, [2] = 11, [3] = 117 }, nil, nil, nil, true }
+players["bariarla"] = { "Bariarla", 9958, 4, 2, 12, { [1] = 7827, [2] = 9958, [3] = 7652 }, { [1] = 1125, [2] = 12, [3] = 2050 }, nil, nil, nil, true }
+players["isoneverdies"] = { "Isoneverdies", 9942, 4, 2, 13, { [1] = 680, [2] = 9942, [3] = 8500 }, { [1] = 13787, [2] = 13, [3] = 1054 }, nil, nil, nil, true }
+players["cowindx"] = { "Cowindx", 9927, 4, 2, 14, { [2] = 9927, [3] = 7037 }, { [2] = 14, [3] = 3069 }, nil, nil, nil, true }
 players["ukraina"] = { "Ukraina", 9931, 4, 2, 14, { [1] = 9000, [2] = 9931 }, { [1] = 283, [2] = 14 }, nil, nil, nil, false }
-players["cowindx"] = { "Cowindx", 9927, 4, 2, 15, { [2] = 9927, [3] = 7040 }, { [2] = 15, [3] = 3069 }, nil, nil, nil, true }
+players["belzeayz"] = { "Belzeayz", 9927, 4, 2, 15, { [2] = 9927, [3] = 5627 }, { [2] = 15, [3] = 6981 }, nil, nil, nil, true }
 players["holyspire"] = { "Holyspire", 9928, 4, 2, 15, { [2] = 9928, [3] = 6714 }, { [2] = 15, [3] = 3712 }, nil, nil, nil, false }
-players["xyecoc"] = { "Xyecoc", 9927, 4, 2, 16, { [1] = 9057, [2] = 9927 }, { [1] = 249, [2] = 16 }, nil, nil, nil, true }
-players["lilythiev"] = { "Lilythiev", 9927, 4, 2, 17, { [2] = 9927, [3] = 9397 }, { [2] = 17, [3] = 347 }, nil, nil, nil, true }
-players["cakeblock"] = { "Cakeblock", 9919, 4, 2, 18, { [2] = 9919, [3] = 9540 }, { [2] = 18, [3] = 252 }, nil, nil, nil, true }
-players["bleksaa"] = { "Bleksaa", 9894, 4, 2, 19, { [1] = 1722, [2] = 9894 }, { [1] = 11506, [2] = 19 }, nil, nil, nil, true }
-players["bathory"] = { "Bathory", 9886, 4, 2, 20, { [1] = 8317, [2] = 9886 }, { [1] = 699, [2] = 20 }, nil, nil, nil, true }
-players["obudin"] = { "Obudin", 9883, 4, 2, 21, { [2] = 9883, [3] = 8285 }, { [2] = 21, [3] = 1279 }, nil, nil, nil, true }
-players["rytz"] = { "Rytz", 9882, 4, 2, 22, { [2] = 9882, [3] = 5376 }, { [2] = 22, [3] = 7912 }, nil, nil, nil, true }
-players["bosota"] = { "Bosota", 9878, 4, 2, 23, { [2] = 9878, [3] = 9463 }, { [2] = 23, [3] = 304 }, nil, nil, nil, true }
-players["primarus"] = { "Primarus", 9873, 4, 2, 24, { [2] = 9873 }, { [2] = 24 }, nil, nil, nil, true }
-players["visherax"] = { "Visherax", 9866, 4, 2, 25, { [2] = 9866 }, { [2] = 25 }, nil, nil, nil, true }
-players["rahuul"] = { "Rahuul", 9862, 4, 2, 26, { [1] = 6362, [2] = 9862 }, { [1] = 2864, [2] = 26 }, nil, nil, nil, true }
-players["cruzmaltino"] = { "Cruzmaltino", 9859, 4, 2, 27, { [2] = 9859, [3] = 550 }, { [2] = 27, [3] = 23197 }, nil, nil, nil, true }
-players["twiluna"] = { "Twiluna", 9856, 4, 2, 28, { [2] = 9856, [3] = 9780 }, { [2] = 28, [3] = 123 }, nil, nil, nil, true }
-players["buntarka"] = { "Buntarka", 9847, 4, 2, 29, { [1] = 619, [2] = 9847 }, { [1] = 13963, [2] = 29 }, nil, nil, nil, true }
-players["dishonored"] = { "Dishonored", 9820, 4, 2, 30, { [2] = 9820, [3] = 9046 }, { [2] = 30, [3] = 589 }, nil, nil, nil, true }
-players["laurax"] = { "Laurax", 9819, 4, 2, 31, { [1] = 4263, [2] = 9819 }, { [1] = 6373, [2] = 31 }, nil, nil, nil, true }
+players["lilythiev"] = { "Lilythiev", 9927, 4, 2, 16, { [2] = 9927, [3] = 9395 }, { [2] = 16, [3] = 348 }, nil, nil, nil, true }
+players["xyecoc"] = { "Xyecoc", 9926, 4, 2, 17, { [1] = 9052, [2] = 9926 }, { [1] = 249, [2] = 17 }, nil, nil, nil, true }
+players["cakeblock"] = { "Cakeblock", 9919, 4, 2, 18, { [2] = 9919, [3] = 9539 }, { [2] = 18, [3] = 252 }, nil, nil, nil, true }
+players["bleksaa"] = { "Bleksaa", 9894, 4, 2, 19, { [1] = 1721, [2] = 9894 }, { [1] = 11529, [2] = 19 }, nil, nil, nil, true }
+players["bathory"] = { "Bathory", 9887, 4, 2, 20, { [1] = 8311, [2] = 9887 }, { [1] = 702, [2] = 20 }, nil, nil, nil, true }
+players["obudin"] = { "Obudin", 9882, 4, 2, 21, { [2] = 9882, [3] = 8281 }, { [2] = 21, [3] = 1284 }, nil, nil, nil, true }
+players["rytz"] = { "Rytz", 9882, 4, 2, 22, { [2] = 9882, [3] = 5375 }, { [2] = 22, [3] = 7945 }, nil, nil, nil, true }
+players["bosota"] = { "Bosota", 9878, 4, 2, 23, { [2] = 9878, [3] = 9462 }, { [2] = 23, [3] = 303 }, nil, nil, nil, true }
+players["primarus"] = { "Primarus", 9872, 4, 2, 24, { [2] = 9872 }, { [2] = 24 }, nil, nil, nil, true }
+players["visherax"] = { "Visherax", 9865, 4, 2, 25, { [2] = 9865 }, { [2] = 25 }, nil, nil, nil, true }
+players["rahuul"] = { "Rahuul", 9862, 4, 2, 26, { [1] = 6355, [2] = 9862 }, { [1] = 2870, [2] = 26 }, nil, nil, nil, true }
+players["cruzmaltino"] = { "Cruzmaltino", 9858, 4, 2, 27, { [2] = 9858, [3] = 550 }, { [2] = 27, [3] = 23263 }, nil, nil, nil, true }
+players["twiluna"] = { "Twiluna", 9855, 4, 2, 28, { [2] = 9855, [3] = 9779 }, { [2] = 28, [3] = 124 }, nil, nil, nil, true }
+players["buntarka"] = { "Buntarka", 9847, 4, 2, 29, { [1] = 618, [2] = 9847 }, { [1] = 13992, [2] = 29 }, nil, nil, nil, true }
+players["dishonored"] = { "Dishonored", 9819, 4, 2, 30, { [2] = 9819, [3] = 9044 }, { [2] = 30, [3] = 590 }, nil, nil, nil, true }
+players["laurax"] = { "Laurax", 9818, 4, 2, 31, { [1] = 4250, [2] = 9818 }, { [1] = 6406, [2] = 31 }, nil, nil, nil, true }
 players["neschopacka"] = { "Neschopacka", 9823, 4, 2, 32, { [1] = 903, [2] = 9823 }, { [1] = 12998, [2] = 32 }, nil, nil, nil, false }
-players["twilluna"] = { "Twilluna", 9816, 4, 2, 32, { [2] = 9816, [3] = 2853 }, { [2] = 32, [3] = 16707 }, nil, nil, nil, true }
-players["uhateidonate"] = { "Uhateidonate", 9811, 4, 2, 33, { [1] = 3533, [2] = 9811 }, { [1] = 7807, [2] = 33 }, nil, nil, nil, true }
+players["twilluna"] = { "Twilluna", 9815, 4, 2, 32, { [2] = 9815, [3] = 2852 }, { [2] = 32, [3] = 16763 }, nil, nil, nil, true }
+players["uhateidonate"] = { "Uhateidonate", 9811, 4, 2, 33, { [1] = 3524, [2] = 9811 }, { [1] = 7845, [2] = 33 }, nil, nil, nil, true }
 players["napizdel"] = { "Napizdel", 9798, 4, 2, 34, { [2] = 9798 }, { [2] = 34 }, nil, nil, nil, true }
-players["letmeblast"] = { "Letmeblast", 9795, 4, 2, 35, { [2] = 9795, [3] = 8338 }, { [2] = 35, [3] = 1234 }, nil, nil, nil, true }
-players["teotan"] = { "Teotan", 9771, 4, 2, 36, { [1] = 8128, [2] = 9771, [3] = 5870 }, { [1] = 861, [2] = 36, [3] = 6030 }, nil, nil, nil, true }
-players["saiira"] = { "Saiira", 9770, 4, 2, 37, { [1] = 857, [2] = 9770, [3] = 6242 }, { [1] = 13273, [2] = 37, [3] = 4904 }, nil, nil, nil, true }
-players["heheeheheheh"] = { "Heheeheheheh", 9758, 4, 2, 38, { [2] = 9758, [3] = 6096 }, { [2] = 38, [3] = 5306 }, nil, nil, nil, true }
-players["vldpala"] = { "Vldpala", 9748, 4, 2, 39, { [2] = 9748, [3] = 7365 }, { [2] = 39, [3] = 2501 }, nil, nil, nil, true }
-players["arnisgodx"] = { "Arnisgodx", 9747, 4, 2, 40, { [2] = 9747, [3] = 1332 }, { [2] = 40, [3] = 21931 }, nil, nil, nil, true }
-players["vozickarka"] = { "Vozickarka", 9738, 4, 2, 41, { [1] = 5000, [2] = 9738 }, { [1] = 5050, [2] = 41 }, nil, nil, nil, true }
-players["belzeayxx"] = { "Belzeayxx", 9733, 4, 2, 42, { [2] = 9733, [3] = 5134 }, { [2] = 42, [3] = 8902 }, nil, nil, nil, true }
-players["galyafreedom"] = { "Galyafreedom", 9732, 4, 2, 43, { [2] = 9732, [3] = 8564 }, { [2] = 43, [3] = 997 }, nil, nil, nil, true }
-players["nightfadez"] = { "Nightfadez", 9729, 4, 2, 44, { [2] = 9729, [3] = 9097 }, { [2] = 44, [3] = 548 }, nil, nil, nil, true }
-players["nltroo"] = { "Nltroo", 9717, 4, 2, 45, { [1] = 7406, [2] = 9717, [3] = 3122 }, { [1] = 1543, [2] = 45, [3] = 15256 }, nil, nil, nil, true }
-players["avengerzord"] = { "Avengerzord", 9708, 4, 2, 46, { [2] = 9708, [3] = 8454 }, { [2] = 46, [3] = 1111 }, nil, nil, nil, true }
-players["haterpala"] = { "Haterpala", 9708, 4, 2, 47, { [1] = 8618, [2] = 9708 }, { [1] = 500, [2] = 47 }, nil, nil, nil, true }
-players["laurashield"] = { "Laurashield", 9707, 4, 2, 48, { [2] = 9707, [3] = 383 }, { [2] = 48, [3] = 23829 }, nil, nil, nil, true }
-players["tankva"] = { "Tankva", 9704, 4, 2, 49, { [2] = 9704, [3] = 468 }, { [2] = 49, [3] = 23442 }, nil, nil, nil, true }
-players["matobest"] = { "Matobest", 9699, 4, 2, 50, { [2] = 9699, [3] = 4994 }, { [2] = 50, [3] = 9450 }, nil, nil, nil, true }
-players["palazzio"] = { "Palazzio", 9689, 4, 2, 51, { [1] = 5513, [2] = 9689, [3] = 6025 }, { [1] = 4204, [2] = 51, [3] = 5521 }, nil, nil, nil, true }
-players["kaissaid"] = { "Kaissaid", 9675, 4, 2, 52, { [1] = 1581, [2] = 9675 }, { [1] = 11802, [2] = 52 }, nil, nil, nil, true }
-players["thorpwnz"] = { "Thorpwnz", 9671, 4, 2, 53, { [2] = 9671, [3] = 9326 }, { [2] = 53, [3] = 405 }, nil, nil, nil, true }
-players["grozzthok"] = { "Grozzthok", 9658, 4, 2, 54, { [1] = 858, [2] = 9658 }, { [1] = 13268, [2] = 54 }, nil, nil, nil, true }
-players["maaxi"] = { "Maaxi", 9657, 4, 2, 55, { [2] = 9657, [3] = 8275 }, { [2] = 55, [3] = 1289 }, nil, nil, nil, true }
-players["slimerot"] = { "Slimerot", 9655, 4, 2, 56, { [1] = 6766, [2] = 9655, [3] = 7444 }, { [1] = 2308, [2] = 56, [3] = 2364 }, nil, nil, nil, true }
-players["pepellove"] = { "Pepellove", 9632, 4, 2, 58, { [1] = 999, [2] = 9632, [3] = 5992 }, { [1] = 12857, [2] = 58, [3] = 5639 }, nil, nil, nil, true }
-players["arnispwn"] = { "Arnispwn", 9629, 4, 2, 59, { [2] = 9629 }, { [2] = 59 }, nil, nil, nil, true }
-players["cratoz"] = { "Cratoz", 9628, 4, 2, 60, { [2] = 9628, [3] = 318 }, { [2] = 60, [3] = 24095 }, nil, nil, nil, true }
-players["authwins"] = { "Authwins", 9622, 4, 2, 61, { [2] = 9622, [3] = 2822 }, { [2] = 61, [3] = 16894 }, nil, nil, nil, true }
-players["terrytuz"] = { "Terrytuz", 9615, 4, 2, 62, { [2] = 9615, [3] = 2711 }, { [2] = 62, [3] = 17520 }, nil, nil, nil, true }
-players["nighttfade"] = { "Nighttfade", 9570, 4, 2, 64, { [1] = 682, [2] = 9570, [3] = 8179 }, { [1] = 13752, [2] = 64, [3] = 1394 }, nil, nil, nil, true }
-players["xprmnt"] = { "Xprmnt", 9564, 4, 2, 66, { [2] = 9564, [3] = 7378 }, { [2] = 66, [3] = 2480 }, nil, nil, nil, true }
-players["earnest"] = { "Earnest", 9549, 4, 2, 67, { [1] = 338, [2] = 9549, [3] = 6218 }, { [1] = 14960, [2] = 67, [3] = 4977 }, nil, nil, nil, true }
-players["dreiken"] = { "Dreiken", 9539, 4, 2, 68, { [1] = 6505, [2] = 9539, [3] = 7885 }, { [1] = 2652, [2] = 68, [3] = 1739 }, nil, nil, nil, true }
-players["bojpx"] = { "Bojpx", 9538, 4, 2, 69, { [1] = 8986, [2] = 9538 }, { [1] = 287, [2] = 69 }, nil, nil, nil, true }
-players["kyroa"] = { "Kyroa", 9537, 4, 2, 70, { [2] = 9537, [3] = 5070 }, { [2] = 70, [3] = 9164 }, nil, nil, nil, true }
+players["letmeblast"] = { "Letmeblast", 9794, 4, 2, 35, { [2] = 9794, [3] = 8335 }, { [2] = 35, [3] = 1236 }, nil, nil, nil, true }
+players["teotan"] = { "Teotan", 9771, 4, 2, 36, { [1] = 8123, [2] = 9771, [3] = 5867 }, { [1] = 861, [2] = 36, [3] = 6056 }, nil, nil, nil, true }
+players["saiira"] = { "Saiira", 9769, 4, 2, 37, { [1] = 857, [2] = 9769, [3] = 6239 }, { [1] = 13302, [2] = 37, [3] = 4923 }, nil, nil, nil, true }
+players["heheeheheheh"] = { "Heheeheheheh", 9757, 4, 2, 38, { [2] = 9757, [3] = 6094 }, { [2] = 38, [3] = 5334 }, nil, nil, nil, true }
+players["vldpala"] = { "Vldpala", 9747, 4, 2, 39, { [2] = 9747, [3] = 7360 }, { [2] = 39, [3] = 2511 }, nil, nil, nil, true }
+players["arnisgodx"] = { "Arnisgodx", 9746, 4, 2, 40, { [2] = 9746, [3] = 1331 }, { [2] = 40, [3] = 21995 }, nil, nil, nil, true }
+players["vozickarka"] = { "Vozickarka", 9737, 4, 2, 41, { [1] = 4987, [2] = 9737 }, { [1] = 5082, [2] = 41 }, nil, nil, nil, true }
+players["belzeayxx"] = { "Belzeayxx", 9731, 4, 2, 42, { [2] = 9731, [3] = 5131 }, { [2] = 42, [3] = 8956 }, nil, nil, nil, true }
+players["galyafreedom"] = { "Galyafreedom", 9731, 4, 2, 43, { [2] = 9731, [3] = 8560 }, { [2] = 43, [3] = 1000 }, nil, nil, nil, true }
+players["nightfadez"] = { "Nightfadez", 9729, 4, 2, 44, { [2] = 9729, [3] = 9094 }, { [2] = 44, [3] = 550 }, nil, nil, nil, true }
+players["nltroo"] = { "Nltroo", 9716, 4, 2, 45, { [1] = 7399, [2] = 9716, [3] = 3121 }, { [1] = 1549, [2] = 45, [3] = 15299 }, nil, nil, nil, true }
+players["avengerzord"] = { "Avengerzord", 9708, 4, 2, 46, { [2] = 9708, [3] = 8449 }, { [2] = 46, [3] = 1118 }, nil, nil, nil, true }
+players["haterpala"] = { "Haterpala", 9707, 4, 2, 47, { [1] = 8613, [2] = 9707 }, { [1] = 503, [2] = 47 }, nil, nil, nil, true }
+players["laurashield"] = { "Laurashield", 9706, 4, 2, 48, { [2] = 9706, [3] = 383 }, { [2] = 48, [3] = 23895 }, nil, nil, nil, true }
+players["tankva"] = { "Tankva", 9702, 4, 2, 49, { [2] = 9702, [3] = 468 }, { [2] = 49, [3] = 23509 }, nil, nil, nil, true }
+players["matobest"] = { "Matobest", 9698, 4, 2, 50, { [2] = 9698, [3] = 4994 }, { [2] = 50, [3] = 9490 }, nil, nil, nil, true }
+players["palazzio"] = { "Palazzio", 9688, 4, 2, 51, { [1] = 5506, [2] = 9688, [3] = 6018 }, { [1] = 4210, [2] = 51, [3] = 5560 }, nil, nil, nil, true }
+players["kaissaid"] = { "Kaissaid", 9674, 4, 2, 52, { [1] = 1570, [2] = 9674 }, { [1] = 11847, [2] = 52 }, nil, nil, nil, true }
+players["thorpwnz"] = { "Thorpwnz", 9670, 4, 2, 53, { [2] = 9670, [3] = 9324 }, { [2] = 53, [3] = 406 }, nil, nil, nil, true }
+players["grozzthok"] = { "Grozzthok", 9657, 4, 2, 54, { [1] = 858, [2] = 9657 }, { [1] = 13298, [2] = 54 }, nil, nil, nil, true }
+players["maaxi"] = { "Maaxi", 9656, 4, 2, 55, { [2] = 9656, [3] = 8270 }, { [2] = 55, [3] = 1296 }, nil, nil, nil, true }
+players["slimerot"] = { "Slimerot", 9654, 4, 2, 56, { [1] = 6759, [2] = 9654, [3] = 7440 }, { [1] = 2315, [2] = 56, [3] = 2369 }, nil, nil, nil, true }
+players["pepellove"] = { "Pepellove", 9633, 4, 2, 58, { [1] = 999, [2] = 9633, [3] = 5988 }, { [1] = 12893, [2] = 58, [3] = 5670 }, nil, nil, nil, true }
+players["arnispwn"] = { "Arnispwn", 9628, 4, 2, 59, { [2] = 9628 }, { [2] = 59 }, nil, nil, nil, true }
+players["cratoz"] = { "Cratoz", 9626, 4, 2, 60, { [2] = 9626, [3] = 317 }, { [2] = 60, [3] = 24163 }, nil, nil, nil, true }
+players["authwins"] = { "Authwins", 9619, 4, 2, 61, { [2] = 9619, [3] = 2820 }, { [2] = 61, [3] = 16956 }, nil, nil, nil, true }
+players["terrytuz"] = { "Terrytuz", 9614, 4, 2, 62, { [2] = 9614, [3] = 2709 }, { [2] = 62, [3] = 17581 }, nil, nil, nil, true }
+players["krei"] = { "Krei", 9573, 4, 2, 64, { [1] = 4309, [2] = 9573 }, { [1] = 6303, [2] = 64 }, nil, nil, nil, true }
+players["xprmnt"] = { "Xprmnt", 9573, 4, 2, 65, { [2] = 9573, [3] = 7371 }, { [2] = 65, [3] = 2491 }, nil, nil, nil, true }
+players["nighttfade"] = { "Nighttfade", 9568, 4, 2, 66, { [1] = 682, [2] = 9568, [3] = 8174 }, { [1] = 13780, [2] = 66, [3] = 1398 }, nil, nil, nil, true }
+players["earnest"] = { "Earnest", 9546, 4, 2, 68, { [1] = 336, [2] = 9546, [3] = 6216 }, { [1] = 15004, [2] = 68, [3] = 4999 }, nil, nil, nil, true }
+players["bojpx"] = { "Bojpx", 9538, 4, 2, 69, { [1] = 8982, [2] = 9538 }, { [1] = 290, [2] = 69 }, nil, nil, nil, true }
+players["dreiken"] = { "Dreiken", 9537, 4, 2, 70, { [1] = 6498, [2] = 9537, [3] = 7880 }, { [1] = 2656, [2] = 70, [3] = 1744 }, nil, nil, nil, true }
 players["arcatiel"] = { "Arcatiel", 9528, 4, 2, 71, { [1] = 683, [2] = 9528, [3] = 8193 }, { [1] = 13665, [2] = 71, [3] = 1381 }, nil, nil, nil, false }
-players["goldengrace"] = { "Goldengrace", 9536, 4, 2, 71, { [1] = 8246, [2] = 9536, [3] = 8652 }, { [1] = 756, [2] = 71, [3] = 911 }, nil, nil, nil, true }
-players["ritz"] = { "Ritz", 9522, 4, 2, 72, { [2] = 9522, [3] = 2963 }, { [2] = 72, [3] = 16095 }, nil, nil, nil, true }
-players["tobleron"] = { "Tobleron", 9519, 4, 2, 73, { [1] = 9156, [2] = 9519, [3] = 9358 }, { [1] = 207, [2] = 73, [3] = 378 }, nil, nil, nil, true }
-players["cilijos"] = { "Cilijos", 9509, 4, 2, 75, { [1] = 2396, [2] = 9509, [3] = 8369 }, { [1] = 10171, [2] = 75, [3] = 1200 }, nil, nil, nil, true }
-players["chemodaun"] = { "Chemodaun", 9505, 4, 2, 76, { [2] = 9505, [3] = 1491 }, { [2] = 76, [3] = 21685 }, nil, nil, nil, true }
-players["eluard"] = { "Eluard", 9500, 4, 2, 77, { [2] = 9500, [3] = 1341 }, { [2] = 77, [3] = 21917 }, nil, nil, nil, true }
-players["kishisenshi"] = { "Kishisenshi", 9495, 4, 2, 78, { [1] = 1685, [2] = 9495, [3] = 1071 }, { [1] = 11603, [2] = 78, [3] = 22304 }, nil, nil, nil, true }
-players["palside"] = { "Palside", 9488, 4, 2, 80, { [2] = 9488, [3] = 9454 }, { [2] = 80, [3] = 313 }, nil, nil, nil, true }
-players["nubynho"] = { "Nubynho", 9475, 4, 2, 81, { [2] = 9475, [3] = 5310 }, { [2] = 81, [3] = 8169 }, nil, nil, nil, true }
-players["lodmy"] = { "Lodmy", 9460, 4, 2, 82, { [2] = 9460, [3] = 8331 }, { [2] = 82, [3] = 1242 }, nil, nil, nil, true }
-players["kamenb"] = { "Kamenb", 9457, 4, 2, 83, { [2] = 9457, [3] = 6042 }, { [2] = 83, [3] = 5477 }, nil, nil, nil, true }
-players["ragepaly"] = { "Ragepaly", 9454, 4, 2, 84, { [1] = 8968, [2] = 9454, [3] = 8741 }, { [1] = 295, [2] = 84, [3] = 819 }, nil, nil, nil, true }
-players["omahilde"] = { "Omahilde", 9441, 4, 2, 85, { [1] = 8123, [2] = 9441, [3] = 6600 }, { [1] = 868, [2] = 85, [3] = 3995 }, nil, nil, nil, true }
-players["birnibus"] = { "Birnibus", 9436, 4, 2, 86, { [2] = 9436 }, { [2] = 86 }, nil, nil, nil, true }
-players["parovozik"] = { "Parovozik", 9434, 4, 2, 87, { [1] = 990, [2] = 9434 }, { [1] = 12890, [2] = 87 }, nil, nil, nil, true }
-players["jadyzx"] = { "Jadyzx", 9420, 4, 2, 89, { [2] = 9420, [3] = 6840 }, { [2] = 89, [3] = 3438 }, nil, nil, nil, true }
-players["xarsen"] = { "Xarsen", 9417, 4, 2, 90, { [2] = 9417, [3] = 3589 }, { [2] = 90, [3] = 13555 }, nil, nil, nil, true }
-players["illeatlair"] = { "Illeatlair", 9397, 4, 2, 91, { [1] = 5354, [2] = 9397 }, { [1] = 4443, [2] = 91 }, nil, nil, nil, true }
-players["uglyspacecow"] = { "Uglyspacecow", 9392, 4, 2, 92, { [2] = 9392, [3] = 7701 }, { [2] = 92, [3] = 1964 }, nil, nil, nil, true }
-players["paladosechka"] = { "Paladosechka", 9390, 4, 2, 93, { [2] = 9390 }, { [2] = 93 }, nil, nil, nil, true }
-players["nubyo"] = { "Nubyo", 9386, 4, 2, 94, { [1] = 7307, [2] = 9386, [3] = 3598 }, { [1] = 1656, [2] = 94, [3] = 13527 }, nil, nil, nil, true }
-players["hellgara"] = { "Hellgara", 10000, 4, 3, 1, { [1] = 6027, [3] = 10000 }, { [1] = 3357, [3] = 1 }, nil, nil, nil, true }
-players["pinned"] = { "Pinned", 9997, 4, 3, 2, { [1] = 3079, [3] = 9997 }, { [1] = 8743, [3] = 2 }, nil, nil, nil, true }
-players["snuz"] = { "Snuz", 9997, 4, 3, 3, { [2] = 4051, [3] = 9997 }, { [2] = 5115, [3] = 3 }, nil, nil, nil, true }
-players["tejkatelesna"] = { "Tejkatelesna", 9996, 4, 3, 4, { [1] = 308, [3] = 9996 }, { [1] = 15076, [3] = 4 }, nil, nil, nil, true }
-players["sealofsimply"] = { "Sealofsimply", 9990, 4, 3, 5, { [1] = 941, [3] = 9990 }, { [1] = 13046, [3] = 5 }, nil, nil, nil, true }
-players["parse"] = { "Parse", 9989, 4, 3, 6, { [1] = 2632, [3] = 9989 }, { [1] = 9677, [3] = 6 }, nil, nil, nil, true }
+players["kyroa"] = { "Kyroa", 9535, 4, 2, 71, { [2] = 9535, [3] = 5070 }, { [2] = 71, [3] = 9206 }, nil, nil, nil, true }
+players["goldengrace"] = { "Goldengrace", 9532, 4, 2, 72, { [1] = 8240, [2] = 9532, [3] = 8649 }, { [1] = 759, [2] = 72, [3] = 913 }, nil, nil, nil, true }
+players["eluard"] = { "Eluard", 9530, 4, 2, 73, { [2] = 9530, [3] = 1339 }, { [2] = 73, [3] = 21982 }, nil, nil, nil, true }
+players["ritz"] = { "Ritz", 9520, 4, 2, 74, { [2] = 9520, [3] = 2961 }, { [2] = 74, [3] = 16146 }, nil, nil, nil, true }
+players["tobleron"] = { "Tobleron", 9517, 4, 2, 75, { [1] = 9154, [2] = 9517, [3] = 9357 }, { [1] = 206, [2] = 75, [3] = 378 }, nil, nil, nil, true }
+players["cilijos"] = { "Cilijos", 9506, 4, 2, 77, { [1] = 2385, [2] = 9506, [3] = 8364 }, { [1] = 10210, [2] = 77, [3] = 1204 }, nil, nil, nil, true }
+players["chemodaun"] = { "Chemodaun", 9504, 4, 2, 78, { [2] = 9504, [3] = 1491 }, { [2] = 78, [3] = 21749 }, nil, nil, nil, true }
+players["kishisenshi"] = { "Kishisenshi", 9494, 4, 2, 79, { [1] = 1684, [2] = 9494, [3] = 1071 }, { [1] = 11610, [2] = 79, [3] = 22363 }, nil, nil, nil, true }
+players["palside"] = { "Palside", 9487, 4, 2, 81, { [2] = 9487, [3] = 9452 }, { [2] = 81, [3] = 312 }, nil, nil, nil, true }
+players["nubynho"] = { "Nubynho", 9475, 4, 2, 82, { [2] = 9475, [3] = 5308 }, { [2] = 82, [3] = 8217 }, nil, nil, nil, true }
+players["lodmy"] = { "Lodmy", 9457, 4, 2, 83, { [2] = 9457, [3] = 8445 }, { [2] = 83, [3] = 1121 }, nil, nil, nil, true }
+players["kamenb"] = { "Kamenb", 9454, 4, 2, 84, { [2] = 9454, [3] = 6039 }, { [2] = 84, [3] = 5498 }, nil, nil, nil, true }
+players["ragepaly"] = { "Ragepaly", 9452, 4, 2, 85, { [1] = 8964, [2] = 9452, [3] = 8740 }, { [1] = 298, [2] = 85, [3] = 818 }, nil, nil, nil, true }
+players["omahilde"] = { "Omahilde", 9440, 4, 2, 86, { [1] = 8119, [2] = 9440, [3] = 6596 }, { [1] = 867, [2] = 86, [3] = 4010 }, nil, nil, nil, true }
+players["birnibus"] = { "Birnibus", 9434, 4, 2, 87, { [2] = 9434 }, { [2] = 87 }, nil, nil, nil, true }
+players["parovozik"] = { "Parovozik", 9432, 4, 2, 88, { [1] = 990, [2] = 9432 }, { [1] = 12918, [2] = 88 }, nil, nil, nil, true }
+players["jadyzx"] = { "Jadyzx", 9418, 4, 2, 90, { [2] = 9418, [3] = 6838 }, { [2] = 90, [3] = 3440 }, nil, nil, nil, true }
+players["xarsen"] = { "Xarsen", 9415, 4, 2, 91, { [2] = 9415, [3] = 3588 }, { [2] = 91, [3] = 13606 }, nil, nil, nil, true }
+players["illeatlair"] = { "Illeatlair", 9394, 4, 2, 92, { [1] = 5343, [2] = 9394 }, { [1] = 4468, [2] = 92 }, nil, nil, nil, true }
+players["uglyspacecow"] = { "Uglyspacecow", 9390, 4, 2, 93, { [2] = 9390, [3] = 7696 }, { [2] = 93, [3] = 1970 }, nil, nil, nil, true }
+players["paladosechka"] = { "Paladosechka", 9388, 4, 2, 94, { [2] = 9388 }, { [2] = 94 }, nil, nil, nil, true }
+players["nubyo"] = { "Nubyo", 9384, 4, 2, 95, { [1] = 7301, [2] = 9384, [3] = 3597 }, { [1] = 1659, [2] = 95, [3] = 13573 }, nil, nil, nil, true }
+players["hellgara"] = { "Hellgara", 10000, 4, 3, 1, { [1] = 6018, [3] = 10000 }, { [1] = 3373, [3] = 1 }, nil, nil, nil, true }
+players["pinned"] = { "Pinned", 9997, 4, 3, 2, { [1] = 3074, [3] = 9997 }, { [1] = 8766, [3] = 2 }, nil, nil, nil, true }
+players["snuz"] = { "Snuz", 9997, 4, 3, 3, { [2] = 4044, [3] = 9997 }, { [2] = 5129, [3] = 3 }, nil, nil, nil, true }
+players["tejkatelesna"] = { "Tejkatelesna", 9996, 4, 3, 4, { [1] = 305, [3] = 9996 }, { [1] = 15118, [3] = 4 }, nil, nil, nil, true }
+players["sealofsimply"] = { "Sealofsimply", 9990, 4, 3, 5, { [1] = 941, [3] = 9990 }, { [1] = 13070, [3] = 5 }, nil, nil, nil, true }
+players["parse"] = { "Parse", 9989, 4, 3, 6, { [1] = 2632, [3] = 9989 }, { [1] = 9694, [3] = 6 }, nil, nil, nil, true }
 players["macrosszeta"] = { "Macrosszeta", 9987, 4, 3, 7, { [3] = 9987 }, { [3] = 7 }, nil, nil, nil, true }
 players["tarik"] = { "Tarik", 9984, 4, 3, 8, { [3] = 9984 }, { [3] = 8 }, nil, nil, nil, true }
 players["dragonziver"] = { "Dragonziver", 9979, 4, 3, 9, { [3] = 9979 }, { [3] = 9 }, nil, nil, nil, true }
 players["dragonzeta"] = { "Dragonzeta", 9975, 4, 3, 10, { [3] = 9975 }, { [3] = 10 }, nil, nil, nil, true }
 players["dragonsiver"] = { "Dragonsiver", 9972, 4, 3, 11, { [3] = 9972 }, { [3] = 11 }, nil, nil, nil, true }
-players["rgrgr"] = { "Rgrgr", 9968, 4, 3, 12, { [1] = 5990, [3] = 9968 }, { [1] = 3417, [3] = 12 }, nil, nil, nil, true }
-players["mantita"] = { "Mantita", 9968, 4, 3, 13, { [1] = 33, [3] = 9968 }, { [1] = 15914, [3] = 13 }, nil, nil, nil, true }
-players["upsurge"] = { "Upsurge", 9965, 4, 3, 14, { [1] = 6253, [2] = 5556, [3] = 9965 }, { [1] = 3040, [2] = 2904, [3] = 14 }, nil, nil, nil, true }
-players["pubx"] = { "Pubx", 9963, 4, 3, 15, { [2] = 5965, [3] = 9963 }, { [2] = 2383, [3] = 15 }, nil, nil, nil, true }
+players["rgrgr"] = { "Rgrgr", 9968, 4, 3, 12, { [1] = 5979, [3] = 9968 }, { [1] = 3436, [3] = 12 }, nil, nil, nil, true }
+players["mantita"] = { "Mantita", 9968, 4, 3, 13, { [1] = 33, [3] = 9968 }, { [1] = 15952, [3] = 13 }, nil, nil, nil, true }
+players["upsurge"] = { "Upsurge", 9965, 4, 3, 14, { [1] = 6244, [2] = 5545, [3] = 9965 }, { [1] = 3052, [2] = 2913, [3] = 14 }, nil, nil, nil, true }
+players["pubx"] = { "Pubx", 9962, 4, 3, 15, { [2] = 5956, [3] = 9962 }, { [2] = 2393, [3] = 15 }, nil, nil, nil, true }
 players["merlykarolay"] = { "Merlykarolay", 9955, 4, 3, 17, { [3] = 9955 }, { [3] = 17 }, nil, nil, nil, true }
-players["sela"] = { "Sela", 9954, 4, 3, 18, { [1] = 993, [3] = 9954 }, { [1] = 12879, [3] = 18 }, nil, nil, nil, true }
-players["tritosh"] = { "Tritosh", 9953, 4, 3, 19, { [1] = 6625, [2] = 86, [3] = 9953 }, { [1] = 2479, [2] = 12277, [3] = 19 }, nil, nil, nil, true }
+players["sela"] = { "Sela", 9954, 4, 3, 18, { [1] = 993, [3] = 9954 }, { [1] = 12912, [3] = 18 }, nil, nil, nil, true }
+players["tritosh"] = { "Tritosh", 9953, 4, 3, 19, { [1] = 6618, [2] = 86, [3] = 9953 }, { [1] = 2482, [2] = 12307, [3] = 19 }, nil, nil, nil, true }
 players["delusional"] = { "Delusional", 9952, 4, 3, 20, { [3] = 9952 }, { [3] = 20 }, nil, nil, nil, true }
-players["melby"] = { "Melby", 9948, 4, 3, 21, { [1] = 5036, [2] = 4124, [3] = 9948 }, { [1] = 4991, [2] = 4996, [3] = 21 }, nil, nil, nil, true }
-players["lx"] = { "Lx", 9946, 4, 3, 22, { [2] = 6983, [3] = 9946 }, { [2] = 1311, [3] = 22 }, nil, nil, nil, true }
-players["duplicates"] = { "Duplicates", 9944, 4, 3, 23, { [1] = 4585, [2] = 2995, [3] = 9944 }, { [1] = 5811, [2] = 7247, [3] = 23 }, nil, nil, nil, true }
+players["melby"] = { "Melby", 9948, 4, 3, 21, { [1] = 5023, [2] = 4114, [3] = 9948 }, { [1] = 5017, [2] = 5014, [3] = 21 }, nil, nil, nil, true }
+players["lx"] = { "Lx", 9946, 4, 3, 22, { [2] = 6983, [3] = 9946 }, { [2] = 1311, [3] = 22 }, nil, nil, nil, false }
+players["duplicates"] = { "Duplicates", 9945, 4, 3, 23, { [1] = 4570, [2] = 2982, [3] = 9945 }, { [1] = 5841, [2] = 7282, [3] = 23 }, nil, nil, nil, true }
 players["antistetic"] = { "Antistetic", 9940, 4, 3, 24, { [3] = 9940 }, { [3] = 24 }, nil, nil, nil, true }
-players["vulguin"] = { "Vulguin", 9940, 4, 3, 25, { [1] = 506, [3] = 9940 }, { [1] = 14386, [3] = 25 }, nil, nil, nil, true }
-players["ajla"] = { "Ajla", 9939, 4, 3, 26, { [1] = 1313, [3] = 9939 }, { [1] = 12291, [3] = 26 }, nil, nil, nil, true }
+players["vulguin"] = { "Vulguin", 9939, 4, 3, 25, { [1] = 505, [3] = 9939 }, { [1] = 14425, [3] = 25 }, nil, nil, nil, true }
+players["ajla"] = { "Ajla", 9938, 4, 3, 26, { [1] = 1301, [3] = 9938 }, { [1] = 12336, [3] = 26 }, nil, nil, nil, true }
 players["nonameexists"] = { "Nonameexists", 9938, 4, 3, 27, { [3] = 9938 }, { [3] = 27 }, nil, nil, nil, true }
-players["trakktorr"] = { "Trakktorr", 9936, 4, 3, 28, { [2] = 8714, [3] = 9936 }, { [2] = 237, [3] = 28 }, nil, nil, nil, true }
-players["kereal"] = { "Kereal", 9934, 4, 3, 29, { [3] = 9934 }, { [3] = 29 }, nil, nil, nil, true }
-players["niewydymka"] = { "Niewydymka", 9934, 4, 3, 30, { [1] = 7071, [2] = 6215, [3] = 9934 }, { [1] = 1944, [2] = 2109, [3] = 30 }, nil, nil, nil, true }
-players["mezon"] = { "Mezon", 9931, 4, 3, 31, { [1] = 7998, [2] = 5565, [3] = 9931 }, { [1] = 979, [2] = 2894, [3] = 31 }, nil, nil, nil, true }
-players["swaglyfat"] = { "Swaglyfat", 9929, 4, 3, 32, { [1] = 6719, [2] = 4742, [3] = 9929 }, { [1] = 2353, [2] = 3999, [3] = 32 }, nil, nil, nil, true }
-players["retpax"] = { "Retpax", 9928, 4, 3, 33, { [1] = 6843, [3] = 9928 }, { [1] = 2215, [3] = 33 }, nil, nil, nil, true }
-players["lesyi"] = { "Lesyi", 9928, 4, 3, 34, { [3] = 9928 }, { [3] = 34 }, nil, nil, nil, true }
-players["safaura"] = { "Safaura", 9926, 4, 3, 35, { [1] = 3031, [2] = 2964, [3] = 9926 }, { [1] = 8846, [2] = 7334, [3] = 35 }, nil, nil, nil, true }
-players["vukpal"] = { "Vukpal", 9925, 4, 3, 36, { [1] = 6040, [3] = 9925 }, { [1] = 3337, [3] = 36 }, nil, nil, nil, true }
-players["symbio"] = { "Symbio", 9924, 4, 3, 37, { [1] = 5468, [2] = 5582, [3] = 9924 }, { [1] = 4266, [2] = 2875, [3] = 37 }, nil, nil, nil, true }
-players["ashbringer"] = { "Ashbringer", 9922, 4, 3, 38, { [1] = 8186, [2] = 4791, [3] = 9922 }, { [1] = 801, [2] = 3923, [3] = 38 }, nil, nil, nil, true }
-players["aminy"] = { "Aminy", 9921, 4, 3, 39, { [2] = 6394, [3] = 9921 }, { [2] = 1896, [3] = 39 }, nil, nil, nil, true }
-players["pon"] = { "Pon", 9920, 4, 3, 40, { [3] = 9920 }, { [3] = 40 }, nil, nil, nil, true }
-players["nathron"] = { "Nathron", 9919, 4, 3, 41, { [1] = 5425, [3] = 9919 }, { [1] = 4337, [3] = 41 }, nil, nil, nil, true }
+players["trakktorr"] = { "Trakktorr", 9936, 4, 3, 28, { [2] = 8713, [3] = 9936 }, { [2] = 238, [3] = 28 }, nil, nil, nil, true }
+players["niewydymka"] = { "Niewydymka", 9934, 4, 3, 29, { [1] = 7068, [2] = 6204, [3] = 9934 }, { [1] = 1941, [2] = 2119, [3] = 29 }, nil, nil, nil, true }
+players["kereal"] = { "Kereal", 9934, 4, 3, 30, { [3] = 9934 }, { [3] = 30 }, nil, nil, nil, true }
+players["mezon"] = { "Mezon", 9931, 4, 3, 31, { [1] = 7993, [2] = 5554, [3] = 9931 }, { [1] = 983, [2] = 2904, [3] = 31 }, nil, nil, nil, true }
+players["swaglyfat"] = { "Swaglyfat", 9929, 4, 3, 32, { [1] = 6709, [2] = 4728, [3] = 9929 }, { [1] = 2363, [2] = 4020, [3] = 32 }, nil, nil, nil, true }
+players["retpax"] = { "Retpax", 9928, 4, 3, 33, { [1] = 6837, [3] = 9928 }, { [1] = 2221, [3] = 33 }, nil, nil, nil, true }
+players["lesyi"] = { "Lesyi", 9927, 4, 3, 34, { [3] = 9927 }, { [3] = 34 }, nil, nil, nil, true }
+players["safaura"] = { "Safaura", 9926, 4, 3, 35, { [1] = 3023, [2] = 2955, [3] = 9926 }, { [1] = 8875, [2] = 7355, [3] = 35 }, nil, nil, nil, true }
+players["vukpal"] = { "Vukpal", 9924, 4, 3, 36, { [1] = 6032, [3] = 9924 }, { [1] = 3350, [3] = 36 }, nil, nil, nil, true }
+players["symbio"] = { "Symbio", 9923, 4, 3, 37, { [1] = 5458, [2] = 5571, [3] = 9923 }, { [1] = 4288, [2] = 2885, [3] = 37 }, nil, nil, nil, true }
+players["ashbringer"] = { "Ashbringer", 9922, 4, 3, 38, { [1] = 8179, [2] = 4778, [3] = 9922 }, { [1] = 804, [2] = 3941, [3] = 38 }, nil, nil, nil, true }
+players["nathron"] = { "Nathron", 9922, 4, 3, 39, { [1] = 5414, [3] = 9922 }, { [1] = 4360, [3] = 39 }, nil, nil, nil, true }
+players["aminy"] = { "Aminy", 9921, 4, 3, 40, { [2] = 6384, [3] = 9921 }, { [2] = 1908, [3] = 40 }, nil, nil, nil, true }
+players["pon"] = { "Pon", 9920, 4, 3, 41, { [3] = 9920 }, { [3] = 41 }, nil, nil, nil, true }
 players["arondight"] = { "Arondight", 9916, 4, 3, 42, { [3] = 9916 }, { [3] = 42 }, nil, nil, nil, true }
-players["kabronxo"] = { "Kabronxo", 9914, 4, 3, 43, { [2] = 7786, [3] = 9914 }, { [2] = 646, [3] = 43 }, nil, nil, nil, true }
+players["kabronxo"] = { "Kabronxo", 9914, 4, 3, 43, { [2] = 7779, [3] = 9914 }, { [2] = 650, [3] = 43 }, nil, nil, nil, true }
 players["pqrabuser"] = { "Pqrabuser", 9913, 4, 3, 43, { [2] = 8635, [3] = 9913 }, { [2] = 263, [3] = 43 }, nil, nil, nil, false }
 players["stussy"] = { "Stussy", 9912, 4, 3, 44, { [3] = 9912 }, { [3] = 44 }, nil, nil, nil, true }
-players["miside"] = { "Miside", 9912, 4, 3, 45, { [2] = 8623, [3] = 9912 }, { [2] = 267, [3] = 45 }, nil, nil, nil, true }
-players["jajcarxtwo"] = { "Jajcarxtwo", 9910, 4, 3, 46, { [1] = 6164, [2] = 1622, [3] = 9910 }, { [1] = 3173, [2] = 10458, [3] = 46 }, nil, nil, nil, true }
+players["miside"] = { "Miside", 9911, 4, 3, 45, { [2] = 8618, [3] = 9911 }, { [2] = 269, [3] = 45 }, nil, nil, nil, true }
+players["jajcarxtwo"] = { "Jajcarxtwo", 9910, 4, 3, 46, { [1] = 6155, [2] = 1614, [3] = 9910 }, { [1] = 3187, [2] = 10482, [3] = 46 }, nil, nil, nil, true }
 players["win"] = { "Win", 9910, 4, 3, 47, { [3] = 9910 }, { [3] = 47 }, nil, nil, nil, true }
-players["acidpala"] = { "Acidpala", 9910, 4, 3, 48, { [1] = 3612, [3] = 9910 }, { [1] = 7641, [3] = 48 }, nil, nil, nil, true }
-players["jeanine"] = { "Jeanine", 9907, 4, 3, 49, { [1] = 4343, [3] = 9907 }, { [1] = 6241, [3] = 49 }, nil, nil, nil, true }
-players["cutebiic"] = { "Cutebiic", 9907, 4, 3, 50, { [1] = 229, [2] = 8503, [3] = 9907 }, { [1] = 15325, [2] = 303, [3] = 50 }, nil, nil, nil, true }
-players["renger"] = { "Renger", 9901, 4, 3, 51, { [1] = 4455, [3] = 9901 }, { [1] = 6053, [3] = 51 }, nil, nil, nil, true }
-players["noiqneeded"] = { "Noiqneeded", 9898, 4, 3, 52, { [1] = 7730, [2] = 3755, [3] = 9898 }, { [1] = 1219, [2] = 5715, [3] = 52 }, nil, nil, nil, true }
+players["acidpala"] = { "Acidpala", 9909, 4, 3, 48, { [1] = 3603, [3] = 9909 }, { [1] = 7677, [3] = 48 }, nil, nil, nil, true }
+players["jeanine"] = { "Jeanine", 9906, 4, 3, 49, { [1] = 4327, [3] = 9906 }, { [1] = 6272, [3] = 49 }, nil, nil, nil, true }
+players["cutebiic"] = { "Cutebiic", 9906, 4, 3, 50, { [1] = 226, [2] = 8498, [3] = 9906 }, { [1] = 15361, [2] = 304, [3] = 50 }, nil, nil, nil, true }
+players["renger"] = { "Renger", 9901, 4, 3, 51, { [1] = 4440, [3] = 9901 }, { [1] = 6083, [3] = 51 }, nil, nil, nil, true }
+players["noiqneeded"] = { "Noiqneeded", 9898, 4, 3, 52, { [1] = 7722, [2] = 3746, [3] = 9898 }, { [1] = 1226, [2] = 5724, [3] = 52 }, nil, nil, nil, true }
 players["llithh"] = { "Llithh", 9898, 4, 3, 53, { [3] = 9898 }, { [3] = 53 }, nil, nil, nil, true }
-players["ripxe"] = { "Ripxe", 9897, 4, 3, 54, { [1] = 745, [3] = 9897 }, { [1] = 13587, [3] = 54 }, nil, nil, nil, true }
-players["ggbubble"] = { "Ggbubble", 9897, 4, 3, 55, { [1] = 4426, [3] = 9897 }, { [1] = 6110, [3] = 55 }, nil, nil, nil, true }
-players["deangelis"] = { "Deangelis", 9897, 4, 3, 56, { [2] = 1788, [3] = 9897 }, { [2] = 10172, [3] = 56 }, nil, nil, nil, true }
-players["acidpalanine"] = { "Acidpalanine", 9896, 4, 3, 57, { [3] = 9896 }, { [3] = 57 }, nil, nil, nil, true }
-players["iluminatian"] = { "Iluminatian", 9896, 4, 3, 58, { [1] = 8887, [2] = 8594, [3] = 9896 }, { [1] = 343, [2] = 276, [3] = 58 }, nil, nil, nil, true }
-players["tirgar"] = { "Tirgar", 9895, 4, 3, 59, { [2] = 8965, [3] = 9895 }, { [2] = 168, [3] = 59 }, nil, nil, nil, true }
-players["evilret"] = { "Evilret", 9892, 4, 3, 60, { [3] = 9892 }, { [3] = 60 }, nil, nil, nil, true }
-players["secre"] = { "Secre", 9891, 4, 3, 61, { [1] = 6184, [2] = 5657, [3] = 9891 }, { [1] = 3143, [2] = 2788, [3] = 61 }, nil, nil, nil, true }
-players["pandao"] = { "Pandao", 9890, 4, 3, 62, { [1] = 8261, [2] = 7892, [3] = 9890 }, { [1] = 750, [2] = 592, [3] = 62 }, nil, nil, nil, true }
+players["ripxe"] = { "Ripxe", 9897, 4, 3, 54, { [1] = 745, [3] = 9897 }, { [1] = 13609, [3] = 54 }, nil, nil, nil, true }
+players["ggbubble"] = { "Ggbubble", 9896, 4, 3, 55, { [1] = 4410, [3] = 9896 }, { [1] = 6138, [3] = 55 }, nil, nil, nil, true }
+players["deangelis"] = { "Deangelis", 9896, 4, 3, 56, { [2] = 1784, [3] = 9896 }, { [2] = 10193, [3] = 56 }, nil, nil, nil, true }
+players["acidpalanine"] = { "Acidpalanine", 9895, 4, 3, 57, { [3] = 9895 }, { [3] = 57 }, nil, nil, nil, true }
+players["iluminatian"] = { "Iluminatian", 9895, 4, 3, 58, { [1] = 8884, [2] = 8588, [3] = 9895 }, { [1] = 345, [2] = 277, [3] = 58 }, nil, nil, nil, true }
+players["tirgar"] = { "Tirgar", 9894, 4, 3, 59, { [2] = 8962, [3] = 9894 }, { [2] = 168, [3] = 59 }, nil, nil, nil, true }
+players["evilret"] = { "Evilret", 9891, 4, 3, 60, { [3] = 9891 }, { [3] = 60 }, nil, nil, nil, true }
+players["secre"] = { "Secre", 9891, 4, 3, 61, { [1] = 6174, [2] = 5644, [3] = 9891 }, { [1] = 3157, [2] = 2802, [3] = 61 }, nil, nil, nil, true }
+players["pandao"] = { "Pandao", 9889, 4, 3, 62, { [1] = 8258, [2] = 7884, [3] = 9889 }, { [1] = 752, [2] = 597, [3] = 62 }, nil, nil, nil, true }
 players["buliaushudas"] = { "Buliaushudas", 9888, 4, 3, 63, { [3] = 9888 }, { [3] = 63 }, nil, nil, nil, true }
-players["dudus"] = { "Dudus", 9884, 4, 3, 64, { [1] = 5260, [2] = 2656, [3] = 9884 }, { [1] = 4614, [2] = 8094, [3] = 64 }, nil, nil, nil, true }
-players["axamuk"] = { "Axamuk", 9884, 4, 3, 65, { [1] = 3441, [3] = 9884 }, { [1] = 8006, [3] = 65 }, nil, nil, nil, true }
-players["puropuropuro"] = { "Puropuropuro", 9882, 4, 3, 66, { [1] = 7029, [3] = 9882 }, { [1] = 1993, [3] = 66 }, nil, nil, nil, true }
+players["dudus"] = { "Dudus", 9884, 4, 3, 64, { [1] = 5248, [2] = 2645, [3] = 9884 }, { [1] = 4640, [2] = 8124, [3] = 64 }, nil, nil, nil, true }
+players["axamuk"] = { "Axamuk", 9883, 4, 3, 65, { [1] = 3430, [3] = 9883 }, { [1] = 8043, [3] = 65 }, nil, nil, nil, true }
+players["puropuropuro"] = { "Puropuropuro", 9881, 4, 3, 66, { [1] = 7023, [3] = 9881 }, { [1] = 1997, [3] = 66 }, nil, nil, nil, true }
 players["stinng"] = { "Stinng", 9881, 4, 3, 67, { [3] = 9881 }, { [3] = 67 }, nil, nil, nil, true }
-players["anton"] = { "Anton", 9878, 4, 3, 68, { [3] = 9878 }, { [3] = 68 }, nil, nil, nil, true }
-players["hantelek"] = { "Hantelek", 9874, 4, 3, 69, { [3] = 9874 }, { [3] = 69 }, nil, nil, nil, true }
-players["bhelynis"] = { "Bhelynis", 9874, 4, 3, 70, { [3] = 9874 }, { [3] = 70 }, nil, nil, nil, true }
-players["ebolastorm"] = { "Ebolastorm", 9873, 4, 3, 71, { [1] = 6658, [2] = 4981, [3] = 9873 }, { [1] = 2438, [2] = 3667, [3] = 71 }, nil, nil, nil, true }
-players["intrigant"] = { "Intrigant", 9870, 4, 3, 72, { [1] = 1918, [2] = 7275, [3] = 9870 }, { [1] = 11133, [2] = 1049, [3] = 72 }, nil, nil, nil, true }
-players["choklate"] = { "Choklate", 9868, 4, 3, 73, { [1] = 7539, [3] = 9868 }, { [1] = 1407, [3] = 73 }, nil, nil, nil, true }
-players["brutty"] = { "Brutty", 9866, 4, 3, 74, { [2] = 7657, [3] = 9866 }, { [2] = 740, [3] = 74 }, nil, nil, nil, true }
-players["pinoll"] = { "Pinoll", 9866, 4, 3, 75, { [1] = 1448, [3] = 9866 }, { [1] = 12048, [3] = 75 }, nil, nil, nil, true }
-players["beenz"] = { "Beenz", 9863, 4, 3, 76, { [1] = 3493, [3] = 9863 }, { [1] = 7888, [3] = 76 }, nil, nil, nil, true }
-players["patcheslight"] = { "Patcheslight", 9862, 4, 3, 77, { [2] = 7924, [3] = 9862 }, { [2] = 579, [3] = 77 }, nil, nil, nil, true }
-players["jajcarx"] = { "Jajcarx", 9858, 4, 3, 78, { [1] = 1043, [3] = 9858 }, { [1] = 12793, [3] = 78 }, nil, nil, nil, true }
-players["ttumbolacasa"] = { "Ttumbolacasa", 9856, 4, 3, 79, { [1] = 758, [3] = 9856 }, { [1] = 13547, [3] = 79 }, nil, nil, nil, true }
+players["ebolastorm"] = { "Ebolastorm", 9880, 4, 3, 68, { [1] = 6650, [2] = 4972, [3] = 9880 }, { [1] = 2446, [2] = 3672, [3] = 68 }, nil, nil, nil, true }
+players["anton"] = { "Anton", 9877, 4, 3, 69, { [3] = 9877 }, { [3] = 69 }, nil, nil, nil, true }
+players["hantelek"] = { "Hantelek", 9874, 4, 3, 70, { [3] = 9874 }, { [3] = 70 }, nil, nil, nil, true }
+players["bhelynis"] = { "Bhelynis", 9873, 4, 3, 71, { [3] = 9873 }, { [3] = 71 }, nil, nil, nil, true }
+players["intrigant"] = { "Intrigant", 9870, 4, 3, 72, { [1] = 1918, [2] = 7266, [3] = 9870 }, { [1] = 11142, [2] = 1053, [3] = 72 }, nil, nil, nil, true }
+players["choklate"] = { "Choklate", 9868, 4, 3, 73, { [1] = 7533, [3] = 9868 }, { [1] = 1409, [3] = 73 }, nil, nil, nil, true }
+players["pinoll"] = { "Pinoll", 9865, 4, 3, 74, { [1] = 3916, [3] = 9865 }, { [1] = 7042, [3] = 74 }, nil, nil, nil, true }
+players["brutty"] = { "Brutty", 9865, 4, 3, 75, { [2] = 7655, [3] = 9865 }, { [2] = 739, [3] = 75 }, nil, nil, nil, true }
+players["beenz"] = { "Beenz", 9862, 4, 3, 76, { [1] = 3487, [3] = 9862 }, { [1] = 7924, [3] = 76 }, nil, nil, nil, true }
+players["patcheslight"] = { "Patcheslight", 9862, 4, 3, 77, { [2] = 7920, [3] = 9862 }, { [2] = 579, [3] = 77 }, nil, nil, nil, true }
+players["jajcarx"] = { "Jajcarx", 9857, 4, 3, 78, { [1] = 1043, [3] = 9857 }, { [1] = 12813, [3] = 78 }, nil, nil, nil, true }
+players["ttumbolacasa"] = { "Ttumbolacasa", 9855, 4, 3, 79, { [1] = 758, [3] = 9855 }, { [1] = 13574, [3] = 79 }, nil, nil, nil, true }
 players["piinol"] = { "Piinol", 9852, 4, 3, 80, { [3] = 9852 }, { [3] = 80 }, nil, nil, nil, true }
-players["siu"] = { "Siu", 9850, 4, 3, 81, { [3] = 9850 }, { [3] = 81 }, nil, nil, nil, true }
-players["nnethercore"] = { "Nnethercore", 9847, 4, 3, 82, { [3] = 9847 }, { [3] = 82 }, nil, nil, nil, true }
-players["saphros"] = { "Saphros", 9847, 4, 3, 83, { [2] = 6939, [3] = 9847 }, { [2] = 1352, [3] = 83 }, nil, nil, nil, true }
-players["eluzkus"] = { "Eluzkus", 9844, 4, 3, 84, { [1] = 5782, [3] = 9844 }, { [1] = 3759, [3] = 84 }, nil, nil, nil, true }
-players["insaneaura"] = { "Insaneaura", 9840, 4, 3, 86, { [2] = 6264, [3] = 9840 }, { [2] = 2046, [3] = 86 }, nil, nil, nil, true }
-players["hotlipz"] = { "Hotlipz", 9840, 4, 3, 87, { [1] = 505, [3] = 9840 }, { [1] = 14390, [3] = 87 }, nil, nil, nil, true }
-players["chukkles"] = { "Chukkles", 9839, 4, 3, 88, { [1] = 7721, [3] = 9839 }, { [1] = 1229, [3] = 88 }, nil, nil, nil, true }
-players["zlebaey"] = { "Zlebaey", 9837, 4, 3, 89, { [1] = 6580, [3] = 9837 }, { [1] = 2546, [3] = 89 }, nil, nil, nil, true }
-players["nestumx"] = { "Nestumx", 9834, 4, 3, 90, { [2] = 631, [3] = 9834 }, { [2] = 11551, [3] = 90 }, nil, nil, nil, true }
-players["ajxs"] = { "Ajxs", 9829, 4, 3, 91, { [3] = 9829 }, { [3] = 91 }, nil, nil, nil, true }
-players["bojp"] = { "Bojp", 9829, 4, 3, 92, { [3] = 9829 }, { [3] = 92 }, nil, nil, nil, true }
+players["siu"] = { "Siu", 9849, 4, 3, 81, { [3] = 9849 }, { [3] = 81 }, nil, nil, nil, true }
+players["nestumx"] = { "Nestumx", 9848, 4, 3, 82, { [2] = 630, [3] = 9848 }, { [2] = 11577, [3] = 82 }, nil, nil, nil, true }
+players["nnethercore"] = { "Nnethercore", 9846, 4, 3, 83, { [3] = 9846 }, { [3] = 83 }, nil, nil, nil, true }
+players["saphros"] = { "Saphros", 9846, 4, 3, 84, { [2] = 6936, [3] = 9846 }, { [2] = 1360, [3] = 84 }, nil, nil, nil, true }
+players["eluzkus"] = { "Eluzkus", 9843, 4, 3, 85, { [1] = 5771, [3] = 9843 }, { [1] = 3774, [3] = 85 }, nil, nil, nil, true }
+players["insaneaura"] = { "Insaneaura", 9840, 4, 3, 87, { [2] = 6254, [3] = 9840 }, { [2] = 2054, [3] = 87 }, nil, nil, nil, true }
+players["hotlipz"] = { "Hotlipz", 9839, 4, 3, 88, { [1] = 504, [3] = 9839 }, { [1] = 14430, [3] = 88 }, nil, nil, nil, true }
+players["stunlocked"] = { "Stunlocked", 9838, 4, 3, 89, { [3] = 9838 }, { [3] = 89 }, nil, nil, nil, true }
+players["chukkles"] = { "Chukkles", 9838, 4, 3, 90, { [1] = 7714, [3] = 9838 }, { [1] = 1235, [3] = 90 }, nil, nil, nil, true }
+players["zlebaey"] = { "Zlebaey", 9837, 4, 3, 91, { [1] = 6571, [3] = 9837 }, { [1] = 2552, [3] = 91 }, nil, nil, nil, true }
+players["ajxs"] = { "Ajxs", 9829, 4, 3, 92, { [3] = 9829 }, { [3] = 92 }, nil, nil, nil, true }
 players["proff"] = { "Proff", 9828, 4, 3, 93, { [3] = 9828 }, { [3] = 93 }, nil, nil, nil, true }
-players["nemesis"] = { "Nemesis", 9827, 4, 3, 94, { [3] = 9827 }, { [3] = 94 }, nil, nil, nil, true }
-players["stunlocked"] = { "Stunlocked", 9824, 4, 3, 95, { [3] = 9824 }, { [3] = 95 }, nil, nil, nil, true }
-players["sheeana"] = { "Sheeana", 9820, 4, 3, 96, { [2] = 8336, [3] = 9820 }, { [2] = 382, [3] = 96 }, nil, nil, nil, true }
-players["hogun"] = { "Hogun", 9817, 4, 3, 97, { [1] = 744, [3] = 9817 }, { [1] = 13589, [3] = 97 }, nil, nil, nil, true }
-players["shinyoza"] = { "Shinyoza", 9813, 4, 3, 99, { [1] = 3783, [3] = 9813 }, { [1] = 7285, [3] = 99 }, nil, nil, nil, true }
-players["zef"] = { "Zef", 9812, 4, 3, 100, { [1] = 4331, [2] = 3332, [3] = 9812 }, { [1] = 6259, [2] = 6508, [3] = 100 }, nil, nil, nil, true }
-players["mekkgara"] = { "Mekkgara", 9812, 4, 3, 101, { [2] = 8020, [3] = 9812 }, { [2] = 537, [3] = 101 }, nil, nil, nil, true }
-players["luganosz"] = { "Luganosz", 9809, 4, 3, 102, { [2] = 6630, [3] = 9809 }, { [2] = 1649, [3] = 102 }, nil, nil, nil, true }
-players["ajx"] = { "Ajx", 9807, 4, 3, 103, { [3] = 9807 }, { [3] = 103 }, nil, nil, nil, true }
-players["darkkmoon"] = { "Darkkmoon", 9804, 4, 3, 104, { [1] = 6497, [3] = 9804 }, { [1] = 2665, [3] = 104 }, nil, nil, nil, true }
-players["nthrcores"] = { "Nthrcores", 9803, 4, 3, 105, { [2] = 8958, [3] = 9803 }, { [2] = 169, [3] = 105 }, nil, nil, nil, true }
-players["bobipampersa"] = { "Bobipampersa", 9802, 4, 3, 106, { [1] = 3825, [2] = 6114, [3] = 9802 }, { [1] = 7204, [2] = 2228, [3] = 106 }, nil, nil, nil, true }
-players["lunascentx"] = { "Lunascentx", 9802, 4, 3, 107, { [1] = 8626, [2] = 5150, [3] = 9802 }, { [1] = 492, [2] = 3451, [3] = 107 }, nil, nil, nil, true }
-players["paladyix"] = { "Paladyix", 9800, 4, 3, 108, { [2] = 7748, [3] = 9800 }, { [2] = 668, [3] = 108 }, nil, nil, nil, true }
+players["bojp"] = { "Bojp", 9828, 4, 3, 94, { [3] = 9828 }, { [3] = 94 }, nil, nil, nil, true }
+players["nemesis"] = { "Nemesis", 9826, 4, 3, 95, { [3] = 9826 }, { [3] = 95 }, nil, nil, nil, true }
+players["sheeana"] = { "Sheeana", 9819, 4, 3, 96, { [2] = 8332, [3] = 9819 }, { [2] = 385, [3] = 96 }, nil, nil, nil, true }
+players["hogun"] = { "Hogun", 9816, 4, 3, 97, { [1] = 744, [3] = 9816 }, { [1] = 13611, [3] = 97 }, nil, nil, nil, true }
+players["shinyoza"] = { "Shinyoza", 9812, 4, 3, 99, { [1] = 3766, [3] = 9812 }, { [1] = 7334, [3] = 99 }, nil, nil, nil, true }
+players["zef"] = { "Zef", 9812, 4, 3, 100, { [1] = 4324, [2] = 3324, [3] = 9812 }, { [1] = 6279, [2] = 6523, [3] = 100 }, nil, nil, nil, true }
+players["mekkgara"] = { "Mekkgara", 9811, 4, 3, 101, { [2] = 8016, [3] = 9811 }, { [2] = 535, [3] = 101 }, nil, nil, nil, true }
+players["symbolixpall"] = { "Symbolixpall", 9810, 4, 3, 102, { [1] = 4679, [2] = 6194, [3] = 9810 }, { [1] = 5627, [2] = 2129, [3] = 102 }, nil, nil, nil, true }
+players["luganosz"] = { "Luganosz", 9809, 4, 3, 103, { [2] = 6622, [3] = 9809 }, { [2] = 1664, [3] = 103 }, nil, nil, nil, true }
+players["ajx"] = { "Ajx", 9807, 4, 3, 104, { [3] = 9807 }, { [3] = 104 }, nil, nil, nil, true }
+players["darkkmoon"] = { "Darkkmoon", 9803, 4, 3, 105, { [1] = 6489, [3] = 9803 }, { [1] = 2670, [3] = 105 }, nil, nil, nil, true }
+players["nthrcores"] = { "Nthrcores", 9802, 4, 3, 106, { [2] = 8954, [3] = 9802 }, { [2] = 169, [3] = 106 }, nil, nil, nil, true }
+players["bobipampersa"] = { "Bobipampersa", 9801, 4, 3, 107, { [1] = 3806, [2] = 6102, [3] = 9801 }, { [1] = 7255, [2] = 2240, [3] = 107 }, nil, nil, nil, true }
+players["lunascentx"] = { "Lunascentx", 9801, 4, 3, 108, { [1] = 8620, [2] = 5137, [3] = 9801 }, { [1] = 494, [2] = 3466, [3] = 108 }, nil, nil, nil, true }
 players["centinelo"] = { "Centinelo", 9800, 4, 3, 109, { [1] = 6140, [2] = 652, [3] = 9800 }, { [1] = 3207, [2] = 11314, [3] = 109 }, nil, nil, nil, false }
-players["vasilija"] = { "Vasilija", 9800, 4, 3, 109, { [3] = 9800 }, { [3] = 109 }, nil, nil, nil, true }
-players["rettbull"] = { "Rettbull", 9799, 4, 3, 110, { [2] = 6721, [3] = 9799 }, { [2] = 1563, [3] = 110 }, nil, nil, nil, true }
-players["vipershadows"] = { "Vipershadows", 9798, 4, 3, 111, { [3] = 9798 }, { [3] = 111 }, nil, nil, nil, true }
-players["thelarith"] = { "Thelarith", 9796, 4, 3, 112, { [2] = 1070, [3] = 9796 }, { [2] = 11176, [3] = 112 }, nil, nil, nil, true }
-players["nep"] = { "Nep", 9796, 4, 3, 113, { [1] = 4070, [2] = 9517, [3] = 9796 }, { [1] = 6740, [2] = 74, [3] = 113 }, nil, nil, nil, true }
-players["ennexus"] = { "Ennexus", 9792, 4, 3, 116, { [1] = 7142, [2] = 7415, [3] = 9792 }, { [1] = 1854, [2] = 928, [3] = 116 }, nil, nil, nil, true }
-players["valorous"] = { "Valorous", 9788, 4, 3, 117, { [1] = 583, [2] = 4341, [3] = 9788 }, { [1] = 14100, [2] = 4641, [3] = 117 }, nil, nil, nil, true }
-players["corthaz"] = { "Corthaz", 9785, 4, 3, 118, { [3] = 9785 }, { [3] = 118 }, nil, nil, nil, true }
-players["rhosy"] = { "Rhosy", 9782, 4, 3, 119, { [2] = 5988, [3] = 9782 }, { [2] = 2355, [3] = 119 }, nil, nil, nil, true }
-players["scotid"] = { "Scotid", 9782, 4, 3, 120, { [3] = 9782 }, { [3] = 120 }, nil, nil, nil, true }
-players["shriimp"] = { "Shriimp", 9781, 4, 3, 121, { [1] = 7604, [2] = 9583, [3] = 9781 }, { [1] = 1331, [2] = 63, [3] = 121 }, nil, nil, nil, true }
-players["nestumdogx"] = { "Nestumdogx", 9780, 4, 3, 122, { [1] = 6171, [2] = 1309, [3] = 9780 }, { [1] = 3163, [2] = 10932, [3] = 122 }, nil, nil, nil, true }
-players["degrade"] = { "Degrade", 9778, 4, 3, 124, { [2] = 3486, [3] = 9778 }, { [2] = 6204, [3] = 124 }, nil, nil, nil, true }
-players["pokicha"] = { "Pokicha", 9776, 4, 3, 125, { [1] = 6114, [2] = 2614, [3] = 9776 }, { [1] = 3247, [2] = 8200, [3] = 125 }, nil, nil, nil, true }
-players["santaswaifu"] = { "Santaswaifu", 10000, 5, 1, 1, { [1] = 10000, [3] = 3237 }, { [1] = 1, [3] = 12437 }, nil, nil, nil, true }
-players["sagerax"] = { "Sagerax", 10000, 5, 1, 2, { [1] = 10000, [3] = 8951 }, { [1] = 2, [3] = 698 }, nil, nil, nil, true }
-players["dakuria"] = { "Dakuria", 9995, 5, 1, 3, { [1] = 9995, [3] = 9862 }, { [1] = 3, [3] = 78 }, nil, nil, nil, true }
-players["suszarkaa"] = { "Suszarkaa", 9995, 5, 1, 4, { [1] = 9995, [3] = 7526 }, { [1] = 4, [3] = 2259 }, nil, nil, nil, true }
-players["soulgyver"] = { "Soulgyver", 9991, 5, 1, 5, { [1] = 9991, [3] = 8723 }, { [1] = 5, [3] = 889 }, nil, nil, nil, true }
-players["gyapp"] = { "Gyapp", 9988, 5, 1, 6, { [1] = 9988, [3] = 7514 }, { [1] = 6, [3] = 2278 }, nil, nil, nil, true }
-players["hearthemusic"] = { "Hearthemusic", 9983, 5, 1, 7, { [1] = 9983, [3] = 9470 }, { [1] = 7, [3] = 288 }, nil, nil, nil, true }
+players["paladyix"] = { "Paladyix", 9799, 4, 3, 109, { [2] = 7742, [3] = 9799 }, { [2] = 670, [3] = 109 }, nil, nil, nil, true }
+players["vasilija"] = { "Vasilija", 9799, 4, 3, 110, { [3] = 9799 }, { [3] = 110 }, nil, nil, nil, true }
+players["rettbull"] = { "Rettbull", 9798, 4, 3, 111, { [2] = 6713, [3] = 9798 }, { [2] = 1574, [3] = 111 }, nil, nil, nil, true }
+players["vipershadows"] = { "Vipershadows", 9798, 4, 3, 112, { [3] = 9798 }, { [3] = 112 }, nil, nil, nil, true }
+players["thelarith"] = { "Thelarith", 9795, 4, 3, 113, { [2] = 1066, [3] = 9795 }, { [2] = 11202, [3] = 113 }, nil, nil, nil, true }
+players["nep"] = { "Nep", 9794, 4, 3, 115, { [1] = 4052, [2] = 9515, [3] = 9794 }, { [1] = 6783, [2] = 76, [3] = 115 }, nil, nil, nil, true }
+players["shriimp"] = { "Shriimp", 9794, 4, 3, 116, { [1] = 7599, [2] = 9582, [3] = 9794 }, { [1] = 1336, [2] = 63, [3] = 116 }, nil, nil, nil, true }
+players["ennexus"] = { "Ennexus", 9792, 4, 3, 118, { [1] = 7135, [2] = 7407, [3] = 9792 }, { [1] = 1858, [2] = 930, [3] = 118 }, nil, nil, nil, true }
+players["valorous"] = { "Valorous", 9787, 4, 3, 119, { [1] = 582, [2] = 4326, [3] = 9787 }, { [1] = 14138, [2] = 4670, [3] = 119 }, nil, nil, nil, true }
+players["corthaz"] = { "Corthaz", 9784, 4, 3, 120, { [3] = 9784 }, { [3] = 120 }, nil, nil, nil, true }
+players["rhosy"] = { "Rhosy", 9781, 4, 3, 121, { [2] = 5978, [3] = 9781 }, { [2] = 2370, [3] = 121 }, nil, nil, nil, true }
+players["scotid"] = { "Scotid", 9780, 4, 3, 122, { [3] = 9780 }, { [3] = 122 }, nil, nil, nil, true }
+players["nestumdogx"] = { "Nestumdogx", 9780, 4, 3, 123, { [1] = 6162, [2] = 1299, [3] = 9780 }, { [1] = 3174, [2] = 10956, [3] = 123 }, nil, nil, nil, true }
+players["degrade"] = { "Degrade", 9778, 4, 3, 125, { [2] = 3472, [3] = 9778 }, { [2] = 6228, [3] = 125 }, nil, nil, nil, true }
+players["santaswaifu"] = { "Santaswaifu", 10000, 5, 1, 1, { [1] = 10000, [3] = 3234 }, { [1] = 1, [3] = 12468 }, nil, nil, nil, true }
+players["sagerax"] = { "Sagerax", 10000, 5, 1, 2, { [1] = 10000, [3] = 8944 }, { [1] = 2, [3] = 707 }, nil, nil, nil, true }
+players["dakuria"] = { "Dakuria", 9995, 5, 1, 3, { [1] = 9995, [3] = 9860 }, { [1] = 3, [3] = 78 }, nil, nil, nil, true }
+players["suszarkaa"] = { "Suszarkaa", 9995, 5, 1, 4, { [1] = 9995, [3] = 7515 }, { [1] = 4, [3] = 2276 }, nil, nil, nil, true }
+players["soulgyver"] = { "Soulgyver", 9991, 5, 1, 5, { [1] = 9991, [3] = 8717 }, { [1] = 5, [3] = 895 }, nil, nil, nil, true }
+players["gyapp"] = { "Gyapp", 9988, 5, 1, 6, { [1] = 9988, [3] = 7508 }, { [1] = 6, [3] = 2288 }, nil, nil, nil, true }
+players["hearthemusic"] = { "Hearthemusic", 9983, 5, 1, 7, { [1] = 9983, [3] = 9466 }, { [1] = 7, [3] = 293 }, nil, nil, nil, true }
 players["holymaria"] = { "Holymaria", 9982, 5, 1, 8, { [1] = 9982 }, { [1] = 8 }, nil, nil, nil, true }
-players["exxonn"] = { "Exxonn", 9982, 5, 1, 9, { [1] = 9982, [2] = 74, [3] = 9876 }, { [1] = 9, [2] = 1257, [3] = 68 }, nil, nil, nil, true }
-players["maevz"] = { "Maevz", 9971, 5, 1, 10, { [1] = 9971, [3] = 9336 }, { [1] = 10, [3] = 377 }, nil, nil, nil, true }
-players["mindis"] = { "Mindis", 9970, 5, 1, 11, { [1] = 9970, [3] = 6329 }, { [1] = 11, [3] = 4799 }, nil, nil, nil, true }
-players["amordeyniscx"] = { "Amordeyniscx", 9968, 5, 1, 12, { [1] = 9968, [2] = 1143, [3] = 2087 }, { [1] = 12, [2] = 767, [3] = 16017 }, nil, nil, nil, true }
+players["exxonn"] = { "Exxonn", 9982, 5, 1, 9, { [1] = 9982, [2] = 74, [3] = 9874 }, { [1] = 9, [2] = 1261, [3] = 70 }, nil, nil, nil, true }
+players["maevz"] = { "Maevz", 9971, 5, 1, 10, { [1] = 9971, [3] = 9332 }, { [1] = 10, [3] = 384 }, nil, nil, nil, true }
+players["mindis"] = { "Mindis", 9970, 5, 1, 11, { [1] = 9970, [3] = 6772 }, { [1] = 11, [3] = 3675 }, nil, nil, nil, true }
+players["amordeyniscx"] = { "Amordeyniscx", 9968, 5, 1, 12, { [1] = 9968, [2] = 1143, [3] = 2085 }, { [1] = 12, [2] = 770, [3] = 16061 }, nil, nil, nil, true }
 players["holyshif"] = { "Holyshif", 9962, 5, 1, 13, { [1] = 9962 }, { [1] = 13 }, nil, nil, nil, true }
-players["dyskotekowa"] = { "Dyskotekowa", 9962, 5, 1, 14, { [1] = 9962, [3] = 6251 }, { [1] = 14, [3] = 4999 }, nil, nil, nil, true }
-players["vido"] = { "Vido", 9956, 5, 1, 15, { [1] = 9956, [3] = 8879 }, { [1] = 15, [3] = 761 }, nil, nil, nil, true }
-players["galyadispel"] = { "Galyadispel", 9955, 5, 1, 16, { [1] = 9955, [3] = 8728 }, { [1] = 16, [3] = 885 }, nil, nil, nil, true }
-players["angelic"] = { "Angelic", 9951, 5, 1, 17, { [1] = 9951, [2] = 769, [3] = 7336 }, { [1] = 17, [2] = 950, [3] = 2566 }, nil, nil, nil, true }
-players["galyasmite"] = { "Galyasmite", 9950, 5, 1, 18, { [1] = 9950, [3] = 7872 }, { [1] = 18, [3] = 1745 }, nil, nil, nil, true }
-players["oumastok"] = { "Oumastok", 9947, 5, 1, 19, { [1] = 9947, [3] = 5908 }, { [1] = 19, [3] = 5990 }, nil, nil, nil, true }
-players["pindis"] = { "Pindis", 9945, 5, 1, 20, { [1] = 9945, [3] = 7380 }, { [1] = 20, [3] = 2484 }, nil, nil, nil, true }
+players["dyskotekowa"] = { "Dyskotekowa", 9962, 5, 1, 14, { [1] = 9962, [3] = 6262 }, { [1] = 14, [3] = 4944 }, nil, nil, nil, true }
+players["vido"] = { "Vido", 9956, 5, 1, 15, { [1] = 9956, [3] = 8874 }, { [1] = 15, [3] = 768 }, nil, nil, nil, true }
+players["galyadispel"] = { "Galyadispel", 9955, 5, 1, 16, { [1] = 9955, [3] = 8721 }, { [1] = 16, [3] = 892 }, nil, nil, nil, true }
+players["angelic"] = { "Angelic", 9951, 5, 1, 17, { [1] = 9951, [2] = 769, [3] = 7328 }, { [1] = 17, [2] = 957, [3] = 2579 }, nil, nil, nil, true }
+players["galyasmite"] = { "Galyasmite", 9950, 5, 1, 18, { [1] = 9950, [3] = 7861 }, { [1] = 18, [3] = 1754 }, nil, nil, nil, true }
+players["oumastok"] = { "Oumastok", 9947, 5, 1, 19, { [1] = 9947, [3] = 5895 }, { [1] = 19, [3] = 6018 }, nil, nil, nil, true }
+players["pindis"] = { "Pindis", 9945, 5, 1, 20, { [1] = 9945, [3] = 7370 }, { [1] = 20, [3] = 2498 }, nil, nil, nil, true }
 players["sommagiczna"] = { "Sommagiczna", 9943, 5, 1, 21, { [1] = 9943 }, { [1] = 21 }, nil, nil, nil, true }
-players["megaskillman"] = { "Megaskillman", 9941, 5, 1, 22, { [1] = 9941, [3] = 1983 }, { [1] = 22, [3] = 16251 }, nil, nil, nil, true }
-players["cutte"] = { "Cutte", 9940, 5, 1, 23, { [1] = 9940, [3] = 1377 }, { [1] = 23, [3] = 17148 }, nil, nil, nil, true }
-players["jatrael"] = { "Jatrael", 9934, 5, 1, 24, { [1] = 9934, [2] = 1169 }, { [1] = 24, [2] = 760 }, nil, nil, nil, true }
-players["aryell"] = { "Aryell", 9923, 5, 1, 25, { [1] = 9923, [2] = 3051 }, { [1] = 25, [2] = 395 }, nil, nil, nil, true }
+players["megaskillman"] = { "Megaskillman", 9941, 5, 1, 22, { [1] = 9941, [3] = 2580 }, { [1] = 22, [3] = 14777 }, nil, nil, nil, true }
+players["cutte"] = { "Cutte", 9940, 5, 1, 23, { [1] = 9940, [3] = 1377 }, { [1] = 23, [3] = 17191 }, nil, nil, nil, true }
+players["jatrael"] = { "Jatrael", 9934, 5, 1, 24, { [1] = 9934, [2] = 1169 }, { [1] = 24, [2] = 764 }, nil, nil, nil, true }
+players["aryell"] = { "Aryell", 9922, 5, 1, 25, { [1] = 9922, [2] = 3050 }, { [1] = 25, [2] = 396 }, nil, nil, nil, true }
 players["pangulito"] = { "Pangulito", 9914, 5, 1, 27, { [1] = 9914 }, { [1] = 27 }, nil, nil, nil, true }
-players["pinut"] = { "Pinut", 9914, 5, 1, 28, { [1] = 9914, [2] = 3714, [3] = 8197 }, { [1] = 28, [2] = 300, [3] = 1396 }, nil, nil, nil, true }
-players["kyupriest"] = { "Kyupriest", 9910, 5, 1, 29, { [1] = 9910, [3] = 5666 }, { [1] = 29, [3] = 6702 }, nil, nil, nil, true }
-players["tryxee"] = { "Tryxee", 9904, 5, 1, 30, { [1] = 9904, [3] = 9538 }, { [1] = 30, [3] = 247 }, nil, nil, nil, true }
-players["dadutza"] = { "Dadutza", 9902, 5, 1, 31, { [1] = 9902, [3] = 199 }, { [1] = 31, [3] = 18746 }, nil, nil, nil, true }
-players["wannafeel"] = { "Wannafeel", 9885, 5, 1, 32, { [1] = 9885, [3] = 2998 }, { [1] = 32, [3] = 13303 }, nil, nil, nil, true }
-players["skutyyboboo"] = { "Skutyyboboo", 9882, 5, 1, 33, { [1] = 9882, [3] = 8227 }, { [1] = 33, [3] = 1364 }, nil, nil, nil, true }
-players["koalywka"] = { "Koalywka", 9882, 5, 1, 34, { [1] = 9882, [3] = 7547 }, { [1] = 34, [3] = 2228 }, nil, nil, nil, true }
-players["sofla"] = { "Sofla", 9877, 5, 1, 35, { [1] = 9877, [3] = 650 }, { [1] = 35, [3] = 17959 }, nil, nil, nil, true }
+players["pinut"] = { "Pinut", 9914, 5, 1, 28, { [1] = 9914, [2] = 3712, [3] = 8191 }, { [1] = 28, [2] = 301, [3] = 1399 }, nil, nil, nil, true }
+players["kyupriest"] = { "Kyupriest", 9909, 5, 1, 29, { [1] = 9909, [3] = 5660 }, { [1] = 29, [3] = 6706 }, nil, nil, nil, true }
+players["tryxee"] = { "Tryxee", 9903, 5, 1, 30, { [1] = 9903, [3] = 9534 }, { [1] = 30, [3] = 250 }, nil, nil, nil, true }
+players["dadutza"] = { "Dadutza", 9902, 5, 1, 31, { [1] = 9902, [3] = 199 }, { [1] = 31, [3] = 18792 }, nil, nil, nil, true }
+players["wannafeel"] = { "Wannafeel", 9885, 5, 1, 32, { [1] = 9885, [3] = 2994 }, { [1] = 32, [3] = 13341 }, nil, nil, nil, true }
+players["koalywka"] = { "Koalywka", 9882, 5, 1, 33, { [1] = 9882, [3] = 7535 }, { [1] = 33, [3] = 2245 }, nil, nil, nil, true }
+players["skutyyboboo"] = { "Skutyyboboo", 9882, 5, 1, 34, { [1] = 9882, [3] = 8220 }, { [1] = 34, [3] = 1373 }, nil, nil, nil, true }
+players["sofla"] = { "Sofla", 9876, 5, 1, 35, { [1] = 9876, [3] = 650 }, { [1] = 35, [3] = 18006 }, nil, nil, nil, true }
 players["sweetpaws"] = { "Sweetpaws", 9874, 5, 1, 36, { [1] = 9874 }, { [1] = 36 }, nil, nil, nil, true }
-players["jolandamvp"] = { "Jolandamvp", 9870, 5, 1, 37, { [1] = 9870, [3] = 6204 }, { [1] = 37, [3] = 5122 }, nil, nil, nil, true }
-players["nic"] = { "Nic", 9868, 5, 1, 38, { [1] = 9868, [3] = 4490 }, { [1] = 38, [3] = 9559 }, nil, nil, nil, true }
+players["jolandamvp"] = { "Jolandamvp", 9870, 5, 1, 37, { [1] = 9870, [3] = 6197 }, { [1] = 37, [3] = 5120 }, nil, nil, nil, true }
+players["nic"] = { "Nic", 9867, 5, 1, 38, { [1] = 9867, [3] = 4485 }, { [1] = 38, [3] = 9590 }, nil, nil, nil, true }
 players["radiological"] = { "Radiological", 9862, 5, 1, 38, { [1] = 9862, [3] = 4496 }, { [1] = 38, [3] = 9528 }, nil, nil, nil, false }
-players["vvllaakas"] = { "Vvllaakas", 9860, 5, 1, 39, { [1] = 9860, [3] = 2686 }, { [1] = 39, [3] = 14413 }, nil, nil, nil, true }
-players["eleftaria"] = { "Eleftaria", 9848, 5, 1, 40, { [1] = 9848, [3] = 6242 }, { [1] = 40, [3] = 5026 }, nil, nil, nil, true }
-players["rheeta"] = { "Rheeta", 9846, 5, 1, 41, { [1] = 9846, [3] = 7198 }, { [1] = 41, [3] = 2810 }, nil, nil, nil, true }
-players["yssira"] = { "Yssira", 9836, 5, 1, 42, { [1] = 9836 }, { [1] = 42 }, nil, nil, nil, true }
-players["lucye"] = { "Lucye", 9832, 5, 1, 43, { [1] = 9832, [3] = 3363 }, { [1] = 43, [3] = 12041 }, nil, nil, nil, true }
-players["eternalfaith"] = { "Eternalfaith", 9828, 5, 1, 45, { [1] = 9828, [2] = 955 }, { [1] = 45, [2] = 836 }, nil, nil, nil, true }
-players["anoraa"] = { "Anoraa", 9814, 5, 1, 47, { [1] = 9814, [3] = 1794 }, { [1] = 47, [3] = 16586 }, nil, nil, nil, true }
-players["alirynia"] = { "Alirynia", 9810, 5, 1, 48, { [1] = 9810 }, { [1] = 48 }, nil, nil, nil, true }
-players["murrderer"] = { "Murrderer", 9808, 5, 1, 49, { [1] = 9808 }, { [1] = 49 }, nil, nil, nil, true }
+players["vvllaakas"] = { "Vvllaakas", 9859, 5, 1, 39, { [1] = 9859, [3] = 2684 }, { [1] = 39, [3] = 14443 }, nil, nil, nil, true }
+players["eleftaria"] = { "Eleftaria", 9848, 5, 1, 40, { [1] = 9848, [3] = 6232 }, { [1] = 40, [3] = 5026 }, nil, nil, nil, true }
+players["rheeta"] = { "Rheeta", 9846, 5, 1, 41, { [1] = 9846, [3] = 7186 }, { [1] = 41, [3] = 2841 }, nil, nil, nil, true }
+players["yssira"] = { "Yssira", 9835, 5, 1, 42, { [1] = 9835 }, { [1] = 42 }, nil, nil, nil, true }
+players["lucye"] = { "Lucye", 9832, 5, 1, 43, { [1] = 9832, [3] = 3358 }, { [1] = 43, [3] = 12075 }, nil, nil, nil, true }
+players["eternalfaith"] = { "Eternalfaith", 9827, 5, 1, 45, { [1] = 9827, [2] = 955 }, { [1] = 45, [2] = 839 }, nil, nil, nil, true }
+players["anoraa"] = { "Anoraa", 9813, 5, 1, 47, { [1] = 9813, [3] = 1792 }, { [1] = 47, [3] = 16636 }, nil, nil, nil, true }
+players["alirynia"] = { "Alirynia", 9809, 5, 1, 48, { [1] = 9809 }, { [1] = 48 }, nil, nil, nil, true }
+players["murrderer"] = { "Murrderer", 9807, 5, 1, 49, { [1] = 9807 }, { [1] = 49 }, nil, nil, nil, true }
 players["watergood"] = { "Watergood", 9803, 5, 1, 50, { [1] = 9803 }, { [1] = 50 }, nil, nil, nil, true }
-players["swoggh"] = { "Swoggh", 9796, 5, 1, 51, { [1] = 9796 }, { [1] = 51 }, nil, nil, nil, true }
-players["szaati"] = { "Szaati", 9790, 5, 1, 52, { [1] = 9790, [3] = 3208 }, { [1] = 52, [3] = 12548 }, nil, nil, nil, true }
+players["swoggh"] = { "Swoggh", 9795, 5, 1, 51, { [1] = 9795 }, { [1] = 51 }, nil, nil, nil, true }
+players["szaati"] = { "Szaati", 9790, 5, 1, 52, { [1] = 9790, [3] = 3205 }, { [1] = 52, [3] = 12581 }, nil, nil, nil, true }
 players["granat"] = { "Granat", 9786, 5, 1, 54, { [1] = 9786 }, { [1] = 54 }, nil, nil, nil, true }
 players["anushka"] = { "Anushka", 9765, 5, 1, 55, { [1] = 9765 }, { [1] = 55 }, nil, nil, nil, true }
-players["galyainfest"] = { "Galyainfest", 9764, 5, 1, 56, { [1] = 9764, [3] = 1548 }, { [1] = 56, [3] = 16936 }, nil, nil, nil, true }
-players["pinkwaffle"] = { "Pinkwaffle", 9753, 5, 1, 57, { [1] = 9753, [2] = 8012 }, { [1] = 57, [2] = 37 }, nil, nil, nil, true }
-players["shadowflow"] = { "Shadowflow", 9751, 5, 1, 58, { [1] = 9751, [3] = 234 }, { [1] = 58, [3] = 18709 }, nil, nil, nil, true }
-players["ilthric"] = { "Ilthric", 9741, 5, 1, 59, { [1] = 9741, [3] = 7196 }, { [1] = 59, [3] = 2815 }, nil, nil, nil, true }
-players["randomthing"] = { "Randomthing", 9741, 5, 1, 60, { [1] = 9741 }, { [1] = 60 }, nil, nil, nil, true }
-players["anastasia"] = { "Anastasia", 9739, 5, 1, 61, { [1] = 9739 }, { [1] = 61 }, nil, nil, nil, true }
-players["clesia"] = { "Clesia", 9739, 5, 1, 62, { [1] = 9739 }, { [1] = 62 }, nil, nil, nil, true }
-players["padrejudas"] = { "Padrejudas", 9729, 5, 1, 63, { [1] = 9729 }, { [1] = 63 }, nil, nil, nil, true }
-players["heartlight"] = { "Heartlight", 9723, 5, 1, 64, { [1] = 9723, [3] = 1698 }, { [1] = 64, [3] = 16711 }, nil, nil, nil, true }
-players["scuditos"] = { "Scuditos", 9722, 5, 1, 65, { [1] = 9722, [3] = 5451 }, { [1] = 65, [3] = 7361 }, nil, nil, nil, true }
-players["priestemania"] = { "Priestemania", 9715, 5, 1, 66, { [1] = 9715, [3] = 6012 }, { [1] = 66, [3] = 5670 }, nil, nil, nil, true }
-players["absorbin"] = { "Absorbin", 9713, 5, 1, 67, { [1] = 9713 }, { [1] = 67 }, nil, nil, nil, true }
-players["gherk"] = { "Gherk", 9711, 5, 1, 68, { [1] = 9711, [3] = 545 }, { [1] = 68, [3] = 18099 }, nil, nil, nil, true }
-players["xlol"] = { "Xlol", 9710, 5, 1, 69, { [1] = 9710 }, { [1] = 69 }, nil, nil, nil, true }
-players["brukuhot"] = { "Brukuhot", 9707, 5, 1, 70, { [1] = 9707, [3] = 430 }, { [1] = 70, [3] = 18344 }, nil, nil, nil, true }
-players["immortalgodx"] = { "Immortalgodx", 9706, 5, 1, 71, { [1] = 9706, [3] = 8676 }, { [1] = 71, [3] = 936 }, nil, nil, nil, true }
-players["uonu"] = { "Uonu", 9701, 5, 1, 72, { [1] = 9701, [3] = 6102 }, { [1] = 72, [3] = 5406 }, nil, nil, nil, true }
-players["paralen"] = { "Paralen", 9699, 5, 1, 73, { [1] = 9699 }, { [1] = 73 }, nil, nil, nil, true }
-players["yoggie"] = { "Yoggie", 9664, 5, 1, 74, { [1] = 9664, [2] = 6135 }, { [1] = 74, [2] = 115 }, nil, nil, nil, true }
-players["shreddasaur"] = { "Shreddasaur", 9660, 5, 1, 75, { [1] = 9660, [3] = 6493 }, { [1] = 75, [3] = 4376 }, nil, nil, nil, true }
-players["lightpicka"] = { "Lightpicka", 9657, 5, 1, 77, { [1] = 9657, [3] = 8155 }, { [1] = 77, [3] = 1442 }, nil, nil, nil, true }
-players["beatrys"] = { "Beatrys", 9654, 5, 1, 78, { [1] = 9654, [3] = 8092 }, { [1] = 78, [3] = 1510 }, nil, nil, nil, true }
-players["perestroika"] = { "Perestroika", 9654, 5, 1, 79, { [1] = 9654 }, { [1] = 79 }, nil, nil, nil, true }
-players["priestgoodx"] = { "Priestgoodx", 9644, 5, 1, 80, { [1] = 9644, [3] = 8194 }, { [1] = 80, [3] = 1402 }, nil, nil, nil, true }
-players["leohballsack"] = { "Leohballsack", 9642, 5, 1, 81, { [1] = 9642, [3] = 7289 }, { [1] = 81, [3] = 2664 }, nil, nil, nil, true }
-players["happymairou"] = { "Happymairou", 9639, 5, 1, 82, { [1] = 9639, [3] = 6536 }, { [1] = 82, [3] = 4240 }, nil, nil, nil, true }
-players["murochka"] = { "Murochka", 9633, 5, 1, 83, { [1] = 9633 }, { [1] = 83 }, nil, nil, nil, true }
-players["edguy"] = { "Edguy", 9632, 5, 1, 84, { [1] = 9632, [3] = 7616 }, { [1] = 84, [3] = 2113 }, nil, nil, nil, true }
-players["pipotoo"] = { "Pipotoo", 9630, 5, 1, 85, { [1] = 9630, [3] = 5572 }, { [1] = 85, [3] = 6995 }, nil, nil, nil, true }
-players["orianna"] = { "Orianna", 9627, 5, 1, 86, { [1] = 9627 }, { [1] = 86 }, nil, nil, nil, true }
-players["klarimaniac"] = { "Klarimaniac", 9617, 5, 1, 87, { [1] = 9617 }, { [1] = 87 }, nil, nil, nil, true }
-players["powerfusion"] = { "Powerfusion", 9615, 5, 1, 88, { [1] = 9615, [3] = 6189 }, { [1] = 88, [3] = 5163 }, nil, nil, nil, true }
-players["ktokavo"] = { "Ktokavo", 9609, 5, 1, 89, { [1] = 9609 }, { [1] = 89 }, nil, nil, nil, true }
-players["dishadow"] = { "Dishadow", 9604, 5, 1, 90, { [1] = 9604, [3] = 4277 }, { [1] = 90, [3] = 9945 }, nil, nil, nil, true }
+players["galyainfest"] = { "Galyainfest", 9763, 5, 1, 56, { [1] = 9763, [3] = 1547 }, { [1] = 56, [3] = 16986 }, nil, nil, nil, true }
+players["pinkwaffle"] = { "Pinkwaffle", 9752, 5, 1, 57, { [1] = 9752, [2] = 8013 }, { [1] = 57, [2] = 37 }, nil, nil, nil, true }
+players["shadowflow"] = { "Shadowflow", 9750, 5, 1, 58, { [1] = 9750, [3] = 234 }, { [1] = 58, [3] = 18755 }, nil, nil, nil, true }
+players["ilthric"] = { "Ilthric", 9740, 5, 1, 59, { [1] = 9740, [3] = 7188 }, { [1] = 59, [3] = 2834 }, nil, nil, nil, true }
+players["randomthing"] = { "Randomthing", 9739, 5, 1, 60, { [1] = 9739 }, { [1] = 60 }, nil, nil, nil, true }
+players["clesia"] = { "Clesia", 9737, 5, 1, 61, { [1] = 9737 }, { [1] = 61 }, nil, nil, nil, true }
+players["anastasia"] = { "Anastasia", 9737, 5, 1, 62, { [1] = 9737 }, { [1] = 62 }, nil, nil, nil, true }
+players["padrejudas"] = { "Padrejudas", 9728, 5, 1, 63, { [1] = 9728 }, { [1] = 63 }, nil, nil, nil, true }
+players["heartlight"] = { "Heartlight", 9722, 5, 1, 64, { [1] = 9722, [3] = 1698 }, { [1] = 64, [3] = 16762 }, nil, nil, nil, true }
+players["scuditos"] = { "Scuditos", 9720, 5, 1, 65, { [1] = 9720, [3] = 5446 }, { [1] = 65, [3] = 7367 }, nil, nil, nil, true }
+players["priestemania"] = { "Priestemania", 9714, 5, 1, 66, { [1] = 9714, [3] = 5998 }, { [1] = 66, [3] = 5693 }, nil, nil, nil, true }
+players["absorbin"] = { "Absorbin", 9712, 5, 1, 67, { [1] = 9712 }, { [1] = 67 }, nil, nil, nil, true }
+players["gherk"] = { "Gherk", 9709, 5, 1, 68, { [1] = 9709, [3] = 545 }, { [1] = 68, [3] = 18141 }, nil, nil, nil, true }
+players["xlol"] = { "Xlol", 9708, 5, 1, 69, { [1] = 9708 }, { [1] = 69 }, nil, nil, nil, true }
+players["brukuhot"] = { "Brukuhot", 9706, 5, 1, 70, { [1] = 9706, [3] = 428 }, { [1] = 70, [3] = 18392 }, nil, nil, nil, true }
+players["immortalgodx"] = { "Immortalgodx", 9704, 5, 1, 71, { [1] = 9704, [3] = 8667 }, { [1] = 71, [3] = 941 }, nil, nil, nil, true }
+players["uonu"] = { "Uonu", 9700, 5, 1, 72, { [1] = 9700, [3] = 6097 }, { [1] = 72, [3] = 5401 }, nil, nil, nil, true }
+players["paralen"] = { "Paralen", 9697, 5, 1, 73, { [1] = 9697 }, { [1] = 73 }, nil, nil, nil, true }
+players["yoggie"] = { "Yoggie", 9662, 5, 1, 74, { [1] = 9662, [2] = 6135 }, { [1] = 74, [2] = 115 }, nil, nil, nil, true }
+players["shreddasaur"] = { "Shreddasaur", 9659, 5, 1, 75, { [1] = 9659, [3] = 6481 }, { [1] = 75, [3] = 4391 }, nil, nil, nil, true }
+players["lightpicka"] = { "Lightpicka", 9655, 5, 1, 77, { [1] = 9655, [3] = 8148 }, { [1] = 77, [3] = 1447 }, nil, nil, nil, true }
+players["beatrys"] = { "Beatrys", 9652, 5, 1, 78, { [1] = 9652, [3] = 8080 }, { [1] = 78, [3] = 1521 }, nil, nil, nil, true }
+players["perestroika"] = { "Perestroika", 9652, 5, 1, 79, { [1] = 9652 }, { [1] = 79 }, nil, nil, nil, true }
+players["priestgoodx"] = { "Priestgoodx", 9643, 5, 1, 80, { [1] = 9643, [3] = 8182 }, { [1] = 80, [3] = 1415 }, nil, nil, nil, true }
+players["leohballsack"] = { "Leohballsack", 9640, 5, 1, 81, { [1] = 9640, [3] = 7279 }, { [1] = 81, [3] = 2682 }, nil, nil, nil, true }
+players["happymairou"] = { "Happymairou", 9638, 5, 1, 82, { [1] = 9638, [3] = 6529 }, { [1] = 82, [3] = 4238 }, nil, nil, nil, true }
+players["edguy"] = { "Edguy", 9631, 5, 1, 83, { [1] = 9631, [3] = 7609 }, { [1] = 83, [3] = 2120 }, nil, nil, nil, true }
+players["murochka"] = { "Murochka", 9630, 5, 1, 84, { [1] = 9630 }, { [1] = 84 }, nil, nil, nil, true }
+players["pipotoo"] = { "Pipotoo", 9629, 5, 1, 85, { [1] = 9629, [3] = 5561 }, { [1] = 85, [3] = 7020 }, nil, nil, nil, true }
+players["orianna"] = { "Orianna", 9625, 5, 1, 86, { [1] = 9625 }, { [1] = 86 }, nil, nil, nil, true }
+players["klarimaniac"] = { "Klarimaniac", 9615, 5, 1, 87, { [1] = 9615 }, { [1] = 87 }, nil, nil, nil, true }
+players["powerfusion"] = { "Powerfusion", 9614, 5, 1, 88, { [1] = 9614, [3] = 6224 }, { [1] = 88, [3] = 5047 }, nil, nil, nil, true }
+players["ktokavo"] = { "Ktokavo", 9608, 5, 1, 89, { [1] = 9608 }, { [1] = 89 }, nil, nil, nil, true }
+players["dishadow"] = { "Dishadow", 9601, 5, 1, 90, { [1] = 9601, [3] = 4269 }, { [1] = 90, [3] = 9979 }, nil, nil, nil, true }
 players["flerthalip"] = { "Flerthalip", 9586, 5, 1, 90, { [1] = 9586, [3] = 7128 }, { [1] = 90, [3] = 3029 }, nil, nil, nil, false }
-players["zofi"] = { "Zofi", 9600, 5, 1, 91, { [1] = 9600, [2] = 2008 }, { [1] = 91, [2] = 585 }, nil, nil, nil, true }
-players["deathgrl"] = { "Deathgrl", 9585, 5, 1, 92, { [1] = 9585, [3] = 5159 }, { [1] = 92, [3] = 8138 }, nil, nil, nil, true }
-players["maczani"] = { "Maczani", 9576, 5, 1, 93, { [1] = 9576, [2] = 7926 }, { [1] = 93, [2] = 39 }, nil, nil, nil, true }
-players["curatrixis"] = { "Curatrixis", 9573, 5, 1, 94, { [1] = 9573 }, { [1] = 94 }, nil, nil, nil, true }
-players["loshiqpop"] = { "Loshiqpop", 9568, 5, 1, 95, { [1] = 9568, [3] = 7748 }, { [1] = 95, [3] = 1900 }, nil, nil, nil, true }
-players["karlal"] = { "Karlal", 9554, 5, 1, 96, { [1] = 9554, [3] = 8867 }, { [1] = 96, [3] = 768 }, nil, nil, nil, true }
-players["uwodziciel"] = { "Uwodziciel", 9551, 5, 1, 97, { [1] = 9551, [2] = 8294, [3] = 753 }, { [1] = 97, [2] = 27, [3] = 17827 }, nil, nil, nil, true }
-players["orquinine"] = { "Orquinine", 9550, 5, 1, 98, { [1] = 9550, [3] = 432 }, { [1] = 98, [3] = 18340 }, nil, nil, nil, true }
-players["ntunecata"] = { "Ntunecata", 9549, 5, 1, 99, { [1] = 9549, [3] = 8060 }, { [1] = 99, [3] = 1544 }, nil, nil, nil, true }
-players["priesthaar"] = { "Priesthaar", 9545, 5, 1, 100, { [1] = 9545, [2] = 46 }, { [1] = 100, [2] = 1271 }, nil, nil, nil, true }
-players["justdontcryy"] = { "Justdontcryy", 9524, 5, 1, 101, { [1] = 9524 }, { [1] = 101 }, nil, nil, nil, true }
-players["mogrumble"] = { "Mogrumble", 9509, 5, 1, 102, { [1] = 9509 }, { [1] = 102 }, nil, nil, nil, true }
-players["solarou"] = { "Solarou", 9507, 5, 1, 104, { [1] = 9507, [3] = 9102 }, { [1] = 104, [3] = 563 }, nil, nil, nil, true }
-players["losre"] = { "Losre", 9506, 5, 1, 105, { [1] = 9506, [3] = 5763 }, { [1] = 105, [3] = 6422 }, nil, nil, nil, true }
-players["aesona"] = { "Aesona", 9501, 5, 1, 106, { [1] = 9501, [3] = 8212 }, { [1] = 106, [3] = 1379 }, nil, nil, nil, true }
-players["lightstormz"] = { "Lightstormz", 9491, 5, 1, 107, { [1] = 9491, [3] = 6699 }, { [1] = 107, [3] = 3845 }, nil, nil, nil, true }
-players["slavyart"] = { "Slavyart", 9491, 5, 1, 108, { [1] = 9491, [3] = 8237 }, { [1] = 108, [3] = 1357 }, nil, nil, nil, true }
-players["xve"] = { "Xve", 9484, 5, 1, 109, { [1] = 9484, [3] = 2253 }, { [1] = 109, [3] = 15626 }, nil, nil, nil, true }
-players["beatriska"] = { "Beatriska", 9478, 5, 1, 111, { [1] = 9478, [3] = 6582 }, { [1] = 111, [3] = 4124 }, nil, nil, nil, true }
-players["dizphoria"] = { "Dizphoria", 9478, 5, 1, 112, { [1] = 9478, [3] = 6700 }, { [1] = 112, [3] = 3843 }, nil, nil, nil, true }
-players["alesuczka"] = { "Alesuczka", 9472, 5, 1, 113, { [1] = 9472 }, { [1] = 113 }, nil, nil, nil, true }
-players["zlebixzz"] = { "Zlebixzz", 9462, 5, 1, 114, { [1] = 9462, [3] = 1500 }, { [1] = 114, [3] = 16993 }, nil, nil, nil, true }
-players["acencela"] = { "Acencela", 9460, 5, 1, 115, { [1] = 9460, [2] = 1005, [3] = 6762 }, { [1] = 115, [2] = 801, [3] = 3705 }, nil, nil, nil, true }
-players["sishmish"] = { "Sishmish", 9456, 5, 1, 116, { [1] = 9456 }, { [1] = 116 }, nil, nil, nil, true }
-players["morbidangell"] = { "Morbidangell", 9452, 5, 1, 117, { [1] = 9452, [3] = 3006 }, { [1] = 117, [3] = 13272 }, nil, nil, nil, true }
-players["malldoso"] = { "Malldoso", 9438, 5, 1, 118, { [1] = 9438, [3] = 6384 }, { [1] = 118, [3] = 4644 }, nil, nil, nil, true }
-players["eowynderohan"] = { "Eowynderohan", 9430, 5, 1, 119, { [1] = 9430 }, { [1] = 119 }, nil, nil, nil, true }
-players["owlino"] = { "Owlino", 9417, 5, 1, 120, { [1] = 9417, [3] = 7286 }, { [1] = 120, [3] = 2672 }, nil, nil, nil, true }
-players["pobelqla"] = { "Pobelqla", 9416, 5, 1, 121, { [1] = 9416, [2] = 8722 }, { [1] = 121, [2] = 14 }, nil, nil, nil, true }
-players["makanixv"] = { "Makanixv", 9416, 5, 1, 122, { [1] = 9416, [2] = 1838 }, { [1] = 122, [2] = 615 }, nil, nil, nil, true }
-players["aoda"] = { "Aoda", 9415, 5, 1, 123, { [1] = 9415, [2] = 1268 }, { [1] = 123, [2] = 738 }, nil, nil, nil, true }
-players["iqw"] = { "Iqw", 9414, 5, 1, 124, { [1] = 9414, [3] = 5139 }, { [1] = 124, [3] = 8186 }, nil, nil, nil, true }
-players["ils"] = { "Ils", 9404, 5, 1, 126, { [1] = 9404, [3] = 6618 }, { [1] = 126, [3] = 4025 }, nil, nil, nil, true }
-players["pixarx"] = { "Pixarx", 9400, 5, 1, 127, { [1] = 9400 }, { [1] = 127 }, nil, nil, nil, true }
-players["rewerend"] = { "Rewerend", 9393, 5, 1, 128, { [1] = 9393 }, { [1] = 128 }, nil, nil, nil, true }
-players["ripoo"] = { "Ripoo", 9389, 5, 1, 129, { [1] = 9389, [3] = 9379 }, { [1] = 129, [3] = 356 }, nil, nil, nil, true }
-players["lightofdogs"] = { "Lightofdogs", 9383, 5, 1, 130, { [1] = 9383 }, { [1] = 130 }, nil, nil, nil, true }
-players["acrolyte"] = { "Acrolyte", 9380, 5, 1, 131, { [1] = 9380, [3] = 9324 }, { [1] = 131, [3] = 388 }, nil, nil, nil, true }
-players["cassar"] = { "Cassar", 9378, 5, 1, 132, { [1] = 9378 }, { [1] = 132 }, nil, nil, nil, true }
-players["raskaz"] = { "Raskaz", 9372, 5, 1, 134, { [1] = 9372, [2] = 2693 }, { [1] = 134, [2] = 446 }, nil, nil, nil, true }
-players["aartaban"] = { "Aartaban", 9354, 5, 1, 136, { [1] = 9354, [2] = 5444 }, { [1] = 136, [2] = 143 }, nil, nil, nil, true }
-players["agniparthene"] = { "Agniparthene", 9354, 5, 1, 137, { [1] = 9354, [2] = 1943, [3] = 5195 }, { [1] = 137, [2] = 594, [3] = 8049 }, nil, nil, nil, true }
-players["vagaga"] = { "Vagaga", 10000, 5, 2, 1, { [1] = 3121, [2] = 10000 }, { [1] = 7374, [2] = 1 }, nil, nil, nil, true }
-players["mysterko"] = { "Mysterko", 9930, 5, 2, 2, { [1] = 2604, [2] = 9930, [3] = 7924 }, { [1] = 8421, [2] = 2, [3] = 1701 }, nil, nil, nil, true }
-players["ruuzu"] = { "Ruuzu", 9702, 5, 2, 3, { [1] = 5731, [2] = 9702 }, { [1] = 3753, [2] = 3 }, nil, nil, nil, true }
-players["makani"] = { "Makani", 9676, 5, 2, 4, { [1] = 9509, [2] = 9676 }, { [1] = 103, [2] = 4 }, nil, nil, nil, true }
-players["yenneferka"] = { "Yenneferka", 9523, 5, 2, 5, { [1] = 3904, [2] = 9523, [3] = 4865 }, { [1] = 5929, [2] = 5, [3] = 8806 }, nil, nil, nil, true }
-players["madaara"] = { "Madaara", 9159, 5, 2, 6, { [2] = 9159, [3] = 429 }, { [2] = 6, [3] = 18350 }, nil, nil, nil, true }
-players["tanania"] = { "Tanania", 9136, 5, 2, 7, { [1] = 6597, [2] = 9136 }, { [1] = 2723, [2] = 7 }, nil, nil, nil, true }
-players["damncool"] = { "Damncool", 9116, 5, 2, 8, { [1] = 4383, [2] = 9116, [3] = 6908 }, { [1] = 5249, [2] = 8, [3] = 3406 }, nil, nil, nil, true }
-players["lightwithyou"] = { "Lightwithyou", 8880, 5, 2, 9, { [2] = 8880 }, { [2] = 9 }, nil, nil, nil, true }
-players["hailieqt"] = { "Hailieqt", 8859, 5, 2, 10, { [1] = 8732, [2] = 8859, [3] = 8576 }, { [1] = 482, [2] = 10, [3] = 1035 }, nil, nil, nil, true }
-players["crucifixion"] = { "Crucifixion", 8857, 5, 2, 11, { [1] = 815, [2] = 8857, [3] = 3562 }, { [1] = 11625, [2] = 11, [3] = 11414 }, nil, nil, nil, true }
-players["holyktong"] = { "Holyktong", 8835, 5, 2, 12, { [1] = 8339, [2] = 8835, [3] = 6555 }, { [1] = 818, [2] = 12, [3] = 4184 }, nil, nil, nil, true }
-players["bahamadia"] = { "Bahamadia", 8814, 5, 2, 13, { [1] = 6360, [2] = 8814, [3] = 8496 }, { [1] = 3023, [2] = 13, [3] = 1109 }, nil, nil, nil, true }
-players["popuoh"] = { "Popuoh", 8660, 5, 2, 16, { [1] = 1986, [2] = 8660, [3] = 8317 }, { [1] = 9650, [2] = 16, [3] = 1278 }, nil, nil, nil, true }
-players["fasii"] = { "Fasii", 8636, 5, 2, 17, { [1] = 6338, [2] = 8636, [3] = 6800 }, { [1] = 3039, [2] = 17, [3] = 3621 }, nil, nil, nil, true }
+players["zofi"] = { "Zofi", 9598, 5, 1, 91, { [1] = 9598, [2] = 2006 }, { [1] = 91, [2] = 587 }, nil, nil, nil, true }
+players["deathgrl"] = { "Deathgrl", 9583, 5, 1, 92, { [1] = 9583, [3] = 5150 }, { [1] = 92, [3] = 8173 }, nil, nil, nil, true }
+players["maczani"] = { "Maczani", 9574, 5, 1, 93, { [1] = 9574, [2] = 7926 }, { [1] = 93, [2] = 39 }, nil, nil, nil, true }
+players["curatrixis"] = { "Curatrixis", 9571, 5, 1, 94, { [1] = 9571 }, { [1] = 94 }, nil, nil, nil, true }
+players["loshiqpop"] = { "Loshiqpop", 9566, 5, 1, 95, { [1] = 9566, [3] = 7738 }, { [1] = 95, [3] = 1912 }, nil, nil, nil, true }
+players["karlal"] = { "Karlal", 9552, 5, 1, 96, { [1] = 9552, [3] = 8859 }, { [1] = 96, [3] = 775 }, nil, nil, nil, true }
+players["ntunecata"] = { "Ntunecata", 9551, 5, 1, 97, { [1] = 9551, [3] = 8053 }, { [1] = 97, [3] = 1548 }, nil, nil, nil, true }
+players["uwodziciel"] = { "Uwodziciel", 9549, 5, 1, 98, { [1] = 9549, [2] = 8295, [3] = 753 }, { [1] = 98, [2] = 27, [3] = 17873 }, nil, nil, nil, true }
+players["orquinine"] = { "Orquinine", 9547, 5, 1, 99, { [1] = 9547, [3] = 432 }, { [1] = 99, [3] = 18377 }, nil, nil, nil, true }
+players["priesthaar"] = { "Priesthaar", 9543, 5, 1, 100, { [1] = 9543, [2] = 46 }, { [1] = 100, [2] = 1277 }, nil, nil, nil, true }
+players["justdontcryy"] = { "Justdontcryy", 9522, 5, 1, 101, { [1] = 9522 }, { [1] = 101 }, nil, nil, nil, true }
+players["mogrumble"] = { "Mogrumble", 9507, 5, 1, 102, { [1] = 9507 }, { [1] = 102 }, nil, nil, nil, true }
+players["solarou"] = { "Solarou", 9505, 5, 1, 104, { [1] = 9505, [3] = 9096 }, { [1] = 104, [3] = 573 }, nil, nil, nil, true }
+players["losre"] = { "Losre", 9504, 5, 1, 105, { [1] = 9504, [3] = 5751 }, { [1] = 105, [3] = 6452 }, nil, nil, nil, true }
+players["aesona"] = { "Aesona", 9499, 5, 1, 106, { [1] = 9499, [3] = 8204 }, { [1] = 106, [3] = 1386 }, nil, nil, nil, true }
+players["cucas"] = { "Cucas", 9488, 5, 1, 107, { [1] = 9488, [3] = 8729 }, { [1] = 107, [3] = 886 }, nil, nil, nil, true }
+players["lightstormz"] = { "Lightstormz", 9488, 5, 1, 108, { [1] = 9488, [3] = 6687 }, { [1] = 108, [3] = 3865 }, nil, nil, nil, true }
+players["slavyart"] = { "Slavyart", 9491, 5, 1, 108, { [1] = 9491, [3] = 8237 }, { [1] = 108, [3] = 1357 }, nil, nil, nil, false }
+players["xve"] = { "Xve", 9482, 5, 1, 109, { [1] = 9482, [3] = 2249 }, { [1] = 109, [3] = 15675 }, nil, nil, nil, true }
+players["dizphoria"] = { "Dizphoria", 9476, 5, 1, 111, { [1] = 9476, [3] = 6683 }, { [1] = 111, [3] = 3876 }, nil, nil, nil, true }
+players["beatriska"] = { "Beatriska", 9475, 5, 1, 112, { [1] = 9475, [3] = 6569 }, { [1] = 112, [3] = 4141 }, nil, nil, nil, true }
+players["alesuczka"] = { "Alesuczka", 9469, 5, 1, 113, { [1] = 9469 }, { [1] = 113 }, nil, nil, nil, true }
+players["zlebixzz"] = { "Zlebixzz", 9459, 5, 1, 114, { [1] = 9459, [3] = 1497 }, { [1] = 114, [3] = 17043 }, nil, nil, nil, true }
+players["acencela"] = { "Acencela", 9458, 5, 1, 115, { [1] = 9458, [2] = 1005, [3] = 6747 }, { [1] = 115, [2] = 805, [3] = 3730 }, nil, nil, nil, true }
+players["sishmish"] = { "Sishmish", 9453, 5, 1, 116, { [1] = 9453 }, { [1] = 116 }, nil, nil, nil, true }
+players["morbidangell"] = { "Morbidangell", 9449, 5, 1, 117, { [1] = 9449, [3] = 3002 }, { [1] = 117, [3] = 13307 }, nil, nil, nil, true }
+players["malldoso"] = { "Malldoso", 9435, 5, 1, 118, { [1] = 9435, [3] = 6375 }, { [1] = 118, [3] = 4653 }, nil, nil, nil, true }
+players["eowynderohan"] = { "Eowynderohan", 9427, 5, 1, 119, { [1] = 9427 }, { [1] = 119 }, nil, nil, nil, true }
+players["pobelqla"] = { "Pobelqla", 9414, 5, 1, 120, { [1] = 9414, [2] = 8722 }, { [1] = 120, [2] = 14 }, nil, nil, nil, true }
+players["owlino"] = { "Owlino", 9414, 5, 1, 121, { [1] = 9414, [3] = 7490 }, { [1] = 121, [3] = 2311 }, nil, nil, nil, true }
+players["makanixv"] = { "Makanixv", 9414, 5, 1, 122, { [1] = 9414, [2] = 1838 }, { [1] = 122, [2] = 618 }, nil, nil, nil, true }
+players["aoda"] = { "Aoda", 9412, 5, 1, 123, { [1] = 9412, [2] = 1267 }, { [1] = 123, [2] = 740 }, nil, nil, nil, true }
+players["iqw"] = { "Iqw", 9410, 5, 1, 124, { [1] = 9410, [3] = 9334 }, { [1] = 124, [3] = 383 }, nil, nil, nil, true }
+players["ils"] = { "Ils", 9401, 5, 1, 126, { [1] = 9401, [3] = 6602 }, { [1] = 126, [3] = 4052 }, nil, nil, nil, true }
+players["pixarx"] = { "Pixarx", 9398, 5, 1, 127, { [1] = 9398 }, { [1] = 127 }, nil, nil, nil, true }
+players["kyutoo"] = { "Kyutoo", 9394, 5, 1, 128, { [1] = 9394 }, { [1] = 128 }, nil, nil, nil, true }
+players["rewerend"] = { "Rewerend", 9390, 5, 1, 129, { [1] = 9390 }, { [1] = 129 }, nil, nil, nil, true }
+players["ripoo"] = { "Ripoo", 9386, 5, 1, 130, { [1] = 9386, [3] = 9375 }, { [1] = 130, [3] = 363 }, nil, nil, nil, true }
+players["lightofdogs"] = { "Lightofdogs", 9380, 5, 1, 131, { [1] = 9380 }, { [1] = 131 }, nil, nil, nil, true }
+players["acrolyte"] = { "Acrolyte", 9376, 5, 1, 132, { [1] = 9376, [3] = 9321 }, { [1] = 132, [3] = 394 }, nil, nil, nil, true }
+players["cassar"] = { "Cassar", 9376, 5, 1, 133, { [1] = 9376 }, { [1] = 133 }, nil, nil, nil, true }
+players["raskaz"] = { "Raskaz", 9369, 5, 1, 135, { [1] = 9369, [2] = 2694 }, { [1] = 135, [2] = 448 }, nil, nil, nil, true }
+players["vagaga"] = { "Vagaga", 10000, 5, 2, 1, { [1] = 3118, [2] = 10000 }, { [1] = 7388, [2] = 1 }, nil, nil, nil, true }
+players["mysterko"] = { "Mysterko", 9931, 5, 2, 2, { [1] = 2600, [2] = 9931, [3] = 7915 }, { [1] = 8441, [2] = 2, [3] = 1709 }, nil, nil, nil, true }
+players["ruuzu"] = { "Ruuzu", 9702, 5, 2, 3, { [1] = 5723, [2] = 9702 }, { [1] = 3773, [2] = 3 }, nil, nil, nil, true }
+players["makani"] = { "Makani", 9677, 5, 2, 4, { [1] = 9506, [2] = 9677 }, { [1] = 103, [2] = 4 }, nil, nil, nil, true }
+players["yenneferka"] = { "Yenneferka", 9524, 5, 2, 5, { [1] = 3894, [2] = 9524, [3] = 4857 }, { [1] = 5956, [2] = 5, [3] = 8836 }, nil, nil, nil, true }
+players["madaara"] = { "Madaara", 9159, 5, 2, 6, { [2] = 9159, [3] = 429 }, { [2] = 6, [3] = 18390 }, nil, nil, nil, true }
+players["tanania"] = { "Tanania", 9138, 5, 2, 7, { [1] = 6587, [2] = 9138 }, { [1] = 2733, [2] = 7 }, nil, nil, nil, true }
+players["damncool"] = { "Damncool", 9115, 5, 2, 8, { [1] = 4375, [2] = 9115, [3] = 6892 }, { [1] = 5274, [2] = 8, [3] = 3435 }, nil, nil, nil, true }
+players["lightwithyou"] = { "Lightwithyou", 8881, 5, 2, 9, { [2] = 8881 }, { [2] = 9 }, nil, nil, nil, true }
+players["hailieqt"] = { "Hailieqt", 8860, 5, 2, 10, { [1] = 8727, [2] = 8860, [3] = 8565 }, { [1] = 489, [2] = 10, [3] = 1046 }, nil, nil, nil, true }
+players["crucifixion"] = { "Crucifixion", 8857, 5, 2, 11, { [1] = 814, [2] = 8857, [3] = 3560 }, { [1] = 11665, [2] = 11, [3] = 11450 }, nil, nil, nil, true }
+players["holyktong"] = { "Holyktong", 8835, 5, 2, 12, { [1] = 8332, [2] = 8835, [3] = 6546 }, { [1] = 825, [2] = 12, [3] = 4195 }, nil, nil, nil, true }
+players["bahamadia"] = { "Bahamadia", 8815, 5, 2, 13, { [1] = 6352, [2] = 8815, [3] = 8487 }, { [1] = 3027, [2] = 13, [3] = 1117 }, nil, nil, nil, true }
+players["popuoh"] = { "Popuoh", 8660, 5, 2, 16, { [1] = 1982, [2] = 8660, [3] = 8307 }, { [1] = 9667, [2] = 16, [3] = 1285 }, nil, nil, nil, true }
+players["fasii"] = { "Fasii", 8637, 5, 2, 17, { [1] = 6331, [2] = 8637, [3] = 6794 }, { [1] = 3046, [2] = 17, [3] = 3627 }, nil, nil, nil, true }
 players["renewspammer"] = { "Renewspammer", 8515, 5, 2, 19, { [2] = 8515 }, { [2] = 19 }, nil, nil, nil, true }
-players["asclepiar"] = { "Asclepiar", 8436, 5, 2, 21, { [2] = 8436 }, { [2] = 21 }, nil, nil, nil, true }
-players["holymed"] = { "Holymed", 8392, 5, 2, 22, { [1] = 7771, [2] = 8392 }, { [1] = 1388, [2] = 22 }, nil, nil, nil, true }
-players["twarog"] = { "Twarog", 8378, 5, 2, 23, { [1] = 8366, [2] = 8378 }, { [1] = 786, [2] = 23 }, nil, nil, nil, true }
-players["callmemaybi"] = { "Callmemaybi", 8342, 5, 2, 24, { [1] = 1892, [2] = 8342 }, { [1] = 9816, [2] = 24 }, nil, nil, nil, true }
-players["holyfuu"] = { "Holyfuu", 8300, 5, 2, 26, { [1] = 8023, [2] = 8300, [3] = 6800 }, { [1] = 1129, [2] = 26, [3] = 3623 }, nil, nil, nil, true }
-players["lozth"] = { "Lozth", 8198, 5, 2, 28, { [1] = 6874, [2] = 8198, [3] = 4464 }, { [1] = 2415, [2] = 28, [3] = 9605 }, nil, nil, nil, true }
-players["zirashadow"] = { "Zirashadow", 8194, 5, 2, 29, { [2] = 8194, [3] = 6271 }, { [2] = 29, [3] = 4937 }, nil, nil, nil, true }
-players["nethercore"] = { "Nethercore", 8168, 5, 2, 30, { [1] = 5410, [2] = 8168 }, { [1] = 4094, [2] = 30 }, nil, nil, nil, true }
-players["zulkhzar"] = { "Zulkhzar", 8148, 5, 2, 31, { [2] = 8148 }, { [2] = 31 }, nil, nil, nil, true }
-players["rabbitpriest"] = { "Rabbitpriest", 8075, 5, 2, 33, { [1] = 6841, [2] = 8075, [3] = 7476 }, { [1] = 2446, [2] = 33, [3] = 2339 }, nil, nil, nil, true }
-players["trycicle"] = { "Trycicle", 8058, 5, 2, 34, { [1] = 1420, [2] = 8058 }, { [1] = 10658, [2] = 34 }, nil, nil, nil, true }
-players["gasmoke"] = { "Gasmoke", 8052, 5, 2, 35, { [1] = 7046, [2] = 8052 }, { [1] = 2226, [2] = 35 }, nil, nil, nil, true }
-players["nthinginside"] = { "Nthinginside", 10000, 5, 3, 1, { [1] = 8335, [3] = 10000 }, { [1] = 824, [3] = 1 }, nil, nil, nil, true }
-players["ellenor"] = { "Ellenor", 9999, 5, 3, 2, { [1] = 9921, [2] = 1730, [3] = 9999 }, { [1] = 26, [2] = 640, [3] = 2 }, nil, nil, nil, true }
-players["alene"] = { "Alene", 9999, 5, 3, 3, { [1] = 9048, [3] = 9999 }, { [1] = 266, [3] = 3 }, nil, nil, nil, true }
-players["krono"] = { "Krono", 9996, 5, 3, 4, { [1] = 8230, [3] = 9996 }, { [1] = 912, [3] = 4 }, nil, nil, nil, true }
-players["jhees"] = { "Jhees", 9993, 5, 3, 5, { [1] = 5799, [3] = 9993 }, { [1] = 3683, [3] = 5 }, nil, nil, nil, true }
-players["epigab"] = { "Epigab", 9991, 5, 3, 6, { [1] = 604, [2] = 1436, [3] = 9991 }, { [1] = 11944, [2] = 706, [3] = 6 }, nil, nil, nil, true }
-players["lamron"] = { "Lamron", 9990, 5, 3, 7, { [1] = 9283, [3] = 9990 }, { [1] = 155, [3] = 7 }, nil, nil, nil, true }
-players["kyyss"] = { "Kyyss", 9990, 5, 3, 8, { [1] = 9336, [3] = 9990 }, { [1] = 139, [3] = 8 }, nil, nil, nil, true }
-players["dotseeker"] = { "Dotseeker", 9988, 5, 3, 9, { [1] = 264, [3] = 9988 }, { [1] = 12610, [3] = 9 }, nil, nil, nil, true }
-players["vikk"] = { "Vikk", 9986, 5, 3, 10, { [1] = 998, [3] = 9986 }, { [1] = 11305, [3] = 10 }, nil, nil, nil, true }
-players["popmarli"] = { "Popmarli", 9985, 5, 3, 11, { [1] = 5250, [3] = 9985 }, { [1] = 4257, [3] = 11 }, nil, nil, nil, true }
-players["candymolly"] = { "Candymolly", 9981, 5, 3, 12, { [1] = 8101, [3] = 9981 }, { [1] = 1034, [3] = 12 }, nil, nil, nil, true }
-players["edievanhalen"] = { "Edievanhalen", 9980, 5, 3, 13, { [1] = 3322, [3] = 9980 }, { [1] = 6942, [3] = 13 }, nil, nil, nil, true }
-players["noedt"] = { "Noedt", 9979, 5, 3, 14, { [1] = 8481, [3] = 9979 }, { [1] = 695, [3] = 14 }, nil, nil, nil, true }
-players["iluminatii"] = { "Iluminatii", 9979, 5, 3, 15, { [2] = 3332, [3] = 9979 }, { [2] = 352, [3] = 15 }, nil, nil, nil, true }
+players["asclepiar"] = { "Asclepiar", 8437, 5, 2, 21, { [2] = 8437 }, { [2] = 21 }, nil, nil, nil, true }
+players["holymed"] = { "Holymed", 8393, 5, 2, 22, { [1] = 7762, [2] = 8393 }, { [1] = 1396, [2] = 22 }, nil, nil, nil, true }
+players["twarog"] = { "Twarog", 8380, 5, 2, 23, { [1] = 8359, [2] = 8380 }, { [1] = 792, [2] = 23 }, nil, nil, nil, true }
+players["callmemaybi"] = { "Callmemaybi", 8342, 5, 2, 24, { [1] = 1889, [2] = 8342 }, { [1] = 9834, [2] = 24 }, nil, nil, nil, true }
+players["holyfuu"] = { "Holyfuu", 8301, 5, 2, 26, { [1] = 8014, [2] = 8301, [3] = 6792 }, { [1] = 1136, [2] = 26, [3] = 3630 }, nil, nil, nil, true }
+players["lozth"] = { "Lozth", 8198, 5, 2, 28, { [1] = 6865, [2] = 8198, [3] = 4460 }, { [1] = 2432, [2] = 28, [3] = 9629 }, nil, nil, nil, true }
+players["zirashadow"] = { "Zirashadow", 8194, 5, 2, 29, { [2] = 8194, [3] = 6258 }, { [2] = 29, [3] = 4954 }, nil, nil, nil, true }
+players["nethercore"] = { "Nethercore", 8169, 5, 2, 30, { [1] = 5403, [2] = 8169 }, { [1] = 4114, [2] = 30 }, nil, nil, nil, true }
+players["zulkhzar"] = { "Zulkhzar", 8149, 5, 2, 31, { [2] = 8149 }, { [2] = 31 }, nil, nil, nil, true }
+players["rabbitpriest"] = { "Rabbitpriest", 8075, 5, 2, 33, { [1] = 6832, [2] = 8075, [3] = 7467 }, { [1] = 2462, [2] = 33, [3] = 2355 }, nil, nil, nil, true }
+players["trycicle"] = { "Trycicle", 8059, 5, 2, 34, { [1] = 1417, [2] = 8059 }, { [1] = 10684, [2] = 34 }, nil, nil, nil, true }
+players["gasmoke"] = { "Gasmoke", 8053, 5, 2, 35, { [1] = 7036, [2] = 8053 }, { [1] = 2238, [2] = 35 }, nil, nil, nil, true }
+players["ellenor"] = { "Ellenor", 10000, 5, 3, 1, { [1] = 9921, [2] = 1730, [3] = 10000 }, { [1] = 26, [2] = 643, [3] = 1 }, nil, nil, nil, true }
+players["nthinginside"] = { "Nthinginside", 10000, 5, 3, 2, { [1] = 8329, [3] = 10000 }, { [1] = 830, [3] = 2 }, nil, nil, nil, true }
+players["alene"] = { "Alene", 9998, 5, 3, 3, { [1] = 9044, [3] = 9998 }, { [1] = 269, [3] = 3 }, nil, nil, nil, true }
+players["krono"] = { "Krono", 9996, 5, 3, 4, { [1] = 8226, [3] = 9996 }, { [1] = 917, [3] = 4 }, nil, nil, nil, true }
+players["jhees"] = { "Jhees", 9992, 5, 3, 5, { [1] = 5793, [3] = 9992 }, { [1] = 3695, [3] = 5 }, nil, nil, nil, true }
+players["lamron"] = { "Lamron", 9992, 5, 3, 6, { [1] = 9281, [3] = 9992 }, { [1] = 157, [3] = 6 }, nil, nil, nil, true }
+players["epigab"] = { "Epigab", 9991, 5, 3, 7, { [1] = 603, [2] = 1438, [3] = 9991 }, { [1] = 11987, [2] = 709, [3] = 7 }, nil, nil, nil, true }
+players["kyyss"] = { "Kyyss", 9989, 5, 3, 8, { [1] = 9333, [3] = 9989 }, { [1] = 140, [3] = 8 }, nil, nil, nil, true }
+players["dotseeker"] = { "Dotseeker", 9987, 5, 3, 9, { [1] = 262, [3] = 9987 }, { [1] = 12653, [3] = 9 }, nil, nil, nil, true }
+players["vikk"] = { "Vikk", 9985, 5, 3, 10, { [1] = 998, [3] = 9985 }, { [1] = 11335, [3] = 10 }, nil, nil, nil, true }
+players["popmarli"] = { "Popmarli", 9985, 5, 3, 11, { [1] = 5241, [3] = 9985 }, { [1] = 4277, [3] = 11 }, nil, nil, nil, true }
+players["candymolly"] = { "Candymolly", 9981, 5, 3, 12, { [1] = 8094, [3] = 9981 }, { [1] = 1039, [3] = 12 }, nil, nil, nil, true }
+players["edievanhalen"] = { "Edievanhalen", 9979, 5, 3, 13, { [1] = 3319, [3] = 9979 }, { [1] = 6956, [3] = 13 }, nil, nil, nil, true }
+players["noedt"] = { "Noedt", 9978, 5, 3, 14, { [1] = 8476, [3] = 9978 }, { [1] = 698, [3] = 14 }, nil, nil, nil, true }
+players["iluminatii"] = { "Iluminatii", 9978, 5, 3, 15, { [2] = 3330, [3] = 9978 }, { [2] = 353, [3] = 15 }, nil, nil, nil, true }
 players["jessi"] = { "Jessi", 9978, 5, 3, 16, { [3] = 9978 }, { [3] = 16 }, nil, nil, nil, true }
-players["showless"] = { "Showless", 9978, 5, 3, 17, { [3] = 9978 }, { [3] = 17 }, nil, nil, nil, true }
-players["tzu"] = { "Tzu", 9978, 5, 3, 18, { [3] = 9978 }, { [3] = 18 }, nil, nil, nil, true }
-players["notourios"] = { "Notourios", 9972, 5, 3, 19, { [1] = 574, [3] = 9972 }, { [1] = 12005, [3] = 19 }, nil, nil, nil, true }
-players["robbi"] = { "Robbi", 9971, 5, 3, 20, { [1] = 8463, [3] = 9971 }, { [1] = 703, [3] = 20 }, nil, nil, nil, true }
-players["avallone"] = { "Avallone", 9968, 5, 3, 21, { [1] = 6987, [3] = 9968 }, { [1] = 2289, [3] = 21 }, nil, nil, nil, true }
-players["pumpi"] = { "Pumpi", 9967, 5, 3, 22, { [3] = 9967 }, { [3] = 22 }, nil, nil, nil, true }
-players["xia"] = { "Xia", 9963, 5, 3, 23, { [1] = 760, [3] = 9963 }, { [1] = 11697, [3] = 23 }, nil, nil, nil, true }
-players["carnifeexz"] = { "Carnifeexz", 9957, 5, 3, 24, { [1] = 6930, [3] = 9957 }, { [1] = 2351, [3] = 24 }, nil, nil, nil, true }
-players["erienq"] = { "Erienq", 9955, 5, 3, 25, { [3] = 9955 }, { [3] = 25 }, nil, nil, nil, true }
+players["showless"] = { "Showless", 9977, 5, 3, 17, { [3] = 9977 }, { [3] = 17 }, nil, nil, nil, true }
+players["tzu"] = { "Tzu", 9977, 5, 3, 18, { [3] = 9977 }, { [3] = 18 }, nil, nil, nil, true }
+players["notourios"] = { "Notourios", 9972, 5, 3, 19, { [1] = 573, [3] = 9972 }, { [1] = 12049, [3] = 19 }, nil, nil, nil, true }
+players["robbi"] = { "Robbi", 9971, 5, 3, 20, { [1] = 8462, [3] = 9971 }, { [1] = 705, [3] = 20 }, nil, nil, nil, true }
+players["avallone"] = { "Avallone", 9968, 5, 3, 21, { [1] = 6977, [3] = 9968 }, { [1] = 2303, [3] = 21 }, nil, nil, nil, true }
+players["pumpi"] = { "Pumpi", 9966, 5, 3, 22, { [3] = 9966 }, { [3] = 22 }, nil, nil, nil, true }
+players["xia"] = { "Xia", 9962, 5, 3, 23, { [1] = 758, [3] = 9962 }, { [1] = 11734, [3] = 23 }, nil, nil, nil, true }
+players["carnifeexz"] = { "Carnifeexz", 9956, 5, 3, 24, { [1] = 6921, [3] = 9956 }, { [1] = 2366, [3] = 24 }, nil, nil, nil, true }
+players["erienq"] = { "Erienq", 9954, 5, 3, 25, { [3] = 9954 }, { [3] = 25 }, nil, nil, nil, true }
 players["vikkx"] = { "Vikkx", 9954, 5, 3, 26, { [3] = 9954 }, { [3] = 26 }, nil, nil, nil, true }
-players["molester"] = { "Molester", 9953, 5, 3, 27, { [3] = 9953 }, { [3] = 27 }, nil, nil, nil, true }
-players["clashroyale"] = { "Clashroyale", 9953, 5, 3, 28, { [1] = 5090, [3] = 9953 }, { [1] = 4414, [3] = 28 }, nil, nil, nil, true }
-players["vairusq"] = { "Vairusq", 9951, 5, 3, 29, { [3] = 9951 }, { [3] = 29 }, nil, nil, nil, true }
-players["finance"] = { "Finance", 9946, 5, 3, 30, { [3] = 9946 }, { [3] = 30 }, nil, nil, nil, true }
-players["pqr"] = { "Pqr", 9945, 5, 3, 31, { [3] = 9945 }, { [3] = 31 }, nil, nil, nil, true }
-players["amenra"] = { "Amenra", 9944, 5, 3, 32, { [1] = 7908, [3] = 9944 }, { [1] = 1242, [3] = 32 }, nil, nil, nil, true }
-players["bleksap"] = { "Bleksap", 9944, 5, 3, 33, { [1] = 8868, [2] = 809, [3] = 9944 }, { [1] = 388, [2] = 923, [3] = 33 }, nil, nil, nil, true }
-players["aeriin"] = { "Aeriin", 9943, 5, 3, 34, { [3] = 9943 }, { [3] = 34 }, nil, nil, nil, true }
+players["molester"] = { "Molester", 9952, 5, 3, 27, { [3] = 9952 }, { [3] = 27 }, nil, nil, nil, true }
+players["clashroyale"] = { "Clashroyale", 9952, 5, 3, 28, { [1] = 5084, [3] = 9952 }, { [1] = 4434, [3] = 28 }, nil, nil, nil, true }
+players["vairusq"] = { "Vairusq", 9950, 5, 3, 29, { [3] = 9950 }, { [3] = 29 }, nil, nil, nil, true }
+players["finance"] = { "Finance", 9945, 5, 3, 30, { [3] = 9945 }, { [3] = 30 }, nil, nil, nil, true }
+players["pqr"] = { "Pqr", 9944, 5, 3, 31, { [3] = 9944 }, { [3] = 31 }, nil, nil, nil, true }
+players["amenra"] = { "Amenra", 9944, 5, 3, 32, { [1] = 7901, [3] = 9944 }, { [1] = 1252, [3] = 32 }, nil, nil, nil, true }
+players["bleksap"] = { "Bleksap", 9943, 5, 3, 33, { [1] = 8863, [2] = 809, [3] = 9943 }, { [1] = 396, [2] = 930, [3] = 33 }, nil, nil, nil, true }
+players["bubicienta"] = { "Bubicienta", 9942, 5, 3, 34, { [3] = 9942 }, { [3] = 34 }, nil, nil, nil, true }
 players["remek"] = { "Remek", 9948, 5, 3, 34, { [1] = 2338, [3] = 9948 }, { [1] = 8730, [3] = 34 }, nil, nil, nil, false }
-players["bubicienta"] = { "Bubicienta", 9943, 5, 3, 35, { [3] = 9943 }, { [3] = 35 }, nil, nil, nil, true }
-players["swarzyca"] = { "Swarzyca", 9940, 5, 3, 36, { [1] = 9069, [3] = 9940 }, { [1] = 255, [3] = 36 }, nil, nil, nil, true }
-players["zadymiarz"] = { "Zadymiarz", 9939, 5, 3, 37, { [3] = 9939 }, { [3] = 37 }, nil, nil, nil, true }
-players["anishadow"] = { "Anishadow", 9939, 5, 3, 38, { [3] = 9939 }, { [3] = 38 }, nil, nil, nil, true }
-players["aviviz"] = { "Aviviz", 9939, 5, 3, 39, { [1] = 2277, [3] = 9939 }, { [1] = 9073, [3] = 39 }, nil, nil, nil, true }
-players["vikkz"] = { "Vikkz", 9938, 5, 3, 40, { [3] = 9938 }, { [3] = 40 }, nil, nil, nil, true }
-players["multidot"] = { "Multidot", 9937, 5, 3, 41, { [3] = 9937 }, { [3] = 41 }, nil, nil, nil, true }
-players["numberix"] = { "Numberix", 9936, 5, 3, 42, { [3] = 9936 }, { [3] = 42 }, nil, nil, nil, true }
-players["daytrana"] = { "Daytrana", 9935, 5, 3, 43, { [2] = 183, [3] = 9935 }, { [2] = 1206, [3] = 43 }, nil, nil, nil, true }
-players["priestgood"] = { "Priestgood", 9932, 5, 3, 44, { [1] = 986, [3] = 9932 }, { [1] = 11331, [3] = 44 }, nil, nil, nil, true }
-players["gimmebitty"] = { "Gimmebitty", 9927, 5, 3, 45, { [1] = 7675, [3] = 9927 }, { [1] = 1500, [3] = 45 }, nil, nil, nil, true }
-players["ebone"] = { "Ebone", 9923, 5, 3, 46, { [1] = 9378, [3] = 9923 }, { [1] = 133, [3] = 46 }, nil, nil, nil, true }
-players["luxaeterna"] = { "Luxaeterna", 9916, 5, 3, 47, { [1] = 8160, [3] = 9916 }, { [1] = 985, [3] = 47 }, nil, nil, nil, true }
-players["mabron"] = { "Mabron", 9912, 5, 3, 48, { [1] = 674, [2] = 1803, [3] = 9912 }, { [1] = 11793, [2] = 624, [3] = 48 }, nil, nil, nil, true }
-players["adoshadow"] = { "Adoshadow", 9908, 5, 3, 49, { [1] = 4217, [3] = 9908 }, { [1] = 5459, [3] = 49 }, nil, nil, nil, true }
-players["mstcontinus"] = { "Mstcontinus", 9905, 5, 3, 51, { [2] = 419, [3] = 9905 }, { [2] = 1107, [3] = 51 }, nil, nil, nil, true }
-players["dawnbringer"] = { "Dawnbringer", 9903, 5, 3, 52, { [1] = 7849, [2] = 974, [3] = 9903 }, { [1] = 1304, [2] = 823, [3] = 52 }, nil, nil, nil, true }
-players["corny"] = { "Corny", 9901, 5, 3, 53, { [1] = 310, [3] = 9901 }, { [1] = 12579, [3] = 53 }, nil, nil, nil, true }
-players["tohsaka"] = { "Tohsaka", 9895, 5, 3, 54, { [3] = 9895 }, { [3] = 54 }, nil, nil, nil, true }
-players["mattmurdock"] = { "Mattmurdock", 9894, 5, 3, 55, { [1] = 6899, [3] = 9894 }, { [1] = 2376, [3] = 55 }, nil, nil, nil, true }
-players["throwback"] = { "Throwback", 9892, 5, 3, 56, { [3] = 9892 }, { [3] = 56 }, nil, nil, nil, true }
-players["ggpain"] = { "Ggpain", 9892, 5, 3, 57, { [1] = 7081, [3] = 9892 }, { [1] = 2193, [3] = 57 }, nil, nil, nil, true }
-players["jessdots"] = { "Jessdots", 9889, 5, 3, 58, { [1] = 5750, [3] = 9889 }, { [1] = 3737, [3] = 58 }, nil, nil, nil, true }
-players["willowvoid"] = { "Willowvoid", 9888, 5, 3, 59, { [3] = 9888 }, { [3] = 59 }, nil, nil, nil, true }
-players["seeway"] = { "Seeway", 9884, 5, 3, 60, { [1] = 612, [3] = 9884 }, { [1] = 11923, [3] = 60 }, nil, nil, nil, true }
-players["lahbitri"] = { "Lahbitri", 9883, 5, 3, 61, { [3] = 9883 }, { [3] = 61 }, nil, nil, nil, true }
-players["ellethex"] = { "Ellethex", 9883, 5, 3, 62, { [1] = 9658, [3] = 9883 }, { [1] = 76, [3] = 62 }, nil, nil, nil, true }
-players["stackhigh"] = { "Stackhigh", 9882, 5, 3, 63, { [1] = 8499, [3] = 9882 }, { [1] = 681, [3] = 63 }, nil, nil, nil, true }
-players["siphiliasma"] = { "Siphiliasma", 9882, 5, 3, 64, { [3] = 9882 }, { [3] = 64 }, nil, nil, nil, true }
-players["neoshadow"] = { "Neoshadow", 9880, 5, 3, 65, { [1] = 8134, [3] = 9880 }, { [1] = 1008, [3] = 65 }, nil, nil, nil, true }
-players["laeda"] = { "Laeda", 9880, 5, 3, 66, { [1] = 9828, [3] = 9880 }, { [1] = 44, [3] = 66 }, nil, nil, nil, true }
-players["pynned"] = { "Pynned", 9877, 5, 3, 67, { [1] = 8181, [3] = 9877 }, { [1] = 962, [3] = 67 }, nil, nil, nil, true }
-players["aprion"] = { "Aprion", 9876, 5, 3, 69, { [1] = 354, [3] = 9876 }, { [1] = 12530, [3] = 69 }, nil, nil, nil, true }
-players["sestsedam"] = { "Sestsedam", 9874, 5, 3, 70, { [1] = 999, [3] = 9874 }, { [1] = 11301, [3] = 70 }, nil, nil, nil, true }
-players["capipriest"] = { "Capipriest", 9872, 5, 3, 71, { [1] = 8171, [3] = 9872 }, { [1] = 971, [3] = 71 }, nil, nil, nil, true }
-players["sacerlinda"] = { "Sacerlinda", 9872, 5, 3, 72, { [3] = 9872 }, { [3] = 72 }, nil, nil, nil, true }
-players["shadoxw"] = { "Shadoxw", 9869, 5, 3, 73, { [1] = 315, [3] = 9869 }, { [1] = 12573, [3] = 73 }, nil, nil, nil, true }
-players["biessed"] = { "Biessed", 9866, 5, 3, 74, { [1] = 7119, [3] = 9866 }, { [1] = 2144, [3] = 74 }, nil, nil, nil, true }
-players["gejzerja"] = { "Gejzerja", 9865, 5, 3, 75, { [3] = 9865 }, { [3] = 75 }, nil, nil, nil, true }
-players["gcd"] = { "Gcd", 9864, 5, 3, 76, { [3] = 9864 }, { [3] = 76 }, nil, nil, nil, true }
-players["avass"] = { "Avass", 9862, 5, 3, 77, { [3] = 9862 }, { [3] = 77 }, nil, nil, nil, true }
-players["walvand"] = { "Walvand", 9861, 5, 3, 79, { [1] = 506, [3] = 9861 }, { [1] = 12178, [3] = 79 }, nil, nil, nil, true }
-players["eyden"] = { "Eyden", 9859, 5, 3, 80, { [3] = 9859 }, { [3] = 80 }, nil, nil, nil, true }
-players["shadowcopx"] = { "Shadowcopx", 9858, 5, 3, 81, { [1] = 641, [3] = 9858 }, { [1] = 11842, [3] = 81 }, nil, nil, nil, true }
-players["wkol"] = { "Wkol", 9857, 5, 3, 82, { [1] = 965, [3] = 9857 }, { [1] = 11374, [3] = 82 }, nil, nil, nil, true }
-players["xploiter"] = { "Xploiter", 9856, 5, 3, 83, { [2] = 876, [3] = 9856 }, { [2] = 878, [3] = 83 }, nil, nil, nil, true }
-players["giga"] = { "Giga", 9855, 5, 3, 84, { [1] = 7710, [3] = 9855 }, { [1] = 1451, [3] = 84 }, nil, nil, nil, true }
-players["fyck"] = { "Fyck", 9854, 5, 3, 85, { [1] = 9790, [3] = 9854 }, { [1] = 53, [3] = 85 }, nil, nil, nil, true }
-players["artano"] = { "Artano", 9853, 5, 3, 86, { [1] = 9818, [3] = 9853 }, { [1] = 46, [3] = 86 }, nil, nil, nil, true }
-players["cutebic"] = { "Cutebic", 9850, 5, 3, 87, { [1] = 3596, [3] = 9850 }, { [1] = 6435, [3] = 87 }, nil, nil, nil, true }
-players["simpliflay"] = { "Simpliflay", 9846, 5, 3, 88, { [3] = 9846 }, { [3] = 88 }, nil, nil, nil, true }
-players["patcheshadow"] = { "Patcheshadow", 9840, 5, 3, 89, { [1] = 9119, [3] = 9840 }, { [1] = 232, [3] = 89 }, nil, nil, nil, true }
-players["djubretarka"] = { "Djubretarka", 9835, 5, 3, 90, { [1] = 9172, [3] = 9835 }, { [1] = 200, [3] = 90 }, nil, nil, nil, true }
-players["sumdel"] = { "Sumdel", 9832, 5, 3, 91, { [1] = 9091, [3] = 9832 }, { [1] = 244, [3] = 91 }, nil, nil, nil, true }
-players["gaineager"] = { "Gaineager", 9832, 5, 3, 92, { [1] = 7350, [3] = 9832 }, { [1] = 1849, [3] = 92 }, nil, nil, nil, true }
-players["schattan"] = { "Schattan", 9830, 5, 3, 93, { [1] = 4043, [3] = 9830 }, { [1] = 5711, [3] = 93 }, nil, nil, nil, true }
-players["kattsune"] = { "Kattsune", 9829, 5, 3, 94, { [1] = 8131, [3] = 9829 }, { [1] = 1011, [3] = 94 }, nil, nil, nil, true }
-players["mndiv"] = { "Mndiv", 9824, 5, 3, 95, { [1] = 8794, [3] = 9824 }, { [1] = 444, [3] = 95 }, nil, nil, nil, true }
-players["ajp"] = { "Ajp", 9822, 5, 3, 96, { [1] = 8537, [3] = 9822 }, { [1] = 643, [3] = 96 }, nil, nil, nil, true }
-players["divineweed"] = { "Divineweed", 9814, 5, 3, 97, { [1] = 8923, [3] = 9814 }, { [1] = 342, [3] = 97 }, nil, nil, nil, true }
-players["kunzita"] = { "Kunzita", 9812, 5, 3, 98, { [1] = 6141, [3] = 9812 }, { [1] = 3288, [3] = 98 }, nil, nil, nil, true }
-players["sskilled"] = { "Sskilled", 9812, 5, 3, 99, { [3] = 9812 }, { [3] = 99 }, nil, nil, nil, true }
-players["swarming"] = { "Swarming", 9811, 5, 3, 100, { [2] = 848, [3] = 9811 }, { [2] = 901, [3] = 100 }, nil, nil, nil, true }
-players["belzix"] = { "Belzix", 9808, 5, 3, 101, { [3] = 9808 }, { [3] = 101 }, nil, nil, nil, true }
-players["swdjkbad"] = { "Swdjkbad", 9806, 5, 3, 102, { [3] = 9806 }, { [3] = 102 }, nil, nil, nil, true }
-players["oroichi"] = { "Oroichi", 9806, 5, 3, 103, { [3] = 9806 }, { [3] = 103 }, nil, nil, nil, true }
-players["shadowmagnus"] = { "Shadowmagnus", 9805, 5, 3, 104, { [3] = 9805 }, { [3] = 104 }, nil, nil, nil, true }
-players["martisp"] = { "Martisp", 9804, 5, 3, 105, { [1] = 6378, [3] = 9804 }, { [1] = 2996, [3] = 105 }, nil, nil, nil, true }
-players["barutnik"] = { "Barutnik", 9804, 5, 3, 106, { [3] = 9804 }, { [3] = 106 }, nil, nil, nil, true }
-players["amasora"] = { "Amasora", 9802, 5, 3, 107, { [1] = 8282, [3] = 9802 }, { [1] = 865, [3] = 107 }, nil, nil, nil, true }
-players["numberi"] = { "Numberi", 9800, 5, 3, 108, { [3] = 9800 }, { [3] = 108 }, nil, nil, nil, true }
-players["shadowcop"] = { "Shadowcop", 9799, 5, 3, 109, { [1] = 702, [3] = 9799 }, { [1] = 11755, [3] = 109 }, nil, nil, nil, true }
-players["sulloo"] = { "Sulloo", 9797, 5, 3, 110, { [1] = 7618, [3] = 9797 }, { [1] = 1557, [3] = 110 }, nil, nil, nil, true }
-players["mezonp"] = { "Mezonp", 9796, 5, 3, 111, { [1] = 651, [3] = 9796 }, { [1] = 11816, [3] = 111 }, nil, nil, nil, true }
-players["chymezz"] = { "Chymezz", 9795, 5, 3, 112, { [1] = 3503, [3] = 9795 }, { [1] = 6602, [3] = 112 }, nil, nil, nil, true }
-players["liquicity"] = { "Liquicity", 9791, 5, 3, 113, { [1] = 8772, [3] = 9791 }, { [1] = 456, [3] = 113 }, nil, nil, nil, true }
-players["odsp"] = { "Odsp", 9788, 5, 3, 114, { [1] = 831, [2] = 6578, [3] = 9788 }, { [1] = 11608, [2] = 90, [3] = 114 }, nil, nil, nil, true }
-players["vileshadow"] = { "Vileshadow", 9787, 5, 3, 115, { [1] = 5888, [3] = 9787 }, { [1] = 3585, [3] = 115 }, nil, nil, nil, true }
-players["mafshadow"] = { "Mafshadow", 9784, 5, 3, 116, { [3] = 9784 }, { [3] = 116 }, nil, nil, nil, true }
-players["honprej"] = { "Honprej", 9784, 5, 3, 117, { [1] = 9411, [3] = 9784 }, { [1] = 125, [3] = 117 }, nil, nil, nil, true }
-players["horeishokein"] = { "Horeishokein", 9784, 5, 3, 118, { [1] = 1312, [3] = 9784 }, { [1] = 10824, [3] = 118 }, nil, nil, nil, true }
-players["line"] = { "Line", 9783, 5, 3, 119, { [1] = 5288, [3] = 9783 }, { [1] = 4212, [3] = 119 }, nil, nil, nil, true }
-players["deadolo"] = { "Deadolo", 9782, 5, 3, 120, { [1] = 2996, [3] = 9782 }, { [1] = 7634, [3] = 120 }, nil, nil, nil, true }
-players["turbocigan"] = { "Turbocigan", 9780, 5, 3, 121, { [1] = 648, [3] = 9780 }, { [1] = 11825, [3] = 121 }, nil, nil, nil, true }
-players["estes"] = { "Estes", 9776, 5, 3, 122, { [3] = 9776 }, { [3] = 122 }, nil, nil, nil, true }
-players["urolsdotcom"] = { "Urolsdotcom", 9774, 5, 3, 123, { [3] = 9774 }, { [3] = 123 }, nil, nil, nil, true }
-players["sulivan"] = { "Sulivan", 9771, 5, 3, 124, { [1] = 8633, [3] = 9771 }, { [1] = 566, [3] = 124 }, nil, nil, nil, true }
-players["aiizen"] = { "Aiizen", 9771, 5, 3, 125, { [1] = 5106, [3] = 9771 }, { [1] = 4393, [3] = 125 }, nil, nil, nil, true }
-players["exqalibur"] = { "Exqalibur", 9771, 5, 3, 126, { [3] = 9771 }, { [3] = 126 }, nil, nil, nil, true }
-players["eluscus"] = { "Eluscus", 9768, 5, 3, 127, { [1] = 6780, [3] = 9768 }, { [1] = 2529, [3] = 127 }, nil, nil, nil, true }
+players["aeriin"] = { "Aeriin", 9942, 5, 3, 35, { [3] = 9942 }, { [3] = 35 }, nil, nil, nil, true }
+players["swarzyca"] = { "Swarzyca", 9939, 5, 3, 36, { [1] = 9065, [3] = 9939 }, { [1] = 259, [3] = 36 }, nil, nil, nil, true }
+players["zadymiarz"] = { "Zadymiarz", 9938, 5, 3, 37, { [3] = 9938 }, { [3] = 37 }, nil, nil, nil, true }
+players["anishadow"] = { "Anishadow", 9938, 5, 3, 38, { [3] = 9938 }, { [3] = 38 }, nil, nil, nil, true }
+players["daytrana"] = { "Daytrana", 9938, 5, 3, 39, { [2] = 183, [3] = 9938 }, { [2] = 1212, [3] = 39 }, nil, nil, nil, true }
+players["aviviz"] = { "Aviviz", 9937, 5, 3, 40, { [1] = 2272, [3] = 9937 }, { [1] = 9092, [3] = 40 }, nil, nil, nil, true }
+players["vikkz"] = { "Vikkz", 9936, 5, 3, 41, { [3] = 9936 }, { [3] = 41 }, nil, nil, nil, true }
+players["multidot"] = { "Multidot", 9936, 5, 3, 42, { [3] = 9936 }, { [3] = 42 }, nil, nil, nil, true }
+players["numberix"] = { "Numberix", 9934, 5, 3, 43, { [3] = 9934 }, { [3] = 43 }, nil, nil, nil, true }
+players["priestgood"] = { "Priestgood", 9930, 5, 3, 44, { [1] = 986, [3] = 9930 }, { [1] = 11362, [3] = 44 }, nil, nil, nil, true }
+players["gimmebitty"] = { "Gimmebitty", 9926, 5, 3, 45, { [1] = 7667, [3] = 9926 }, { [1] = 1504, [3] = 45 }, nil, nil, nil, true }
+players["ebone"] = { "Ebone", 9922, 5, 3, 46, { [1] = 9375, [3] = 9922 }, { [1] = 134, [3] = 46 }, nil, nil, nil, true }
+players["luxaeterna"] = { "Luxaeterna", 9915, 5, 3, 47, { [1] = 9094, [3] = 9915 }, { [1] = 244, [3] = 47 }, nil, nil, nil, true }
+players["mabron"] = { "Mabron", 9910, 5, 3, 48, { [1] = 673, [2] = 1802, [3] = 9910 }, { [1] = 11835, [2] = 627, [3] = 48 }, nil, nil, nil, true }
+players["adoshadow"] = { "Adoshadow", 9907, 5, 3, 49, { [1] = 4208, [3] = 9907 }, { [1] = 5491, [3] = 49 }, nil, nil, nil, true }
+players["mstcontinus"] = { "Mstcontinus", 9905, 5, 3, 51, { [2] = 421, [3] = 9905 }, { [2] = 1112, [3] = 51 }, nil, nil, nil, true }
+players["dawnbringer"] = { "Dawnbringer", 9902, 5, 3, 52, { [1] = 7842, [2] = 974, [3] = 9902 }, { [1] = 1313, [2] = 827, [3] = 52 }, nil, nil, nil, true }
+players["corny"] = { "Corny", 9900, 5, 3, 53, { [1] = 308, [3] = 9900 }, { [1] = 12623, [3] = 53 }, nil, nil, nil, true }
+players["avass"] = { "Avass", 9898, 5, 3, 54, { [1] = 936, [3] = 9898 }, { [1] = 11457, [3] = 54 }, nil, nil, nil, true }
+players["tohsaka"] = { "Tohsaka", 9894, 5, 3, 55, { [3] = 9894 }, { [3] = 55 }, nil, nil, nil, true }
+players["mattmurdock"] = { "Mattmurdock", 9892, 5, 3, 56, { [1] = 6894, [3] = 9892 }, { [1] = 2391, [3] = 56 }, nil, nil, nil, true }
+players["throwback"] = { "Throwback", 9890, 5, 3, 57, { [3] = 9890 }, { [3] = 57 }, nil, nil, nil, true }
+players["ggpain"] = { "Ggpain", 9890, 5, 3, 58, { [1] = 7074, [3] = 9890 }, { [1] = 2200, [3] = 58 }, nil, nil, nil, true }
+players["jessdots"] = { "Jessdots", 9887, 5, 3, 59, { [1] = 5739, [3] = 9887 }, { [1] = 3756, [3] = 59 }, nil, nil, nil, true }
+players["willowvoid"] = { "Willowvoid", 9887, 5, 3, 60, { [3] = 9887 }, { [3] = 60 }, nil, nil, nil, true }
+players["aprion"] = { "Aprion", 9886, 5, 3, 61, { [1] = 352, [3] = 9886 }, { [1] = 12574, [3] = 61 }, nil, nil, nil, true }
+players["seeway"] = { "Seeway", 9883, 5, 3, 62, { [1] = 611, [3] = 9883 }, { [1] = 11965, [3] = 62 }, nil, nil, nil, true }
+players["lahbitri"] = { "Lahbitri", 9882, 5, 3, 63, { [3] = 9882 }, { [3] = 63 }, nil, nil, nil, true }
+players["neoshadow"] = { "Neoshadow", 9882, 5, 3, 64, { [1] = 8127, [3] = 9882 }, { [1] = 1014, [3] = 64 }, nil, nil, nil, true }
+players["ellethex"] = { "Ellethex", 9882, 5, 3, 65, { [1] = 9657, [3] = 9882 }, { [1] = 76, [3] = 65 }, nil, nil, nil, true }
+players["stackhigh"] = { "Stackhigh", 9881, 5, 3, 66, { [1] = 8493, [3] = 9881 }, { [1] = 683, [3] = 66 }, nil, nil, nil, true }
+players["siphiliasma"] = { "Siphiliasma", 9880, 5, 3, 67, { [3] = 9880 }, { [3] = 67 }, nil, nil, nil, true }
+players["laeda"] = { "Laeda", 9878, 5, 3, 68, { [1] = 9827, [3] = 9878 }, { [1] = 44, [3] = 68 }, nil, nil, nil, true }
+players["pynned"] = { "Pynned", 9875, 5, 3, 69, { [1] = 8174, [3] = 9875 }, { [1] = 970, [3] = 69 }, nil, nil, nil, true }
+players["sestsedam"] = { "Sestsedam", 9873, 5, 3, 71, { [1] = 999, [3] = 9873 }, { [1] = 11331, [3] = 71 }, nil, nil, nil, true }
+players["capipriest"] = { "Capipriest", 9871, 5, 3, 72, { [1] = 8165, [3] = 9871 }, { [1] = 978, [3] = 72 }, nil, nil, nil, true }
+players["sacerlinda"] = { "Sacerlinda", 9871, 5, 3, 73, { [3] = 9871 }, { [3] = 73 }, nil, nil, nil, true }
+players["shadoxw"] = { "Shadoxw", 9867, 5, 3, 74, { [1] = 312, [3] = 9867 }, { [1] = 12617, [3] = 74 }, nil, nil, nil, true }
+players["biessed"] = { "Biessed", 9865, 5, 3, 75, { [1] = 7109, [3] = 9865 }, { [1] = 2159, [3] = 75 }, nil, nil, nil, true }
+players["gejzerja"] = { "Gejzerja", 9863, 5, 3, 76, { [3] = 9863 }, { [3] = 76 }, nil, nil, nil, true }
+players["gcd"] = { "Gcd", 9862, 5, 3, 77, { [3] = 9862 }, { [3] = 77 }, nil, nil, nil, true }
+players["martisp"] = { "Martisp", 9860, 5, 3, 79, { [1] = 6369, [3] = 9860 }, { [1] = 3005, [3] = 79 }, nil, nil, nil, true }
+players["walvand"] = { "Walvand", 9859, 5, 3, 80, { [1] = 505, [3] = 9859 }, { [1] = 12225, [3] = 80 }, nil, nil, nil, true }
+players["eyden"] = { "Eyden", 9857, 5, 3, 81, { [3] = 9857 }, { [3] = 81 }, nil, nil, nil, true }
+players["wkol"] = { "Wkol", 9856, 5, 3, 82, { [1] = 965, [3] = 9856 }, { [1] = 11409, [3] = 82 }, nil, nil, nil, true }
+players["shadowcopx"] = { "Shadowcopx", 9856, 5, 3, 83, { [1] = 641, [3] = 9856 }, { [1] = 11883, [3] = 83 }, nil, nil, nil, true }
+players["xploiter"] = { "Xploiter", 9855, 5, 3, 84, { [2] = 876, [3] = 9855 }, { [2] = 882, [3] = 84 }, nil, nil, nil, true }
+players["artano"] = { "Artano", 9854, 5, 3, 85, { [1] = 9817, [3] = 9854 }, { [1] = 46, [3] = 85 }, nil, nil, nil, true }
+players["giga"] = { "Giga", 9854, 5, 3, 86, { [1] = 7703, [3] = 9854 }, { [1] = 1457, [3] = 86 }, nil, nil, nil, true }
+players["fyck"] = { "Fyck", 9852, 5, 3, 87, { [1] = 9789, [3] = 9852 }, { [1] = 53, [3] = 87 }, nil, nil, nil, true }
+players["cutebic"] = { "Cutebic", 9849, 5, 3, 88, { [1] = 3586, [3] = 9849 }, { [1] = 6463, [3] = 88 }, nil, nil, nil, true }
+players["simpliflay"] = { "Simpliflay", 9844, 5, 3, 89, { [3] = 9844 }, { [3] = 89 }, nil, nil, nil, true }
+players["swarming"] = { "Swarming", 9843, 5, 3, 90, { [1] = 1798, [2] = 849, [3] = 9843 }, { [1] = 10013, [2] = 906, [3] = 90 }, nil, nil, nil, true }
+players["patcheshadow"] = { "Patcheshadow", 9838, 5, 3, 91, { [1] = 9115, [3] = 9838 }, { [1] = 236, [3] = 91 }, nil, nil, nil, true }
+players["djubretarka"] = { "Djubretarka", 9833, 5, 3, 92, { [1] = 9229, [3] = 9833 }, { [1] = 174, [3] = 92 }, nil, nil, nil, true }
+players["sumdel"] = { "Sumdel", 9831, 5, 3, 93, { [1] = 9087, [3] = 9831 }, { [1] = 247, [3] = 93 }, nil, nil, nil, true }
+players["gaineager"] = { "Gaineager", 9830, 5, 3, 94, { [1] = 7345, [3] = 9830 }, { [1] = 1846, [3] = 94 }, nil, nil, nil, true }
+players["schattan"] = { "Schattan", 9829, 5, 3, 95, { [1] = 4039, [3] = 9829 }, { [1] = 5730, [3] = 95 }, nil, nil, nil, true }
+players["kattsune"] = { "Kattsune", 9826, 5, 3, 96, { [1] = 8125, [3] = 9826 }, { [1] = 1017, [3] = 96 }, nil, nil, nil, true }
+players["mndiv"] = { "Mndiv", 9821, 5, 3, 97, { [1] = 8789, [3] = 9821 }, { [1] = 449, [3] = 97 }, nil, nil, nil, true }
+players["ajp"] = { "Ajp", 9821, 5, 3, 98, { [1] = 8836, [3] = 9821 }, { [1] = 413, [3] = 98 }, nil, nil, nil, true }
+players["divineweed"] = { "Divineweed", 9812, 5, 3, 99, { [1] = 8918, [3] = 9812 }, { [1] = 346, [3] = 99 }, nil, nil, nil, true }
+players["sskilled"] = { "Sskilled", 9809, 5, 3, 100, { [3] = 9809 }, { [3] = 100 }, nil, nil, nil, true }
+players["kunzita"] = { "Kunzita", 9809, 5, 3, 101, { [1] = 6131, [3] = 9809 }, { [1] = 3299, [3] = 101 }, nil, nil, nil, true }
+players["belzix"] = { "Belzix", 9807, 5, 3, 102, { [3] = 9807 }, { [3] = 102 }, nil, nil, nil, true }
+players["oroichi"] = { "Oroichi", 9805, 5, 3, 103, { [3] = 9805 }, { [3] = 103 }, nil, nil, nil, true }
+players["swdjkbad"] = { "Swdjkbad", 9804, 5, 3, 104, { [3] = 9804 }, { [3] = 104 }, nil, nil, nil, true }
+players["barutnik"] = { "Barutnik", 9803, 5, 3, 105, { [3] = 9803 }, { [3] = 105 }, nil, nil, nil, true }
+players["shadowmagnus"] = { "Shadowmagnus", 9803, 5, 3, 106, { [3] = 9803 }, { [3] = 106 }, nil, nil, nil, true }
+players["amasora"] = { "Amasora", 9800, 5, 3, 107, { [1] = 8276, [3] = 9800 }, { [1] = 874, [3] = 107 }, nil, nil, nil, true }
+players["numberi"] = { "Numberi", 9799, 5, 3, 108, { [3] = 9799 }, { [3] = 108 }, nil, nil, nil, true }
+players["shadowcop"] = { "Shadowcop", 9796, 5, 3, 109, { [1] = 701, [3] = 9796 }, { [1] = 11794, [3] = 109 }, nil, nil, nil, true }
+players["mezonp"] = { "Mezonp", 9795, 5, 3, 110, { [1] = 651, [3] = 9795 }, { [1] = 11855, [3] = 110 }, nil, nil, nil, true }
+players["sulloo"] = { "Sulloo", 9795, 5, 3, 111, { [1] = 7613, [3] = 9795 }, { [1] = 1561, [3] = 111 }, nil, nil, nil, true }
+players["chymezz"] = { "Chymezz", 9793, 5, 3, 112, { [1] = 3498, [3] = 9793 }, { [1] = 6621, [3] = 112 }, nil, nil, nil, true }
+players["liquicity"] = { "Liquicity", 9789, 5, 3, 113, { [1] = 8766, [3] = 9789 }, { [1] = 463, [3] = 113 }, nil, nil, nil, true }
+players["horeishokein"] = { "Horeishokein", 9786, 5, 3, 114, { [1] = 1309, [3] = 9786 }, { [1] = 10851, [3] = 114 }, nil, nil, nil, true }
+players["odsp"] = { "Odsp", 9786, 5, 3, 115, { [1] = 828, [2] = 6580, [3] = 9786 }, { [1] = 11649, [2] = 89, [3] = 115 }, nil, nil, nil, true }
+players["vileshadow"] = { "Vileshadow", 9784, 5, 3, 116, { [1] = 5881, [3] = 9784 }, { [1] = 3600, [3] = 116 }, nil, nil, nil, true }
+players["mafshadow"] = { "Mafshadow", 9782, 5, 3, 117, { [3] = 9782 }, { [3] = 117 }, nil, nil, nil, true }
+players["honprej"] = { "Honprej", 9782, 5, 3, 118, { [1] = 9409, [3] = 9782 }, { [1] = 125, [3] = 118 }, nil, nil, nil, true }
+players["line"] = { "Line", 9781, 5, 3, 119, { [1] = 5276, [3] = 9781 }, { [1] = 4233, [3] = 119 }, nil, nil, nil, true }
+players["deadolo"] = { "Deadolo", 9779, 5, 3, 120, { [1] = 2996, [3] = 9779 }, { [1] = 7645, [3] = 120 }, nil, nil, nil, true }
+players["turbocigan"] = { "Turbocigan", 9777, 5, 3, 121, { [1] = 647, [3] = 9777 }, { [1] = 11867, [3] = 121 }, nil, nil, nil, true }
+players["estes"] = { "Estes", 9774, 5, 3, 122, { [3] = 9774 }, { [3] = 122 }, nil, nil, nil, true }
+players["urolsdotcom"] = { "Urolsdotcom", 9772, 5, 3, 123, { [3] = 9772 }, { [3] = 123 }, nil, nil, nil, true }
+players["sulivan"] = { "Sulivan", 9769, 5, 3, 124, { [1] = 8627, [3] = 9769 }, { [1] = 570, [3] = 124 }, nil, nil, nil, true }
+players["aiizen"] = { "Aiizen", 9768, 5, 3, 125, { [1] = 5092, [3] = 9768 }, { [1] = 4420, [3] = 125 }, nil, nil, nil, true }
+players["exqalibur"] = { "Exqalibur", 9768, 5, 3, 126, { [3] = 9768 }, { [3] = 126 }, nil, nil, nil, true }
+players["eluscus"] = { "Eluscus", 9766, 5, 3, 127, { [1] = 6772, [3] = 9766 }, { [1] = 2541, [3] = 127 }, nil, nil, nil, true }
 players["qishilu"] = { "Qishilu", 9767, 5, 3, 127, { [1] = 8830, [2] = 903, [3] = 9767 }, { [1] = 422, [2] = 839, [3] = 127 }, nil, nil, nil, false }
-players["yonaguni"] = { "Yonaguni", 9767, 5, 3, 128, { [1] = 5596, [3] = 9767 }, { [1] = 3895, [3] = 128 }, nil, nil, nil, true }
-players["shieldslut"] = { "Shieldslut", 9765, 5, 3, 129, { [1] = 7372, [3] = 9765 }, { [1] = 1819, [3] = 129 }, nil, nil, nil, true }
-players["crnimonah"] = { "Crnimonah", 9764, 5, 3, 130, { [3] = 9764 }, { [3] = 130 }, nil, nil, nil, true }
-players["leohbzalkk"] = { "Leohbzalkk", 9764, 5, 3, 131, { [1] = 8620, [2] = 4274, [3] = 9764 }, { [1] = 582, [2] = 237, [3] = 131 }, nil, nil, nil, true }
-players["bojpr"] = { "Bojpr", 9763, 5, 3, 132, { [3] = 9763 }, { [3] = 132 }, nil, nil, nil, true }
+players["yonaguni"] = { "Yonaguni", 9765, 5, 3, 128, { [1] = 5586, [3] = 9765 }, { [1] = 3916, [3] = 128 }, nil, nil, nil, true }
+players["shieldslut"] = { "Shieldslut", 9762, 5, 3, 129, { [1] = 7365, [3] = 9762 }, { [1] = 1825, [3] = 129 }, nil, nil, nil, true }
+players["leohbzalkk"] = { "Leohbzalkk", 9762, 5, 3, 130, { [1] = 8614, [2] = 4274, [3] = 9762 }, { [1] = 585, [2] = 237, [3] = 130 }, nil, nil, nil, true }
+players["crnimonah"] = { "Crnimonah", 9761, 5, 3, 131, { [3] = 9761 }, { [3] = 131 }, nil, nil, nil, true }
+players["bojpr"] = { "Bojpr", 9760, 5, 3, 132, { [3] = 9760 }, { [3] = 132 }, nil, nil, nil, true }
 players["damagenjoyer"] = { "Damagenjoyer", 9757, 5, 3, 132, { [3] = 9757 }, { [3] = 132 }, nil, nil, nil, false }
-players["renap"] = { "Renap", 9763, 5, 3, 133, { [1] = 9066, [3] = 9763 }, { [1] = 259, [3] = 133 }, nil, nil, nil, true }
-players["trapshadow"] = { "Trapshadow", 9757, 5, 3, 134, { [3] = 9757 }, { [3] = 134 }, nil, nil, nil, true }
-players["psychomad"] = { "Psychomad", 9757, 5, 3, 135, { [3] = 9757 }, { [3] = 135 }, nil, nil, nil, true }
-players["dahi"] = { "Dahi", 9753, 5, 3, 136, { [1] = 8206, [3] = 9753 }, { [1] = 936, [3] = 136 }, nil, nil, nil, true }
-players["cakesoak"] = { "Cakesoak", 9752, 5, 3, 137, { [1] = 999, [3] = 9752 }, { [1] = 11304, [3] = 137 }, nil, nil, nil, true }
-players["acakewalk"] = { "Acakewalk", 9751, 5, 3, 138, { [3] = 9751 }, { [3] = 138 }, nil, nil, nil, true }
-players["imanoob"] = { "Imanoob", 9751, 5, 3, 139, { [1] = 7369, [3] = 9751 }, { [1] = 1826, [3] = 139 }, nil, nil, nil, true }
-players["chitanda"] = { "Chitanda", 9750, 5, 3, 140, { [3] = 9750 }, { [3] = 140 }, nil, nil, nil, true }
-players["wally"] = { "Wally", 9747, 5, 3, 141, { [3] = 9747 }, { [3] = 141 }, nil, nil, nil, true }
-players["karolinee"] = { "Karolinee", 9745, 5, 3, 142, { [1] = 9202, [3] = 9745 }, { [1] = 187, [3] = 142 }, nil, nil, nil, true }
-players["neilya"] = { "Neilya", 9743, 5, 3, 144, { [3] = 9743 }, { [3] = 144 }, nil, nil, nil, true }
-players["anemicc"] = { "Anemicc", 9741, 5, 3, 145, { [3] = 9741 }, { [3] = 145 }, nil, nil, nil, true }
-players["weakly"] = { "Weakly", 9741, 5, 3, 146, { [1] = 4556, [3] = 9741 }, { [1] = 5028, [3] = 146 }, nil, nil, nil, true }
-players["dotsmachiine"] = { "Dotsmachiine", 9739, 5, 3, 147, { [3] = 9739 }, { [3] = 147 }, nil, nil, nil, true }
-players["matess"] = { "Matess", 10000, 6, 1, 1, { [1] = 10000, [2] = 610 }, { [1] = 1, [2] = 18467 }, nil, nil, nil, true }
+players["renap"] = { "Renap", 9760, 5, 3, 133, { [1] = 9062, [3] = 9760 }, { [1] = 263, [3] = 133 }, nil, nil, nil, true }
+players["psychomad"] = { "Psychomad", 9754, 5, 3, 134, { [3] = 9754 }, { [3] = 134 }, nil, nil, nil, true }
+players["trapshadow"] = { "Trapshadow", 9754, 5, 3, 135, { [3] = 9754 }, { [3] = 135 }, nil, nil, nil, true }
+players["cakesoak"] = { "Cakesoak", 9750, 5, 3, 136, { [1] = 999, [3] = 9750 }, { [1] = 11333, [3] = 136 }, nil, nil, nil, true }
+players["dahi"] = { "Dahi", 9750, 5, 3, 137, { [1] = 8198, [3] = 9750 }, { [1] = 944, [3] = 137 }, nil, nil, nil, true }
+players["acakewalk"] = { "Acakewalk", 9749, 5, 3, 138, { [3] = 9749 }, { [3] = 138 }, nil, nil, nil, true }
+players["imanoob"] = { "Imanoob", 9748, 5, 3, 139, { [1] = 7359, [3] = 9748 }, { [1] = 1832, [3] = 139 }, nil, nil, nil, true }
+players["chitanda"] = { "Chitanda", 9748, 5, 3, 140, { [3] = 9748 }, { [3] = 140 }, nil, nil, nil, true }
+players["wally"] = { "Wally", 9745, 5, 3, 141, { [3] = 9745 }, { [3] = 141 }, nil, nil, nil, true }
+players["karolinee"] = { "Karolinee", 9743, 5, 3, 142, { [1] = 9198, [3] = 9743 }, { [1] = 192, [3] = 142 }, nil, nil, nil, true }
+players["neilya"] = { "Neilya", 9740, 5, 3, 144, { [3] = 9740 }, { [3] = 144 }, nil, nil, nil, true }
+players["anemicc"] = { "Anemicc", 9740, 5, 3, 145, { [3] = 9740 }, { [3] = 145 }, nil, nil, nil, true }
+players["weakly"] = { "Weakly", 9738, 5, 3, 146, { [1] = 4548, [3] = 9738 }, { [1] = 5052, [3] = 146 }, nil, nil, nil, true }
+players["dotsmachiine"] = { "Dotsmachiine", 9736, 5, 3, 147, { [3] = 9736 }, { [3] = 147 }, nil, nil, nil, true }
+players["flenskragenn"] = { "Flenskragenn", 9735, 5, 3, 148, { [3] = 9735 }, { [3] = 148 }, nil, nil, nil, true }
+players["matess"] = { "Matess", 10000, 6, 1, 1, { [1] = 10000, [2] = 610 }, { [1] = 1, [2] = 18521 }, nil, nil, nil, true }
 players["ssetam"] = { "Ssetam", 9990, 6, 1, 2, { [1] = 9990 }, { [1] = 2 }, nil, nil, nil, true }
-players["checkyourbac"] = { "Checkyourbac", 9973, 6, 1, 4, { [1] = 9973, [2] = 9824 }, { [1] = 4, [2] = 78 }, nil, nil, nil, true }
-players["stayinshadow"] = { "Stayinshadow", 9968, 6, 1, 5, { [1] = 9968, [2] = 9805 }, { [1] = 5, [2] = 86 }, nil, nil, nil, true }
-players["pieta"] = { "Pieta", 9943, 6, 1, 6, { [1] = 9943, [2] = 9823 }, { [1] = 6, [2] = 80 }, nil, nil, nil, true }
-players["prejz"] = { "Prejz", 9940, 6, 1, 7, { [1] = 9940, [2] = 9200 }, { [1] = 7, [2] = 483 }, nil, nil, nil, true }
+players["checkyourbac"] = { "Checkyourbac", 9973, 6, 1, 4, { [1] = 9973, [2] = 9870 }, { [1] = 4, [2] = 60 }, nil, nil, nil, true }
+players["stayinshadow"] = { "Stayinshadow", 9968, 6, 1, 5, { [1] = 9968, [2] = 9804 }, { [1] = 5, [2] = 86 }, nil, nil, nil, true }
+players["pieta"] = { "Pieta", 9943, 6, 1, 6, { [1] = 9943, [2] = 9822 }, { [1] = 6, [2] = 79 }, nil, nil, nil, true }
+players["prejz"] = { "Prejz", 9940, 6, 1, 7, { [1] = 9940, [2] = 9196 }, { [1] = 7, [2] = 483 }, nil, nil, nil, true }
 players["callmebaybe"] = { "Callmebaybe", 9934, 6, 1, 8, { [1] = 9934 }, { [1] = 8 }, nil, nil, nil, true }
-players["dblrokol"] = { "Dblrokol", 9925, 6, 1, 9, { [1] = 9925, [2] = 9521 }, { [1] = 9, [2] = 245 }, nil, nil, nil, true }
-players["fadeaway"] = { "Fadeaway", 9900, 6, 1, 10, { [1] = 9900, [2] = 1397 }, { [1] = 10, [2] = 17656 }, nil, nil, nil, true }
-players["webcammodel"] = { "Webcammodel", 9880, 6, 1, 11, { [1] = 9880, [2] = 7784 }, { [1] = 11, [2] = 1904 }, nil, nil, nil, true }
-players["notassa"] = { "Notassa", 9872, 6, 1, 12, { [1] = 9872, [2] = 2019 }, { [1] = 12, [2] = 16605 }, nil, nil, nil, true }
-players["inflicts"] = { "Inflicts", 9858, 6, 1, 13, { [1] = 9858, [2] = 9575 }, { [1] = 13, [2] = 216 }, nil, nil, nil, true }
-players["instantpain"] = { "Instantpain", 9828, 6, 1, 14, { [1] = 9828, [2] = 8426 }, { [1] = 14, [2] = 1163 }, nil, nil, nil, true }
+players["dblrokol"] = { "Dblrokol", 9925, 6, 1, 9, { [1] = 9925, [2] = 9518 }, { [1] = 9, [2] = 249 }, nil, nil, nil, true }
+players["fadeaway"] = { "Fadeaway", 9900, 6, 1, 10, { [1] = 9900, [2] = 1397 }, { [1] = 10, [2] = 17707 }, nil, nil, nil, true }
+players["webcammodel"] = { "Webcammodel", 9880, 6, 1, 11, { [1] = 9880, [2] = 7780 }, { [1] = 11, [2] = 1904 }, nil, nil, nil, true }
+players["notassa"] = { "Notassa", 9872, 6, 1, 12, { [1] = 9872, [2] = 2019 }, { [1] = 12, [2] = 16658 }, nil, nil, nil, true }
+players["inflicts"] = { "Inflicts", 9859, 6, 1, 13, { [1] = 9859, [2] = 9571 }, { [1] = 13, [2] = 217 }, nil, nil, nil, true }
+players["instantpain"] = { "Instantpain", 9828, 6, 1, 14, { [1] = 9828, [2] = 8422 }, { [1] = 14, [2] = 1173 }, nil, nil, nil, true }
 players["pandoora"] = { "Pandoora", 9799, 6, 1, 15, { [1] = 9799 }, { [1] = 15 }, nil, nil, nil, true }
-players["wechi"] = { "Wechi", 9790, 6, 1, 16, { [1] = 9790, [2] = 109 }, { [1] = 16, [2] = 19113 }, nil, nil, nil, true }
-players["svanhvit"] = { "Svanhvit", 9754, 6, 1, 18, { [1] = 9754, [2] = 6048 }, { [1] = 18, [2] = 5309 }, nil, nil, nil, true }
-players["lastdps"] = { "Lastdps", 9736, 6, 1, 19, { [1] = 9736 }, { [1] = 19 }, nil, nil, nil, true }
-players["instantdrip"] = { "Instantdrip", 9702, 6, 1, 20, { [1] = 9702 }, { [1] = 20 }, nil, nil, nil, true }
-players["midgetfister"] = { "Midgetfister", 9695, 6, 1, 21, { [1] = 9695 }, { [1] = 21 }, nil, nil, nil, true }
-players["rateryta"] = { "Rateryta", 9679, 6, 1, 23, { [1] = 9679, [2] = 5853 }, { [1] = 23, [2] = 5853 }, nil, nil, nil, true }
-players["neklatos"] = { "Neklatos", 9636, 6, 1, 25, { [1] = 9636, [2] = 8666 }, { [1] = 25, [2] = 943 }, nil, nil, nil, true }
-players["drifters"] = { "Drifters", 9617, 6, 1, 26, { [1] = 9617 }, { [1] = 26 }, nil, nil, nil, true }
-players["dontgowwlil"] = { "Dontgowwlil", 9610, 6, 1, 27, { [1] = 9610, [2] = 9372 }, { [1] = 27, [2] = 346 }, nil, nil, nil, true }
-players["picaxd"] = { "Picaxd", 9522, 6, 1, 29, { [1] = 9522, [2] = 5927 }, { [1] = 29, [2] = 5650 }, nil, nil, nil, true }
+players["wechi"] = { "Wechi", 9790, 6, 1, 16, { [1] = 9790, [2] = 109 }, { [1] = 16, [2] = 19173 }, nil, nil, nil, true }
+players["svanhvit"] = { "Svanhvit", 9755, 6, 1, 18, { [1] = 9755, [2] = 6047 }, { [1] = 18, [2] = 5331 }, nil, nil, nil, true }
+players["lastdps"] = { "Lastdps", 9737, 6, 1, 19, { [1] = 9737 }, { [1] = 19 }, nil, nil, nil, true }
+players["instantdrip"] = { "Instantdrip", 9701, 6, 1, 20, { [1] = 9701 }, { [1] = 20 }, nil, nil, nil, true }
+players["midgetfister"] = { "Midgetfister", 9696, 6, 1, 21, { [1] = 9696 }, { [1] = 21 }, nil, nil, nil, true }
+players["neklatos"] = { "Neklatos", 9686, 6, 1, 23, { [1] = 9686, [2] = 8660 }, { [1] = 23, [2] = 946 }, nil, nil, nil, true }
+players["rateryta"] = { "Rateryta", 9680, 6, 1, 24, { [1] = 9680, [2] = 5849 }, { [1] = 24, [2] = 5879 }, nil, nil, nil, true }
+players["drifters"] = { "Drifters", 9619, 6, 1, 26, { [1] = 9619 }, { [1] = 26 }, nil, nil, nil, true }
+players["dontgowwlil"] = { "Dontgowwlil", 9610, 6, 1, 27, { [1] = 9610, [2] = 9367 }, { [1] = 27, [2] = 351 }, nil, nil, nil, true }
+players["picaxd"] = { "Picaxd", 9523, 6, 1, 29, { [1] = 9523, [2] = 5922 }, { [1] = 29, [2] = 5686 }, nil, nil, nil, true }
 players["kamiky"] = { "Kamiky", 9520, 6, 1, 30, { [1] = 9520 }, { [1] = 30 }, nil, nil, nil, true }
-players["xyaomao"] = { "Xyaomao", 9502, 6, 1, 31, { [1] = 9502 }, { [1] = 31 }, nil, nil, nil, true }
-players["wristguards"] = { "Wristguards", 9496, 6, 1, 32, { [1] = 9496, [2] = 9300 }, { [1] = 32, [2] = 406 }, nil, nil, nil, true }
-players["traeyoung"] = { "Traeyoung", 9476, 6, 1, 33, { [1] = 9476, [2] = 6639 }, { [1] = 33, [2] = 3860 }, nil, nil, nil, true }
+players["xyaomao"] = { "Xyaomao", 9504, 6, 1, 31, { [1] = 9504 }, { [1] = 31 }, nil, nil, nil, true }
+players["wristguards"] = { "Wristguards", 9496, 6, 1, 32, { [1] = 9496, [2] = 9294 }, { [1] = 32, [2] = 411 }, nil, nil, nil, true }
+players["traeyoung"] = { "Traeyoung", 9475, 6, 1, 33, { [1] = 9475, [2] = 6632 }, { [1] = 33, [2] = 3885 }, nil, nil, nil, true }
 players["haiste"] = { "Haiste", 9472, 6, 1, 34, { [1] = 9472 }, { [1] = 34 }, nil, nil, nil, true }
-players["hanjing"] = { "Hanjing", 9457, 6, 1, 35, { [1] = 9457, [2] = 7674 }, { [1] = 35, [2] = 2052 }, nil, nil, nil, true }
-players["envenomexe"] = { "Envenomexe", 9445, 6, 1, 36, { [1] = 9445 }, { [1] = 36 }, nil, nil, nil, true }
-players["dogcarrier"] = { "Dogcarrier", 9421, 6, 1, 38, { [1] = 9421, [2] = 8819 }, { [1] = 38, [2] = 801 }, nil, nil, nil, true }
-players["lustarmyx"] = { "Lustarmyx", 9372, 6, 1, 39, { [1] = 9372 }, { [1] = 39 }, nil, nil, nil, true }
-players["bullvarix"] = { "Bullvarix", 9367, 6, 1, 40, { [1] = 9367, [2] = 9308 }, { [1] = 40, [2] = 401 }, nil, nil, nil, true }
-players["retardness"] = { "Retardness", 9357, 6, 1, 41, { [1] = 9357, [2] = 8669 }, { [1] = 41, [2] = 939 }, nil, nil, nil, true }
-players["asenath"] = { "Asenath", 9357, 6, 1, 42, { [1] = 9357, [2] = 8557 }, { [1] = 42, [2] = 1030 }, nil, nil, nil, true }
-players["deftskil"] = { "Deftskil", 9356, 6, 1, 43, { [1] = 9356 }, { [1] = 43 }, nil, nil, nil, true }
-players["brigadebar"] = { "Brigadebar", 9317, 6, 1, 44, { [1] = 9317, [2] = 7872, [3] = 816 }, { [1] = 44, [2] = 1792, [3] = 60 }, nil, nil, nil, true }
-players["evenomexe"] = { "Evenomexe", 9311, 6, 1, 45, { [1] = 9311 }, { [1] = 45 }, nil, nil, nil, true }
-players["meneedsleep"] = { "Meneedsleep", 9303, 6, 1, 47, { [1] = 9303 }, { [1] = 47 }, nil, nil, nil, true }
-players["goturnose"] = { "Goturnose", 9278, 6, 1, 49, { [1] = 9278, [2] = 9121 }, { [1] = 49, [2] = 554 }, nil, nil, nil, true }
-players["joselynn"] = { "Joselynn", 9272, 6, 1, 50, { [1] = 9272, [2] = 8308 }, { [1] = 50, [2] = 1284 }, nil, nil, nil, true }
+players["hanjing"] = { "Hanjing", 9457, 6, 1, 35, { [1] = 9457, [2] = 7666 }, { [1] = 35, [2] = 2062 }, nil, nil, nil, true }
+players["envenomexe"] = { "Envenomexe", 9443, 6, 1, 36, { [1] = 9443 }, { [1] = 36 }, nil, nil, nil, true }
+players["dogcarrier"] = { "Dogcarrier", 9421, 6, 1, 38, { [1] = 9421, [2] = 8812 }, { [1] = 38, [2] = 808 }, nil, nil, nil, true }
+players["lustarmyx"] = { "Lustarmyx", 9375, 6, 1, 39, { [1] = 9375 }, { [1] = 39 }, nil, nil, nil, true }
+players["bullvarix"] = { "Bullvarix", 9368, 6, 1, 40, { [1] = 9368, [2] = 9303 }, { [1] = 40, [2] = 407 }, nil, nil, nil, true }
+players["retardness"] = { "Retardness", 9358, 6, 1, 41, { [1] = 9358, [2] = 8664 }, { [1] = 41, [2] = 942 }, nil, nil, nil, true }
+players["deftskil"] = { "Deftskil", 9356, 6, 1, 42, { [1] = 9356 }, { [1] = 42 }, nil, nil, nil, true }
+players["asenath"] = { "Asenath", 9355, 6, 1, 43, { [1] = 9355, [2] = 8548 }, { [1] = 43, [2] = 1042 }, nil, nil, nil, true }
+players["brigadebar"] = { "Brigadebar", 9318, 6, 1, 44, { [1] = 9318, [2] = 7866, [3] = 816 }, { [1] = 44, [2] = 1799, [3] = 60 }, nil, nil, nil, true }
+players["evenomexe"] = { "Evenomexe", 9309, 6, 1, 45, { [1] = 9309 }, { [1] = 45 }, nil, nil, nil, true }
+players["meneedsleep"] = { "Meneedsleep", 9304, 6, 1, 47, { [1] = 9304 }, { [1] = 47 }, nil, nil, nil, true }
+players["goturnose"] = { "Goturnose", 9277, 6, 1, 49, { [1] = 9277, [2] = 9115 }, { [1] = 49, [2] = 557 }, nil, nil, nil, true }
+players["joselynn"] = { "Joselynn", 9274, 6, 1, 50, { [1] = 9274, [2] = 8301 }, { [1] = 50, [2] = 1293 }, nil, nil, nil, true }
 players["serpentress"] = { "Serpentress", 9271, 6, 1, 51, { [1] = 9271 }, { [1] = 51 }, nil, nil, nil, true }
-players["milkyzaika"] = { "Milkyzaika", 9249, 6, 1, 52, { [1] = 9249 }, { [1] = 52 }, nil, nil, nil, true }
-players["pumping"] = { "Pumping", 9237, 6, 1, 55, { [1] = 9237, [2] = 8892 }, { [1] = 55, [2] = 734 }, nil, nil, nil, true }
-players["thighjob"] = { "Thighjob", 9228, 6, 1, 56, { [1] = 9228 }, { [1] = 56 }, nil, nil, nil, true }
-players["leisurely"] = { "Leisurely", 9222, 6, 1, 58, { [1] = 9222 }, { [1] = 58 }, nil, nil, nil, true }
+players["milkyzaika"] = { "Milkyzaika", 9247, 6, 1, 52, { [1] = 9247 }, { [1] = 52 }, nil, nil, nil, true }
+players["pumping"] = { "Pumping", 9236, 6, 1, 55, { [1] = 9236, [2] = 8886 }, { [1] = 55, [2] = 739 }, nil, nil, nil, true }
+players["thighjob"] = { "Thighjob", 9227, 6, 1, 56, { [1] = 9227 }, { [1] = 56 }, nil, nil, nil, true }
+players["leisurely"] = { "Leisurely", 9221, 6, 1, 58, { [1] = 9221 }, { [1] = 58 }, nil, nil, nil, true }
 players["hykat"] = { "Hykat", 9200, 6, 1, 59, { [1] = 9200 }, { [1] = 59 }, nil, nil, nil, true }
-players["noobicide"] = { "Noobicide", 9194, 6, 1, 60, { [1] = 9194 }, { [1] = 60 }, nil, nil, nil, true }
-players["wtfistot"] = { "Wtfistot", 9190, 6, 1, 61, { [1] = 9190, [2] = 5546 }, { [1] = 61, [2] = 6752 }, nil, nil, nil, true }
-players["iut"] = { "Iut", 9185, 6, 1, 62, { [1] = 9185, [2] = 448 }, { [1] = 62, [2] = 18685 }, nil, nil, nil, true }
-players["shinganji"] = { "Shinganji", 9169, 6, 1, 63, { [1] = 9169, [2] = 8097 }, { [1] = 63, [2] = 1524 }, nil, nil, nil, true }
-players["felicianna"] = { "Felicianna", 9168, 6, 1, 64, { [1] = 9168 }, { [1] = 64 }, nil, nil, nil, true }
+players["wtfistot"] = { "Wtfistot", 9194, 6, 1, 60, { [1] = 9194, [2] = 5541 }, { [1] = 60, [2] = 6792 }, nil, nil, nil, true }
+players["noobicide"] = { "Noobicide", 9193, 6, 1, 61, { [1] = 9193 }, { [1] = 61 }, nil, nil, nil, true }
+players["iut"] = { "Iut", 9184, 6, 1, 62, { [1] = 9184, [2] = 448 }, { [1] = 62, [2] = 18740 }, nil, nil, nil, true }
+players["shinganji"] = { "Shinganji", 9168, 6, 1, 63, { [1] = 9168, [2] = 8088 }, { [1] = 63, [2] = 1532 }, nil, nil, nil, true }
+players["felicianna"] = { "Felicianna", 9166, 6, 1, 64, { [1] = 9166 }, { [1] = 64 }, nil, nil, nil, true }
 players["sapopetaa"] = { "Sapopetaa", 9152, 6, 1, 65, { [1] = 9152 }, { [1] = 65 }, nil, nil, nil, true }
-players["ludirogue"] = { "Ludirogue", 9152, 6, 1, 66, { [1] = 9152, [2] = 8979 }, { [1] = 66, [2] = 661 }, nil, nil, nil, true }
-players["weh"] = { "Weh", 9137, 6, 1, 67, { [1] = 9137, [2] = 516 }, { [1] = 67, [2] = 18586 }, nil, nil, nil, true }
+players["ludirogue"] = { "Ludirogue", 9151, 6, 1, 66, { [1] = 9151, [2] = 8972 }, { [1] = 66, [2] = 664 }, nil, nil, nil, true }
+players["weh"] = { "Weh", 9136, 6, 1, 67, { [1] = 9136, [2] = 516 }, { [1] = 67, [2] = 18642 }, nil, nil, nil, true }
 players["ayja"] = { "Ayja", 9109, 6, 1, 68, { [1] = 9109 }, { [1] = 68 }, nil, nil, nil, true }
-players["invincible"] = { "Invincible", 9108, 6, 1, 69, { [1] = 9108, [2] = 7400 }, { [1] = 69, [2] = 2458 }, nil, nil, nil, true }
-players["kejkej"] = { "Kejkej", 9101, 6, 1, 70, { [1] = 9101, [2] = 8514 }, { [1] = 70, [2] = 1076 }, nil, nil, nil, true }
-players["istabstuff"] = { "Istabstuff", 9073, 6, 1, 72, { [1] = 9073, [2] = 8724 }, { [1] = 72, [2] = 894 }, nil, nil, nil, true }
-players["bajorson"] = { "Bajorson", 9057, 6, 1, 73, { [1] = 9057, [2] = 8677 }, { [1] = 73, [2] = 934 }, nil, nil, nil, true }
-players["yameteeh"] = { "Yameteeh", 9047, 6, 1, 74, { [1] = 9047, [2] = 5903 }, { [1] = 74, [2] = 5716 }, nil, nil, nil, true }
-players["infuriate"] = { "Infuriate", 9028, 6, 1, 75, { [1] = 9028, [2] = 8751 }, { [1] = 75, [2] = 868 }, nil, nil, nil, true }
-players["caniche"] = { "Caniche", 9011, 6, 1, 76, { [1] = 9011, [2] = 228 }, { [1] = 76, [2] = 19026 }, nil, nil, nil, true }
-players["nlghtelf"] = { "Nlghtelf", 9007, 6, 1, 77, { [1] = 9007, [2] = 2486 }, { [1] = 77, [2] = 15010 }, nil, nil, nil, true }
-players["esbirro"] = { "Esbirro", 9005, 6, 1, 78, { [1] = 9005 }, { [1] = 78 }, nil, nil, nil, true }
+players["invincible"] = { "Invincible", 9105, 6, 1, 69, { [1] = 9105, [2] = 7391 }, { [1] = 69, [2] = 2473 }, nil, nil, nil, true }
+players["kejkej"] = { "Kejkej", 9100, 6, 1, 70, { [1] = 9100, [2] = 8504 }, { [1] = 70, [2] = 1086 }, nil, nil, nil, true }
+players["istabstuff"] = { "Istabstuff", 9072, 6, 1, 72, { [1] = 9072, [2] = 8717 }, { [1] = 72, [2] = 897 }, nil, nil, nil, true }
+players["bajorson"] = { "Bajorson", 9056, 6, 1, 73, { [1] = 9056, [2] = 8670 }, { [1] = 73, [2] = 937 }, nil, nil, nil, true }
+players["yameteeh"] = { "Yameteeh", 9047, 6, 1, 74, { [1] = 9047, [2] = 5899 }, { [1] = 74, [2] = 5750 }, nil, nil, nil, true }
+players["infuriate"] = { "Infuriate", 9028, 6, 1, 75, { [1] = 9028, [2] = 8744 }, { [1] = 75, [2] = 872 }, nil, nil, nil, true }
+players["caniche"] = { "Caniche", 9011, 6, 1, 76, { [1] = 9011, [2] = 228 }, { [1] = 76, [2] = 19086 }, nil, nil, nil, true }
+players["nlghtelf"] = { "Nlghtelf", 9004, 6, 1, 77, { [1] = 9004, [2] = 2486 }, { [1] = 77, [2] = 15054 }, nil, nil, nil, true }
+players["esbirro"] = { "Esbirro", 9003, 6, 1, 78, { [1] = 9003 }, { [1] = 78 }, nil, nil, nil, true }
 players["randompotato"] = { "Randompotato", 8998, 6, 1, 79, { [1] = 8998 }, { [1] = 79 }, nil, nil, nil, true }
-players["ultrapoison"] = { "Ultrapoison", 8986, 6, 1, 81, { [1] = 8986, [2] = 423 }, { [1] = 81, [2] = 18737 }, nil, nil, nil, true }
-players["thejewbehind"] = { "Thejewbehind", 8979, 6, 1, 82, { [1] = 8979, [2] = 7786 }, { [1] = 82, [2] = 1900 }, nil, nil, nil, true }
-players["nissassa"] = { "Nissassa", 8944, 6, 1, 83, { [1] = 8944, [2] = 5330 }, { [1] = 83, [2] = 7356 }, nil, nil, nil, true }
-players["emptybite"] = { "Emptybite", 8943, 6, 1, 84, { [1] = 8943, [2] = 627 }, { [1] = 84, [2] = 18441 }, nil, nil, nil, true }
-players["jind"] = { "Jind", 8942, 6, 1, 85, { [1] = 8942 }, { [1] = 85 }, nil, nil, nil, true }
-players["kalyma"] = { "Kalyma", 8934, 6, 1, 86, { [1] = 8934, [2] = 492 }, { [1] = 86, [2] = 18622 }, nil, nil, nil, true }
-players["tandeborsel"] = { "Tandeborsel", 8923, 6, 1, 87, { [1] = 8923 }, { [1] = 87 }, nil, nil, nil, true }
-players["wednesdayadm"] = { "Wednesdayadm", 8910, 6, 1, 88, { [1] = 8910 }, { [1] = 88 }, nil, nil, nil, true }
-players["meanchick"] = { "Meanchick", 8864, 6, 1, 89, { [1] = 8864 }, { [1] = 89 }, nil, nil, nil, true }
-players["rakzrogue"] = { "Rakzrogue", 8844, 6, 1, 90, { [1] = 8844, [2] = 5953 }, { [1] = 90, [2] = 5587 }, nil, nil, nil, true }
-players["dpoilfuel"] = { "Dpoilfuel", 8841, 6, 1, 91, { [1] = 8841 }, { [1] = 91 }, nil, nil, nil, true }
-players["toxtricks"] = { "Toxtricks", 8838, 6, 1, 92, { [1] = 8838 }, { [1] = 92 }, nil, nil, nil, true }
-players["kubzy"] = { "Kubzy", 8821, 6, 1, 93, { [1] = 8821, [2] = 359 }, { [1] = 93, [2] = 18848 }, nil, nil, nil, true }
-players["dafak"] = { "Dafak", 8818, 6, 1, 94, { [1] = 8818 }, { [1] = 94 }, nil, nil, nil, true }
+players["ultrapoison"] = { "Ultrapoison", 8985, 6, 1, 81, { [1] = 8985, [2] = 423 }, { [1] = 81, [2] = 18790 }, nil, nil, nil, true }
+players["thejewbehind"] = { "Thejewbehind", 8978, 6, 1, 82, { [1] = 8978, [2] = 7778 }, { [1] = 82, [2] = 1907 }, nil, nil, nil, true }
+players["nissassa"] = { "Nissassa", 8943, 6, 1, 83, { [1] = 8943, [2] = 5329 }, { [1] = 83, [2] = 7376 }, nil, nil, nil, true }
+players["emptybite"] = { "Emptybite", 8942, 6, 1, 84, { [1] = 8942, [2] = 627 }, { [1] = 84, [2] = 18496 }, nil, nil, nil, true }
+players["jind"] = { "Jind", 8939, 6, 1, 85, { [1] = 8939 }, { [1] = 85 }, nil, nil, nil, true }
+players["kalyma"] = { "Kalyma", 8934, 6, 1, 86, { [1] = 8934, [2] = 492 }, { [1] = 86, [2] = 18676 }, nil, nil, nil, true }
+players["wednesdayadm"] = { "Wednesdayadm", 8925, 6, 1, 87, { [1] = 8925 }, { [1] = 87 }, nil, nil, nil, true }
+players["tandeborsel"] = { "Tandeborsel", 8923, 6, 1, 88, { [1] = 8923 }, { [1] = 88 }, nil, nil, nil, true }
+players["meanchick"] = { "Meanchick", 8862, 6, 1, 89, { [1] = 8862 }, { [1] = 89 }, nil, nil, nil, true }
+players["rakzrogue"] = { "Rakzrogue", 8842, 6, 1, 90, { [1] = 8842, [2] = 5950 }, { [1] = 90, [2] = 5620 }, nil, nil, nil, true }
+players["dpoilfuel"] = { "Dpoilfuel", 8837, 6, 1, 91, { [1] = 8837 }, { [1] = 91 }, nil, nil, nil, true }
+players["toxtricks"] = { "Toxtricks", 8835, 6, 1, 92, { [1] = 8835 }, { [1] = 92 }, nil, nil, nil, true }
+players["kubzy"] = { "Kubzy", 8821, 6, 1, 93, { [1] = 8821, [2] = 359 }, { [1] = 93, [2] = 18904 }, nil, nil, nil, true }
+players["dafak"] = { "Dafak", 8817, 6, 1, 94, { [1] = 8817 }, { [1] = 94 }, nil, nil, nil, true }
 players["cargo"] = { "Cargo", 8796, 6, 1, 95, { [1] = 8796 }, { [1] = 95 }, nil, nil, nil, true }
 players["zapn"] = { "Zapn", 8795, 6, 1, 96, { [1] = 8795 }, { [1] = 96 }, nil, nil, nil, true }
 players["aelriia"] = { "Aelriia", 8772, 6, 1, 97, { [1] = 8772 }, { [1] = 97 }, nil, nil, nil, true }
-players["naylara"] = { "Naylara", 8770, 6, 1, 98, { [1] = 8770 }, { [1] = 98 }, nil, nil, nil, true }
-players["cptcool"] = { "Cptcool", 8770, 6, 1, 99, { [1] = 8770 }, { [1] = 99 }, nil, nil, nil, true }
-players["ixzay"] = { "Ixzay", 8750, 6, 1, 101, { [1] = 8750, [2] = 7997 }, { [1] = 101, [2] = 1636 }, nil, nil, nil, true }
-players["hemotoxin"] = { "Hemotoxin", 8729, 6, 1, 102, { [1] = 8729, [2] = 7485 }, { [1] = 102, [2] = 2317 }, nil, nil, nil, true }
-players["seeu"] = { "Seeu", 8725, 6, 1, 103, { [1] = 8725 }, { [1] = 103 }, nil, nil, nil, true }
+players["naylara"] = { "Naylara", 8769, 6, 1, 98, { [1] = 8769 }, { [1] = 98 }, nil, nil, nil, true }
+players["cptcool"] = { "Cptcool", 8766, 6, 1, 99, { [1] = 8766 }, { [1] = 99 }, nil, nil, nil, true }
+players["ixzay"] = { "Ixzay", 8749, 6, 1, 101, { [1] = 8749, [2] = 7991 }, { [1] = 101, [2] = 1643 }, nil, nil, nil, true }
+players["hemotoxin"] = { "Hemotoxin", 8728, 6, 1, 102, { [1] = 8728, [2] = 7476 }, { [1] = 102, [2] = 2325 }, nil, nil, nil, true }
+players["seeu"] = { "Seeu", 8722, 6, 1, 103, { [1] = 8722 }, { [1] = 103 }, nil, nil, nil, true }
 players["poisonwounds"] = { "Poisonwounds", 8717, 6, 1, 104, { [1] = 8717 }, { [1] = 104 }, nil, nil, nil, true }
-players["animasyon"] = { "Animasyon", 8674, 6, 1, 105, { [1] = 8674, [2] = 6590 }, { [1] = 105, [2] = 3970 }, nil, nil, nil, true }
+players["animasyon"] = { "Animasyon", 8672, 6, 1, 105, { [1] = 8672, [2] = 6584 }, { [1] = 105, [2] = 3994 }, nil, nil, nil, true }
+players["czarli"] = { "Czarli", 8636, 6, 1, 107, { [1] = 8636, [2] = 7441 }, { [1] = 107, [2] = 2381 }, nil, nil, nil, true }
 players["sting"] = { "Sting", 10000, 6, 2, 1, { [2] = 10000 }, { [2] = 1 }, nil, nil, nil, true }
 players["nicolete"] = { "Nicolete", 10000, 6, 2, 2, { [2] = 10000 }, { [2] = 2 }, nil, nil, nil, true }
 players["ellenorqt"] = { "Ellenorqt", 9994, 6, 2, 3, { [2] = 9994 }, { [2] = 3 }, nil, nil, nil, true }
-players["hidion"] = { "Hidion", 9992, 6, 2, 4, { [2] = 9992 }, { [2] = 4 }, nil, nil, nil, true }
+players["hidion"] = { "Hidion", 9993, 6, 2, 4, { [2] = 9993 }, { [2] = 4 }, nil, nil, nil, true }
 players["simplestab"] = { "Simplestab", 9992, 6, 2, 5, { [2] = 9992 }, { [2] = 5 }, nil, nil, nil, true }
-players["themove"] = { "Themove", 9989, 6, 2, 6, { [1] = 7578, [2] = 9989 }, { [1] = 204, [2] = 6 }, nil, nil, nil, true }
+players["themove"] = { "Themove", 9989, 6, 2, 6, { [1] = 7576, [2] = 9989 }, { [1] = 205, [2] = 6 }, nil, nil, nil, true }
 players["roggucci"] = { "Roggucci", 9988, 6, 2, 7, { [2] = 9988 }, { [2] = 7 }, nil, nil, nil, true }
 players["strabanimal"] = { "Strabanimal", 9988, 6, 2, 8, { [2] = 9988 }, { [2] = 8 }, nil, nil, nil, true }
 players["mipoo"] = { "Mipoo", 9988, 6, 2, 9, { [2] = 9988 }, { [2] = 9 }, nil, nil, nil, true }
 players["cruix"] = { "Cruix", 7595, 6, 2, 10, { [2] = 7595 }, { [2] = 2147 }, nil, nil, nil, false }
 players["jokarar"] = { "Jokarar", 9984, 6, 2, 10, { [2] = 9984 }, { [2] = 10 }, nil, nil, nil, true }
-players["stting"] = { "Stting", 9983, 6, 2, 11, { [2] = 9983 }, { [2] = 11 }, nil, nil, nil, true }
-players["saforandice"] = { "Saforandice", 9982, 6, 2, 12, { [2] = 9982 }, { [2] = 12 }, nil, nil, nil, true }
-players["mando"] = { "Mando", 9982, 6, 2, 13, { [2] = 9982 }, { [2] = 13 }, nil, nil, nil, true }
+players["mando"] = { "Mando", 9983, 6, 2, 11, { [2] = 9983 }, { [2] = 11 }, nil, nil, nil, true }
+players["stting"] = { "Stting", 9983, 6, 2, 12, { [2] = 9983 }, { [2] = 12 }, nil, nil, nil, true }
+players["saforandice"] = { "Saforandice", 9982, 6, 2, 13, { [2] = 9982 }, { [2] = 13 }, nil, nil, nil, true }
 players["phly"] = { "Phly", 9978, 6, 2, 14, { [2] = 9978 }, { [2] = 14 }, nil, nil, nil, true }
 players["ponpoyo"] = { "Ponpoyo", 9975, 6, 2, 16, { [2] = 9975 }, { [2] = 16 }, nil, nil, nil, true }
 players["shiesty"] = { "Shiesty", 9974, 6, 2, 17, { [2] = 9974 }, { [2] = 17 }, nil, nil, nil, true }
 players["doloriaan"] = { "Doloriaan", 9974, 6, 2, 18, { [2] = 9974 }, { [2] = 18 }, nil, nil, nil, true }
-players["astigmatism"] = { "Astigmatism", 9969, 6, 2, 19, { [2] = 9969 }, { [2] = 19 }, nil, nil, nil, true }
-players["hyr"] = { "Hyr", 9966, 6, 2, 20, { [2] = 9966 }, { [2] = 20 }, nil, nil, nil, true }
-players["vaenish"] = { "Vaenish", 9964, 6, 2, 21, { [2] = 9964 }, { [2] = 21 }, nil, nil, nil, true }
-players["yone"] = { "Yone", 9962, 6, 2, 22, { [1] = 1541, [2] = 9962 }, { [1] = 1665, [2] = 22 }, nil, nil, nil, true }
+players["astigmatism"] = { "Astigmatism", 9968, 6, 2, 19, { [2] = 9968 }, { [2] = 19 }, nil, nil, nil, true }
+players["hyr"] = { "Hyr", 9965, 6, 2, 20, { [2] = 9965 }, { [2] = 20 }, nil, nil, nil, true }
+players["vaenish"] = { "Vaenish", 9963, 6, 2, 21, { [2] = 9963 }, { [2] = 21 }, nil, nil, nil, true }
+players["yone"] = { "Yone", 9961, 6, 2, 22, { [1] = 1541, [2] = 9961 }, { [1] = 1668, [2] = 22 }, nil, nil, nil, true }
 players["anic"] = { "Anic", 9960, 6, 2, 23, { [2] = 9960 }, { [2] = 23 }, nil, nil, nil, true }
 players["herash"] = { "Herash", 9955, 6, 2, 24, { [2] = 9955 }, { [2] = 24 }, nil, nil, nil, true }
 players["residence"] = { "Residence", 9952, 6, 2, 25, { [2] = 9952 }, { [2] = 25 }, nil, nil, nil, true }
 players["dragica"] = { "Dragica", 9949, 6, 2, 26, { [2] = 9949 }, { [2] = 26 }, nil, nil, nil, true }
 players["titowilly"] = { "Titowilly", 9946, 6, 2, 27, { [2] = 9946 }, { [2] = 27 }, nil, nil, nil, true }
 players["obake"] = { "Obake", 9946, 6, 2, 28, { [2] = 9946 }, { [2] = 28 }, nil, nil, nil, true }
-players["shadowstepxz"] = { "Shadowstepxz", 9944, 6, 2, 29, { [2] = 9944 }, { [2] = 29 }, nil, nil, nil, true }
-players["poxn"] = { "Poxn", 9943, 6, 2, 30, { [2] = 9943 }, { [2] = 30 }, nil, nil, nil, true }
+players["shadowstepxz"] = { "Shadowstepxz", 9943, 6, 2, 29, { [2] = 9943 }, { [2] = 29 }, nil, nil, nil, true }
+players["poxn"] = { "Poxn", 9942, 6, 2, 30, { [2] = 9942 }, { [2] = 30 }, nil, nil, nil, true }
 players["bladerunnerx"] = { "Bladerunnerx", 9936, 6, 2, 31, { [2] = 9936 }, { [2] = 31 }, nil, nil, nil, true }
-players["ggtrix"] = { "Ggtrix", 9936, 6, 2, 32, { [2] = 9936 }, { [2] = 32 }, nil, nil, nil, true }
+players["ggtrix"] = { "Ggtrix", 9935, 6, 2, 32, { [2] = 9935 }, { [2] = 32 }, nil, nil, nil, true }
 players["jtespot"] = { "Jtespot", 9934, 6, 2, 33, { [2] = 9934 }, { [2] = 33 }, nil, nil, nil, true }
-players["paxza"] = { "Paxza", 9929, 6, 2, 34, { [2] = 9929 }, { [2] = 34 }, nil, nil, nil, true }
+players["paxza"] = { "Paxza", 9928, 6, 2, 34, { [2] = 9928 }, { [2] = 34 }, nil, nil, nil, true }
 players["jurassinho"] = { "Jurassinho", 9926, 6, 2, 35, { [2] = 9926 }, { [2] = 35 }, nil, nil, nil, true }
-players["maachmut"] = { "Maachmut", 9925, 6, 2, 36, { [1] = 3874, [2] = 9925 }, { [1] = 796, [2] = 36 }, nil, nil, nil, true }
-players["pas"] = { "Pas", 9923, 6, 2, 37, { [2] = 9923 }, { [2] = 37 }, nil, nil, nil, true }
-players["swiftuan"] = { "Swiftuan", 9918, 6, 2, 38, { [2] = 9918 }, { [2] = 38 }, nil, nil, nil, true }
-players["diimh"] = { "Diimh", 9918, 6, 2, 39, { [2] = 9918 }, { [2] = 39 }, nil, nil, nil, true }
-players["avivic"] = { "Avivic", 9916, 6, 2, 40, { [2] = 9916 }, { [2] = 40 }, nil, nil, nil, true }
-players["shaq"] = { "Shaq", 9916, 6, 2, 41, { [2] = 9916 }, { [2] = 41 }, nil, nil, nil, true }
-players["ravioiladog"] = { "Ravioiladog", 9915, 6, 2, 42, { [2] = 9915 }, { [2] = 42 }, nil, nil, nil, true }
-players["edvenom"] = { "Edvenom", 9913, 6, 2, 43, { [2] = 9913 }, { [2] = 43 }, nil, nil, nil, true }
-players["guccixz"] = { "Guccixz", 9912, 6, 2, 44, { [2] = 9912 }, { [2] = 44 }, nil, nil, nil, true }
-players["patchesrogue"] = { "Patchesrogue", 9912, 6, 2, 45, { [2] = 9912 }, { [2] = 45 }, nil, nil, nil, true }
-players["arivaa"] = { "Arivaa", 9912, 6, 2, 46, { [2] = 9912 }, { [2] = 46 }, nil, nil, nil, true }
-players["krastavichko"] = { "Krastavichko", 9902, 6, 2, 47, { [2] = 9902 }, { [2] = 47 }, nil, nil, nil, true }
-players["iluminatroug"] = { "Iluminatroug", 9901, 6, 2, 48, { [1] = 9645, [2] = 9901 }, { [1] = 24, [2] = 48 }, nil, nil, nil, true }
-players["imvoid"] = { "Imvoid", 9897, 6, 2, 49, { [1] = 9562, [2] = 9897, [3] = 3435 }, { [1] = 28, [2] = 49, [3] = 16 }, nil, nil, nil, true }
-players["curseeh"] = { "Curseeh", 9896, 6, 2, 50, { [2] = 9896 }, { [2] = 50 }, nil, nil, nil, true }
-players["tupapa"] = { "Tupapa", 9894, 6, 2, 51, { [2] = 9894 }, { [2] = 51 }, nil, nil, nil, true }
-players["kajmanx"] = { "Kajmanx", 9893, 6, 2, 52, { [2] = 9893 }, { [2] = 52 }, nil, nil, nil, true }
-players["slicedup"] = { "Slicedup", 9892, 6, 2, 53, { [2] = 9892 }, { [2] = 53 }, nil, nil, nil, true }
-players["dpv"] = { "Dpv", 9886, 6, 2, 54, { [2] = 9886 }, { [2] = 54 }, nil, nil, nil, true }
-players["reventon"] = { "Reventon", 9878, 6, 2, 55, { [2] = 9878 }, { [2] = 55 }, nil, nil, nil, true }
-players["ellenorxo"] = { "Ellenorxo", 9877, 6, 2, 56, { [2] = 9877 }, { [2] = 56 }, nil, nil, nil, true }
-players["aiwana"] = { "Aiwana", 9875, 6, 2, 57, { [2] = 9875 }, { [2] = 57 }, nil, nil, nil, true }
-players["lollipopolin"] = { "Lollipopolin", 9872, 6, 2, 58, { [1] = 4324, [2] = 9872 }, { [1] = 662, [2] = 58 }, nil, nil, nil, true }
-players["ivalerarogue"] = { "Ivalerarogue", 9872, 6, 2, 59, { [2] = 9872 }, { [2] = 59 }, nil, nil, nil, true }
-players["venitocamela"] = { "Venitocamela", 9870, 6, 2, 60, { [2] = 9870 }, { [2] = 60 }, nil, nil, nil, true }
-players["nethercorexx"] = { "Nethercorexx", 9869, 6, 2, 61, { [2] = 9869 }, { [2] = 61 }, nil, nil, nil, true }
-players["darkdeathx"] = { "Darkdeathx", 9862, 6, 2, 62, { [2] = 9862 }, { [2] = 62 }, nil, nil, nil, true }
-players["herp"] = { "Herp", 9858, 6, 2, 63, { [2] = 9858 }, { [2] = 63 }, nil, nil, nil, true }
-players["yokoxd"] = { "Yokoxd", 9857, 6, 2, 64, { [2] = 9857 }, { [2] = 64 }, nil, nil, nil, true }
-players["cheepshot"] = { "Cheepshot", 9856, 6, 2, 65, { [2] = 9856 }, { [2] = 65 }, nil, nil, nil, true }
-players["nykolq"] = { "Nykolq", 9855, 6, 2, 66, { [2] = 9855 }, { [2] = 66 }, nil, nil, nil, true }
-players["gejlife"] = { "Gejlife", 9851, 6, 2, 67, { [2] = 9851 }, { [2] = 67 }, nil, nil, nil, true }
-players["kamaia"] = { "Kamaia", 9850, 6, 2, 68, { [2] = 9850 }, { [2] = 68 }, nil, nil, nil, true }
-players["undanie"] = { "Undanie", 9847, 6, 2, 69, { [2] = 9847 }, { [2] = 69 }, nil, nil, nil, true }
-players["notdaz"] = { "Notdaz", 9846, 6, 2, 70, { [2] = 9846 }, { [2] = 70 }, nil, nil, nil, true }
-players["narzeot"] = { "Narzeot", 9844, 6, 2, 71, { [2] = 9844, [3] = 1524 }, { [2] = 71, [3] = 40 }, nil, nil, nil, true }
-players["distract"] = { "Distract", 9843, 6, 2, 72, { [2] = 9843 }, { [2] = 72 }, nil, nil, nil, true }
-players["ameadora"] = { "Ameadora", 9842, 6, 2, 73, { [2] = 9842 }, { [2] = 73 }, nil, nil, nil, true }
-players["pinnid"] = { "Pinnid", 9831, 6, 2, 74, { [2] = 9831 }, { [2] = 74 }, nil, nil, nil, true }
-players["pacmaan"] = { "Pacmaan", 9830, 6, 2, 75, { [2] = 9830 }, { [2] = 75 }, nil, nil, nil, true }
-players["pouta"] = { "Pouta", 9830, 6, 2, 76, { [2] = 9830 }, { [2] = 76 }, nil, nil, nil, true }
-players["defrozen"] = { "Defrozen", 9825, 6, 2, 77, { [2] = 9825 }, { [2] = 77 }, nil, nil, nil, true }
-players["besler"] = { "Besler", 9824, 6, 2, 79, { [1] = 885, [2] = 9824 }, { [1] = 1780, [2] = 79 }, nil, nil, nil, true }
-players["unit"] = { "Unit", 9821, 6, 2, 81, { [2] = 9821 }, { [2] = 81 }, nil, nil, nil, true }
-players["antoxic"] = { "Antoxic", 9821, 6, 2, 82, { [2] = 9821 }, { [2] = 82 }, nil, nil, nil, true }
-players["hotgame"] = { "Hotgame", 9821, 6, 2, 83, { [2] = 9821 }, { [2] = 83 }, nil, nil, nil, true }
-players["ghostfreya"] = { "Ghostfreya", 9811, 6, 2, 84, { [2] = 9811 }, { [2] = 84 }, nil, nil, nil, true }
-players["poisonouss"] = { "Poisonouss", 9806, 6, 2, 85, { [2] = 9806 }, { [2] = 85 }, nil, nil, nil, true }
-players["above"] = { "Above", 9804, 6, 2, 87, { [1] = 1247, [2] = 9804 }, { [1] = 1715, [2] = 87 }, nil, nil, nil, true }
-players["fuksara"] = { "Fuksara", 9804, 6, 2, 88, { [2] = 9804, [3] = 609 }, { [2] = 88, [3] = 96 }, nil, nil, nil, true }
-players["gloul"] = { "Gloul", 9798, 6, 2, 89, { [2] = 9798 }, { [2] = 89 }, nil, nil, nil, true }
-players["soulsrogue"] = { "Soulsrogue", 9796, 6, 2, 90, { [2] = 9796 }, { [2] = 90 }, nil, nil, nil, true }
-players["vipersteal"] = { "Vipersteal", 9792, 6, 2, 91, { [2] = 9792 }, { [2] = 91 }, nil, nil, nil, true }
-players["strychnin"] = { "Strychnin", 9790, 6, 2, 92, { [2] = 9790 }, { [2] = 92 }, nil, nil, nil, true }
+players["maachmut"] = { "Maachmut", 9925, 6, 2, 36, { [1] = 3876, [2] = 9925 }, { [1] = 798, [2] = 36 }, nil, nil, nil, true }
+players["pas"] = { "Pas", 9922, 6, 2, 37, { [2] = 9922 }, { [2] = 37 }, nil, nil, nil, true }
+players["swiftuan"] = { "Swiftuan", 9917, 6, 2, 38, { [2] = 9917 }, { [2] = 38 }, nil, nil, nil, true }
+players["diimh"] = { "Diimh", 9917, 6, 2, 39, { [2] = 9917 }, { [2] = 39 }, nil, nil, nil, true }
+players["avivic"] = { "Avivic", 9914, 6, 2, 40, { [2] = 9914 }, { [2] = 40 }, nil, nil, nil, true }
+players["shaq"] = { "Shaq", 9914, 6, 2, 41, { [2] = 9914 }, { [2] = 41 }, nil, nil, nil, true }
+players["ravioiladog"] = { "Ravioiladog", 9914, 6, 2, 42, { [2] = 9914 }, { [2] = 42 }, nil, nil, nil, true }
+players["edvenom"] = { "Edvenom", 9912, 6, 2, 43, { [2] = 9912 }, { [2] = 43 }, nil, nil, nil, true }
+players["guccixz"] = { "Guccixz", 9911, 6, 2, 44, { [2] = 9911 }, { [2] = 44 }, nil, nil, nil, true }
+players["patchesrogue"] = { "Patchesrogue", 9910, 6, 2, 45, { [2] = 9910 }, { [2] = 45 }, nil, nil, nil, true }
+players["arivaa"] = { "Arivaa", 9910, 6, 2, 46, { [2] = 9910 }, { [2] = 46 }, nil, nil, nil, true }
+players["krastavichko"] = { "Krastavichko", 9901, 6, 2, 47, { [2] = 9901 }, { [2] = 47 }, nil, nil, nil, true }
+players["iluminatroug"] = { "Iluminatroug", 9900, 6, 2, 48, { [1] = 9645, [2] = 9900 }, { [1] = 25, [2] = 48 }, nil, nil, nil, true }
+players["imvoid"] = { "Imvoid", 9896, 6, 2, 49, { [1] = 9564, [2] = 9896, [3] = 3435 }, { [1] = 28, [2] = 49, [3] = 16 }, nil, nil, nil, true }
+players["curseeh"] = { "Curseeh", 9895, 6, 2, 50, { [2] = 9895 }, { [2] = 50 }, nil, nil, nil, true }
+players["tupapa"] = { "Tupapa", 9892, 6, 2, 51, { [2] = 9892 }, { [2] = 51 }, nil, nil, nil, true }
+players["slicedup"] = { "Slicedup", 9892, 6, 2, 52, { [2] = 9892 }, { [2] = 52 }, nil, nil, nil, true }
+players["kajmanx"] = { "Kajmanx", 9892, 6, 2, 53, { [2] = 9892 }, { [2] = 53 }, nil, nil, nil, true }
+players["dpv"] = { "Dpv", 9885, 6, 2, 54, { [2] = 9885 }, { [2] = 54 }, nil, nil, nil, true }
+players["reventon"] = { "Reventon", 9876, 6, 2, 55, { [2] = 9876 }, { [2] = 55 }, nil, nil, nil, true }
+players["ellenorxo"] = { "Ellenorxo", 9876, 6, 2, 56, { [2] = 9876 }, { [2] = 56 }, nil, nil, nil, true }
+players["aiwana"] = { "Aiwana", 9874, 6, 2, 57, { [2] = 9874 }, { [2] = 57 }, nil, nil, nil, true }
+players["ivalerarogue"] = { "Ivalerarogue", 9870, 6, 2, 58, { [2] = 9870 }, { [2] = 58 }, nil, nil, nil, true }
+players["lollipopolin"] = { "Lollipopolin", 9870, 6, 2, 59, { [1] = 4324, [2] = 9870 }, { [1] = 663, [2] = 59 }, nil, nil, nil, true }
+players["venitocamela"] = { "Venitocamela", 9869, 6, 2, 61, { [2] = 9869 }, { [2] = 61 }, nil, nil, nil, true }
+players["nethercorexx"] = { "Nethercorexx", 9867, 6, 2, 62, { [2] = 9867 }, { [2] = 62 }, nil, nil, nil, true }
+players["darkdeathx"] = { "Darkdeathx", 9861, 6, 2, 63, { [2] = 9861 }, { [2] = 63 }, nil, nil, nil, true }
+players["herp"] = { "Herp", 9856, 6, 2, 64, { [2] = 9856 }, { [2] = 64 }, nil, nil, nil, true }
+players["kamaia"] = { "Kamaia", 9856, 6, 2, 65, { [2] = 9856 }, { [2] = 65 }, nil, nil, nil, true }
+players["yokoxd"] = { "Yokoxd", 9856, 6, 2, 66, { [2] = 9856 }, { [2] = 66 }, nil, nil, nil, true }
+players["cheepshot"] = { "Cheepshot", 9855, 6, 2, 67, { [2] = 9855 }, { [2] = 67 }, nil, nil, nil, true }
+players["nykolq"] = { "Nykolq", 9854, 6, 2, 68, { [2] = 9854 }, { [2] = 68 }, nil, nil, nil, true }
+players["gejlife"] = { "Gejlife", 9849, 6, 2, 69, { [2] = 9849 }, { [2] = 69 }, nil, nil, nil, true }
+players["undanie"] = { "Undanie", 9845, 6, 2, 70, { [2] = 9845 }, { [2] = 70 }, nil, nil, nil, true }
+players["notdaz"] = { "Notdaz", 9844, 6, 2, 71, { [2] = 9844 }, { [2] = 71 }, nil, nil, nil, true }
+players["narzeot"] = { "Narzeot", 9842, 6, 2, 72, { [2] = 9842, [3] = 1524 }, { [2] = 72, [3] = 40 }, nil, nil, nil, true }
+players["distract"] = { "Distract", 9841, 6, 2, 73, { [2] = 9841 }, { [2] = 73 }, nil, nil, nil, true }
+players["ameadora"] = { "Ameadora", 9841, 6, 2, 74, { [2] = 9841 }, { [2] = 74 }, nil, nil, nil, true }
+players["pacmaan"] = { "Pacmaan", 9829, 6, 2, 75, { [2] = 9829 }, { [2] = 75 }, nil, nil, nil, true }
+players["pinnid"] = { "Pinnid", 9829, 6, 2, 76, { [2] = 9829 }, { [2] = 76 }, nil, nil, nil, true }
+players["pouta"] = { "Pouta", 9828, 6, 2, 77, { [2] = 9828 }, { [2] = 77 }, nil, nil, nil, true }
+players["defrozen"] = { "Defrozen", 9823, 6, 2, 78, { [2] = 9823 }, { [2] = 78 }, nil, nil, nil, true }
+players["besler"] = { "Besler", 9822, 6, 2, 80, { [1] = 885, [2] = 9822 }, { [1] = 1783, [2] = 80 }, nil, nil, nil, true }
+players["hotgame"] = { "Hotgame", 9820, 6, 2, 81, { [2] = 9820 }, { [2] = 81 }, nil, nil, nil, true }
+players["unit"] = { "Unit", 9820, 6, 2, 82, { [2] = 9820 }, { [2] = 82 }, nil, nil, nil, true }
+players["antoxic"] = { "Antoxic", 9819, 6, 2, 83, { [2] = 9819 }, { [2] = 83 }, nil, nil, nil, true }
+players["ghostfreya"] = { "Ghostfreya", 9809, 6, 2, 84, { [2] = 9809 }, { [2] = 84 }, nil, nil, nil, true }
+players["poisonouss"] = { "Poisonouss", 9804, 6, 2, 85, { [2] = 9804 }, { [2] = 85 }, nil, nil, nil, true }
+players["fuksara"] = { "Fuksara", 9803, 6, 2, 87, { [2] = 9803, [3] = 609 }, { [2] = 87, [3] = 96 }, nil, nil, nil, true }
+players["above"] = { "Above", 9802, 6, 2, 88, { [1] = 1247, [2] = 9802 }, { [1] = 1718, [2] = 88 }, nil, nil, nil, true }
+players["vipersteal"] = { "Vipersteal", 9802, 6, 2, 89, { [2] = 9802 }, { [2] = 89 }, nil, nil, nil, true }
+players["gloul"] = { "Gloul", 9797, 6, 2, 90, { [2] = 9797 }, { [2] = 90 }, nil, nil, nil, true }
+players["soulsrogue"] = { "Soulsrogue", 9794, 6, 2, 91, { [2] = 9794 }, { [2] = 91 }, nil, nil, nil, true }
+players["strychnin"] = { "Strychnin", 9789, 6, 2, 92, { [2] = 9789 }, { [2] = 92 }, nil, nil, nil, true }
 players["bleksar"] = { "Bleksar", 9787, 6, 2, 93, { [2] = 9787 }, { [2] = 93 }, nil, nil, nil, false }
-players["luganotots"] = { "Luganotots", 9790, 6, 2, 93, { [2] = 9790 }, { [2] = 93 }, nil, nil, nil, true }
-players["admirko"] = { "Admirko", 9788, 6, 2, 94, { [1] = 2082, [2] = 9788 }, { [1] = 1539, [2] = 94 }, nil, nil, nil, true }
-players["cursi"] = { "Cursi", 9787, 6, 2, 95, { [1] = 9767, [2] = 9787 }, { [1] = 17, [2] = 95 }, nil, nil, nil, true }
-players["valtharr"] = { "Valtharr", 9785, 6, 2, 96, { [2] = 9785 }, { [2] = 96 }, nil, nil, nil, true }
-players["secretanswer"] = { "Secretanswer", 9784, 6, 2, 97, { [2] = 9784 }, { [2] = 97 }, nil, nil, nil, true }
-players["remove"] = { "Remove", 9784, 6, 2, 98, { [1] = 636, [2] = 9784 }, { [1] = 1851, [2] = 98 }, nil, nil, nil, true }
-players["chemtrailsky"] = { "Chemtrailsky", 9779, 6, 2, 99, { [2] = 9779 }, { [2] = 99 }, nil, nil, nil, true }
-players["shankurbutt"] = { "Shankurbutt", 9777, 6, 2, 100, { [2] = 9777 }, { [2] = 100 }, nil, nil, nil, true }
-players["dogzoriaan"] = { "Dogzoriaan", 9775, 6, 2, 101, { [2] = 9775 }, { [2] = 101 }, nil, nil, nil, true }
-players["peezystabs"] = { "Peezystabs", 9774, 6, 2, 102, { [2] = 9774 }, { [2] = 102 }, nil, nil, nil, true }
-players["brume"] = { "Brume", 9772, 6, 2, 103, { [1] = 9687, [2] = 9772 }, { [1] = 22, [2] = 103 }, nil, nil, nil, true }
-players["killingspree"] = { "Killingspree", 9771, 6, 2, 104, { [2] = 9771 }, { [2] = 104 }, nil, nil, nil, true }
-players["iamgarrote"] = { "Iamgarrote", 9769, 6, 2, 105, { [2] = 9769 }, { [2] = 105 }, nil, nil, nil, true }
-players["sappingdogs"] = { "Sappingdogs", 9766, 6, 2, 106, { [2] = 9766 }, { [2] = 106 }, nil, nil, nil, true }
-players["renoxii"] = { "Renoxii", 9766, 6, 2, 107, { [2] = 9766 }, { [2] = 107 }, nil, nil, nil, true }
-players["combatpax"] = { "Combatpax", 9766, 6, 2, 108, { [2] = 9766 }, { [2] = 108 }, nil, nil, nil, true }
-players["ddoctorrwhoo"] = { "Ddoctorrwhoo", 9764, 6, 2, 109, { [2] = 9764 }, { [2] = 109 }, nil, nil, nil, true }
-players["hustle"] = { "Hustle", 9763, 6, 2, 110, { [2] = 9763 }, { [2] = 110 }, nil, nil, nil, true }
-players["demos"] = { "Demos", 9763, 6, 2, 111, { [2] = 9763 }, { [2] = 111 }, nil, nil, nil, true }
-players["jude"] = { "Jude", 9761, 6, 2, 112, { [2] = 9761 }, { [2] = 112 }, nil, nil, nil, true }
-players["tradetot"] = { "Tradetot", 9761, 6, 2, 113, { [1] = 9092, [2] = 9761 }, { [1] = 71, [2] = 113 }, nil, nil, nil, true }
-players["calbee"] = { "Calbee", 9761, 6, 2, 114, { [2] = 9761 }, { [2] = 114 }, nil, nil, nil, true }
-players["snuff"] = { "Snuff", 9760, 6, 2, 115, { [2] = 9760 }, { [2] = 115 }, nil, nil, nil, true }
-players["andryx"] = { "Andryx", 9760, 6, 2, 116, { [2] = 9760 }, { [2] = 116 }, nil, nil, nil, true }
-players["idolwizjoner"] = { "Idolwizjoner", 9760, 6, 2, 117, { [2] = 9760 }, { [2] = 117 }, nil, nil, nil, true }
-players["poisonstouch"] = { "Poisonstouch", 9760, 6, 2, 118, { [2] = 9760 }, { [2] = 118 }, nil, nil, nil, true }
-players["trashtricks"] = { "Trashtricks", 9759, 6, 2, 119, { [2] = 9759 }, { [2] = 119 }, nil, nil, nil, true }
-players["paradoxica"] = { "Paradoxica", 9759, 6, 2, 120, { [2] = 9759 }, { [2] = 120 }, nil, nil, nil, true }
-players["vd"] = { "Vd", 9759, 6, 2, 121, { [2] = 9759 }, { [2] = 121 }, nil, nil, nil, true }
-players["neilylol"] = { "Neilylol", 9757, 6, 2, 122, { [2] = 9757 }, { [2] = 122 }, nil, nil, nil, true }
-players["finisseuse"] = { "Finisseuse", 9753, 6, 2, 123, { [2] = 9753 }, { [2] = 123 }, nil, nil, nil, true }
-players["ahzreil"] = { "Ahzreil", 9752, 6, 2, 124, { [2] = 9752 }, { [2] = 124 }, nil, nil, nil, true }
-players["juluis"] = { "Juluis", 9752, 6, 2, 125, { [1] = 760, [2] = 9752 }, { [1] = 1809, [2] = 125 }, nil, nil, nil, true }
-players["fowl"] = { "Fowl", 9749, 6, 2, 126, { [1] = 7531, [2] = 9749 }, { [1] = 211, [2] = 126 }, nil, nil, nil, true }
-players["gasdajews"] = { "Gasdajews", 9746, 6, 2, 127, { [1] = 8565, [2] = 9746 }, { [1] = 115, [2] = 127 }, nil, nil, nil, true }
-players["thaki"] = { "Thaki", 9744, 6, 2, 128, { [2] = 9744 }, { [2] = 128 }, nil, nil, nil, true }
-players["stiingerr"] = { "Stiingerr", 9734, 6, 2, 129, { [2] = 9734 }, { [2] = 129 }, nil, nil, nil, true }
-players["grass"] = { "Grass", 9732, 6, 2, 130, { [2] = 9732 }, { [2] = 130 }, nil, nil, nil, true }
-players["morales"] = { "Morales", 9731, 6, 2, 131, { [1] = 4697, [2] = 9731 }, { [1] = 594, [2] = 131 }, nil, nil, nil, true }
-players["buzerant"] = { "Buzerant", 9727, 6, 2, 133, { [2] = 9727 }, { [2] = 133 }, nil, nil, nil, true }
-players["khorgal"] = { "Khorgal", 9724, 6, 2, 134, { [1] = 8092, [2] = 9724 }, { [1] = 153, [2] = 134 }, nil, nil, nil, true }
-players["outflanked"] = { "Outflanked", 9719, 6, 2, 135, { [2] = 9719 }, { [2] = 135 }, nil, nil, nil, true }
-players["nakpytka"] = { "Nakpytka", 9717, 6, 2, 136, { [2] = 9717 }, { [2] = 136 }, nil, nil, nil, true }
-players["zveen"] = { "Zveen", 9714, 6, 2, 137, { [2] = 9714 }, { [2] = 137 }, nil, nil, nil, true }
-players["shj"] = { "Shj", 9714, 6, 2, 138, { [2] = 9714 }, { [2] = 138 }, nil, nil, nil, true }
-players["pancakestab"] = { "Pancakestab", 9714, 6, 2, 139, { [2] = 9714 }, { [2] = 139 }, nil, nil, nil, true }
-players["meczydupa"] = { "Meczydupa", 9713, 6, 2, 140, { [2] = 9713 }, { [2] = 140 }, nil, nil, nil, true }
-players["zkzk"] = { "Zkzk", 9709, 6, 2, 141, { [2] = 9709 }, { [2] = 141 }, nil, nil, nil, true }
-players["elysiana"] = { "Elysiana", 9708, 6, 2, 142, { [1] = 9304, [2] = 9708 }, { [1] = 46, [2] = 142 }, nil, nil, nil, true }
-players["kannibalka"] = { "Kannibalka", 9708, 6, 2, 143, { [2] = 9708 }, { [2] = 143 }, nil, nil, nil, true }
-players["awnirogue"] = { "Awnirogue", 9707, 6, 2, 144, { [2] = 9707 }, { [2] = 144 }, nil, nil, nil, true }
-players["bojr"] = { "Bojr", 9705, 6, 2, 145, { [2] = 9705 }, { [2] = 145 }, nil, nil, nil, true }
-players["nails"] = { "Nails", 9705, 6, 2, 146, { [2] = 9705 }, { [2] = 146 }, nil, nil, nil, true }
-players["byrox"] = { "Byrox", 9704, 6, 2, 147, { [2] = 9704 }, { [2] = 147 }, nil, nil, nil, true }
-players["mudvayne"] = { "Mudvayne", 9701, 6, 2, 148, { [2] = 9701 }, { [2] = 148 }, nil, nil, nil, true }
-players["soulez"] = { "Soulez", 9698, 6, 2, 149, { [2] = 9698 }, { [2] = 149 }, nil, nil, nil, true }
-players["nayau"] = { "Nayau", 9698, 6, 2, 150, { [2] = 9698 }, { [2] = 150 }, nil, nil, nil, true }
-players["sorpressa"] = { "Sorpressa", 9696, 6, 2, 151, { [2] = 9696 }, { [2] = 151 }, nil, nil, nil, true }
-players["artali"] = { "Artali", 9693, 6, 2, 152, { [2] = 9693 }, { [2] = 152 }, nil, nil, nil, true }
-players["fackberer"] = { "Fackberer", 9688, 6, 2, 153, { [2] = 9688 }, { [2] = 153 }, nil, nil, nil, true }
-players["nykolarogue"] = { "Nykolarogue", 9683, 6, 2, 154, { [2] = 9683 }, { [2] = 154 }, nil, nil, nil, true }
-players["jessicahyde"] = { "Jessicahyde", 9682, 6, 2, 155, { [2] = 9682 }, { [2] = 155 }, nil, nil, nil, true }
-players["kromautisme"] = { "Kromautisme", 9682, 6, 2, 156, { [2] = 9682 }, { [2] = 156 }, nil, nil, nil, true }
-players["quetrash"] = { "Quetrash", 9681, 6, 2, 157, { [2] = 9681 }, { [2] = 157 }, nil, nil, nil, true }
-players["justnoone"] = { "Justnoone", 10000, 6, 3, 1, { [1] = 9977, [2] = 9728, [3] = 10000 }, { [1] = 3, [2] = 132, [3] = 1 }, nil, nil, nil, true }
-players["shoupastun"] = { "Shoupastun", 9514, 6, 3, 2, { [1] = 9442, [3] = 9514 }, { [1] = 37, [3] = 2 }, nil, nil, nil, true }
-players["bobbydilder"] = { "Bobbydilder", 9447, 6, 3, 3, { [1] = 8662, [2] = 6270, [3] = 9447 }, { [1] = 106, [2] = 4728, [3] = 3 }, nil, nil, nil, true }
-players["ogoc"] = { "Ogoc", 9195, 6, 3, 4, { [2] = 6552, [3] = 9195 }, { [2] = 4056, [3] = 4 }, nil, nil, nil, true }
-players["herfjotur"] = { "Herfjotur", 10000, 7, 1, 1, { [1] = 10000, [2] = 8689, [3] = 2010 }, { [1] = 1, [2] = 128, [3] = 9832 }, nil, nil, nil, true }
-players["iluminatsham"] = { "Iluminatsham", 9992, 7, 1, 2, { [1] = 9992, [3] = 5519 }, { [1] = 2, [3] = 2459 }, nil, nil, nil, true }
-players["bakedcake"] = { "Bakedcake", 9988, 7, 1, 3, { [1] = 9988 }, { [1] = 3 }, nil, nil, nil, true }
-players["fujiapples"] = { "Fujiapples", 9980, 7, 1, 4, { [1] = 9980, [3] = 7550 }, { [1] = 4, [3] = 871 }, nil, nil, nil, true }
-players["surprisedu"] = { "Surprisedu", 9934, 7, 1, 5, { [1] = 9934, [3] = 8901 }, { [1] = 5, [3] = 322 }, nil, nil, nil, true }
+players["luganotots"] = { "Luganotots", 9788, 6, 2, 93, { [2] = 9788 }, { [2] = 93 }, nil, nil, nil, true }
+players["cursi"] = { "Cursi", 9788, 6, 2, 94, { [1] = 9768, [2] = 9788 }, { [1] = 17, [2] = 94 }, nil, nil, nil, true }
+players["admirko"] = { "Admirko", 9787, 6, 2, 95, { [1] = 2078, [2] = 9787 }, { [1] = 1543, [2] = 95 }, nil, nil, nil, true }
+players["remove"] = { "Remove", 9782, 6, 2, 96, { [1] = 636, [2] = 9782 }, { [1] = 1855, [2] = 96 }, nil, nil, nil, true }
+players["valtharr"] = { "Valtharr", 9782, 6, 2, 97, { [2] = 9782 }, { [2] = 97 }, nil, nil, nil, true }
+players["secretanswer"] = { "Secretanswer", 9782, 6, 2, 98, { [2] = 9782 }, { [2] = 98 }, nil, nil, nil, true }
+players["chemtrailsky"] = { "Chemtrailsky", 9776, 6, 2, 99, { [2] = 9776 }, { [2] = 99 }, nil, nil, nil, true }
+players["shankurbutt"] = { "Shankurbutt", 9775, 6, 2, 100, { [2] = 9775 }, { [2] = 100 }, nil, nil, nil, true }
+players["dogzoriaan"] = { "Dogzoriaan", 9773, 6, 2, 102, { [2] = 9773 }, { [2] = 102 }, nil, nil, nil, true }
+players["peezystabs"] = { "Peezystabs", 9772, 6, 2, 103, { [2] = 9772 }, { [2] = 103 }, nil, nil, nil, true }
+players["brume"] = { "Brume", 9769, 6, 2, 104, { [1] = 9687, [2] = 9769 }, { [1] = 22, [2] = 104 }, nil, nil, nil, true }
+players["killingspree"] = { "Killingspree", 9769, 6, 2, 105, { [2] = 9769 }, { [2] = 105 }, nil, nil, nil, true }
+players["iamgarrote"] = { "Iamgarrote", 9767, 6, 2, 106, { [2] = 9767 }, { [2] = 106 }, nil, nil, nil, true }
+players["sappingdogs"] = { "Sappingdogs", 9764, 6, 2, 107, { [2] = 9764 }, { [2] = 107 }, nil, nil, nil, true }
+players["renoxii"] = { "Renoxii", 9764, 6, 2, 108, { [2] = 9764 }, { [2] = 108 }, nil, nil, nil, true }
+players["combatpax"] = { "Combatpax", 9764, 6, 2, 109, { [2] = 9764 }, { [2] = 109 }, nil, nil, nil, true }
+players["awnirogue"] = { "Awnirogue", 9762, 6, 2, 110, { [2] = 9762 }, { [2] = 110 }, nil, nil, nil, true }
+players["hustle"] = { "Hustle", 9762, 6, 2, 111, { [2] = 9762 }, { [2] = 111 }, nil, nil, nil, true }
+players["ddoctorrwhoo"] = { "Ddoctorrwhoo", 9761, 6, 2, 112, { [2] = 9761 }, { [2] = 112 }, nil, nil, nil, true }
+players["demos"] = { "Demos", 9760, 6, 2, 113, { [2] = 9760 }, { [2] = 113 }, nil, nil, nil, true }
+players["calbee"] = { "Calbee", 9759, 6, 2, 114, { [2] = 9759 }, { [2] = 114 }, nil, nil, nil, true }
+players["vmghost"] = { "Vmghost", 9759, 6, 2, 115, { [2] = 9759 }, { [2] = 115 }, nil, nil, nil, true }
+players["tradetot"] = { "Tradetot", 9759, 6, 2, 116, { [1] = 9091, [2] = 9759 }, { [1] = 71, [2] = 116 }, nil, nil, nil, true }
+players["jude"] = { "Jude", 9758, 6, 2, 117, { [2] = 9758 }, { [2] = 117 }, nil, nil, nil, true }
+players["snuff"] = { "Snuff", 9758, 6, 2, 118, { [2] = 9758 }, { [2] = 118 }, nil, nil, nil, true }
+players["andryx"] = { "Andryx", 9758, 6, 2, 119, { [2] = 9758 }, { [2] = 119 }, nil, nil, nil, true }
+players["idolwizjoner"] = { "Idolwizjoner", 9758, 6, 2, 120, { [2] = 9758 }, { [2] = 120 }, nil, nil, nil, true }
+players["paradoxica"] = { "Paradoxica", 9757, 6, 2, 121, { [2] = 9757 }, { [2] = 121 }, nil, nil, nil, true }
+players["trashtricks"] = { "Trashtricks", 9757, 6, 2, 122, { [2] = 9757 }, { [2] = 122 }, nil, nil, nil, true }
+players["poisonstouch"] = { "Poisonstouch", 9757, 6, 2, 123, { [2] = 9757 }, { [2] = 123 }, nil, nil, nil, true }
+players["vd"] = { "Vd", 9756, 6, 2, 124, { [2] = 9756 }, { [2] = 124 }, nil, nil, nil, true }
+players["neilylol"] = { "Neilylol", 9754, 6, 2, 125, { [2] = 9754 }, { [2] = 125 }, nil, nil, nil, true }
+players["mezonr"] = { "Mezonr", 9752, 6, 2, 126, { [2] = 9752 }, { [2] = 126 }, nil, nil, nil, true }
+players["finisseuse"] = { "Finisseuse", 9751, 6, 2, 127, { [2] = 9751 }, { [2] = 127 }, nil, nil, nil, true }
+players["ahzreil"] = { "Ahzreil", 9750, 6, 2, 128, { [2] = 9750 }, { [2] = 128 }, nil, nil, nil, true }
+players["juluis"] = { "Juluis", 9750, 6, 2, 129, { [1] = 759, [2] = 9750 }, { [1] = 1812, [2] = 129 }, nil, nil, nil, true }
+players["fowl"] = { "Fowl", 9746, 6, 2, 130, { [1] = 7526, [2] = 9746 }, { [1] = 212, [2] = 130 }, nil, nil, nil, true }
+players["gasdajews"] = { "Gasdajews", 9744, 6, 2, 131, { [1] = 8563, [2] = 9744 }, { [1] = 115, [2] = 131 }, nil, nil, nil, true }
+players["thaki"] = { "Thaki", 9741, 6, 2, 132, { [2] = 9741 }, { [2] = 132 }, nil, nil, nil, true }
+players["stiingerr"] = { "Stiingerr", 9732, 6, 2, 133, { [2] = 9732 }, { [2] = 133 }, nil, nil, nil, true }
+players["grass"] = { "Grass", 9731, 6, 2, 134, { [2] = 9731 }, { [2] = 134 }, nil, nil, nil, true }
+players["morales"] = { "Morales", 9728, 6, 2, 135, { [1] = 4697, [2] = 9728 }, { [1] = 597, [2] = 135 }, nil, nil, nil, true }
+players["buzerant"] = { "Buzerant", 9725, 6, 2, 136, { [2] = 9725 }, { [2] = 136 }, nil, nil, nil, true }
+players["khorgal"] = { "Khorgal", 9722, 6, 2, 137, { [1] = 8092, [2] = 9722 }, { [1] = 153, [2] = 137 }, nil, nil, nil, true }
+players["outflanked"] = { "Outflanked", 9718, 6, 2, 138, { [2] = 9718 }, { [2] = 138 }, nil, nil, nil, true }
+players["nakpytka"] = { "Nakpytka", 9714, 6, 2, 139, { [2] = 9714 }, { [2] = 139 }, nil, nil, nil, true }
+players["shj"] = { "Shj", 9712, 6, 2, 140, { [2] = 9712 }, { [2] = 140 }, nil, nil, nil, true }
+players["zveen"] = { "Zveen", 9712, 6, 2, 141, { [2] = 9712 }, { [2] = 141 }, nil, nil, nil, true }
+players["pancakestab"] = { "Pancakestab", 9711, 6, 2, 142, { [2] = 9711 }, { [2] = 142 }, nil, nil, nil, true }
+players["meczydupa"] = { "Meczydupa", 9710, 6, 2, 143, { [2] = 9710 }, { [2] = 143 }, nil, nil, nil, true }
+players["zkzk"] = { "Zkzk", 9707, 6, 2, 144, { [2] = 9707 }, { [2] = 144 }, nil, nil, nil, true }
+players["elysiana"] = { "Elysiana", 9705, 6, 2, 145, { [1] = 9304, [2] = 9705 }, { [1] = 46, [2] = 145 }, nil, nil, nil, true }
+players["kannibalka"] = { "Kannibalka", 9705, 6, 2, 146, { [2] = 9705 }, { [2] = 146 }, nil, nil, nil, true }
+players["bojr"] = { "Bojr", 9703, 6, 2, 147, { [2] = 9703 }, { [2] = 147 }, nil, nil, nil, true }
+players["nails"] = { "Nails", 9702, 6, 2, 148, { [2] = 9702 }, { [2] = 148 }, nil, nil, nil, true }
+players["nykolarogue"] = { "Nykolarogue", 9702, 6, 2, 149, { [2] = 9702 }, { [2] = 149 }, nil, nil, nil, true }
+players["byrox"] = { "Byrox", 9702, 6, 2, 150, { [2] = 9702 }, { [2] = 150 }, nil, nil, nil, true }
+players["mudvayne"] = { "Mudvayne", 9698, 6, 2, 151, { [2] = 9698 }, { [2] = 151 }, nil, nil, nil, true }
+players["soulez"] = { "Soulez", 9695, 6, 2, 152, { [2] = 9695 }, { [2] = 152 }, nil, nil, nil, true }
+players["nayau"] = { "Nayau", 9695, 6, 2, 153, { [2] = 9695 }, { [2] = 153 }, nil, nil, nil, true }
+players["sorpressa"] = { "Sorpressa", 9692, 6, 2, 154, { [2] = 9692 }, { [2] = 154 }, nil, nil, nil, true }
+players["artali"] = { "Artali", 9692, 6, 2, 155, { [2] = 9692 }, { [2] = 155 }, nil, nil, nil, true }
+players["fackberer"] = { "Fackberer", 9685, 6, 2, 156, { [2] = 9685 }, { [2] = 156 }, nil, nil, nil, true }
+players["jessicahyde"] = { "Jessicahyde", 9679, 6, 2, 157, { [2] = 9679 }, { [2] = 157 }, nil, nil, nil, true }
+players["justnoone"] = { "Justnoone", 10000, 6, 3, 1, { [1] = 9977, [2] = 9774, [3] = 10000 }, { [1] = 3, [2] = 101, [3] = 1 }, nil, nil, nil, true }
+players["shoupastun"] = { "Shoupastun", 9514, 6, 3, 2, { [1] = 9441, [3] = 9514 }, { [1] = 37, [3] = 2 }, nil, nil, nil, true }
+players["bobbydilder"] = { "Bobbydilder", 9447, 6, 3, 3, { [1] = 8662, [2] = 6269, [3] = 9447 }, { [1] = 106, [2] = 4746, [3] = 3 }, nil, nil, nil, true }
+players["ogoc"] = { "Ogoc", 9195, 6, 3, 4, { [2] = 6546, [3] = 9195 }, { [2] = 4080, [3] = 4 }, nil, nil, nil, true }
+players["herfjotur"] = { "Herfjotur", 10000, 7, 1, 1, { [1] = 10000, [2] = 8691, [3] = 2007 }, { [1] = 1, [2] = 128, [3] = 9870 }, nil, nil, nil, true }
+players["iluminatsham"] = { "Iluminatsham", 9992, 7, 1, 2, { [1] = 9992, [3] = 5508 }, { [1] = 2, [3] = 2478 }, nil, nil, nil, true }
+players["bakedcake"] = { "Bakedcake", 9987, 7, 1, 3, { [1] = 9987 }, { [1] = 3 }, nil, nil, nil, true }
+players["fujiapples"] = { "Fujiapples", 9980, 7, 1, 4, { [1] = 9980, [3] = 7545 }, { [1] = 4, [3] = 871 }, nil, nil, nil, true }
+players["surprisedu"] = { "Surprisedu", 9934, 7, 1, 5, { [1] = 9934, [3] = 8897 }, { [1] = 5, [3] = 324 }, nil, nil, nil, true }
 players["yourlastfunx"] = { "Yourlastfunx", 9903, 7, 1, 6, { [1] = 9903 }, { [1] = 6 }, nil, nil, nil, true }
-players["cuitlahuac"] = { "Cuitlahuac", 9859, 7, 1, 7, { [1] = 9859, [3] = 9197 }, { [1] = 7, [3] = 222 }, nil, nil, nil, true }
-players["halfrican"] = { "Halfrican", 9836, 7, 1, 8, { [1] = 9836, [3] = 8678 }, { [1] = 8, [3] = 411 }, nil, nil, nil, true }
-players["parken"] = { "Parken", 9767, 7, 1, 10, { [1] = 9767, [3] = 5784 }, { [1] = 10, [3] = 2163 }, nil, nil, nil, true }
-players["breadsham"] = { "Breadsham", 9761, 7, 1, 11, { [1] = 9761, [3] = 7905 }, { [1] = 11, [3] = 690 }, nil, nil, nil, true }
-players["netfilter"] = { "Netfilter", 9680, 7, 1, 12, { [1] = 9680, [3] = 3767 }, { [1] = 12, [3] = 5212 }, nil, nil, nil, true }
+players["cuitlahuac"] = { "Cuitlahuac", 9859, 7, 1, 7, { [1] = 9859, [3] = 9194 }, { [1] = 7, [3] = 224 }, nil, nil, nil, true }
+players["halfrican"] = { "Halfrican", 9836, 7, 1, 8, { [1] = 9836, [3] = 8678 }, { [1] = 8, [3] = 412 }, nil, nil, nil, true }
+players["parken"] = { "Parken", 9766, 7, 1, 10, { [1] = 9766, [3] = 5775 }, { [1] = 10, [3] = 2171 }, nil, nil, nil, true }
+players["breadsham"] = { "Breadsham", 9761, 7, 1, 11, { [1] = 9761, [3] = 7898 }, { [1] = 11, [3] = 691 }, nil, nil, nil, true }
+players["netfilter"] = { "Netfilter", 9680, 7, 1, 12, { [1] = 9680, [3] = 3754 }, { [1] = 12, [3] = 5247 }, nil, nil, nil, true }
 players["racistperson"] = { "Racistperson", 9647, 7, 1, 13, { [1] = 9647 }, { [1] = 13 }, nil, nil, nil, true }
-players["candysmum"] = { "Candysmum", 9642, 7, 1, 14, { [1] = 9642, [3] = 6623 }, { [1] = 14, [3] = 1458 }, nil, nil, nil, true }
-players["shambulancce"] = { "Shambulancce", 9640, 7, 1, 15, { [1] = 9640, [2] = 6242, [3] = 380 }, { [1] = 15, [2] = 450, [3] = 14033 }, nil, nil, nil, true }
-players["khaeleesi"] = { "Khaeleesi", 9636, 7, 1, 16, { [1] = 9636, [3] = 8622 }, { [1] = 16, [3] = 434 }, nil, nil, nil, true }
-players["hexbeforesex"] = { "Hexbeforesex", 9635, 7, 1, 17, { [1] = 9635, [3] = 9073 }, { [1] = 17, [3] = 262 }, nil, nil, nil, true }
-players["jakigromovi"] = { "Jakigromovi", 9608, 7, 1, 18, { [1] = 9608, [2] = 4, [3] = 1492 }, { [1] = 18, [2] = 2493, [3] = 11318 }, nil, nil, nil, true }
-players["totemicus"] = { "Totemicus", 9600, 7, 1, 19, { [1] = 9600, [3] = 2796 }, { [1] = 19, [3] = 7608 }, nil, nil, nil, true }
-players["legenderna"] = { "Legenderna", 9593, 7, 1, 20, { [1] = 9593, [2] = 2759 }, { [1] = 20, [2] = 1495 }, nil, nil, nil, true }
+players["candysmum"] = { "Candysmum", 9642, 7, 1, 14, { [1] = 9642, [3] = 6614 }, { [1] = 14, [3] = 1461 }, nil, nil, nil, true }
+players["shambulancce"] = { "Shambulancce", 9639, 7, 1, 15, { [1] = 9639, [2] = 6243, [3] = 378 }, { [1] = 15, [2] = 451, [3] = 14075 }, nil, nil, nil, true }
+players["hexbeforesex"] = { "Hexbeforesex", 9635, 7, 1, 16, { [1] = 9635, [3] = 9070 }, { [1] = 16, [3] = 265 }, nil, nil, nil, true }
+players["khaeleesi"] = { "Khaeleesi", 9635, 7, 1, 17, { [1] = 9635, [3] = 8621 }, { [1] = 17, [3] = 436 }, nil, nil, nil, true }
+players["jakigromovi"] = { "Jakigromovi", 9607, 7, 1, 18, { [1] = 9607, [2] = 3, [3] = 1482 }, { [1] = 18, [2] = 2507, [3] = 11374 }, nil, nil, nil, true }
+players["binhosz"] = { "Binhosz", 9600, 7, 1, 19, { [1] = 9600, [3] = 8136 }, { [1] = 19, [3] = 602 }, nil, nil, nil, true }
+players["totemicus"] = { "Totemicus", 9599, 7, 1, 20, { [1] = 9599, [3] = 2784 }, { [1] = 20, [3] = 7647 }, nil, nil, nil, true }
+players["legenderna"] = { "Legenderna", 9591, 7, 1, 21, { [1] = 9591, [2] = 2761 }, { [1] = 21, [2] = 1501 }, nil, nil, nil, true }
 players["ryjeczek"] = { "Ryjeczek", 9590, 7, 1, 21, { [1] = 9590, [3] = 8073 }, { [1] = 21, [3] = 621 }, nil, nil, nil, false }
-players["sagatibba"] = { "Sagatibba", 9585, 7, 1, 21, { [1] = 9585, [3] = 3552 }, { [1] = 21, [3] = 5671 }, nil, nil, nil, true }
-players["nulachain"] = { "Nulachain", 9582, 7, 1, 22, { [1] = 9582, [3] = 8026 }, { [1] = 22, [3] = 649 }, nil, nil, nil, true }
-players["invokz"] = { "Invokz", 9576, 7, 1, 24, { [1] = 9576, [2] = 7030 }, { [1] = 24, [2] = 334 }, nil, nil, nil, true }
-players["elementarno"] = { "Elementarno", 9573, 7, 1, 25, { [1] = 9573, [3] = 7030 }, { [1] = 25, [3] = 1176 }, nil, nil, nil, true }
-players["magicshrooms"] = { "Magicshrooms", 9568, 7, 1, 27, { [1] = 9568, [3] = 3160 }, { [1] = 27, [3] = 6633 }, nil, nil, nil, true }
-players["srpskizeus"] = { "Srpskizeus", 9508, 7, 1, 28, { [1] = 9508, [3] = 1850 }, { [1] = 28, [3] = 10318 }, nil, nil, nil, true }
-players["arsussham"] = { "Arsussham", 9497, 7, 1, 29, { [1] = 9497, [3] = 7503 }, { [1] = 29, [3] = 902 }, nil, nil, nil, true }
-players["dajhero"] = { "Dajhero", 9495, 7, 1, 30, { [1] = 9495 }, { [1] = 30 }, nil, nil, nil, true }
-players["xyliganka"] = { "Xyliganka", 9465, 7, 1, 31, { [1] = 9465, [3] = 9366 }, { [1] = 31, [3] = 149 }, nil, nil, nil, true }
-players["figureitout"] = { "Figureitout", 9456, 7, 1, 33, { [1] = 9456, [2] = 2750, [3] = 4754 }, { [1] = 33, [2] = 1502, [3] = 3512 }, nil, nil, nil, true }
-players["leakstar"] = { "Leakstar", 9436, 7, 1, 34, { [1] = 9436 }, { [1] = 34 }, nil, nil, nil, true }
-players["cyberschwanz"] = { "Cyberschwanz", 9392, 7, 1, 36, { [1] = 9392, [3] = 688 }, { [1] = 36, [3] = 13196 }, nil, nil, nil, true }
-players["sintrexed"] = { "Sintrexed", 9380, 7, 1, 37, { [1] = 9380, [3] = 1474 }, { [1] = 37, [3] = 11368 }, nil, nil, nil, true }
-players["trumpick"] = { "Trumpick", 9358, 7, 1, 38, { [1] = 9358, [3] = 9017 }, { [1] = 38, [3] = 280 }, nil, nil, nil, true }
-players["toraxis"] = { "Toraxis", 9353, 7, 1, 39, { [1] = 9353, [2] = 1070 }, { [1] = 39, [2] = 2109 }, nil, nil, nil, true }
-players["bebetter"] = { "Bebetter", 9347, 7, 1, 40, { [1] = 9347 }, { [1] = 40 }, nil, nil, nil, true }
-players["lagosaur"] = { "Lagosaur", 9328, 7, 1, 41, { [1] = 9328, [3] = 6399 }, { [1] = 41, [3] = 1608 }, nil, nil, nil, true }
-players["soley"] = { "Soley", 9320, 7, 1, 43, { [1] = 9320, [3] = 658 }, { [1] = 43, [3] = 13231 }, nil, nil, nil, true }
-players["binhosz"] = { "Binhosz", 9300, 7, 1, 44, { [1] = 9300, [3] = 8141 }, { [1] = 44, [3] = 600 }, nil, nil, nil, true }
-players["fiorciaa"] = { "Fiorciaa", 9299, 7, 1, 45, { [1] = 9299, [3] = 8538 }, { [1] = 45, [3] = 459 }, nil, nil, nil, true }
-players["thunderklng"] = { "Thunderklng", 9274, 7, 1, 46, { [1] = 9274 }, { [1] = 46 }, nil, nil, nil, true }
-players["diablous"] = { "Diablous", 9235, 7, 1, 48, { [1] = 9235, [3] = 6858 }, { [1] = 48, [3] = 1292 }, nil, nil, nil, true }
-players["flyingfork"] = { "Flyingfork", 9217, 7, 1, 49, { [1] = 9217 }, { [1] = 49 }, nil, nil, nil, true }
-players["ukitake"] = { "Ukitake", 9208, 7, 1, 50, { [1] = 9208, [3] = 5958 }, { [1] = 50, [3] = 2012 }, nil, nil, nil, true }
-players["punkbuster"] = { "Punkbuster", 9149, 7, 1, 53, { [1] = 9149, [3] = 5519 }, { [1] = 53, [3] = 2458 }, nil, nil, nil, true }
-players["sscarface"] = { "Sscarface", 9145, 7, 1, 54, { [1] = 9145, [3] = 4679 }, { [1] = 54, [3] = 3623 }, nil, nil, nil, true }
-players["zeanfa"] = { "Zeanfa", 9143, 7, 1, 55, { [1] = 9143 }, { [1] = 55 }, nil, nil, nil, true }
-players["stormbound"] = { "Stormbound", 9100, 7, 1, 56, { [1] = 9100, [3] = 5295 }, { [1] = 56, [3] = 2746 }, nil, nil, nil, true }
-players["gubics"] = { "Gubics", 9091, 7, 1, 58, { [1] = 9091, [3] = 974 }, { [1] = 58, [3] = 12611 }, nil, nil, nil, true }
-players["arsstorm"] = { "Arsstorm", 9088, 7, 1, 59, { [1] = 9088, [3] = 5264 }, { [1] = 59, [3] = 2785 }, nil, nil, nil, true }
-players["nethercrx"] = { "Nethercrx", 9084, 7, 1, 60, { [1] = 9084, [3] = 5007 }, { [1] = 60, [3] = 3146 }, nil, nil, nil, true }
-players["drthoomyy"] = { "Drthoomyy", 9071, 7, 1, 61, { [1] = 9071, [3] = 2290 }, { [1] = 61, [3] = 9051 }, nil, nil, nil, true }
-players["wawalegend"] = { "Wawalegend", 9062, 7, 1, 62, { [1] = 9062, [3] = 6335 }, { [1] = 62, [3] = 1658 }, nil, nil, nil, true }
-players["elessarko"] = { "Elessarko", 9017, 7, 1, 63, { [1] = 9017 }, { [1] = 63 }, nil, nil, nil, true }
-players["wergilsham"] = { "Wergilsham", 9002, 7, 1, 64, { [1] = 9002, [3] = 7540 }, { [1] = 64, [3] = 878 }, nil, nil, nil, true }
-players["birui"] = { "Birui", 8982, 7, 1, 65, { [1] = 8982, [3] = 1557 }, { [1] = 65, [3] = 11132 }, nil, nil, nil, true }
-players["magoligogoli"] = { "Magoligogoli", 8952, 7, 1, 66, { [1] = 8952 }, { [1] = 66 }, nil, nil, nil, true }
-players["yourlastvolt"] = { "Yourlastvolt", 8885, 7, 1, 68, { [1] = 8885 }, { [1] = 68 }, nil, nil, nil, true }
-players["gromzad"] = { "Gromzad", 8884, 7, 1, 69, { [1] = 8884, [3] = 800 }, { [1] = 69, [3] = 12959 }, nil, nil, nil, true }
-players["luckystar"] = { "Luckystar", 8874, 7, 1, 71, { [1] = 8874, [2] = 752 }, { [1] = 71, [2] = 2188 }, nil, nil, nil, true }
-players["yourlastwatt"] = { "Yourlastwatt", 8843, 7, 1, 72, { [1] = 8843 }, { [1] = 72 }, nil, nil, nil, true }
-players["iwanovv"] = { "Iwanovv", 8811, 7, 1, 73, { [1] = 8811 }, { [1] = 73 }, nil, nil, nil, true }
-players["darkyshaman"] = { "Darkyshaman", 8791, 7, 1, 74, { [1] = 8791, [3] = 8244 }, { [1] = 74, [3] = 555 }, nil, nil, nil, true }
-players["horester"] = { "Horester", 8757, 7, 1, 75, { [1] = 8757, [3] = 906 }, { [1] = 75, [3] = 12746 }, nil, nil, nil, true }
-players["electryfied"] = { "Electryfied", 8716, 7, 1, 76, { [1] = 8716, [3] = 6160 }, { [1] = 76, [3] = 1807 }, nil, nil, nil, true }
-players["emo"] = { "Emo", 8696, 7, 1, 77, { [1] = 8696, [2] = 5436 }, { [1] = 77, [2] = 607 }, nil, nil, nil, true }
+players["sagatibba"] = { "Sagatibba", 9584, 7, 1, 22, { [1] = 9584, [3] = 3551 }, { [1] = 22, [3] = 5683 }, nil, nil, nil, true }
+players["nulachain"] = { "Nulachain", 9582, 7, 1, 23, { [1] = 9582, [3] = 8022 }, { [1] = 23, [3] = 649 }, nil, nil, nil, true }
+players["invokz"] = { "Invokz", 9576, 7, 1, 25, { [1] = 9576, [2] = 7032 }, { [1] = 25, [2] = 334 }, nil, nil, nil, true }
+players["elementarno"] = { "Elementarno", 9573, 7, 1, 26, { [1] = 9573, [3] = 7020 }, { [1] = 26, [3] = 1181 }, nil, nil, nil, true }
+players["magicshrooms"] = { "Magicshrooms", 9567, 7, 1, 28, { [1] = 9567, [3] = 3152 }, { [1] = 28, [3] = 6668 }, nil, nil, nil, true }
+players["srpskizeus"] = { "Srpskizeus", 9508, 7, 1, 29, { [1] = 9508, [3] = 1849 }, { [1] = 29, [3] = 10336 }, nil, nil, nil, true }
+players["arsussham"] = { "Arsussham", 9496, 7, 1, 30, { [1] = 9496, [3] = 7497 }, { [1] = 30, [3] = 906 }, nil, nil, nil, true }
+players["dajhero"] = { "Dajhero", 9494, 7, 1, 31, { [1] = 9494 }, { [1] = 31 }, nil, nil, nil, true }
+players["xyliganka"] = { "Xyliganka", 9465, 7, 1, 32, { [1] = 9465, [3] = 9364 }, { [1] = 32, [3] = 151 }, nil, nil, nil, true }
+players["figureitout"] = { "Figureitout", 9455, 7, 1, 34, { [1] = 9455, [2] = 2749, [3] = 4740 }, { [1] = 34, [2] = 1510, [3] = 3538 }, nil, nil, nil, true }
+players["leakstar"] = { "Leakstar", 9435, 7, 1, 35, { [1] = 9435 }, { [1] = 35 }, nil, nil, nil, true }
+players["cyberschwanz"] = { "Cyberschwanz", 9390, 7, 1, 37, { [1] = 9390, [3] = 685 }, { [1] = 37, [3] = 13238 }, nil, nil, nil, true }
+players["sintrexed"] = { "Sintrexed", 9378, 7, 1, 38, { [1] = 9378, [3] = 1472 }, { [1] = 38, [3] = 11404 }, nil, nil, nil, true }
+players["trumpick"] = { "Trumpick", 9357, 7, 1, 39, { [1] = 9357, [3] = 9014 }, { [1] = 39, [3] = 283 }, nil, nil, nil, true }
+players["toraxis"] = { "Toraxis", 9354, 7, 1, 40, { [1] = 9354, [2] = 1072 }, { [1] = 40, [2] = 2117 }, nil, nil, nil, true }
+players["bebetter"] = { "Bebetter", 9347, 7, 1, 41, { [1] = 9347 }, { [1] = 41 }, nil, nil, nil, true }
+players["lagosaur"] = { "Lagosaur", 9328, 7, 1, 42, { [1] = 9328, [3] = 6390 }, { [1] = 42, [3] = 1611 }, nil, nil, nil, true }
+players["soley"] = { "Soley", 9319, 7, 1, 44, { [1] = 9319, [3] = 657 }, { [1] = 44, [3] = 13276 }, nil, nil, nil, true }
+players["fiorciaa"] = { "Fiorciaa", 9300, 7, 1, 45, { [1] = 9300, [3] = 8534 }, { [1] = 45, [3] = 463 }, nil, nil, nil, true }
+players["thunderklng"] = { "Thunderklng", 9272, 7, 1, 46, { [1] = 9272 }, { [1] = 46 }, nil, nil, nil, true }
+players["diablous"] = { "Diablous", 9234, 7, 1, 48, { [1] = 9234, [3] = 6847 }, { [1] = 48, [3] = 1296 }, nil, nil, nil, true }
+players["flyingfork"] = { "Flyingfork", 9216, 7, 1, 49, { [1] = 9216 }, { [1] = 49 }, nil, nil, nil, true }
+players["ukitake"] = { "Ukitake", 9207, 7, 1, 50, { [1] = 9207, [3] = 5948 }, { [1] = 50, [3] = 2018 }, nil, nil, nil, true }
+players["punkbuster"] = { "Punkbuster", 9150, 7, 1, 53, { [1] = 9150, [3] = 5510 }, { [1] = 53, [3] = 2476 }, nil, nil, nil, true }
+players["sscarface"] = { "Sscarface", 9144, 7, 1, 54, { [1] = 9144, [3] = 4668 }, { [1] = 54, [3] = 3646 }, nil, nil, nil, true }
+players["zeanfa"] = { "Zeanfa", 9141, 7, 1, 55, { [1] = 9141 }, { [1] = 55 }, nil, nil, nil, true }
+players["stormbound"] = { "Stormbound", 9098, 7, 1, 57, { [1] = 9098, [3] = 5283 }, { [1] = 57, [3] = 2765 }, nil, nil, nil, true }
+players["arsstorm"] = { "Arsstorm", 9088, 7, 1, 58, { [1] = 9088, [3] = 5262 }, { [1] = 58, [3] = 2789 }, nil, nil, nil, true }
+players["gubics"] = { "Gubics", 9088, 7, 1, 59, { [1] = 9088, [3] = 974 }, { [1] = 59, [3] = 12643 }, nil, nil, nil, true }
+players["nethercrx"] = { "Nethercrx", 9083, 7, 1, 60, { [1] = 9083, [3] = 4998 }, { [1] = 60, [3] = 3164 }, nil, nil, nil, true }
+players["drthoomyy"] = { "Drthoomyy", 9070, 7, 1, 61, { [1] = 9070, [3] = 2280 }, { [1] = 61, [3] = 9094 }, nil, nil, nil, true }
+players["wawalegend"] = { "Wawalegend", 9060, 7, 1, 62, { [1] = 9060, [3] = 6326 }, { [1] = 62, [3] = 1662 }, nil, nil, nil, true }
+players["elessarko"] = { "Elessarko", 9015, 7, 1, 63, { [1] = 9015 }, { [1] = 63 }, nil, nil, nil, true }
+players["wergilsham"] = { "Wergilsham", 8999, 7, 1, 64, { [1] = 8999, [3] = 7533 }, { [1] = 64, [3] = 877 }, nil, nil, nil, true }
+players["birui"] = { "Birui", 8980, 7, 1, 65, { [1] = 8980, [3] = 1544 }, { [1] = 65, [3] = 11196 }, nil, nil, nil, true }
+players["magoligogoli"] = { "Magoligogoli", 8951, 7, 1, 67, { [1] = 8951 }, { [1] = 67 }, nil, nil, nil, true }
+players["gromzad"] = { "Gromzad", 8883, 7, 1, 68, { [1] = 8883, [3] = 791 }, { [1] = 68, [3] = 13014 }, nil, nil, nil, true }
+players["yourlastvolt"] = { "Yourlastvolt", 8882, 7, 1, 69, { [1] = 8882 }, { [1] = 69 }, nil, nil, nil, true }
+players["luckystar"] = { "Luckystar", 8870, 7, 1, 71, { [1] = 8870, [2] = 752 }, { [1] = 71, [2] = 2198 }, nil, nil, nil, true }
+players["yourlastwatt"] = { "Yourlastwatt", 8845, 7, 1, 72, { [1] = 8845 }, { [1] = 72 }, nil, nil, nil, true }
+players["iwanovv"] = { "Iwanovv", 8808, 7, 1, 73, { [1] = 8808 }, { [1] = 73 }, nil, nil, nil, true }
+players["darkyshaman"] = { "Darkyshaman", 8789, 7, 1, 74, { [1] = 8789, [3] = 8238 }, { [1] = 74, [3] = 557 }, nil, nil, nil, true }
+players["horester"] = { "Horester", 8756, 7, 1, 75, { [1] = 8756, [3] = 906 }, { [1] = 75, [3] = 12786 }, nil, nil, nil, true }
+players["electryfied"] = { "Electryfied", 8714, 7, 1, 76, { [1] = 8714, [3] = 6149 }, { [1] = 76, [3] = 1813 }, nil, nil, nil, true }
+players["emo"] = { "Emo", 8694, 7, 1, 77, { [1] = 8694, [2] = 5438 }, { [1] = 77, [2] = 607 }, nil, nil, nil, true }
 players["natakatushia"] = { "Natakatushia", 8670, 7, 1, 79, { [1] = 8670 }, { [1] = 79 }, nil, nil, nil, true }
 players["kremcaramel"] = { "Kremcaramel", 8629, 7, 1, 80, { [1] = 8629 }, { [1] = 80 }, nil, nil, nil, true }
 players["sint"] = { "Sint", 8626, 7, 1, 81, { [1] = 8626 }, { [1] = 81 }, nil, nil, nil, true }
-players["live"] = { "Live", 8618, 7, 1, 82, { [1] = 8618 }, { [1] = 82 }, nil, nil, nil, true }
-players["alfalord"] = { "Alfalord", 8614, 7, 1, 83, { [1] = 8614, [3] = 5330 }, { [1] = 83, [3] = 2694 }, nil, nil, nil, true }
-players["impluse"] = { "Impluse", 8610, 7, 1, 84, { [1] = 8610, [3] = 3843 }, { [1] = 84, [3] = 5067 }, nil, nil, nil, true }
-players["pulemet"] = { "Pulemet", 8575, 7, 1, 85, { [1] = 8575 }, { [1] = 85 }, nil, nil, nil, true }
-players["rakzthunder"] = { "Rakzthunder", 8520, 7, 1, 86, { [1] = 8520 }, { [1] = 86 }, nil, nil, nil, true }
+players["live"] = { "Live", 8616, 7, 1, 82, { [1] = 8616 }, { [1] = 82 }, nil, nil, nil, true }
+players["alfalord"] = { "Alfalord", 8613, 7, 1, 83, { [1] = 8613, [3] = 5321 }, { [1] = 83, [3] = 2710 }, nil, nil, nil, true }
+players["impluse"] = { "Impluse", 8610, 7, 1, 84, { [1] = 8610, [3] = 5053 }, { [1] = 84, [3] = 3082 }, nil, nil, nil, true }
+players["pulemet"] = { "Pulemet", 8574, 7, 1, 85, { [1] = 8574 }, { [1] = 85 }, nil, nil, nil, true }
+players["rakzthunder"] = { "Rakzthunder", 8519, 7, 1, 86, { [1] = 8519 }, { [1] = 86 }, nil, nil, nil, true }
 players["cumshock"] = { "Cumshock", 8466, 7, 1, 88, { [1] = 8466 }, { [1] = 88 }, nil, nil, nil, true }
-players["intercooler"] = { "Intercooler", 8461, 7, 1, 89, { [1] = 8461, [3] = 8288 }, { [1] = 89, [3] = 540 }, nil, nil, nil, true }
-players["aiolliia"] = { "Aiolliia", 8446, 7, 1, 90, { [1] = 8446, [3] = 1015 }, { [1] = 90, [3] = 12489 }, nil, nil, nil, true }
+players["intercooler"] = { "Intercooler", 8460, 7, 1, 89, { [1] = 8460, [3] = 8281 }, { [1] = 89, [3] = 545 }, nil, nil, nil, true }
+players["aiolliia"] = { "Aiolliia", 8444, 7, 1, 90, { [1] = 8444, [3] = 1012 }, { [1] = 90, [3] = 12527 }, nil, nil, nil, true }
 players["ferrarelle"] = { "Ferrarelle", 8424, 7, 1, 91, { [1] = 8424 }, { [1] = 91 }, nil, nil, nil, true }
-players["weirdge"] = { "Weirdge", 8419, 7, 1, 92, { [1] = 8419, [2] = 7739, [3] = 5098 }, { [1] = 92, [2] = 225, [3] = 3010 }, nil, nil, nil, true }
-players["binshock"] = { "Binshock", 8384, 7, 1, 94, { [1] = 8384, [3] = 1038 }, { [1] = 94, [3] = 12429 }, nil, nil, nil, true }
+players["weirdge"] = { "Weirdge", 8420, 7, 1, 92, { [1] = 8420, [2] = 7741, [3] = 5094 }, { [1] = 92, [2] = 225, [3] = 3021 }, nil, nil, nil, true }
+players["binshock"] = { "Binshock", 8382, 7, 1, 94, { [1] = 8382, [3] = 1030 }, { [1] = 94, [3] = 12478 }, nil, nil, nil, true }
 players["xalero"] = { "Xalero", 8362, 7, 1, 95, { [1] = 8362 }, { [1] = 95 }, nil, nil, nil, true }
-players["zwarcie"] = { "Zwarcie", 8354, 7, 1, 96, { [1] = 8354 }, { [1] = 96 }, nil, nil, nil, true }
-players["xiaocaism"] = { "Xiaocaism", 8334, 7, 1, 98, { [1] = 8334, [2] = 750, [3] = 7169 }, { [1] = 98, [2] = 2189, [3] = 1100 }, nil, nil, nil, true }
-players["shibbi"] = { "Shibbi", 10000, 7, 2, 1, { [2] = 10000, [3] = 3246 }, { [2] = 1, [3] = 6379 }, nil, nil, nil, true }
-players["thunderbuns"] = { "Thunderbuns", 9975, 7, 2, 2, { [2] = 9975, [3] = 4183 }, { [2] = 2, [3] = 4402 }, nil, nil, nil, true }
-players["kekabobx"] = { "Kekabobx", 9974, 7, 2, 3, { [2] = 9974, [3] = 8919 }, { [2] = 3, [3] = 315 }, nil, nil, nil, true }
-players["twinkastic"] = { "Twinkastic", 9963, 7, 2, 4, { [2] = 9963, [3] = 8355 }, { [2] = 4, [3] = 514 }, nil, nil, nil, true }
-players["bluemangood"] = { "Bluemangood", 9960, 7, 2, 5, { [2] = 9960, [3] = 5789 }, { [2] = 5, [3] = 2161 }, nil, nil, nil, true }
-players["breakingmeta"] = { "Breakingmeta", 9942, 7, 2, 6, { [2] = 9942 }, { [2] = 6 }, nil, nil, nil, true }
+players["zwarcie"] = { "Zwarcie", 8353, 7, 1, 96, { [1] = 8353 }, { [1] = 96 }, nil, nil, nil, true }
+players["xiaocaism"] = { "Xiaocaism", 8332, 7, 1, 98, { [1] = 8332, [2] = 750, [3] = 7163 }, { [1] = 98, [2] = 2199, [3] = 1102 }, nil, nil, nil, true }
+players["shibbi"] = { "Shibbi", 10000, 7, 2, 1, { [2] = 10000, [3] = 3244 }, { [2] = 1, [3] = 6392 }, nil, nil, nil, true }
+players["thunderbuns"] = { "Thunderbuns", 9975, 7, 2, 2, { [2] = 9975, [3] = 4175 }, { [2] = 2, [3] = 4424 }, nil, nil, nil, true }
+players["kekabobx"] = { "Kekabobx", 9974, 7, 2, 3, { [2] = 9974, [3] = 8917 }, { [2] = 3, [3] = 316 }, nil, nil, nil, true }
+players["twinkastic"] = { "Twinkastic", 9963, 7, 2, 4, { [2] = 9963, [3] = 8350 }, { [2] = 4, [3] = 516 }, nil, nil, nil, true }
+players["bluemangood"] = { "Bluemangood", 9960, 7, 2, 5, { [2] = 9960, [3] = 5782 }, { [2] = 5, [3] = 2166 }, nil, nil, nil, true }
+players["breakingmeta"] = { "Breakingmeta", 9941, 7, 2, 6, { [2] = 9941 }, { [2] = 6 }, nil, nil, nil, true }
 players["aambassador"] = { "Aambassador", 9939, 7, 2, 7, { [2] = 9939 }, { [2] = 7 }, nil, nil, nil, true }
-players["covidskibidi"] = { "Covidskibidi", 9937, 7, 2, 8, { [2] = 9937, [3] = 512 }, { [2] = 8, [3] = 13719 }, nil, nil, nil, true }
-players["edirne"] = { "Edirne", 9903, 7, 2, 9, { [2] = 9903, [3] = 9468 }, { [2] = 9, [3] = 122 }, nil, nil, nil, true }
-players["reddakz"] = { "Reddakz", 9900, 7, 2, 10, { [2] = 9900, [3] = 8942 }, { [2] = 10, [3] = 308 }, nil, nil, nil, true }
-players["brunobanano"] = { "Brunobanano", 9894, 7, 2, 11, { [2] = 9894, [3] = 8991 }, { [2] = 11, [3] = 290 }, nil, nil, nil, true }
-players["exejk"] = { "Exejk", 9889, 7, 2, 12, { [2] = 9889 }, { [2] = 12 }, nil, nil, nil, true }
-players["chaelice"] = { "Chaelice", 9854, 7, 2, 13, { [2] = 9854, [3] = 3408 }, { [2] = 13, [3] = 5993 }, nil, nil, nil, true }
-players["fanofpangu"] = { "Fanofpangu", 9832, 7, 2, 14, { [1] = 9799, [2] = 9832, [3] = 8044 }, { [1] = 9, [2] = 14, [3] = 640 }, nil, nil, nil, true }
-players["zhmena"] = { "Zhmena", 9824, 7, 2, 15, { [2] = 9824 }, { [2] = 15 }, nil, nil, nil, true }
-players["skadushi"] = { "Skadushi", 9718, 7, 2, 16, { [1] = 9462, [2] = 9718, [3] = 1876 }, { [1] = 32, [2] = 16, [3] = 10236 }, nil, nil, nil, true }
-players["stormjo"] = { "Stormjo", 9715, 7, 2, 17, { [2] = 9715, [3] = 4014 }, { [2] = 17, [3] = 4695 }, nil, nil, nil, true }
-players["busted"] = { "Busted", 9714, 7, 2, 18, { [1] = 8354, [2] = 9714, [3] = 5008 }, { [1] = 97, [2] = 18, [3] = 3142 }, nil, nil, nil, true }
-players["healingtotem"] = { "Healingtotem", 9713, 7, 2, 19, { [1] = 4086, [2] = 9713, [3] = 4936 }, { [1] = 572, [2] = 19, [3] = 3233 }, nil, nil, nil, true }
-players["mondadientte"] = { "Mondadientte", 9712, 7, 2, 20, { [2] = 9712 }, { [2] = 20 }, nil, nil, nil, true }
-players["squidward"] = { "Squidward", 9703, 7, 2, 21, { [2] = 9703, [3] = 2004 }, { [2] = 21, [3] = 9860 }, nil, nil, nil, true }
-players["leeloodallas"] = { "Leeloodallas", 9700, 7, 2, 22, { [2] = 9700, [3] = 9104 }, { [2] = 22, [3] = 251 }, nil, nil, nil, true }
-players["tremy"] = { "Tremy", 9686, 7, 2, 23, { [2] = 9686, [3] = 1735 }, { [2] = 23, [3] = 10670 }, nil, nil, nil, true }
-players["luthena"] = { "Luthena", 9662, 7, 2, 24, { [2] = 9662 }, { [2] = 24 }, nil, nil, nil, true }
-players["zimtgodx"] = { "Zimtgodx", 9662, 7, 2, 25, { [2] = 9662, [3] = 2158 }, { [2] = 25, [3] = 9421 }, nil, nil, nil, true }
-players["putricidiaa"] = { "Putricidiaa", 9632, 7, 2, 26, { [2] = 9632, [3] = 9481 }, { [2] = 26, [3] = 118 }, nil, nil, nil, true }
-players["lothbland"] = { "Lothbland", 9622, 7, 2, 27, { [2] = 9622 }, { [2] = 27 }, nil, nil, nil, true }
-players["suczyca"] = { "Suczyca", 9613, 7, 2, 28, { [2] = 9613, [3] = 4362 }, { [2] = 28, [3] = 4104 }, nil, nil, nil, true }
-players["windstyle"] = { "Windstyle", 9600, 7, 2, 29, { [2] = 9600 }, { [2] = 29 }, nil, nil, nil, true }
-players["zhlowdps"] = { "Zhlowdps", 9586, 7, 2, 30, { [2] = 9586, [3] = 6403 }, { [2] = 30, [3] = 1603 }, nil, nil, nil, true }
-players["memcached"] = { "Memcached", 9577, 7, 2, 31, { [2] = 9577, [3] = 6388 }, { [2] = 31, [3] = 1622 }, nil, nil, nil, true }
-players["chainbrand"] = { "Chainbrand", 9574, 7, 2, 32, { [2] = 9574 }, { [2] = 32 }, nil, nil, nil, true }
-players["schizolepsy"] = { "Schizolepsy", 9558, 7, 2, 33, { [2] = 9558, [3] = 967 }, { [2] = 33, [3] = 12622 }, nil, nil, nil, true }
+players["covidskibidi"] = { "Covidskibidi", 9936, 7, 2, 8, { [2] = 9936, [3] = 510 }, { [2] = 8, [3] = 13766 }, nil, nil, nil, true }
+players["edirne"] = { "Edirne", 9902, 7, 2, 9, { [2] = 9902, [3] = 9466 }, { [2] = 9, [3] = 122 }, nil, nil, nil, true }
+players["reddakz"] = { "Reddakz", 9899, 7, 2, 10, { [2] = 9899, [3] = 8938 }, { [2] = 10, [3] = 310 }, nil, nil, nil, true }
+players["brunobanano"] = { "Brunobanano", 9893, 7, 2, 11, { [2] = 9893, [3] = 8989 }, { [2] = 11, [3] = 292 }, nil, nil, nil, true }
+players["exejk"] = { "Exejk", 9893, 7, 2, 12, { [2] = 9893 }, { [2] = 12 }, nil, nil, nil, true }
+players["zhmena"] = { "Zhmena", 9873, 7, 2, 13, { [2] = 9873 }, { [2] = 13 }, nil, nil, nil, true }
+players["chaelice"] = { "Chaelice", 9853, 7, 2, 14, { [2] = 9853, [3] = 3406 }, { [2] = 14, [3] = 6004 }, nil, nil, nil, true }
+players["fanofpangu"] = { "Fanofpangu", 9832, 7, 2, 15, { [1] = 9799, [2] = 9832, [3] = 8039 }, { [1] = 9, [2] = 15, [3] = 641 }, nil, nil, nil, true }
+players["zhlowdps"] = { "Zhlowdps", 9732, 7, 2, 16, { [2] = 9732, [3] = 6396 }, { [2] = 16, [3] = 1607 }, nil, nil, nil, true }
+players["skadushi"] = { "Skadushi", 9716, 7, 2, 17, { [1] = 9460, [2] = 9716, [3] = 1875 }, { [1] = 33, [2] = 17, [3] = 10252 }, nil, nil, nil, true }
+players["stormjo"] = { "Stormjo", 9714, 7, 2, 18, { [2] = 9714, [3] = 4014 }, { [2] = 18, [3] = 4708 }, nil, nil, nil, true }
+players["busted"] = { "Busted", 9713, 7, 2, 19, { [1] = 8352, [2] = 9713, [3] = 4995 }, { [1] = 97, [2] = 19, [3] = 3171 }, nil, nil, nil, true }
+players["healingtotem"] = { "Healingtotem", 9711, 7, 2, 20, { [1] = 4090, [2] = 9711, [3] = 4967 }, { [1] = 576, [2] = 20, [3] = 3211 }, nil, nil, nil, true }
+players["mondadientte"] = { "Mondadientte", 9711, 7, 2, 21, { [2] = 9711 }, { [2] = 21 }, nil, nil, nil, true }
+players["squidward"] = { "Squidward", 9702, 7, 2, 22, { [2] = 9702, [3] = 2004 }, { [2] = 22, [3] = 9885 }, nil, nil, nil, true }
+players["leeloodallas"] = { "Leeloodallas", 9700, 7, 2, 23, { [2] = 9700, [3] = 9101 }, { [2] = 23, [3] = 254 }, nil, nil, nil, true }
+players["tremy"] = { "Tremy", 9686, 7, 2, 24, { [2] = 9686, [3] = 1729 }, { [2] = 24, [3] = 10705 }, nil, nil, nil, true }
+players["luthena"] = { "Luthena", 9662, 7, 2, 25, { [2] = 9662 }, { [2] = 25 }, nil, nil, nil, true }
+players["zimtgodx"] = { "Zimtgodx", 9660, 7, 2, 26, { [2] = 9660, [3] = 2146 }, { [2] = 26, [3] = 9471 }, nil, nil, nil, true }
+players["putricidiaa"] = { "Putricidiaa", 9630, 7, 2, 27, { [2] = 9630, [3] = 9480 }, { [2] = 27, [3] = 118 }, nil, nil, nil, true }
+players["lothbland"] = { "Lothbland", 9622, 7, 2, 28, { [2] = 9622 }, { [2] = 28 }, nil, nil, nil, true }
+players["suczyca"] = { "Suczyca", 9611, 7, 2, 29, { [2] = 9611, [3] = 4353 }, { [2] = 29, [3] = 4125 }, nil, nil, nil, true }
+players["windstyle"] = { "Windstyle", 9601, 7, 2, 30, { [2] = 9601 }, { [2] = 30 }, nil, nil, nil, true }
+players["memcached"] = { "Memcached", 9576, 7, 2, 31, { [2] = 9576, [3] = 6376 }, { [2] = 31, [3] = 1625 }, nil, nil, nil, true }
+players["chainbrand"] = { "Chainbrand", 9572, 7, 2, 32, { [2] = 9572 }, { [2] = 32 }, nil, nil, nil, true }
+players["schizolepsy"] = { "Schizolepsy", 9557, 7, 2, 33, { [2] = 9557, [3] = 967 }, { [2] = 33, [3] = 12661 }, nil, nil, nil, true }
 players["chilena"] = { "Chilena", 9554, 7, 2, 34, { [2] = 9554 }, { [2] = 34 }, nil, nil, nil, true }
-players["crixmajr"] = { "Crixmajr", 9537, 7, 2, 35, { [2] = 9537, [3] = 1001 }, { [2] = 35, [3] = 12542 }, nil, nil, nil, true }
-players["tomholland"] = { "Tomholland", 9535, 7, 2, 36, { [2] = 9535, [3] = 3242 }, { [2] = 36, [3] = 6388 }, nil, nil, nil, true }
-players["extetshamy"] = { "Extetshamy", 9505, 7, 2, 38, { [2] = 9505, [3] = 8261 }, { [2] = 38, [3] = 549 }, nil, nil, nil, true }
+players["crixmajr"] = { "Crixmajr", 9537, 7, 2, 35, { [2] = 9537, [3] = 1001 }, { [2] = 35, [3] = 12573 }, nil, nil, nil, true }
+players["tomholland"] = { "Tomholland", 9534, 7, 2, 36, { [2] = 9534, [3] = 3231 }, { [2] = 36, [3] = 6427 }, nil, nil, nil, true }
+players["extetshamy"] = { "Extetshamy", 9504, 7, 2, 38, { [2] = 9504, [3] = 8258 }, { [2] = 38, [3] = 552 }, nil, nil, nil, true }
 players["pipiko"] = { "Pipiko", 9495, 7, 2, 39, { [2] = 9495 }, { [2] = 39 }, nil, nil, nil, true }
-players["tochash"] = { "Tochash", 9494, 7, 2, 40, { [2] = 9494, [3] = 9484 }, { [2] = 40, [3] = 116 }, nil, nil, nil, true }
+players["tochash"] = { "Tochash", 9494, 7, 2, 40, { [2] = 9494, [3] = 9482 }, { [2] = 40, [3] = 116 }, nil, nil, nil, true }
 players["avirex"] = { "Avirex", 9470, 7, 2, 41, { [2] = 9470 }, { [2] = 41 }, nil, nil, nil, true }
-players["faaq"] = { "Faaq", 9439, 7, 2, 42, { [2] = 9439, [3] = 5137 }, { [2] = 42, [3] = 2963 }, nil, nil, nil, true }
-players["euzen"] = { "Euzen", 9432, 7, 2, 43, { [2] = 9432, [3] = 892 }, { [2] = 43, [3] = 12771 }, nil, nil, nil, true }
-players["spauldinglol"] = { "Spauldinglol", 9430, 7, 2, 44, { [2] = 9430, [3] = 7033 }, { [2] = 44, [3] = 1174 }, nil, nil, nil, true }
+players["faaq"] = { "Faaq", 9438, 7, 2, 42, { [2] = 9438, [3] = 5135 }, { [2] = 42, [3] = 2967 }, nil, nil, nil, true }
+players["euzen"] = { "Euzen", 9431, 7, 2, 43, { [2] = 9431, [3] = 892 }, { [2] = 43, [3] = 12809 }, nil, nil, nil, true }
+players["spauldinglol"] = { "Spauldinglol", 9429, 7, 2, 44, { [2] = 9429, [3] = 7033 }, { [2] = 44, [3] = 1176 }, nil, nil, nil, true }
 players["kektopus"] = { "Kektopus", 9424, 7, 2, 45, { [2] = 9424 }, { [2] = 45 }, nil, nil, nil, true }
 players["ripersmash"] = { "Ripersmash", 9411, 7, 2, 46, { [2] = 9411 }, { [2] = 46 }, nil, nil, nil, true }
 players["wshamw"] = { "Wshamw", 9391, 7, 2, 47, { [2] = 9391 }, { [2] = 47 }, nil, nil, nil, true }
-players["rizukesham"] = { "Rizukesham", 9390, 7, 2, 48, { [2] = 9390, [3] = 5646 }, { [2] = 48, [3] = 2323 }, nil, nil, nil, true }
-players["zhalir"] = { "Zhalir", 9386, 7, 2, 49, { [1] = 477, [2] = 9386, [3] = 6882 }, { [1] = 2073, [2] = 49, [3] = 1272 }, nil, nil, nil, true }
-players["lorelay"] = { "Lorelay", 9384, 7, 2, 50, { [2] = 9384, [3] = 447 }, { [2] = 50, [3] = 13898 }, nil, nil, nil, true }
-players["vertund"] = { "Vertund", 9383, 7, 2, 51, { [1] = 9324, [2] = 9383, [3] = 8142 }, { [1] = 42, [2] = 51, [3] = 599 }, nil, nil, nil, true }
-players["ddoctorenha"] = { "Ddoctorenha", 9379, 7, 2, 52, { [2] = 9379, [3] = 7454 }, { [2] = 52, [3] = 942 }, nil, nil, nil, true }
-players["lycroso"] = { "Lycroso", 9352, 7, 2, 53, { [2] = 9352, [3] = 2460 }, { [2] = 53, [3] = 8539 }, nil, nil, nil, true }
-players["ledesenha"] = { "Ledesenha", 9332, 7, 2, 54, { [2] = 9332 }, { [2] = 54 }, nil, nil, nil, true }
-players["nilone"] = { "Nilone", 9327, 7, 2, 55, { [2] = 9327, [3] = 4105 }, { [2] = 55, [3] = 4550 }, nil, nil, nil, true }
+players["rizukesham"] = { "Rizukesham", 9390, 7, 2, 48, { [2] = 9390, [3] = 5645 }, { [2] = 48, [3] = 2321 }, nil, nil, nil, true }
+players["zhalir"] = { "Zhalir", 9385, 7, 2, 49, { [1] = 477, [2] = 9385, [3] = 6944 }, { [1] = 2081, [2] = 49, [3] = 1221 }, nil, nil, nil, true }
+players["vertund"] = { "Vertund", 9384, 7, 2, 50, { [1] = 9323, [2] = 9384, [3] = 8136 }, { [1] = 43, [2] = 50, [3] = 603 }, nil, nil, nil, true }
+players["lorelay"] = { "Lorelay", 9383, 7, 2, 51, { [2] = 9383, [3] = 446 }, { [2] = 51, [3] = 13941 }, nil, nil, nil, true }
+players["ddoctorenha"] = { "Ddoctorenha", 9379, 7, 2, 52, { [2] = 9379, [3] = 7448 }, { [2] = 52, [3] = 946 }, nil, nil, nil, true }
+players["lycroso"] = { "Lycroso", 9352, 7, 2, 53, { [2] = 9352, [3] = 2450 }, { [2] = 53, [3] = 8585 }, nil, nil, nil, true }
+players["ledesenha"] = { "Ledesenha", 9333, 7, 2, 54, { [2] = 9333 }, { [2] = 54 }, nil, nil, nil, true }
+players["nilone"] = { "Nilone", 9327, 7, 2, 55, { [2] = 9327, [3] = 4097 }, { [2] = 55, [3] = 4572 }, nil, nil, nil, true }
 players["arthritis"] = { "Arthritis", 9320, 7, 2, 56, { [2] = 9320 }, { [2] = 56 }, nil, nil, nil, true }
-players["shallymor"] = { "Shallymor", 9318, 7, 2, 57, { [2] = 9318, [3] = 8894 }, { [2] = 57, [3] = 327 }, nil, nil, nil, true }
-players["jehra"] = { "Jehra", 9306, 7, 2, 58, { [1] = 859, [2] = 9306, [3] = 8220 }, { [1] = 1851, [2] = 58, [3] = 562 }, nil, nil, nil, true }
-players["yourlastsadx"] = { "Yourlastsadx", 9295, 7, 2, 60, { [2] = 9295 }, { [2] = 60 }, nil, nil, nil, true }
-players["ichiggo"] = { "Ichiggo", 9284, 7, 2, 61, { [2] = 9284, [3] = 3834 }, { [2] = 61, [3] = 5086 }, nil, nil, nil, true }
-players["grmilica"] = { "Grmilica", 9272, 7, 2, 62, { [2] = 9272, [3] = 6241 }, { [2] = 62, [3] = 1725 }, nil, nil, nil, true }
-players["yukinaxd"] = { "Yukinaxd", 9249, 7, 2, 63, { [2] = 9249, [3] = 7109 }, { [2] = 63, [3] = 1136 }, nil, nil, nil, true }
-players["giraffes"] = { "Giraffes", 9235, 7, 2, 65, { [2] = 9235 }, { [2] = 65 }, nil, nil, nil, true }
-players["thunderxwolf"] = { "Thunderxwolf", 9230, 7, 2, 66, { [2] = 9230, [3] = 2009 }, { [2] = 66, [3] = 9838 }, nil, nil, nil, true }
-players["trickshock"] = { "Trickshock", 9223, 7, 2, 67, { [2] = 9223 }, { [2] = 67 }, nil, nil, nil, true }
-players["xybrid"] = { "Xybrid", 9215, 7, 2, 68, { [2] = 9215 }, { [2] = 68 }, nil, nil, nil, true }
-players["kongotv"] = { "Kongotv", 9206, 7, 2, 69, { [2] = 9206, [3] = 6860 }, { [2] = 69, [3] = 1289 }, nil, nil, nil, true }
-players["darkdeathfun"] = { "Darkdeathfun", 9204, 7, 2, 70, { [2] = 9204, [3] = 5664 }, { [2] = 70, [3] = 2294 }, nil, nil, nil, true }
-players["eletrozord"] = { "Eletrozord", 9202, 7, 2, 71, { [2] = 9202, [3] = 8116 }, { [2] = 71, [3] = 612 }, nil, nil, nil, true }
+players["shallymor"] = { "Shallymor", 9318, 7, 2, 57, { [2] = 9318, [3] = 8892 }, { [2] = 57, [3] = 329 }, nil, nil, nil, true }
+players["jehra"] = { "Jehra", 9307, 7, 2, 58, { [1] = 858, [2] = 9307, [3] = 8217 }, { [1] = 1859, [2] = 58, [3] = 564 }, nil, nil, nil, true }
+players["yourlastsadx"] = { "Yourlastsadx", 9297, 7, 2, 60, { [2] = 9297 }, { [2] = 60 }, nil, nil, nil, true }
+players["ichiggo"] = { "Ichiggo", 9283, 7, 2, 61, { [2] = 9283, [3] = 3825 }, { [2] = 61, [3] = 5113 }, nil, nil, nil, true }
+players["grmilica"] = { "Grmilica", 9273, 7, 2, 62, { [2] = 9273, [3] = 6232 }, { [2] = 62, [3] = 1731 }, nil, nil, nil, true }
+players["yukinaxd"] = { "Yukinaxd", 9249, 7, 2, 63, { [2] = 9249, [3] = 7100 }, { [2] = 63, [3] = 1140 }, nil, nil, nil, true }
+players["giraffes"] = { "Giraffes", 9236, 7, 2, 65, { [2] = 9236 }, { [2] = 65 }, nil, nil, nil, true }
+players["thunderxwolf"] = { "Thunderxwolf", 9230, 7, 2, 66, { [2] = 9230, [3] = 2009 }, { [2] = 66, [3] = 9866 }, nil, nil, nil, true }
+players["trickshock"] = { "Trickshock", 9224, 7, 2, 67, { [2] = 9224 }, { [2] = 67 }, nil, nil, nil, true }
+players["xybrid"] = { "Xybrid", 9214, 7, 2, 68, { [2] = 9214 }, { [2] = 68 }, nil, nil, nil, true }
+players["kongotv"] = { "Kongotv", 9206, 7, 2, 69, { [2] = 9206, [3] = 6858 }, { [2] = 69, [3] = 1291 }, nil, nil, nil, true }
+players["darkdeathfun"] = { "Darkdeathfun", 9204, 7, 2, 70, { [2] = 9204, [3] = 5653 }, { [2] = 70, [3] = 2310 }, nil, nil, nil, true }
+players["eletrozord"] = { "Eletrozord", 9203, 7, 2, 71, { [2] = 9203, [3] = 8113 }, { [2] = 71, [3] = 612 }, nil, nil, nil, true }
 players["fiataasa"] = { "Fiataasa", 9179, 7, 2, 72, { [2] = 9179 }, { [2] = 72 }, nil, nil, nil, true }
-players["volcore"] = { "Volcore", 9176, 7, 2, 73, { [1] = 6538, [2] = 9176, [3] = 7210 }, { [1] = 218, [2] = 73, [3] = 1067 }, nil, nil, nil, true }
-players["amnesiapump"] = { "Amnesiapump", 9160, 7, 2, 75, { [2] = 9160, [3] = 550 }, { [2] = 75, [3] = 13590 }, nil, nil, nil, true }
+players["volcore"] = { "Volcore", 9178, 7, 2, 73, { [1] = 6536, [2] = 9178, [3] = 7205 }, { [1] = 219, [2] = 73, [3] = 1070 }, nil, nil, nil, true }
+players["amnesiapump"] = { "Amnesiapump", 9161, 7, 2, 75, { [2] = 9161, [3] = 548 }, { [2] = 75, [3] = 13637 }, nil, nil, nil, true }
 players["canyouburst"] = { "Canyouburst", 9160, 7, 2, 76, { [2] = 9160 }, { [2] = 76 }, nil, nil, nil, true }
-players["oshamano"] = { "Oshamano", 9157, 7, 2, 77, { [2] = 9157, [3] = 1412 }, { [2] = 77, [3] = 11533 }, nil, nil, nil, true }
-players["saggatiba"] = { "Saggatiba", 9148, 7, 2, 78, { [2] = 9148, [3] = 8288 }, { [2] = 78, [3] = 541 }, nil, nil, nil, true }
+players["oshamano"] = { "Oshamano", 9159, 7, 2, 77, { [2] = 9159, [3] = 1410 }, { [2] = 77, [3] = 11571 }, nil, nil, nil, true }
+players["saggatiba"] = { "Saggatiba", 9149, 7, 2, 78, { [2] = 9149, [3] = 8281 }, { [2] = 78, [3] = 546 }, nil, nil, nil, true }
 players["zeespanhol"] = { "Zeespanhol", 9147, 7, 2, 79, { [2] = 9147 }, { [2] = 79 }, nil, nil, nil, true }
-players["vnjee"] = { "Vnjee", 9139, 7, 2, 80, { [2] = 9139, [3] = 7881 }, { [2] = 80, [3] = 698 }, nil, nil, nil, true }
-players["milkywinx"] = { "Milkywinx", 9136, 7, 2, 81, { [2] = 9136 }, { [2] = 81 }, nil, nil, nil, true }
-players["rlv"] = { "Rlv", 9120, 7, 2, 82, { [2] = 9120, [3] = 2934 }, { [2] = 82, [3] = 7248 }, nil, nil, nil, true }
-players["paarhufer"] = { "Paarhufer", 9115, 7, 2, 83, { [2] = 9115, [3] = 5632 }, { [2] = 83, [3] = 2342 }, nil, nil, nil, true }
-players["porruffe"] = { "Porruffe", 9107, 7, 2, 84, { [2] = 9107 }, { [2] = 84 }, nil, nil, nil, true }
-players["ebtudey"] = { "Ebtudey", 9100, 7, 2, 85, { [2] = 9100, [3] = 8272 }, { [2] = 85, [3] = 545 }, nil, nil, nil, true }
-players["aoiharu"] = { "Aoiharu", 9096, 7, 2, 86, { [2] = 9096 }, { [2] = 86 }, nil, nil, nil, true }
-players["manabubber"] = { "Manabubber", 9092, 7, 2, 87, { [2] = 9092, [3] = 6258 }, { [2] = 87, [3] = 1711 }, nil, nil, nil, true }
-players["bladosh"] = { "Bladosh", 9087, 7, 2, 88, { [2] = 9087, [3] = 6578 }, { [2] = 88, [3] = 1490 }, nil, nil, nil, true }
-players["sandra"] = { "Sandra", 9084, 7, 2, 89, { [2] = 9084, [3] = 6055 }, { [2] = 89, [3] = 1909 }, nil, nil, nil, true }
-players["bashorc"] = { "Bashorc", 9078, 7, 2, 90, { [2] = 9078, [3] = 5980 }, { [2] = 90, [3] = 1992 }, nil, nil, nil, true }
-players["sunae"] = { "Sunae", 9064, 7, 2, 91, { [2] = 9064, [3] = 7933 }, { [2] = 91, [3] = 681 }, nil, nil, nil, true }
+players["vnjee"] = { "Vnjee", 9140, 7, 2, 80, { [2] = 9140, [3] = 7878 }, { [2] = 80, [3] = 698 }, nil, nil, nil, true }
+players["milkywinx"] = { "Milkywinx", 9137, 7, 2, 81, { [2] = 9137 }, { [2] = 81 }, nil, nil, nil, true }
+players["rlv"] = { "Rlv", 9123, 7, 2, 82, { [2] = 9123, [3] = 2924 }, { [2] = 82, [3] = 7292 }, nil, nil, nil, true }
+players["paarhufer"] = { "Paarhufer", 9116, 7, 2, 83, { [2] = 9116, [3] = 5621 }, { [2] = 83, [3] = 2358 }, nil, nil, nil, true }
+players["porruffe"] = { "Porruffe", 9109, 7, 2, 84, { [2] = 9109 }, { [2] = 84 }, nil, nil, nil, true }
+players["ebtudey"] = { "Ebtudey", 9102, 7, 2, 85, { [2] = 9102, [3] = 8271 }, { [2] = 85, [3] = 548 }, nil, nil, nil, true }
+players["aoiharu"] = { "Aoiharu", 9098, 7, 2, 86, { [2] = 9098 }, { [2] = 86 }, nil, nil, nil, true }
+players["manabubber"] = { "Manabubber", 9092, 7, 2, 87, { [2] = 9092, [3] = 6250 }, { [2] = 87, [3] = 1717 }, nil, nil, nil, true }
+players["bladosh"] = { "Bladosh", 9086, 7, 2, 88, { [2] = 9086, [3] = 6571 }, { [2] = 88, [3] = 1494 }, nil, nil, nil, true }
+players["sandra"] = { "Sandra", 9086, 7, 2, 89, { [2] = 9086, [3] = 6050 }, { [2] = 89, [3] = 1912 }, nil, nil, nil, true }
+players["bashorc"] = { "Bashorc", 9079, 7, 2, 90, { [2] = 9079, [3] = 5969 }, { [2] = 90, [3] = 1998 }, nil, nil, nil, true }
+players["sunae"] = { "Sunae", 9065, 7, 2, 91, { [2] = 9065, [3] = 7926 }, { [2] = 91, [3] = 681 }, nil, nil, nil, true }
 players["lqd"] = { "Lqd", 9051, 7, 2, 92, { [2] = 9051 }, { [2] = 92 }, nil, nil, nil, true }
-players["enhaprio"] = { "Enhaprio", 9045, 7, 2, 93, { [2] = 9045, [3] = 4016 }, { [2] = 93, [3] = 4692 }, nil, nil, nil, true }
-players["thunderbonk"] = { "Thunderbonk", 9032, 7, 2, 94, { [2] = 9032 }, { [2] = 94 }, nil, nil, nil, true }
-players["tblkva"] = { "Tblkva", 10000, 7, 3, 1, { [1] = 7538, [3] = 10000 }, { [1] = 142, [3] = 1 }, nil, nil, nil, true }
-players["restoshamanx"] = { "Restoshamanx", 9994, 7, 3, 2, { [2] = 6932, [3] = 9994 }, { [2] = 349, [3] = 2 }, nil, nil, nil, true }
-players["pressingx"] = { "Pressingx", 9990, 7, 3, 3, { [1] = 3932, [3] = 9990 }, { [1] = 617, [3] = 3 }, nil, nil, nil, true }
+players["enhaprio"] = { "Enhaprio", 9046, 7, 2, 93, { [2] = 9046, [3] = 4016 }, { [2] = 93, [3] = 4705 }, nil, nil, nil, true }
+players["thunderbonk"] = { "Thunderbonk", 9031, 7, 2, 94, { [2] = 9031 }, { [2] = 94 }, nil, nil, nil, true }
+players["youlja"] = { "Youlja", 8984, 7, 2, 95, { [2] = 8984 }, { [2] = 95 }, nil, nil, nil, true }
+players["tblkva"] = { "Tblkva", 10000, 7, 3, 1, { [1] = 7537, [3] = 10000 }, { [1] = 142, [3] = 1 }, nil, nil, nil, true }
+players["restoshamanx"] = { "Restoshamanx", 9994, 7, 3, 2, { [2] = 6933, [3] = 9994 }, { [2] = 350, [3] = 2 }, nil, nil, nil, true }
+players["pressingx"] = { "Pressingx", 9990, 7, 3, 3, { [1] = 3934, [3] = 9990 }, { [1] = 622, [3] = 3 }, nil, nil, nil, true }
 players["dimhxd"] = { "Dimhxd", 9988, 7, 3, 4, { [3] = 9988 }, { [3] = 4 }, nil, nil, nil, true }
-players["ostschwanz"] = { "Ostschwanz", 9975, 7, 3, 5, { [1] = 5153, [3] = 9975 }, { [1] = 370, [3] = 5 }, nil, nil, nil, true }
+players["ostschwanz"] = { "Ostschwanz", 9975, 7, 3, 5, { [1] = 5150, [3] = 9975 }, { [1] = 372, [3] = 5 }, nil, nil, nil, true }
 players["milagrosqp"] = { "Milagrosqp", 9967, 7, 3, 6, { [3] = 9967 }, { [3] = 6 }, nil, nil, nil, true }
-players["poseban"] = { "Poseban", 9963, 7, 3, 7, { [2] = 8178, [3] = 9963 }, { [2] = 176, [3] = 7 }, nil, nil, nil, true }
+players["poseban"] = { "Poseban", 9963, 7, 3, 7, { [2] = 8181, [3] = 9963 }, { [2] = 176, [3] = 7 }, nil, nil, nil, true }
 players["wysadzanov"] = { "Wysadzanov", 9961, 7, 3, 8, { [3] = 9961 }, { [3] = 8 }, nil, nil, nil, true }
 players["aloneshaman"] = { "Aloneshaman", 9952, 7, 3, 9, { [3] = 9952 }, { [3] = 9 }, nil, nil, nil, true }
-players["tesruman"] = { "Tesruman", 9948, 7, 3, 10, { [1] = 1943, [3] = 9948 }, { [1] = 1461, [3] = 10 }, nil, nil, nil, true }
-players["flatraa"] = { "Flatraa", 9946, 7, 3, 11, { [1] = 6361, [3] = 9946 }, { [1] = 234, [3] = 11 }, nil, nil, nil, true }
-players["ourpeople"] = { "Ourpeople", 9934, 7, 3, 12, { [1] = 6877, [3] = 9934 }, { [1] = 186, [3] = 12 }, nil, nil, nil, true }
+players["tesruman"] = { "Tesruman", 9948, 7, 3, 10, { [1] = 1943, [3] = 9948 }, { [1] = 1467, [3] = 10 }, nil, nil, nil, true }
+players["flatraa"] = { "Flatraa", 9946, 7, 3, 11, { [1] = 6360, [3] = 9946 }, { [1] = 235, [3] = 11 }, nil, nil, nil, true }
+players["ourpeople"] = { "Ourpeople", 9934, 7, 3, 12, { [1] = 6878, [3] = 9934 }, { [1] = 187, [3] = 12 }, nil, nil, nil, true }
 players["mezonsh"] = { "Mezonsh", 9921, 7, 3, 13, { [3] = 9921 }, { [3] = 13 }, nil, nil, nil, true }
 players["djeksi"] = { "Djeksi", 9919, 7, 3, 14, { [3] = 9919 }, { [3] = 14 }, nil, nil, nil, true }
-players["vientonegro"] = { "Vientonegro", 9915, 7, 3, 15, { [3] = 9915 }, { [3] = 15 }, nil, nil, nil, true }
-players["spira"] = { "Spira", 9909, 7, 3, 16, { [2] = 9513, [3] = 9909 }, { [2] = 37, [3] = 16 }, nil, nil, nil, true }
-players["aloneprince"] = { "Aloneprince", 9907, 7, 3, 17, { [2] = 2569, [3] = 9907 }, { [2] = 1599, [3] = 17 }, nil, nil, nil, true }
+players["vientonegro"] = { "Vientonegro", 9914, 7, 3, 15, { [3] = 9914 }, { [3] = 15 }, nil, nil, nil, true }
+players["spira"] = { "Spira", 9909, 7, 3, 16, { [2] = 9512, [3] = 9909 }, { [2] = 37, [3] = 16 }, nil, nil, nil, true }
+players["aloneprince"] = { "Aloneprince", 9907, 7, 3, 17, { [2] = 2569, [3] = 9907 }, { [2] = 1606, [3] = 17 }, nil, nil, nil, true }
 players["georgepwn"] = { "Georgepwn", 9905, 7, 3, 18, { [1] = 9193, [3] = 9905 }, { [1] = 51, [3] = 18 }, nil, nil, nil, true }
 players["catara"] = { "Catara", 9904, 7, 3, 19, { [3] = 9904 }, { [3] = 19 }, nil, nil, nil, true }
-players["painrage"] = { "Painrage", 9895, 7, 3, 20, { [2] = 6710, [3] = 9895 }, { [2] = 390, [3] = 20 }, nil, nil, nil, true }
-players["murmelecke"] = { "Murmelecke", 9892, 7, 3, 21, { [3] = 9892 }, { [3] = 21 }, nil, nil, nil, true }
+players["painrage"] = { "Painrage", 9895, 7, 3, 20, { [2] = 6709, [3] = 9895 }, { [2] = 391, [3] = 20 }, nil, nil, nil, true }
+players["murmelecke"] = { "Murmelecke", 9891, 7, 3, 21, { [3] = 9891 }, { [3] = 21 }, nil, nil, nil, true }
 players["kofuku"] = { "Kofuku", 9887, 7, 3, 22, { [3] = 9887 }, { [3] = 22 }, nil, nil, nil, true }
-players["wtshealguide"] = { "Wtshealguide", 9870, 7, 3, 23, { [1] = 5602, [3] = 9870 }, { [1] = 298, [3] = 23 }, nil, nil, nil, true }
-players["restonays"] = { "Restonays", 9867, 7, 3, 24, { [1] = 4341, [3] = 9867 }, { [1] = 509, [3] = 24 }, nil, nil, nil, true }
-players["kysbeforekis"] = { "Kysbeforekis", 9859, 7, 3, 25, { [1] = 8882, [2] = 8670, [3] = 9859 }, { [1] = 70, [2] = 129, [3] = 25 }, nil, nil, nil, true }
-players["mayzie"] = { "Mayzie", 9851, 7, 3, 26, { [2] = 3317, [3] = 9851 }, { [2] = 1207, [3] = 26 }, nil, nil, nil, true }
-players["onetostars"] = { "Onetostars", 9851, 7, 3, 27, { [2] = 2409, [3] = 9851 }, { [2] = 1667, [3] = 27 }, nil, nil, nil, true }
+players["wtshealguide"] = { "Wtshealguide", 9870, 7, 3, 23, { [1] = 5602, [3] = 9870 }, { [1] = 299, [3] = 23 }, nil, nil, nil, true }
+players["restonays"] = { "Restonays", 9866, 7, 3, 24, { [1] = 4343, [3] = 9866 }, { [1] = 510, [3] = 24 }, nil, nil, nil, true }
+players["kysbeforekis"] = { "Kysbeforekis", 9859, 7, 3, 25, { [1] = 8880, [2] = 8671, [3] = 9859 }, { [1] = 70, [2] = 129, [3] = 25 }, nil, nil, nil, true }
+players["mayzie"] = { "Mayzie", 9851, 7, 3, 26, { [2] = 3318, [3] = 9851 }, { [2] = 1216, [3] = 26 }, nil, nil, nil, true }
+players["onetostars"] = { "Onetostars", 9850, 7, 3, 27, { [2] = 2409, [3] = 9850 }, { [2] = 1672, [3] = 27 }, nil, nil, nil, true }
 players["howtosex"] = { "Howtosex", 9850, 7, 3, 28, { [3] = 9850 }, { [3] = 28 }, nil, nil, nil, true }
 players["ostii"] = { "Ostii", 9844, 7, 3, 29, { [3] = 9844 }, { [3] = 29 }, nil, nil, nil, true }
-players["zlebiqx"] = { "Zlebiqx", 9843, 7, 3, 30, { [1] = 988, [3] = 9843 }, { [1] = 1797, [3] = 30 }, nil, nil, nil, true }
+players["zlebiqx"] = { "Zlebiqx", 9843, 7, 3, 30, { [1] = 988, [3] = 9843 }, { [1] = 1804, [3] = 30 }, nil, nil, nil, true }
 players["shatzy"] = { "Shatzy", 9834, 7, 3, 31, { [3] = 9834 }, { [3] = 31 }, nil, nil, nil, true }
-players["yogges"] = { "Yogges", 9830, 7, 3, 32, { [2] = 6076, [3] = 9830 }, { [2] = 482, [3] = 32 }, nil, nil, nil, true }
+players["yogges"] = { "Yogges", 9829, 7, 3, 32, { [2] = 6075, [3] = 9829 }, { [2] = 485, [3] = 32 }, nil, nil, nil, true }
 players["csokipuding"] = { "Csokipuding", 9830, 7, 3, 33, { [1] = 578, [2] = 348, [3] = 9830 }, { [1] = 1937, [2] = 2361, [3] = 33 }, nil, nil, nil, false }
-players["trotskiy"] = { "Trotskiy", 9828, 7, 3, 33, { [1] = 6914, [2] = 8859, [3] = 9828 }, { [1] = 185, [2] = 112, [3] = 33 }, nil, nil, nil, true }
-players["noobhealerqt"] = { "Noobhealerqt", 9827, 7, 3, 34, { [1] = 578, [2] = 348, [3] = 9827 }, { [1] = 1986, [2] = 2407, [3] = 34 }, nil, nil, nil, true }
-players["chymezzsham"] = { "Chymezzsham", 9817, 7, 3, 35, { [3] = 9817 }, { [3] = 35 }, nil, nil, nil, true }
-players["kyushamy"] = { "Kyushamy", 9815, 7, 3, 36, { [2] = 4457, [3] = 9815 }, { [2] = 802, [3] = 36 }, nil, nil, nil, true }
-players["zlebiq"] = { "Zlebiq", 9812, 7, 3, 37, { [3] = 9812 }, { [3] = 37 }, nil, nil, nil, true }
-players["dorcia"] = { "Dorcia", 9801, 7, 3, 38, { [1] = 3201, [2] = 3027, [3] = 9801 }, { [1] = 887, [2] = 1362, [3] = 38 }, nil, nil, nil, true }
+players["trotskiy"] = { "Trotskiy", 9828, 7, 3, 33, { [1] = 6913, [2] = 8859, [3] = 9828 }, { [1] = 186, [2] = 114, [3] = 33 }, nil, nil, nil, true }
+players["noobhealerqt"] = { "Noobhealerqt", 9826, 7, 3, 34, { [1] = 578, [2] = 348, [3] = 9826 }, { [1] = 1994, [2] = 2420, [3] = 34 }, nil, nil, nil, true }
+players["chymezzsham"] = { "Chymezzsham", 9816, 7, 3, 35, { [3] = 9816 }, { [3] = 35 }, nil, nil, nil, true }
+players["kyushamy"] = { "Kyushamy", 9814, 7, 3, 36, { [2] = 4457, [3] = 9814 }, { [2] = 803, [3] = 36 }, nil, nil, nil, true }
+players["zlebiq"] = { "Zlebiq", 9811, 7, 3, 37, { [3] = 9811 }, { [3] = 37 }, nil, nil, nil, true }
+players["dorcia"] = { "Dorcia", 9801, 7, 3, 38, { [1] = 3202, [2] = 3028, [3] = 9801 }, { [1] = 891, [2] = 1369, [3] = 38 }, nil, nil, nil, true }
 players["freaya"] = { "Freaya", 9800, 7, 3, 39, { [1] = 8691, [3] = 9800 }, { [1] = 78, [3] = 39 }, nil, nil, nil, true }
-players["hizenbergz"] = { "Hizenbergz", 9794, 7, 3, 40, { [1] = 2278, [3] = 9794 }, { [1] = 1306, [3] = 40 }, nil, nil, nil, true }
-players["energe"] = { "Energe", 9793, 7, 3, 41, { [1] = 5302, [2] = 7745, [3] = 9793 }, { [1] = 345, [2] = 223, [3] = 41 }, nil, nil, nil, true }
-players["teamy"] = { "Teamy", 9793, 7, 3, 42, { [1] = 9578, [3] = 9793 }, { [1] = 23, [3] = 42 }, nil, nil, nil, true }
-players["ripeace"] = { "Ripeace", 9784, 7, 3, 43, { [1] = 4416, [2] = 4338, [3] = 9784 }, { [1] = 491, [2] = 829, [3] = 43 }, nil, nil, nil, true }
-players["galyariptide"] = { "Galyariptide", 9779, 7, 3, 44, { [3] = 9779 }, { [3] = 44 }, nil, nil, nil, true }
+players["hizenbergz"] = { "Hizenbergz", 9794, 7, 3, 40, { [1] = 2280, [3] = 9794 }, { [1] = 1311, [3] = 40 }, nil, nil, nil, true }
+players["teamy"] = { "Teamy", 9792, 7, 3, 41, { [1] = 9577, [3] = 9792 }, { [1] = 24, [3] = 41 }, nil, nil, nil, true }
+players["energe"] = { "Energe", 9792, 7, 3, 42, { [1] = 5301, [2] = 7746, [3] = 9792 }, { [1] = 347, [2] = 223, [3] = 42 }, nil, nil, nil, true }
+players["ripeace"] = { "Ripeace", 9784, 7, 3, 43, { [1] = 4419, [2] = 4338, [3] = 9784 }, { [1] = 494, [2] = 831, [3] = 43 }, nil, nil, nil, true }
+players["galyariptide"] = { "Galyariptide", 9778, 7, 3, 44, { [3] = 9778 }, { [3] = 44 }, nil, nil, nil, true }
 players["voodoostar"] = { "Voodoostar", 9777, 7, 3, 45, { [3] = 9777 }, { [3] = 45 }, nil, nil, nil, true }
-players["analtotem"] = { "Analtotem", 9776, 7, 3, 46, { [1] = 3623, [3] = 9776 }, { [1] = 718, [3] = 46 }, nil, nil, nil, true }
-players["elementaris"] = { "Elementaris", 9775, 7, 3, 47, { [1] = 3632, [2] = 5932, [3] = 9775 }, { [1] = 714, [2] = 508, [3] = 47 }, nil, nil, nil, true }
-players["anddromedda"] = { "Anddromedda", 9765, 7, 3, 48, { [2] = 1971, [3] = 9765 }, { [2] = 1843, [3] = 48 }, nil, nil, nil, true }
-players["ivenia"] = { "Ivenia", 9765, 7, 3, 49, { [2] = 3622, [3] = 9765 }, { [2] = 1070, [3] = 49 }, nil, nil, nil, true }
-players["luxorrsham"] = { "Luxorrsham", 9763, 7, 3, 50, { [3] = 9763 }, { [3] = 50 }, nil, nil, nil, true }
+players["analtotem"] = { "Analtotem", 9776, 7, 3, 46, { [1] = 3623, [3] = 9776 }, { [1] = 724, [3] = 46 }, nil, nil, nil, true }
+players["elementaris"] = { "Elementaris", 9775, 7, 3, 47, { [1] = 3632, [2] = 5931, [3] = 9775 }, { [1] = 720, [2] = 510, [3] = 47 }, nil, nil, nil, true }
+players["anddromedda"] = { "Anddromedda", 9765, 7, 3, 48, { [2] = 1970, [3] = 9765 }, { [2] = 1851, [3] = 48 }, nil, nil, nil, true }
+players["ivenia"] = { "Ivenia", 9765, 7, 3, 49, { [2] = 3623, [3] = 9765 }, { [2] = 1077, [3] = 49 }, nil, nil, nil, true }
+players["luxorrsham"] = { "Luxorrsham", 9762, 7, 3, 50, { [3] = 9762 }, { [3] = 50 }, nil, nil, nil, true }
 players["nightingale"] = { "Nightingale", 9752, 7, 3, 51, { [3] = 9752 }, { [3] = 51 }, nil, nil, nil, true }
-players["neglect"] = { "Neglect", 9749, 7, 3, 52, { [3] = 9749 }, { [3] = 52 }, nil, nil, nil, true }
+players["neglect"] = { "Neglect", 9748, 7, 3, 52, { [3] = 9748 }, { [3] = 52 }, nil, nil, nil, true }
 players["mosochism"] = { "Mosochism", 9741, 7, 3, 53, { [3] = 9741 }, { [3] = 53 }, nil, nil, nil, true }
 players["drakomendigo"] = { "Drakomendigo", 9733, 7, 3, 54, { [3] = 9733 }, { [3] = 54 }, nil, nil, nil, true }
-players["toxicabuser"] = { "Toxicabuser", 9733, 7, 3, 55, { [2] = 4266, [3] = 9733 }, { [2] = 841, [3] = 55 }, nil, nil, nil, true }
-players["eur"] = { "Eur", 9727, 7, 3, 56, { [3] = 9727 }, { [3] = 56 }, nil, nil, nil, true }
-players["mindoz"] = { "Mindoz", 9726, 7, 3, 57, { [3] = 9726 }, { [3] = 57 }, nil, nil, nil, true }
-players["foxerine"] = { "Foxerine", 9722, 7, 3, 58, { [2] = 8163, [3] = 9722 }, { [2] = 179, [3] = 58 }, nil, nil, nil, true }
-players["uvblacklight"] = { "Uvblacklight", 9721, 7, 3, 59, { [3] = 9721 }, { [3] = 59 }, nil, nil, nil, true }
+players["toxicabuser"] = { "Toxicabuser", 9732, 7, 3, 55, { [2] = 4269, [3] = 9732 }, { [2] = 845, [3] = 55 }, nil, nil, nil, true }
+players["eur"] = { "Eur", 9726, 7, 3, 56, { [3] = 9726 }, { [3] = 56 }, nil, nil, nil, true }
+players["mindoz"] = { "Mindoz", 9725, 7, 3, 57, { [3] = 9725 }, { [3] = 57 }, nil, nil, nil, true }
+players["foxerine"] = { "Foxerine", 9722, 7, 3, 58, { [2] = 8162, [3] = 9722 }, { [2] = 179, [3] = 58 }, nil, nil, nil, true }
+players["uvblacklight"] = { "Uvblacklight", 9720, 7, 3, 59, { [3] = 9720 }, { [3] = 59 }, nil, nil, nil, true }
 players["putpawang"] = { "Putpawang", 9702, 7, 3, 60, { [3] = 9702 }, { [3] = 60 }, nil, nil, nil, true }
-players["hellspirit"] = { "Hellspirit", 9698, 7, 3, 61, { [3] = 9698 }, { [3] = 61 }, nil, nil, nil, true }
-players["karandashik"] = { "Karandashik", 9697, 7, 3, 62, { [3] = 9697 }, { [3] = 62 }, nil, nil, nil, true }
-players["dionis"] = { "Dionis", 9688, 7, 3, 63, { [1] = 3675, [2] = 8133, [3] = 9688 }, { [1] = 698, [2] = 183, [3] = 63 }, nil, nil, nil, true }
-players["lhw"] = { "Lhw", 9678, 7, 3, 65, { [2] = 2930, [3] = 9678 }, { [2] = 1415, [3] = 65 }, nil, nil, nil, true }
-players["msqiwiie"] = { "Msqiwiie", 9676, 7, 3, 66, { [3] = 9676 }, { [3] = 66 }, nil, nil, nil, true }
-players["zinjkk"] = { "Zinjkk", 9675, 7, 3, 67, { [2] = 8453, [3] = 9675 }, { [2] = 148, [3] = 67 }, nil, nil, nil, true }
-players["wtfisbl"] = { "Wtfisbl", 9675, 7, 3, 68, { [1] = 8490, [3] = 9675 }, { [1] = 87, [3] = 68 }, nil, nil, nil, true }
-players["hpalablaster"] = { "Hpalablaster", 9672, 7, 3, 69, { [3] = 9672 }, { [3] = 69 }, nil, nil, nil, true }
-players["swidzy"] = { "Swidzy", 9671, 7, 3, 70, { [1] = 2222, [2] = 1583, [3] = 9671 }, { [1] = 1339, [2] = 1971, [3] = 70 }, nil, nil, nil, true }
-players["bidashaman"] = { "Bidashaman", 9669, 7, 3, 71, { [1] = 9570, [2] = 4807, [3] = 9669 }, { [1] = 26, [2] = 741, [3] = 71 }, nil, nil, nil, true }
-players["neujahr"] = { "Neujahr", 9669, 7, 3, 72, { [2] = 7293, [3] = 9669 }, { [2] = 306, [3] = 72 }, nil, nil, nil, true }
-players["drakofemea"] = { "Drakofemea", 9664, 7, 3, 73, { [3] = 9664 }, { [3] = 73 }, nil, nil, nil, true }
-players["blackwaffle"] = { "Blackwaffle", 9663, 7, 3, 74, { [1] = 9417, [3] = 9663 }, { [1] = 35, [3] = 74 }, nil, nil, nil, true }
-players["daendra"] = { "Daendra", 9662, 7, 3, 75, { [1] = 2038, [3] = 9662 }, { [1] = 1418, [3] = 75 }, nil, nil, nil, true }
-players["quillvine"] = { "Quillvine", 9659, 7, 3, 76, { [1] = 3718, [3] = 9659 }, { [1] = 683, [3] = 76 }, nil, nil, nil, true }
-players["lysia"] = { "Lysia", 9658, 7, 3, 77, { [1] = 5357, [3] = 9658 }, { [1] = 335, [3] = 77 }, nil, nil, nil, true }
-players["themidnight"] = { "Themidnight", 9658, 7, 3, 78, { [1] = 9099, [2] = 2257, [3] = 9658 }, { [1] = 57, [2] = 1733, [3] = 78 }, nil, nil, nil, true }
+players["hellspirit"] = { "Hellspirit", 9697, 7, 3, 61, { [3] = 9697 }, { [3] = 61 }, nil, nil, nil, true }
+players["karandashik"] = { "Karandashik", 9696, 7, 3, 62, { [3] = 9696 }, { [3] = 62 }, nil, nil, nil, true }
+players["dionis"] = { "Dionis", 9688, 7, 3, 63, { [1] = 3677, [2] = 8135, [3] = 9688 }, { [1] = 702, [2] = 183, [3] = 63 }, nil, nil, nil, true }
+players["lhw"] = { "Lhw", 9676, 7, 3, 65, { [2] = 2929, [3] = 9676 }, { [2] = 1421, [3] = 65 }, nil, nil, nil, true }
+players["msqiwiie"] = { "Msqiwiie", 9675, 7, 3, 66, { [3] = 9675 }, { [3] = 66 }, nil, nil, nil, true }
+players["zinjkk"] = { "Zinjkk", 9674, 7, 3, 67, { [2] = 8455, [3] = 9674 }, { [2] = 149, [3] = 67 }, nil, nil, nil, true }
+players["wtfisbl"] = { "Wtfisbl", 9674, 7, 3, 68, { [1] = 8491, [3] = 9674 }, { [1] = 87, [3] = 68 }, nil, nil, nil, true }
+players["hpalablaster"] = { "Hpalablaster", 9671, 7, 3, 69, { [3] = 9671 }, { [3] = 69 }, nil, nil, nil, true }
+players["swidzy"] = { "Swidzy", 9671, 7, 3, 70, { [1] = 2219, [2] = 1582, [3] = 9671 }, { [1] = 1346, [2] = 1978, [3] = 70 }, nil, nil, nil, true }
+players["bidashaman"] = { "Bidashaman", 9669, 7, 3, 71, { [1] = 9569, [2] = 4808, [3] = 9669 }, { [1] = 27, [2] = 743, [3] = 71 }, nil, nil, nil, true }
+players["neujahr"] = { "Neujahr", 9668, 7, 3, 72, { [2] = 7293, [3] = 9668 }, { [2] = 306, [3] = 72 }, nil, nil, nil, true }
+players["drakofemea"] = { "Drakofemea", 9663, 7, 3, 73, { [3] = 9663 }, { [3] = 73 }, nil, nil, nil, true }
+players["blackwaffle"] = { "Blackwaffle", 9662, 7, 3, 74, { [1] = 9416, [3] = 9662 }, { [1] = 36, [3] = 74 }, nil, nil, nil, true }
+players["daendra"] = { "Daendra", 9661, 7, 3, 75, { [1] = 2040, [3] = 9661 }, { [1] = 1424, [3] = 75 }, nil, nil, nil, true }
+players["quillvine"] = { "Quillvine", 9658, 7, 3, 76, { [1] = 3882, [3] = 9658 }, { [1] = 635, [3] = 76 }, nil, nil, nil, true }
+players["lysia"] = { "Lysia", 9658, 7, 3, 77, { [1] = 5357, [3] = 9658 }, { [1] = 337, [3] = 77 }, nil, nil, nil, true }
+players["themidnight"] = { "Themidnight", 9657, 7, 3, 78, { [1] = 9099, [2] = 2257, [3] = 9657 }, { [1] = 56, [2] = 1740, [3] = 78 }, nil, nil, nil, true }
 players["fwwk"] = { "Fwwk", 9650, 7, 3, 79, { [1] = 4909, [3] = 9650 }, { [1] = 395, [3] = 79 }, nil, nil, nil, false }
-players["cocosm"] = { "Cocosm", 9645, 7, 3, 80, { [1] = 4562, [3] = 9645 }, { [1] = 462, [3] = 80 }, nil, nil, nil, true }
-players["artabaan"] = { "Artabaan", 9643, 7, 3, 81, { [1] = 5647, [3] = 9643 }, { [1] = 295, [3] = 81 }, nil, nil, nil, true }
-players["kontonshammy"] = { "Kontonshammy", 9642, 7, 3, 82, { [2] = 5016, [3] = 9642 }, { [2] = 698, [3] = 82 }, nil, nil, nil, true }
-players["memmo"] = { "Memmo", 9631, 7, 3, 83, { [3] = 9631 }, { [3] = 83 }, nil, nil, nil, true }
-players["bloodfreya"] = { "Bloodfreya", 9629, 7, 3, 84, { [2] = 7619, [3] = 9629 }, { [2] = 257, [3] = 84 }, nil, nil, nil, true }
-players["energyxia"] = { "Energyxia", 9614, 7, 3, 85, { [3] = 9614 }, { [3] = 85 }, nil, nil, nil, true }
-players["silppuri"] = { "Silppuri", 9602, 7, 3, 86, { [1] = 782, [3] = 9602 }, { [1] = 1876, [3] = 86 }, nil, nil, nil, true }
-players["cocogoat"] = { "Cocogoat", 9600, 7, 3, 87, { [1] = 6608, [3] = 9600 }, { [1] = 212, [3] = 87 }, nil, nil, nil, true }
-players["aessqwx"] = { "Aessqwx", 9595, 7, 3, 88, { [2] = 2863, [3] = 9595 }, { [2] = 1445, [3] = 88 }, nil, nil, nil, true }
+players["cocosm"] = { "Cocosm", 9644, 7, 3, 80, { [1] = 4563, [3] = 9644 }, { [1] = 466, [3] = 80 }, nil, nil, nil, true }
+players["artabaan"] = { "Artabaan", 9642, 7, 3, 81, { [1] = 5649, [3] = 9642 }, { [1] = 296, [3] = 81 }, nil, nil, nil, true }
+players["kontonshammy"] = { "Kontonshammy", 9641, 7, 3, 82, { [2] = 5017, [3] = 9641 }, { [2] = 699, [3] = 82 }, nil, nil, nil, true }
+players["memmo"] = { "Memmo", 9630, 7, 3, 83, { [3] = 9630 }, { [3] = 83 }, nil, nil, nil, true }
+players["bloodfreya"] = { "Bloodfreya", 9628, 7, 3, 84, { [2] = 7620, [3] = 9628 }, { [2] = 257, [3] = 84 }, nil, nil, nil, true }
+players["energyxia"] = { "Energyxia", 9613, 7, 3, 85, { [3] = 9613 }, { [3] = 85 }, nil, nil, nil, true }
+players["silppuri"] = { "Silppuri", 9602, 7, 3, 86, { [1] = 782, [3] = 9602 }, { [1] = 1884, [3] = 86 }, nil, nil, nil, true }
+players["cocogoat"] = { "Cocogoat", 9600, 7, 3, 87, { [1] = 6607, [3] = 9600 }, { [1] = 212, [3] = 87 }, nil, nil, nil, true }
+players["aessqwx"] = { "Aessqwx", 9595, 7, 3, 88, { [2] = 2862, [3] = 9595 }, { [2] = 1451, [3] = 88 }, nil, nil, nil, true }
 players["bichushka"] = { "Bichushka", 9586, 7, 3, 89, { [3] = 9586 }, { [3] = 89 }, nil, nil, nil, true }
-players["noobshamaa"] = { "Noobshamaa", 9586, 7, 3, 90, { [3] = 9586 }, { [3] = 90 }, nil, nil, nil, true }
-players["loveshamy"] = { "Loveshamy", 9584, 7, 3, 91, { [1] = 394, [3] = 9584 }, { [1] = 2141, [3] = 91 }, nil, nil, nil, true }
-players["mavkatotem"] = { "Mavkatotem", 9582, 7, 3, 92, { [2] = 3112, [3] = 9582 }, { [2] = 1312, [3] = 92 }, nil, nil, nil, true }
-players["kubashamy"] = { "Kubashamy", 9581, 7, 3, 93, { [2] = 8432, [3] = 9581 }, { [2] = 150, [3] = 93 }, nil, nil, nil, true }
-players["kaaraqt"] = { "Kaaraqt", 9575, 7, 3, 94, { [3] = 9575 }, { [3] = 94 }, nil, nil, nil, true }
-players["gniida"] = { "Gniida", 9570, 7, 3, 95, { [1] = 1346, [3] = 9570 }, { [1] = 1693, [3] = 95 }, nil, nil, nil, true }
-players["kujacker"] = { "Kujacker", 9557, 7, 3, 96, { [3] = 9557 }, { [3] = 96 }, nil, nil, nil, true }
-players["sharett"] = { "Sharett", 9555, 7, 3, 97, { [2] = 9298, [3] = 9555 }, { [2] = 59, [3] = 97 }, nil, nil, nil, true }
-players["huddi"] = { "Huddi", 9552, 7, 3, 98, { [3] = 9552 }, { [3] = 98 }, nil, nil, nil, true }
-players["tobigrey"] = { "Tobigrey", 9552, 7, 3, 99, { [3] = 9552 }, { [3] = 99 }, nil, nil, nil, true }
-players["suzzie"] = { "Suzzie", 9548, 7, 3, 100, { [3] = 9548 }, { [3] = 100 }, nil, nil, nil, true }
-players["rivotriil"] = { "Rivotriil", 9547, 7, 3, 101, { [3] = 9547 }, { [3] = 101 }, nil, nil, nil, true }
-players["mspuiyi"] = { "Mspuiyi", 9538, 7, 3, 102, { [1] = 9242, [2] = 4865, [3] = 9538 }, { [1] = 47, [2] = 729, [3] = 102 }, nil, nil, nil, true }
-players["gostudy"] = { "Gostudy", 9530, 7, 3, 103, { [2] = 6401, [3] = 9530 }, { [2] = 425, [3] = 103 }, nil, nil, nil, true }
-players["venoum"] = { "Venoum", 9530, 7, 3, 104, { [3] = 9530 }, { [3] = 104 }, nil, nil, nil, true }
-players["cykablyad"] = { "Cykablyad", 9529, 7, 3, 105, { [3] = 9529 }, { [3] = 105 }, nil, nil, nil, true }
-players["hudywave"] = { "Hudywave", 9527, 7, 3, 106, { [1] = 1000, [3] = 9527 }, { [1] = 1793, [3] = 106 }, nil, nil, nil, true }
-players["demilobato"] = { "Demilobato", 9526, 7, 3, 107, { [1] = 727, [3] = 9526 }, { [1] = 1910, [3] = 107 }, nil, nil, nil, true }
-players["chinie"] = { "Chinie", 9517, 7, 3, 108, { [3] = 9517 }, { [3] = 108 }, nil, nil, nil, true }
-players["demibad"] = { "Demibad", 9515, 7, 3, 109, { [3] = 9515 }, { [3] = 109 }, nil, nil, nil, true }
-players["zarriel"] = { "Zarriel", 9514, 7, 3, 110, { [3] = 9514 }, { [3] = 110 }, nil, nil, nil, true }
-players["enhica"] = { "Enhica", 9510, 7, 3, 111, { [1] = 4744, [3] = 9510 }, { [1] = 420, [3] = 111 }, nil, nil, nil, true }
-players["makkaubeduk"] = { "Makkaubeduk", 9502, 7, 3, 112, { [3] = 9502 }, { [3] = 112 }, nil, nil, nil, true }
-players["sinigosa"] = { "Sinigosa", 9493, 7, 3, 113, { [3] = 9493 }, { [3] = 113 }, nil, nil, nil, true }
-players["adstar"] = { "Adstar", 9489, 7, 3, 114, { [3] = 9489 }, { [3] = 114 }, nil, nil, nil, true }
-players["hotsham"] = { "Hotsham", 9486, 7, 3, 115, { [3] = 9486 }, { [3] = 115 }, nil, nil, nil, true }
-players["acentra"] = { "Acentra", 9483, 7, 3, 117, { [3] = 9483 }, { [3] = 117 }, nil, nil, nil, true }
-players["ekliptik"] = { "Ekliptik", 9480, 7, 3, 119, { [3] = 9480 }, { [3] = 119 }, nil, nil, nil, true }
-players["ryasunshaman"] = { "Ryasunshaman", 9472, 7, 3, 120, { [2] = 2294, [3] = 9472 }, { [2] = 1718, [3] = 120 }, nil, nil, nil, true }
-players["kellina"] = { "Kellina", 9469, 7, 3, 121, { [1] = 2408, [3] = 9469 }, { [1] = 1255, [3] = 121 }, nil, nil, nil, true }
-players["pagogo"] = { "Pagogo", 9464, 7, 3, 123, { [2] = 155, [3] = 9464 }, { [2] = 2478, [3] = 123 }, nil, nil, nil, true }
-players["gcollector"] = { "Gcollector", 9464, 7, 3, 124, { [3] = 9464 }, { [3] = 124 }, nil, nil, nil, true }
-players["heejin"] = { "Heejin", 9464, 7, 3, 125, { [3] = 9464 }, { [3] = 125 }, nil, nil, nil, true }
-players["restoangel"] = { "Restoangel", 9452, 7, 3, 126, { [3] = 9452 }, { [3] = 126 }, nil, nil, nil, true }
-players["mopedik"] = { "Mopedik", 9442, 7, 3, 127, { [3] = 9442 }, { [3] = 127 }, nil, nil, nil, true }
-players["koroner"] = { "Koroner", 9439, 7, 3, 128, { [2] = 3781, [3] = 9439 }, { [2] = 1007, [3] = 128 }, nil, nil, nil, true }
-players["ephra"] = { "Ephra", 9438, 7, 3, 129, { [3] = 9438 }, { [3] = 129 }, nil, nil, nil, true }
-players["csham"] = { "Csham", 9437, 7, 3, 130, { [2] = 8037, [3] = 9437 }, { [2] = 191, [3] = 130 }, nil, nil, nil, true }
-players["onlyfans"] = { "Onlyfans", 9435, 7, 3, 131, { [3] = 9435 }, { [3] = 131 }, nil, nil, nil, true }
-players["xerala"] = { "Xerala", 9433, 7, 3, 132, { [2] = 2648, [3] = 9433 }, { [2] = 1551, [3] = 132 }, nil, nil, nil, true }
-players["musclelady"] = { "Musclelady", 9426, 7, 3, 133, { [3] = 9426 }, { [3] = 133 }, nil, nil, nil, true }
-players["youcankillme"] = { "Youcankillme", 9426, 7, 3, 134, { [3] = 9426 }, { [3] = 134 }, nil, nil, nil, true }
-players["electricmaan"] = { "Electricmaan", 9420, 7, 3, 135, { [1] = 6457, [3] = 9420 }, { [1] = 226, [3] = 135 }, nil, nil, nil, true }
-players["valthary"] = { "Valthary", 9419, 7, 3, 136, { [3] = 9419 }, { [3] = 136 }, nil, nil, nil, true }
-players["lxghtfxxt"] = { "Lxghtfxxt", 9418, 7, 3, 137, { [1] = 1101, [3] = 9418 }, { [1] = 1762, [3] = 137 }, nil, nil, nil, true }
-players["dodjisutra"] = { "Dodjisutra", 9416, 7, 3, 138, { [3] = 9416 }, { [3] = 138 }, nil, nil, nil, true }
-players["koalka"] = { "Koalka", 9414, 7, 3, 139, { [2] = 536, [3] = 9414 }, { [2] = 2285, [3] = 139 }, nil, nil, nil, true }
-players["chaininger"] = { "Chaininger", 9412, 7, 3, 140, { [1] = 376, [3] = 9412 }, { [1] = 2152, [3] = 140 }, nil, nil, nil, true }
-players["faalzetto"] = { "Faalzetto", 9407, 7, 3, 141, { [2] = 3549, [3] = 9407 }, { [2] = 1099, [3] = 141 }, nil, nil, nil, true }
-players["kittyxenatwo"] = { "Kittyxenatwo", 9402, 7, 3, 142, { [3] = 9402 }, { [3] = 142 }, nil, nil, nil, true }
-players["kissmyhorn"] = { "Kissmyhorn", 9400, 7, 3, 143, { [3] = 9400 }, { [3] = 143 }, nil, nil, nil, true }
-players["wannabebig"] = { "Wannabebig", 9390, 7, 3, 144, { [2] = 6800, [3] = 9390 }, { [2] = 372, [3] = 144 }, nil, nil, nil, true }
-players["belziq"] = { "Belziq", 9389, 7, 3, 145, { [3] = 9389 }, { [3] = 145 }, nil, nil, nil, true }
-players["lavaburn"] = { "Lavaburn", 9389, 7, 3, 146, { [3] = 9389 }, { [3] = 146 }, nil, nil, nil, true }
+players["noobshamaa"] = { "Noobshamaa", 9585, 7, 3, 90, { [3] = 9585 }, { [3] = 90 }, nil, nil, nil, true }
+players["loveshamy"] = { "Loveshamy", 9584, 7, 3, 91, { [1] = 394, [3] = 9584 }, { [1] = 2149, [3] = 91 }, nil, nil, nil, true }
+players["mavkatotem"] = { "Mavkatotem", 9581, 7, 3, 92, { [2] = 3112, [3] = 9581 }, { [2] = 1321, [3] = 92 }, nil, nil, nil, true }
+players["kubashamy"] = { "Kubashamy", 9580, 7, 3, 93, { [2] = 8434, [3] = 9580 }, { [2] = 151, [3] = 93 }, nil, nil, nil, true }
+players["kaaraqt"] = { "Kaaraqt", 9574, 7, 3, 94, { [3] = 9574 }, { [3] = 94 }, nil, nil, nil, true }
+players["gniida"] = { "Gniida", 9569, 7, 3, 95, { [1] = 1347, [3] = 9569 }, { [1] = 1697, [3] = 95 }, nil, nil, nil, true }
+players["huddi"] = { "Huddi", 9567, 7, 3, 96, { [3] = 9567 }, { [3] = 96 }, nil, nil, nil, true }
+players["kujacker"] = { "Kujacker", 9554, 7, 3, 97, { [3] = 9554 }, { [3] = 97 }, nil, nil, nil, true }
+players["sharett"] = { "Sharett", 9554, 7, 3, 98, { [2] = 9299, [3] = 9554 }, { [2] = 59, [3] = 98 }, nil, nil, nil, true }
+players["tobigrey"] = { "Tobigrey", 9551, 7, 3, 99, { [3] = 9551 }, { [3] = 99 }, nil, nil, nil, true }
+players["suzzie"] = { "Suzzie", 9547, 7, 3, 100, { [3] = 9547 }, { [3] = 100 }, nil, nil, nil, true }
+players["rivotriil"] = { "Rivotriil", 9546, 7, 3, 101, { [3] = 9546 }, { [3] = 101 }, nil, nil, nil, true }
+players["mspuiyi"] = { "Mspuiyi", 9536, 7, 3, 102, { [1] = 9240, [2] = 4865, [3] = 9536 }, { [1] = 47, [2] = 731, [3] = 102 }, nil, nil, nil, true }
+players["venoum"] = { "Venoum", 9529, 7, 3, 103, { [3] = 9529 }, { [3] = 103 }, nil, nil, nil, true }
+players["gostudy"] = { "Gostudy", 9529, 7, 3, 104, { [2] = 6404, [3] = 9529 }, { [2] = 425, [3] = 104 }, nil, nil, nil, true }
+players["cykablyad"] = { "Cykablyad", 9527, 7, 3, 105, { [3] = 9527 }, { [3] = 105 }, nil, nil, nil, true }
+players["hudywave"] = { "Hudywave", 9527, 7, 3, 106, { [1] = 1000, [3] = 9527 }, { [1] = 1799, [3] = 106 }, nil, nil, nil, true }
+players["demilobato"] = { "Demilobato", 9524, 7, 3, 107, { [1] = 727, [3] = 9524 }, { [1] = 1917, [3] = 107 }, nil, nil, nil, true }
+players["chinie"] = { "Chinie", 9515, 7, 3, 108, { [3] = 9515 }, { [3] = 108 }, nil, nil, nil, true }
+players["demibad"] = { "Demibad", 9514, 7, 3, 109, { [3] = 9514 }, { [3] = 109 }, nil, nil, nil, true }
+players["zarriel"] = { "Zarriel", 9513, 7, 3, 110, { [3] = 9513 }, { [3] = 110 }, nil, nil, nil, true }
+players["enhica"] = { "Enhica", 9510, 7, 3, 111, { [1] = 4743, [3] = 9510 }, { [1] = 425, [3] = 111 }, nil, nil, nil, true }
+players["makkaubeduk"] = { "Makkaubeduk", 9501, 7, 3, 112, { [3] = 9501 }, { [3] = 112 }, nil, nil, nil, true }
+players["sinigosa"] = { "Sinigosa", 9492, 7, 3, 113, { [3] = 9492 }, { [3] = 113 }, nil, nil, nil, true }
+players["adstar"] = { "Adstar", 9488, 7, 3, 114, { [3] = 9488 }, { [3] = 114 }, nil, nil, nil, true }
+players["hotsham"] = { "Hotsham", 9485, 7, 3, 115, { [3] = 9485 }, { [3] = 115 }, nil, nil, nil, true }
+players["acentra"] = { "Acentra", 9481, 7, 3, 117, { [3] = 9481 }, { [3] = 117 }, nil, nil, nil, true }
+players["ekliptik"] = { "Ekliptik", 9478, 7, 3, 119, { [3] = 9478 }, { [3] = 119 }, nil, nil, nil, true }
+players["ryasunshaman"] = { "Ryasunshaman", 9471, 7, 3, 120, { [2] = 2295, [3] = 9471 }, { [2] = 1724, [3] = 120 }, nil, nil, nil, true }
+players["kellina"] = { "Kellina", 9468, 7, 3, 121, { [1] = 2411, [3] = 9468 }, { [1] = 1260, [3] = 121 }, nil, nil, nil, true }
+players["heejin"] = { "Heejin", 9464, 7, 3, 123, { [3] = 9464 }, { [3] = 123 }, nil, nil, nil, true }
+players["pagogo"] = { "Pagogo", 9463, 7, 3, 124, { [2] = 155, [3] = 9463 }, { [2] = 2492, [3] = 124 }, nil, nil, nil, true }
+players["gcollector"] = { "Gcollector", 9463, 7, 3, 125, { [3] = 9463 }, { [3] = 125 }, nil, nil, nil, true }
+players["restoangel"] = { "Restoangel", 9451, 7, 3, 126, { [3] = 9451 }, { [3] = 126 }, nil, nil, nil, true }
+players["mopedik"] = { "Mopedik", 9440, 7, 3, 127, { [3] = 9440 }, { [3] = 127 }, nil, nil, nil, true }
+players["koroner"] = { "Koroner", 9439, 7, 3, 128, { [2] = 3781, [3] = 9439 }, { [2] = 1012, [3] = 128 }, nil, nil, nil, true }
+players["ephra"] = { "Ephra", 9437, 7, 3, 129, { [3] = 9437 }, { [3] = 129 }, nil, nil, nil, true }
+players["csham"] = { "Csham", 9436, 7, 3, 130, { [2] = 8041, [3] = 9436 }, { [2] = 191, [3] = 130 }, nil, nil, nil, true }
+players["onlyfans"] = { "Onlyfans", 9434, 7, 3, 131, { [3] = 9434 }, { [3] = 131 }, nil, nil, nil, true }
+players["xerala"] = { "Xerala", 9432, 7, 3, 132, { [2] = 2648, [3] = 9432 }, { [2] = 1558, [3] = 132 }, nil, nil, nil, true }
+players["youcankillme"] = { "Youcankillme", 9424, 7, 3, 133, { [3] = 9424 }, { [3] = 133 }, nil, nil, nil, true }
+players["musclelady"] = { "Musclelady", 9423, 7, 3, 134, { [3] = 9423 }, { [3] = 134 }, nil, nil, nil, true }
+players["electricmaan"] = { "Electricmaan", 9419, 7, 3, 135, { [1] = 6456, [3] = 9419 }, { [1] = 227, [3] = 135 }, nil, nil, nil, true }
+players["valthary"] = { "Valthary", 9418, 7, 3, 136, { [3] = 9418 }, { [3] = 136 }, nil, nil, nil, true }
+players["lxghtfxxt"] = { "Lxghtfxxt", 9416, 7, 3, 137, { [1] = 1101, [3] = 9416 }, { [1] = 1768, [3] = 137 }, nil, nil, nil, true }
+players["dodjisutra"] = { "Dodjisutra", 9414, 7, 3, 138, { [3] = 9414 }, { [3] = 138 }, nil, nil, nil, true }
+players["koalka"] = { "Koalka", 9412, 7, 3, 139, { [2] = 536, [3] = 9412 }, { [2] = 2297, [3] = 139 }, nil, nil, nil, true }
+players["chaininger"] = { "Chaininger", 9410, 7, 3, 140, { [1] = 376, [3] = 9410 }, { [1] = 2161, [3] = 140 }, nil, nil, nil, true }
+players["faalzetto"] = { "Faalzetto", 9404, 7, 3, 141, { [2] = 3549, [3] = 9404 }, { [2] = 1106, [3] = 141 }, nil, nil, nil, true }
+players["shameltoe"] = { "Shameltoe", 9402, 7, 3, 142, { [1] = 2976, [3] = 9402 }, { [1] = 984, [3] = 142 }, nil, nil, nil, true }
+players["kittyxenatwo"] = { "Kittyxenatwo", 9400, 7, 3, 143, { [3] = 9400 }, { [3] = 143 }, nil, nil, nil, true }
+players["kissmyhorn"] = { "Kissmyhorn", 9399, 7, 3, 144, { [3] = 9399 }, { [3] = 144 }, nil, nil, nil, true }
+players["wannabebig"] = { "Wannabebig", 9388, 7, 3, 145, { [2] = 6802, [3] = 9388 }, { [2] = 372, [3] = 145 }, nil, nil, nil, true }
+players["lavaburn"] = { "Lavaburn", 9388, 7, 3, 146, { [3] = 9388 }, { [3] = 146 }, nil, nil, nil, true }
 players["predasham"] = { "Predasham", 9365, 7, 3, 146, { [3] = 9365 }, { [3] = 146 }, nil, nil, nil, false }
-players["bulbasaur"] = { "Bulbasaur", 9379, 7, 3, 147, { [2] = 6178, [3] = 9379 }, { [2] = 462, [3] = 147 }, nil, nil, nil, true }
-players["healhart"] = { "Healhart", 9374, 7, 3, 148, { [2] = 8098, [3] = 9374 }, { [2] = 186, [3] = 148 }, nil, nil, nil, true }
-players["weity"] = { "Weity", 9365, 7, 3, 150, { [1] = 1292, [3] = 9365 }, { [1] = 1703, [3] = 150 }, nil, nil, nil, true }
-players["eternalsham"] = { "Eternalsham", 9363, 7, 3, 151, { [1] = 5418, [3] = 9363 }, { [1] = 326, [3] = 151 }, nil, nil, nil, true }
-players["apkula"] = { "Apkula", 9363, 7, 3, 152, { [3] = 9363 }, { [3] = 152 }, nil, nil, nil, true }
-players["rubeusx"] = { "Rubeusx", 9362, 7, 3, 153, { [3] = 9362 }, { [3] = 153 }, nil, nil, nil, true }
-players["fanofyoggy"] = { "Fanofyoggy", 9359, 7, 3, 154, { [3] = 9359 }, { [3] = 154 }, nil, nil, nil, true }
-players["covidisreal"] = { "Covidisreal", 10000, 8, 1, 1, { [1] = 10000, [2] = 9985, [3] = 19 }, { [1] = 1, [2] = 10, [3] = 916 }, nil, nil, nil, true }
-players["admirlock"] = { "Admirlock", 9999, 8, 1, 2, { [1] = 9999, [2] = 7943, [3] = 154 }, { [1] = 2, [2] = 1440, [3] = 749 }, nil, nil, nil, true }
-players["shadeblaster"] = { "Shadeblaster", 9985, 8, 1, 4, { [1] = 9985, [2] = 9409 }, { [1] = 4, [2] = 311 }, nil, nil, nil, true }
-players["turbokokot"] = { "Turbokokot", 9979, 8, 1, 5, { [1] = 9979, [2] = 9741 }, { [1] = 5, [2] = 120 }, nil, nil, nil, true }
-players["erien"] = { "Erien", 9972, 8, 1, 6, { [1] = 9972, [2] = 930 }, { [1] = 6, [2] = 11682 }, nil, nil, nil, true }
-players["dreadwitch"] = { "Dreadwitch", 9971, 8, 1, 7, { [1] = 9971, [2] = 7721, [3] = 152 }, { [1] = 7, [2] = 1644, [3] = 752 }, nil, nil, nil, true }
-players["analviolator"] = { "Analviolator", 9954, 8, 1, 8, { [1] = 9954, [2] = 9809 }, { [1] = 8, [2] = 89 }, nil, nil, nil, true }
-players["jeez"] = { "Jeez", 9954, 8, 1, 9, { [1] = 9954, [2] = 8033 }, { [1] = 9, [2] = 1355 }, nil, nil, nil, true }
-players["notframez"] = { "Notframez", 9947, 8, 1, 10, { [1] = 9947, [2] = 9885 }, { [1] = 10, [2] = 56 }, nil, nil, nil, true }
-players["aambatukam"] = { "Aambatukam", 9947, 8, 1, 11, { [1] = 9947, [2] = 9882 }, { [1] = 11, [2] = 57 }, nil, nil, nil, true }
-players["notlockedin"] = { "Notlockedin", 9945, 8, 1, 12, { [1] = 9945, [2] = 9208 }, { [1] = 12, [2] = 451 }, nil, nil, nil, true }
-players["troglodytexd"] = { "Troglodytexd", 9940, 8, 1, 13, { [1] = 9940, [2] = 9116, [3] = 155 }, { [1] = 13, [2] = 522, [3] = 747 }, nil, nil, nil, true }
-players["xanor"] = { "Xanor", 9938, 8, 1, 14, { [1] = 9938, [2] = 9516 }, { [1] = 14, [2] = 253 }, nil, nil, nil, true }
-players["prajj"] = { "Prajj", 9936, 8, 1, 15, { [1] = 9936, [2] = 7937 }, { [1] = 15, [2] = 1446 }, nil, nil, nil, true }
-players["purslane"] = { "Purslane", 9934, 8, 1, 16, { [1] = 9934, [2] = 9104 }, { [1] = 16, [2] = 529 }, nil, nil, nil, true }
+players["belziq"] = { "Belziq", 9388, 7, 3, 147, { [3] = 9388 }, { [3] = 147 }, nil, nil, nil, true }
+players["bulbasaur"] = { "Bulbasaur", 9377, 7, 3, 148, { [2] = 6177, [3] = 9377 }, { [2] = 466, [3] = 148 }, nil, nil, nil, true }
+players["healhart"] = { "Healhart", 9372, 7, 3, 149, { [2] = 8102, [3] = 9372 }, { [2] = 186, [3] = 149 }, nil, nil, nil, true }
+players["crumble"] = { "Crumble", 9368, 7, 3, 150, { [3] = 9368 }, { [3] = 150 }, nil, nil, nil, true }
+players["weity"] = { "Weity", 9364, 7, 3, 152, { [1] = 1292, [3] = 9364 }, { [1] = 1709, [3] = 152 }, nil, nil, nil, true }
+players["eternalsham"] = { "Eternalsham", 9362, 7, 3, 153, { [1] = 5419, [3] = 9362 }, { [1] = 328, [3] = 153 }, nil, nil, nil, true }
+players["apkula"] = { "Apkula", 9361, 7, 3, 154, { [3] = 9361 }, { [3] = 154 }, nil, nil, nil, true }
+players["covidisreal"] = { "Covidisreal", 10000, 8, 1, 1, { [1] = 10000, [2] = 9985, [3] = 19 }, { [1] = 1, [2] = 10, [3] = 921 }, nil, nil, nil, true }
+players["admirlock"] = { "Admirlock", 9999, 8, 1, 2, { [1] = 9999, [2] = 7939, [3] = 153 }, { [1] = 2, [2] = 1442, [3] = 754 }, nil, nil, nil, true }
+players["shadeblaster"] = { "Shadeblaster", 9985, 8, 1, 4, { [1] = 9985, [2] = 9405 }, { [1] = 4, [2] = 313 }, nil, nil, nil, true }
+players["turbokokot"] = { "Turbokokot", 9979, 8, 1, 5, { [1] = 9979, [2] = 9738 }, { [1] = 5, [2] = 122 }, nil, nil, nil, true }
+players["erien"] = { "Erien", 9972, 8, 1, 6, { [1] = 9972, [2] = 930 }, { [1] = 6, [2] = 11720 }, nil, nil, nil, true }
+players["dreadwitch"] = { "Dreadwitch", 9971, 8, 1, 7, { [1] = 9971, [2] = 7714, [3] = 151 }, { [1] = 7, [2] = 1652, [3] = 758 }, nil, nil, nil, true }
+players["jeez"] = { "Jeez", 9954, 8, 1, 8, { [1] = 9954, [2] = 8026 }, { [1] = 8, [2] = 1362 }, nil, nil, nil, true }
+players["analviolator"] = { "Analviolator", 9954, 8, 1, 9, { [1] = 9954, [2] = 9808 }, { [1] = 9, [2] = 91 }, nil, nil, nil, true }
+players["notframez"] = { "Notframez", 9947, 8, 1, 10, { [1] = 9947, [2] = 9883 }, { [1] = 10, [2] = 57 }, nil, nil, nil, true }
+players["aambatukam"] = { "Aambatukam", 9947, 8, 1, 11, { [1] = 9947, [2] = 9881 }, { [1] = 11, [2] = 58 }, nil, nil, nil, true }
+players["notlockedin"] = { "Notlockedin", 9946, 8, 1, 12, { [1] = 9946, [2] = 9203 }, { [1] = 12, [2] = 457 }, nil, nil, nil, true }
+players["troglodytexd"] = { "Troglodytexd", 9940, 8, 1, 13, { [1] = 9940, [2] = 9111, [3] = 153 }, { [1] = 13, [2] = 526, [3] = 753 }, nil, nil, nil, true }
+players["xanor"] = { "Xanor", 9938, 8, 1, 14, { [1] = 9938, [2] = 9513 }, { [1] = 14, [2] = 254 }, nil, nil, nil, true }
+players["prajj"] = { "Prajj", 9936, 8, 1, 15, { [1] = 9936, [2] = 7928 }, { [1] = 15, [2] = 1451 }, nil, nil, nil, true }
+players["purslane"] = { "Purslane", 9934, 8, 1, 16, { [1] = 9934, [2] = 9100 }, { [1] = 16, [2] = 532 }, nil, nil, nil, true }
 players["her"] = { "Her", 9934, 8, 1, 17, { [1] = 9934, [2] = 1862, [3] = 5066 }, { [1] = 17, [2] = 10431, [3] = 5180 }, nil, nil, nil, false }
-players["hakalock"] = { "Hakalock", 9907, 8, 1, 18, { [1] = 9907, [2] = 8889 }, { [1] = 18, [2] = 680 }, nil, nil, nil, true }
-players["megablack"] = { "Megablack", 9907, 8, 1, 19, { [1] = 9907, [2] = 8579, [3] = 399 }, { [1] = 19, [2] = 926, [3] = 496 }, nil, nil, nil, true }
-players["byliquiss"] = { "Byliquiss", 9897, 8, 1, 20, { [1] = 9897, [2] = 3529 }, { [1] = 20, [2] = 7042 }, nil, nil, nil, true }
+players["hakalock"] = { "Hakalock", 9907, 8, 1, 18, { [1] = 9907, [2] = 8884 }, { [1] = 18, [2] = 684 }, nil, nil, nil, true }
+players["megablack"] = { "Megablack", 9907, 8, 1, 19, { [1] = 9907, [2] = 8572, [3] = 396 }, { [1] = 19, [2] = 930, [3] = 498 }, nil, nil, nil, true }
+players["byliquiss"] = { "Byliquiss", 9896, 8, 1, 20, { [1] = 9896, [2] = 3527 }, { [1] = 20, [2] = 7057 }, nil, nil, nil, true }
+players["admirdot"] = { "Admirdot", 9896, 8, 1, 21, { [1] = 9896, [2] = 7539 }, { [1] = 21, [2] = 1828 }, nil, nil, nil, true }
 players["provide"] = { "Provide", 9884, 8, 1, 21, { [1] = 9884, [2] = 9736, [3] = 67 }, { [1] = 21, [2] = 124, [3] = 801 }, nil, nil, nil, false }
-players["robowl"] = { "Robowl", 9890, 8, 1, 21, { [1] = 9890 }, { [1] = 21 }, nil, nil, nil, true }
-players["eradication"] = { "Eradication", 9889, 8, 1, 22, { [1] = 9889, [2] = 9803, [3] = 454 }, { [1] = 22, [2] = 91, [3] = 454 }, nil, nil, nil, true }
-players["ghost"] = { "Ghost", 9883, 8, 1, 23, { [1] = 9883, [2] = 9632, [3] = 321 }, { [1] = 23, [2] = 186, [3] = 556 }, nil, nil, nil, true }
-players["bleksal"] = { "Bleksal", 9880, 8, 1, 25, { [1] = 9880, [2] = 6899 }, { [1] = 25, [2] = 2517 }, nil, nil, nil, true }
-players["lounge"] = { "Lounge", 9870, 8, 1, 27, { [1] = 9870, [2] = 9811 }, { [1] = 27, [2] = 85 }, nil, nil, nil, true }
-players["snutzfanboy"] = { "Snutzfanboy", 9863, 8, 1, 28, { [1] = 9863, [2] = 9080 }, { [1] = 28, [2] = 540 }, nil, nil, nil, true }
-players["pnl"] = { "Pnl", 9863, 8, 1, 29, { [1] = 9863, [2] = 8829 }, { [1] = 29, [2] = 728 }, nil, nil, nil, true }
-players["admirdot"] = { "Admirdot", 9861, 8, 1, 30, { [1] = 9861, [2] = 7382 }, { [1] = 30, [2] = 1978 }, nil, nil, nil, true }
-players["purocringe"] = { "Purocringe", 9856, 8, 1, 31, { [1] = 9856, [2] = 7934 }, { [1] = 31, [2] = 1449 }, nil, nil, nil, true }
-players["dormicum"] = { "Dormicum", 9855, 8, 1, 32, { [1] = 9855, [2] = 8050 }, { [1] = 32, [2] = 1337 }, nil, nil, nil, true }
+players["robowl"] = { "Robowl", 9890, 8, 1, 22, { [1] = 9890 }, { [1] = 22 }, nil, nil, nil, true }
+players["eradication"] = { "Eradication", 9889, 8, 1, 23, { [1] = 9889, [2] = 9802, [3] = 454 }, { [1] = 23, [2] = 93, [3] = 456 }, nil, nil, nil, true }
+players["ghost"] = { "Ghost", 9883, 8, 1, 24, { [1] = 9883, [2] = 9630, [3] = 320 }, { [1] = 24, [2] = 187, [3] = 557 }, nil, nil, nil, true }
+players["bleksal"] = { "Bleksal", 9880, 8, 1, 26, { [1] = 9880, [2] = 6893 }, { [1] = 26, [2] = 2525 }, nil, nil, nil, true }
+players["lounge"] = { "Lounge", 9870, 8, 1, 28, { [1] = 9870, [2] = 9810 }, { [1] = 28, [2] = 86 }, nil, nil, nil, true }
+players["snutzfanboy"] = { "Snutzfanboy", 9864, 8, 1, 29, { [1] = 9864, [2] = 9075 }, { [1] = 29, [2] = 541 }, nil, nil, nil, true }
+players["pnl"] = { "Pnl", 9863, 8, 1, 30, { [1] = 9863, [2] = 8824 }, { [1] = 30, [2] = 734 }, nil, nil, nil, true }
+players["purocringe"] = { "Purocringe", 9856, 8, 1, 31, { [1] = 9856, [2] = 7926 }, { [1] = 31, [2] = 1457 }, nil, nil, nil, true }
+players["dormicum"] = { "Dormicum", 9856, 8, 1, 32, { [1] = 9856, [2] = 8043 }, { [1] = 32, [2] = 1345 }, nil, nil, nil, true }
 players["destruction"] = { "Destruction", 9844, 8, 1, 33, { [1] = 9844, [2] = 7469 }, { [1] = 33, [2] = 2309 }, nil, nil, nil, false }
 players["vairus"] = { "Vairus", 9854, 8, 1, 33, { [1] = 9854 }, { [1] = 33 }, nil, nil, nil, true }
-players["zega"] = { "Zega", 9853, 8, 1, 34, { [1] = 9853, [2] = 9809 }, { [1] = 34, [2] = 90 }, nil, nil, nil, true }
-players["gorgon"] = { "Gorgon", 9852, 8, 1, 35, { [1] = 9852, [2] = 824 }, { [1] = 35, [2] = 11763 }, nil, nil, nil, true }
-players["haunting"] = { "Haunting", 9836, 8, 1, 37, { [1] = 9836, [2] = 6924 }, { [1] = 37, [2] = 2480 }, nil, nil, nil, true }
-players["xaracia"] = { "Xaracia", 9836, 8, 1, 38, { [1] = 9836 }, { [1] = 38 }, nil, nil, nil, true }
-players["notclutter"] = { "Notclutter", 9834, 8, 1, 39, { [1] = 9834, [2] = 9121 }, { [1] = 39, [2] = 518 }, nil, nil, nil, true }
-players["litki"] = { "Litki", 9820, 8, 1, 42, { [1] = 9820, [2] = 6199 }, { [1] = 42, [2] = 3402 }, nil, nil, nil, true }
-players["exsanguinate"] = { "Exsanguinate", 9819, 8, 1, 43, { [1] = 9819, [2] = 8862 }, { [1] = 43, [2] = 699 }, nil, nil, nil, true }
-players["ouchmyknee"] = { "Ouchmyknee", 9812, 8, 1, 44, { [1] = 9812, [2] = 9656 }, { [1] = 44, [2] = 167 }, nil, nil, nil, true }
-players["topgear"] = { "Topgear", 9811, 8, 1, 45, { [1] = 9811, [2] = 9772, [3] = 78 }, { [1] = 45, [2] = 106, [3] = 852 }, nil, nil, nil, true }
-players["thepsycho"] = { "Thepsycho", 9810, 8, 1, 46, { [1] = 9810, [2] = 8342 }, { [1] = 46, [2] = 1102 }, nil, nil, nil, true }
-players["yoshizuka"] = { "Yoshizuka", 9806, 8, 1, 47, { [1] = 9806, [2] = 9132 }, { [1] = 47, [2] = 516 }, nil, nil, nil, true }
-players["realjuravis"] = { "Realjuravis", 9799, 8, 1, 48, { [1] = 9799, [2] = 9213 }, { [1] = 48, [2] = 446 }, nil, nil, nil, true }
-players["amdecent"] = { "Amdecent", 9799, 8, 1, 49, { [1] = 9799, [3] = 2832 }, { [1] = 49, [3] = 207 }, nil, nil, nil, true }
+players["zega"] = { "Zega", 9853, 8, 1, 34, { [1] = 9853, [2] = 9808 }, { [1] = 34, [2] = 90 }, nil, nil, nil, true }
+players["gorgon"] = { "Gorgon", 9852, 8, 1, 35, { [1] = 9852, [2] = 823 }, { [1] = 35, [2] = 11800 }, nil, nil, nil, true }
+players["haunting"] = { "Haunting", 9836, 8, 1, 37, { [1] = 9836, [2] = 6918 }, { [1] = 37, [2] = 2487 }, nil, nil, nil, true }
+players["xaracia"] = { "Xaracia", 9835, 8, 1, 38, { [1] = 9835 }, { [1] = 38 }, nil, nil, nil, true }
+players["notclutter"] = { "Notclutter", 9834, 8, 1, 39, { [1] = 9834, [2] = 9116 }, { [1] = 39, [2] = 523 }, nil, nil, nil, true }
+players["litki"] = { "Litki", 9819, 8, 1, 42, { [1] = 9819, [2] = 6192 }, { [1] = 42, [2] = 3412 }, nil, nil, nil, true }
+players["exsanguinate"] = { "Exsanguinate", 9819, 8, 1, 43, { [1] = 9819, [2] = 8858 }, { [1] = 43, [2] = 704 }, nil, nil, nil, true }
+players["ouchmyknee"] = { "Ouchmyknee", 9812, 8, 1, 44, { [1] = 9812, [2] = 9654 }, { [1] = 44, [2] = 168 }, nil, nil, nil, true }
+players["topgear"] = { "Topgear", 9811, 8, 1, 45, { [1] = 9811, [2] = 9770, [3] = 77 }, { [1] = 45, [2] = 109, [3] = 857 }, nil, nil, nil, true }
+players["thepsycho"] = { "Thepsycho", 9810, 8, 1, 46, { [1] = 9810, [2] = 8337 }, { [1] = 46, [2] = 1108 }, nil, nil, nil, true }
+players["yoshizuka"] = { "Yoshizuka", 9806, 8, 1, 47, { [1] = 9806, [2] = 9127 }, { [1] = 47, [2] = 522 }, nil, nil, nil, true }
+players["realjuravis"] = { "Realjuravis", 9799, 8, 1, 48, { [1] = 9799, [2] = 9208 }, { [1] = 48, [2] = 452 }, nil, nil, nil, true }
+players["amdecent"] = { "Amdecent", 9799, 8, 1, 49, { [1] = 9799, [3] = 2834 }, { [1] = 49, [3] = 208 }, nil, nil, nil, true }
 players["monitor"] = { "Monitor", 9791, 8, 1, 50, { [1] = 9791 }, { [1] = 50 }, nil, nil, nil, true }
-players["nabuco"] = { "Nabuco", 9780, 8, 1, 51, { [1] = 9780, [2] = 9198 }, { [1] = 51, [2] = 459 }, nil, nil, nil, true }
-players["misaruu"] = { "Misaruu", 9776, 8, 1, 52, { [1] = 9776, [2] = 9333 }, { [1] = 52, [2] = 369 }, nil, nil, nil, true }
-players["blasterbala"] = { "Blasterbala", 9776, 8, 1, 54, { [1] = 9776, [2] = 8632 }, { [1] = 54, [2] = 887 }, nil, nil, nil, true }
+players["nabuco"] = { "Nabuco", 9780, 8, 1, 51, { [1] = 9780, [2] = 9194 }, { [1] = 51, [2] = 465 }, nil, nil, nil, true }
+players["misaruu"] = { "Misaruu", 9776, 8, 1, 52, { [1] = 9776, [2] = 9330 }, { [1] = 52, [2] = 372 }, nil, nil, nil, true }
+players["blasterbala"] = { "Blasterbala", 9776, 8, 1, 54, { [1] = 9776, [2] = 8627 }, { [1] = 54, [2] = 890 }, nil, nil, nil, true }
 players["pee"] = { "Pee", 9772, 8, 1, 55, { [1] = 9772 }, { [1] = 55 }, nil, nil, nil, true }
-players["swdjk"] = { "Swdjk", 9770, 8, 1, 56, { [1] = 9770, [2] = 9474 }, { [1] = 56, [2] = 275 }, nil, nil, nil, true }
-players["vatraxos"] = { "Vatraxos", 9766, 8, 1, 58, { [1] = 9766, [2] = 9028 }, { [1] = 58, [2] = 578 }, nil, nil, nil, true }
-players["chainevil"] = { "Chainevil", 9760, 8, 1, 59, { [1] = 9760, [2] = 8496 }, { [1] = 59, [2] = 989 }, nil, nil, nil, true }
-players["tinysloth"] = { "Tinysloth", 9745, 8, 1, 61, { [1] = 9745, [2] = 8733 }, { [1] = 61, [2] = 805 }, nil, nil, nil, true }
-players["afflow"] = { "Afflow", 9735, 8, 1, 62, { [1] = 9735, [2] = 9687 }, { [1] = 62, [2] = 154 }, nil, nil, nil, true }
-players["fiatasal"] = { "Fiatasal", 9728, 8, 1, 64, { [1] = 9728, [2] = 8611 }, { [1] = 64, [2] = 901 }, nil, nil, nil, true }
-players["rickg"] = { "Rickg", 9722, 8, 1, 65, { [1] = 9722, [2] = 9377 }, { [1] = 65, [2] = 337 }, nil, nil, nil, true }
+players["swdjk"] = { "Swdjk", 9770, 8, 1, 56, { [1] = 9770, [2] = 9472 }, { [1] = 56, [2] = 275 }, nil, nil, nil, true }
+players["vatraxos"] = { "Vatraxos", 9765, 8, 1, 58, { [1] = 9765, [2] = 9023 }, { [1] = 58, [2] = 583 }, nil, nil, nil, true }
+players["chainevil"] = { "Chainevil", 9761, 8, 1, 59, { [1] = 9761, [2] = 8491 }, { [1] = 59, [2] = 990 }, nil, nil, nil, true }
+players["tinysloth"] = { "Tinysloth", 9745, 8, 1, 61, { [1] = 9745, [2] = 8727 }, { [1] = 61, [2] = 809 }, nil, nil, nil, true }
+players["afflow"] = { "Afflow", 9734, 8, 1, 62, { [1] = 9734, [2] = 9686 }, { [1] = 62, [2] = 154 }, nil, nil, nil, true }
+players["fiatasal"] = { "Fiatasal", 9728, 8, 1, 64, { [1] = 9728, [2] = 8605 }, { [1] = 64, [2] = 905 }, nil, nil, nil, true }
+players["rickg"] = { "Rickg", 9722, 8, 1, 65, { [1] = 9722, [2] = 9373 }, { [1] = 65, [2] = 340 }, nil, nil, nil, true }
 players["hypers"] = { "Hypers", 9716, 8, 1, 66, { [1] = 9716 }, { [1] = 66 }, nil, nil, nil, true }
 players["bronzebomber"] = { "Bronzebomber", 9709, 8, 1, 67, { [1] = 9709 }, { [1] = 67 }, nil, nil, nil, true }
-players["lockphius"] = { "Lockphius", 9706, 8, 1, 68, { [1] = 9706, [2] = 8704 }, { [1] = 68, [2] = 829 }, nil, nil, nil, true }
-players["skolitard"] = { "Skolitard", 9705, 8, 1, 69, { [1] = 9705, [2] = 9429 }, { [1] = 69, [2] = 295 }, nil, nil, nil, true }
-players["dotzila"] = { "Dotzila", 9703, 8, 1, 71, { [1] = 9703, [2] = 7116 }, { [1] = 71, [2] = 2286 }, nil, nil, nil, true }
-players["kysorrow"] = { "Kysorrow", 9699, 8, 1, 72, { [1] = 9699, [2] = 9417 }, { [1] = 72, [2] = 302 }, nil, nil, nil, true }
-players["dictalock"] = { "Dictalock", 9694, 8, 1, 74, { [1] = 9694, [2] = 7288 }, { [1] = 74, [2] = 2100 }, nil, nil, nil, true }
-players["nerfmycurse"] = { "Nerfmycurse", 9692, 8, 1, 75, { [1] = 9692, [2] = 2949, [3] = 154 }, { [1] = 75, [2] = 8153, [3] = 748 }, nil, nil, nil, true }
-players["joaquin"] = { "Joaquin", 9674, 8, 1, 76, { [1] = 9674, [2] = 8994 }, { [1] = 76, [2] = 598 }, nil, nil, nil, true }
-players["justmylock"] = { "Justmylock", 9674, 8, 1, 77, { [1] = 9674, [2] = 9320 }, { [1] = 77, [2] = 384 }, nil, nil, nil, true }
-players["pepelaugh"] = { "Pepelaugh", 9670, 8, 1, 79, { [1] = 9670 }, { [1] = 79 }, nil, nil, nil, true }
-players["mortifago"] = { "Mortifago", 9666, 8, 1, 80, { [1] = 9666, [2] = 7146 }, { [1] = 80, [2] = 2244 }, nil, nil, nil, true }
-players["voltava"] = { "Voltava", 9665, 8, 1, 81, { [1] = 9665, [2] = 9275 }, { [1] = 81, [2] = 411 }, nil, nil, nil, true }
-players["elywl"] = { "Elywl", 9663, 8, 1, 82, { [1] = 9663, [2] = 5190 }, { [1] = 82, [2] = 4883 }, nil, nil, nil, true }
-players["pinnedd"] = { "Pinnedd", 10000, 8, 2, 1, { [1] = 5893, [2] = 10000 }, { [1] = 1509, [2] = 1 }, nil, nil, nil, true }
-players["washed"] = { "Washed", 9999, 8, 2, 2, { [1] = 9322, [2] = 9999 }, { [1] = 169, [2] = 2 }, nil, nil, nil, true }
-players["goon"] = { "Goon", 9998, 8, 2, 3, { [1] = 9022, [2] = 9998 }, { [1] = 244, [2] = 3 }, nil, nil, nil, true }
-players["issues"] = { "Issues", 9996, 8, 2, 4, { [2] = 9996, [3] = 202 }, { [2] = 4, [3] = 689 }, nil, nil, nil, true }
-players["slime"] = { "Slime", 9994, 8, 2, 5, { [1] = 9874, [2] = 9994 }, { [1] = 26, [2] = 5 }, nil, nil, nil, true }
-players["gooner"] = { "Gooner", 9994, 8, 2, 6, { [1] = 710, [2] = 9994 }, { [1] = 4810, [2] = 6 }, nil, nil, nil, true }
+players["lockphius"] = { "Lockphius", 9706, 8, 1, 68, { [1] = 9706, [2] = 8699 }, { [1] = 68, [2] = 833 }, nil, nil, nil, true }
+players["skolitard"] = { "Skolitard", 9704, 8, 1, 69, { [1] = 9704, [2] = 9425 }, { [1] = 69, [2] = 297 }, nil, nil, nil, true }
+players["dotzila"] = { "Dotzila", 9703, 8, 1, 71, { [1] = 9703, [2] = 7107 }, { [1] = 71, [2] = 2298 }, nil, nil, nil, true }
+players["kysorrow"] = { "Kysorrow", 9698, 8, 1, 72, { [1] = 9698, [2] = 9413 }, { [1] = 72, [2] = 304 }, nil, nil, nil, true }
+players["dictalock"] = { "Dictalock", 9694, 8, 1, 74, { [1] = 9694, [2] = 7283 }, { [1] = 74, [2] = 2109 }, nil, nil, nil, true }
+players["nerfmycurse"] = { "Nerfmycurse", 9692, 8, 1, 75, { [1] = 9692, [2] = 2949, [3] = 154 }, { [1] = 75, [2] = 8173, [3] = 752 }, nil, nil, nil, true }
+players["joaquin"] = { "Joaquin", 9674, 8, 1, 76, { [1] = 9674, [2] = 8990 }, { [1] = 76, [2] = 603 }, nil, nil, nil, true }
+players["justmylock"] = { "Justmylock", 9673, 8, 1, 77, { [1] = 9673, [2] = 9316 }, { [1] = 77, [2] = 387 }, nil, nil, nil, true }
+players["pepelaugh"] = { "Pepelaugh", 9669, 8, 1, 79, { [1] = 9669 }, { [1] = 79 }, nil, nil, nil, true }
+players["mortifago"] = { "Mortifago", 9665, 8, 1, 80, { [1] = 9665, [2] = 7137 }, { [1] = 80, [2] = 2256 }, nil, nil, nil, true }
+players["voltava"] = { "Voltava", 9665, 8, 1, 81, { [1] = 9665, [2] = 9271 }, { [1] = 81, [2] = 414 }, nil, nil, nil, true }
+players["elywl"] = { "Elywl", 9663, 8, 1, 82, { [1] = 9663, [2] = 5185 }, { [1] = 82, [2] = 4898 }, nil, nil, nil, true }
+players["realchash"] = { "Realchash", 9661, 8, 1, 83, { [1] = 9661, [2] = 9331 }, { [1] = 83, [2] = 371 }, nil, nil, nil, true }
+players["pinnedd"] = { "Pinnedd", 10000, 8, 2, 1, { [1] = 5891, [2] = 10000 }, { [1] = 1516, [2] = 1 }, nil, nil, nil, true }
+players["washed"] = { "Washed", 9998, 8, 2, 2, { [1] = 9322, [2] = 9998 }, { [1] = 170, [2] = 2 }, nil, nil, nil, true }
+players["goon"] = { "Goon", 9998, 8, 2, 3, { [1] = 9019, [2] = 9998 }, { [1] = 245, [2] = 3 }, nil, nil, nil, true }
+players["issues"] = { "Issues", 9996, 8, 2, 4, { [2] = 9996, [3] = 200 }, { [2] = 4, [3] = 695 }, nil, nil, nil, true }
+players["gooner"] = { "Gooner", 9995, 8, 2, 5, { [1] = 709, [2] = 9995 }, { [1] = 4826, [2] = 5 }, nil, nil, nil, true }
+players["slime"] = { "Slime", 9994, 8, 2, 6, { [1] = 9874, [2] = 9994 }, { [1] = 27, [2] = 6 }, nil, nil, nil, true }
 players["zolam"] = { "Zolam", 9993, 8, 2, 7, { [1] = 9734, [2] = 9993 }, { [1] = 63, [2] = 7 }, nil, nil, nil, true }
-players["simplylock"] = { "Simplylock", 9989, 8, 2, 8, { [1] = 8904, [2] = 9989 }, { [1] = 277, [2] = 8 }, nil, nil, nil, true }
-players["whip"] = { "Whip", 9989, 8, 2, 9, { [1] = 9292, [2] = 9989 }, { [1] = 177, [2] = 9 }, nil, nil, nil, true }
+players["simplylock"] = { "Simplylock", 9989, 8, 2, 8, { [1] = 8901, [2] = 9989 }, { [1] = 279, [2] = 8 }, nil, nil, nil, true }
+players["whip"] = { "Whip", 9988, 8, 2, 9, { [1] = 9292, [2] = 9988 }, { [1] = 179, [2] = 9 }, nil, nil, nil, true }
 players["piinnedd"] = { "Piinnedd", 9985, 8, 2, 11, { [2] = 9985 }, { [2] = 11 }, nil, nil, nil, true }
 players["iluminatan"] = { "Iluminatan", 9984, 8, 2, 12, { [1] = 9776, [2] = 9984, [3] = 9881 }, { [1] = 53, [2] = 12, [3] = 3 }, nil, nil, nil, true }
-players["lfmdots"] = { "Lfmdots", 9982, 8, 2, 13, { [1] = 9385, [2] = 9982 }, { [1] = 156, [2] = 13 }, nil, nil, nil, true }
-players["zxone"] = { "Zxone", 9982, 8, 2, 14, { [1] = 9746, [2] = 9982 }, { [1] = 60, [2] = 14 }, nil, nil, nil, true }
-players["notvikk"] = { "Notvikk", 9981, 8, 2, 15, { [1] = 7883, [2] = 9981 }, { [1] = 581, [2] = 15 }, nil, nil, nil, true }
-players["pharynx"] = { "Pharynx", 9980, 8, 2, 16, { [1] = 597, [2] = 9980 }, { [1] = 5052, [2] = 16 }, nil, nil, nil, true }
-players["zakljucan"] = { "Zakljucan", 9980, 8, 2, 17, { [2] = 9980 }, { [2] = 17 }, nil, nil, nil, true }
-players["arenytax"] = { "Arenytax", 9978, 8, 2, 18, { [1] = 8976, [2] = 9978 }, { [1] = 259, [2] = 18 }, nil, nil, nil, true }
-players["natta"] = { "Natta", 9975, 8, 2, 19, { [2] = 9975, [3] = 2708 }, { [2] = 19, [3] = 215 }, nil, nil, nil, true }
+players["lfmdots"] = { "Lfmdots", 9982, 8, 2, 13, { [1] = 9385, [2] = 9982 }, { [1] = 157, [2] = 13 }, nil, nil, nil, true }
+players["zxone"] = { "Zxone", 9981, 8, 2, 14, { [1] = 9746, [2] = 9981 }, { [1] = 60, [2] = 14 }, nil, nil, nil, true }
+players["notvikk"] = { "Notvikk", 9980, 8, 2, 15, { [1] = 7882, [2] = 9980 }, { [1] = 582, [2] = 15 }, nil, nil, nil, true }
+players["pharynx"] = { "Pharynx", 9980, 8, 2, 16, { [1] = 596, [2] = 9980 }, { [1] = 5069, [2] = 16 }, nil, nil, nil, true }
+players["zakljucan"] = { "Zakljucan", 9979, 8, 2, 17, { [2] = 9979 }, { [2] = 17 }, nil, nil, nil, true }
+players["arenytax"] = { "Arenytax", 9978, 8, 2, 18, { [1] = 8975, [2] = 9978 }, { [1] = 261, [2] = 18 }, nil, nil, nil, true }
+players["natta"] = { "Natta", 9974, 8, 2, 19, { [2] = 9974, [3] = 2711 }, { [2] = 19, [3] = 216 }, nil, nil, nil, true }
 players["ridepad"] = { "Ridepad", 9965, 8, 2, 20, { [1] = 9831, [2] = 9965 }, { [1] = 41, [2] = 20 }, nil, nil, nil, true }
-players["skilledlock"] = { "Skilledlock", 9961, 8, 2, 21, { [1] = 9301, [2] = 9961, [3] = 5482 }, { [1] = 174, [2] = 21, [3] = 72 }, nil, nil, nil, true }
-players["pinpi"] = { "Pinpi", 9960, 8, 2, 22, { [1] = 8567, [2] = 9960 }, { [1] = 375, [2] = 22 }, nil, nil, nil, true }
-players["cursemeister"] = { "Cursemeister", 9960, 8, 2, 23, { [1] = 4103, [2] = 9960 }, { [1] = 2682, [2] = 23 }, nil, nil, nil, true }
-players["altercide"] = { "Altercide", 9959, 8, 2, 24, { [1] = 8612, [2] = 9959 }, { [1] = 355, [2] = 24 }, nil, nil, nil, true }
-players["jeessi"] = { "Jeessi", 9957, 8, 2, 25, { [1] = 7386, [2] = 9957 }, { [1] = 752, [2] = 25 }, nil, nil, nil, true }
-players["boppi"] = { "Boppi", 9953, 8, 2, 26, { [1] = 9416, [2] = 9953, [3] = 885 }, { [1] = 144, [2] = 26, [3] = 333 }, nil, nil, nil, true }
-players["agrafena"] = { "Agrafena", 9952, 8, 2, 27, { [1] = 9046, [2] = 9952 }, { [1] = 242, [2] = 27 }, nil, nil, nil, true }
-players["karlai"] = { "Karlai", 9952, 8, 2, 28, { [1] = 8910, [2] = 9952, [3] = 548 }, { [1] = 275, [2] = 28, [3] = 412 }, nil, nil, nil, true }
+players["skilledlock"] = { "Skilledlock", 9961, 8, 2, 21, { [1] = 9301, [2] = 9961, [3] = 5486 }, { [1] = 175, [2] = 21, [3] = 72 }, nil, nil, nil, true }
+players["pinpi"] = { "Pinpi", 9959, 8, 2, 22, { [1] = 8565, [2] = 9959 }, { [1] = 376, [2] = 22 }, nil, nil, nil, true }
+players["cursemeister"] = { "Cursemeister", 9959, 8, 2, 23, { [1] = 4096, [2] = 9959 }, { [1] = 2694, [2] = 23 }, nil, nil, nil, true }
+players["altercide"] = { "Altercide", 9959, 8, 2, 24, { [1] = 8611, [2] = 9959 }, { [1] = 355, [2] = 24 }, nil, nil, nil, true }
+players["jeessi"] = { "Jeessi", 9957, 8, 2, 25, { [1] = 7384, [2] = 9957 }, { [1] = 756, [2] = 25 }, nil, nil, nil, true }
+players["boppi"] = { "Boppi", 9952, 8, 2, 26, { [1] = 9416, [2] = 9952, [3] = 886 }, { [1] = 144, [2] = 26, [3] = 335 }, nil, nil, nil, true }
+players["agrafena"] = { "Agrafena", 9952, 8, 2, 27, { [1] = 9046, [2] = 9952 }, { [1] = 243, [2] = 27 }, nil, nil, nil, true }
+players["karlai"] = { "Karlai", 9951, 8, 2, 28, { [1] = 8911, [2] = 9951, [3] = 548 }, { [1] = 276, [2] = 28, [3] = 414 }, nil, nil, nil, true }
 players["rozispid"] = { "Rozispid", 9950, 8, 2, 29, { [2] = 9950 }, { [2] = 29 }, nil, nil, nil, true }
-players["saforalock"] = { "Saforalock", 9946, 8, 2, 30, { [1] = 2498, [2] = 9946 }, { [1] = 4241, [2] = 30 }, nil, nil, nil, true }
-players["duskmourn"] = { "Duskmourn", 9945, 8, 2, 31, { [1] = 6793, [2] = 9945 }, { [1] = 1018, [2] = 31 }, nil, nil, nil, true }
-players["cursedgodx"] = { "Cursedgodx", 9943, 8, 2, 32, { [2] = 9943 }, { [2] = 32 }, nil, nil, nil, true }
+players["saforalock"] = { "Saforalock", 9946, 8, 2, 30, { [1] = 2495, [2] = 9946 }, { [1] = 4258, [2] = 30 }, nil, nil, nil, true }
+players["duskmourn"] = { "Duskmourn", 9945, 8, 2, 31, { [1] = 6788, [2] = 9945 }, { [1] = 1028, [2] = 31 }, nil, nil, nil, true }
+players["cursedgodx"] = { "Cursedgodx", 9942, 8, 2, 32, { [2] = 9942 }, { [2] = 32 }, nil, nil, nil, true }
 players["topdemo"] = { "Topdemo", 9942, 8, 2, 33, { [2] = 9942 }, { [2] = 33 }, nil, nil, nil, true }
 players["voodoolike"] = { "Voodoolike", 9938, 8, 2, 34, { [2] = 9938 }, { [2] = 34 }, nil, nil, nil, true }
-players["pishona"] = { "Pishona", 9933, 8, 2, 35, { [1] = 3946, [2] = 9933 }, { [1] = 2873, [2] = 35 }, nil, nil, nil, true }
-players["closetoworst"] = { "Closetoworst", 9926, 8, 2, 36, { [1] = 7408, [2] = 9926, [3] = 849 }, { [1] = 736, [2] = 36, [3] = 336 }, nil, nil, nil, true }
-players["tkacheo"] = { "Tkacheo", 9925, 8, 2, 37, { [1] = 9495, [2] = 9925 }, { [1] = 124, [2] = 37 }, nil, nil, nil, true }
+players["pishona"] = { "Pishona", 9933, 8, 2, 35, { [1] = 3940, [2] = 9933 }, { [1] = 2884, [2] = 35 }, nil, nil, nil, true }
+players["closetoworst"] = { "Closetoworst", 9926, 8, 2, 36, { [1] = 7406, [2] = 9926, [3] = 853 }, { [1] = 740, [2] = 36, [3] = 338 }, nil, nil, nil, true }
+players["tkacheo"] = { "Tkacheo", 9924, 8, 2, 37, { [1] = 9495, [2] = 9924 }, { [1] = 124, [2] = 37 }, nil, nil, nil, true }
 players["demoremek"] = { "Demoremek", 9925, 8, 2, 38, { [2] = 9925 }, { [2] = 38 }, nil, nil, nil, false }
-players["demores"] = { "Demores", 9922, 8, 2, 38, { [2] = 9922 }, { [2] = 38 }, nil, nil, nil, true }
-players["cabro"] = { "Cabro", 9919, 8, 2, 39, { [1] = 9135, [2] = 9919 }, { [1] = 208, [2] = 39 }, nil, nil, nil, true }
-players["mezonwl"] = { "Mezonwl", 9919, 8, 2, 40, { [1] = 8106, [2] = 9919 }, { [1] = 500, [2] = 40 }, nil, nil, nil, true }
-players["apke"] = { "Apke", 9913, 8, 2, 41, { [2] = 9913 }, { [2] = 41 }, nil, nil, nil, true }
-players["madlyinlove"] = { "Madlyinlove", 9912, 8, 2, 42, { [1] = 9226, [2] = 9912 }, { [1] = 191, [2] = 42 }, nil, nil, nil, true }
-players["fiatasa"] = { "Fiatasa", 9911, 8, 2, 43, { [1] = 9694, [2] = 9911 }, { [1] = 73, [2] = 43 }, nil, nil, nil, true }
-players["kilmong"] = { "Kilmong", 9907, 8, 2, 44, { [1] = 8898, [2] = 9907, [3] = 366 }, { [1] = 278, [2] = 44, [3] = 521 }, nil, nil, nil, true }
-players["okae"] = { "Okae", 9905, 8, 2, 45, { [1] = 9610, [2] = 9905 }, { [1] = 98, [2] = 45 }, nil, nil, nil, true }
-players["dazzlerlock"] = { "Dazzlerlock", 9903, 8, 2, 46, { [2] = 9903 }, { [2] = 46 }, nil, nil, nil, true }
-players["curseofgodx"] = { "Curseofgodx", 9903, 8, 2, 47, { [2] = 9903 }, { [2] = 47 }, nil, nil, nil, true }
-players["topgirl"] = { "Topgirl", 9902, 8, 2, 48, { [1] = 7729, [2] = 9902 }, { [1] = 635, [2] = 48 }, nil, nil, nil, true }
-players["neuling"] = { "Neuling", 9902, 8, 2, 49, { [1] = 7756, [2] = 9902 }, { [1] = 622, [2] = 49 }, nil, nil, nil, true }
+players["demores"] = { "Demores", 9921, 8, 2, 38, { [2] = 9921 }, { [2] = 38 }, nil, nil, nil, true }
+players["mezonwl"] = { "Mezonwl", 9918, 8, 2, 39, { [1] = 8104, [2] = 9918 }, { [1] = 504, [2] = 39 }, nil, nil, nil, true }
+players["cabro"] = { "Cabro", 9918, 8, 2, 40, { [1] = 9136, [2] = 9918 }, { [1] = 209, [2] = 40 }, nil, nil, nil, true }
+players["apke"] = { "Apke", 9912, 8, 2, 41, { [2] = 9912 }, { [2] = 41 }, nil, nil, nil, true }
+players["madlyinlove"] = { "Madlyinlove", 9912, 8, 2, 42, { [1] = 9227, [2] = 9912 }, { [1] = 193, [2] = 42 }, nil, nil, nil, true }
+players["fiatasa"] = { "Fiatasa", 9910, 8, 2, 43, { [1] = 9694, [2] = 9910 }, { [1] = 73, [2] = 43 }, nil, nil, nil, true }
+players["pestenore"] = { "Pestenore", 9906, 8, 2, 44, { [1] = 8696, [2] = 9906 }, { [1] = 326, [2] = 44 }, nil, nil, nil, true }
+players["kilmong"] = { "Kilmong", 9906, 8, 2, 45, { [1] = 9004, [2] = 9906, [3] = 365 }, { [1] = 253, [2] = 45, [3] = 522 }, nil, nil, nil, true }
+players["okae"] = { "Okae", 9904, 8, 2, 46, { [1] = 9610, [2] = 9904 }, { [1] = 98, [2] = 46 }, nil, nil, nil, true }
+players["curseofgodx"] = { "Curseofgodx", 9902, 8, 2, 47, { [2] = 9902 }, { [2] = 47 }, nil, nil, nil, true }
+players["dazzlerlock"] = { "Dazzlerlock", 9902, 8, 2, 48, { [2] = 9902 }, { [2] = 48 }, nil, nil, nil, true }
+players["neuling"] = { "Neuling", 9901, 8, 2, 49, { [1] = 7755, [2] = 9901 }, { [1] = 624, [2] = 49 }, nil, nil, nil, true }
 players["bisterer"] = { "Bisterer", 9900, 8, 2, 50, { [1] = 8930, [2] = 9900 }, { [1] = 266, [2] = 50 }, nil, nil, nil, false }
-players["gorech"] = { "Gorech", 9899, 8, 2, 50, { [1] = 8929, [2] = 9899 }, { [1] = 267, [2] = 50 }, nil, nil, nil, true }
-players["konoo"] = { "Konoo", 9898, 8, 2, 51, { [1] = 8929, [2] = 9898 }, { [1] = 268, [2] = 51 }, nil, nil, nil, true }
-players["arder"] = { "Arder", 9892, 8, 2, 52, { [1] = 9703, [2] = 9892 }, { [1] = 70, [2] = 52 }, nil, nil, nil, true }
-players["pestenore"] = { "Pestenore", 9891, 8, 2, 53, { [1] = 8697, [2] = 9891 }, { [1] = 326, [2] = 53 }, nil, nil, nil, true }
-players["sarcasm"] = { "Sarcasm", 9890, 8, 2, 54, { [2] = 9890, [3] = 58 }, { [2] = 54, [3] = 877 }, nil, nil, nil, true }
-players["fvk"] = { "Fvk", 9886, 8, 2, 55, { [1] = 8347, [2] = 9886 }, { [1] = 428, [2] = 55 }, nil, nil, nil, true }
-players["grumpymonk"] = { "Grumpymonk", 9880, 8, 2, 58, { [1] = 9450, [2] = 9880, [3] = 341 }, { [1] = 133, [2] = 58, [3] = 542 }, nil, nil, nil, true }
-players["chymezzdoom"] = { "Chymezzdoom", 9879, 8, 2, 59, { [2] = 9879, [3] = 63 }, { [2] = 59, [3] = 872 }, nil, nil, nil, true }
-players["jarzyn"] = { "Jarzyn", 9877, 8, 2, 60, { [1] = 8973, [2] = 9877 }, { [1] = 260, [2] = 60 }, nil, nil, nil, true }
-players["kirchuk"] = { "Kirchuk", 9875, 8, 2, 61, { [1] = 4859, [2] = 9875 }, { [1] = 2072, [2] = 61 }, nil, nil, nil, true }
-players["svedskakurva"] = { "Svedskakurva", 9874, 8, 2, 62, { [1] = 9561, [2] = 9874 }, { [1] = 111, [2] = 62 }, nil, nil, nil, true }
-players["skada"] = { "Skada", 9873, 8, 2, 63, { [1] = 8186, [2] = 9873 }, { [1] = 479, [2] = 63 }, nil, nil, nil, true }
-players["malgaroth"] = { "Malgaroth", 9866, 8, 2, 64, { [2] = 9866 }, { [2] = 64 }, nil, nil, nil, true }
-players["daazs"] = { "Daazs", 9864, 8, 2, 65, { [1] = 8727, [2] = 9864 }, { [1] = 315, [2] = 65 }, nil, nil, nil, true }
-players["nonesovile"] = { "Nonesovile", 9860, 8, 2, 66, { [2] = 9860 }, { [2] = 66 }, nil, nil, nil, true }
-players["burning"] = { "Burning", 9856, 8, 2, 67, { [1] = 4629, [2] = 9856 }, { [1] = 2198, [2] = 67 }, nil, nil, nil, true }
-players["purolock"] = { "Purolock", 9851, 8, 2, 68, { [1] = 7955, [2] = 9851 }, { [1] = 560, [2] = 68 }, nil, nil, nil, true }
-players["sewer"] = { "Sewer", 9851, 8, 2, 69, { [1] = 6834, [2] = 9851 }, { [1] = 1000, [2] = 69 }, nil, nil, nil, true }
-players["demonice"] = { "Demonice", 9850, 8, 2, 70, { [1] = 3621, [2] = 9850, [3] = 24 }, { [1] = 3703, [2] = 70, [3] = 913 }, nil, nil, nil, true }
-players["thedefile"] = { "Thedefile", 9846, 8, 2, 71, { [1] = 9620, [2] = 9846 }, { [1] = 93, [2] = 71 }, nil, nil, nil, true }
-players["lockilias"] = { "Lockilias", 9845, 8, 2, 72, { [2] = 9845 }, { [2] = 72 }, nil, nil, nil, true }
-players["wreck"] = { "Wreck", 9838, 8, 2, 73, { [1] = 9462, [2] = 9838 }, { [1] = 130, [2] = 73 }, nil, nil, nil, true }
-players["pvesobaka"] = { "Pvesobaka", 9837, 8, 2, 74, { [2] = 9837 }, { [2] = 74 }, nil, nil, nil, true }
-players["spaceandtime"] = { "Spaceandtime", 9833, 8, 2, 75, { [1] = 5272, [2] = 9833 }, { [1] = 1848, [2] = 75 }, nil, nil, nil, true }
-players["daemonsoul"] = { "Daemonsoul", 9832, 8, 2, 76, { [1] = 9492, [2] = 9832 }, { [1] = 126, [2] = 76 }, nil, nil, nil, true }
-players["jachkerer"] = { "Jachkerer", 9826, 8, 2, 77, { [1] = 9458, [2] = 9826 }, { [1] = 131, [2] = 77 }, nil, nil, nil, true }
-players["autizam"] = { "Autizam", 9826, 8, 2, 78, { [1] = 9098, [2] = 9826 }, { [1] = 222, [2] = 78 }, nil, nil, nil, true }
-players["tasmanicus"] = { "Tasmanicus", 9826, 8, 2, 79, { [2] = 9826 }, { [2] = 79 }, nil, nil, nil, true }
-players["warmtoilet"] = { "Warmtoilet", 9822, 8, 2, 80, { [1] = 9189, [2] = 9822 }, { [1] = 199, [2] = 80 }, nil, nil, nil, true }
-players["wilsonfisk"] = { "Wilsonfisk", 9815, 8, 2, 81, { [1] = 1304, [2] = 9815 }, { [1] = 4610, [2] = 81 }, nil, nil, nil, true }
-players["puro"] = { "Puro", 9815, 8, 2, 82, { [1] = 9620, [2] = 9815 }, { [1] = 94, [2] = 82 }, nil, nil, nil, true }
-players["prosnylsya"] = { "Prosnylsya", 9814, 8, 2, 83, { [1] = 628, [2] = 9814 }, { [1] = 4875, [2] = 83 }, nil, nil, nil, true }
-players["georgeqtw"] = { "Georgeqtw", 9812, 8, 2, 84, { [1] = 9557, [2] = 9812 }, { [1] = 113, [2] = 84 }, nil, nil, nil, true }
+players["topgirl"] = { "Topgirl", 9901, 8, 2, 50, { [1] = 7728, [2] = 9901 }, { [1] = 635, [2] = 50 }, nil, nil, nil, true }
+players["gorech"] = { "Gorech", 9898, 8, 2, 51, { [1] = 8928, [2] = 9898 }, { [1] = 270, [2] = 51 }, nil, nil, nil, true }
+players["konoo"] = { "Konoo", 9896, 8, 2, 52, { [1] = 8929, [2] = 9896 }, { [1] = 269, [2] = 52 }, nil, nil, nil, true }
+players["arder"] = { "Arder", 9892, 8, 2, 53, { [1] = 9703, [2] = 9892 }, { [1] = 70, [2] = 53 }, nil, nil, nil, true }
+players["sarcasm"] = { "Sarcasm", 9889, 8, 2, 54, { [2] = 9889, [3] = 58 }, { [2] = 54, [3] = 882 }, nil, nil, nil, true }
+players["daazs"] = { "Daazs", 9887, 8, 2, 55, { [1] = 8727, [2] = 9887 }, { [1] = 315, [2] = 55 }, nil, nil, nil, true }
+players["fvk"] = { "Fvk", 9884, 8, 2, 56, { [1] = 8347, [2] = 9884 }, { [1] = 430, [2] = 56 }, nil, nil, nil, true }
+players["grumpymonk"] = { "Grumpymonk", 9878, 8, 2, 59, { [1] = 9452, [2] = 9878, [3] = 341 }, { [1] = 133, [2] = 59, [3] = 542 }, nil, nil, nil, true }
+players["chymezzdoom"] = { "Chymezzdoom", 9878, 8, 2, 60, { [2] = 9878, [3] = 63 }, { [2] = 60, [3] = 877 }, nil, nil, nil, true }
+players["jarzyn"] = { "Jarzyn", 9876, 8, 2, 61, { [1] = 8972, [2] = 9876 }, { [1] = 262, [2] = 61 }, nil, nil, nil, true }
+players["kirchuk"] = { "Kirchuk", 9874, 8, 2, 62, { [1] = 4854, [2] = 9874 }, { [1] = 2078, [2] = 62 }, nil, nil, nil, true }
+players["skada"] = { "Skada", 9873, 8, 2, 63, { [1] = 8186, [2] = 9873 }, { [1] = 480, [2] = 63 }, nil, nil, nil, true }
+players["svedskakurva"] = { "Svedskakurva", 9872, 8, 2, 64, { [1] = 9560, [2] = 9872 }, { [1] = 111, [2] = 64 }, nil, nil, nil, true }
+players["burning"] = { "Burning", 9866, 8, 2, 65, { [1] = 4629, [2] = 9866 }, { [1] = 2200, [2] = 65 }, nil, nil, nil, true }
+players["malgaroth"] = { "Malgaroth", 9864, 8, 2, 66, { [2] = 9864 }, { [2] = 66 }, nil, nil, nil, true }
+players["nonesovile"] = { "Nonesovile", 9859, 8, 2, 67, { [2] = 9859 }, { [2] = 67 }, nil, nil, nil, true }
+players["sewer"] = { "Sewer", 9850, 8, 2, 68, { [1] = 6832, [2] = 9850 }, { [1] = 1008, [2] = 68 }, nil, nil, nil, true }
+players["purolock"] = { "Purolock", 9850, 8, 2, 69, { [1] = 7953, [2] = 9850 }, { [1] = 563, [2] = 69 }, nil, nil, nil, true }
+players["demonice"] = { "Demonice", 9849, 8, 2, 70, { [1] = 3617, [2] = 9849, [3] = 24 }, { [1] = 3713, [2] = 70, [3] = 918 }, nil, nil, nil, true }
+players["thedefile"] = { "Thedefile", 9844, 8, 2, 71, { [1] = 9621, [2] = 9844 }, { [1] = 93, [2] = 71 }, nil, nil, nil, true }
+players["lockilias"] = { "Lockilias", 9844, 8, 2, 72, { [2] = 9844 }, { [2] = 72 }, nil, nil, nil, true }
+players["wreck"] = { "Wreck", 9837, 8, 2, 73, { [1] = 9462, [2] = 9837 }, { [1] = 130, [2] = 73 }, nil, nil, nil, true }
+players["pvesobaka"] = { "Pvesobaka", 9836, 8, 2, 74, { [2] = 9836 }, { [2] = 74 }, nil, nil, nil, true }
+players["spaceandtime"] = { "Spaceandtime", 9832, 8, 2, 75, { [1] = 5270, [2] = 9832 }, { [1] = 1855, [2] = 75 }, nil, nil, nil, true }
+players["daemonsoul"] = { "Daemonsoul", 9831, 8, 2, 76, { [1] = 9493, [2] = 9831 }, { [1] = 126, [2] = 76 }, nil, nil, nil, true }
+players["jachkerer"] = { "Jachkerer", 9825, 8, 2, 77, { [1] = 9459, [2] = 9825 }, { [1] = 131, [2] = 77 }, nil, nil, nil, true }
+players["tasmanicus"] = { "Tasmanicus", 9824, 8, 2, 78, { [2] = 9824 }, { [2] = 78 }, nil, nil, nil, true }
+players["autizam"] = { "Autizam", 9824, 8, 2, 79, { [1] = 9098, [2] = 9824 }, { [1] = 223, [2] = 79 }, nil, nil, nil, true }
+players["rayewarlock"] = { "Rayewarlock", 9823, 8, 2, 80, { [1] = 7802, [2] = 9823 }, { [1] = 609, [2] = 80 }, nil, nil, nil, true }
+players["warmtoilet"] = { "Warmtoilet", 9820, 8, 2, 81, { [1] = 9189, [2] = 9820 }, { [1] = 200, [2] = 81 }, nil, nil, nil, true }
+players["wilsonfisk"] = { "Wilsonfisk", 9814, 8, 2, 82, { [1] = 1302, [2] = 9814 }, { [1] = 4627, [2] = 82 }, nil, nil, nil, true }
+players["puro"] = { "Puro", 9813, 8, 2, 83, { [1] = 9621, [2] = 9813 }, { [1] = 94, [2] = 83 }, nil, nil, nil, true }
+players["prosnylsya"] = { "Prosnylsya", 9812, 8, 2, 84, { [1] = 628, [2] = 9812 }, { [1] = 4892, [2] = 84 }, nil, nil, nil, true }
+players["georgeqtw"] = { "Georgeqtw", 9810, 8, 2, 85, { [1] = 9558, [2] = 9810 }, { [1] = 113, [2] = 85 }, nil, nil, nil, true }
 players["neurotech"] = { "Neurotech", 9805, 8, 2, 85, { [1] = 5280, [2] = 9805 }, { [1] = 1802, [2] = 85 }, nil, nil, nil, false }
-players["fearstaid"] = { "Fearstaid", 9811, 8, 2, 86, { [1] = 3069, [2] = 9811 }, { [1] = 4020, [2] = 86 }, nil, nil, nil, true }
-players["ariuswl"] = { "Ariuswl", 9810, 8, 2, 87, { [2] = 9810, [3] = 292 }, { [2] = 87, [3] = 582 }, nil, nil, nil, true }
-players["amebarelax"] = { "Amebarelax", 9810, 8, 2, 88, { [1] = 9013, [2] = 9810 }, { [1] = 247, [2] = 88 }, nil, nil, nil, true }
-players["madscience"] = { "Madscience", 9801, 8, 2, 92, { [1] = 6112, [2] = 9801 }, { [1] = 1390, [2] = 92 }, nil, nil, nil, true }
-players["kaenbyou"] = { "Kaenbyou", 9798, 8, 2, 93, { [2] = 9798, [3] = 1604 }, { [2] = 93, [3] = 277 }, nil, nil, nil, true }
-players["cowind"] = { "Cowind", 9798, 8, 2, 94, { [1] = 4691, [2] = 9798, [3] = 3636 }, { [1] = 2164, [2] = 94, [3] = 7191 }, nil, nil, nil, true }
-players["themdfker"] = { "Themdfker", 9796, 8, 2, 95, { [2] = 9796 }, { [2] = 95 }, nil, nil, nil, true }
-players["elwalock"] = { "Elwalock", 9795, 8, 2, 96, { [2] = 9795 }, { [2] = 96 }, nil, nil, nil, true }
-players["darkbrand"] = { "Darkbrand", 9795, 8, 2, 97, { [2] = 9795, [3] = 9691 }, { [2] = 97, [3] = 7 }, nil, nil, nil, true }
-players["wesker"] = { "Wesker", 9792, 8, 2, 98, { [1] = 9295, [2] = 9792 }, { [1] = 176, [2] = 98 }, nil, nil, nil, true }
-players["cakebaker"] = { "Cakebaker", 9789, 8, 2, 99, { [2] = 9789 }, { [2] = 99 }, nil, nil, nil, true }
-players["phenomx"] = { "Phenomx", 9789, 8, 2, 100, { [1] = 5026, [2] = 9789 }, { [1] = 1985, [2] = 100 }, nil, nil, nil, true }
-players["isurprise"] = { "Isurprise", 9784, 8, 2, 101, { [2] = 9784 }, { [2] = 101 }, nil, nil, nil, true }
-players["feikar"] = { "Feikar", 9781, 8, 2, 102, { [2] = 9781, [3] = 254 }, { [2] = 102, [3] = 620 }, nil, nil, nil, true }
-players["medlenno"] = { "Medlenno", 9778, 8, 2, 103, { [2] = 9778 }, { [2] = 103 }, nil, nil, nil, true }
-players["riinoxii"] = { "Riinoxii", 9776, 8, 2, 104, { [2] = 9776 }, { [2] = 104 }, nil, nil, nil, true }
-players["terrodot"] = { "Terrodot", 9774, 8, 2, 105, { [1] = 9312, [2] = 9774 }, { [1] = 171, [2] = 105 }, nil, nil, nil, true }
-players["bottomdps"] = { "Bottomdps", 9769, 8, 2, 107, { [1] = 5978, [2] = 9769 }, { [1] = 1467, [2] = 107 }, nil, nil, nil, true }
-players["chymezzbolt"] = { "Chymezzbolt", 9767, 8, 2, 108, { [1] = 3050, [2] = 9767 }, { [1] = 4036, [2] = 108 }, nil, nil, nil, true }
-players["doomgodx"] = { "Doomgodx", 9765, 8, 2, 109, { [1] = 6662, [2] = 9765 }, { [1] = 1078, [2] = 109 }, nil, nil, nil, true }
-players["deruda"] = { "Deruda", 9762, 8, 2, 110, { [1] = 8966, [2] = 9762 }, { [1] = 262, [2] = 110 }, nil, nil, nil, true }
-players["gramma"] = { "Gramma", 9761, 8, 2, 111, { [1] = 5045, [2] = 9761, [3] = 215 }, { [1] = 1977, [2] = 111, [3] = 672 }, nil, nil, nil, true }
-players["pappasmaggot"] = { "Pappasmaggot", 9760, 8, 2, 112, { [1] = 4013, [2] = 9760 }, { [1] = 2798, [2] = 112 }, nil, nil, nil, true }
-players["gosummon"] = { "Gosummon", 9760, 8, 2, 113, { [1] = 6702, [2] = 9760, [3] = 199 }, { [1] = 1058, [2] = 113, [3] = 697 }, nil, nil, nil, true }
-players["antagonistic"] = { "Antagonistic", 9758, 8, 2, 114, { [1] = 9507, [2] = 9758, [3] = 296 }, { [1] = 121, [2] = 114, [3] = 577 }, nil, nil, nil, true }
-players["rayewarlock"] = { "Rayewarlock", 9758, 8, 2, 115, { [1] = 7804, [2] = 9758 }, { [1] = 606, [2] = 115 }, nil, nil, nil, true }
-players["faggodx"] = { "Faggodx", 9757, 8, 2, 116, { [1] = 8118, [2] = 9757 }, { [1] = 494, [2] = 116 }, nil, nil, nil, true }
-players["dotpain"] = { "Dotpain", 9751, 8, 2, 118, { [1] = 4565, [2] = 9751 }, { [1] = 2245, [2] = 118 }, nil, nil, nil, true }
-players["demoncake"] = { "Demoncake", 9746, 8, 2, 119, { [2] = 9746 }, { [2] = 119 }, nil, nil, nil, true }
-players["lzp"] = { "Lzp", 9740, 8, 2, 121, { [1] = 1002, [2] = 9740, [3] = 250 }, { [1] = 4769, [2] = 121, [3] = 624 }, nil, nil, nil, true }
-players["soulpuppet"] = { "Soulpuppet", 9737, 8, 2, 122, { [1] = 8682, [2] = 9737 }, { [1] = 328, [2] = 122 }, nil, nil, nil, true }
-players["sanixxa"] = { "Sanixxa", 9735, 8, 2, 123, { [1] = 4375, [2] = 9735 }, { [1] = 2403, [2] = 123 }, nil, nil, nil, true }
-players["vaskir"] = { "Vaskir", 9734, 8, 2, 124, { [1] = 6092, [2] = 9734 }, { [1] = 1403, [2] = 124 }, nil, nil, nil, true }
-players["benfear"] = { "Benfear", 9733, 8, 2, 125, { [2] = 9733 }, { [2] = 125 }, nil, nil, nil, true }
-players["cheichei"] = { "Cheichei", 9732, 8, 2, 126, { [1] = 6961, [2] = 9732 }, { [1] = 940, [2] = 126 }, nil, nil, nil, true }
-players["raknoss"] = { "Raknoss", 9731, 8, 2, 127, { [1] = 8529, [2] = 9731 }, { [1] = 386, [2] = 127 }, nil, nil, nil, true }
-players["terrobolt"] = { "Terrobolt", 9729, 8, 2, 128, { [2] = 9729 }, { [2] = 128 }, nil, nil, nil, true }
-players["rampejdz"] = { "Rampejdz", 9728, 8, 2, 129, { [1] = 4296, [2] = 9728, [3] = 64 }, { [1] = 2466, [2] = 129, [3] = 870 }, nil, nil, nil, true }
-players["patcheslock"] = { "Patcheslock", 9728, 8, 2, 130, { [1] = 3556, [2] = 9728 }, { [1] = 3809, [2] = 130 }, nil, nil, nil, true }
-players["cakeflake"] = { "Cakeflake", 9728, 8, 2, 131, { [2] = 9728 }, { [2] = 131 }, nil, nil, nil, true }
-players["zufa"] = { "Zufa", 9726, 8, 2, 132, { [2] = 9726 }, { [2] = 132 }, nil, nil, nil, true }
-players["dmgnotfound"] = { "Dmgnotfound", 9724, 8, 2, 133, { [2] = 9724 }, { [2] = 133 }, nil, nil, nil, true }
-players["soulmehard"] = { "Soulmehard", 9723, 8, 2, 135, { [1] = 9630, [2] = 9723 }, { [1] = 89, [2] = 135 }, nil, nil, nil, true }
-players["ggbolt"] = { "Ggbolt", 9721, 8, 2, 136, { [2] = 9721 }, { [2] = 136 }, nil, nil, nil, true }
-players["chopinasimp"] = { "Chopinasimp", 9717, 8, 2, 137, { [1] = 9620, [2] = 9717 }, { [1] = 95, [2] = 137 }, nil, nil, nil, true }
-players["prospisb"] = { "Prospisb", 9716, 8, 2, 138, { [2] = 9716 }, { [2] = 138 }, nil, nil, nil, true }
-players["papyrko"] = { "Papyrko", 9715, 8, 2, 139, { [1] = 8801, [2] = 9715 }, { [1] = 300, [2] = 139 }, nil, nil, nil, true }
-players["fittlock"] = { "Fittlock", 9712, 8, 2, 140, { [1] = 3234, [2] = 9712 }, { [1] = 3903, [2] = 140 }, nil, nil, nil, true }
-players["marlute"] = { "Marlute", 9711, 8, 2, 141, { [1] = 8550, [2] = 9711 }, { [1] = 381, [2] = 141 }, nil, nil, nil, true }
+players["ariuswl"] = { "Ariuswl", 9809, 8, 2, 87, { [2] = 9809, [3] = 290 }, { [2] = 87, [3] = 583 }, nil, nil, nil, true }
+players["fearstaid"] = { "Fearstaid", 9809, 8, 2, 88, { [1] = 3065, [2] = 9809 }, { [1] = 4032, [2] = 88 }, nil, nil, nil, true }
+players["amebarelax"] = { "Amebarelax", 9808, 8, 2, 89, { [1] = 9012, [2] = 9808 }, { [1] = 249, [2] = 89 }, nil, nil, nil, true }
+players["chymezzbolt"] = { "Chymezzbolt", 9807, 8, 2, 92, { [1] = 3046, [2] = 9807 }, { [1] = 4048, [2] = 92 }, nil, nil, nil, true }
+players["madscience"] = { "Madscience", 9800, 8, 2, 94, { [1] = 6107, [2] = 9800 }, { [1] = 1398, [2] = 94 }, nil, nil, nil, true }
+players["sanixxa"] = { "Sanixxa", 9798, 8, 2, 95, { [1] = 4368, [2] = 9798 }, { [1] = 2409, [2] = 95 }, nil, nil, nil, true }
+players["cowind"] = { "Cowind", 9796, 8, 2, 96, { [1] = 4686, [2] = 9796, [3] = 3631 }, { [1] = 2169, [2] = 96, [3] = 7222 }, nil, nil, nil, true }
+players["kaenbyou"] = { "Kaenbyou", 9796, 8, 2, 97, { [2] = 9796, [3] = 1604 }, { [2] = 97, [3] = 279 }, nil, nil, nil, true }
+players["themdfker"] = { "Themdfker", 9795, 8, 2, 98, { [2] = 9795 }, { [2] = 98 }, nil, nil, nil, true }
+players["elwalock"] = { "Elwalock", 9793, 8, 2, 99, { [2] = 9793 }, { [2] = 99 }, nil, nil, nil, true }
+players["darkbrand"] = { "Darkbrand", 9793, 8, 2, 100, { [2] = 9793, [3] = 9692 }, { [2] = 100, [3] = 7 }, nil, nil, nil, true }
+players["wesker"] = { "Wesker", 9790, 8, 2, 101, { [1] = 9296, [2] = 9790 }, { [1] = 177, [2] = 101 }, nil, nil, nil, true }
+players["cakebaker"] = { "Cakebaker", 9788, 8, 2, 102, { [2] = 9788 }, { [2] = 102 }, nil, nil, nil, true }
+players["phenomx"] = { "Phenomx", 9786, 8, 2, 103, { [1] = 5022, [2] = 9786 }, { [1] = 1993, [2] = 103 }, nil, nil, nil, true }
+players["isurprise"] = { "Isurprise", 9781, 8, 2, 104, { [2] = 9781 }, { [2] = 104 }, nil, nil, nil, true }
+players["feikar"] = { "Feikar", 9780, 8, 2, 105, { [2] = 9780, [3] = 251 }, { [2] = 105, [3] = 624 }, nil, nil, nil, true }
+players["medlenno"] = { "Medlenno", 9775, 8, 2, 106, { [2] = 9775 }, { [2] = 106 }, nil, nil, nil, true }
+players["riinoxii"] = { "Riinoxii", 9774, 8, 2, 107, { [2] = 9774 }, { [2] = 107 }, nil, nil, nil, true }
+players["terrodot"] = { "Terrodot", 9773, 8, 2, 108, { [1] = 9312, [2] = 9773 }, { [1] = 172, [2] = 108 }, nil, nil, nil, true }
+players["bottomdps"] = { "Bottomdps", 9767, 8, 2, 110, { [1] = 5972, [2] = 9767 }, { [1] = 1474, [2] = 110 }, nil, nil, nil, true }
+players["doomgodx"] = { "Doomgodx", 9764, 8, 2, 111, { [1] = 6657, [2] = 9764 }, { [1] = 1087, [2] = 111 }, nil, nil, nil, true }
+players["deruda"] = { "Deruda", 9760, 8, 2, 112, { [1] = 8967, [2] = 9760 }, { [1] = 264, [2] = 112 }, nil, nil, nil, true }
+players["gramma"] = { "Gramma", 9759, 8, 2, 113, { [1] = 5042, [2] = 9759, [3] = 214 }, { [1] = 1985, [2] = 113, [3] = 675 }, nil, nil, nil, true }
+players["pappasmaggot"] = { "Pappasmaggot", 9758, 8, 2, 114, { [1] = 4012, [2] = 9758 }, { [1] = 2802, [2] = 114 }, nil, nil, nil, true }
+players["gosummon"] = { "Gosummon", 9757, 8, 2, 115, { [1] = 7633, [2] = 9757, [3] = 204 }, { [1] = 667, [2] = 115, [3] = 692 }, nil, nil, nil, true }
+players["incite"] = { "Incite", 9756, 8, 2, 116, { [2] = 9756 }, { [2] = 116 }, nil, nil, nil, true }
+players["antagonistic"] = { "Antagonistic", 9756, 8, 2, 117, { [1] = 9507, [2] = 9756, [3] = 296 }, { [1] = 121, [2] = 117, [3] = 577 }, nil, nil, nil, true }
+players["faggodx"] = { "Faggodx", 9756, 8, 2, 118, { [1] = 8116, [2] = 9756 }, { [1] = 498, [2] = 118 }, nil, nil, nil, true }
+players["dotpain"] = { "Dotpain", 9749, 8, 2, 120, { [1] = 4560, [2] = 9749 }, { [1] = 2251, [2] = 120 }, nil, nil, nil, true }
+players["demoncake"] = { "Demoncake", 9744, 8, 2, 121, { [2] = 9744 }, { [2] = 121 }, nil, nil, nil, true }
+players["lzp"] = { "Lzp", 9737, 8, 2, 123, { [1] = 1002, [2] = 9737, [3] = 249 }, { [1] = 4785, [2] = 123, [3] = 626 }, nil, nil, nil, true }
+players["soulpuppet"] = { "Soulpuppet", 9735, 8, 2, 124, { [1] = 8681, [2] = 9735 }, { [1] = 328, [2] = 124 }, nil, nil, nil, true }
+players["vaskir"] = { "Vaskir", 9732, 8, 2, 125, { [1] = 6087, [2] = 9732 }, { [1] = 1411, [2] = 125 }, nil, nil, nil, true }
+players["benfear"] = { "Benfear", 9731, 8, 2, 126, { [2] = 9731 }, { [2] = 126 }, nil, nil, nil, true }
+players["cheichei"] = { "Cheichei", 9730, 8, 2, 127, { [1] = 6961, [2] = 9730 }, { [1] = 945, [2] = 127 }, nil, nil, nil, true }
+players["raknoss"] = { "Raknoss", 9728, 8, 2, 128, { [1] = 8525, [2] = 9728 }, { [1] = 387, [2] = 128 }, nil, nil, nil, true }
+players["terrobolt"] = { "Terrobolt", 9728, 8, 2, 129, { [2] = 9728 }, { [2] = 129 }, nil, nil, nil, true }
+players["rampejdz"] = { "Rampejdz", 9726, 8, 2, 130, { [1] = 4291, [2] = 9726, [3] = 64 }, { [1] = 2472, [2] = 130, [3] = 875 }, nil, nil, nil, true }
+players["cakeflake"] = { "Cakeflake", 9725, 8, 2, 131, { [2] = 9725 }, { [2] = 131 }, nil, nil, nil, true }
+players["patcheslock"] = { "Patcheslock", 9725, 8, 2, 132, { [1] = 3551, [2] = 9725 }, { [1] = 3821, [2] = 132 }, nil, nil, nil, true }
+players["zufa"] = { "Zufa", 9724, 8, 2, 133, { [2] = 9724 }, { [2] = 133 }, nil, nil, nil, true }
+players["dmgnotfound"] = { "Dmgnotfound", 9722, 8, 2, 134, { [2] = 9722 }, { [2] = 134 }, nil, nil, nil, true }
+players["soulmehard"] = { "Soulmehard", 9722, 8, 2, 135, { [1] = 9629, [2] = 9722 }, { [1] = 89, [2] = 135 }, nil, nil, nil, true }
+players["ggbolt"] = { "Ggbolt", 9719, 8, 2, 137, { [2] = 9719 }, { [2] = 137 }, nil, nil, nil, true }
+players["borncursed"] = { "Borncursed", 9716, 8, 2, 138, { [1] = 7595, [2] = 9716 }, { [1] = 678, [2] = 138 }, nil, nil, nil, true }
+players["chopinasimp"] = { "Chopinasimp", 9715, 8, 2, 139, { [1] = 9621, [2] = 9715 }, { [1] = 95, [2] = 139 }, nil, nil, nil, true }
+players["prospisb"] = { "Prospisb", 9714, 8, 2, 140, { [2] = 9714 }, { [2] = 140 }, nil, nil, nil, true }
+players["papyrko"] = { "Papyrko", 9713, 8, 2, 141, { [1] = 8800, [2] = 9713 }, { [1] = 302, [2] = 141 }, nil, nil, nil, true }
 players["ryancastro"] = { "Ryancastro", 9700, 8, 2, 141, { [2] = 9700 }, { [2] = 141 }, nil, nil, nil, false }
-players["plzgofear"] = { "Plzgofear", 9710, 8, 2, 142, { [1] = 7155, [2] = 9710, [3] = 10 }, { [1] = 857, [2] = 142, [3] = 924 }, nil, nil, nil, true }
-players["dazkapytal"] = { "Dazkapytal", 9707, 8, 2, 143, { [1] = 9205, [2] = 9707 }, { [1] = 195, [2] = 143 }, nil, nil, nil, true }
-players["borncursed"] = { "Borncursed", 9703, 8, 2, 144, { [1] = 7600, [2] = 9703 }, { [1] = 674, [2] = 144 }, nil, nil, nil, true }
-players["aggrro"] = { "Aggrro", 9702, 8, 2, 145, { [1] = 9493, [2] = 9702, [3] = 9189 }, { [1] = 125, [2] = 145, [3] = 15 }, nil, nil, nil, true }
-players["eliminate"] = { "Eliminate", 9698, 8, 2, 146, { [1] = 8042, [2] = 9698 }, { [1] = 530, [2] = 146 }, nil, nil, nil, true }
-players["ndmiibogaine"] = { "Ndmiibogaine", 9696, 8, 2, 147, { [2] = 9696 }, { [2] = 147 }, nil, nil, nil, true }
-players["umariusz"] = { "Umariusz", 9695, 8, 2, 148, { [2] = 9695 }, { [2] = 148 }, nil, nil, nil, true }
-players["belzxy"] = { "Belzxy", 9695, 8, 2, 149, { [2] = 9695 }, { [2] = 149 }, nil, nil, nil, true }
-players["turbogorilla"] = { "Turbogorilla", 9691, 8, 2, 151, { [1] = 3871, [2] = 9691 }, { [1] = 2995, [2] = 151 }, nil, nil, nil, true }
-players["onetouch"] = { "Onetouch", 9689, 8, 2, 152, { [2] = 9689 }, { [2] = 152 }, nil, nil, nil, true }
-players["cursanova"] = { "Cursanova", 9685, 8, 2, 155, { [1] = 4422, [2] = 9685 }, { [1] = 2360, [2] = 155 }, nil, nil, nil, true }
-players["silentflame"] = { "Silentflame", 9684, 8, 2, 156, { [1] = 7637, [2] = 9684 }, { [1] = 664, [2] = 156 }, nil, nil, nil, true }
-players["ellonmusk"] = { "Ellonmusk", 9684, 8, 2, 157, { [2] = 9684, [3] = 451 }, { [2] = 157, [3] = 456 }, nil, nil, nil, true }
-players["mobellylock"] = { "Mobellylock", 9680, 8, 2, 158, { [2] = 9680 }, { [2] = 158 }, nil, nil, nil, true }
-players["roxxlock"] = { "Roxxlock", 9680, 8, 2, 159, { [2] = 9680 }, { [2] = 159 }, nil, nil, nil, true }
-players["pinpe"] = { "Pinpe", 9678, 8, 2, 160, { [1] = 9599, [2] = 9678 }, { [1] = 103, [2] = 160 }, nil, nil, nil, true }
-players["parcow"] = { "Parcow", 9666, 8, 2, 161, { [1] = 8302, [2] = 9666 }, { [1] = 440, [2] = 161 }, nil, nil, nil, true }
-players["dotdotdeadge"] = { "Dotdotdeadge", 9665, 8, 2, 162, { [1] = 4876, [2] = 9665 }, { [1] = 2065, [2] = 162 }, nil, nil, nil, true }
-players["brujilliza"] = { "Brujilliza", 9665, 8, 2, 163, { [2] = 9665 }, { [2] = 163 }, nil, nil, nil, true }
-players["hlucination"] = { "Hlucination", 9664, 8, 2, 164, { [1] = 8764, [2] = 9664 }, { [1] = 310, [2] = 164 }, nil, nil, nil, true }
-players["felhart"] = { "Felhart", 9660, 8, 2, 165, { [1] = 4126, [2] = 9660 }, { [1] = 2646, [2] = 165 }, nil, nil, nil, true }
-players["raethos"] = { "Raethos", 9658, 8, 2, 166, { [1] = 8713, [2] = 9658 }, { [1] = 318, [2] = 166 }, nil, nil, nil, true }
-players["hariasa"] = { "Hariasa", 10000, 8, 3, 1, { [2] = 9687, [3] = 10000 }, { [2] = 153, [3] = 1 }, nil, nil, nil, true }
-players["anetheronh"] = { "Anetheronh", 9928, 8, 3, 2, { [1] = 4454, [2] = 9755, [3] = 9928 }, { [1] = 2336, [2] = 117, [3] = 2 }, nil, nil, nil, true }
-players["mgkyaw"] = { "Mgkyaw", 9835, 8, 3, 4, { [1] = 9671, [2] = 9694, [3] = 9835 }, { [1] = 78, [2] = 150, [3] = 4 }, nil, nil, nil, true }
-players["liuh"] = { "Liuh", 9760, 8, 3, 5, { [1] = 592, [2] = 3505, [3] = 9760 }, { [1] = 5090, [2] = 7083, [3] = 5 }, nil, nil, nil, true }
-players["avp"] = { "Avp", 9734, 8, 3, 6, { [1] = 7774, [2] = 9458, [3] = 9734 }, { [1] = 616, [2] = 280, [3] = 6 }, nil, nil, nil, true }
-players["dottingtwats"] = { "Dottingtwats", 9632, 8, 3, 8, { [1] = 9130, [2] = 8828, [3] = 9632 }, { [1] = 210, [2] = 729, [3] = 8 }, nil, nil, nil, true }
-players["triz"] = { "Triz", 9579, 8, 3, 9, { [3] = 9579 }, { [3] = 9 }, nil, nil, nil, true }
-players["sagera"] = { "Sagera", 9466, 8, 3, 10, { [2] = 8864, [3] = 9466 }, { [2] = 696, [3] = 10 }, nil, nil, nil, true }
-players["bauzauwu"] = { "Bauzauwu", 9409, 8, 3, 11, { [1] = 7524, [2] = 8633, [3] = 9409 }, { [1] = 700, [2] = 886, [3] = 11 }, nil, nil, nil, true }
-players["hellburst"] = { "Hellburst", 9351, 8, 3, 12, { [1] = 6885, [2] = 8497, [3] = 9351 }, { [1] = 972, [2] = 987, [3] = 12 }, nil, nil, nil, true }
-players["undoublle"] = { "Undoublle", 9267, 8, 3, 13, { [2] = 8464, [3] = 9267 }, { [2] = 1013, [3] = 13 }, nil, nil, nil, true }
-players["lullita"] = { "Lullita", 9234, 8, 3, 14, { [2] = 8932, [3] = 9234 }, { [2] = 640, [3] = 14 }, nil, nil, nil, true }
-players["chaosmon"] = { "Chaosmon", 9117, 8, 3, 16, { [2] = 5414, [3] = 9117 }, { [2] = 4571, [3] = 16 }, nil, nil, nil, true }
-players["destroeblan"] = { "Destroeblan", 9093, 8, 3, 17, { [2] = 8692, [3] = 9093 }, { [2] = 840, [3] = 17 }, nil, nil, nil, true }
-players["ramnousia"] = { "Ramnousia", 10000, 9, 1, 1, { [1] = 10000, [2] = 1186, [3] = 9312 }, { [1] = 1, [2] = 22214, [3] = 13 }, nil, nil, nil, true }
-players["primezero"] = { "Primezero", 9623, 9, 1, 3, { [1] = 9623, [2] = 9014 }, { [1] = 3, [2] = 694 }, nil, nil, nil, true }
-players["shoupasta"] = { "Shoupasta", 9519, 9, 1, 4, { [1] = 9519, [2] = 7235 }, { [1] = 4, [2] = 2658 }, nil, nil, nil, true }
-players["sagarian"] = { "Sagarian", 9396, 9, 1, 5, { [1] = 9396, [2] = 7219 }, { [1] = 5, [2] = 2693 }, nil, nil, nil, true }
+players["fittlock"] = { "Fittlock", 9709, 8, 2, 142, { [1] = 3232, [2] = 9709 }, { [1] = 3914, [2] = 142 }, nil, nil, nil, true }
+players["marlute"] = { "Marlute", 9709, 8, 2, 143, { [1] = 8547, [2] = 9709 }, { [1] = 382, [2] = 143 }, nil, nil, nil, true }
+players["plzgofear"] = { "Plzgofear", 9707, 8, 2, 144, { [1] = 7151, [2] = 9707, [3] = 10 }, { [1] = 863, [2] = 144, [3] = 929 }, nil, nil, nil, true }
+players["dazkapytal"] = { "Dazkapytal", 9705, 8, 2, 145, { [1] = 9204, [2] = 9705 }, { [1] = 196, [2] = 145 }, nil, nil, nil, true }
+players["aggrro"] = { "Aggrro", 9699, 8, 2, 146, { [1] = 9493, [2] = 9699, [3] = 9192 }, { [1] = 125, [2] = 146, [3] = 15 }, nil, nil, nil, true }
+players["eliminate"] = { "Eliminate", 9696, 8, 2, 147, { [1] = 8041, [2] = 9696 }, { [1] = 533, [2] = 147 }, nil, nil, nil, true }
+players["ndmiibogaine"] = { "Ndmiibogaine", 9694, 8, 2, 148, { [2] = 9694 }, { [2] = 148 }, nil, nil, nil, true }
+players["umariusz"] = { "Umariusz", 9693, 8, 2, 149, { [2] = 9693 }, { [2] = 149 }, nil, nil, nil, true }
+players["belzxy"] = { "Belzxy", 9693, 8, 2, 150, { [2] = 9693 }, { [2] = 150 }, nil, nil, nil, true }
+players["turbogorilla"] = { "Turbogorilla", 9689, 8, 2, 152, { [1] = 3868, [2] = 9689 }, { [1] = 3005, [2] = 152 }, nil, nil, nil, true }
+players["onetouch"] = { "Onetouch", 9686, 8, 2, 153, { [2] = 9686 }, { [2] = 153 }, nil, nil, nil, true }
+players["cursanova"] = { "Cursanova", 9683, 8, 2, 156, { [1] = 4416, [2] = 9683 }, { [1] = 2365, [2] = 156 }, nil, nil, nil, true }
+players["silentflame"] = { "Silentflame", 9682, 8, 2, 157, { [1] = 7634, [2] = 9682 }, { [1] = 666, [2] = 157 }, nil, nil, nil, true }
+players["ellonmusk"] = { "Ellonmusk", 9681, 8, 2, 158, { [2] = 9681, [3] = 451 }, { [2] = 158, [3] = 458 }, nil, nil, nil, true }
+players["mobellylock"] = { "Mobellylock", 9678, 8, 2, 159, { [2] = 9678 }, { [2] = 159 }, nil, nil, nil, true }
+players["roxxlock"] = { "Roxxlock", 9677, 8, 2, 160, { [2] = 9677 }, { [2] = 160 }, nil, nil, nil, true }
+players["pinpe"] = { "Pinpe", 9676, 8, 2, 161, { [1] = 9600, [2] = 9676 }, { [1] = 103, [2] = 161 }, nil, nil, nil, true }
+players["parcow"] = { "Parcow", 9663, 8, 2, 162, { [1] = 8299, [2] = 9663 }, { [1] = 443, [2] = 162 }, nil, nil, nil, true }
+players["brujilliza"] = { "Brujilliza", 9662, 8, 2, 163, { [2] = 9662 }, { [2] = 163 }, nil, nil, nil, true }
+players["dotdotdeadge"] = { "Dotdotdeadge", 9662, 8, 2, 164, { [1] = 4872, [2] = 9662 }, { [1] = 2072, [2] = 164 }, nil, nil, nil, true }
+players["hlucination"] = { "Hlucination", 9662, 8, 2, 165, { [1] = 8764, [2] = 9662 }, { [1] = 311, [2] = 165 }, nil, nil, nil, true }
+players["felhart"] = { "Felhart", 9657, 8, 2, 166, { [1] = 4121, [2] = 9657 }, { [1] = 2655, [2] = 166 }, nil, nil, nil, true }
+players["raethos"] = { "Raethos", 9655, 8, 2, 167, { [1] = 8714, [2] = 9655 }, { [1] = 318, [2] = 167 }, nil, nil, nil, true }
+players["hariasa"] = { "Hariasa", 10000, 8, 3, 1, { [2] = 9686, [3] = 10000 }, { [2] = 155, [3] = 1 }, nil, nil, nil, true }
+players["anetheronh"] = { "Anetheronh", 9929, 8, 3, 2, { [1] = 4448, [2] = 9753, [3] = 9929 }, { [1] = 2345, [2] = 119, [3] = 2 }, nil, nil, nil, true }
+players["mgkyaw"] = { "Mgkyaw", 9836, 8, 3, 4, { [1] = 9670, [2] = 9692, [3] = 9836 }, { [1] = 78, [2] = 151, [3] = 4 }, nil, nil, nil, true }
+players["liuh"] = { "Liuh", 9760, 8, 3, 5, { [1] = 591, [2] = 3502, [3] = 9760 }, { [1] = 5107, [2] = 7103, [3] = 5 }, nil, nil, nil, true }
+players["avp"] = { "Avp", 9735, 8, 3, 6, { [1] = 7770, [2] = 9455, [3] = 9735 }, { [1] = 618, [2] = 281, [3] = 6 }, nil, nil, nil, true }
+players["dottingtwats"] = { "Dottingtwats", 9633, 8, 3, 8, { [1] = 9130, [2] = 8823, [3] = 9633 }, { [1] = 211, [2] = 735, [3] = 8 }, nil, nil, nil, true }
+players["triz"] = { "Triz", 9580, 8, 3, 9, { [3] = 9580 }, { [3] = 9 }, nil, nil, nil, true }
+players["sagera"] = { "Sagera", 9468, 8, 3, 10, { [2] = 8860, [3] = 9468 }, { [2] = 702, [3] = 10 }, nil, nil, nil, true }
+players["bauzauwu"] = { "Bauzauwu", 9412, 8, 3, 11, { [1] = 7519, [2] = 8626, [3] = 9412 }, { [1] = 703, [2] = 891, [3] = 11 }, nil, nil, nil, true }
+players["hellburst"] = { "Hellburst", 9353, 8, 3, 12, { [1] = 6882, [2] = 8490, [3] = 9353 }, { [1] = 980, [2] = 992, [3] = 12 }, nil, nil, nil, true }
+players["undoublle"] = { "Undoublle", 9270, 8, 3, 13, { [2] = 8458, [3] = 9270 }, { [2] = 1017, [3] = 13 }, nil, nil, nil, true }
+players["lullita"] = { "Lullita", 9236, 8, 3, 14, { [2] = 8928, [3] = 9236 }, { [2] = 644, [3] = 14 }, nil, nil, nil, true }
+players["chaosmon"] = { "Chaosmon", 9119, 8, 3, 16, { [2] = 5407, [3] = 9119 }, { [2] = 4586, [3] = 16 }, nil, nil, nil, true }
+players["destroeblan"] = { "Destroeblan", 9097, 8, 3, 17, { [2] = 8686, [3] = 9097 }, { [2] = 846, [3] = 17 }, nil, nil, nil, true }
+players["ramnousia"] = { "Ramnousia", 10000, 9, 1, 1, { [1] = 10000, [2] = 1186, [3] = 9315 }, { [1] = 1, [2] = 22276, [3] = 13 }, nil, nil, nil, true }
+players["primezero"] = { "Primezero", 9623, 9, 1, 3, { [1] = 9623, [2] = 9009 }, { [1] = 3, [2] = 699 }, nil, nil, nil, true }
+players["shoupasta"] = { "Shoupasta", 9519, 9, 1, 4, { [1] = 9519, [2] = 7224 }, { [1] = 4, [2] = 2682 }, nil, nil, nil, true }
+players["sagarian"] = { "Sagarian", 9396, 9, 1, 5, { [1] = 9396, [2] = 7206 }, { [1] = 5, [2] = 2717 }, nil, nil, nil, true }
 players["gazra"] = { "Gazra", 9376, 9, 1, 6, { [1] = 9376 }, { [1] = 6 }, nil, nil, nil, true }
-players["kukuzuzu"] = { "Kukuzuzu", 9315, 9, 1, 7, { [1] = 9315, [2] = 2038 }, { [1] = 7, [2] = 20023 }, nil, nil, nil, true }
-players["sunderclap"] = { "Sunderclap", 9260, 9, 1, 8, { [1] = 9260, [2] = 7521 }, { [1] = 8, [2] = 2259 }, nil, nil, nil, true }
-players["yourlastclap"] = { "Yourlastclap", 8647, 9, 1, 12, { [1] = 8647, [2] = 6030 }, { [1] = 12, [2] = 5417 }, nil, nil, nil, true }
-players["armsvolver"] = { "Armsvolver", 8628, 9, 1, 13, { [1] = 8628, [2] = 8575 }, { [1] = 13, [2] = 1064 }, nil, nil, nil, true }
+players["kukuzuzu"] = { "Kukuzuzu", 9315, 9, 1, 7, { [1] = 9315, [2] = 2038 }, { [1] = 7, [2] = 20083 }, nil, nil, nil, true }
+players["sunderclap"] = { "Sunderclap", 9260, 9, 1, 8, { [1] = 9260, [2] = 7515 }, { [1] = 8, [2] = 2267 }, nil, nil, nil, true }
+players["yourlastclap"] = { "Yourlastclap", 8647, 9, 1, 12, { [1] = 8647, [2] = 6022 }, { [1] = 12, [2] = 5439 }, nil, nil, nil, true }
+players["armsvolver"] = { "Armsvolver", 8628, 9, 1, 13, { [1] = 8628, [2] = 8569 }, { [1] = 13, [2] = 1072 }, nil, nil, nil, true }
 players["chainsaws"] = { "Chainsaws", 10000, 9, 2, 1, { [2] = 10000 }, { [2] = 1 }, nil, nil, nil, true }
 players["zuldazar"] = { "Zuldazar", 9998, 9, 2, 2, { [2] = 9998 }, { [2] = 2 }, nil, nil, nil, true }
 players["tuan"] = { "Tuan", 9996, 9, 2, 3, { [2] = 9996 }, { [2] = 3 }, nil, nil, nil, true }
 players["tf"] = { "Tf", 9992, 9, 2, 4, { [2] = 9992 }, { [2] = 4 }, nil, nil, nil, true }
-players["nswghost"] = { "Nswghost", 9987, 9, 2, 5, { [2] = 9987 }, { [2] = 5 }, nil, nil, nil, true }
+players["nswghost"] = { "Nswghost", 9986, 9, 2, 5, { [2] = 9986 }, { [2] = 5 }, nil, nil, nil, true }
 players["fracture"] = { "Fracture", 9986, 9, 2, 6, { [2] = 9986 }, { [2] = 6 }, nil, nil, nil, true }
 players["fentanyl"] = { "Fentanyl", 9982, 9, 2, 7, { [2] = 9982 }, { [2] = 7 }, nil, nil, nil, true }
-players["jheezeus"] = { "Jheezeus", 9981, 9, 2, 8, { [2] = 9981 }, { [2] = 8 }, nil, nil, nil, true }
-players["bomostrike"] = { "Bomostrike", 9979, 9, 2, 9, { [2] = 9979 }, { [2] = 9 }, nil, nil, nil, true }
-players["bomo"] = { "Bomo", 9977, 9, 2, 10, { [2] = 9977 }, { [2] = 10 }, nil, nil, nil, true }
-players["sizzurp"] = { "Sizzurp", 9977, 9, 2, 11, { [2] = 9977 }, { [2] = 11 }, nil, nil, nil, true }
+players["bomo"] = { "Bomo", 9981, 9, 2, 8, { [2] = 9981 }, { [2] = 8 }, nil, nil, nil, true }
+players["jheezeus"] = { "Jheezeus", 9980, 9, 2, 9, { [2] = 9980 }, { [2] = 9 }, nil, nil, nil, true }
+players["bomostrike"] = { "Bomostrike", 9979, 9, 2, 10, { [2] = 9979 }, { [2] = 10 }, nil, nil, nil, true }
+players["sizzurp"] = { "Sizzurp", 9976, 9, 2, 11, { [2] = 9976 }, { [2] = 11 }, nil, nil, nil, true }
 players["pinnut"] = { "Pinnut", 9976, 9, 2, 12, { [2] = 9976 }, { [2] = 12 }, nil, nil, nil, true }
-players["jheesus"] = { "Jheesus", 9974, 9, 2, 13, { [1] = 333, [2] = 9974 }, { [1] = 353, [2] = 13 }, nil, nil, nil, true }
-players["pk"] = { "Pk", 9973, 9, 2, 14, { [2] = 9973 }, { [2] = 14 }, nil, nil, nil, true }
+players["jheesus"] = { "Jheesus", 9973, 9, 2, 13, { [1] = 333, [2] = 9973 }, { [1] = 353, [2] = 13 }, nil, nil, nil, true }
+players["pk"] = { "Pk", 9972, 9, 2, 14, { [2] = 9972 }, { [2] = 14 }, nil, nil, nil, true }
 players["oxycodone"] = { "Oxycodone", 9972, 9, 2, 15, { [2] = 9972 }, { [2] = 15 }, nil, nil, nil, true }
-players["future"] = { "Future", 9972, 9, 2, 16, { [2] = 9972 }, { [2] = 16 }, nil, nil, nil, true }
-players["bomocleave"] = { "Bomocleave", 9972, 9, 2, 17, { [2] = 9972 }, { [2] = 17 }, nil, nil, nil, true }
-players["envy"] = { "Envy", 9966, 9, 2, 18, { [2] = 9966 }, { [2] = 18 }, nil, nil, nil, true }
-players["stunna"] = { "Stunna", 9959, 9, 2, 19, { [2] = 9959 }, { [2] = 19 }, nil, nil, nil, true }
-players["cwelniczka"] = { "Cwelniczka", 9955, 9, 2, 20, { [2] = 9955 }, { [2] = 20 }, nil, nil, nil, true }
-players["kalugera"] = { "Kalugera", 9952, 9, 2, 21, { [2] = 9952 }, { [2] = 21 }, nil, nil, nil, true }
-players["highoctane"] = { "Highoctane", 9952, 9, 2, 22, { [2] = 9952 }, { [2] = 22 }, nil, nil, nil, true }
-players["aezakmi"] = { "Aezakmi", 9951, 9, 2, 23, { [2] = 9951 }, { [2] = 23 }, nil, nil, nil, true }
+players["bomocleave"] = { "Bomocleave", 9971, 9, 2, 16, { [2] = 9971 }, { [2] = 16 }, nil, nil, nil, true }
+players["future"] = { "Future", 9971, 9, 2, 17, { [2] = 9971 }, { [2] = 17 }, nil, nil, nil, true }
+players["envy"] = { "Envy", 9965, 9, 2, 18, { [2] = 9965 }, { [2] = 18 }, nil, nil, nil, true }
+players["kalugera"] = { "Kalugera", 9960, 9, 2, 19, { [2] = 9960 }, { [2] = 19 }, nil, nil, nil, true }
+players["stunna"] = { "Stunna", 9958, 9, 2, 20, { [2] = 9958 }, { [2] = 20 }, nil, nil, nil, true }
+players["cwelniczka"] = { "Cwelniczka", 9954, 9, 2, 21, { [2] = 9954 }, { [2] = 21 }, nil, nil, nil, true }
+players["highoctane"] = { "Highoctane", 9951, 9, 2, 22, { [2] = 9951 }, { [2] = 22 }, nil, nil, nil, true }
+players["aezakmi"] = { "Aezakmi", 9950, 9, 2, 23, { [2] = 9950 }, { [2] = 23 }, nil, nil, nil, true }
 players["zetacore"] = { "Zetacore", 9950, 9, 2, 24, { [2] = 9950 }, { [2] = 24 }, nil, nil, nil, true }
-players["framezbabe"] = { "Framezbabe", 9950, 9, 2, 25, { [1] = 9858, [2] = 9950 }, { [1] = 2, [2] = 25 }, nil, nil, nil, true }
-players["crip"] = { "Crip", 9949, 9, 2, 26, { [2] = 9949 }, { [2] = 26 }, nil, nil, nil, true }
-players["meekk"] = { "Meekk", 9943, 9, 2, 27, { [2] = 9943, [3] = 9741 }, { [2] = 27, [3] = 7 }, nil, nil, nil, true }
-players["admirwarr"] = { "Admirwarr", 9940, 9, 2, 28, { [2] = 9940 }, { [2] = 28 }, nil, nil, nil, true }
-players["boxior"] = { "Boxior", 9939, 9, 2, 29, { [2] = 9939 }, { [2] = 29 }, nil, nil, nil, true }
-players["fe"] = { "Fe", 9938, 9, 2, 30, { [2] = 9938 }, { [2] = 30 }, nil, nil, nil, true }
-players["cleavecigan"] = { "Cleavecigan", 9936, 9, 2, 31, { [2] = 9936 }, { [2] = 31 }, nil, nil, nil, true }
-players["lokcinawar"] = { "Lokcinawar", 9934, 9, 2, 32, { [2] = 9934 }, { [2] = 32 }, nil, nil, nil, true }
-players["shewasregal"] = { "Shewasregal", 9929, 9, 2, 33, { [2] = 9929 }, { [2] = 33 }, nil, nil, nil, true }
-players["dpscigan"] = { "Dpscigan", 9927, 9, 2, 34, { [2] = 9927 }, { [2] = 34 }, nil, nil, nil, true }
-players["ragedoll"] = { "Ragedoll", 9926, 9, 2, 35, { [2] = 9926 }, { [2] = 35 }, nil, nil, nil, true }
-players["jokara"] = { "Jokara", 9923, 9, 2, 36, { [2] = 9923 }, { [2] = 36 }, nil, nil, nil, true }
-players["vidimaliciga"] = { "Vidimaliciga", 9922, 9, 2, 37, { [2] = 9922 }, { [2] = 37 }, nil, nil, nil, true }
-players["lycla"] = { "Lycla", 9921, 9, 2, 38, { [2] = 9921 }, { [2] = 38 }, nil, nil, nil, true }
-players["adn"] = { "Adn", 9915, 9, 2, 39, { [2] = 9915 }, { [2] = 39 }, nil, nil, nil, true }
-players["johngotti"] = { "Johngotti", 9914, 9, 2, 40, { [2] = 9914 }, { [2] = 40 }, nil, nil, nil, true }
-players["linkiwar"] = { "Linkiwar", 9909, 9, 2, 41, { [2] = 9909 }, { [2] = 41 }, nil, nil, nil, true }
-players["acidwarr"] = { "Acidwarr", 9908, 9, 2, 42, { [2] = 9908 }, { [2] = 42 }, nil, nil, nil, true }
-players["warpax"] = { "Warpax", 9906, 9, 2, 43, { [2] = 9906 }, { [2] = 43 }, nil, nil, nil, true }
-players["cwelmaker"] = { "Cwelmaker", 9904, 9, 2, 44, { [2] = 9904 }, { [2] = 44 }, nil, nil, nil, true }
-players["halogen"] = { "Halogen", 9901, 9, 2, 45, { [2] = 9901 }, { [2] = 45 }, nil, nil, nil, true }
-players["kirchok"] = { "Kirchok", 9901, 9, 2, 46, { [1] = 7830, [2] = 9901 }, { [1] = 27, [2] = 46 }, nil, nil, nil, true }
-players["estimate"] = { "Estimate", 9900, 9, 2, 47, { [2] = 9900 }, { [2] = 47 }, nil, nil, nil, true }
-players["zetafury"] = { "Zetafury", 9898, 9, 2, 48, { [2] = 9898 }, { [2] = 48 }, nil, nil, nil, true }
-players["bisimchi"] = { "Bisimchi", 9896, 9, 2, 49, { [2] = 9896 }, { [2] = 49 }, nil, nil, nil, true }
-players["notoriousx"] = { "Notoriousx", 9891, 9, 2, 50, { [2] = 9891 }, { [2] = 50 }, nil, nil, nil, true }
-players["strythx"] = { "Strythx", 9888, 9, 2, 51, { [2] = 9888 }, { [2] = 51 }, nil, nil, nil, true }
-players["markizz"] = { "Markizz", 9885, 9, 2, 52, { [2] = 9885 }, { [2] = 52 }, nil, nil, nil, true }
-players["orakletjr"] = { "Orakletjr", 9885, 9, 2, 53, { [2] = 9885 }, { [2] = 53 }, nil, nil, nil, true }
-players["dalliya"] = { "Dalliya", 9884, 9, 2, 54, { [1] = 2738, [2] = 9884, [3] = 3190 }, { [1] = 157, [2] = 54, [3] = 324 }, nil, nil, nil, true }
-players["layasurii"] = { "Layasurii", 9881, 9, 2, 55, { [2] = 9881 }, { [2] = 55 }, nil, nil, nil, true }
-players["kafyy"] = { "Kafyy", 9880, 9, 2, 56, { [2] = 9880 }, { [2] = 56 }, nil, nil, nil, true }
-players["cuh"] = { "Cuh", 9879, 9, 2, 57, { [2] = 9879 }, { [2] = 57 }, nil, nil, nil, true }
-players["unbridled"] = { "Unbridled", 9878, 9, 2, 58, { [2] = 9878 }, { [2] = 58 }, nil, nil, nil, true }
-players["congrulaton"] = { "Congrulaton", 9878, 9, 2, 59, { [2] = 9878 }, { [2] = 59 }, nil, nil, nil, true }
-players["dimness"] = { "Dimness", 9876, 9, 2, 60, { [2] = 9876 }, { [2] = 60 }, nil, nil, nil, true }
-players["eswipe"] = { "Eswipe", 9870, 9, 2, 61, { [2] = 9870 }, { [2] = 61 }, nil, nil, nil, true }
-players["dazohound"] = { "Dazohound", 9870, 9, 2, 62, { [2] = 9870 }, { [2] = 62 }, nil, nil, nil, true }
-players["metablade"] = { "Metablade", 9868, 9, 2, 63, { [2] = 9868, [3] = 551 }, { [2] = 63, [3] = 746 }, nil, nil, nil, true }
-players["stiginjr"] = { "Stiginjr", 9867, 9, 2, 64, { [2] = 9867 }, { [2] = 64 }, nil, nil, nil, true }
-players["sundereella"] = { "Sundereella", 9866, 9, 2, 65, { [2] = 9866, [3] = 5779 }, { [2] = 65, [3] = 113 }, nil, nil, nil, true }
-players["redsoco"] = { "Redsoco", 9864, 9, 2, 66, { [2] = 9864 }, { [2] = 66 }, nil, nil, nil, true }
-players["naz"] = { "Naz", 9863, 9, 2, 67, { [2] = 9863 }, { [2] = 67 }, nil, nil, nil, true }
-players["xft"] = { "Xft", 9863, 9, 2, 68, { [2] = 9863 }, { [2] = 68 }, nil, nil, nil, true }
-players["tdibiswarry"] = { "Tdibiswarry", 9862, 9, 2, 69, { [2] = 9862, [3] = 1540 }, { [2] = 69, [3] = 536 }, nil, nil, nil, true }
-players["furymagnus"] = { "Furymagnus", 9861, 9, 2, 70, { [2] = 9861 }, { [2] = 70 }, nil, nil, nil, true }
-players["zhcleave"] = { "Zhcleave", 9858, 9, 2, 71, { [2] = 9858 }, { [2] = 71 }, nil, nil, nil, true }
-players["cleavepax"] = { "Cleavepax", 9858, 9, 2, 72, { [2] = 9858 }, { [2] = 72 }, nil, nil, nil, true }
-players["malevolent"] = { "Malevolent", 9857, 9, 2, 73, { [2] = 9857 }, { [2] = 73 }, nil, nil, nil, true }
-players["phandasm"] = { "Phandasm", 9857, 9, 2, 74, { [2] = 9857 }, { [2] = 74 }, nil, nil, nil, true }
-players["shortstacks"] = { "Shortstacks", 9856, 9, 2, 75, { [2] = 9856 }, { [2] = 75 }, nil, nil, nil, true }
-players["yemonn"] = { "Yemonn", 9855, 9, 2, 76, { [2] = 9855 }, { [2] = 76 }, nil, nil, nil, true }
-players["warrbringer"] = { "Warrbringer", 9854, 9, 2, 77, { [2] = 9854 }, { [2] = 77 }, nil, nil, nil, true }
-players["riggedz"] = { "Riggedz", 9852, 9, 2, 78, { [2] = 9852 }, { [2] = 78 }, nil, nil, nil, true }
-players["zetasync"] = { "Zetasync", 9852, 9, 2, 79, { [2] = 9852 }, { [2] = 79 }, nil, nil, nil, true }
-players["ningann"] = { "Ningann", 9852, 9, 2, 80, { [2] = 9852 }, { [2] = 80 }, nil, nil, nil, true }
-players["lokcinaa"] = { "Lokcinaa", 9851, 9, 2, 81, { [2] = 9851 }, { [2] = 81 }, nil, nil, nil, true }
-players["teabao"] = { "Teabao", 9846, 9, 2, 82, { [2] = 9846 }, { [2] = 82 }, nil, nil, nil, true }
-players["terrorizt"] = { "Terrorizt", 9845, 9, 2, 83, { [2] = 9845 }, { [2] = 83 }, nil, nil, nil, true }
-players["terroblade"] = { "Terroblade", 9845, 9, 2, 84, { [2] = 9845 }, { [2] = 84 }, nil, nil, nil, true }
-players["sundered"] = { "Sundered", 9842, 9, 2, 85, { [2] = 9842 }, { [2] = 85 }, nil, nil, nil, true }
-players["heonn"] = { "Heonn", 9840, 9, 2, 86, { [2] = 9840 }, { [2] = 86 }, nil, nil, nil, true }
-players["patcheslgacy"] = { "Patcheslgacy", 9834, 9, 2, 87, { [2] = 9834 }, { [2] = 87 }, nil, nil, nil, true }
-players["ishha"] = { "Ishha", 9828, 9, 2, 88, { [2] = 9828 }, { [2] = 88 }, nil, nil, nil, true }
-players["soulwar"] = { "Soulwar", 9828, 9, 2, 89, { [2] = 9828 }, { [2] = 89 }, nil, nil, nil, true }
-players["executes"] = { "Executes", 9823, 9, 2, 90, { [2] = 9823 }, { [2] = 90 }, nil, nil, nil, true }
-players["asmonfanboy"] = { "Asmonfanboy", 9820, 9, 2, 91, { [2] = 9820 }, { [2] = 91 }, nil, nil, nil, true }
-players["bleksaz"] = { "Bleksaz", 9817, 9, 2, 92, { [2] = 9817 }, { [2] = 92 }, nil, nil, nil, true }
-players["carcrash"] = { "Carcrash", 9816, 9, 2, 93, { [2] = 9816 }, { [2] = 93 }, nil, nil, nil, true }
-players["cleaveretard"] = { "Cleaveretard", 9816, 9, 2, 94, { [2] = 9816 }, { [2] = 94 }, nil, nil, nil, true }
-players["eatmycleave"] = { "Eatmycleave", 9816, 9, 2, 95, { [2] = 9816 }, { [2] = 95 }, nil, nil, nil, true }
-players["genryosai"] = { "Genryosai", 9814, 9, 2, 96, { [1] = 7270, [2] = 9814 }, { [1] = 36, [2] = 96 }, nil, nil, nil, true }
-players["rippez"] = { "Rippez", 9814, 9, 2, 97, { [2] = 9814 }, { [2] = 97 }, nil, nil, nil, true }
-players["narvelis"] = { "Narvelis", 9813, 9, 2, 98, { [1] = 7533, [2] = 9813 }, { [1] = 32, [2] = 98 }, nil, nil, nil, true }
-players["retrowave"] = { "Retrowave", 9812, 9, 2, 99, { [2] = 9812 }, { [2] = 99 }, nil, nil, nil, true }
-players["aikgnaget"] = { "Aikgnaget", 9809, 9, 2, 100, { [2] = 9809 }, { [2] = 100 }, nil, nil, nil, true }
-players["yakoshibam"] = { "Yakoshibam", 9809, 9, 2, 101, { [2] = 9809 }, { [2] = 101 }, nil, nil, nil, true }
-players["foksa"] = { "Foksa", 9809, 9, 2, 102, { [2] = 9809 }, { [2] = 102 }, nil, nil, nil, true }
-players["saak"] = { "Saak", 9807, 9, 2, 103, { [2] = 9807 }, { [2] = 103 }, nil, nil, nil, true }
-players["conscious"] = { "Conscious", 9805, 9, 2, 104, { [2] = 9805 }, { [2] = 104 }, nil, nil, nil, true }
-players["eisenhart"] = { "Eisenhart", 9804, 9, 2, 105, { [2] = 9804 }, { [2] = 105 }, nil, nil, nil, true }
-players["arkaiil"] = { "Arkaiil", 9804, 9, 2, 106, { [2] = 9804 }, { [2] = 106 }, nil, nil, nil, true }
-players["sugarlips"] = { "Sugarlips", 9803, 9, 2, 107, { [2] = 9803 }, { [2] = 107 }, nil, nil, nil, true }
-players["sobredosis"] = { "Sobredosis", 9801, 9, 2, 108, { [2] = 9801 }, { [2] = 108 }, nil, nil, nil, true }
-players["deftsu"] = { "Deftsu", 9800, 9, 2, 109, { [2] = 9800 }, { [2] = 109 }, nil, nil, nil, true }
-players["sparkata"] = { "Sparkata", 9800, 9, 2, 110, { [2] = 9800 }, { [2] = 110 }, nil, nil, nil, true }
-players["honwar"] = { "Honwar", 9798, 9, 2, 111, { [2] = 9798 }, { [2] = 111 }, nil, nil, nil, true }
-players["nragedwar"] = { "Nragedwar", 9798, 9, 2, 112, { [1] = 9252, [2] = 9798 }, { [1] = 9, [2] = 112 }, nil, nil, nil, true }
-players["directora"] = { "Directora", 9797, 9, 2, 113, { [2] = 9797 }, { [2] = 113 }, nil, nil, nil, true }
-players["deathwish"] = { "Deathwish", 9795, 9, 2, 114, { [2] = 9795 }, { [2] = 114 }, nil, nil, nil, true }
-players["trashweeb"] = { "Trashweeb", 9794, 9, 2, 115, { [2] = 9794 }, { [2] = 115 }, nil, nil, nil, true }
-players["galstoc"] = { "Galstoc", 9790, 9, 2, 116, { [2] = 9790 }, { [2] = 116 }, nil, nil, nil, true }
-players["smiringiq"] = { "Smiringiq", 9789, 9, 2, 117, { [2] = 9789, [3] = 5503 }, { [2] = 117, [3] = 124 }, nil, nil, nil, true }
-players["pendejos"] = { "Pendejos", 9788, 9, 2, 118, { [2] = 9788 }, { [2] = 118 }, nil, nil, nil, true }
-players["anictwo"] = { "Anictwo", 9782, 9, 2, 119, { [2] = 9782 }, { [2] = 119 }, nil, nil, nil, true }
-players["mholly"] = { "Mholly", 9781, 9, 2, 120, { [2] = 9781 }, { [2] = 120 }, nil, nil, nil, true }
-players["mekambe"] = { "Mekambe", 9779, 9, 2, 121, { [2] = 9779 }, { [2] = 121 }, nil, nil, nil, true }
-players["cleavedog"] = { "Cleavedog", 9779, 9, 2, 122, { [2] = 9779 }, { [2] = 122 }, nil, nil, nil, true }
-players["penatrated"] = { "Penatrated", 9778, 9, 2, 123, { [2] = 9778 }, { [2] = 123 }, nil, nil, nil, true }
-players["punisherx"] = { "Punisherx", 9777, 9, 2, 124, { [2] = 9777 }, { [2] = 124 }, nil, nil, nil, true }
-players["mexivergas"] = { "Mexivergas", 9777, 9, 2, 125, { [2] = 9777 }, { [2] = 125 }, nil, nil, nil, true }
-players["scripterr"] = { "Scripterr", 9773, 9, 2, 126, { [2] = 9773 }, { [2] = 126 }, nil, nil, nil, true }
-players["longtimegone"] = { "Longtimegone", 9772, 9, 2, 127, { [2] = 9772 }, { [2] = 127 }, nil, nil, nil, true }
-players["purehate"] = { "Purehate", 9768, 9, 2, 128, { [2] = 9768 }, { [2] = 128 }, nil, nil, nil, true }
-players["pqrwarr"] = { "Pqrwarr", 9768, 9, 2, 129, { [2] = 9768 }, { [2] = 129 }, nil, nil, nil, true }
-players["safora"] = { "Safora", 9767, 9, 2, 130, { [2] = 9767 }, { [2] = 130 }, nil, nil, nil, true }
-players["iluminatiwar"] = { "Iluminatiwar", 9764, 9, 2, 131, { [2] = 9764, [3] = 3873 }, { [2] = 131, [3] = 266 }, nil, nil, nil, true }
-players["fildepers"] = { "Fildepers", 9760, 9, 2, 132, { [2] = 9760 }, { [2] = 132 }, nil, nil, nil, true }
-players["djblyatman"] = { "Djblyatman", 9759, 9, 2, 133, { [2] = 9759 }, { [2] = 133 }, nil, nil, nil, true }
-players["superiority"] = { "Superiority", 9753, 9, 2, 134, { [2] = 9753 }, { [2] = 134 }, nil, nil, nil, true }
-players["boizza"] = { "Boizza", 9752, 9, 2, 135, { [2] = 9752 }, { [2] = 135 }, nil, nil, nil, true }
-players["executr"] = { "Executr", 9749, 9, 2, 136, { [2] = 9749 }, { [2] = 136 }, nil, nil, nil, true }
-players["dyg"] = { "Dyg", 9748, 9, 2, 137, { [2] = 9748 }, { [2] = 137 }, nil, nil, nil, true }
-players["simplywar"] = { "Simplywar", 9745, 9, 2, 138, { [2] = 9745 }, { [2] = 138 }, nil, nil, nil, true }
-players["patladjyan"] = { "Patladjyan", 9743, 9, 2, 139, { [2] = 9743 }, { [2] = 139 }, nil, nil, nil, true }
-players["caneqt"] = { "Caneqt", 9742, 9, 2, 140, { [2] = 9742, [3] = 4553 }, { [2] = 140, [3] = 194 }, nil, nil, nil, true }
-players["zezeka"] = { "Zezeka", 9740, 9, 2, 141, { [2] = 9740 }, { [2] = 141 }, nil, nil, nil, true }
-players["brunkungenn"] = { "Brunkungenn", 9740, 9, 2, 142, { [2] = 9740 }, { [2] = 142 }, nil, nil, nil, true }
-players["symbolixwarr"] = { "Symbolixwarr", 9738, 9, 2, 143, { [2] = 9738 }, { [2] = 143 }, nil, nil, nil, true }
-players["juvchik"] = { "Juvchik", 9737, 9, 2, 144, { [2] = 9737 }, { [2] = 144 }, nil, nil, nil, true }
-players["helldreams"] = { "Helldreams", 9736, 9, 2, 145, { [2] = 9736 }, { [2] = 145 }, nil, nil, nil, true }
-players["ciganblaster"] = { "Ciganblaster", 9735, 9, 2, 147, { [2] = 9735 }, { [2] = 147 }, nil, nil, nil, true }
-players["figorcik"] = { "Figorcik", 9734, 9, 2, 148, { [2] = 9734 }, { [2] = 148 }, nil, nil, nil, true }
-players["nykolas"] = { "Nykolas", 9734, 9, 2, 149, { [2] = 9734 }, { [2] = 149 }, nil, nil, nil, true }
-players["finrir"] = { "Finrir", 9733, 9, 2, 150, { [2] = 9733, [3] = 879 }, { [2] = 150, [3] = 653 }, nil, nil, nil, true }
-players["pompo"] = { "Pompo", 9732, 9, 2, 151, { [2] = 9732 }, { [2] = 151 }, nil, nil, nil, true }
-players["hugeiq"] = { "Hugeiq", 9728, 9, 2, 152, { [1] = 8996, [2] = 9728 }, { [1] = 11, [2] = 152 }, nil, nil, nil, true }
-players["clv"] = { "Clv", 9727, 9, 2, 153, { [2] = 9727 }, { [2] = 153 }, nil, nil, nil, true }
-players["oraklet"] = { "Oraklet", 9726, 9, 2, 154, { [2] = 9726 }, { [2] = 154 }, nil, nil, nil, true }
-players["carnaged"] = { "Carnaged", 9724, 9, 2, 155, { [2] = 9724 }, { [2] = 155 }, nil, nil, nil, true }
-players["giguska"] = { "Giguska", 9723, 9, 2, 156, { [2] = 9723 }, { [2] = 156 }, nil, nil, nil, true }
-players["effortlessly"] = { "Effortlessly", 9721, 9, 2, 157, { [2] = 9721 }, { [2] = 157 }, nil, nil, nil, true }
-players["hjordis"] = { "Hjordis", 9720, 9, 2, 158, { [2] = 9720 }, { [2] = 158 }, nil, nil, nil, true }
-players["cortizol"] = { "Cortizol", 9719, 9, 2, 159, { [2] = 9719 }, { [2] = 159 }, nil, nil, nil, true }
-players["fwr"] = { "Fwr", 9718, 9, 2, 160, { [2] = 9718 }, { [2] = 160 }, nil, nil, nil, true }
-players["cwelabuser"] = { "Cwelabuser", 9718, 9, 2, 161, { [2] = 9718 }, { [2] = 161 }, nil, nil, nil, true }
-players["nfinite"] = { "Nfinite", 9714, 9, 2, 162, { [2] = 9714 }, { [2] = 162 }, nil, nil, nil, true }
-players["petar"] = { "Petar", 9712, 9, 2, 163, { [2] = 9712 }, { [2] = 163 }, nil, nil, nil, true }
-players["jordyn"] = { "Jordyn", 9711, 9, 2, 164, { [2] = 9711 }, { [2] = 164 }, nil, nil, nil, true }
-players["frozenq"] = { "Frozenq", 9710, 9, 2, 165, { [2] = 9710 }, { [2] = 165 }, nil, nil, nil, true }
-players["vukoqtwarr"] = { "Vukoqtwarr", 9709, 9, 2, 166, { [1] = 9120, [2] = 9709, [3] = 4542 }, { [1] = 10, [2] = 166, [3] = 198 }, nil, nil, nil, true }
-players["blszxx"] = { "Blszxx", 9709, 9, 2, 167, { [2] = 9709 }, { [2] = 167 }, nil, nil, nil, true }
-players["exorsus"] = { "Exorsus", 9708, 9, 2, 168, { [2] = 9708 }, { [2] = 168 }, nil, nil, nil, true }
-players["busterluh"] = { "Busterluh", 9706, 9, 2, 169, { [2] = 9706 }, { [2] = 169 }, nil, nil, nil, true }
-players["cyberdinna"] = { "Cyberdinna", 9706, 9, 2, 170, { [2] = 9706 }, { [2] = 170 }, nil, nil, nil, true }
-players["zetamethod"] = { "Zetamethod", 9703, 9, 2, 171, { [2] = 9703 }, { [2] = 171 }, nil, nil, nil, true }
-players["inovan"] = { "Inovan", 9703, 9, 2, 172, { [2] = 9703 }, { [2] = 172 }, nil, nil, nil, true }
-players["classictunka"] = { "Classictunka", 9696, 9, 2, 173, { [2] = 9696 }, { [2] = 173 }, nil, nil, nil, true }
-players["rayewarr"] = { "Rayewarr", 9695, 9, 2, 174, { [2] = 9695 }, { [2] = 174 }, nil, nil, nil, true }
-players["droped"] = { "Droped", 9691, 9, 2, 175, { [2] = 9691 }, { [2] = 175 }, nil, nil, nil, true }
-players["meiyan"] = { "Meiyan", 9690, 9, 2, 176, { [2] = 9690, [3] = 1350 }, { [2] = 176, [3] = 563 }, nil, nil, nil, true }
-players["rotelle"] = { "Rotelle", 9688, 9, 2, 177, { [2] = 9688 }, { [2] = 177 }, nil, nil, nil, true }
-players["garjoka"] = { "Garjoka", 9688, 9, 2, 178, { [2] = 9688 }, { [2] = 178 }, nil, nil, nil, true }
-players["tonyaxe"] = { "Tonyaxe", 9686, 9, 2, 179, { [2] = 9686, [3] = 2367 }, { [2] = 179, [3] = 427 }, nil, nil, nil, true }
-players["zelder"] = { "Zelder", 9685, 9, 2, 180, { [2] = 9685 }, { [2] = 180 }, nil, nil, nil, true }
-players["mommo"] = { "Mommo", 9682, 9, 2, 181, { [2] = 9682 }, { [2] = 181 }, nil, nil, nil, true }
-players["awniwar"] = { "Awniwar", 9682, 9, 2, 182, { [2] = 9682 }, { [2] = 182 }, nil, nil, nil, true }
-players["pause"] = { "Pause", 9682, 9, 2, 183, { [2] = 9682 }, { [2] = 183 }, nil, nil, nil, true }
-players["dictated"] = { "Dictated", 10000, 9, 3, 1, { [2] = 9524, [3] = 10000 }, { [2] = 299, [3] = 1 }, nil, nil, nil, true }
-players["furriosa"] = { "Furriosa", 9956, 9, 3, 2, { [2] = 9393, [3] = 9956 }, { [2] = 383, [3] = 2 }, nil, nil, nil, true }
-players["fastsunders"] = { "Fastsunders", 9940, 9, 3, 3, { [2] = 3487, [3] = 9940 }, { [2] = 13810, [3] = 3 }, nil, nil, nil, true }
-players["vyarra"] = { "Vyarra", 9908, 9, 3, 4, { [1] = 5129, [2] = 3737, [3] = 9908 }, { [1] = 68, [2] = 13241, [3] = 4 }, nil, nil, nil, true }
-players["ramnouzia"] = { "Ramnouzia", 9904, 9, 3, 5, { [1] = 663, [2] = 2072, [3] = 9904 }, { [1] = 279, [2] = 19886, [3] = 5 }, nil, nil, nil, true }
+players["framezbabe"] = { "Framezbabe", 9949, 9, 2, 25, { [1] = 9858, [2] = 9949 }, { [1] = 2, [2] = 25 }, nil, nil, nil, true }
+players["crip"] = { "Crip", 9948, 9, 2, 26, { [2] = 9948 }, { [2] = 26 }, nil, nil, nil, true }
+players["meekk"] = { "Meekk", 9942, 9, 2, 27, { [2] = 9942, [3] = 9742 }, { [2] = 27, [3] = 7 }, nil, nil, nil, true }
+players["admirwarr"] = { "Admirwarr", 9939, 9, 2, 28, { [2] = 9939 }, { [2] = 28 }, nil, nil, nil, true }
+players["boxior"] = { "Boxior", 9938, 9, 2, 29, { [2] = 9938 }, { [2] = 29 }, nil, nil, nil, true }
+players["fe"] = { "Fe", 9937, 9, 2, 30, { [2] = 9937 }, { [2] = 30 }, nil, nil, nil, true }
+players["cleavecigan"] = { "Cleavecigan", 9935, 9, 2, 31, { [2] = 9935 }, { [2] = 31 }, nil, nil, nil, true }
+players["lokcinawar"] = { "Lokcinawar", 9933, 9, 2, 32, { [2] = 9933 }, { [2] = 32 }, nil, nil, nil, true }
+players["shewasregal"] = { "Shewasregal", 9928, 9, 2, 33, { [2] = 9928 }, { [2] = 33 }, nil, nil, nil, true }
+players["dpscigan"] = { "Dpscigan", 9926, 9, 2, 34, { [2] = 9926 }, { [2] = 34 }, nil, nil, nil, true }
+players["ragedoll"] = { "Ragedoll", 9925, 9, 2, 35, { [2] = 9925 }, { [2] = 35 }, nil, nil, nil, true }
+players["jokara"] = { "Jokara", 9922, 9, 2, 36, { [2] = 9922 }, { [2] = 36 }, nil, nil, nil, true }
+players["vidimaliciga"] = { "Vidimaliciga", 9921, 9, 2, 37, { [2] = 9921 }, { [2] = 37 }, nil, nil, nil, true }
+players["lycla"] = { "Lycla", 9920, 9, 2, 38, { [2] = 9920 }, { [2] = 38 }, nil, nil, nil, true }
+players["adn"] = { "Adn", 9913, 9, 2, 39, { [2] = 9913 }, { [2] = 39 }, nil, nil, nil, true }
+players["johngotti"] = { "Johngotti", 9912, 9, 2, 40, { [2] = 9912 }, { [2] = 40 }, nil, nil, nil, true }
+players["linkiwar"] = { "Linkiwar", 9908, 9, 2, 41, { [2] = 9908 }, { [2] = 41 }, nil, nil, nil, true }
+players["acidwarr"] = { "Acidwarr", 9906, 9, 2, 42, { [2] = 9906 }, { [2] = 42 }, nil, nil, nil, true }
+players["warpax"] = { "Warpax", 9905, 9, 2, 43, { [2] = 9905 }, { [2] = 43 }, nil, nil, nil, true }
+players["cwelmaker"] = { "Cwelmaker", 9903, 9, 2, 44, { [2] = 9903 }, { [2] = 44 }, nil, nil, nil, true }
+players["halogen"] = { "Halogen", 9900, 9, 2, 45, { [2] = 9900 }, { [2] = 45 }, nil, nil, nil, true }
+players["kirchok"] = { "Kirchok", 9900, 9, 2, 46, { [1] = 7830, [2] = 9900 }, { [1] = 27, [2] = 46 }, nil, nil, nil, true }
+players["estimate"] = { "Estimate", 9898, 9, 2, 47, { [2] = 9898 }, { [2] = 47 }, nil, nil, nil, true }
+players["zetafury"] = { "Zetafury", 9897, 9, 2, 48, { [2] = 9897 }, { [2] = 48 }, nil, nil, nil, true }
+players["bisimchi"] = { "Bisimchi", 9895, 9, 2, 49, { [2] = 9895 }, { [2] = 49 }, nil, nil, nil, true }
+players["notoriousx"] = { "Notoriousx", 9889, 9, 2, 50, { [2] = 9889 }, { [2] = 50 }, nil, nil, nil, true }
+players["strythx"] = { "Strythx", 9886, 9, 2, 51, { [2] = 9886 }, { [2] = 51 }, nil, nil, nil, true }
+players["dalliya"] = { "Dalliya", 9886, 9, 2, 52, { [1] = 2738, [2] = 9886, [3] = 3191 }, { [1] = 157, [2] = 52, [3] = 326 }, nil, nil, nil, true }
+players["markizz"] = { "Markizz", 9884, 9, 2, 53, { [2] = 9884 }, { [2] = 53 }, nil, nil, nil, true }
+players["orakletjr"] = { "Orakletjr", 9883, 9, 2, 54, { [2] = 9883 }, { [2] = 54 }, nil, nil, nil, true }
+players["layasurii"] = { "Layasurii", 9880, 9, 2, 55, { [2] = 9880 }, { [2] = 55 }, nil, nil, nil, true }
+players["kafyy"] = { "Kafyy", 9879, 9, 2, 56, { [2] = 9879 }, { [2] = 56 }, nil, nil, nil, true }
+players["cuh"] = { "Cuh", 9878, 9, 2, 57, { [2] = 9878 }, { [2] = 57 }, nil, nil, nil, true }
+players["congrulaton"] = { "Congrulaton", 9877, 9, 2, 58, { [2] = 9877 }, { [2] = 58 }, nil, nil, nil, true }
+players["unbridled"] = { "Unbridled", 9877, 9, 2, 59, { [2] = 9877 }, { [2] = 59 }, nil, nil, nil, true }
+players["dimness"] = { "Dimness", 9874, 9, 2, 60, { [2] = 9874 }, { [2] = 60 }, nil, nil, nil, true }
+players["eswipe"] = { "Eswipe", 9869, 9, 2, 61, { [2] = 9869 }, { [2] = 61 }, nil, nil, nil, true }
+players["dazohound"] = { "Dazohound", 9868, 9, 2, 62, { [2] = 9868 }, { [2] = 62 }, nil, nil, nil, true }
+players["metablade"] = { "Metablade", 9867, 9, 2, 63, { [2] = 9867, [3] = 552 }, { [2] = 63, [3] = 750 }, nil, nil, nil, true }
+players["zhcleave"] = { "Zhcleave", 9866, 9, 2, 64, { [2] = 9866 }, { [2] = 64 }, nil, nil, nil, true }
+players["stiginjr"] = { "Stiginjr", 9865, 9, 2, 65, { [2] = 9865 }, { [2] = 65 }, nil, nil, nil, true }
+players["sundereella"] = { "Sundereella", 9865, 9, 2, 66, { [2] = 9865, [3] = 5780 }, { [2] = 66, [3] = 113 }, nil, nil, nil, true }
+players["redsoco"] = { "Redsoco", 9862, 9, 2, 67, { [2] = 9862 }, { [2] = 67 }, nil, nil, nil, true }
+players["xft"] = { "Xft", 9861, 9, 2, 68, { [2] = 9861 }, { [2] = 68 }, nil, nil, nil, true }
+players["naz"] = { "Naz", 9861, 9, 2, 69, { [2] = 9861 }, { [2] = 69 }, nil, nil, nil, true }
+players["furymagnus"] = { "Furymagnus", 9860, 9, 2, 70, { [2] = 9860 }, { [2] = 70 }, nil, nil, nil, true }
+players["tdibiswarry"] = { "Tdibiswarry", 9860, 9, 2, 71, { [2] = 9860, [3] = 1540 }, { [2] = 71, [3] = 538 }, nil, nil, nil, true }
+players["cleavepax"] = { "Cleavepax", 9856, 9, 2, 72, { [2] = 9856 }, { [2] = 72 }, nil, nil, nil, true }
+players["malevolent"] = { "Malevolent", 9856, 9, 2, 73, { [2] = 9856 }, { [2] = 73 }, nil, nil, nil, true }
+players["phandasm"] = { "Phandasm", 9855, 9, 2, 74, { [2] = 9855 }, { [2] = 74 }, nil, nil, nil, true }
+players["shortstacks"] = { "Shortstacks", 9855, 9, 2, 75, { [2] = 9855 }, { [2] = 75 }, nil, nil, nil, true }
+players["yemonn"] = { "Yemonn", 9854, 9, 2, 76, { [2] = 9854 }, { [2] = 76 }, nil, nil, nil, true }
+players["warrbringer"] = { "Warrbringer", 9853, 9, 2, 77, { [2] = 9853 }, { [2] = 77 }, nil, nil, nil, true }
+players["zetasync"] = { "Zetasync", 9851, 9, 2, 78, { [2] = 9851 }, { [2] = 78 }, nil, nil, nil, true }
+players["riggedz"] = { "Riggedz", 9851, 9, 2, 79, { [2] = 9851 }, { [2] = 79 }, nil, nil, nil, true }
+players["ningann"] = { "Ningann", 9850, 9, 2, 80, { [2] = 9850 }, { [2] = 80 }, nil, nil, nil, true }
+players["lokcinaa"] = { "Lokcinaa", 9849, 9, 2, 81, { [2] = 9849 }, { [2] = 81 }, nil, nil, nil, true }
+players["teabao"] = { "Teabao", 9844, 9, 2, 82, { [2] = 9844 }, { [2] = 82 }, nil, nil, nil, true }
+players["terrorizt"] = { "Terrorizt", 9844, 9, 2, 83, { [2] = 9844 }, { [2] = 83 }, nil, nil, nil, true }
+players["terroblade"] = { "Terroblade", 9842, 9, 2, 84, { [2] = 9842 }, { [2] = 84 }, nil, nil, nil, true }
+players["sundered"] = { "Sundered", 9841, 9, 2, 85, { [2] = 9841 }, { [2] = 85 }, nil, nil, nil, true }
+players["heonn"] = { "Heonn", 9839, 9, 2, 86, { [2] = 9839 }, { [2] = 86 }, nil, nil, nil, true }
+players["patcheslgacy"] = { "Patcheslgacy", 9832, 9, 2, 87, { [2] = 9832 }, { [2] = 87 }, nil, nil, nil, true }
+players["cleaveretard"] = { "Cleaveretard", 9830, 9, 2, 88, { [2] = 9830 }, { [2] = 88 }, nil, nil, nil, true }
+players["ishha"] = { "Ishha", 9826, 9, 2, 89, { [2] = 9826 }, { [2] = 89 }, nil, nil, nil, true }
+players["soulwar"] = { "Soulwar", 9826, 9, 2, 90, { [2] = 9826 }, { [2] = 90 }, nil, nil, nil, true }
+players["executes"] = { "Executes", 9822, 9, 2, 91, { [2] = 9822 }, { [2] = 91 }, nil, nil, nil, true }
+players["asmonfanboy"] = { "Asmonfanboy", 9818, 9, 2, 92, { [2] = 9818 }, { [2] = 92 }, nil, nil, nil, true }
+players["bleksaz"] = { "Bleksaz", 9815, 9, 2, 93, { [2] = 9815 }, { [2] = 93 }, nil, nil, nil, true }
+players["carcrash"] = { "Carcrash", 9814, 9, 2, 94, { [2] = 9814 }, { [2] = 94 }, nil, nil, nil, true }
+players["eatmycleave"] = { "Eatmycleave", 9814, 9, 2, 95, { [2] = 9814 }, { [2] = 95 }, nil, nil, nil, true }
+players["rippez"] = { "Rippez", 9812, 9, 2, 96, { [2] = 9812 }, { [2] = 96 }, nil, nil, nil, true }
+players["genryosai"] = { "Genryosai", 9812, 9, 2, 97, { [1] = 7270, [2] = 9812 }, { [1] = 36, [2] = 97 }, nil, nil, nil, true }
+players["sparkata"] = { "Sparkata", 9812, 9, 2, 98, { [2] = 9812 }, { [2] = 98 }, nil, nil, nil, true }
+players["narvelis"] = { "Narvelis", 9811, 9, 2, 99, { [1] = 7533, [2] = 9811 }, { [1] = 32, [2] = 99 }, nil, nil, nil, true }
+players["retrowave"] = { "Retrowave", 9810, 9, 2, 100, { [2] = 9810 }, { [2] = 100 }, nil, nil, nil, true }
+players["aikgnaget"] = { "Aikgnaget", 9807, 9, 2, 101, { [2] = 9807 }, { [2] = 101 }, nil, nil, nil, true }
+players["yakoshibam"] = { "Yakoshibam", 9807, 9, 2, 102, { [2] = 9807 }, { [2] = 102 }, nil, nil, nil, true }
+players["foksa"] = { "Foksa", 9806, 9, 2, 103, { [2] = 9806 }, { [2] = 103 }, nil, nil, nil, true }
+players["saak"] = { "Saak", 9806, 9, 2, 104, { [2] = 9806 }, { [2] = 104 }, nil, nil, nil, true }
+players["deftsu"] = { "Deftsu", 9806, 9, 2, 105, { [2] = 9806 }, { [2] = 105 }, nil, nil, nil, true }
+players["conscious"] = { "Conscious", 9804, 9, 2, 106, { [2] = 9804 }, { [2] = 106 }, nil, nil, nil, true }
+players["eisenhart"] = { "Eisenhart", 9802, 9, 2, 107, { [2] = 9802 }, { [2] = 107 }, nil, nil, nil, true }
+players["arkaiil"] = { "Arkaiil", 9802, 9, 2, 108, { [2] = 9802 }, { [2] = 108 }, nil, nil, nil, true }
+players["sugarlips"] = { "Sugarlips", 9802, 9, 2, 109, { [2] = 9802 }, { [2] = 109 }, nil, nil, nil, true }
+players["sobredosis"] = { "Sobredosis", 9800, 9, 2, 110, { [2] = 9800 }, { [2] = 110 }, nil, nil, nil, true }
+players["galstoc"] = { "Galstoc", 9798, 9, 2, 111, { [2] = 9798 }, { [2] = 111 }, nil, nil, nil, true }
+players["honwar"] = { "Honwar", 9797, 9, 2, 112, { [2] = 9797 }, { [2] = 112 }, nil, nil, nil, true }
+players["nragedwar"] = { "Nragedwar", 9796, 9, 2, 113, { [1] = 9252, [2] = 9796 }, { [1] = 9, [2] = 113 }, nil, nil, nil, true }
+players["directora"] = { "Directora", 9795, 9, 2, 114, { [2] = 9795 }, { [2] = 114 }, nil, nil, nil, true }
+players["deathwish"] = { "Deathwish", 9793, 9, 2, 115, { [2] = 9793 }, { [2] = 115 }, nil, nil, nil, true }
+players["trashweeb"] = { "Trashweeb", 9792, 9, 2, 116, { [2] = 9792 }, { [2] = 116 }, nil, nil, nil, true }
+players["smiringiq"] = { "Smiringiq", 9787, 9, 2, 117, { [2] = 9787, [3] = 5508 }, { [2] = 117, [3] = 125 }, nil, nil, nil, true }
+players["pendejos"] = { "Pendejos", 9786, 9, 2, 118, { [2] = 9786 }, { [2] = 118 }, nil, nil, nil, true }
+players["anictwo"] = { "Anictwo", 9780, 9, 2, 119, { [2] = 9780 }, { [2] = 119 }, nil, nil, nil, true }
+players["mholly"] = { "Mholly", 9779, 9, 2, 120, { [2] = 9779 }, { [2] = 120 }, nil, nil, nil, true }
+players["cleavedog"] = { "Cleavedog", 9777, 9, 2, 121, { [2] = 9777 }, { [2] = 121 }, nil, nil, nil, true }
+players["mekambe"] = { "Mekambe", 9777, 9, 2, 122, { [2] = 9777 }, { [2] = 122 }, nil, nil, nil, true }
+players["penatrated"] = { "Penatrated", 9776, 9, 2, 123, { [2] = 9776 }, { [2] = 123 }, nil, nil, nil, true }
+players["mexivergas"] = { "Mexivergas", 9775, 9, 2, 124, { [2] = 9775 }, { [2] = 124 }, nil, nil, nil, true }
+players["punisherx"] = { "Punisherx", 9775, 9, 2, 125, { [2] = 9775 }, { [2] = 125 }, nil, nil, nil, true }
+players["scripterr"] = { "Scripterr", 9771, 9, 2, 126, { [2] = 9771 }, { [2] = 126 }, nil, nil, nil, true }
+players["longtimegone"] = { "Longtimegone", 9769, 9, 2, 127, { [2] = 9769 }, { [2] = 127 }, nil, nil, nil, true }
+players["patladjyan"] = { "Patladjyan", 9768, 9, 2, 128, { [2] = 9768 }, { [2] = 128 }, nil, nil, nil, true }
+players["purehate"] = { "Purehate", 9766, 9, 2, 129, { [2] = 9766 }, { [2] = 129 }, nil, nil, nil, true }
+players["pqrwarr"] = { "Pqrwarr", 9765, 9, 2, 130, { [2] = 9765 }, { [2] = 130 }, nil, nil, nil, true }
+players["safora"] = { "Safora", 9765, 9, 2, 131, { [2] = 9765 }, { [2] = 131 }, nil, nil, nil, true }
+players["iluminatiwar"] = { "Iluminatiwar", 9762, 9, 2, 132, { [2] = 9762, [3] = 3876 }, { [2] = 132, [3] = 268 }, nil, nil, nil, true }
+players["fildepers"] = { "Fildepers", 9758, 9, 2, 133, { [2] = 9758 }, { [2] = 133 }, nil, nil, nil, true }
+players["djblyatman"] = { "Djblyatman", 9757, 9, 2, 134, { [2] = 9757 }, { [2] = 134 }, nil, nil, nil, true }
+players["superiority"] = { "Superiority", 9751, 9, 2, 135, { [2] = 9751 }, { [2] = 135 }, nil, nil, nil, true }
+players["boizza"] = { "Boizza", 9750, 9, 2, 136, { [2] = 9750 }, { [2] = 136 }, nil, nil, nil, true }
+players["executr"] = { "Executr", 9746, 9, 2, 137, { [2] = 9746 }, { [2] = 137 }, nil, nil, nil, true }
+players["dyg"] = { "Dyg", 9746, 9, 2, 138, { [2] = 9746 }, { [2] = 138 }, nil, nil, nil, true }
+players["simplywar"] = { "Simplywar", 9743, 9, 2, 139, { [2] = 9743 }, { [2] = 139 }, nil, nil, nil, true }
+players["caneqt"] = { "Caneqt", 9740, 9, 2, 140, { [2] = 9740, [3] = 4554 }, { [2] = 140, [3] = 195 }, nil, nil, nil, true }
+players["zezeka"] = { "Zezeka", 9737, 9, 2, 141, { [2] = 9737 }, { [2] = 141 }, nil, nil, nil, true }
+players["brunkungenn"] = { "Brunkungenn", 9737, 9, 2, 142, { [2] = 9737 }, { [2] = 142 }, nil, nil, nil, true }
+players["symbolixwarr"] = { "Symbolixwarr", 9736, 9, 2, 143, { [2] = 9736 }, { [2] = 143 }, nil, nil, nil, true }
+players["juvchik"] = { "Juvchik", 9735, 9, 2, 144, { [2] = 9735 }, { [2] = 144 }, nil, nil, nil, true }
+players["helldreams"] = { "Helldreams", 9733, 9, 2, 145, { [2] = 9733 }, { [2] = 145 }, nil, nil, nil, true }
+players["ciganblaster"] = { "Ciganblaster", 9732, 9, 2, 147, { [2] = 9732 }, { [2] = 147 }, nil, nil, nil, true }
+players["orakleth"] = { "Orakleth", 9731, 9, 2, 148, { [2] = 9731 }, { [2] = 148 }, nil, nil, nil, true }
+players["nykolas"] = { "Nykolas", 9731, 9, 2, 149, { [2] = 9731 }, { [2] = 149 }, nil, nil, nil, true }
+players["pompo"] = { "Pompo", 9731, 9, 2, 150, { [2] = 9731 }, { [2] = 150 }, nil, nil, nil, true }
+players["figorcik"] = { "Figorcik", 9731, 9, 2, 151, { [2] = 9731 }, { [2] = 151 }, nil, nil, nil, true }
+players["finrir"] = { "Finrir", 9730, 9, 2, 152, { [2] = 9730, [3] = 880 }, { [2] = 152, [3] = 655 }, nil, nil, nil, true }
+players["hugeiq"] = { "Hugeiq", 9725, 9, 2, 153, { [1] = 8996, [2] = 9725 }, { [1] = 11, [2] = 153 }, nil, nil, nil, true }
+players["clv"] = { "Clv", 9724, 9, 2, 154, { [2] = 9724 }, { [2] = 154 }, nil, nil, nil, true }
+players["oraklet"] = { "Oraklet", 9724, 9, 2, 155, { [2] = 9724 }, { [2] = 155 }, nil, nil, nil, true }
+players["carnaged"] = { "Carnaged", 9721, 9, 2, 156, { [2] = 9721 }, { [2] = 156 }, nil, nil, nil, true }
+players["giguska"] = { "Giguska", 9721, 9, 2, 157, { [2] = 9721 }, { [2] = 157 }, nil, nil, nil, true }
+players["effortlessly"] = { "Effortlessly", 9718, 9, 2, 158, { [2] = 9718 }, { [2] = 158 }, nil, nil, nil, true }
+players["hjordis"] = { "Hjordis", 9718, 9, 2, 159, { [2] = 9718 }, { [2] = 159 }, nil, nil, nil, true }
+players["cortizol"] = { "Cortizol", 9716, 9, 2, 160, { [2] = 9716 }, { [2] = 160 }, nil, nil, nil, true }
+players["fwr"] = { "Fwr", 9716, 9, 2, 161, { [2] = 9716 }, { [2] = 161 }, nil, nil, nil, true }
+players["cwelabuser"] = { "Cwelabuser", 9715, 9, 2, 162, { [2] = 9715 }, { [2] = 162 }, nil, nil, nil, true }
+players["nfinite"] = { "Nfinite", 9711, 9, 2, 163, { [2] = 9711 }, { [2] = 163 }, nil, nil, nil, true }
+players["petar"] = { "Petar", 9710, 9, 2, 164, { [2] = 9710 }, { [2] = 164 }, nil, nil, nil, true }
+players["jordyn"] = { "Jordyn", 9709, 9, 2, 165, { [2] = 9709 }, { [2] = 165 }, nil, nil, nil, true }
+players["vukoqtwarr"] = { "Vukoqtwarr", 9707, 9, 2, 166, { [1] = 9120, [2] = 9707, [3] = 4544 }, { [1] = 10, [2] = 166, [3] = 199 }, nil, nil, nil, true }
+players["frozenq"] = { "Frozenq", 9707, 9, 2, 167, { [2] = 9707 }, { [2] = 167 }, nil, nil, nil, true }
+players["blszxx"] = { "Blszxx", 9706, 9, 2, 168, { [2] = 9706 }, { [2] = 168 }, nil, nil, nil, true }
+players["inovan"] = { "Inovan", 9705, 9, 2, 169, { [2] = 9705 }, { [2] = 169 }, nil, nil, nil, true }
+players["exorsus"] = { "Exorsus", 9705, 9, 2, 170, { [2] = 9705 }, { [2] = 170 }, nil, nil, nil, true }
+players["busterluh"] = { "Busterluh", 9704, 9, 2, 171, { [2] = 9704 }, { [2] = 171 }, nil, nil, nil, true }
+players["cyberdinna"] = { "Cyberdinna", 9703, 9, 2, 172, { [2] = 9703 }, { [2] = 172 }, nil, nil, nil, true }
+players["zetamethod"] = { "Zetamethod", 9702, 9, 2, 173, { [2] = 9702 }, { [2] = 173 }, nil, nil, nil, true }
+players["classictunka"] = { "Classictunka", 9693, 9, 2, 174, { [2] = 9693 }, { [2] = 174 }, nil, nil, nil, true }
+players["rayewarr"] = { "Rayewarr", 9692, 9, 2, 175, { [2] = 9692 }, { [2] = 175 }, nil, nil, nil, true }
+players["droped"] = { "Droped", 9688, 9, 2, 176, { [2] = 9688 }, { [2] = 176 }, nil, nil, nil, true }
+players["meiyan"] = { "Meiyan", 9688, 9, 2, 177, { [2] = 9688, [3] = 1352 }, { [2] = 177, [3] = 565 }, nil, nil, nil, true }
+players["garjoka"] = { "Garjoka", 9685, 9, 2, 178, { [2] = 9685 }, { [2] = 178 }, nil, nil, nil, true }
+players["rotelle"] = { "Rotelle", 9685, 9, 2, 179, { [2] = 9685 }, { [2] = 179 }, nil, nil, nil, true }
+players["tonyaxe"] = { "Tonyaxe", 9683, 9, 2, 180, { [2] = 9683, [3] = 2371 }, { [2] = 180, [3] = 427 }, nil, nil, nil, true }
+players["zelder"] = { "Zelder", 9683, 9, 2, 181, { [2] = 9683 }, { [2] = 181 }, nil, nil, nil, true }
+players["mommo"] = { "Mommo", 9680, 9, 2, 182, { [2] = 9680 }, { [2] = 182 }, nil, nil, nil, true }
+players["awniwar"] = { "Awniwar", 9680, 9, 2, 183, { [2] = 9680 }, { [2] = 183 }, nil, nil, nil, true }
+players["pause"] = { "Pause", 9679, 9, 2, 184, { [2] = 9679 }, { [2] = 184 }, nil, nil, nil, true }
+players["dictated"] = { "Dictated", 10000, 9, 3, 1, { [2] = 9520, [3] = 10000 }, { [2] = 302, [3] = 1 }, nil, nil, nil, true }
+players["furriosa"] = { "Furriosa", 9956, 9, 3, 2, { [2] = 9388, [3] = 9956 }, { [2] = 388, [3] = 2 }, nil, nil, nil, true }
+players["fastsunders"] = { "Fastsunders", 9941, 9, 3, 3, { [2] = 3485, [3] = 9941 }, { [2] = 13865, [3] = 3 }, nil, nil, nil, true }
+players["vyarra"] = { "Vyarra", 9909, 9, 3, 4, { [1] = 5129, [2] = 3733, [3] = 9909 }, { [1] = 68, [2] = 13298, [3] = 4 }, nil, nil, nil, true }
+players["ramnouzia"] = { "Ramnouzia", 9905, 9, 3, 5, { [1] = 663, [2] = 2070, [3] = 9905 }, { [1] = 279, [2] = 19960, [3] = 5 }, nil, nil, nil, true }
 players["deteste"] = { "Deteste", 9844, 9, 3, 6, { [3] = 9844 }, { [3] = 6 }, nil, nil, nil, true }
-players["fanoffap"] = { "Fanoffap", 9599, 9, 3, 8, { [3] = 9599 }, { [3] = 8 }, nil, nil, nil, true }
-players["brag"] = { "Brag", 9552, 9, 3, 10, { [1] = 1478, [2] = 7921, [3] = 9552 }, { [1] = 212, [2] = 1748, [3] = 10 }, nil, nil, nil, true }
-players["magyoga"] = { "Magyoga", 9551, 9, 3, 11, { [2] = 7805, [3] = 9551 }, { [2] = 1886, [3] = 11 }, nil, nil, nil, true }
-players["finnen"] = { "Finnen", 9422, 9, 3, 12, { [2] = 8910, [3] = 9422 }, { [2] = 784, [3] = 12 }, nil, nil, nil, true }
-players["blockybalboa"] = { "Blockybalboa", 9186, 9, 3, 14, { [3] = 9186 }, { [3] = 14 }, nil, nil, nil, true }
-players["mesteru"] = { "Mesteru", 9124, 9, 3, 15, { [3] = 9124 }, { [3] = 15 }, nil, nil, nil, true }
-players["lyphaz"] = { "Lyphaz", 8974, 9, 3, 16, { [2] = 7986, [3] = 8974 }, { [2] = 1679, [3] = 16 }, nil, nil, nil, true }
-players["emilywar"] = { "Emilywar", 8924, 9, 3, 17, { [3] = 8924 }, { [3] = 17 }, nil, nil, nil, true }
-players["zirablocks"] = { "Zirablocks", 8867, 9, 3, 19, { [1] = 157, [3] = 8867 }, { [1] = 390, [3] = 19 }, nil, nil, nil, true }
-players["papajak"] = { "Papajak", 8806, 9, 3, 20, { [2] = 5951, [3] = 8806 }, { [2] = 5656, [3] = 20 }, nil, nil, nil, true }
-players["lose"] = { "Lose", 8786, 9, 3, 21, { [2] = 7721, [3] = 8786 }, { [2] = 2005, [3] = 21 }, nil, nil, nil, true }
-players["kampfhund"] = { "Kampfhund", 8616, 9, 3, 24, { [1] = 871, [2] = 8543, [3] = 8616 }, { [1] = 254, [2] = 1095, [3] = 24 }, nil, nil, nil, true }
-players["randomstun"] = { "Randomstun", 8588, 9, 3, 25, { [2] = 7856, [3] = 8588 }, { [2] = 1824, [3] = 25 }, nil, nil, nil, true }
-players["komka"] = { "Komka", 8481, 9, 3, 27, { [2] = 8252, [3] = 8481 }, { [2] = 1399, [3] = 27 }, nil, nil, nil, true }
-players["wanu"] = { "Wanu", 8480, 9, 3, 28, { [2] = 6493, [3] = 8480 }, { [2] = 4124, [3] = 28 }, nil, nil, nil, true }
-players["howtoprot"] = { "Howtoprot", 8424, 9, 3, 29, { [3] = 8424 }, { [3] = 29 }, nil, nil, nil, true }
+players["fanoffap"] = { "Fanoffap", 9601, 9, 3, 8, { [3] = 9601 }, { [3] = 8 }, nil, nil, nil, true }
+players["brag"] = { "Brag", 9554, 9, 3, 10, { [1] = 1478, [2] = 7913, [3] = 9554 }, { [1] = 212, [2] = 1753, [3] = 10 }, nil, nil, nil, true }
+players["magyoga"] = { "Magyoga", 9554, 9, 3, 11, { [2] = 7796, [3] = 9554 }, { [2] = 1891, [3] = 11 }, nil, nil, nil, true }
+players["finnen"] = { "Finnen", 9424, 9, 3, 12, { [2] = 8904, [3] = 9424 }, { [2] = 790, [3] = 12 }, nil, nil, nil, true }
+players["blockybalboa"] = { "Blockybalboa", 9189, 9, 3, 14, { [3] = 9189 }, { [3] = 14 }, nil, nil, nil, true }
+players["mesteru"] = { "Mesteru", 9128, 9, 3, 15, { [3] = 9128 }, { [3] = 15 }, nil, nil, nil, true }
+players["emilywar"] = { "Emilywar", 9042, 9, 3, 16, { [3] = 9042 }, { [3] = 16 }, nil, nil, nil, true }
+players["lyphaz"] = { "Lyphaz", 8978, 9, 3, 17, { [2] = 7977, [3] = 8978 }, { [2] = 1686, [3] = 17 }, nil, nil, nil, true }
+players["zirablocks"] = { "Zirablocks", 8871, 9, 3, 19, { [1] = 157, [3] = 8871 }, { [1] = 390, [3] = 19 }, nil, nil, nil, true }
+players["papajak"] = { "Papajak", 8807, 9, 3, 20, { [2] = 5948, [3] = 8807 }, { [2] = 5663, [3] = 20 }, nil, nil, nil, true }
+players["lose"] = { "Lose", 8791, 9, 3, 21, { [2] = 7710, [3] = 8791 }, { [2] = 2012, [3] = 21 }, nil, nil, nil, true }
+players["kampfhund"] = { "Kampfhund", 8620, 9, 3, 24, { [1] = 871, [2] = 8535, [3] = 8620 }, { [1] = 254, [2] = 1102, [3] = 24 }, nil, nil, nil, true }
+players["randomstun"] = { "Randomstun", 8594, 9, 3, 25, { [2] = 7847, [3] = 8594 }, { [2] = 1832, [3] = 25 }, nil, nil, nil, true }
+players["komka"] = { "Komka", 8486, 9, 3, 27, { [2] = 8241, [3] = 8486 }, { [2] = 1407, [3] = 27 }, nil, nil, nil, true }
+players["wanu"] = { "Wanu", 8485, 9, 3, 28, { [2] = 6487, [3] = 8485 }, { [2] = 4142, [3] = 28 }, nil, nil, nil, true }
+players["howtoprot"] = { "Howtoprot", 8430, 9, 3, 29, { [3] = 8430 }, { [3] = 29 }, nil, nil, nil, true }
