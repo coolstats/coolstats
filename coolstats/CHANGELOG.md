@@ -2,6 +2,36 @@
 
 ## Unreleased
 
+## 0.2.50 - 2026-09-14
+
+### Data
+
+- Repaired Onyxia Phase 3 Overall history from the final locked TOGC snapshot,
+  restoring the 9,864 preserved history rows and correcting corrupted 0.2.49
+  history scores/ranks.
+- Froze Onyxia Phase 3 Overall history behind a dedicated lock file and
+  validation step so future ICC refreshes can update Phase 4 data without
+  changing the Phase 3 historical rankings.
+- Kept the browser Phase 3 Overall column score/rank-only while showing the
+  locked Phase 3 spec in player tooltips and the UWU player panel.
+
+## 0.2.49 - 2026-09-14
+
+### Data
+
+- Refreshed Onyxia Phase 4 UwU Logs only, leaving Lordaeron and Icecrown on
+  the 0.2.48 weekly datasets.
+- Temporarily bypassed the Onyxia active-player safety floor for the early ICC
+  phase start so sparse but real ICC and Toravon rankings can ship now.
+- Preserved only active locked Phase 3 Overall history rows during the ICC
+  transition, avoiding stale Phase 2/TOGC carryover from the old transition
+  source file.
+- Shipped Onyxia with 368 current ranked players, 2,413 boss-only players from
+  boss leaderboards, and 12,292 total players including preserved Phase 3
+  history in 6 player chunks with matching ICC and VOA raid layers.
+- Added the locked Phase 3 Overall spec to tooltip, inspect, and Player Browser
+  history displays.
+
 ## 0.2.48 - 2026-09-13
 
 ### Data
