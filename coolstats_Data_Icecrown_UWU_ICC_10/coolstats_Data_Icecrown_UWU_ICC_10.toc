@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown Icecrown Citadel 10
 ## Notes: Optional Icecrown Citadel UwU Logs layer 10/13 for Icecrown.
 ## Author: coolstats
-## Version: 0.2.49
+## Version: 0.2.48
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats, coolstats_Data_Icecrown

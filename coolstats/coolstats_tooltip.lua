@@ -3551,23 +3551,14 @@ end
 function coolstats.GetUwUHistoricalOverall(player)
 	local historical = player and player[10]
 	if type(historical) ~= "table" or historical[1] == nil then
-		return nil, nil, nil
+		return nil, nil
 	end
-	return historical[1], historical[2], historical[3]
+	return historical[1], historical[2]
 end
 
 function coolstats.GetUwUHistoricalOverallLabel()
 	local data = coolstatsUwUData
 	return (data and data.historicalOverallLabel) or "Phase 2 Overall"
-end
-
-function coolstats.FormatUwUHistoricalOverall(player, scoreCenti, rank, specIndex)
-	local value = FormatUwUScoreWithRank(scoreCenti, rank)
-	local specName = GetUwUSpecName(player, specIndex)
-	if specName then
-		value = specName .. " " .. value
-	end
-	return value
 end
 
 function coolstats.FormatRaidProgressText(progress)
@@ -4134,13 +4125,13 @@ local function BuildUwUTooltipCache(player)
 		base = { "double", "UwU Logs Raid Score", value, ADDON_COLOR_R, ADDON_COLOR_G, ADDON_COLOR_B, red, green, blue },
 		details = {},
 	}
-	local historicalScore, historicalRank, historicalSpecIndex = coolstats.GetUwUHistoricalOverall(player)
+	local historicalScore, historicalRank = coolstats.GetUwUHistoricalOverall(player)
 	if historicalScore then
 		local historicalRed, historicalGreen, historicalBlue = GetUwUScoreColor(historicalScore)
 		cache.historical = {
 			"double",
 			coolstats.GetUwUHistoricalOverallLabel(),
-			coolstats.FormatUwUHistoricalOverall(player, historicalScore, historicalRank, historicalSpecIndex),
+			FormatUwUScoreWithRank(historicalScore, historicalRank),
 			0.70, 0.70, 0.70,
 			historicalRed, historicalGreen, historicalBlue,
 		}
@@ -5646,10 +5637,10 @@ RenderUwUPanel = function(panel, name, player, subtitle, guildName)
 	UpdateInspectPanelSpecButtons(panel, player, selectedSpecIndex)
 	AddInspectPanelSection(state, "Summary")
 	AddInspectPanelLine(state, "Raid Score", currentPhaseRanked and FormatUwUScoreWithRank(scoreCenti, rank) or "Not ranked", red, green, blue)
-	local historicalScore, historicalRank, historicalSpecIndex = coolstats.GetUwUHistoricalOverall(player)
+	local historicalScore, historicalRank = coolstats.GetUwUHistoricalOverall(player)
 	if historicalScore then
 		local historicalRed, historicalGreen, historicalBlue = GetUwUScoreColor(historicalScore)
-		AddInspectPanelLine(state, coolstats.GetUwUHistoricalOverallLabel(), coolstats.FormatUwUHistoricalOverall(player, historicalScore, historicalRank, historicalSpecIndex), historicalRed, historicalGreen, historicalBlue)
+		AddInspectPanelLine(state, coolstats.GetUwUHistoricalOverallLabel(), FormatUwUScoreWithRank(historicalScore, historicalRank), historicalRed, historicalGreen, historicalBlue)
 	end
 	AddInspectPanelLine(state, "Spec", specName, classColor and classColor.r or 1.0, classColor and classColor.g or 1.0, classColor and classColor.b or 1.0)
 	if selectedSpecIndex ~= player[4] then
@@ -7444,7 +7435,7 @@ if type(coolstats) == "table" then
 			row.scoreCenti = player[2]
 			row.rank = player[5]
 		end
-		row.phase2ScoreCenti, row.phase2Rank, row.phase2SpecIndex = coolstats.GetUwUHistoricalOverall(player)
+		row.phase2ScoreCenti, row.phase2Rank = coolstats.GetUwUHistoricalOverall(player)
 		if coolstats.UpdateCachedPlayerBrowserSearchKeys then
 			coolstats.UpdateCachedPlayerBrowserSearchKeys(row)
 		end
@@ -8672,7 +8663,7 @@ if type(coolstats) == "table" then
 			.. "\030" .. tostring(row.mainSpecIndex or "") .. ":" .. tostring(row.mainSpecScoreCenti or "")
 			.. "\030" .. tostring(row.offSpecIndex or "") .. ":" .. tostring(row.offSpecScoreCenti or "")
 			.. "\030" .. tostring(row.bestRankSpecIndex or "") .. ":" .. tostring(row.bestRank or "") .. ":" .. tostring(row.bestRankScoreCenti or "")
-			.. "\030" .. tostring(row.phase2ScoreCenti or "") .. ":" .. tostring(row.phase2Rank or "") .. ":" .. tostring(row.phase2SpecIndex or "")
+			.. "\030" .. tostring(row.phase2ScoreCenti or "") .. ":" .. tostring(row.phase2Rank or "")
 			.. "\030" .. tostring(row.bossSpecIndex or "") .. ":" .. tostring(row.bossScoreCenti or "") .. ":" .. tostring(row.bossPlayerRank or "") .. ":" .. tostring(row.bossRaidRank or "") .. ":" .. tostring(row.bossDps or "")
 		local display = row.browserDisplay
 		if display and display.key == key then
@@ -8694,7 +8685,7 @@ if type(coolstats) == "table" then
 			className = coolstats.GetCachedPlayerBrowserClassName(row.classIndex),
 			bestRankText = row.currentPhaseRanked and row.bestRank and ("#" .. tostring(row.bestRank)) or "-",
 			currentRankLabel = (coolstats.GetCachedPlayerBrowserPhaseLabels().currentBestRank or "Best Rank"),
-			phase2Text = panel and panel.showPhase2History and (row.phase2ScoreCenti and coolstats.FormatUwUHistoricalOverall(row.player, row.phase2ScoreCenti, row.phase2Rank, row.phase2SpecIndex) or "Not Ranked") or "-",
+			phase2Text = panel and panel.showPhase2History and (row.phase2ScoreCenti and FormatUwUScoreWithRank(row.phase2ScoreCenti, row.phase2Rank) or "Not Ranked") or "-",
 			mainSpecText = mainSpecName and (mainSpecName .. " " .. FormatUwUScore(row.mainSpecScoreCenti)) or "-",
 			offSpecText = offSpecName and (offSpecName .. " " .. FormatUwUScore(row.offSpecScoreCenti)) or "-",
 		}
