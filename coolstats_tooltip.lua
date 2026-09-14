@@ -3561,13 +3561,19 @@ function coolstats.GetUwUHistoricalOverallLabel()
 	return (data and data.historicalOverallLabel) or "Phase 2 Overall"
 end
 
+local GetUwUSpecName
+
 function coolstats.FormatUwUHistoricalOverall(player, scoreCenti, rank, specIndex)
 	local value = FormatUwUScoreWithRank(scoreCenti, rank)
-	local specName = GetUwUSpecName(player, specIndex)
+	local specName = GetUwUSpecName and GetUwUSpecName(player, specIndex)
 	if specName then
 		value = specName .. " " .. value
 	end
 	return value
+end
+
+function coolstats.FormatUwUHistoricalOverallPlain(scoreCenti, rank)
+	return FormatUwUScoreWithRank(scoreCenti, rank)
 end
 
 function coolstats.FormatRaidProgressText(progress)
@@ -3887,7 +3893,7 @@ local function FormatUwUBossPanelValue(bossData)
 	return value
 end
 
-local function GetUwUSpecName(player, specIndex)
+function GetUwUSpecName(player, specIndex)
 	local data = coolstatsUwUData
 	if not data or not data.specs then
 		return nil
@@ -7437,12 +7443,18 @@ if type(coolstats) == "table" then
 				end
 			end
 		end
-		row.bestRank = bestRank
-		row.bestRankSpecIndex = bestSpecIndex
-		row.bestRankScoreCenti = bestScoreCenti
 		if row.currentPhaseRanked then
+			row.bestRank = bestRank
+			row.bestRankSpecIndex = bestSpecIndex
+			row.bestRankScoreCenti = bestScoreCenti
 			row.scoreCenti = player[2]
 			row.rank = player[5]
+		else
+			row.bestRank = nil
+			row.bestRankSpecIndex = nil
+			row.bestRankScoreCenti = nil
+			row.scoreCenti = nil
+			row.rank = nil
 		end
 		row.phase2ScoreCenti, row.phase2Rank, row.phase2SpecIndex = coolstats.GetUwUHistoricalOverall(player)
 		if coolstats.UpdateCachedPlayerBrowserSearchKeys then
@@ -8694,7 +8706,8 @@ if type(coolstats) == "table" then
 			className = coolstats.GetCachedPlayerBrowserClassName(row.classIndex),
 			bestRankText = row.currentPhaseRanked and row.bestRank and ("#" .. tostring(row.bestRank)) or "-",
 			currentRankLabel = (coolstats.GetCachedPlayerBrowserPhaseLabels().currentBestRank or "Best Rank"),
-			phase2Text = panel and panel.showPhase2History and (row.phase2ScoreCenti and coolstats.FormatUwUHistoricalOverall(row.player, row.phase2ScoreCenti, row.phase2Rank, row.phase2SpecIndex) or "Not Ranked") or "-",
+			phase2Text = panel and panel.showPhase2History and (row.phase2ScoreCenti and coolstats.FormatUwUHistoricalOverallPlain(row.phase2ScoreCenti, row.phase2Rank) or "Not Ranked") or "-",
+			phase2TooltipText = panel and panel.showPhase2History and (row.phase2ScoreCenti and coolstats.FormatUwUHistoricalOverall(row.player, row.phase2ScoreCenti, row.phase2Rank, row.phase2SpecIndex) or "Not Ranked") or "-",
 			mainSpecText = mainSpecName and (mainSpecName .. " " .. FormatUwUScore(row.mainSpecScoreCenti)) or "-",
 			offSpecText = offSpecName and (offSpecName .. " " .. FormatUwUScore(row.offSpecScoreCenti)) or "-",
 		}
@@ -8752,7 +8765,7 @@ if type(coolstats) == "table" then
 			end
 		end
 		if self.phase2Text and self.phase2Text ~= "-" then
-			GameTooltip:AddDoubleLine(self.phase2Label or coolstats.GetCachedPlayerBrowserPhaseLabels().historyOverall or "Previous Overall", self.phase2Text, 0.86, 0.86, 0.78, self.phase2R or 1, self.phase2G or 1, self.phase2B or 1)
+			GameTooltip:AddDoubleLine(self.phase2Label or coolstats.GetCachedPlayerBrowserPhaseLabels().historyOverall or "Previous Overall", self.phase2TooltipText or self.phase2Text, 0.86, 0.86, 0.78, self.phase2R or 1, self.phase2G or 1, self.phase2B or 1)
 		end
 		if self.cacheText and self.cacheText ~= "-" then
 			GameTooltip:AddDoubleLine("Gear Cached", self.cacheText, 0.86, 0.86, 0.78, 1, 1, 1)
@@ -14249,6 +14262,7 @@ if type(coolstats) == "table" then
 				rowFrame.bestRankSpecName = display and display.bestSpecName or nil
 				rowFrame.currentRankLabel = display and display.currentRankLabel or (coolstats.GetCachedPlayerBrowserPhaseLabels().currentBestRank or "Best Rank")
 				rowFrame.phase2Text = display and display.phase2Text or "-"
+				rowFrame.phase2TooltipText = display and display.phase2TooltipText or rowFrame.phase2Text
 				rowFrame.phase2Label = coolstats.GetCachedPlayerBrowserPhaseLabels().historyOverall or "Previous Overall"
 				rowFrame.mainSpecText = display and display.mainSpecText or "-"
 				rowFrame.offSpecText = display and display.offSpecText or "-"
@@ -14402,6 +14416,7 @@ if type(coolstats) == "table" then
 				rowFrame.bestRankSpecName = nil
 				rowFrame.currentRankLabel = nil
 				rowFrame.phase2Text = nil
+				rowFrame.phase2TooltipText = nil
 				rowFrame.mainSpecText = nil
 				rowFrame.offSpecText = nil
 				rowFrame.selectedBossLabel = nil

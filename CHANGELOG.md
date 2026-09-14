@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+## 0.2.50 - 2026-09-14
+
+### Data
+
+- Repaired Onyxia Phase 3 Overall history from the final locked TOGC snapshot,
+  restoring the 9,864 preserved history rows and correcting corrupted 0.2.49
+  history scores/ranks.
+- Froze Onyxia Phase 3 Overall history behind a dedicated lock file and
+  validation step so future ICC refreshes can update Phase 4 data without
+  changing the Phase 3 historical rankings.
+- Kept the browser Phase 3 Overall column score/rank-only while showing the
+  locked Phase 3 spec in player tooltips and the UWU player panel.
+
 ## 0.2.49 - 2026-09-14
 
 ### Data

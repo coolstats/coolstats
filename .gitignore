@@ -1,4 +1,5 @@
 data/*
+!data/onyxia_phase3_history_lock.json
 !data/logs/
 data/logs/*
 !data/logs/**/
