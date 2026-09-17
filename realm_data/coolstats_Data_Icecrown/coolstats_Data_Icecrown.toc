@@ -1,8 +1,8 @@
-﻿## Interface: 30300
+## Interface: 30300
 ## Title: |cff00c0ffcoolstats|r Data - Icecrown
 ## Notes: Realm-specific UwU Logs data for Icecrown.
 ## Author: coolstats
-## Version: 0.2.50
+## Version: 0.2.51
 ## DefaultState: Enabled
 ## LoadOnDemand: 1
 ## RequiredDeps: coolstats
