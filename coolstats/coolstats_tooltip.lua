@@ -103,6 +103,9 @@ local UWU_INSPECT_SPEC_TAB_LEFT = 0
 local UWU_INSPECT_SPEC_TAB_TOP = -50
 local UWU_INSPECT_SPEC_TAB_BG_LEFT = -3
 local UWU_INSPECT_SPEC_TAB_BG_TOP = 11
+coolstats.INSPECT_GEAR_CACHE_RETRY_INTERVAL_SECONDS = 0.15
+coolstats.INSPECT_GEAR_CACHE_RETRY_ATTEMPTS = 12
+coolstats.TARGET_INSPECT_RETRY_INTERVAL_SECONDS = 0.5
 -- Large SavedVariables chunks can silently fail to load on the 3.3.5 client.
 -- Normalized talent snapshots share one catalog per class and only retain
 -- per-player rank strings, but keep a conservative cap while v2 rolls out.
@@ -510,6 +513,10 @@ coolstats.achievementComparisonReadyAt = coolstats.achievementComparisonReadyAt 
 coolstats.achievementComparisonStatusBarsGuarded = coolstats.achievementComparisonStatusBarsGuarded or false
 local lastRaidProgressPruneAt = 0
 local tooltipFrame = CreateFrame("Frame")
+coolstats.inspectGearRetryFrame = coolstats.inspectGearRetryFrame or CreateFrame("Frame")
+coolstats.pendingGearInspectRetry = nil
+coolstats.targetInspectRetryFrame = coolstats.targetInspectRetryFrame or CreateFrame("Frame")
+coolstats.pendingTargetInspectRetry = nil
 local inspectUwUPanel = nil
 local lookupUwUPanel = nil
 local GetUwUPlayerByName
@@ -2560,6 +2567,74 @@ local function CacheInspectGearForUnit(unit, forceRefresh)
 	return snapshot, true
 end
 
+function coolstats.StopInspectGearCacheRetry()
+	coolstats.pendingGearInspectRetry = nil
+	coolstats.inspectGearRetryFrame:SetScript("OnUpdate", nil)
+end
+
+function coolstats.RefreshPanelsAfterInspectGearCache()
+	if lookupUwUPanel and lookupUwUPanel:IsShown() then
+		UpdateCachedGearPanel(lookupUwUPanel, lookupUwUPanel.renderName, lookupUwUPanel.renderPlayer)
+	end
+	if inspectUwUPanel and inspectUwUPanel:IsShown() then
+		inspectUwUPanel.lastInspectRenderKey = nil
+		UpdateInspectUwUPanel()
+	end
+end
+
+function coolstats.InspectGearCacheRetry_OnUpdate(self)
+	local retry = coolstats.pendingGearInspectRetry
+	if not retry then
+		self:SetScript("OnUpdate", nil)
+		return
+	end
+
+	local now = GetTime()
+	if retry.nextAt and now < retry.nextAt then
+		return
+	end
+
+	local unit = coolstats.FindInspectReadyUnit(retry.guid, retry.nameKey)
+	if unit then
+		local snapshot = CacheInspectGearForUnit(unit, true)
+		if snapshot and tonumber(snapshot.slotCount or 0) > 0 then
+			coolstats.StopInspectGearCacheRetry()
+			coolstats.RefreshPanelsAfterInspectGearCache()
+			return
+		end
+	end
+
+	retry.attempts = (retry.attempts or 0) + 1
+	if retry.attempts >= (retry.maxAttempts or coolstats.INSPECT_GEAR_CACHE_RETRY_ATTEMPTS) then
+		coolstats.StopInspectGearCacheRetry()
+		return
+	end
+	retry.nextAt = now + coolstats.INSPECT_GEAR_CACHE_RETRY_INTERVAL_SECONDS
+end
+
+function coolstats.ScheduleInspectGearCacheRetry(unit, nameKey, guid)
+	if not coolstats.IsGearCachingEnabled() then
+		coolstats.StopInspectGearCacheRetry()
+		return
+	end
+	if unit and UnitExists(unit) and UnitIsPlayer(unit) then
+		nameKey = nameKey or GetCachedGearKeyForName(UnitName(unit))
+		guid = guid or (UnitGUID and UnitGUID(unit) or nil)
+	end
+	if not nameKey and not guid then
+		return
+	end
+
+	coolstats.pendingGearInspectRetry = {
+		nameKey = nameKey,
+		guid = guid,
+		attempts = 0,
+		maxAttempts = coolstats.INSPECT_GEAR_CACHE_RETRY_ATTEMPTS,
+		nextAt = GetTime() + coolstats.INSPECT_GEAR_CACHE_RETRY_INTERVAL_SECONDS,
+	}
+	coolstats.inspectGearRetryFrame:SetScript("OnUpdate", coolstats.InspectGearCacheRetry_OnUpdate)
+end
+
 function coolstats.TrackInspectRequest(unit)
 	if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then
 		return
@@ -2600,6 +2675,57 @@ local function RequestGearInspectForUnit(unit)
 	coolstats.TrackInspectRequest(unit)
 	NotifyInspect(unit)
 	return true
+end
+
+function coolstats.StopTargetInspectRetry()
+	coolstats.pendingTargetInspectRetry = nil
+	coolstats.targetInspectRetryFrame:SetScript("OnUpdate", nil)
+end
+
+function coolstats.TargetInspectRetry_OnUpdate(self)
+	local retry = coolstats.pendingTargetInspectRetry
+	if not retry then
+		self:SetScript("OnUpdate", nil)
+		return
+	end
+	if not UnitExists("target") or not UnitIsPlayer("target")
+		or (retry.guid and UnitGUID("target") ~= retry.guid)
+		or (retry.nameKey and GetCachedGearKeyForName(UnitName("target")) ~= retry.nameKey) then
+		coolstats.StopTargetInspectRetry()
+		return
+	end
+	local now = GetTime()
+	if now < retry.nextAt then
+		return
+	end
+	retry.nextAt = now + coolstats.TARGET_INSPECT_RETRY_INTERVAL_SECONDS
+	if not coolstats.IsAnyInspectCachingEnabled() then
+		coolstats.StopTargetInspectRetry()
+		return
+	end
+	if RequestGearInspectForUnit("target") then
+		coolstats.StopTargetInspectRetry()
+		if coolstats.IsGearCachingEnabled() then
+			coolstats.ScheduleInspectGearCacheRetry("target", retry.nameKey, retry.guid)
+		end
+	end
+end
+
+function coolstats.ScheduleTargetInspectRetry()
+	if not coolstats.IsAnyInspectCachingEnabled() or not UnitExists("target") or not UnitIsPlayer("target") then
+		return
+	end
+	local nameKey = GetCachedGearKeyForName(UnitName("target"))
+	local guid = UnitGUID and UnitGUID("target") or nil
+	if not nameKey and not guid then
+		return
+	end
+	coolstats.pendingTargetInspectRetry = {
+		nameKey = nameKey,
+		guid = guid,
+		nextAt = GetTime() + coolstats.TARGET_INSPECT_RETRY_INTERVAL_SECONDS,
+	}
+	coolstats.targetInspectRetryFrame:SetScript("OnUpdate", coolstats.TargetInspectRetry_OnUpdate)
 end
 
 if hooksecurefunc and NotifyInspect and not coolstats.inspectNotifyHooked then
@@ -2714,6 +2840,9 @@ local function TryCacheLookupGearFromUnit(unit, lookupKey)
 
 	local snapshot = CacheInspectGearForUnit(unit, true)
 	local requested = RequestGearInspectForUnit(unit)
+	if requested and (not snapshot or tonumber(snapshot.slotCount or 0) <= 0) then
+		coolstats.ScheduleInspectGearCacheRetry(unit, lookupKey)
+	end
 	return snapshot, requested
 end
 
@@ -5720,6 +5849,13 @@ UpdateInspectUwUPanel = function()
 	end
 
 	local unit = GetInspectUwUUnit()
+	local liveGearSnapshot = nil
+	if unit then
+		liveGearSnapshot = CacheInspectGearForUnit(unit)
+		if not liveGearSnapshot or tonumber(liveGearSnapshot.slotCount or 0) <= 0 then
+			coolstats.ScheduleInspectGearCacheRetry(unit)
+		end
+	end
 	local name = unit and UnitName(unit)
 	local normalizedName = NormalizeName(name or "")
 	if inspectUwUPanel.dismissedName == normalizedName then
@@ -5728,7 +5864,7 @@ UpdateInspectUwUPanel = function()
 	end
 	inspectUwUPanel.dismissedName = nil
 	local player = name and GetUwUPlayerByName(name)
-	local gearSnapshot = GetCachedGearSnapshot(player and player[1] or name)
+	local gearSnapshot = liveGearSnapshot or GetCachedGearSnapshot(player and player[1] or name)
 	local guildName = gearSnapshot and gearSnapshot.guildName or coolstats.GetCachedPlayerGuildName(name)
 	local renderKey = table.concat({
 		tostring(normalizedName or ""),
@@ -14654,6 +14790,8 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 		pendingRaidProgress = nil
 		coolstats.raidProgressRequestState.queued = nil
 		coolstats.ClearTooltipAchievementComparison()
+		coolstats.StopInspectGearCacheRetry()
+		coolstats.StopTargetInspectRetry()
 		self:SetScript("OnUpdate", nil)
 		if coolstats.MaybeStartLoginFeatureGuide then
 			coolstats.MaybeStartLoginFeatureGuide()
@@ -14664,8 +14802,12 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 	if event == "INSPECT_READY" then
 		local inspectGuid = ...
 		local inspectUnit = coolstats.FindInspectReadyUnit(inspectGuid or pendingGearInspectGuid or coolstats.pendingTalentInspectGuid, inspectGuid and nil or pendingGearInspectName or coolstats.pendingTalentInspectName)
+		local gearSnapshot = nil
 		if inspectUnit and coolstats.IsGearCachingEnabled() then
-			CacheInspectGearForUnit(inspectUnit)
+			gearSnapshot = CacheInspectGearForUnit(inspectUnit, true)
+			if not gearSnapshot or tonumber(gearSnapshot.slotCount or 0) <= 0 then
+				coolstats.ScheduleInspectGearCacheRetry(inspectUnit, pendingGearInspectName, inspectGuid or pendingGearInspectGuid)
+			end
 		end
 		if coolstats.IsTalentCachingEnabled() then
 			coolstats.CaptureReadyInspectTalents(inspectGuid or coolstats.pendingTalentInspectGuid, inspectGuid and nil or coolstats.pendingTalentInspectName, true)
@@ -14693,7 +14835,15 @@ tooltipFrame:SetScript("OnEvent", function(self, event, ...)
 	end
 
 	if event == "PLAYER_TARGET_CHANGED" then
-		RequestGearInspectForUnit("target")
+		coolstats.StopInspectGearCacheRetry()
+		coolstats.StopTargetInspectRetry()
+		if RequestGearInspectForUnit("target") then
+			if coolstats.IsGearCachingEnabled() then
+				coolstats.ScheduleInspectGearCacheRetry("target")
+			end
+		elseif UnitExists("target") and UnitIsPlayer("target") then
+			coolstats.ScheduleTargetInspectRetry()
+		end
 		if lookupUwUPanel and lookupUwUPanel:IsShown() then
 			UpdateCachedGearPanel(lookupUwUPanel, lookupUwUPanel.renderName, lookupUwUPanel.renderPlayer)
 		end

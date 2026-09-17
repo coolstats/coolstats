@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+## 0.2.51 - 2026-09-17
+
+### Data
+
+- Refreshed Onyxia ICC and Toravon UwU Logs only, with 818 active ranked players
+  and 12,955 total player records. Preserved the locked 9,864 Phase 3 Overall
+  history rows; Icecrown and Lordaeron datasets were not refreshed.
+
+### Fixes
+
+- Restored gear caching when selecting a player and retried inspect requests
+  when an out-of-range target becomes inspectable, while retaining talent
+  caching and avoiding repeated work on item hover.
+
 ## 0.2.50 - 2026-09-14
 
 ### Data
