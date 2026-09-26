@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## 0.2.52 - 2026-09-26
+
+### Data
+
+- Refreshed Onyxia ICC and Toravon UwU Logs only, with 2,067 active ranked
+  players, 4,552 boss-only players, and 14,581 total player records. Icecrown
+  and Lordaeron datasets were not refreshed.
+- Preserved and validated all 9,864 locked Phase 3 Overall history rows, with
+  locked history taking precedence when a reused name belongs to a different
+  current class.
+
 ## 0.2.51 - 2026-09-17
 
 ### Data
